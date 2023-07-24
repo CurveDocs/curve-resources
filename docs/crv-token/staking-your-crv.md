@@ -10,6 +10,8 @@ You can also lock $CRV to obtain a boost on your provided liquidity.
 
 [Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
 
+![https://www.youtube.com/watch?v=8GAI1lopEdU](https://www.youtube.com/watch?v=8GAI1lopEdU)
+
 ## Locking your $CRV
 
 Once you know how much and how long you wish to lock for, visit the following page: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
