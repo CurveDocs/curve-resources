@@ -117,4 +117,4 @@ All pools may permissionlessly stream other token rewards without approval from 
 
 Further information on these extra incentives is available in the developer documentation.
 
-[![](https://curve.readthedocs.io/favicon.ico)The Curve DAO: Liquidity Gauges and Minting CRV — Curve 1.0.0 documentation](https://curve.readthedocs.io/dao-gauges.html?highlight=reward_token#liquiditygaugereward)
+[The Curve DAO: Liquidity Gauges and Minting CRV — Curve 1.0.0 documentation](https://curve.readthedocs.io/dao-gauges.html?highlight=reward_token#liquiditygaugereward)
