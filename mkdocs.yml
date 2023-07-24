@@ -10,11 +10,11 @@ plugins:
   - minify:
       minify_html: true
 
-# nav:
-#   - Curve DAO:
-#     - Overview: curve_dao/overview.md  
+nav:
+  - Getting Started:
+    - Understanding Curve v1: base-features/understanding-crypto-pools.md  
+    - Understanding Curve v2: base-features/understanding-curve.md  
     
-
 # extension
 markdown_extensions:
   - def_list
