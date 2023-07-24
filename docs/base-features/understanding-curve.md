@@ -1,6 +1,6 @@
 # Understanding Curve v1
 
-A short guide to understand the basics of becoming a liquidity provider on Curve.
+> A short guide to understand the basics of becoming a liquidity provider on Curve.
 
 Getting started with Curve isn’t easy, there is a lot to grasp and the unique UI can be a lot to take in. This small guide is intended for Curve beginners with an understanding of DeFi and Crypto. It tries to answer recurring questions about how to get started with Curve and how it works or makes money for liquidity providers.
 
