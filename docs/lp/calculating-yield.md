@@ -44,7 +44,7 @@ When you call methods to preview how many tokens you might receive for interacti
 
 Theoretically, one could calculate the base vAPY for any period by calculating the fees for every transaction and summing over the entire range. However, the Curve UI utilizes a simpler methodology to calculate the base vAPY, where `t` is the time in days:
 
-$\[virtual\_price(t\=0)virtual\_price(t\=−1)\]365−1\\left\[ \\frac{virtual\\\_price({t=0})}{virtual\\\_price({t=-1})} \\right\] ^{365} - 1\[virtual\_price(t\=−1)virtual\_price(t\=0)​\]365−1$
+$\[virtual\_price(t\=0)virtual\_price(t\=−1)\]365−1$
 
 In other words, the vAPY measures the change in the pool’s _**"virtual price"**_ between today and yesterday, then annualizes this rate. The _**"virtual price"**_ is a measure of the pool growth over time, and is viewable directly on the UI.
 
@@ -55,7 +55,7 @@ The UI receives this value directly by calling the `get_virtual_price` method on
 
 Every time a transaction occurs that charges a fee, the virtual price is incremented accordingly. Thus, when a pool launches with a virtual price of exactly 1, if the pool’s virtual price is 1.01 at some future time, an LP holding a token has seen the token’s value increase by 1%.
 
-$1.011.00−1\=0.01\=1%\\frac{1.01}{1.00} - 1 = 0.01 = 1\\%1.001.01​−1\=0.01\=1%$
+$1.011.00−1\=0.01\=1%$
 
 A virtual price of 1.01 means an LP will get 1% more value back on removing liquidity. Similarly, new users adding liquidity will receive 1% fewer LP tokens on deposit.
 
@@ -76,7 +76,7 @@ The Curve DAO also authorizes some pools to receive bonus rewards from $CRV toke
 
 The formula used here to calculate rewards tAPR:
 
-$tAPR\=(crv\_price∗inflation\_rate∗relative\_weight∗12614400)working\_supply∗asset\_price∗virtual\_pricetAPR = \\frac{(crv\\\_price \* inflation\\\_rate \* relative\\\_weight \* 12614400)}{working\\\_supply \* asset\\\_price \* virtual\\\_price} tAPR\=working\_supply∗asset\_price∗virtual\_price(crv\_price∗inflation\_rate∗relative\_weight∗12614400)​$
+$tAPR\=(crv\_price∗inflation\_rate∗relative\_weight∗12614400)working\_supply∗asset\_price∗virtual\_price​$
 
 These parameters are obtained from various data sources, mostly on-chain:
 
@@ -84,7 +84,6 @@ These parameters are obtained from various data sources, mostly on-chain:
 *   `inflation_rate:` The inflation rate of the $CRV token, accessed from the `rate` function of the $CRV token.
 *   `relative_weight:` Based on weekly voting, each Curve pool rewards gauge has a weighting relative to all other Curve gauges. This value can be calculated by calling the same function on the Curve [gauge controller contract](https://curve.readthedocs.io/dao-gauges.html#the-gauge-controller).
     
-
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FkbK4WEzw5h5a4KRPjvt5%2Fimage.png?alt=media&token=7b88916f-c1ca-47c4-bb1c-5ba90180ef6a)
 
 ​[https://dao.curve.fi/](https://dao.curve.fi/)​
@@ -93,7 +92,6 @@ These parameters are obtained from various data sources, mostly on-chain:
 *   `asset_price:` The price of the asset — that is, if the pool contains only bitcoin, you would use the current price of $BTC. For v2 pools, this must be calculated by averaging over the specific assets within the pool.
 *   `virtual_price:` The measure of the pool growth over time, as described above.
     
-
 The magic number `12614400` is number of seconds in a year `(60 * 60 * 24 * 365 = 31536000)` times 0.4. In this case the 0.4 is due to the effect of boosts (minimum boost of 1 / maximum boost of 2.5 = 0.4).
 
 As shown in the UI, all tAPR values are displayed as a range, with the base rate on the left of the arrow representing the default rate one would receive if the user has no boost, and the value on the right of the arrow representing the maximum value a user could receive if the user has the maximum boost, which is 2.5 times higher than the minimum boost. Further details about calculating boosts [are provided here](https://resources.curve.fi/governance/vote-locking-boost#how-is-your-boost-calculated).
@@ -105,7 +103,6 @@ For developers, here are relevant links to the technical documentation:
 *   ​[Gauges for EVM Sidechains](https://curve.readthedocs.io/dao-gauges-sidechain.html)​
 *   ​[Gauge Proxy](https://curve.readthedocs.io/dao-ownership.html?highlight=gauge#gaugeproxy)​
     
-
 ### Incentives tAPR
 
 All pools may permissionlessly stream other token rewards without approval from the Curve DAO. The UI displays these bonus rewards only when applicable. In the example of stETH below, note how the pool is streaming $LDO tokens in addition to $CRV rewards.
