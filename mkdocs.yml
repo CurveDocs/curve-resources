@@ -18,6 +18,9 @@ nav:
   - crvUSD:
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Markets: crvusd/markets.md
+    - Loan Creation: crvusd/loan-creation.md
+    - Loan Details: crvusd/loan-details.md
+    - $crvUSD Concepts: crvusd/understanding-tokenomics.md
     
 # extension
 markdown_extensions:
