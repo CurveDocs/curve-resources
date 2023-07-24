@@ -32,7 +32,7 @@ You can extend a lock and add $CRV to it at any point but you cannot have $CRV w
 
 The formula below can help you calculate the daily APY:
 
-$DailyTradingVolume∗0.0002∗365/(TotalveCRV∗CRVPrice)∗100DailyTradingVolume \* 0.0002 \* 365 / (TotalveCRV \* CRVPrice) \* 100%DailyTradingVolume∗0.0002∗365/(TotalveCRV∗CRVPrice)∗100$
+$DailyTradingVolume∗0.0002∗365/(TotalveCRV∗CRVPrice)∗100$
 
 ### Further Reading
 
