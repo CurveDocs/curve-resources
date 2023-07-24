@@ -13,4 +13,4 @@ Please consider the following risk disclaimers when using the Curve Stablecoin i
 *   3. The value of crvUSD can fluctuate due to stablecoin market volatility or rapid changes in the liquidity of the stablecoin.
 *   4. crvUSD is exclusively issued by smart contracts, without an intermediary. However, the parameters that ensure the proper operation of the crvUSD infrastructure are subject to updates approved by Curve DAO. Users must stay informed about any parameter changes in the stablecoin infrastructure.
     
-[Understanding Curve v2](./base-features/understanding-crypto-pools)
+[Understanding Curve v2](/base-features/understanding-crypto-pools)
