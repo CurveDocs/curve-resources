@@ -4,7 +4,7 @@ The main purposes of the Curve DAO token are to incentivise liquidity providers 
 
 Currently CRV has three main uses: voting, staking and boosting. Those three things will require you to vote lock your CRV and acquire veCRV.
 
-veCRV stands for vote-escrowed CRV, it is simply CRV locked for a period of time. The longer you lock CRV for, the more veCRV you receive.
+> veCRV stands for vote-escrowed CRV, it is simply CRV locked for a period of time. The longer you lock CRV for, the more veCRV you receive.
 
 ## Staking (trading fees)
 
