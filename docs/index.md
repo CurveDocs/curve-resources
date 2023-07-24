@@ -10,9 +10,7 @@ Curve is DeFi's leading **AMM**, (Automated Market Maker). Hundreds of liquidity
 
 Those resources aim to help new and existing users to become familiar with the [Curve protocol](./lp/understanding-curve-pools), the [Curve DAO](./governance/understanding-governance) and the [$CRV token](./crv-token/understanding-crv).
 
-Sections[](#sections)
-
--------------------------
+## Sections
 
 *   Getting Started with [**Curve v1**](./base-features/understanding-curve) and [**Curve v2**](./base-features/understanding-crypto-pools)**​**
     
@@ -32,9 +30,7 @@ Sections[](#sections)
     
 *   **​**[**Troubleshooting**](./troubleshooting/support)**:** Cross-Asset Swaps, Wallets, Stuck Transactions
     
-Useful links[](#useful-links)
-
----------------------------------
+## Useful links
 
 **Governance dashboard:** [http://dao.curve.fi/](http://dao.curve.fi/)​
 
