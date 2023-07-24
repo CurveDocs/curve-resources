@@ -27,8 +27,18 @@ nav:
     - crv-token/crv-tokenomics.md
     - crv-token/staking-your-crv.md
     - crv-token/claiming-trading-fees.md
+  - Liquidity Providers:
+    - lp/understanding-curve-pools.md
+    - lp/base-and-metapools.md
+    - lp/deposit-faqs.md
+    - lp/calculating-yield.md
+    - Depositing:
+      - lp/depositing.md
+      - lp/depositing-into-a-metapool.md
+      - lp/depositing-into-the-susd-pool.md
+      - lp/depositing-into-the-tri-pool.md
+      - lp/depositing-into-the-y-pool.md
 
-    
 # extension
 markdown_extensions:
   - def_list
