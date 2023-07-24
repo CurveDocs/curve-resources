@@ -10,7 +10,7 @@ You can also lock $CRV to obtain a boost on your provided liquidity.
 
 [Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
 
-Video about Staking $CRV: https://www.youtube.com/watch?v=8GAI1lopEdU
+Video about how to stake $CRV: https://www.youtube.com/watch?v=8GAI1lopEdU
 
 ## Locking your $CRV
 
