@@ -11,22 +11,22 @@ plugins:
       minify_html: true
 
 nav:
-  - Welcome to Curve Finance: index.md  
+  - index.md  
   - Getting Started:
-    - Understanding Curve v1: base-features/understanding-curve.md  
-    - Understanding Curve v2: base-features/understanding-crypto-pools.md  
+    - base-features/understanding-curve.md  
+    - base-features/understanding-crypto-pools.md  
   - $crvUSD:
-    - Understanding crvUSD: crvusd/understanding-crvusd.md
-    - Markets: crvusd/markets.md
-    - Loan Creation: crvusd/loan-creation.md
-    - Loan Details: crvusd/loan-details.md
-    - $crvUSD Concepts: crvusd/understanding-tokenomics.md
+    - crvusd/understanding-crvusd.md
+    - crvusd/markets.md
+    - crvusd/loan-creation.md
+    - crvusd/loan-details.md
+    - crvusd/understanding-tokenomics.md
   - $CRV Token:
-    - Understanding $CRV: crv-token/understanding-crv.md
-    - $CRV Basics: crv-token/crv-basics.md
-    - $CRV Tokenomics: crv-token/crv-tokenomics.md
-    - Staking your $CRV: crv-token/staking-your-crv.md
-    - Claiming Trading Fees: crv-token/claiming-trading-fees.md
+    - crv-token/understanding-crv.md
+    - crv-token/crv-basics.md
+    - crv-token/crv-tokenomics.md
+    - crv-token/staking-your-crv.md
+    - crv-token/claiming-trading-fees.md
 
     
 # extension
