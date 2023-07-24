@@ -13,8 +13,8 @@ plugins:
 nav:
   - Welcome to Curve Finance: index.md  
   - Getting Started:
-    - Understanding Curve v1: base-features/understanding-crypto-pools.md  
-    - Understanding Curve v2: base-features/understanding-curve.md  
+    - Understanding Curve v1: base-features/understanding-curve.md  
+    - Understanding Curve v2: base-features/understanding-crypto-pools.md  
     
 # extension
 markdown_extensions:
