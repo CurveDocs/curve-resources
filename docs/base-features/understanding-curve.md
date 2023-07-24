@@ -4,7 +4,7 @@
 
 Getting started with Curve isn’t easy, there is a lot to grasp and the unique UI can be a lot to take in. This small guide is intended for Curve beginners with an understanding of DeFi and Crypto. It tries to answer recurring questions about how to get started with Curve and how it works or makes money for liquidity providers.
 
-## **What is Curve.fi?**
+## What is Curve.fi?
 
 The easiest way to understand Curve is to see it as an exchange. Its main goal is to let users and other decentralised protocols **exchange ERC-20 tokens (DAI to USDC for example) through it with low fees and low slippage**. Unlike exchanges that match a buyer and a seller, Curve uses liquidity pools. To achieve successful exchange volume, Curve needs a high volume of liquidity (tokens) and therefore offers rewards to **liquidity providers**.
 
