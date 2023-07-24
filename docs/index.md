@@ -1,10 +1,10 @@
 # Welcome to Curve Finance
 
-Resources and guides to get started with Curve and the Curve DAO
+**Resources and guides to get started with Curve and the Curve DAO**
 
 <img width=250 src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FF5ZS9RzAWKZnNxm9F85H%2FCurve-Logo-HighRez.png?alt=media&token=51c58ab0-e774-4b30-92ac-69f643400c56" />
 
-Curve's Logo, a colorized [Klein Bottle](https://en.wikipedia.org/wiki/Klein_bottle)​
+> Curve's Logo, a colorized [Klein Bottle](https://en.wikipedia.org/wiki/Klein_bottle)​
 
 Curve is DeFi's leading **AMM**, (Automated Market Maker). Hundreds of liquidity pools have been launched through Curve's factory and incentivized by Curve's DAO. Users rely on Curve's proprietary formulas to provide high liquidity, low slippage, and low fee transactions among ERC-20 tokens.
 
