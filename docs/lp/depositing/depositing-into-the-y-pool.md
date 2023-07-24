@@ -1,6 +1,6 @@
 # Depositing into the Y Pool (deprecated)
 
-!!! warning The content of this page is deprecated but it was maintained here to preserve history.
+!!! info The content of this page is deprecated but it was maintained here to preserve history.
 
 If you’re wanting to figure out Curve, please **read the starter guide** [**at this address**](https://guides.curve.fi/curve-fi-how-to-get-started/). After reading this, you should have an understanding of how Curve works, how it makes money for liquidity providers and its risks which is ideally what you want before providing liquidity.
 
