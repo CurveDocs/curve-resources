@@ -11,6 +11,7 @@ plugins:
       minify_html: true
 
 nav:
+  - Welcome to Curve Finance: index.md  
   - Getting Started:
     - Understanding Curve v1: base-features/understanding-crypto-pools.md  
     - Understanding Curve v2: base-features/understanding-curve.md  
