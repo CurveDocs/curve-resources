@@ -1,5 +1,4 @@
-Understanding Curve v1
-======================
+# Understanding Curve v1
 
 A short guide to understand the basics of becoming a liquidity provider on Curve.
 
@@ -39,11 +38,9 @@ CRV token is a governance and utility token for Curve.
 
 Yes. Curve has launched on several sidechains and will continue to do so. Visit our section on Multichain for more information.
 
-
 ## How Can I Launch a Pool
 
 All new Curve pools are deployed permissionlessly through the Curve Factory. This means anybody can deploy a pool anytime, anywhere. For a full guide, check our Factory Pools section.
-
 ​
 ## Why has Curve grown so quickly?
 
