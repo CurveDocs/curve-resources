@@ -15,6 +15,9 @@ nav:
   - Getting Started:
     - Understanding Curve v1: base-features/understanding-curve.md  
     - Understanding Curve v2: base-features/understanding-crypto-pools.md  
+  - crvUSD:
+    - Understanding crvUSD: crvusd/understanding-crvusd.md
+    - Markets: crvusd/markets.md
     
 # extension
 markdown_extensions:
