@@ -1,8 +1,8 @@
 # Deposit FAQs
 
-## What is the y in the y pools (also what is yearn)
+## What is the y in the y pools (also what is Yearn)?
 
-Yearn is a yield aggregator. You might think that Compound doesn’t always have the best lending rates and you would be right thus the yToken balances automatically your stablecoin to the protocol(s) with the better rates (Compound, Aave and dYdX). It’s free and non-custodial (as is Curve) but it is also why the yPools are considered more risky as you use a series of protocols that could themselves have critical vulnerabilities.
+[Yearn](https://yearn.finance/) is a yield aggregator. You might think that Compound doesn’t always have the best lending rates and you would be right thus the yToken balances automatically your stablecoin to the protocol(s) with the better rates (Compound, Aave and dYdX). It’s free and non-custodial (as is Curve) but it is also why the yPools are considered more risky as you use a series of protocols that could themselves have critical vulnerabilities.
 
 ## What is the “deposit wrapped” option?
 
