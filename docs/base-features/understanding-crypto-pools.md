@@ -1,7 +1,9 @@
 # Understanding Curve v2
 
-Crypto pools are Curve pools holding assets with different prices. Curve core originally was pegged assets but a new type of AMM allows for extremely efficient trading and low risks of non pegged assets.
+Crypto pools are Curve pools holding assets with different prices. Curve core originally was pegged assets but a new type of AMM allows for extremely efficient trading and low risks of non-pegged assets.
+
 Crypto pools use liquidity more effectively by concentrating it at current prices. As trades happen, the pool readjusts its internal price to the highest liquidity region without creating losses for the pool. Crypto pools also have variable fees which can range between 0.04% and 0.40%.
+
 [Tricrypto](https://curve.fi/#/ethereum/pools/tricrypto2/deposit)​, the first and main base pool has the following coins: USDT/WBTC/WETH for Ethereum. On Polygon, the first pool has AAVE tokens and can handle swaps with the following tokens: DAI/USDC/USDT/ETH/WBTC.
 
 ## Whitepaper
