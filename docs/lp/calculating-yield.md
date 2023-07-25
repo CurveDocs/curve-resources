@@ -44,7 +44,9 @@ When you call methods to preview how many tokens you might receive for interacti
 
 Theoretically, one could calculate the base vAPY for any period by calculating the fees for every transaction and summing over the entire range. However, the Curve UI utilizes a simpler methodology to calculate the base vAPY, where `t` is the time in days:
 
-$\\left\[ \\frac{virtual\\\_price({t=0})}{virtual\\\_price({t=-1})} \\right\] ^{365} - 1$
+$$
+\\left\[ \\frac{virtual\\\_price({t=0})}{virtual\\\_price({t=-1})} \\right\] ^{365} - 1
+$$
 
 In other words, the vAPY measures the change in the pool’s _**"virtual price"**_ between today and yesterday, then annualizes this rate. The _**"virtual price"**_ is a measure of the pool growth over time, and is viewable directly on the UI.
 
