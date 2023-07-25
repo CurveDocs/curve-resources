@@ -69,6 +69,6 @@ th {
     padding: 9px;
 }
 
-.md-nav__item {
+.md-nav > .md-nav__item {
   margin-left: 20px;
 }
