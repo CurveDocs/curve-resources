@@ -69,6 +69,6 @@ th {
     padding: 9px;
 }
 
-.md-nav__list > .md-nav__item {
+a.md-nav__link {
   margin-left: 20px;
 }
