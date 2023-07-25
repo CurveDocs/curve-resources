@@ -82,42 +82,42 @@ nav:
 
 # extension
 markdown_extensions:
-  # - def_list
-  # - attr_list
-  # - md_in_html
-  # - admonition
-  # - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - admonition
+  - meta
   - toc:
       permalink: true
       baselevel: 2
   - pymdownx.betterem
-  # - pymdownx.caret
-  # - pymdownx.critic
-  # - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  # - pymdownx.inlinehilite
+  - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.snippets
-  # - pymdownx.smartsymbols
-  # - pymdownx.highlight:
-  #     anchor_linenums: true
-  #     line_spans: __span
-  #     pygments_lang_class: true
-  #     use_pygments: true
-  # - pymdownx.superfences:
-  #     custom_fences:
-  #       - name: mermaid
-  #         class: mermaid
-  #         format: !!python/name:pymdownx.superfences.fence_code_format
-  # - pymdownx.tasklist:
-  #     custom_checkbox: true
-  # - pymdownx.tilde
-  # - pymdownx.tabbed:
-  #     alternate_style: true
-  # - pymdownx.arithmatex:
-  #     generic: true
+  - pymdownx.smartsymbols
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
 
 theme:
   name: material
