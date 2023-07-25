@@ -57,7 +57,9 @@ The UI receives this value directly by calling the `get_virtual_price` method on
 
 Every time a transaction occurs that charges a fee, the virtual price is incremented accordingly. Thus, when a pool launches with a virtual price of exactly 1, if the pool’s virtual price is 1.01 at some future time, an LP holding a token has seen the token’s value increase by 1%.
 
-$\\frac{1.01}{1.00} - 1 = 0.01 = 1\\%$
+$$
+\\frac{1.01}{1.00} - 1 = 0.01 = 1\\%
+$$
 
 A virtual price of 1.01 means an LP will get 1% more value back on removing liquidity. Similarly, new users adding liquidity will receive 1% fewer LP tokens on deposit.
 
@@ -78,7 +80,9 @@ The Curve DAO also authorizes some pools to receive bonus rewards from $CRV toke
 
 The formula used here to calculate rewards tAPR:
 
-$tAPR = \\frac{(crv\\\_price \* inflation\\\_rate \* relative\\\_weight \* 12614400)}{working\\\_supply \* asset\\\_price \* virtual\\\_price}​​$
+$$
+tAPR = \\frac{(crv\\\_price \* inflation\\\_rate \* relative\\\_weight \* 12614400)}{working\\\_supply \* asset\\\_price \* virtual\\\_price}
+$​​$
 
 These parameters are obtained from various data sources, mostly on-chain:
 
