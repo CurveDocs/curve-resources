@@ -81,8 +81,9 @@ The Curve DAO also authorizes some pools to receive bonus rewards from $CRV toke
 The formula used here to calculate rewards tAPR:
 
 $$
-tAPR = \\frac{(crv\\\_price \* inflation\\\_rate \* relative\\\_weight \* 12614400)}{working\\\_supply \* asset\\\_price \* virtual\\\_price}
-$​​$
+tAPR = \\frac{(crv\\_price \* inflation\\_rate \* relative\\_weight \* 12614400)}{working\\_supply \* asset\\_price \* virtual\\_price}
+$$
+
 
 These parameters are obtained from various data sources, mostly on-chain:
 
