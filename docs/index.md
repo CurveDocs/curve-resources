@@ -16,7 +16,7 @@ Those resources aim to help new and existing users to become familiar with the [
 - [**$CRV Token**](/crv-token/understanding-crv): Tokenomics, Staking, Claiming Fees
 - [**Liquidity Providers**](/lp/understanding-curve-pools): Curve Pools, MetaPools, Depositing
 - [**Reward Gauges**](/reward-gauges/understanding-gauges): Boosting, Gauge Weights
-- [**Stablecoin**](/crvUSD/understanding-crvusd): crvUSD, Soft Liquidation, Bands
+- [**Stablecoin**](/crvusd/understanding-crvusd): crvUSD, Soft Liquidation, Bands
 - [**Governance**](/governance/understanding-governance): Vote Locking, Voting, Snapshot, Proposals
 - [**Multichain**](/multichain/understanding-multichain): Bridging, Fantom, Polygon, etc.  
 - [**Creating Pools**](/factory-pools/pool-factory): Factory Pools, Crypto Factory Pools  
