@@ -90,9 +90,8 @@ markdown_extensions:
   - toc:
       permalink: true
       baselevel: 2
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
+  # - pymdownx.betterem:
+  #     smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
@@ -118,8 +117,8 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.arithmatex:
-      generic: true
+  # - pymdownx.arithmatex:
+  #     generic: true
 
 theme:
   name: material
