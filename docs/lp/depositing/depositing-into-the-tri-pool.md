@@ -13,6 +13,12 @@ This pool is expected to become the most liquid and the cheapest to interact wit
 
 See how to deposit and stake into the 3Pool: https://www.youtube.com/watch?v=OsRrGij9Ou8
 
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true">
+    <source src="https://storage.googleapis.com/curvedocs/staking-3pool.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## Depositing into the pool
 
 Visit the deposit page ([https://www.curve.fi/3pool/deposit](https://www.curve.fi/3pool/deposit)). You will need one or multiple stable coins to deposit. The Tri-Pool takes DAI, USDC and USDT.
