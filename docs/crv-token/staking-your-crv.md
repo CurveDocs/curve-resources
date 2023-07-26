@@ -12,6 +12,12 @@ You can also lock $CRV to obtain a boost on your provided liquidity.
 
 Video about how to stake $CRV: https://www.youtube.com/watch?v=8GAI1lopEdU
 
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true">
+    <source src="https://storage.googleapis.com/curvedocs/staking-crv.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## Locking your $CRV
 
 Once you know how much and how long you wish to lock for, visit the following page: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
