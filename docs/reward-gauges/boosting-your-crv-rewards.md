@@ -10,6 +10,12 @@ Click below if you have questions about how the vote locking boost works:
 
 Boosting your rewards video guide: https://www.youtube.com/watch?v=blZTCWu-DQg
 
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true">
+    <source src="https://storage.googleapis.com/curvedocs/boosting-rewards.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## Figuring out your required boost
 
 The first step to getting your rewards boosted is to figure out how much CRV you'll need to lock. All gauges have different requirements meaning some pools are easier to boost than others. It depends on how much others have locked and how much the liquidity gauge has.
