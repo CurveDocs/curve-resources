@@ -24,4 +24,6 @@ If you're not sure about the technical details of submitting your proposal to th
 
 The emergency DAO multisig may "kill" pools up to 2 months old. It may also kill reward gauges at any time, setting its rate of CRV emissions to 0. Pools that are killed will only allow users to `remove_liquidity`.
 
+The Curve DAO may override the emergency DAO decision of killing a pool, making it alive again.
+
 Read more about the emergency DAO in the technical docs: https://docs.curve.fi/curve_dao/ownership-proxy/Agents/#agents
