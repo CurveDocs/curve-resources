@@ -109,9 +109,7 @@ To access this on Etherscan, you can visit `LLAMMA details` on the $crvUSD UI wi
 
 The Borrow Rate is the variable interest rate charged on active loans within each collateral market.
 
-
-![alt_text](images/image1.png "image_tooltip")
-
+![image](https://github.com/CurveDocs/curve-resources/assets/7863230/ad827cab-5fd9-42ee-a1e1-7aebb5199e65)
 
 ### **How is the $crvUSD Borrow Rate calculated?**
 
