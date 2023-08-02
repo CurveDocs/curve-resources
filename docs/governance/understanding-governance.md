@@ -19,3 +19,11 @@ On this page, you can find all current and closed votes. All proposals should ha
 If you wish to create a new official proposal, you should draft a proposal and post it on the governance forum. You must also research that it's possible and gauge interest of the community via the Curve Discord, Telegram or Governance forum.
 
 If you're not sure about the technical details of submitting your proposal to the Ethereum blockchain, you can ask a member of the team to help.
+
+# Emergency DAO
+
+The emergency DAO multisig may "kill" pools up to 2 months old. It may also kill reward gauges at any time, setting its rate of CRV emissions to 0. Pools that are killed will only allow users to `remove_liquidity`.
+
+See the members of the emergency DAO in the technical docs: https://docs.curve.fi/curve_dao/ownership-proxy/Agents/#agents
+
+The Curve DAO may override the emergency DAO decision of killing a pool, making it alive again.
