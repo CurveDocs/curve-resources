@@ -20,7 +20,7 @@ If you wish to create a new official proposal, you should draft a proposal and p
 
 If you're not sure about the technical details of submitting your proposal to the Ethereum blockchain, you can ask a member of the team to help.
 
-# Emergency DAO
+## Emergency DAO
 
 The emergency DAO multisig may "kill" pools up to 2 months old. It may also kill reward gauges at any time, setting its rate of CRV emissions to 0. Pools that are killed will only allow users to `remove_liquidity`.
 
