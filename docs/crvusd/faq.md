@@ -1,7 +1,5 @@
 # $crvUSD FAQ
 
-_The following is a proposed draft for a $crvUSD Frequently Asked Questions page to be added to the documentation. We’re circulating this here for comment — in 24 hours we’ll address all comments and file a final copy as a pull request to the resources.curve.fi page. Enjoy!_
-
 ## **General**
 
 ### **What is $crvUSD and how does it work?**
