@@ -30,5 +30,5 @@ Once CRV holders vote-lock their veCRV, they can start voting on various DAO pro
 
 The table below can help you understand the value add of veCRV.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MT5dNbeDEngQ7_tEymQ%2F-MT5dRWFpub2GezqLodd%2Fimage.png?alt=media&token=23e9f550-db0c-4357-a317-a6f21a36eb58)
+![](../images/table.png)
 
