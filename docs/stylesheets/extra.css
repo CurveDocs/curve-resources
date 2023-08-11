@@ -69,6 +69,6 @@ th {
     padding: 9px;
 }
 
-label:not(.title) {
+label:not(.md-nav__title) {
   margin-left: 20px;
 }
