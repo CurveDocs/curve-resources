@@ -38,3 +38,5 @@ Be careful, if the collateral price dips, you would need to repay the entire amo
 Toggling the advanced mode expands the display to show additional information about the loan, including the price impact and trade route.
 
 ![](../images/crvusd-advanced.png){ width="300" }
+
+
