@@ -27,7 +27,7 @@ Additionally, users can manually select the number of bands for the loan by pres
 # Leveraging Loans
 The UI provides the option to leverage your loan.
 
-You can leverage your collateral up to 9x. This has the effect of repeat trading crvUSD to collateral and depositing to maximize your collateral position.  
+You can leverage your collateral up to 9x. This has the effect of repeat trading crvUSD to collateral and depositing to maximize your collateral position. [Here](https://curve.substack.com/p/august-15-2023-all-or-nothing) is a good explainer on how leveraging works.
 
 Be careful, if the collateral price dips, you would need to repay the entire amount to reclaim your initial position.  
 
