@@ -26,6 +26,8 @@ You can find the calculator at this address: [https://dao.curve.fi/minter/calc](
 
 Once you know how much and how long you wish to lock for, visit the following page: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
 
+![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MFw5TRvfmVRhy6M2vA0%2F-MFwBH-2tIa-f8oEODRQ%2Fimage.png?alt=media&token=9d7166c8-4231-4996-8fe2-27c0f7f4ae66)
+
 Enter the amount you want to lock and select your expiry. Remember, locking is not reversible. The amount of veCRV received will depend on how much and how long you vote for.
 
 You can extend a lock and add CRV to it at any point, but you cannot have CRV with different expiry dates.
@@ -39,6 +41,8 @@ Head over to the minter page: [https://dao.curve.fi/minter/gauges](https://dao.c
 If you see your new boost after Current boost, then you do not need to do anything else.
 
 If your current boost hasn't moved, you will need to claim CRV from each of the gauge you're providing liquidity to update your boost. After doing so, your boost should be showing.
+
+![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MFw5TRvfmVRhy6M2vA0%2F-MFwFO9NY0WsvZyZPMsr%2Fimage.png?alt=media&token=ecf1dd2c-1300-4a21-9664-2e3387bcf0ca)
 
 Your boost will not be updated until you withdraw, deposit or claim from a liquidity gauge.
 
