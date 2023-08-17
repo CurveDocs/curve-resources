@@ -69,10 +69,16 @@ th {
     padding: 9px;
 }
 
-.md-nav__item {
+.md-nav__item .md-nav__link {
     padding-left: 20px;
 }
 
-.md-nav__item--section .md-nav__link {
+.md-nav__title,
+.md-nav__link[for="__nav_1"],
+.md-nav__link[for="__nav_2"],
+.md-nav__link[for="__nav_3"],
+.md-nav__link[for="__nav_4"],
+.md-nav__link[for="__nav_5"],
+.md-nav__link[for="__nav_6"] {
     padding-left: 0;
 }
