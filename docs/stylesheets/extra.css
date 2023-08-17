@@ -69,6 +69,10 @@ th {
     padding: 9px;
 }
 
-a.md-nav__link, #__nav_5_5_label, #__nav_7_5_label {
-  margin-left: 20px;
+.md-nav__item {
+    padding-left: 20px; /* Adjust this value to your liking */
+}
+
+.md-nav__item--section .md-nav__link {
+    padding-left: 0;
 }
