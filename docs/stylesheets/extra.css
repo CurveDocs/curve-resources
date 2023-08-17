@@ -70,10 +70,17 @@ th {
 }
 
 .md-nav__item .md-nav__link {
+    padding-left: 0px; 
+}
+
+.md-nav[data-md-level="1"] .md-nav__link {
     padding-left: 20px;
 }
 
-.md-nav__title,
-.md-nav__link[id*="__nav_"] {
-    padding-left: 0;
+.md-nav[data-md-level="2"] .md-nav__link {
+    padding-left: 40px;
+}
+
+.md-nav[data-md-level="3"] .md-nav__link {
+    padding-left: 60px;
 }
