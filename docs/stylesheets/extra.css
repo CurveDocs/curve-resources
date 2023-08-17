@@ -74,11 +74,6 @@ th {
 }
 
 .md-nav__title,
-.md-nav__link[for="__nav_1"],
-.md-nav__link[for="__nav_2"],
-.md-nav__link[for="__nav_3"],
-.md-nav__link[for="__nav_4"],
-.md-nav__link[for="__nav_5"],
-.md-nav__link[for="__nav_6"] {
+.md-nav__link[id*="__nav_"] {
     padding-left: 0;
 }
