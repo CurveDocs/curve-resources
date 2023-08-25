@@ -60,7 +60,7 @@ nav:
     - multichain/using-curve-on-polygon.md
   - Factory Pools:
     - factory-pools/pool-factory.md
-    - factory-pools/creating-a-factory-pool.md
+    - factory-pools/creating-a-stableswap-pool.md
     - factory-pools/creating-a-cryptoswap-pool.md
     - factory-pools/understanding-oracles.md
   - Troubleshooting:
