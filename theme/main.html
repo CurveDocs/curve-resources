@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block config %}
-{{ super() }}
-{% if "localsearch" in config["plugins"] %}
-<script src="https://unpkg.com/iframe-worker/shim"></script>
-<script src="{{ 'search/search_index.js' | url }}"></script>
-{% endif %}
-{% endblock %}
