@@ -123,6 +123,7 @@ markdown_extensions:
 
 theme:
   name: material
+  custom_dir: theme
   include_search_page: false
   search_index_only: true
   font:
