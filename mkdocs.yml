@@ -123,7 +123,6 @@ markdown_extensions:
 
 theme:
   name: material
-  custom_dir: theme
   include_search_page: false
   font:
     text: Roboto
