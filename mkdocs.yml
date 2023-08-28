@@ -4,7 +4,7 @@ site_author: CurveFi
 
 plugins:
   - search
-  - localsearch
+  - offline
   - autolinks
   - git-revision-date-localized:
       type: timeago
@@ -125,7 +125,6 @@ theme:
   name: material
   custom_dir: theme
   include_search_page: false
-  search_index_only: true
   font:
     text: Roboto
     code: Roboto Mono
