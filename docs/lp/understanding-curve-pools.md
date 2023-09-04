@@ -34,9 +34,9 @@ On the screenshot above for the [TriCrypto v2 Pool](https://curve.fi/#/ethereum/
 
 To understand what the different pools do, it’s also important to understand how Curve makes money for liquidity providers. Curve interests come from trading fees. Every time someone uses Curve to exchange tokens, through the Curve website, 1inch, Paraswap or another dex aggregator, a small fee is distributed to liquidity providers. This is why base vAPY increases with volume on Curve.
 
-Some pools (Compound, PAX, Y, BUSD) also earn interest from lending protocols. Behind the scenes, those four pools also use lending protocols (like Compound or AAVE) to help generate more interest for liquidity providers. Whilst it means those pools can be better performers when lending rates are high, it’s also worth noting it also add more layers of risks.
+Some pools (Compound, PAX, Y, BUSD) also earn interest from lending protocols. Behind the scenes, those four pools also use lending protocols (like Compound or AAVE) to help generate more interest for liquidity providers. Whilst it means those pools can be better performers when lending rates are high, it’s also worth noting it also adds more layers of risks.
 
-All pools earn interest from trading fees, some pools also earn interest from lending and there are also some pools with incentives. You can also receive CRV when you provide liquidity on Curve Finance. Each liquidity gauge receives a different amount of CRV based on how much the DAO allocates to it.
+All pools earn interest from trading fees. Some pools also earn interest from lending and there are also some pools with incentives. You can also receive CRV when you provide liquidity on Curve Finance. Each liquidity gauge receives a different amount of CRV based on how much the DAO allocates to it.
 
 Every time someone makes a trade on Curve.fi, liquidity providers (people who have deposited funds onto Curve) get a [small fee](/lp/understanding-curve-pools#what-are-curve-fees) split evenly between all providers, this is why you will see high vAPYs on days with high volume and high volatility. It’s important to note that because fees are dependent on volume, daily vAPYs can often be quite low just like they can be very high.
 
