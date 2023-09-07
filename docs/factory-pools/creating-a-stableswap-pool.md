@@ -22,7 +22,7 @@ If you want to include a token that is part of a base pool, you must use it as p
 
 If you are using raw ether as a token, it must be added as "Token A." WETH may be added as either Token A or Token B.
 
-If your pool contains "rebasing tokens" (a token which adjusts its total supply to control its price), make sure to select the appropriate box:
+If your pool contains rebasing tokens (a token that adjusts its total supply to control its price), make sure to select the appropriate box:
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FOL4SmkHko2A1uHDdk73h%2FScreenshot%202023-03-04%20at%2010.17.49%20AM.png?alt=media&token=a9ccc536-1e5e-41b5-a178-1d0577cee863)
 
@@ -32,7 +32,7 @@ The UI will not check to see if a pool containing your token pairs already exist
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FsYHljGrkzCAis3vfGUGH%2FScreenshot%202023-03-04%20at%2010.23.58%20AM.png?alt=media&token=a111575b-0a30-4639-b513-063b0d975c0b)
 
-The "Pool Presets" tab contains a few scenarios that prepopulate appropriate parameters for users who are unfamiliar with advanced aspects of Curve pools. The presets include an explanation of their use case.
+The "Pool Presets" tab contains a few scenarios that prepopulate appropriate parameters for users unfamiliar with advanced aspects of Curve pools. The presets include an explanation of their use case.
 
 The Advanced options toggle includes a variety of options which may not apply to your case.
 
