@@ -1,4 +1,4 @@
-# Markets
+# **Markets**
 
 On the Markets page you can view all the available collateral types.
 
@@ -10,6 +10,6 @@ If you do not have a position, you can click on any market to [create a loan](/c
 
 If you already have a position it will show a dollar sign overlay on the left, and clicking on the market will take you to a page to [manage your loan](/crvusd/loan-details).
 
-## Collateral Choices
+## **Collateral Choices**
 
 While testing $crvUSD, the team created a market for $sfrxETH with a small market cap ($10MM) because it had a compatible oracle. Additional forms of collateral are expected to be approved by the DAO.

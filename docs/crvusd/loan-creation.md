@@ -1,4 +1,4 @@
-# Loan Creation
+# **Loan Creation**
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F92aEeJyIJqTiMrRYpYxc%2Fimage.png?alt=media&token=95ca2242-0146-4ec0-a364-62c09e38e287)
 
@@ -24,7 +24,7 @@ Additionally, users can manually select the number of bands for the loan by pres
 
 
 
-# Leveraging Loans
+# **Leveraging Loans**
 The UI provides the option to leverage your loan.
 
 You can leverage your collateral up to 9x. This has the effect of repeat trading crvUSD to collateral and depositing to maximize your collateral position. [Here](https://curve.substack.com/p/august-15-2023-all-or-nothing) is a good explainer on how leveraging works.

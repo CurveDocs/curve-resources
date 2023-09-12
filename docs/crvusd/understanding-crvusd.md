@@ -1,10 +1,10 @@
-# Understanding $crvUSD
+# **Understanding $crvUSD**
 
 Curve Stablecoin infrastructure enables users to mint crvUSD using a selection of crypto-tokenized collaterals. Positions are managed passively: if the collateral's price decreases, the system automatically sells off collateral in a ‘soft liquidation mode’. If the collateral's price increases, the system recovers the collateral. This process could lead to some losses due to liquidation and de-liquidation.
 
 URL: [https://crvusd.curve.fi/](https://crvusd.curve.fi/)​
 
-## Risks
+## **Risks**
 
 Please consider the following risk disclaimers when using the Curve Stablecoin infrastructure:
 

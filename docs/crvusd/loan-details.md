@@ -1,11 +1,8 @@
-# Loan Details
-
-
 The Loan Details page shows you information about your loan as well as features to manage your loan.
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F9qrzhTMP89u4LyKDPS3C%2Fimage.png?alt=media&token=dc5c8323-e666-4070-a727-91de0fe89596)
 
-## Loan Management
+## **Loan Management**
 
 <figure markdown>
   ![](../images/crvusd_loan_management.png){ width="300" }
@@ -28,7 +25,7 @@ Everything you may need to manage your loan is in the dark blue box on the left 
 During soft-liquidation, users are unable to add or withdraw collateral. They can choose to either partially or fully repay their crvUSD debt to improve their health ratio or decide to self-liquidate their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
 
 
-## Loan Details
+## **Loan Details**
 
 When you take out a loan with $crvUSD your collateral is spread over a range of liquidation prices. If the asset price drops within this range, you will enter soft liquidation mode. In soft liquidation mode you cannot add more collateral, your only available actions are to repay your loan with $crvUSD or to self-liquidate yourself.
 
