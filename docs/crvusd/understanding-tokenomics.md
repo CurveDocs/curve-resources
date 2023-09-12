@@ -20,7 +20,7 @@ rate = rate0 \* exp(-(p - 1) / sigma) \* exp(-peg\_keeper\_debt / (total\_debt \
 
 ## Liquidation
 
-In soft liquidation, the collateral within a band is at risk of being converted into $crvUSD. If the price goes back, it will be rehypothecated into collateral, although it will likely be lower than the initial amount. In soft liquidation mode, it is impossible to adjust your collateral, your only available way of interacting with your loan is to self-liquidate your position.
+In soft liquidation, the collateral within a band is at risk of being converted into crvUSD. If the price goes back, it will be rehypothecated into collateral, although it will likely be lower than the initial amount.  While in soft liquidation mode, users cannot modify their collateral. The only options available are to either partially or fully repay the debt or opt to self-liquidate the position.
 
 If your health continues to weaken, you may find yourself subject to "hard liquidation," which functions more like a usual liquidation, where your position is erased.
 
