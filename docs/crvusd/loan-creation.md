@@ -11,8 +11,8 @@ The UI includes a dropdown for additional loan parameters like the current Oracl
 
 **Loan Parameters**
 
-- **A:** This parameter is used to adjust the interest rate model's sensitivity to changes in market utilization. A higher value for 'A' results in a steeper curve, meaning interest rates can change more rapidly with changes in utilization.
-- **Base Price:** The base price is the price of the band number 0. The initial price set for the collateral is when the loan is created.
+- **A:** The amplification parameter A defines the density of liquidity and band size.
+- **Base Price:** The base price is the price of the band number 0. 
 - **Oracle Price:** The oracle price is the current price of the collateral as determined by the oracle. The oracle price is used to calculate the collateral's value and the loan's health.
 - **Borrow Rate:** The borrow rate is the annual interest rate charged on the loan. This rate is variable and can change based on market conditions. The borrow rate is expressed as a percentage. For example, a borrow rate of 7.62% means that you will be charged 7.62% interest per year on the outstanding balance of your loan.
 
