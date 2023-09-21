@@ -70,6 +70,8 @@ Once you have your working balance (**B**) you can then calculate your total boo
 
 `Boost = B / (0.4 * b)`
 
+The max boost is 2.5x.
+
 ## FAQ
 
 [Vote Locking](/governance/vote-locking-boost)
