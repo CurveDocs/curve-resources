@@ -4,9 +4,7 @@ This guide assumes you have already provided liquidity and are currently staking
 
 One of the main incentives for CRV is the ability to boost your rewards on provided liquidity. Vote locking CRV allows you to acquire voting power to participate in the DAO and earn a boost of up to 2.5x on the liquidity you are providing on Curve.
 
-For questions about how the vote locking boost works, click here:
-
-[Vote Locking](/governance/vote-locking-boost)
+For questions about how the vote locking boost works, see [Vote Locking](/governance/vote-locking-boost):
 
 Boosting your rewards video guide: https://www.youtube.com/watch?v=blZTCWu-DQg
 
@@ -18,7 +16,7 @@ Boosting your rewards video guide: https://www.youtube.com/watch?v=blZTCWu-DQg
 
 ## Determining Your Required Boost
 
-The first step to boosting your rewards is to determine how much CRV you'll need to lock. All gauges have different requirements, meaning some pools are easier to boost than others. It depends on how much others have locked and how much the liquidity gauge has.
+The first step to boosting your rewards is determining how much CRV you'll need to lock. All gauges have different requirements, meaning some pools are easier to boost than others. It depends on how much others have locked and how much the liquidity gauge has.
 
 You can find the calculator at this address: [https://dao.curve.fi/minter/calc](https://dao.curve.fi/minter/calc)​
 
