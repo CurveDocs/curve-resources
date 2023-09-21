@@ -48,23 +48,29 @@ Your boost will not be updated until you withdraw, deposit or claim from a liqui
 
 ## Understanding the Boost Formula
 
-The boost mechanism calculates your **working balance** using the following formulas:
+The boost formula depends on:
 
-1. **Working unit per LP token** = working balance / staked LP token balance 
-2. **Working balance** = 0.4 * (staked LP balance) + 0.6 * (total staked LP supply) * (capped voting power percentage)
-3. **Capped voting power percentage** = min(voting power percentage, staked LP token percentage)
+- **b**: user liquidity gauge balance
+- **w**: user veCRV balance
+- **W**: total veCRV supply
+- **S**: total supply of the liquidity gauge
 
-These formulas consider both the proportion of your LP tokens staked in gauge (40%) and the remaining 60% which is comprised of the minimum of two things: 
+We use the above values to calculate the user working balance (**B**) like this:
 
-1. Your remaining amount of LP tokens in gauge 
-2. Your proportion of total LP tokens staked based on your voting power
+$B = \min\left(0.4b + 0.6 \times S \times \frac{w}{W}, b\right)$
 
-The terms used in these formulas are explained as follows:
+or using non-math terms:
 
-- **votingTotal**: veCRV total supply
-- **votingBalance**: veCRV balance (possibly adjusted by boost delegation)
-- **totalLiquidity**: total LP tokens in gauge
-- **dollarProvided**: user lp token balance in gauge
+```
+working_balance = minimum_of(
+  (0.4 * user_gauge_balance) + (0.6* * total_gauge_supply * (user_vecrv / total_vecrv)),
+  user_gauge_balance
+)
+```
+
+Once you have your working balance (**B**) you can then calculate your total boost:
+
+`Boost = B / (0.4 * b)`
 
 ## FAQ
 
