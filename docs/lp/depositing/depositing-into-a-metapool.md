@@ -1,10 +1,8 @@
-# Depositing into a Metapool
-
 Metapools is a new concept to Curve Finance, it allows a single coin to be pooled with all the coins in another (base) pool without diluting its liquidity. Currently, the most common base pool is the 3Pool. It uses the three most liquid stable coins (USDT-USDC-DAI).
 
 [Base & MetaPools](/lp/base-and-metapools)
 
-## Depositing
+## **Depositing**
 
 Metapools offer several options for deposits. For example, in the \[GUSD,\[3Pool\]\] Metapool you can deposit the following:
 
@@ -20,9 +18,9 @@ The **deposit wrapped** option lets you deposit the base pool token (usually 3Po
 
 If you don't want to add all your stable coins, just click the "Use maximum amount of coins available" checkbox and enter the number of coins you wish to deposit and click "Deposit and Stake".
 
-If you deposit 3Pool LP token into a Metapool, you will be earning at the rate of the Metapool gauge but you earn trading fees from both the base and meta pool.
+When depositing coins into a metapool, and thus having exposure to a base pool token (e.g., 3CRV) and its paired token, you will earn at the rate of the metapool gauge. However, you'll receive trading fees from both the base and metapool.
 
-## Confirming and staking
+## **Confirming and staking**
 
 You will then be asked to approve the Curve Finance contract, follow by a deposit transaction which will wrap your stable coins and deposit them into the pool. This transaction can be expensive so you ideally want to wait for gas to be fairly cheap if this will impact the size of your deposit.
 
@@ -32,8 +30,7 @@ After depositing, you will be prompted with a new transaction that will deposit 
 
 **Once that's done, you're providing liquidity and staking so all that's left to do is wait for your trading fees to accrue.**
 
-You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO.
+*You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO:*
 
-[Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
-
-[Staking your $CRV](/crv-token/staking-your-crv)
+- [Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
+- [Staking your $CRV](/crv-token/staking-your-crv)

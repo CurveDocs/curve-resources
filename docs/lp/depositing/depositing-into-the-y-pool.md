@@ -9,7 +9,7 @@ Curve Finance Y pool has long been one of the most popular pools on Curve Financ
 
 Y pool also receives CRV rewards since its launch in early August. Now you know how the Y pool makes money for liquidity providers and you're ready to start providing liquidity.
 
-## Depositing into the pool
+## Depositing into the pool 
 
 Visit the deposit page ([https://www.curve.fi/iearn/deposit](https://www.curve.fi/iearn/deposit)). You will need one or multiple stablecoins to deposit. The Y pool takes DAI, USDC, USDT and TUSD.
 
