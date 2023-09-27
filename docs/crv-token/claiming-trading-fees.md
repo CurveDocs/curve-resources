@@ -1,5 +1,4 @@
-# Claiming Trading Fees
-
+# **Claiming Trading Fees**
 Users who stake $CRV can claim trading fees as often as you'd like, but fees will only be converted into 3CRV once a week.
 
 To claim your fees, visit [https://curve.fi/#/ethereum/dashboard](https://curve.fi/#/ethereum/dashboard) and click the blue "Claim LP Rewards" button. If you are using the classic UI please visit: [https://classic.curve.fi/](https://classic.curve.fi) and look for the green "Claim" button in the box labeled "veCRV 3pool LP claim" at the bottom of the page.
@@ -10,11 +9,11 @@ There is a delay before you can first claim your 3CRV after locking. It takes 8 
 
 [Understanding $CRV](/crv-token/understanding-crv)
 
-## Swapping 3CRV for a stable coin
+## **Swapping 3CRV for a stable coin**
 
-If you would like to swap your 3CRV back into a stable coin, you can head to [https://curve.fi/#/ethereum/pools/3pool/withdraw](https://curve.fi/#/ethereum/pools/3pool/withdraw), select the stable you would like to receive (optional) and click "**Withdraw**". After confirming your transaction, you will then receive 3CRV.
+If you would like to withdraw your 3CRV back into a stable coin, you can head to [https://curve.fi/#/ethereum/pools/3pool/withdraw](https://curve.fi/#/ethereum/pools/3pool/withdraw), select the stable you would like to receive (optional) and click "**Withdraw**". After confirming your transaction, you will then receive 3CRV.
 
-## How does it all work?
+## **How does it all work?**
 
 When the burn is triggered, a contract collects all trading fees from all the swap pool contracts. Those fees come in dozen of different stable coins, tokenized Bitcoin and Ethereum flavours. The fee tokens are traded into USDC using Curve and Synthetix, which is then deposited to 3Pool. Finally, the burner creates a checkpoint which updates all the claimable balance of each veCRV holder.
 
