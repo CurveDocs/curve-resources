@@ -1,12 +1,10 @@
-# Calculating Yield
-
 Explanation of how the Curve UI displays yield calculations
 
 _Like all documentation within this guide, this article is intended to be detailed but non-technical, outside of a few light mathematical formulas. While we highlight specific smart contract function names that the Curve UI may reference for convenience, no knowledge of coding is otherwise necessary to understand this article._
 
 _Developers seeking a more in-depth explanation of these concepts should consult the technical documentation at_ [_https://curve.readthedocs.io/_](https://curve.readthedocs.io/)_​_
 
-## Types of Yield
+## **Types of Yield**
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FuU5W9iUW3C2C8XLwunvN%2Fimage.png?alt=media&token=ea3b4fe0-1297-4df0-9f45-71860c323d60)
 
@@ -28,7 +26,7 @@ These yield types are:
 
 The rewards `tAPR` stands for _“token annual percentage rate”_ — token rewards must be claimed manually and therefore do not automatically compound, so “rate” is the more proper term.
 
-### Base vAPY
+### **Base vAPY**
 
 When Curve pools are launched, they receive a value for both the `fee` (the overall fee applied to trades) and the `admin_fee` (the percentage of this fee that goes to the Curve DAO as opposed to pool LPs). These parameters are directly viewable on the smart contract through the corresponding function names.
 
@@ -72,9 +70,7 @@ For developers, here are more details about trade fees from the technical docume
 *   ​[Fee Distribution](https://curve.readthedocs.io/dao-fees.html?highlight=fees#fee-distribution)​
     
 
-### 
-
-$CRV Rewards tAPR[](#usdcrv-rewards-tapr)
+### **CRV Rewards tAPR**
 
 The Curve DAO also authorizes some pools to receive bonus rewards from $CRV token emission, as described in the [Understanding Gauges](https://resources.curve.fi/reward-gauges/understanding-gauges) section of the documentation. If the pool has an eligible gauge, then the UI displays the range of possible tAPR values users are earning at present, subject to change in the future.
 
@@ -110,7 +106,7 @@ For developers, here are relevant links to the technical documentation:
 *   ​[Gauges for EVM Sidechains](https://curve.readthedocs.io/dao-gauges-sidechain.html)​
 *   ​[Gauge Proxy](https://curve.readthedocs.io/dao-ownership.html?highlight=gauge#gaugeproxy)​
     
-### Incentives tAPR
+### **Incentives tAPR**
 
 All pools may permissionlessly stream other token rewards without approval from the Curve DAO. The UI displays these bonus rewards only when applicable. In the example of stETH below, note how the pool is streaming $LDO tokens in addition to $CRV rewards.
 
