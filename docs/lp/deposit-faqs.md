@@ -3,7 +3,8 @@
 
 ## What is the “deposit wrapped” option?
 
-(This applies to metapools or pools with tokens with c tokens or y tokens). If you deposit a stablecoin to one of the pools with lending, Curve will automatically wrap your token to a cToken (for Compound) or a yToken(for yearn). The option is simply there if you have already previously wrapped your tokens on yearn or lent them on Compound. If your stablecoin is in its original form, you can ignore this option.
+(This applies to metapools or pools with c-tokens or a-tokens). If you deposit a stablecoin to one of the pools with lending, Curve will automatically wrap your token to a cToken (for Compound) or aToken (for AAVE). The option is simply there if you have already previously lent them on Compound or AAVE. If your stablecoin is in its original form, you can ignore this option.
+If you deposit into metapools and you have the corresponding basepool token (for example, 3Crv), you can also use the "deposit wrapped" option to deposit this token.
 
 <figure markdown>
   ![](../images/deposit_wrapped.png){ width="300" }
@@ -73,3 +74,44 @@ The steth pool in this screenshot earns another 2.69% of LDO per year and there 
 *   The LDO distributed is based on the number of people staking their LP tokens, which means your share of rewards gets lower if more people start staking
 *   The price of LDO (price of LDO going up would make the yearly bonus go up)
 *   The size of weekly rewards (48,000 SNX as of today) could also be lowered as Lido reevaluates its partnership with Curve
+
+
+test:
+
+
+<div class="grid cards" markdown>
+
+-   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
+
+    ---
+
+    Install [`mkdocs-material`](#) with [`pip`](#) and get up
+    and running in minutes
+
+    [:octicons-arrow-right-24: Getting started](#)
+
+-   :fontawesome-brands-markdown:{ .lg .middle } __It's just Markdown__
+
+    ---
+
+    Focus on your content and generate a responsive and searchable static site
+
+    [:octicons-arrow-right-24: Reference](#)
+
+-   :material-format-font:{ .lg .middle } __Made to measure__
+
+    ---
+
+    Change the colors, fonts, language, icons, logo and more with a few lines
+
+    [:octicons-arrow-right-24: Customization](#)
+
+-   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
+
+    ---
+
+    Material for MkDocs is licensed under MIT and available on [GitHub]
+
+    [:octicons-arrow-right-24: License](#)
+
+</div>
