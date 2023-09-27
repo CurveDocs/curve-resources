@@ -4,7 +4,7 @@ Curve Stablecoin infrastructure enables users to mint crvUSD using a selection o
 
 Manage crvUSD positions at [https://crvusd.curve.fi/](https://crvusd.curve.fi/)
 
-[User guide of crvUSD and introduction of rate & LLAMMA, by 0xreviews](https://0xreviews.xyz/posts/2023-07-15-user-guide-of-crvusd​)
+[User guide of crvUSD and introduction of rate & LLAMMA, by 0xreviews](https://crvusd.0xreviews.xyz/​)
 
 ## **Risks**
 
