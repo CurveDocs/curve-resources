@@ -5,12 +5,21 @@
 
 (This applies to metapools or pools with tokens with c tokens or y tokens). If you deposit a stablecoin to one of the pools with lending, Curve will automatically wrap your token to a cToken (for Compound) or a yToken(for yearn). The option is simply there if you have already previously wrapped your tokens on yearn or lent them on Compound. If your stablecoin is in its original form, you can ignore this option.
 
+<figure markdown>
+  ![](../images/deposit_wrapped.png){ width="300" }
+  <figcaption></figcaption>
+</figure>
+
+
 ## What happens when you provide liquidity on Curve?
 
-When you go to the deposit page and deposit one stablecoin, it then gets split between each token in the pool. That’s something you have to keep in mind because if you were to deposit 1000 DAI in the yPool, a per the screenshot below, your balance would be roughly equal to 158.9 DAI, 142.4 USDC, 582.4 USDT and 121.6 TUSD. Those values change constantly as people trade and arb the price of stable coins.
+When you go to the deposit page and deposit one stablecoin, it then gets split between each token in the pool. That’s something you have to keep in mind because if you were to deposit 1000 DAI in the Pool, as per the screenshot below, your balance would be roughly equal to 390.7 GUSD, 120 DAI, 119.8 USDC and 362.6 USDT. Those values change constantly as people trade and arb the price of stable coins.
 
+<figure markdown>
+  ![](../images/gusd_balances.png){ width="300" }
+  <figcaption></figcaption>
+</figure>
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FVbNbqvugTszimMdG2uBo%2FScreen%20Shot%202022-11-14%20at%203.41.34%20AM.png?alt=media&token=3622b620-c1f5-40ce-b5c7-2738cd66c432)
 
 ## Does the coin I deposit matter?
 
@@ -18,13 +27,18 @@ Besides the deposit bonus explained below, it doesn’t matter. Your tokens will
 
 ## Understanding deposit bonuses
 
-On the screenshot above, you can see TUSD is quite low on the pool so if your plan was to join the yPool, you would ideally deposit TUSD into it. As you can see on the screenshot, you would get an instant 0.2% bonus for depositing TUSD into the pool.
+On the screenshot above, you can see GUSD is quite low as it should make up 50% of the total pool because it's a metapool paired against 3crv. So if your plan was to join the gusd-pool, you would ideally deposit GUSD into it.   
+As you can see on the screenshot, you would get an instant 0.0082% bonus for depositing GUSD into the pool.
 
-The main reason for this is that TUSD is currently slightly more expensive so if you went to a centralized exchange you might sell it for $1.007 instead of $1. The deposit bonus reflects that.
+The main reason for this is that GUSD is currently slightly more expensive so if you went to a centralized exchange you might sell it for $1.007 instead of $1. The deposit bonus reflects that.
 
-The other reason behind this is that the pools are always trying to balance themselves and go back to equal parts (in this case 25% TUSD) so depositing the coin with the lowest share will get you a deposit bonus.
+The other reason behind this is that the pools are always trying to balance themselves and go back to equal parts (in this case 50% GUSD) so depositing the coin with the lowest share will get you a deposit bonus.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F2qhk0CBGFiK8RA0QEWKW%2FScreen%20Shot%202022-11-14%20at%203.43.36%20AM.png?alt=media&token=0ff32c84-a44e-484a-8962-4476d0773666)
+<figure markdown>
+  ![](../images/gusd_deposit.png){ width="300" }
+  <figcaption></figcaption>
+</figure>
+
 
 ## But does that mean I can still withdraw in my favorite stable coin?
 
