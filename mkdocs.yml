@@ -38,7 +38,6 @@ nav:
       - lp/depositing/depositing-into-a-metapool.md
       - lp/depositing/depositing-into-the-susd-pool.md
       - lp/depositing/depositing-into-the-tri-pool.md
-      - lp/depositing/depositing-into-the-y-pool.md
   - Reward Gauges:
     - reward-gauges/understanding-gauges.md
     - reward-gauges/creating-a-pool-gauge.md
@@ -56,8 +55,6 @@ nav:
   - Multichain:
     - multichain/understanding-multichain.md
     - multichain/bridging-funds.md
-    - multichain/using-curve-on-fantom.md
-    - multichain/using-curve-on-polygon.md
   - Factory Pools:
     - factory-pools/pool-factory.md
     - factory-pools/creating-a-stableswap-pool.md
