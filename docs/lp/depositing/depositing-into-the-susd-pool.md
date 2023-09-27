@@ -8,7 +8,7 @@ The sUSD pool was born out of a partnership between Curve and Synthetix who soug
 
 The current rewards have no expiry date but can be adjusted by a vote from Synthetix governance.
 
-## **Depositing into the pool**
+## **Depositing into the pool** 
 
 Visit the deposit page ([https://curve.fi/#/ethereum/pools/susd/deposit](https://curve.fi/#/ethereum/pools/susd/deposit)). You will need one or multiple stablecoins to deposit. The sUSD pool takes DAI, USDC, USDT and sUSD.
 
@@ -22,7 +22,6 @@ First, it's important to understand that you don't have to deposit all coins, yo
 
 Second, once you deposit one stable coin, **it gets split over the four different coins in the pool which means you now have exposure to all of them**. The first checkbox (Add all coins in a balanced proportion) allows you to deposit all four coins in the same proportion they currently are in the pool.
 
-If you don't want to add all your stablecoins, just click the "Use maximum amount of coins available" checkbox and enter the number of coins you wish to deposit and click "Deposit and Stake".
 
 ## **Confirming and staking**
 
@@ -30,10 +29,14 @@ You will then be asked to approve the Curve Finance contract, follow by a deposi
 
 After depositing in the pool, you receive liquidity provider (LP) tokens. They represent your share of ownership in the pool and you will need them to stake for CRV.
 
-After depositing, you will be prompted with a new transaction that will deposit your LP tokens in the DAO liquidity gauge. Confirming the transaction **will let you mine CRV and SNX**.
+After depositing, you will be prompted with a new transaction that will deposit your LP tokens in the DAO liquidity gauge. Confirming the transaction **will let you mine CRV and SNX**. This second transaction will only pop up if you deposited your tokens under the "Deposit and stake" tab.
 
 You can claim both those tokens from the minter gauge.
 
 **Once that's done, you're providing liquidity and staking so all that's left to do is wait for your trading fees to accrue.**
 
-You can click the link below to learn how to boost your CRV rewards.
+*You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO:*
+
+- [Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
+- [Staking your $CRV](/crv-token/staking-your-crv)
+

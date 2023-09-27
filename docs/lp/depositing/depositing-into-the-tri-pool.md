@@ -36,12 +36,14 @@ You will then be asked to approve the Curve Finance contract, follow by a deposi
 
 After depositing in the pool, you receive liquidity provider (LP) tokens. They represent your share of ownership in the pool and you will need them to stake for CRV.
 
-After depositing, you will be prompted with a new transaction that will deposit your LP tokens in the DAO liquidity gauge. Confirming the transaction **will let you mine CRV.**
+After depositing, you will be prompted with a new transaction that will deposit your LP tokens in the DAO liquidity gauge. Confirming the transaction **will let you mine CRV.** This second transaction will only pop up if you deposited your tokens under the "Deposit and stake" tab.
 
 **Once that's done, you're providing liquidity and staking so all that's left to do is wait for your trading fees to accrue.**
 
-You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO.
+*You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO:*
 
-[Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
+- [Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
+- [Staking your $CRV](/crv-token/staking-your-crv)
+
 
 ​

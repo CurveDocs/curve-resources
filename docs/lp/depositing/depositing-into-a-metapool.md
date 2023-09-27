@@ -1,6 +1,6 @@
 Metapools is a new concept to Curve Finance, it allows a single coin to be pooled with all the coins in another (base) pool without diluting its liquidity. Currently, the most common base pool is the 3Pool. It uses the three most liquid stable coins (USDT-USDC-DAI).
 
-[Base & MetaPools](/lp/base-and-metapools)
+[Base & MetaPools](../../lp/base-and-metapools.md)
 
 ## **Depositing**
 
@@ -16,8 +16,6 @@ Second, once you deposit one stable coin, **it gets split over the four differen
 
 The **deposit wrapped** option lets you deposit the base pool token (usually 3Pool).
 
-If you don't want to add all your stable coins, just click the "Use maximum amount of coins available" checkbox and enter the number of coins you wish to deposit and click "Deposit and Stake".
-
 When depositing coins into a metapool, and thus having exposure to a base pool token (e.g., 3CRV) and its paired token, you will earn at the rate of the metapool gauge. However, you'll receive trading fees from both the base and metapool.
 
 ## **Confirming and staking**
@@ -26,7 +24,7 @@ You will then be asked to approve the Curve Finance contract, follow by a deposi
 
 After depositing in the pool, you receive liquidity provider (LP) tokens. They represent your share of ownership in the pool and you will need them to stake for CRV.
 
-After depositing, you will be prompted with a new transaction that will deposit your LP tokens in the DAO liquidity gauge. Confirming the transaction **will let you mine CRV.**
+After depositing, you will be prompted with a new transaction that will deposit your LP tokens in the DAO liquidity gauge. Confirming the transaction **will let you mine CRV.** This second transaction will only pop up if you deposited your tokens under the "Deposit and stake" tab.
 
 **Once that's done, you're providing liquidity and staking so all that's left to do is wait for your trading fees to accrue.**
 
