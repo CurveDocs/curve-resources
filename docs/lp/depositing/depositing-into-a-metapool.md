@@ -4,17 +4,27 @@ Metapools is a new concept to Curve Finance, it allows a single coin to be poole
 
 ## **Depositing**
 
-Metapools offer several options for deposits. For example, in the \[GUSD,\[3Pool\]\] Metapool you can deposit the following:
+Metapools offer several options for deposits. For example, in the [GUSD/3Pool](https://curve.fi/#/ethereum/pools/gusd/deposit) Metapool you can deposit the following:
 
 *   GUSD
 *   Any of the 3Pool (DAI-USDC-USDT)
 *   3Pool LP token (3crv)
-    
+
+<figure markdown>
+![](../../images/gusd1_deposit.png){ width="300" }
+<figcaption></figcaption>
+</figure>
+
 When becoming a liquidity provider, you don't have to deposit all the coins, you can deposit one or several of the coins in the pool and it won't affect your returns. Depositing the coin with the smallest share in the pool will result in a small deposit bonus.
 
 Second, once you deposit one stable coin, **it gets split over the four different coins in the pool which means you now have exposure to all of them**. The first checkbox (Add all coins in a balanced proportion) allows you to deposit all four coins in the same proportion they currently are in the pool, resulting in no slippage occurrence.
 
 The **deposit wrapped** option lets you deposit the base pool token (usually 3Pool).
+
+<figure markdown>
+![](../../images/gusd_wrapped_deposit.png){ width="300" }
+<figcaption></figcaption>
+</figure>
 
 When depositing coins into a metapool, and thus having exposure to a base pool token (e.g., 3CRV) and its paired token, you will earn at the rate of the metapool gauge. However, you'll receive trading fees from both the base and metapool.
 
