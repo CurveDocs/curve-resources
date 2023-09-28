@@ -1,5 +1,3 @@
-# **Markets**
-
 On the Markets page you can view all the available collateral types.
 
 The page shows the current [borrow rate](/crvusd/understanding-tokenomics#borrow-rate), total amount of $crvUSD borrowed, and total amount of collateral backing it.

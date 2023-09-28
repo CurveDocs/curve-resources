@@ -1,5 +1,3 @@
-# Understanding Technical Support
-
 Curve is to be used entirely at your own risk. Admins have no special keys and cannot recover funds if sent improperly.
 
 However, a wide variety of resources are still available to help you avoid issues. If you have questions, please make sure to check with the following sources:

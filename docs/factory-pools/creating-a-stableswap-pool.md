@@ -1,8 +1,6 @@
-# Creating a Stableswap Pool
-
 The Stableswap pool creation is appropriate for assets expected to hold a price peg very close to each other, like a pair of dollarcoins. The creation wizard will guide you through the process of creating a pool, but if you have questions throughout you are encouraged to speak with a member of the Curve team in the [Telegram](https://t.me/curvefi) or [Discord](https://discord.gg/rgrfS7W).
 
-## Token Selection
+## **Token Selection**
 
 The token selection tab can be used to select between two to four tokens.
 
@@ -28,7 +26,7 @@ If your pool contains rebasing tokens (a token that adjusts its total supply to 
 
 The UI will not check to see if a pool containing your token pairs already exists. Some protocols have seen opportunities to create two pools containing the same assets but using different parameters (c/f [stETH concentrated](https://curve.fi/#/ethereum/pools/factory-v2-117/deposit)). In most cases you should take care to make sure your pool does not already exist.
 
-## Pool Presets
+## **Pool Presets**
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FsYHljGrkzCAis3vfGUGH%2FScreenshot%202023-03-04%20at%2010.23.58%20AM.png?alt=media&token=a111575b-0a30-4639-b513-063b0d975c0b)
 
@@ -38,7 +36,7 @@ The Advanced options toggle includes a variety of options which may not apply to
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FbFHfimAPjyfQ6YzVZFtu%2FScreenshot%202023-03-04%20at%2010.32.25%20AM.png?alt=media&token=0f0657e7-9c76-4c8b-8079-61375584c9cf)
 
-## Parameters
+## **Parameters**
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F07qxEE3QHSapAKMZWWNH%2FScreenshot%202023-03-04%20at%2010.37.06%20AM.png?alt=media&token=d090055f-684c-4147-a101-7a0e4511969d)
 
@@ -54,7 +52,7 @@ After the pool launches, the DAO has the capability of adjusting the A parameter
 
 [Understanding Curve Pools](/lp/understanding-curve-pools)
 
-## Pool Info
+## **Pool Info**
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FayNZbBtWUO2KwDgneqVe%2FScreenshot%202023-03-05%20at%203.21.52%20AM.png?alt=media&token=9f62bad8-3ff0-4ad3-bc3d-6a6f8ddda374)
 

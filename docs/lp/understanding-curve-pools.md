@@ -1,5 +1,3 @@
-# Understanding Curve Pools
-
 As you should know, providing liquidity has its fair share of risks so in this article, we review the different Curve pools to help you find one that matches your risk tolerance while explaining the risks involved with being a liquidity provider on Curve.
 
 There are currently several Curve pools with new pools added all the time.
@@ -14,7 +12,7 @@ Before we continue, we assume you have familiarized yourself with the basics of 
 
 All Curve liquidity gauges receive CRV based on how much the DAO allocates to it.
 
-## What are liquidity pools?
+## **What are liquidity pools?**
 
 If you are new to Ethereum or DeFi, liquidity pools are a seemingly complicated concept to understand.
 
@@ -30,7 +28,7 @@ On the screenshot above for the [TriCrypto v2 Pool](https://curve.fi/#/ethereum/
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FdvMCRy7o4YBh8gBfkreP%2FScreen%20Shot%202022-11-14%20at%203.33.31%20AM.png?alt=media&token=a8a373dc-4c9e-4345-80f0-0679aee69415)
 
-## Base vAPY
+## **Base vAPY**
 
 To understand what the different pools do, it’s also important to understand how Curve makes money for liquidity providers. Curve interests come from trading fees. Every time someone uses Curve to exchange tokens, through the Curve website, 1inch, Paraswap or another dex aggregator, a small fee is distributed to liquidity providers. This is why base vAPY increases with volume on Curve.
 
@@ -40,7 +38,7 @@ All pools earn interest from trading fees. Some pools also earn interest from le
 
 Every time someone makes a trade on Curve.fi, liquidity providers (people who have deposited funds onto Curve) get a [small fee](/lp/understanding-curve-pools#what-are-curve-fees) split evenly between all providers, this is why you will see high vAPYs on days with high volume and high volatility. It’s important to note that because fees are dependent on volume, daily vAPYs can often be quite low just like they can be very high.
 
-## What are Curve fees?
+## **What are Curve fees?**
 
 Swap fees are typically around 0.04% which is thought to be the most efficient when exchange stable coins on Ethereum.
 

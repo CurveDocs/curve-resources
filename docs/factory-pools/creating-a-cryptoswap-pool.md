@@ -1,16 +1,14 @@
-# Creating a Cryptoswap Pool
-
 The v2 Curve Factory supports pools of assets with volatile prices, with no expectation of price stability.
 
 [Understanding Curve v2](/base-features/understanding-crypto-pools)
 
-## Creating a Pool
+## **Creating a Pool**
 
 The factory can be used to create a pool between any two or three ERC20 tokens. Based on trading activity in the pool, the v2 pools update an internal price oracle that the pool uses to rebalance itself.
 
 If the pool is using [wrapped Ethereum](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) as one of the two assets, the pool will also support depositing either raw ETH or wrapped Ethereum.
 
-## Tokens in Pool
+## **Tokens in Pool**
 
 The token selection tab can be used to select up to three tokens.
 
@@ -27,7 +25,7 @@ On Ethereum at the top of the token selection popup you can see any Curve basepo
 
 You can search by name for any token already added to Curve, or paste a token address
 
-## Pool Presets
+## **Pool Presets**
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F24DrjmNDNVG7XyIcvYVS%2FScreenshot%202023-03-05%20at%203.48.30%20AM.png?alt=media&token=8e869851-cd1a-42d8-86d1-731722fdfdd1)
 
@@ -52,7 +50,7 @@ The "Pool Presets" tab provides scenarios that prepopulate appropriate parameter
 *   **Three Coin Volatile:** Suitable for pools containing a volatile token which is paired against ETH and USD stablecoins.
     
 
-## Parameters
+## **Parameters**
 
 On the parameters tab you can review and adjust the defaults populated by your selection on the "pool presets" tab. Crypto v2 pools contain a lot of parameters. If you are uncertain of which parameters to use, you may want to ask for help in any Curve channel before deploying. Some parameters can be tuned after the fact.
 

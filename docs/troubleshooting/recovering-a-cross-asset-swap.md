@@ -1,8 +1,6 @@
-# Recovering a cross-asset swap
-
 If Curve has lost transaction of your cross asset swap, do not panic, there is a simple way to recover it.
 
-## Finding the token id
+## **Finding the token id**
 
 Visit your address on Etherscan and click on ERC721:
 
@@ -12,7 +10,7 @@ And then click on your latest cross-asset swap, you should find a long string of
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MR9ubqWLHIRfrYKO2XU%2F-MRADoI1nOzkj6rWw7qK%2Fimage.png?alt=media&token=0f9c4500-c221-44f7-b9a0-3cb68e99f52b)
 
-## Initiate recovery
+## **Initiate recovery**
 
 Visit: [https://www.curve.fi/recover](https://www.curve.fi/recover)​
 

@@ -1,12 +1,10 @@
-# Voting
-
-## How to participate in governance?
+## **How to participate in governance?**
 
 To participate in governance, Curve Finance users need to lock their CRV into a voting escrow.
 
 You can do so at this address: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
 
-## What are veCRV?
+## **What are veCRV?**
 
 veCRV stands for voting escrow CRV. They are your CRV locked for voting. The longer you lock your CRV for, the more voting power you have (and the bigger boost you can reach). You can vote lock 1,000 CRV for a year to have a 250 veCRV weight.
 
@@ -14,11 +12,11 @@ Your veCRV weight gradually decreases as your escrowed tokens approach their loc
 
 Get more voting power by locking your CRV for a longer period of time.
 
-## Can I start voting right away?
+## **Can I start voting right away?**
 
 You can only vote using your voting weight at the block where a proposal was created.
 
-## How to vote?
+## **How to vote?**
 
 Simply visit the proposal of your choice, click your vote option and confirm your transaction. You can find DAO proposals at this address: [https://dao.curve.fi/dao](https://dao.curve.fi/dao)​
 

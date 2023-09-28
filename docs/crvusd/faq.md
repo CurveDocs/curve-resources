@@ -1,5 +1,3 @@
-# $crvUSD FAQ
-
 ## **General**
 
 ### **What is $crvUSD and how does it work?**

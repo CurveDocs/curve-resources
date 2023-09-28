@@ -1,6 +1,4 @@
-# Base & MetaPools
-
-## Plain v1 Pools
+## **Plain v1 Pools**
 
 A plain pool is the simplest and earliest implementation of Curve, where all assets in the pool are ordinary ERC-20 tokens pegged to the same price.
 
@@ -16,7 +14,7 @@ One of the [largest is TriPool](https://curve.fi/#/ethereum/pools/3pool/deposit)
     
 As you can see, risks are different which might make this pool a better choice for you depending on what your concerns in the cryptosphere are.
 
-## Lending Pools
+## **Lending Pools**
 
 A small number of v1 pools are lending pools, which means you earn interest from lending as well as trading fees.
 
@@ -35,7 +33,7 @@ Pools like [AAVE](https://curve.fi/#/ethereum/pools/aave/deposit) and [sAAVE](ht
     
 Whilst it’s important to not underplay risks associated with providing liquidity on Curve or DeFi in general, it’s worth noting that all the protocols mentioned above have existed for several months (or more for Compound or iEarn) meaning they have been extensively time tested and exploit attempts have been numerous.
 
-## MetaPools
+## **MetaPools**
 
 Metapools allow for one token to seemingly trade with another underlying base pool. This means we could create, for example, the [Gemini USD metapool](https://curve.fi/#/ethereum/pools/gusd/deposit): \[GUSD, \[3Pool\]\].
 
