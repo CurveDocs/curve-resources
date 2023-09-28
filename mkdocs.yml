@@ -15,6 +15,12 @@ nav:
   - Getting Started:
     - Understanding Curve (v1): base-features/understanding-curve.md  
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
+  - $CRV Token:
+    - Understanding CRV: crv-token/understanding-crv.md
+    - CRV Basics: crv-token/crv-basics.md
+    - CRV Tokenomics: crv-token/crv-tokenomics.md
+    - Staking your CRV: crv-token/staking-your-crv.md
+    - Claiming trading fees: crv-token/claiming-trading-fees.md
   - $crvUSD:
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Markets: crvusd/markets.md
@@ -22,12 +28,6 @@ nav:
     - Loan details: crvusd/loan-details.md
     - Understanding tokenomics: crvusd/understanding-tokenomics.md
     - crvUSD FAQ: crvusd/faq.md
-  - $CRV Token:
-    - Understanding CRV: crv-token/understanding-crv.md
-    - CRV Basics: crv-token/crv-basics.md
-    - CRV Tokenomics: crv-token/crv-tokenomics.md
-    - Staking your CRV: crv-token/staking-your-crv.md
-    - Claiming trading fees: crv-token/claiming-trading-fees.md
   - Liquidity Providers:
     - Understanding curve pools: lp/understanding-curve-pools.md
     - Base- and Metapools: lp/base-and-metapools.md
