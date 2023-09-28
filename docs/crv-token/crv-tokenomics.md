@@ -1,6 +1,6 @@
 $CRV officially launched on the 13th of August 2020. The main purposes of the Curve DAO token are to incentivise liquidity providers on the Curve Finance platform as well as getting as many users involved as possible in the governance of the protocol.
 
-## Supply
+## **Supply**
 
 **The total supply of 3.03b is distributed as such:**
 
@@ -16,5 +16,14 @@ $CRV officially launched on the 13th of August 2020. The main purposes of the Cu
 *   3% to employees with 2 years vesting
 *   5% to the community reserve
 
-The circulating supply will be 0 at launch and the initial release rate will be around 2m CRV per day. Full release schedule here: [https://dao.curve.fi/releaseschedule](https://dao.curve.fi/releaseschedule)
+The circulating supply will be 0 at launch and the initial release rate will be around 2m CRV per day. 
+
+<figure markdown>
+![](../images/release_schedule1.png){ width="600" }
+<figcaption></figcaption>
+</figure>
+
+
+Full release schedule here: [https://dao.curve.fi/releaseschedule](https://dao.curve.fi/releaseschedule)
 ​
+
