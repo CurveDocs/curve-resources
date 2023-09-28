@@ -12,9 +12,9 @@ Visit the deposit page ([https://curve.fi/#/ethereum/pools/factory-tricrypto-4/d
   <figcaption></figcaption>
 </figure>
 
-First, it's important to understand that you don't have to deposit all coins, you can deposit one or several of the coins in the pool and it won't affect your returns. Depositing the coin with the smallest share in the pool will result in a small deposit bonus. Since crypto pools have a rebalancing mechanism, the balances of the pool should be relatively equal.
+First, it's important to understand that you don't have to deposit all coins, you can deposit one or several of the coins in the pool and it won't affect your returns. Depositing the coin with the smallest share in the pool will result in a small positive price impact. Since crypto pools have a rebalancing mechanism, the balances of the pool should be relatively equal.
 
-Second, once you deposit one coin, **it gets split over the three different coins in the pool which means you now have exposure to all of them**. The first checkbox (Add all coins in a balanced proportion) allows you to deposit all three coins in the same proportion they currently are in the pool, resulting in no slippage occurrence.
+Second, once you deposit one coin, **it gets split over the three different coins in the pool which means you now have exposure to all of them**. The first checkbox (Add all coins in a balanced proportion) allows you to deposit all three coins in the same proportion they currently are in the pool, resulting in no price impact.
 
 The second checkbox (Deposit Wrapped) allows users to deposit wrapped ETH instead of plain ETH.
 
