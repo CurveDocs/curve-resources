@@ -19,7 +19,7 @@ $CRV officially launched on the 13th of August 2020. The main purposes of the Cu
 The circulating supply will be 0 at launch and the initial release rate will be around 2m CRV per day. 
 
 <figure markdown>
-![](../images/release_schedule.png){ width="600" }
+![](../images/release_schedule1.png){ width="600" }
 <figcaption></figcaption>
 </figure>
 
