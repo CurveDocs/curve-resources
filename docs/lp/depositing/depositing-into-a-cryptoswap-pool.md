@@ -5,7 +5,7 @@ Cryptoswap pools contain two volatile assets and are designed to offer deep liqu
 *For instance, the [CVX/ETH pool](https://curve.fi/#/ethereum/pools/cvxeth/deposit) is used in the examples below.*
 
 ## **Depositing into the pool**
-Visit the deposit page ([https://curve.fi/#/ethereum/pools/cvxeth/deposit](https://curve.fi/#/ethereum/pools/cvxeth/deposit)). You will need at least one of the two tokens in the pool to deposit. CVX/ETH-pool contains of CVX and ETH.
+Visit the deposit page ([https://curve.fi/#/ethereum/pools/cvxeth/deposit](https://curve.fi/#/ethereum/pools/cvxeth/deposit)). You will need at least one of the two tokens in the pool to deposit. CVX/ETH-pool consists of CVX and ETH.
 
 <figure markdown>
   ![](../../images/cvxeth_deposit.png){ width="300" }
