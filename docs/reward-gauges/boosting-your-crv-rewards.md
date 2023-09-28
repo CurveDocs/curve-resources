@@ -1,5 +1,3 @@
-# **Boosting your CRV Rewards**
-
 This guide is assuming you have already provided liquidity and that you are currently staking your LP tokens on the DAO gauge.
 
 One of the main incentive for CRV is the ability to boost your rewards on provided liquidity. Vote locking CRV allows you to acquire voting power to participate in the DAO and earn a boost of up to 2.5x on the liquidity you are providing on Curve.

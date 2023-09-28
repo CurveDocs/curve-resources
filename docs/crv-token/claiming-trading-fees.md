@@ -1,4 +1,3 @@
-# **Claiming Trading Fees**
 Users who stake $CRV can claim trading fees as often as you'd like, but fees will only be converted into 3CRV once a week.
 
 To claim your fees, visit [https://curve.fi/#/ethereum/dashboard](https://curve.fi/#/ethereum/dashboard) and click the blue "Claim LP Rewards" button. If you are using the classic UI please visit: [https://classic.curve.fi/](https://classic.curve.fi) and look for the green "Claim" button in the box labeled "veCRV 3pool LP claim" at the bottom of the page.

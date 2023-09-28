@@ -1,5 +1,3 @@
-# **Loan Creation**
-
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F92aEeJyIJqTiMrRYpYxc%2Fimage.png?alt=media&token=95ca2242-0146-4ec0-a364-62c09e38e287)
 
 In standard mode, creating a loan using $crvUSD only requires setting how much of the collateral asset you would like to add, and how much $crvUSD you would like to borrow in return. After you have set your collateral amount, the UI will display the maximum amount you can borrow.

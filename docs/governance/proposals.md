@@ -1,8 +1,6 @@
-# Proposals
-
 Once CRV holders vote-lock their veCRV, they can start voting on various proposals.
 
-## Creating a proposal
+## **Creating a proposal**
 
 Anybody can create proposals but users need to follow the structure of a proposal which can be found by creating a new topic on the governance forum: [https://gov.curve.fi/](https://gov.curve.fi/)​
 
@@ -14,7 +12,7 @@ Assuming you have at least 2,500 veCRV, you can also create an official DAO vote
 
 [Voting](/governance/voting)
 
-## Type of votes
+## **Type of votes**
 
 Currently there are two type of votes:
 

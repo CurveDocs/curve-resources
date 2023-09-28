@@ -1,8 +1,6 @@
-# Disabling Crypto Wallets in Brave
-
 The native "Crypto Wallets" app in your Brave browser can often interfere with your web3 provider. When using Metamask, it is important to make sure Brave is pointing to it and not its native implementation.
 
-## Pointing Brave to Metamask
+## **Pointing Brave to Metamask**
 
 Open your web browser, and paste the following in your URL bar: _brave://settings/extensions_
 

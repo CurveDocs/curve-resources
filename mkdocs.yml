@@ -13,72 +13,71 @@ plugins:
 nav:
   - index.md  
   - Getting Started:
-    - base-features/understanding-curve.md  
-    - base-features/understanding-crypto-pools.md  
+    - Understanding Curve (v1): base-features/understanding-curve.md  
+    - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
   - $crvUSD:
-    - crvusd/understanding-crvusd.md
-    - crvusd/markets.md
-    - crvusd/loan-creation.md
-    - crvusd/loan-details.md
-    - crvusd/understanding-tokenomics.md
-    - FAQ: crvusd/faq.md
+    - Understanding crvUSD: crvusd/understanding-crvusd.md
+    - Markets: crvusd/markets.md
+    - Loan creation: crvusd/loan-creation.md
+    - Loan details: crvusd/loan-details.md
+    - Understanding tokenomics: crvusd/understanding-tokenomics.md
+    - crvUSD FAQ: crvusd/faq.md
   - $CRV Token:
-    - crv-token/understanding-crv.md
-    - crv-token/crv-basics.md
-    - crv-token/crv-tokenomics.md
-    - crv-token/staking-your-crv.md
-    - crv-token/claiming-trading-fees.md
+    - Understanding CRV: crv-token/understanding-crv.md
+    - CRV Basics: crv-token/crv-basics.md
+    - CRV Tokenomics: crv-token/crv-tokenomics.md
+    - Staking your CRV: crv-token/staking-your-crv.md
+    - Claiming trading fees: crv-token/claiming-trading-fees.md
   - Liquidity Providers:
-    - lp/understanding-curve-pools.md
-    - lp/base-and-metapools.md
-    - lp/deposit-faqs.md
-    - lp/calculating-yield.md
+    - Understanding curve pools: lp/understanding-curve-pools.md
+    - Base- and Metapools: lp/base-and-metapools.md
+    - Deposit FAQ: lp/deposit-faqs.md
+    - Calculating yield: lp/calculating-yield.md
     - Depositing:
-      - lp/depositing.md
-      - lp/depositing/depositing-into-the-tri-pool.md
-      - lp/depositing/depositing-into-a-metapool.md
-      - lp/depositing/depositing-into-the-susd-pool.md
-      - lp/depositing/depositing-into-a-cryptoswap-pool.md
-      - lp/depositing/depositing-into-a-tricrypto-pool.md
+      - Overview: lp/depositing.md
+      - Despositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
+      - Despositing into a metapool: lp/depositing/depositing-into-a-metapool.md
+      - Despositing into the susd-pool: lp/depositing/depositing-into-the-susd-pool.md
+      - Despositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
+      - Despositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
   - Reward Gauges:
-    - reward-gauges/understanding-gauges.md
-    - reward-gauges/creating-a-pool-gauge.md
-    - reward-gauges/boosting-your-crv-rewards.md
-    - reward-gauges/gauge-weights.md
+    - Understanding gauges: reward-gauges/understanding-gauges.md
+    - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
+    - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
+    - Gauge weights: reward-gauges/gauge-weights.md
   - Governance:
-    - governance/understanding-governance.md
-    - governance/vote-locking-boost.md
-    - governance/voting.md
-    - governance/snapshot.md
+    - Understanding governance: governance/understanding-governance.md
+    - Voting: governance/voting.md
+    - Snapshot: governance/snapshot.md
+    - Vote-locking FAQ: governance/vote-locking-boost.md
     - Proposals:
-      - governance/proposals.md
-      - governance/proposals/community-fund.md
-      - governance/proposals/creating-a-dao-proposal.md
+      - Proposals: governance/proposals.md
+      - Community fund: governance/proposals/community-fund.md
+      - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
   - Multichain:
-    - multichain/understanding-multichain.md
-    - multichain/bridging-funds.md
+    - Understanding Multichain: multichain/understanding-multichain.md
+    - Bridging funds: multichain/bridging-funds.md
   - Factory Pools:
-    - factory-pools/pool-factory.md
-    - factory-pools/creating-a-stableswap-pool.md
-    - factory-pools/creating-a-cryptoswap-pool.md
-    - factory-pools/understanding-oracles.md
+    - Understanding pool factory: factory-pools/pool-factory.md
+    - Creating a stableswap pool: factory-pools/creating-a-stableswap-pool.md
+    - Creating a cryptoswap pool: factory-pools/creating-a-cryptoswap-pool.md
+    - Understanding oracles: factory-pools/understanding-oracles.md
   - Troubleshooting:
-    - troubleshooting/support.md
-    - troubleshooting/cross-asset-swaps.md
-    - troubleshooting/recovering-a-cross-asset-swap.md
-    - troubleshooting/dropping-and-replacing-a-stuck-transaction.md
-    - troubleshooting/disabling-crypto-wallets-in-brave .md
+    - Support: troubleshooting/support.md
+    - Cross-Asset swaps: troubleshooting/cross-asset-swaps.md
+    - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
+    - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
+    - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
   - Appendix:
-    - faq/glossary.md
-    - Security: https://resources.curve.fi/faq/security
+    - Security: faq/security.md
+    - Glossary: faq/glossary.md
   - Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://dao.curve.fi/
     - Github: https://github.com/curvefi/
     - Governance Forum: https://gov.curve.fi/
-    - Technical Docs: https://curve.readthedocs.io/toctree.html
     - Twitter: https://twitter.com/curvefinance
-    - Techincal Documentation: https://docs.curve.fi/
+    - Techincal Docs: https://docs.curve.fi/
 
 # extension
 markdown_extensions:

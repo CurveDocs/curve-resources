@@ -1,5 +1,3 @@
-# Dropping and replacing a stuck transaction
-
 A short tutorial on dropping and replacing a stuck Ethereum transaction.
 
 You've submitted a transaction in Metamask and it just won't come through. Those gas estimates betrayed you and you're stuck looking at your pending transaction on Etherscan. It's happened to everyone and it's not pleasant but there's a fairly simple solution which most people will come to learn about.
@@ -10,13 +8,13 @@ First and foremost, it's important to understand you can only do this if your tr
 
 If you want to understand how this works, you should know that Ethereum transactions must be submitted with an incremental nonce. Each transaction has a nonce (a number) assigned to it and a number cannot be skipped. The way to replace and drop is to submit a new transaction with a higher gas price and the same nonce. This will tell the miners this more expensive transaction is the one that should be mined and your stuck transaction will be discarded.
 
-## Enable custom nonce in Metamask
+## **Enable custom nonce in Metamask**
 
 Visit Metamask and select "Settings", then "Advanced" and scroll down to find and enable "Customize transaction nonce".
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MH2RkfSqu_NcBcXAPRa%2F-MH2S7B2niRurKQcVHXA%2Fimage.png?alt=media&token=39bff9f2-732a-47cf-a132-8e926c7856be)
 
-## Finding your pending transaction nonce
+## **Finding your pending transaction nonce**
 
 Visit your address on Etherscan and click on your pending transaction. If you scroll down you will find "Nonce":
 
@@ -24,7 +22,7 @@ Visit your address on Etherscan and click on your pending transaction. If you sc
 
 Write down this nonce and return to Metamask.
 
-## Replacing your transaction
+## **Replacing your transaction**
 
 Now that you have your nonce, go back to Ethereum and send yourself 0 Ethereum, on the confirmation screen, type the nonce you got from Etherscan.
 

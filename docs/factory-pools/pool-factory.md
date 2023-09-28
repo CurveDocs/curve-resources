@@ -1,5 +1,3 @@
-# Understanding Factory Pools
-
 The Curve pool creation factory allows any user to permissionlessly deploy a Curve pool. These pools can contain a variety of assets, including pegged tokens, unpegged tokens, and metapools built off of other [base pools](/lp/base-and-metapools).
 
 [Base & MetaPools](/lp/base-and-metapools)
