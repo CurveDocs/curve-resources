@@ -11,7 +11,7 @@ In addition to the UI, there is an option to deploy the gauge directly through E
 !!!warning
     Calling `deploy_gauge` on Etherscan will only work if the function is called on the Factory contract that also deployed the pool.
 
-To navigate to this page, first search for the corresponding Factory contract on Etherscan. Then, go to **`Contract -> Write Contract -> deploy_gauge`**. Then insert the pool address you want to add a gauge for, press on **`Write`** and sign the transaction.
+To navigate to this page, first search for the corresponding Factory contract on Etherscan. Then, go to **`Contract -> Write Contract -> deploy_gauge`**. Then insert the pool address you want to add a gauge for, press on **`Write`** and sign the transaction.  
 Before deploying the gauge, ensure you connect your wallet by clicking the **`Connect to Web3`** button.
 
 <figure markdown>
