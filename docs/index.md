@@ -21,7 +21,7 @@ Those resources aim to help new and existing users to become familiar with the [
 - Getting Started with [**Curve v1**](/base-features/understanding-curve) and [**Curve v2**](./base-features/understanding-crypto-pools)
 - [**$CRV Token**](/crv-token/understanding-crv): Tokenomics, Staking, Claiming Fees
 - [**Liquidity Providers**](/lp/understanding-curve-pools): Curve Pools, MetaPools, Depositing
-- [**Reward Gauges**](/reward-gauges/understanding-gauges): Boosting, Gauge Weights
+- [**Reward Gauges**](/reward-gauges/understanding-gauges): Boosting, Gauge Weights, Set Token Rewards
 - [**Stablecoin**](/crvusd/understanding-crvusd): crvUSD, Soft Liquidation, Bands
 - [**Governance**](/governance/understanding-governance): Vote Locking, Voting, Snapshot, Proposals
 - [**Multichain**](/multichain/understanding-multichain): Bridging, Fantom, Polygon, etc.  

@@ -45,6 +45,7 @@ nav:
     - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
     - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
     - Gauge weights: reward-gauges/gauge-weights.md
+    - Gauge weights: reward-gauges/token-reward-for-gauges.md
   - Governance:
     - Understanding governance: governance/understanding-governance.md
     - Voting: governance/voting.md
