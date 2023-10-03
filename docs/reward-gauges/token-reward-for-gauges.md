@@ -1,4 +1,4 @@
-# Guide to Set Any Token Rewards on a Gauge
+## Guide to Set Any Token Rewards on a Gauge
 
 This guide explains the process of setting any token rewards using Etherscan. It's assumed that you possess some familiarity with Etherscan or are competent in executing this transaction through an alternative tool. Note that Curve has employed various gauge versions over time. If your attempts are unsuccessful, it might be due to version differences. Should you encounter repeated failures, please seek our assistance.
 
@@ -22,7 +22,7 @@ Second param: the address where you will send rewards from.
 add_reward(_reward_token: address, _distributor: address)
 ```
 
-## 2. Approving the Reward Token for Deposit**
+## 2. Approving the Reward Token for Deposit
 
 Visit the reward token contract address on Etherscan and switch to the "Write Contract" tab. Use the *approve()* function, setting the spender as the gauge contract address and specifying the desired amount. For a standard token with 18 digits, the amount should be a whole number. To represent 1 full token, use: 1 * 10^18 = 1000000000000000000
 
@@ -36,7 +36,7 @@ Second param: amount in integer
 approve(spender_ (address), amount_ (uint256))
 ```
 
-## 3. Depositing the Reward Token**
+## 3. Depositing the Reward Token
 
 Deposit the reward token to the contract. This action initiates the first reward epoch, lasting a week (defined as 604,800 seconds or 7 * 24 * 3600). If no additional reward token is deposited using the same function, this reward epoch ends after the week.
 
