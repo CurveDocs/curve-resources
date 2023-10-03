@@ -1,6 +1,6 @@
-## Guide to Set Any Token Rewards on a Gauge
+## Guide to Set Any Token Reward on a Gauge
 
-This guide explains the process of setting any token rewards using Etherscan. It's assumed that you possess some familiarity with Etherscan or are competent in executing this transaction through an alternative tool. Note that Curve has employed various gauge versions over time. If your attempts are unsuccessful, it might be due to version differences. Should you encounter repeated failures, please seek our assistance.
+This guide explains the process of setting any token reward using Etherscan. It's assumed that you possess some familiarity with Etherscan or are competent in executing this transaction through an alternative tool. Note that Curve has employed various gauge versions over time. If your attempts are unsuccessful, it might be due to version differences. Should you encounter repeated failures, please seek our assistance.
 
 
 ## 1. Setting the Reward Token and Distributor Address
