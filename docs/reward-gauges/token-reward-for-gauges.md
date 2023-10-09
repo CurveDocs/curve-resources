@@ -40,7 +40,7 @@ As `add_reward()` is an admin guarded function, you might need to call it from a
 
 ## **Approving the Reward Token for Deposit**
 
-Visit the reward token contract address on Etherscan and switch to the "Write Contract" tab. Use the *approve()* function, setting the spender as the gauge contract address and specifying the desired amount. For a standard token with 18 digits, the amount should be a whole number. To represent 1 full token, use: 1 * 10^18 = 1000000000000000000
+Visit the reward token contract address on Etherscan and switch to the "Write Contract" tab. Use the *approve()* function, setting the spender as the gauge contract address and specifying the desired amount.
 
 ### Call **`approve()`** on Etherscan on the reward token contract
 
@@ -65,7 +65,7 @@ Should you add new tokens during an ongoing epoch, both the new tokens and any r
 
 For consistent reward distributions, it's advisable to deposit near the end of an epoch. If replenishing mid-epoch, ensure you compute the appropriate amount for a steady distribution rate.
 
-For tokens with a standard 18-digit format, specify the amount as an integer. For instance, for 1 full token: 1 * 10^18 = 1000000000000000000. *This function must be called using the distributor address.* A previous distributor address or an admin can update the distributor address using *set_reward_distributor()* if necessary.
+For tokens with 18 decimals: 1 full token = 1 * 10^18 = 1000000000000000000. *This function must be called using the distributor address.* A previous distributor address or an admin can update the distributor address using *set_reward_distributor()* if necessary.
 
 
 ### Call **`deposit_reward_token()`** on Etherscan on the gauge
