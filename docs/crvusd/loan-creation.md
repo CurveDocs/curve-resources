@@ -25,18 +25,19 @@ Additionally, users can manually select the number of bands for the loan by pres
 
 
 # **Leveraging Loans**
-The UI provides the option to leverage your loan.
+The UI provides the option to leverage your loan. To do so, just navigate to the "Leverage" tab.
 
-You can leverage your collateral up to 9x. This has the effect of repeat trading crvUSD to collateral and depositing to maximize your collateral position. [Here](https://curve.substack.com/p/august-15-2023-all-or-nothing) is a good explainer on how leveraging works.
+!!!info
+    You can leverage your collateral up to 9x. This has the effect of repeat trading crvUSD to collateral and depositing to maximize your collateral position. Essentially, all borrowed crvUSD is utilized to purchase more collateral.  
+    Be careful, if the collateral price dips, you would need to repay the entire amount to reclaim your initial position. 
 
-Be careful, if the collateral price dips, you would need to repay the entire amount to reclaim your initial position.  
+[Here](https://curve.substack.com/p/august-15-2023-all-or-nothing) is a good explainer on how leveraging works. 
 
-**WARNING:** The corresponding deleverage button is also not yet available.
 
-![](../images/crvusd-leverage.png){ width="400" }
+![](../images/tbtc_lev1.png){ width="400" }
 
-Toggling the advanced mode expands the display to show additional information about the loan, including the price impact and trade route.
+Toggling the advanced mode expands the display to show additional information about the loan, including the price impact, trade route and the actual leverage.
 
-![](../images/crvusd-advanced.png){ width="300" }
+![](../images/lev_info.png){ width="300" }
 
 
