@@ -27,6 +27,8 @@ Additionally, users can manually select the number of bands for the loan by pres
 # **Leveraging Loans**
 The UI provides the option to leverage your loan. To do so, just navigate to the "Leverage" tab.
 
+More infomation on how to deleverage your loan, see [here](../crvusd/loan-details.md#deleveraging-your-loan).
+
 !!!info
     You can leverage your collateral up to 9x. This has the effect of repeat trading crvUSD to collateral and depositing to maximize your collateral position. Essentially, all borrowed crvUSD is utilized to purchase more collateral.  
     Be careful, if the collateral price dips, you would need to repay the entire amount to reclaim your initial position. 

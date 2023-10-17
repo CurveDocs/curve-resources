@@ -51,10 +51,14 @@ Advanced mode also adds a tab with more info about the entire [LLAMMA](/crvusd/u
 
 If a user decided to leverage his loan, there is the possibility automatically de-leverage it via the UI:
 
+!!!info
+    When a user's loan is in soft-liquidation, deleverage is only possible if the loan is fully repaid.
+    If the position is not in soft-liquidation, the user can deliberatly de-leverage with any amount chosen. 
+
 In order to do so, just navigate to the "Deleverage" tab and insert the amount of collateral to deleverage with:
 
-screenshot here
+![](../images/delev_no_softliq1.png){ width="300" }
 
-The UI will also provide the user with his new loan details, such as liquidation range, health, etc...
+The UI will provide the user with his new loan details, such as liquidation range, health, etc...
 
-screenshot here
+![](../images/delev_new_details.png){ width="300" }
