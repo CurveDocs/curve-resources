@@ -8,7 +8,7 @@ The Loan Details page displays information pertinent to an individual loan, alon
 
 # **Loan Details**
 
-When a user creates a loan, their collateral is allocated across a range of liquidation prices. Should the asset price fall within this range, the loan will enter soft-liquidation mode. In this state, the user is not allowed to add additional collateral. The only recourse is to either repay with $crvUSD or to self-liquidate the loan.
+When a user creates a loan, their collateral is allocated across a range of liquidation prices. Should the asset price fall within this range, the loan will enter soft-liquidation mode. In this state, the user is not allowed to add additional collateral. The only recourse is to either repay with crvUSD or to self-liquidate the loan.
 
 <figure markdown>
   ![](../images/loan_details_2.png){ width="600" }
@@ -46,21 +46,22 @@ Advanced mode also adds a tab with more info about the entire [LLAMMA](/crvusd/u
 - **Borrow Rate:** The borrow rate is the annual interest rate charged on the loan. This rate is variable and can change based on market conditions. The borrow rate is expressed as a percentage. For example, a borrow rate of 7.62% means that the user will be charged 7.62% interest on the loan's outstanding balance.
 
 
-# **$crvUSD Concepts**
+# **crvUSD Concepts**
 
 ## **Bands**
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FyMhYzWHxwO8F9TobC61D%2Fimage.png?alt=media&token=1da21e96-9df2-4f47-b6c3-34d9d3cbefd4)
-
 When loans are created, collateral is spread among several bands. Each band has a range of prices for the asset. If the [price oracle](/factory-pools/understanding-oracles) is inside this range of prices, that particular band of collateral is likely to be liquidated.
 
-In the example above, the collateral is distributed into 10 distinct bands. The darker grey indicates collateral that has been converted into $crvUSD, while the lighter grey represents the original collateral type. Hovering over any bar reveals details about that specific position within the band, including the corresponding asset prices. During soft liquidation, a band may exhibit a mix of $crvUSD and the original collateral.
+![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FyMhYzWHxwO8F9TobC61D%2Fimage.png?alt=media&token=1da21e96-9df2-4f47-b6c3-34d9d3cbefd4)
+
+
+In the example above, the collateral is distributed into 10 distinct bands. The darker grey indicates collateral that has been converted into crvUSD, while the lighter grey represents the original collateral type. Hovering over any bar reveals details about that specific position within the band, including the corresponding asset prices. During soft liquidation, a band may exhibit a mix of crvUSD and the original collateral.
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FZgFJQJm7ol1KmgK1BXXJ%2Fimage.png?alt=media&token=c05ef1d9-8918-4cf2-b041-a38716d9660d)
 
 ## **Borrow Rate**
 
-The borrow rate is variable basd on conditions in the pool. For instance, when collateral price is down and some positions are in soft liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy $crvUSD and repay.
+The borrow rate is variable basd on conditions in the pool. For instance, when collateral price is down and some positions are in soft liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
 
 The formula for calculating borrow rate and a cool tool to play around can be found [here](https://crvusd-rate.0xreviews.xyz/).
 
