@@ -21,7 +21,7 @@ The UI includes a dropdown to see additional loan parameters like the current Or
 In the upper right-hand side of the screen, you can toggle advanced mode.
 
 <figure markdown>
-![](../images/tbtc_adv_mode.png){ width="300" }
+![](../images/adv_mode.png){ width="300" }
 <figcaption></figcaption>
 </figure>
 
