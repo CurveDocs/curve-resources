@@ -73,8 +73,8 @@ The UI offers a leveraging feature for loans, accessible by navigating to the 'L
 More infomation on how to deleverage a loan [here](#deleveraging-loans).
 
 !!!info
-  Collateral can be leveraged up to 9x. This process effectively involves repeat trading of crvUSD for collateral and depositing it to maximize the collateral position. Essentially, all borrowed crvUSD is utilized to acquire more collateral.  
-  **Caution is advised, as a dip in the collateral price would necessitate repaying the entire amount to reclaim the initial position.**
+    Collateral can be leveraged up to 9x. This process effectively involves repeat trading of crvUSD for collateral and depositing it to maximize the collateral position. Essentially, all borrowed crvUSD is utilized to acquire more collateral.  
+    **Caution is advised, as a dip in the collateral price would necessitate repaying the entire amount to reclaim the initial position.**
 
 [Here](https://curve.substack.com/p/august-15-2023-all-or-nothing) is a good explainer on how leveraging works. 
 

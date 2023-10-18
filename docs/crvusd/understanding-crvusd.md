@@ -1,4 +1,5 @@
-Curve Stablecoin infrastructure allows users to mint crvUSD using a variety of crypto-tokenized collaterals. Positions are managed passively: if the price of the collateral decreases, the system automatically initiates a 'soft-liquidation' process to sell off some of the collateral. Conversely, if the price of the collateral increases, the system recovers the collateral. However, this process may result in some losses due to the liquidations and de-liquidations.
+Curve Stablecoin infrastructure allows users to mint crvUSD using a variety of crypto-tokenized collaterals.  
+Positions are managed passively: if the price of the collateral decreases, the system automatically initiates a 'soft-liquidation' process to sell off some of the collateral. Conversely, if the price of the collateral increases, the system recovers the collateral. However, this process may result in some losses due to the liquidations and de-liquidations.
 
 Manage crvUSD positions at [https://crvusd.curve.fi/](https://crvusd.curve.fi/)
 
@@ -14,9 +15,9 @@ The page displays the current [borrow rate](../crvusd/loan-details.md#borrow-rat
 </figure>
 
 
-If no position exists, clicking on any market will lead to the [loan creation](../crvusd/loan-creation.md#loan-creation) page.
+If no loan exists, clicking on any market will lead to the [loan creation](../crvusd/loan-creation.md#loan-creation) page.
 
-Should a position already exist, a dollar sign overlay will appear on the left. Selecting the market will lead to the [loan management](../crvusd/loan-creation.md#loan-management) interface.
+Should a loan already exist, a dollar sign overlay will appear on the left. Selecting the market will lead to the [loan management](../crvusd/loan-creation.md#loan-management) interface.
 
 
 ## **Risks**
