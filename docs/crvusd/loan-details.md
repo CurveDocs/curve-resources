@@ -1,5 +1,3 @@
-## **Loan Details**
-
 When you take out a loan with $crvUSD your collateral is spread over a range of liquidation prices. If the asset price drops within this range, you will enter soft liquidation mode. In soft liquidation mode you cannot add more collateral, your only available actions are to repay your loan with $crvUSD or to self-liquidate yourself.
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FTnvpXhnSuPWuuQAb7qrJ%2Fimage.png?alt=media&token=60e1fb7a-ad84-4864-88e6-cb4303768102)

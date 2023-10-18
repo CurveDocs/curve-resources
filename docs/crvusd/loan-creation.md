@@ -68,7 +68,7 @@ This tab lets you to deleverage a loan. Find more details [here](#deleveraging-l
 ## **Leveraging Loans**
 The UI provides the option to leverage your loan. To do so, just navigate to the "Leverage" tab.
 
-More infomation on how to deleverage a loan [here](../crvusd/loan-details.md#deleveraging-your-loan).
+More infomation on how to deleverage a loan [here](#deleveraging-loans).
 
 !!!info
     You can leverage your collateral up to 9x. This has the effect of repeat trading crvUSD to collateral and depositing to maximize your collateral position. Essentially, all borrowed crvUSD is utilized to purchase more collateral.  
