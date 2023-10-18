@@ -2,7 +2,7 @@
 
 ## **Loan Creation**
 
-In standard mode, creating a loan using crvUSD requires only setting the amount of the collateral asset you wish to add and the amount of crvUSD you want to borrow in return. After you have determined your collateral amount, the UI will display the maximum amount you can borrow, as well as the health and borrow rate.
+In standard mode, creating a loan with crvUSD involves setting the amount of collateral asset to be added and the quantity of crvUSD desired for borrowing. Once the collateral amount is determined, the UI displays the maximum sum available for borrowing, along with the health and borrow rate.
 
 <figure markdown>
   ![](../images/tbtc_create_simple_a.png){ width="300" }
@@ -18,7 +18,7 @@ The UI includes a dropdown to see additional loan parameters like the current Or
 </figure>
 
 
-In the upper right-hand side of the screen, you can toggle advanced mode.
+n the upper right-hand side of the screen, there is a toggle for advanced mode.
 
 
 <figure markdown>
@@ -45,7 +45,7 @@ It also enhances the loan creation interface by displaying the liquidation and b
 
 ## **Loan Management**
 
-Everything you need to manage your loan is available in this interface. The features include:
+Everything needed to manage a loan is available in this interface. The features include:
 
 <figure markdown>
   ![](../images/loan_management.png){ width="300" }
@@ -54,26 +54,27 @@ Everything you need to manage your loan is available in this interface. The feat
 
 
 **`Loan`**   
-This tab allows you to `Borrow more` more crvUSD, `Repay` your debt or `Self-Liquidate` your loan.
+This tab provides options to `Borrow more` crvUSD, `Repay` debt, or `Self-Liquidate` a loan
+
 
 **`Collateral`**  
-Can `add` or `remove` collateral from your loan here.
+Options to `add` or `remove` collateral from a loan are available here.
 
 **`Deleverage`**   
-This tab lets you to deleverage a loan. Find more details [here](#deleveraging-loans).
+This tab facilitates loan deleveraging. Find more details [here](#deleveraging-loans).
 
 !!!info
     During soft-liquidation, users are unable to add or withdraw collateral. They can choose to either partially or fully repay their crvUSD debt to improve their health ratio or decide to self-liquidate their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
 
 
 ## **Leveraging Loans**
-The UI provides the option to leverage your loan. To do so, just navigate to the "Leverage" tab.
+The UI offers a leveraging feature for loans, accessible by navigating to the 'Leverage' tab.
 
 More infomation on how to deleverage a loan [here](#deleveraging-loans).
 
 !!!info
-    You can leverage your collateral up to 9x. This has the effect of repeat trading crvUSD to collateral and depositing to maximize your collateral position. Essentially, all borrowed crvUSD is utilized to purchase more collateral.  
-    Be careful, if the collateral price dips, you would need to repay the entire amount to reclaim your initial position. 
+  Collateral can be leveraged up to 9x. This process effectively involves repeat trading of crvUSD for collateral and depositing it to maximize the collateral position. Essentially, all borrowed crvUSD is utilized to acquire more collateral.  
+  **Caution is advised, as a dip in the collateral price would necessitate repaying the entire amount to reclaim the initial position.**
 
 [Here](https://curve.substack.com/p/august-15-2023-all-or-nothing) is a good explainer on how leveraging works. 
 
@@ -91,7 +92,7 @@ Toggling the advanced mode expands the display to show additional information ab
 
 
 ## **Deleveraging Loans**
-Deleveraging a loan — whether it is [leveraged](../crvusd/loan-creation.md#leveraging-loans) or not — can be done through the UI. To do so, simply navigate to the 'Deleverage' tab and enter the amount of collateral you wish to use for deleveraging. This collateral will then be converted to crvUSD to repay the user's debt.
+Deleveraging a loan — irrespective of it being [leveraged](../crvusd/loan-creation.md#leveraging-loans)  — is an option available through the UI. Users must navigate to the 'Deleverage' tab and input the amount of collateral they intend to allocate for deleveraging. This particular collateral is then converted into crvUSD, which is used to facilitate debt repayment.
 
 <figure markdown>
   ![](../images/delev_no_softliq1.png){ width="300" }
