@@ -20,9 +20,10 @@ The UI includes a dropdown to see additional loan parameters like the current Or
 
 In the upper right-hand side of the screen, you can toggle advanced mode.
 
+
 <figure markdown>
-![](../images/adv_mode.png){ width="300" }
-<figcaption></figcaption>
+  ![](../images/adv.png){width="500"}
+  <figcaption></figcaption>
 </figure>
 
 
