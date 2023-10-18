@@ -24,7 +24,7 @@ nav:
   - $crvUSD:
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Markets: crvusd/markets.md
-    - Loan creation: crvusd/loan-creation.md
+    - Loan Creation and Management: crvusd/loan-creation.md
     - Loan details: crvusd/loan-details.md
     - Understanding tokenomics: crvusd/understanding-tokenomics.md
     - crvUSD FAQ: crvusd/faq.md
