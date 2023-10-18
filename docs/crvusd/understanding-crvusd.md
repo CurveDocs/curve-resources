@@ -2,7 +2,27 @@ Curve Stablecoin infrastructure enables users to mint crvUSD using a selection o
 
 Manage crvUSD positions at [https://crvusd.curve.fi/](https://crvusd.curve.fi/)
 
-[User guide of crvUSD and introduction of rate & LLAMMA, by 0xreviews](https://crvusd.0xreviews.xyz/​)
+
+## **Markets**
+On the Markets page you can view all the available collateral types.
+
+The page shows the current [borrow rate](/crvusd/understanding-tokenomics#borrow-rate), total amount of $crvUSD borrowed, and total amount of collateral backing it.
+
+<figure markdown>
+  ![](../images/crvusd_markets.png){ width="700" }
+  <figcaption></figcaption>
+</figure>
+
+
+If you do not have a position, you can click on any market to [create a loan](/crvusd/loan-creation).
+
+If you already have a position it will show a dollar sign overlay on the left, and clicking on the market will take you to a page to [manage your loan](/crvusd/loan-details).
+
+### **Collateral Choices**
+
+While testing $crvUSD, the team created a market for $sfrxETH with a small market cap ($10MM) because it had a compatible oracle. Additional forms of collateral are expected to be approved by the DAO.
+
+
 
 ## **Risks**
 
@@ -18,3 +38,5 @@ Please consider the following risk disclaimers when using the Curve Stablecoin i
 4. crvUSD is exclusively issued by smart contracts, without an intermediary. However, the parameters that ensure the proper operation of the crvUSD infrastructure are subject to updates approved by Curve DAO. Users must stay informed about any parameter changes in the stablecoin infrastructure.
     
 [Understanding Curve v2](/base-features/understanding-crypto-pools)
+
+
