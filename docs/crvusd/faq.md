@@ -36,19 +36,19 @@ At the start of the $crvUSD loan process, collateral is deposited and equally di
 This price range can optionally be adjusted and customized when initially creating a loan. In the UI, look for the “advanced mode” toggle which will provide more information on this range as well as an “Adjust” button that allows you to fine-tune this range.
 
 
-### **What happens when the collateral price drops into my selected range?**
+### **What happens when the collateral price drops into my selected range? (soft-liquidation)**
 
-Each $crvUSD market is attached to an AMM. When the collateral price drops into your  selected range, this collateral can be traded in the AMM. When this happens, traders can purchase your collateral and replace it with $crvUSD. This has the effect of leaving your loan collateralized by stablecoins, which better hold value and maintain your loan health.
+Each $crvUSD market is attached to an AMM. When the collateral price drops into your selected range, this collateral can be traded in the AMM. When this happens, traders can purchase your collateral and replace it with $crvUSD. This has the effect of leaving your loan collateralized by stablecoins, which better hold value and maintain your loan health.
 
 _NOTE: This process was initially referred to as “soft liquidation.” This term is being phased out to avoid confusion with the harder liquidation process in which a loan is closed and collateral is sold off._
 
 
-### **What happens if the collateral price recovers?**
+### **What happens if the collateral price recovers? (de-liquidation)**
 
 While collateral price rises, the above process happens in reverse. Your position is traded via the AMM from $crvUSD back into your original collateral. Due to AMM trading fees, you may find you have lost a few percentage points worth of your original collateral value once the collateral price is again above the top end of your selected liquidation range.
 
 
-### **Under what circumstances can I be liquidated?**
+### **Under what circumstances can I be liquidated? (hard-liquidation)**
 
 Should your loan health drop below 0%, you are eligible to for liquidation.  In liquidation, your collateral is sold off and your position closes. While the $crvUSD collateral conversion AMM mechanism aims to protect against liquidations, it may be unable to keep pace with severe price swings. Borrowers are recommended to maintain loan health, particularly when prices drop within the selected liquidation range.
 
