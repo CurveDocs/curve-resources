@@ -1,30 +1,3 @@
-The Loan Details page shows you information about your loan as well as features to manage your loan.
-
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F9qrzhTMP89u4LyKDPS3C%2Fimage.png?alt=media&token=dc5c8323-e666-4070-a727-91de0fe89596)
-
-## **Loan Management**
-
-<figure markdown>
-  ![](../images/crvusd_loan_management.png){ width="300" }
-  <figcaption></figcaption>
-</figure>
-
-
-Everything you may need to manage your loan is in the dark blue box on the left side of the page. These features include:
-
-*   Loan:
-    *   Borrow more
-    *   Repay
-    *   Self-Liquidate
-
-*   Collateral:
-    *   Add
-    *   Remove
- 
-
-During soft-liquidation, users are unable to add or withdraw collateral. They can choose to either partially or fully repay their crvUSD debt to improve their health ratio or decide to self-liquidate their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
-
-
 ## **Loan Details**
 
 When you take out a loan with $crvUSD your collateral is spread over a range of liquidation prices. If the asset price drops within this range, you will enter soft liquidation mode. In soft liquidation mode you cannot add more collateral, your only available actions are to repay your loan with $crvUSD or to self-liquidate yourself.
@@ -44,25 +17,3 @@ In advanced mode the UI changes to show more information about your [collateral 
 Advanced mode also adds a tab with more info about the entire [LLAMMA](/crvusd/understanding-tokenomics#llamma).
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FN9ZxDONJakdtXZatxm5j%2Fimage.png?alt=media&token=9a52b78c-4ab2-42b2-85e2-4c1f4922a7c8)
-
-
-
-## **Deleveraging Loans**
-Deleveraging a loan — whether it is [leveraged](../crvusd/loan-creation.md#leveraging-loans) or not — can be done through the UI. To do so, simply navigate to the 'Deleverage' tab and enter the amount of collateral you wish to use for deleveraging. This collateral will then be converted to crvUSD to repay the user's debt.
-
-<figure markdown>
-  ![](../images/delev_no_softliq1.png){ width="300" }
-  <figcaption></figcaption>
-</figure>
-
-
-!!!info
-    When a user's loan is in soft liquidation, deleveraging is only possible if the loan gets fully repaid. If the position is not in soft liquidation, the user can deliberately deleverage by any chosen amount.
-
-
-The UI will provide the user with their updated loan details, such as liquidation and band range, borrow rate, and health, as well as the LLAMMA changes of collateral and debt.
-
-<figure markdown>
-![](../images/delev_new_details.png){ width="300" }
-  <figcaption></figcaption>
-</figure>
