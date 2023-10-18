@@ -18,7 +18,7 @@ nav:
   - $crvUSD:
     - crvusd/understanding-crvusd.md
     - crvusd/markets.md
-    - crvusd/loan-creation.md
+    - Loans: crvusd/loan-creation.md
     - crvusd/loan-details.md
     - crvusd/understanding-tokenomics.md
     - FAQ: crvusd/faq.md
