@@ -2,7 +2,7 @@ The Loan Details page shows you information about your loan as well as features 
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F9qrzhTMP89u4LyKDPS3C%2Fimage.png?alt=media&token=dc5c8323-e666-4070-a727-91de0fe89596)
 
-## **Loan Details**
+# **Loan Details**
 
 When you take out a loan with $crvUSD your collateral is spread over a range of liquidation prices. If the asset price drops within this range, you will enter soft liquidation mode. In soft liquidation mode you cannot add more collateral, your only available actions are to repay your loan with $crvUSD or to self-liquidate yourself.
 
