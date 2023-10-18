@@ -24,9 +24,8 @@ nav:
   - $crvUSD:
     - crvusd/understanding-crvusd.md
     - crvusd/markets.md
-    - Loans: crvusd/loan-creation.md
-    - crvusd/loan-details.md
-    - crvusd/understanding-tokenomics.md
+    - Loan Creation and Management: crvusd/loan-creation.md
+    - Loan Details and Concepts: crvusd/loan-details.md
     - FAQ: crvusd/faq.md
   - Liquidity Providers:
     - lp/understanding-curve-pools.md
