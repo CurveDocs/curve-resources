@@ -23,10 +23,8 @@ nav:
     - Claiming trading fees: crv-token/claiming-trading-fees.md
   - $crvUSD:
     - Understanding crvUSD: crvusd/understanding-crvusd.md
-    - Markets: crvusd/markets.md
-    - Loan creation: crvusd/loan-creation.md
-    - Loan details: crvusd/loan-details.md
-    - Understanding tokenomics: crvusd/understanding-tokenomics.md
+    - Loan Creation & Management: crvusd/loan-creation.md
+    - Loan Details & Concepts: crvusd/loan-details.md
     - crvUSD FAQ: crvusd/faq.md
   - Liquidity Providers:
     - Understanding curve pools: lp/understanding-curve-pools.md
