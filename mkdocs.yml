@@ -31,6 +31,7 @@ nav:
     - Base- and Metapools: lp/base-and-metapools.md
     - Deposit FAQ: lp/deposit-faqs.md
     - Calculating yield: lp/calculating-yield.md
+    - Charts and Pool Activity: lp/understanding_charts.md
     - Depositing:
       - Overview: lp/depositing.md
       - Despositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
