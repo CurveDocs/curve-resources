@@ -18,7 +18,7 @@ The UI includes a dropdown to see additional loan parameters like the current Or
 </figure>
 
 
-n the upper right-hand side of the screen, there is a toggle for advanced mode.
+In the upper right-hand side of the screen, there is a toggle for advanced mode.
 
 
 <figure markdown>
@@ -36,6 +36,9 @@ The advanced mode adds an additional display with more information about the cur
 
 
 It also enhances the loan creation interface by displaying the liquidation and band range, number of bands, borrow rate, and Loan to Value ratio (LTV). Additionally, users can manually select the number of bands for the loan by pressing the "adjust" button and using the slider to increase or decrease the number of bands.
+
+!!!tip
+    A higher number of bands results in fewer losses when the loan is in soft-liquidation mode, see [here](../crvusd/loan-details.md#loan-health). The maximum number of bands is 50, while the minimum is 4.
 
 <figure markdown>
   ![](../images/tbtc_create_adv2.png){ width="300" }
@@ -73,8 +76,11 @@ The UI offers a leveraging feature for loans, accessible by navigating to the 'L
 More infomation on how to deleverage a loan [here](#deleveraging-loans).
 
 !!!info
-    Collateral can be leveraged up to 9x. This process effectively involves repeat trading of crvUSD for collateral and depositing it to maximize the collateral position. Essentially, all borrowed crvUSD is utilized to acquire more collateral.  
-    **Caution is advised, as a dip in the collateral price would necessitate repaying the entire amount to reclaim the initial position.**
+    Collateral can be leveraged up to 9x, depending on the number of bands chosen. If a user wants to use the maximum leverage (9x), they loan will have the minimum number of bands (4). Using the highest number of bands (50) only allows for a leverage of up to 3x. For the consequences of using different numbers of bands, see [here](../crvusd/loan-details.md#loan-health).
+
+The process of leveraging effectively involves repeat trading of crvUSD for collateral and depositing it to maximize the collateral position. Essentially, all borrowed crvUSD is utilized to acquire more collateral.  
+
+**Caution is advised, as a dip in the collateral price would necessitate repaying the entire amount to reclaim the initial position.**
 
 [Here](https://curve.substack.com/p/august-15-2023-all-or-nothing) is a good explainer on how leveraging works. 
 
