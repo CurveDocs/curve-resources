@@ -134,6 +134,8 @@ theme:
     - navigation.expand
     - navigation.indexes
     - navigation.instant
+    - navigation.path
+    - navigation.instant.prefetch
     - navigation.sections
     - navigation.top
     - navigation.tracking
