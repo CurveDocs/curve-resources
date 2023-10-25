@@ -77,7 +77,10 @@ LLAMA (Lending Liquidation AMM Algorithm) is a fully functional AMM with all the
 
 ## **Loan Health**
 
-Based on a users collateral and borrow amount, the UI will display the Health score and status. Low health scores are more at risk of entering liquidation mode in the event the asset price drops. If the position is in self-liquidation mode, an additional warning will be displayed.
+Based on a users collateral and borrow amount, the UI will display the Health score and status. If the position is in self-liquidation mode, an additional warning will be displayed. Once a loan reaches 0% health, the loan is eligible to be hard-liquidated.
+
+!!!warning 
+    The health of a loan decreases when the loan enters self-liquidation mode, and collateral prices change. These losses do not occur only when prices go down but also when the collateral price rises again, resulting in the de-liquidation of the user's loan. This implies that the health of a loan can decrease even though the collateral value of the position increases. If a loan is not in self-liquidation mode, then no losses occur.
 
 <figure markdown>
   ![](../images/health.png){ width="600" }
