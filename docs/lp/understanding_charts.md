@@ -1,4 +1,4 @@
-The [Curve UI](https://curve.fi/) offers a variety of charts related to **token prices**, **exchanges**, and **liquidity activities** (such as adding or removing liquidity).
+The [Curve UI](https://curve.fi/) offers a variety of charts related to **token prices**, as well as an **overview of exchanges and liquidity activities** (such as adding or removing liquidity) for each pool."
 
 
 ## **Charts**
