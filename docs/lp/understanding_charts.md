@@ -1,36 +1,42 @@
-LP Tokens represent a composition of all coins within a liquidity pool. They can be obtained by depositing one or more assets into a pool. When holding a LP Token, the user is exposed to all assets within the pool, no matter which coins he deposited.
+The [Curve UI](https://curve.fi/) offers a variety of charts related to **token prices**, **exchanges**, and **liquidity activities** (such as adding or removing liquidity).
 
-The UI provides diverse charts regarding the pool. The "Chart" tab shows a chart of the LP Tokken price with regard to - in this example - USDT. 
-On the top right, there is the possibility to expand and refresh the chart or adjust its timeframe.
+
+## **Charts**
+
+LP tokens are tokens received upon depositing assets into a liquidity pool. These tokens represent the holder's share of the pool and can be redeemed for a portion of the funds, plus any fees accrued over time. Similar to other tokens, their value is contingent on the prices of the underlying assets in the liquidity pool.
+
+Navigating to the **`Chart`** tab reveals a graphical interface of the LP Token price in relation to, for example, USDT. In the top right corner, options are available to expand/minimize or refresh the chart, as well as to adjust its timeframe.
 
 <figure markdown>
-  ![](../images/lp_chart.png){ width="500" }
+  ![](../images/lp_chart.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
-Pressing on "LP Token Price (USDT)" provides a drop-down menu with additional price charts.
+Clicking on **`LP Token Price (USDT)`** reveals a drop-down menu with additional charts.
 
 <figure markdown>
-  ![](../images/lp_dropdown.png){ width="300" }
+  ![](../images/lp_dropdown.png){ width="150" }
+  <figcaption></figcaption>
+</figure>
+
+## **Pool Activity**
+
+Besides a chart for prices, the UI also provides an overview of swaps and liquidity actions for the pool under the **`Pool Activity`** tab. 
+
+On the **`Swaps`** tab, the interface shows the tokens swapped and the time of each transaction, indicating how many hours or minutes ago it occurred. Clicking on a specific swap will redirect the user to the transaction on Etherscan.
+
+
+<figure markdown>
+  ![](../images/lp_swaps.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
 
-Besides a chart for prices, the UI also provides an overview on swaps and liquidity actions of the pool on the "Pool Activity" tab.
-It displays the tokens swapped and the time how many hours/minutes ago the transaction happened. Pressing on the according swap will redirect to the transcation on etherscan.
+Navigating to the **`Liquidity`** tab to display deposits and withdrawals in the pool.
 
 
 <figure markdown>
-  ![](../images/lp_swaps.png){ width="500" }
-  <figcaption></figcaption>
-</figure>
-
-
-Navigating to "Liquidity" will show liquidity deposits and withdrawls on the pool.
-
-
-<figure markdown>
-  ![](../images/lp_liquidity.png){ width="500" }
+  ![](../images/lp_liquidity.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
