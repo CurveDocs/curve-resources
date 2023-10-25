@@ -18,7 +18,7 @@ The UI includes a dropdown to see additional loan parameters like the current Or
 </figure>
 
 
-n the upper right-hand side of the screen, there is a toggle for advanced mode.
+In the upper right-hand side of the screen, there is a toggle for advanced mode.
 
 
 <figure markdown>
@@ -38,7 +38,7 @@ The advanced mode adds an additional display with more information about the cur
 It also enhances the loan creation interface by displaying the liquidation and band range, number of bands, borrow rate, and Loan to Value ratio (LTV). Additionally, users can manually select the number of bands for the loan by pressing the "adjust" button and using the slider to increase or decrease the number of bands.
 
 !!!tip
-    A higher number of bands results in fewer losses when the loan is in soft-liquidation mode. The maximum number of bands is 40, while the minimum is 4.
+    A higher number of bands results in fewer losses when the loan is in soft-liquidation mode, see [here](../crvusd/loan-details.md#loan-health). The maximum number of bands is 50, while the minimum is 4.
 
 <figure markdown>
   ![](../images/tbtc_create_adv2.png){ width="300" }
