@@ -52,8 +52,10 @@ Advanced mode also adds a tab with more info about the entire [LLAMMA](/crvusd/u
 
 When loans are created, collateral is spread among several bands. Each band has a range of prices for the asset. If the [price oracle](/factory-pools/understanding-oracles) is inside this range of prices, that particular band of collateral is likely to be liquidated.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FyMhYzWHxwO8F9TobC61D%2Fimage.png?alt=media&token=1da21e96-9df2-4f47-b6c3-34d9d3cbefd4)
+!!!info 
+    The number of bands has a significant influence on the amount of losses when a loan is in self-liquidation. See [here](#loan-health).
 
+![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FyMhYzWHxwO8F9TobC61D%2Fimage.png?alt=media&token=1da21e96-9df2-4f47-b6c3-34d9d3cbefd4)
 
 In the example above, the collateral is distributed into 10 distinct bands. The darker grey indicates collateral that has been converted into crvUSD, while the lighter grey represents the original collateral type. Hovering over any bar reveals details about that specific position within the band, including the corresponding asset prices. During soft liquidation, a band may exhibit a mix of crvUSD and the original collateral.
 

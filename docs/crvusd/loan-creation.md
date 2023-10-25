@@ -76,8 +76,11 @@ The UI offers a leveraging feature for loans, accessible by navigating to the 'L
 More infomation on how to deleverage a loan [here](#deleveraging-loans).
 
 !!!info
-    Collateral can be leveraged up to 9x. This process effectively involves repeat trading of crvUSD for collateral and depositing it to maximize the collateral position. Essentially, all borrowed crvUSD is utilized to acquire more collateral.  
-    **Caution is advised, as a dip in the collateral price would necessitate repaying the entire amount to reclaim the initial position.**
+    Collateral can be leveraged up to 9x, depending on the number of bands chosen. If a user wants to use the maximum leverage (9x), they loan will have the minimum number of bands (4). Using the highest number of bands (50) only allows for a leverage of up to 3x. For the consequences of using different numbers of bands, see [here](../crvusd/loan-details.md#loan-health).
+
+The process of leveraging effectively involves repeat trading of crvUSD for collateral and depositing it to maximize the collateral position. Essentially, all borrowed crvUSD is utilized to acquire more collateral.  
+
+**Caution is advised, as a dip in the collateral price would necessitate repaying the entire amount to reclaim the initial position.**
 
 [Here](https://curve.substack.com/p/august-15-2023-all-or-nothing) is a good explainer on how leveraging works. 
 
