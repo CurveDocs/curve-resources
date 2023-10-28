@@ -15,7 +15,7 @@ Specify the *reward token* and the *distributor address*. The distributor addres
     
 To identify the manager, check the *manager/admin* in the "Read Contract" section on Etherscan. Some versions of this contract may also allow the factory owner to execute this call.
 
-
+The deployer of the gauge is usually the manager of the gauge if the gauge was deployed via the Proxy of the Factory. If the gauge was deployed directly through the Factory contract itself, a quick migration needs to occur (see [here](https://docs.curve.fi/curve_dao/LiquidityGaugesAndMintingCRV/gauges/PermissionlessRewards/#migrate_gauge_manager)).
 
 ### Call **`add_reward()`** on Etherscan
 
@@ -23,6 +23,8 @@ This function should be called only once for a specific reward token. A repeated
 
 As `add_reward()` is an admin guarded function, you might need to call it from a ProxyContract. More information [here](https://docs.curve.fi/curve_dao/LiquidityGaugesAndMintingCRV/gauges/PermissionlessRewards/).
 
+!!!info
+    On sidechains, permissionless rewards are directly built into the gauges. Whoever deploys the gauge can call `add_rewards` on the gauge contract itself (no need to migrate or do it via proxy).
 
 !!! description "`add_reward(_reward_token: address, _distributor: address):`"
 
