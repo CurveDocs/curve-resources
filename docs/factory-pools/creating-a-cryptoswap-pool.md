@@ -19,12 +19,6 @@ The token selection tab can be used to select up to three tokens.
 
 The order of the tokens can matter for the performance of the AMM. Make sure to select the token with the higher price is first. If the tokens are supported by CoinGecko, you can see the "Initial Price" under the **Pool Setup** panel, choose the token order to maximize this value.
 
-On Ethereum at the top of the token selection popup you can see any Curve basepools suggested up top. These allow you to create a [metapool](/lp/base-and-metapools), where the other asset can trade with any of the underlying basepool assets.
-
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FzA1s58lMlKYtYHwiHG6m%2Fimage.png?alt=media&token=72702952-9cbc-4b0c-b842-cbc8545593d9)
-
-You can search by name for any token already added to Curve, or paste a token address
-
 ## **Pool Presets**
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F24DrjmNDNVG7XyIcvYVS%2FScreenshot%202023-03-05%20at%203.48.30%20AM.png?alt=media&token=8e869851-cd1a-42d8-86d1-731722fdfdd1)
