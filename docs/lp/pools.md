@@ -1,7 +1,18 @@
 # **Curve Pool Architecture**
 
-!!!warning "Base- and Metapools"
-    The basepool/metapool system is only available for the stableswap pool with one exception: Curve on Polygon has an [atricrypto3](https://curve.fi/#/polygon/pools/atricrypto3/deposit) basepool, which was - for instance - paired with CRV, creating a [CRV/TRICRYPTO](https://curve.fi/#/polygon/pools/factory-crypto-1/deposit) metapool. Other than some pools on Polygon, all base- and meta are pure stableswap pools.
+Curve introduced a system of base- and metapools.
+
+The basepool/metapool mechanisms are currently only available for the stableswap pools with one exception: Curve on Polygon has an [atricrypto3](https://curve.fi/#/polygon/pools/atricrypto3/deposit) basepool, which was - for instance - paired with CRV, creating a [CRV/TRICRYPTO](https://curve.fi/#/polygon/pools/factory-crypto-1/deposit) metapool. 
+
+Other than some pools on Polygon, all base pools and metapools are pure stableswap pools.
+
+!!!danger "Risk"
+    Pools are exposed to various risk factors depending on the type of pool and the coins they contain. Before using Curve pools, please make sure to check these out. The [Curve UI](https://curve.fi/) displays an overview of the associated risks with the pool at the bottom of the pool page when clicking the following button:
+    <figure markdown>
+    ![](../images/pool_risk_1.png){ width="700" }
+    <figcaption></figcaption>
+    </figure>
+
 
 
 ## **Base Pool**
@@ -40,14 +51,6 @@ One of the [largest is TriPool](https://curve.fi/#/ethereum/pools/3pool/deposit)
 
 [Depositing into the Tri-Pool](../lp/depositing/depositing-into-the-tri-pool.md).
 
-**In plain pools, your risks are as follow:**
-
-*   Smart contract issues with Curve
-*   Systemic issues with the stable coins in those pools
-*   Systemic issues with Synthetix (for sUSD)
-    
-As you can see, risks are different which might make this pool a better choice for you depending on what your concerns in the cryptosphere are.
-
 
 ## **Lending Pools**
 A small number of v1 pools are lending pools, which means you earn interest from lending as well as trading fees.
@@ -55,14 +58,6 @@ A small number of v1 pools are lending pools, which means you earn interest from
 The [Compound pool](https://curve.fi/#/ethereum/pools/compound/deposit) is the first and oldest. The (c) you see above stands for cTokens which are Compound native tokens. This means your stable coins in the Compound pool would only be lent on the Compound protocol.
 
 Pools like [AAVE](https://curve.fi/#/ethereum/pools/aave/deposit) and [sAAVE](https://curve.fi/#/ethereum/pools/saave/deposit) also lend on AAVE v2. Lending pools are generally more expensive to interact with.
-
-**In those pools, your risks are as follow:**
-
-*   Smart contract issues with lending protocols
-*   Smart contract issues with Curve
-*   Systemic issues with the stablecoins in those pools
-    
-Whilst it’s important to not underplay risks associated with providing liquidity on Curve or DeFi in general, it’s worth noting that all the protocols mentioned above have existed for several years meaning they have been extensively time tested and exploit attempts have been numerous.
 
 
 
@@ -82,14 +77,14 @@ These pools support tokens with rate oracles, such as wstETH.
     Oracles might be controlled externally by an EOA. Users are advised to proceed with caution.
 
 
-## **Rebasing Pools**
+## **Rebasing Assets**
 This pool type supports rebasing assets like stETH.
 
 !!!warning "Rebasing Tokens"
     Pools including rebasing tokens function slightly differently from others. The pool ensures that liquidity providers retain all rebases.
 
 
-## **Pools with ERC-4626**
+## **ERC-4626 Assets**
 ERC-4626 is a standard to optimize and unify the technical parameters of yield-bearing vaults. It provides a standard API for tokenized yield-bearing vaults representing shares of a single underlying ERC-20 token. ERC-4626 also outlines an optional extension for tokenized vaults utilizing ERC-20, offering basic functionality for depositing, withdrawing tokens, and reading balances.
 
 These pools contain tokens such as sDAI, which has a `convertToAssets` method.
