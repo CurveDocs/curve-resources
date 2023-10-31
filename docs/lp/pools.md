@@ -29,7 +29,7 @@ The Metapool in question would take GUSD and 3Pool LP tokens. This means that li
 
 # **StableSwap Pools**
 
-Stableswap pools utilize the stableswap invariant. For a better understanding of how it works, see [Understanding Curve (v1)](https://resources.curve.fi/base-features/understanding-curve/).
+Stableswap pools utilize the stableswap invariant within liquidity pools. For a better understanding of how it works, see [Understanding Curve (v1)](https://resources.curve.fi/base-features/understanding-curve/) or read the [whitepaper](https://docs.curve.fi/pdf/stableswap-paper.pdf).
 
 
 
@@ -97,16 +97,16 @@ These pools contain tokens such as sDAI, which has a `convertToAssets` method.
 
 
 # **Crypto Pools**
-Crypto pools are pools that use a different market-making algorithm than the stableswap pools. For a better understanding of how pools with volatile assets work, see [Understanding CryptoPools (v2)](https://resources.curve.fi/base-features/understanding-curve/).
+Crypto pools are pools that use a different market-making algorithm than the stableswap pools. For a better understanding of how pools with volatile assets work, see [Understanding CryptoPools (v2)](https://resources.curve.fi/base-features/understanding-curve/) or read the [whitepaper](https://docs.curve.fi/pdf/crypto-pools-paper.pdf).
 
 
 ## **Cryptoswap Pool**
 Cryptoswap pools are pools that contain two volatile tokens.
 
-An example for this kind of pool is the [CVX<>ETH pool](https://curve.fi/#/ethereum/pools/cvxeth/deposit).
+An example for this kind of pool is the [CVX<>ETH](https://curve.fi/#/ethereum/pools/cvxeth/deposit) pool.
 
 
 ## **Tricrypto Pool**
 Tricrypto pools are pools which contain three volatile tokens.
 
-An example for this kind of pool is the [TricryptoUSDT pool](https://curve.fi/#/ethereum/pools/factory-tricrypto-1/deposit).
+An example for this kind of pool is the [TricryptoUSDT](https://curve.fi/#/ethereum/pools/factory-tricrypto-1/deposit) pool.
