@@ -1,8 +1,8 @@
 # **Curve Pool Architecture**
 
-Curve introduced a system of base- and metapools.
+Curve introduces a system of base- and metapools.
 
-The basepool/metapool mechanisms are currently only available for the stableswap pools with one exception: Curve on Polygon has an [atricrypto3](https://curve.fi/#/polygon/pools/atricrypto3/deposit) basepool, which was - for instance - paired with CRV, creating a [CRV/TRICRYPTO](https://curve.fi/#/polygon/pools/factory-crypto-1/deposit) metapool. 
+The basepool/metapool mechanism is currently only available for the stableswap pools with one exception: Curve on Polygon has an [atricrypto3](https://curve.fi/#/polygon/pools/atricrypto3/deposit) basepool, which was - for instance - paired with CRV, creating a [CRV/TRICRYPTO](https://curve.fi/#/polygon/pools/factory-crypto-1/deposit) metapool. 
 
 Other than some pools on Polygon, all base pools and metapools are pure stableswap pools.
 
@@ -94,14 +94,14 @@ These pools contain tokens such as sDAI, which has a `convertToAssets` method.
 # **Crypto Pools**
 Crypto pools are pools that use a different market-making algorithm than the stableswap pools. For a better understanding of how pools with volatile assets work, see [Understanding CryptoPools (v2)](https://resources.curve.fi/base-features/understanding-curve/) or read the [whitepaper](https://docs.curve.fi/pdf/crypto-pools-paper.pdf).
 
-
-## **Cryptoswap Pool**
 Cryptoswap pools are pools that contain two volatile tokens.
 
 An example for this kind of pool is the [CVX<>ETH](https://curve.fi/#/ethereum/pools/cvxeth/deposit) pool.
 
 
-## **Tricrypto Pool**
+## **Tricrypto Pools**
 Tricrypto pools are pools which contain three volatile tokens.
 
-An example for this kind of pool is the [TricryptoUSDT](https://curve.fi/#/ethereum/pools/factory-tricrypto-1/deposit) pool.
+There is also a new cryptoswap implementation, comparable to stableswap-ng, called Tricrypto-NG. These pools consist of three volatile assets and have several improvements, such as gas efficiency, compared to the prior version. 
+
+An example for this kind of tricrypto-ng pool is the [TricryptoUSDT](https://curve.fi/#/ethereum/pools/factory-tricrypto-1/deposit) pool.
