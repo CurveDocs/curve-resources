@@ -28,7 +28,7 @@ nav:
     - crvUSD FAQ: crvusd/faq.md
   - Liquidity Providers:
     - Understanding curve pools: lp/understanding-curve-pools.md
-    - Base- and Metapools: lp/base-and-metapools.md
+    - Pools: lp/pools.md
     - Deposit FAQ: lp/deposit-faqs.md
     - Calculating yield: lp/calculating-yield.md
     - Charts and Pool Activity: lp/charts_poolactivity.md
