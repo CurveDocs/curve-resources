@@ -19,3 +19,4 @@ Fees on those pool range from 0.04% to 0.4%. The current fee varies based on how
 ## **Risks**
 
 As with any liquidity providing in blockchain, there are some smart contract risks involved. Curve crypto pools have been audited by MixBytes and ChainSecurity but audits never eliminate risks completely.
+ 
