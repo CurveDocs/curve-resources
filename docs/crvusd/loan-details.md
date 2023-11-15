@@ -21,7 +21,7 @@ The section on the bottom of the page provides information about the entire [LLA
 When a position was or is in soft-liquidation mode, losses occur. The UI displays the total "LOSS AMOUNT" as well as the "% LOST", which measures the loss in collateral value caused by the soft-liquidation process.
 
 <figure markdown>
-  ![](../images/loss.png){ width="600" }
+  ![](../images/loss1.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
