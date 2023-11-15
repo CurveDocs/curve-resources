@@ -15,7 +15,17 @@ When a user creates a loan, their collateral is allocated across a range of liqu
   <figcaption></figcaption>
 </figure>
 
-Additional displays provide information about the entire [LLAMMA](/crvusd/understanding-tokenomics#llamma) system, showing aspects such as the total amount of debt, along with individual wallet balances.
+The section on the bottom of the page provides information about the entire [LLAMMA](/crvusd/understanding-tokenomics#llamma) system, showing aspects such as the total amount of debt, along with individual wallet balances.
+
+
+When a position was or is in soft-liquidation mode, losses occur. The UI displays the total "LOSS AMOUNT" as well as the "% LOST", which measures the loss in collateral value caused by the soft-liquidation process.
+
+<figure markdown>
+  ![](../images/loss.png){ width="600" }
+  <figcaption></figcaption>
+</figure>
+
+
 
 On the upper right-hand side of the screen, switching to advanced mode provides additional details about the loan.
 
