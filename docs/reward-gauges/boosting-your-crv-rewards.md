@@ -58,7 +58,7 @@ Alternatively, this information can also be found in the new UI ([curve.fi](http
   <figcaption></figcaption>
 </figure>
 
-Head to the [old]((https://classic.curve.fi/pools/?see=0x0000000000000000000000000000000000000000)) or [new](https://curve.fi/#/ethereum/dashboard) dashboard to see all your pools!
+Head to the [old](https://classic.curve.fi/pools/?see=0x0000000000000000000000000000000000000000) or [new](https://curve.fi/#/ethereum/dashboard) dashboard to see all your pools!
 
 ## **Formula**
 
