@@ -20,7 +20,7 @@ $CRV is a governance token with time-weighted voting and value accrual mechanism
 
 You can find out what to do with $CRV by clicking below:
 
-[Understanding $CRV](/crv-token/understanding-crv)
+[Understanding $CRV](../crv-token/understanding-crv.md)
 
 ## **What is $CRV vote locking?**
 

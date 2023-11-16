@@ -6,7 +6,7 @@ Every time a trade takes place on Curve Finance, 50% of the trading fee is colle
 
 There is a delay before you can first claim your 3CRV after locking. It takes 8 days from the Thursday after which you lock before you can claim.
 
-[Understanding $CRV](/crv-token/understanding-crv)
+[Understanding $CRV](../crv-token/understanding-crv.md)
 
 ## **Swapping 3CRV for a stable coin**
 
