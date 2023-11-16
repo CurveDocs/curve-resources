@@ -1,6 +1,6 @@
-The Curve pool creation factory allows any user to permissionlessly deploy a Curve pool. These pools can contain a variety of assets, including pegged tokens, unpegged tokens, and metapools built off of other [base pools](/lp/base-and-metapools).
+The Curve pool creation factory allows any user to permissionlessly deploy a Curve pool. These pools can contain a variety of assets, including pegged tokens, unpegged tokens, and metapools built off of other [base pools](../lp/pools.md).
 
-[Base & MetaPools](/lp/base-and-metapools)
+[Base & MetaPools](../lp/pools.md)
 
 Keep in mind a few points about all pools:
 
@@ -17,8 +17,8 @@ Keep in mind a few points about all pools:
 
 To get started, visit the "[Pool Creation](https://curve.fi/#/ethereum/create-pool)" tab at the top of the Curve homepage, and select whether you would like to create a "Stableswap Pool" (a pool with pegged assets) or a "Cryptoswap Pool" (containing assets whose prices may be volatile).
 
-[Creating a Stableswap Pool](/factory-pools/creating-a-factory-pool)
+[Creating a Stableswap Pool](../factory-pools/creating-a-stableswap-pool.md)
 
-[Creating a Cryptoswap Pool](/factory-pools/creating-a-cryptoswap-pool)
+[Creating a Cryptoswap Pool](../factory-pools/creating-a-cryptoswap-pool.md)
 
 Note some sidechains may not yet support a stableswap or cryptoswap pool factory.

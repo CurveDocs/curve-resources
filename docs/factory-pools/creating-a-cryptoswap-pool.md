@@ -1,6 +1,6 @@
 The v2 Curve Factory supports pools of assets with volatile prices, with no expectation of price stability.
 
-[Understanding Curve v2](/base-features/understanding-crypto-pools)
+[Understanding Curve v2](../base-features/understanding-crypto-pools.md)
 
 ## **Creating a Pool**
 
@@ -72,6 +72,4 @@ The Advanced toggle allows you to adjust several of the other parameters under t
 
 A more thorough reader on the parameters [can be found here](https://nagaking.substack.com/p/deep-dive-curve-v2-parameters?s=curve). You can [use this interactive tool](https://www.desmos.com/calculator/vbhbicc7mw) to see how some of the parameters interact.
 
-After deployment, make sure to seed initial liquidity and [create a gauge](/factory-pools/creating-a-factory-pool) just like [regular factory pools](/factory-pools/creating-a-factory-pool).
-
-[Creating a Pool Gauge](/reward-gauges/creating-a-pool-gauge)
+After deployment, make sure to seed initial liquidity and [create a gauge](../reward-gauges/creating-a-pool-gauge.md).

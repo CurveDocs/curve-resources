@@ -28,9 +28,9 @@ The second column refers to the reward gauges. This entitles liquidity providers
 
 CRV token is a governance and utility token for Curve.
 
-[Understanding $CRV](../crv-token/understanding-crv)
+[Understanding $CRV](../crv-token/understanding-crv.md)
 
-[Understanding Governance](../governance/understanding-governance)
+[Understanding Governance](../governance/understanding-governance.md)
 
 ## **Can I use Curve on sidechains?**
 

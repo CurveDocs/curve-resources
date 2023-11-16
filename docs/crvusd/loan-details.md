@@ -15,7 +15,7 @@ When a user creates a loan, their collateral is allocated across a range of liqu
   <figcaption></figcaption>
 </figure>
 
-The section on the bottom of the page provides information about the entire [LLAMMA](/crvusd/understanding-tokenomics#llamma) system, showing aspects such as the total amount of debt, along with individual wallet balances.
+The section on the bottom of the page provides information about the entire [LLAMMA](../crvusd/understanding-tokenomics.md#llamma) system, showing aspects such as the total amount of debt, along with individual wallet balances.
 
 
 When a position was or is in soft-liquidation mode, losses occur. The UI displays the total "LOSS AMOUNT" as well as the "% LOST", which measures the loss in collateral value caused by the soft-liquidation process.
@@ -34,14 +34,14 @@ On the upper right-hand side of the screen, switching to advanced mode provides 
   <figcaption></figcaption>
 </figure>
 
-In advanced mode the UI changes to show more information about the [collateral bands](/crvusd/understanding-tokenomics#bands).
+In advanced mode the UI changes to show more information about the [collateral bands](../crvusd/understanding-tokenomics.md#bands).
 
 <figure markdown>
   ![](../images/loan_details_3.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
-Advanced mode also adds a tab with more info about the entire [LLAMMA](/crvusd/understanding-tokenomics#llamma).
+Advanced mode also adds a tab with more info about the entire [LLAMMA](../crvusd/understanding-tokenomics.md#llamma).
 
 <figure markdown>
   ![](../images/loan_details_4.png){ width="600" }
@@ -60,7 +60,7 @@ Advanced mode also adds a tab with more info about the entire [LLAMMA](/crvusd/u
 
 ## **Bands**
 
-When loans are created, collateral is spread among several bands. Each band has a range of prices for the asset. If the [price oracle](/factory-pools/understanding-oracles) is inside this range of prices, that particular band of collateral is likely to be liquidated.
+When loans are created, collateral is spread among several bands. Each band has a range of prices for the asset. If the [price oracle](../factory-pools/understanding-oracles.md) is inside this range of prices, that particular band of collateral is likely to be liquidated.
 
 !!!info 
     The number of bands has a significant influence on the amount of losses when a loan is in self-liquidation. See [here](#loan-health).

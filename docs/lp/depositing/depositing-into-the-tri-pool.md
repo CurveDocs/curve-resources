@@ -44,8 +44,8 @@ If you already have LP tokens, you can also directly stake them into the gauge u
 
 *You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO:*
 
-- [Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
-- [Staking your $CRV](/crv-token/staking-your-crv)
+- [Boosting your CRV Rewards](../../reward-gauges/boosting-your-crv-rewards.md)
+- [Staking your $CRV](../../crv-token/staking-your-crv.md)
 
 
 ​

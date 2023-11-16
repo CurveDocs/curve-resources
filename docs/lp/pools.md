@@ -35,7 +35,7 @@ In this example, users could seamlessly trade GUSD between the three coins in th
     
 The Metapool in question would take GUSD and 3Pool LP tokens. This means that liquidity providers of the 3Pool **who do not provide liquidity in the GUSD Metapool are shielded from systemic risks from the Metapool.**
 
-**Metapools** in the UI will have a [deposit wrapped](/lp/deposit-faqs#wrapped) option to deposit the 3pool token.
+**Metapools** in the UI will have a [deposit wrapped](../lp/depositing/depositing-into-a-metapool.md#depositing) option to deposit the 3pool token.
 
 
 # **StableSwap Pools**

@@ -20,4 +20,4 @@ Once that's done you can also bridge USDC/DAI and deposit and swap on Curve Poly
 
 If you haven't used Curve below you can check out the tutorial below:
 
-[Depositing](/lp/depositing)
+[Depositing](../lp/depositing.md)

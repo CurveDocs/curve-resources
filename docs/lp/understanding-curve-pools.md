@@ -8,7 +8,7 @@ It’s important to understand that when you provide liquidity to a pool, no mat
 
 Before we continue, we assume you have familiarized yourself with the basics of Curve:
 
-[Understanding Curve v1](/base-features/understanding-curve)
+[Understanding Curve v1](../base-features/understanding-curve.md)
 
 All Curve liquidity gauges receive CRV based on how much the DAO allocates to it.
 
@@ -36,7 +36,7 @@ Some pools (Compound, PAX, Y, BUSD) also earn interest from lending protocols. B
 
 All pools earn interest from trading fees. Some pools also earn interest from lending and there are also some pools with incentives. You can also receive CRV when you provide liquidity on Curve Finance. Each liquidity gauge receives a different amount of CRV based on how much the DAO allocates to it.
 
-Every time someone makes a trade on Curve.fi, liquidity providers (people who have deposited funds onto Curve) get a [small fee](/lp/understanding-curve-pools#what-are-curve-fees) split evenly between all providers, this is why you will see high vAPYs on days with high volume and high volatility. It’s important to note that because fees are dependent on volume, daily vAPYs can often be quite low just like they can be very high.
+Every time someone makes a trade on Curve.fi, liquidity providers (people who have deposited funds onto Curve) get a [small fee](../lp/understanding-curve-pools.md#what-are-curve-fees) split evenly between all providers, this is why you will see high vAPYs on days with high volume and high volatility. It’s important to note that because fees are dependent on volume, daily vAPYs can often be quite low just like they can be very high.
 
 ## **What are Curve fees?**
 

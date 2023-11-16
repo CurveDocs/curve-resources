@@ -1,6 +1,6 @@
 Metapools is a new concept to Curve Finance, it allows a single coin to be pooled with all the coins in another (base) pool without diluting its liquidity. Currently, the most common base pool is the 3Pool. It uses the three most liquid stable coins (USDT-USDC-DAI).
 
-[Base & MetaPools](../../lp/base-and-metapools.md)
+[Base & MetaPools](../../lp/pools.md)
 
 ## **Depositing**
 
@@ -42,5 +42,5 @@ If you already have LP tokens, you can also directly stake them into the gauge u
 
 *You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO:*
 
-- [Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
-- [Staking your $CRV](/crv-token/staking-your-crv)
+- [Boosting your CRV Rewards](../../reward-gauges/boosting-your-crv-rewards.md)
+- [Staking your $CRV](../../crv-token/staking-your-crv.md)

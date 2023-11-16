@@ -4,7 +4,7 @@
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FyMhYzWHxwO8F9TobC61D%2Fimage.png?alt=media&token=1da21e96-9df2-4f47-b6c3-34d9d3cbefd4)
 
-When loans are created, collateral is spread among several bands. Each band has a range of prices for the asset. If the [price oracle](/factory-pools/understanding-oracles) is inside this range of prices, that particular band of collateral is likely to be liquidated.
+When loans are created, collateral is spread among several bands. Each band has a range of prices for the asset. If the [price oracle](../factory-pools/understanding-oracles.md) is inside this range of prices, that particular band of collateral is likely to be liquidated.
 
 In the example above, the collateral has been spread into 10 different bands of collateral. The darker grey represents collateral which has been converted into $crvUSD, lighter grey is the original collateral type. Mousing over any bar will give you details about your position within the band, as well as the asset prices corresponding to this band. If you are in soft liquidation, the band may have a blend of $crvUSD and the collateral.
 

@@ -12,7 +12,7 @@ Curve UI displaying different types of displayed Curve yield (tAPY and tAPR).
 
 In the above screenshot you can see a Curve pool has the potential to offer many different types of yield. The documentation provides an overview of the different types of yield here:
 
-[Understanding $CRV](/crv-token/understanding-crv)
+[Understanding $CRV](../crv-token/understanding-crv.md)
 
 It’s important to remember that these numbers are a projections of historical pool performance. The user would get this rate if the pool performance stays exactly the same for one year.
 

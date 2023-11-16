@@ -4,7 +4,7 @@ One of the main incentive for CRV is the ability to boost your rewards on provid
 
 Click below if you have questions about how the vote locking boost works:
 
-[Vote Locking](/governance/vote-locking-boost)
+[Vote Locking](../governance/vote-locking-boost.md)
 
 Boosting your rewards video guide: https://www.youtube.com/watch?v=blZTCWu-DQg
 
@@ -68,4 +68,4 @@ The boost mechanism will calculate your **earning weight** by taking the smaller
 
 ## **FAQ**
 
-[Vote Locking](/governance/vote-locking-boost)
+[Vote Locking](../governance/vote-locking-boost.md)

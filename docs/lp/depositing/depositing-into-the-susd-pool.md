@@ -1,6 +1,6 @@
 If you’re wanting to figure out Curve, please **read the starter guide**. After reading this, you should have an understanding of how Curve works, how it makes money for liquidity providers and its risks which is ideally what you want before providing liquidity.
 
-[Understanding Curve v1](/base-features/understanding-curve)
+[Understanding Curve v1](../../base-features/understanding-curve.md)
 
 Curve Finance sUSD pool has quickly become the biggest pool thanks to its SNX incentives which guarantee continuous returns to liquidity providers.
 
@@ -40,6 +40,6 @@ You can claim both those tokens from the minter gauge.
 
 *You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO:*
 
-- [Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
-- [Staking your $CRV](/crv-token/staking-your-crv)
+- [Boosting your CRV Rewards](../../reward-gauges/boosting-your-crv-rewards.md)
+- [Staking your $CRV](../../crv-token/staking-your-crv.md)
 

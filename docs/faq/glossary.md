@@ -10,7 +10,7 @@ Admin fee is the share of trading fees that are received by governance participa
 
 The act of locking your CRV to earn more CRV on your provided liquidity.
 
-[Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
+[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
 
 ## **CRV**
 
@@ -28,7 +28,7 @@ Metamask is an Ethereum wallet that allows you to interact with Curve and other 
 
 Metapools are a type of pool on Curve composed of one asset as well as as LP tokens from another pool.
 
-[Base & MetaPools](/lp/base-and-metapools)
+[Base & MetaPools](../lp/pools.md)
 
 ## **Llamas**
 
@@ -46,7 +46,7 @@ veCRV
 
 Stands for vote-escrowed CRV. They are CRV locked for the purpose of voting and earning fees.
 
-[Understanding $CRV](/crv-token/understanding-crv)
+[Understanding $CRV](../crv-token/understanding-crv.md)
 
 ## **Yearn**
 

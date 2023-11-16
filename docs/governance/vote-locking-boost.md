@@ -48,7 +48,7 @@ After creating or adding to your lock, you need to click the apply boost button 
 
 Click below for a guide on how locking and boosting your CRV rewards
 
-[Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
+[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
 
 ## **How to know my boost is active?**
 
