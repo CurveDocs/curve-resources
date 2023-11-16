@@ -14,19 +14,19 @@
 
 Curve is DeFi's leading **AMM**, (Automated Market Maker). Hundreds of liquidity pools have been launched through Curve's factory and incentivized by Curve's DAO. Users rely on Curve's proprietary formulas to provide high liquidity, low slippage, and low fee transactions among ERC-20 tokens.
 
-Those resources aim to help new and existing users to become familiar with the [Curve protocol](./lp/understanding-curve-pools), the [Curve DAO](./governance/understanding-governance), and the [$CRV token](./crv-token/understanding-crv).
+Those resources aim to help new and existing users to become familiar with the [Curve protocol](./lp/understanding-curve-pools.md), the [Curve DAO](./governance/understanding-governance.md), and the [$CRV token](./crv-token/understanding-crv.md).
 
 ## Sections
 
-- Getting Started with [**Curve v1**](/base-features/understanding-curve) and [**Curve v2**](./base-features/understanding-crypto-pools)
-- [**$CRV Token**](/crv-token/understanding-crv): Tokenomics, Staking, Claiming Fees
-- [**Liquidity Providers**](/lp/understanding-curve-pools): Curve Pools, MetaPools, Depositing
-- [**Reward Gauges**](/reward-gauges/understanding-gauges): Boosting, Gauge Weights, Set Any Token Rewards
-- [**Stablecoin**](/crvusd/understanding-crvusd): crvUSD, Soft Liquidation, Bands
-- [**Governance**](/governance/understanding-governance): Vote Locking, Voting, Snapshot, Proposals
-- [**Multichain**](/multichain/understanding-multichain): Bridging, Fantom, Polygon, etc.  
-- [**Creating Pools**](/factory-pools/pool-factory): Factory Pools, Crypto Factory Pools  
-- [**Troubleshooting**](/troubleshooting/support): Cross-Asset Swaps, Wallets, Stuck Transactions
+- Getting Started with [**Curve v1**](./base-features/understanding-curve.md) and [**Curve v2**](./base-features/understanding-crypto-pools.md)
+- [**$CRV Token**](./crv-token/understanding-crv.md): Tokenomics, Staking, Claiming Fees
+- [**Liquidity Providers**](./lp/understanding-curve-pools.md): Curve Pools, MetaPools, Depositing
+- [**Reward Gauges**](./reward-gauges/understanding-gauges.md): Boosting, Gauge Weights, Set Any Token Rewards
+- [**Stablecoin**](./crvusd/understanding-crvusd.md): crvUSD, Soft Liquidation, Bands
+- [**Governance**](./governance/understanding-governance.md): Vote Locking, Voting, Snapshot, Proposals
+- [**Multi-Chain**](./multichain/understanding-multichain.md): Bridging, Fantom, Polygon, etc.  
+- [**Creating Pools**](./factory-pools/pool-factory.md): Factory Pools, Crypto Factory Pools  
+- [**Troubleshooting**](./troubleshooting/support.md): Cross-Asset Swaps, Wallets, Stuck Transactions
     
 ## Useful links
 

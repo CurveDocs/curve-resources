@@ -4,7 +4,7 @@ One of the main incentive for CRV is the ability to boost your rewards on provid
 
 Click below if you have questions about how the vote locking boost works:
 
-[Vote Locking](/governance/vote-locking-boost)
+[Vote Locking](../governance/vote-locking-boost.md)
 
 Boosting your rewards video guide: https://www.youtube.com/watch?v=blZTCWu-DQg
 
@@ -58,7 +58,7 @@ Alternatively, this information can also be found in the new UI ([curve.fi](http
   <figcaption></figcaption>
 </figure>
 
-Head to the [old]((https://classic.curve.fi/pools/?see=0x0000000000000000000000000000000000000000)) or [new](https://curve.fi/#/ethereum/dashboard) dashboard to see all your pools!
+Head to the [old](https://classic.curve.fi/pools/?see=0x0000000000000000000000000000000000000000) or [new](https://curve.fi/#/ethereum/dashboard) dashboard to see all your pools!
 
 ## **Formula**
 
@@ -68,4 +68,4 @@ The boost mechanism will calculate your **earning weight** by taking the smaller
 
 ## **FAQ**
 
-[Vote Locking](/governance/vote-locking-boost)
+[Vote Locking](../governance/vote-locking-boost.md)

@@ -10,7 +10,7 @@ Using the signalling tool is completely free (no transaction fees) and you only 
 
 Assuming you have at least 2,500 veCRV, you can also create an official DAO vote as long as it also comes with its topic presenting it on the governance forum.
 
-[Voting](/governance/voting)
+[Voting](../governance/voting.md)
 
 ## **Type of votes**
 

@@ -2,11 +2,11 @@ Starting on the 19th of September 2020, **50% of all trading fees are distribute
 
 Collected fees will be used to buy 3CRV (LP token for 3Pool) and distribute them to veCRV holders. This currently represents over $15M in trading fees per year. veCRV stands for vote escrowed $CRV, they are $CRV vote locked in the Curve DAO.
 
-[Vote Locking](/governance/vote-locking-boost)
+[Vote Locking](../governance/vote-locking-boost.md)
 
 You can also lock $CRV to obtain a boost on your provided liquidity.
 
-[Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
+[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
 
 Video about how to stake $CRV: https://www.youtube.com/watch?v=8GAI1lopEdU
 
@@ -28,7 +28,7 @@ You can extend a lock and add $CRV to it at any point but you cannot have $CRV w
 
 ## **Claiming your trading fees**
 
-[Claiming Trading Fees](/crv-token/claiming-trading-fees)
+[Claiming Trading Fees](../crv-token/claiming-trading-fees.md)
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MHMEZ_EA6LeyKGdO6S2%2F-MHMEeq-BmYkxTrGtMfS%2Fimage.png?alt=media&token=77601d64-3bd2-487b-a338-0a96271a358f)
 

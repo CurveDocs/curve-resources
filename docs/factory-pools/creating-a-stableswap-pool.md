@@ -10,7 +10,7 @@ You can select a token by searching for the symbol of any token that is already 
 
 On Ethereum you might observe a handful of popular assets (ie Tether, USDC, Frax) are not available in the token selection dropdown. Some of these assets have been added to "base pools," which can be used in the creation of other "metapools."
 
-[Base & MetaPools](/lp/base-and-metapools)
+[Base & MetaPools](../lp/pools.md)
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FkGwoLLuDSbN9XCRBM2BS%2Fimage.png?alt=media&token=18db0494-c75f-4219-b6b2-26d4e1daea9a)
 
@@ -50,7 +50,7 @@ The A Parameter is set by default based on your selection on the prior tab. A hi
 
 After the pool launches, the DAO has the capability of adjusting the A parameter.
 
-[Understanding Curve Pools](/lp/understanding-curve-pools)
+[Understanding Curve Pools](../lp/understanding-curve-pools.md)
 
 ## **Pool Info**
 
@@ -65,6 +65,4 @@ On the Curve UI the pools are grouped by the "Asset Type Tag." This only affects
 *   **BTC:** For pools only containing BTC
 *   **Other:** All other assets
 
-Your pool is ready to launch! It will now appear on the Curve page, but it's not yet eligible to earn $CRV rewards. For next steps you will typically want to seed initial liquidity and [create a pool gauge](/reward-gauges/creating-a-pool-gauge).
-
-[Creating a Pool Gauge](/reward-gauges/creating-a-pool-gauge)
+Your pool is ready to launch! It will now appear on the Curve page, but it's not yet eligible to earn $CRV rewards. For next steps you will typically want to seed initial liquidity and [create a pool gauge](../reward-gauges/creating-a-pool-gauge.md).

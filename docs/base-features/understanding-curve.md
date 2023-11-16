@@ -12,7 +12,7 @@ Curve is **non-custodial**, meaning the Curve developers do not have access to y
 
 Liquidity pools are pools of tokens that sit in smart contracts and can be exchanged or withdrawn at rates set by the parameters of the smart contract. Adding liquidity to a liquidity pool gives you the opportunity to earn trading fees and possibly rewards. For more information, visit the following section:
 
-[Understanding Curve Pools](./lp/understanding-curve-pools)
+[Understanding Curve Pools](../lp/understanding-curve-pools.md)
 
 ## **What are those percentages next to each pool?**
 
@@ -20,17 +20,17 @@ Curve pools may have several different percentages shown next to them in the UI.
 
 ![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FqKa9dimsxzJ2Zl0paYEQ%2FScreen%20Shot%202022-11-14%20at%203.21.19%20AM.png?alt=media&token=49c819a1-8b2c-4306-8f0b-7a3ad37682a7)
 
-The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Any activity on every Curve pool generates fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](./lp/understanding-curve-pools).
+The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Any activity on every Curve pool generates fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](../lp/understanding-curve-pools.md).
 
-The second column refers to the reward gauges. This entitles liquidity providers to earn bonus CRV emissions. More detail on these bonuses are in the [Reward Gauges section](./reward-gauges/understanding-gauges).
+The second column refers to the reward gauges. This entitles liquidity providers to earn bonus CRV emissions. More detail on these bonuses are in the [Reward Gauges section](../reward-gauges/understanding-gauges.md).
 
 ## **What is the CRV token?**
 
 CRV token is a governance and utility token for Curve.
 
-[Understanding $CRV](./crv-token/understanding-crv)
+[Understanding $CRV](../crv-token/understanding-crv.md)
 
-[Understanding Governance](./governance/understanding-governance)
+[Understanding Governance](../governance/understanding-governance.md)
 
 ## **Can I use Curve on sidechains?**
 

@@ -8,21 +8,21 @@ Currently CRV has three main uses: voting, staking and boosting. Those three thi
 
 CRV can now be staked (locked) to receive trading fees from the Curve protocol. A community-lead proposal introduced a 50% admin fee on all trading fees. Those fees are collected and used to buy 3CRV, the LP token for the TriPool, which are then distributed to veCRV holders.
 
-[Staking your $CRV](/crv-token/staking-your-crv)
+[Staking your $CRV](../crv-token/staking-your-crv.md)
 
-[Calculating Yield](/lp/calculating-yield)
+[Calculating Yield](../lp/calculating-yield.md)
 
 ## **Boosting**
 
 One of the main incentive for CRV is the ability to boost your rewards on provided liquidity. Vote locking CRV allows you to acquire voting power to participate in the DAO and earn a boost of up to 2.5x on the liquidity you are providing on Curve.
 
-[Boosting your CRV Rewards](/reward-gauges/boosting-your-crv-rewards)
+[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
 
 ## **Voting**
 
 Once CRV holders vote-lock their veCRV, they can start voting on various DAO proposals and pool parameters.
 
-[Proposals](/governance/proposals)
+[Proposals](../governance/proposals.md)
 
 ## **The CRV Matrix**
 
