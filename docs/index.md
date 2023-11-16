@@ -24,7 +24,7 @@ Those resources aim to help new and existing users to become familiar with the [
 - [**Reward Gauges**](./reward-gauges/understanding-gauges.md): Boosting, Gauge Weights, Set Any Token Rewards
 - [**Stablecoin**](./crvusd/understanding-crvusd.md): crvUSD, Soft Liquidation, Bands
 - [**Governance**](./governance/understanding-governance.md): Vote Locking, Voting, Snapshot, Proposals
-- [**Multichain**](./multichain/understanding-multichain.md): Bridging, Fantom, Polygon, etc.  
+- [**Multi-Chain**](./multichain/understanding-multichain.md): Bridging, Fantom, Polygon, etc.  
 - [**Creating Pools**](./factory-pools/pool-factory.md): Factory Pools, Crypto Factory Pools  
 - [**Troubleshooting**](./troubleshooting/support.md): Cross-Asset Swaps, Wallets, Stuck Transactions
     
