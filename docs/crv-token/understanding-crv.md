@@ -4,11 +4,11 @@ Currently CRV has three main uses: voting, staking and boosting. Those three thi
 
 > veCRV stands for vote-escrowed CRV, it is simply CRV locked for a period of time. The longer you lock CRV for, the more veCRV you receive.
 
-## **Staking (trading fees)**
+## **Locking (admin fees)**
 
-CRV can now be staked (locked) to receive trading fees from the Curve protocol. A community-lead proposal introduced a 50% admin fee on all trading fees. Those fees are collected and used to buy 3CRV, the LP token for the TriPool, which are then distributed to veCRV holders.
+CRV can be locked to receive trading fees from the Curve protocol. A community-lead proposal introduced a 50% admin fee on all trading fees. Those fees are collected and used to buy 3CRV, the LP token for the TriPool, which are then distributed to veCRV holders.
 
-[Staking your $CRV](../crv-token/staking-your-crv.md)
+[Locking your $CRV](../crv-token/locking-your-crv.md)
 
 [Calculating Yield](../lp/calculating-yield.md)
 
