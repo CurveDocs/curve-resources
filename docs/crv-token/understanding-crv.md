@@ -20,7 +20,7 @@ One of the main incentive for CRV is the ability to boost your rewards on provid
 
 ## **Voting**
 
-Once CRV holders vote-lock their veCRV, they can start voting on various DAO proposals and pool parameters.
+Once CRV holders vote-lock their CRV, they can start voting on various DAO proposals and pool parameters.
 
 [Proposals](../governance/proposals.md)
 
