@@ -41,5 +41,5 @@ You can claim both those tokens from the minter gauge.
 *You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO:*
 
 - [Boosting your CRV Rewards](../../reward-gauges/boosting-your-crv-rewards.md)
-- [Staking your $CRV](../../crv-token/staking-your-crv.md)
+- [Staking your $CRV](../../crv-token/locking-your-crv.md)
 
