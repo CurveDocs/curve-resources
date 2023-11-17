@@ -40,7 +40,7 @@ The Advanced options toggle includes a variety of options which may not apply to
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2F07qxEE3QHSapAKMZWWNH%2FScreenshot%202023-03-04%20at%2010.37.06%20AM.png?alt=media&token=d090055f-684c-4147-a101-7a0e4511969d)
 
-The parameters tab allows you to adjust pool parameters. The pool's fee is applied to all transactions within the pool, half of which accrues to pool LPs, the other half is distributed to veCRV stakers. The fee for StableSwap pools may be set between .04% and 1%.
+The parameters tab allows you to adjust pool parameters. The pool's fee is applied to all transactions within the pool, half of which accrues to pool LPs, the other half is distributed to veCRV lockers. The fee for StableSwap pools may be set between .04% and 1%.
 
 The Advanced tab allows you to adjust the pool's "A Parameter."
 
