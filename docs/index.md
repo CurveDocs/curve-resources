@@ -1,45 +1,109 @@
-<h1> </h1>
+---
+hide:
+  - toc
+---
 
-# Welcome to Curve Finance
+<h1> Welcome to Curve Finance </h1>
+ 
+<h2 style="font-weight: bold;">Resources and guides to get started with Curve and the Curve DAO</h2>
 
-**Resources and guides to get started with Curve and the Curve DAO**
+
+Curve is DeFi's leading **Automated Market Maker** (AMM), with hundreds of liquidity pools launched through Curve's factory and incentivized by Curve's DAO. Users rely on Curve's proprietary formulas to provide high liquidity, low slippage, and low fee transactions among ERC-20 tokens.
+
+These resources are designed to assist both new and existing users in becoming familiar with the [Curve protocol](./lp/understanding-curve-pools.md), [Curve DAO](./governance/understanding-governance.md), and [$CRV token](./crv-token/understanding-crv.md).
 
 
-<figure markdown>
-  ![Image title](images/curve.png){ width="300" }
-  <figcaption></figcaption>
-</figure>
-​
-*Curve's Logo, a colorized [Klein Bottle](https://en.wikipedia.org/wiki/Klein_bottle)*
+## **Sections**
 
-Curve is DeFi's leading **AMM**, (Automated Market Maker). Hundreds of liquidity pools have been launched through Curve's factory and incentivized by Curve's DAO. Users rely on Curve's proprietary formulas to provide high liquidity, low slippage, and low fee transactions among ERC-20 tokens.
+<div class="grid cards" markdown>
 
-Those resources aim to help new and existing users to become familiar with the [Curve protocol](./lp/understanding-curve-pools.md), the [Curve DAO](./governance/understanding-governance.md), and the [$CRV token](./crv-token/understanding-crv.md).
+-   :fontawesome-brands-html5:{ .lg .middle } Getting Started with **Curve v1** and **Curve v2**
 
-## Sections
+    ---
 
-- Getting Started with [**Curve v1**](./base-features/understanding-curve.md) and [**Curve v2**](./base-features/understanding-crypto-pools.md)
-- [**$CRV Token**](./crv-token/understanding-crv.md): Tokenomics, Staking, Claiming Fees
-- [**Liquidity Providers**](./lp/understanding-curve-pools.md): Curve Pools, MetaPools, Depositing
-- [**Reward Gauges**](./reward-gauges/understanding-gauges.md): Boosting, Gauge Weights, Set Any Token Rewards
-- [**Stablecoin**](./crvusd/understanding-crvusd.md): crvUSD, Soft Liquidation, Bands
-- [**Governance**](./governance/understanding-governance.md): Vote Locking, Voting, Snapshot, Proposals
-- [**Multi-Chain**](./multichain/understanding-multichain.md): Bridging, Fantom, Polygon, etc.  
-- [**Creating Pools**](./factory-pools/pool-factory.md): Factory Pools, Crypto Factory Pools  
-- [**Troubleshooting**](./troubleshooting/support.md): Cross-Asset Swaps, Wallets, Stuck Transactions
-    
-## Useful links
+    Discover the fundamentals of Curve, including versions v1 and v2, and get familiar with the platform's core features.
 
-- **Governance dashboard:** [http://dao.curve.fi/](http://dao.curve.fi/)​
+    [:octicons-arrow-right-24: Curve v1](./base-features/understanding-curve.md), [Curve v2](./base-features/understanding-crypto-pools.md)
 
-- **Governance forum:** [https://gov.curve.fi/](https://gov.curve.fi/)​
+-   :logos-crv:{ .lg .middle } **CRV Token**
 
-- **Telegram:** [https://t.me/curvefi](https://t.me/curvefi)​
+    ---
 
-- **Twitter:** [https://twitter.com/curvefinance](https://twitter.com/curvefinance)​
+    Explore the dynamics of the CRV Token: Tokenomics, Staking, Claiming Fees, and more.
 
-- **Discord:** [https://discord.gg/rgrfS7W](https://discord.gg/rgrfS7W)​
+    [:octicons-arrow-right-24: Learn More](./crv-token/understanding-crv.md)
 
-- **Youtube Channel:** [http://www.youtube.com/c/CurveFinance](http://www.youtube.com/c/CurveFinance)​
+-   :fontawesome-solid-water:{ .lg .middle } **Liquidity Providers**
 
-- **Technical Docs:** [https://curve.readthedocs.io](https://curve.readthedocs.io)​
+    ---
+
+    Understand Curve pools, yield calculations, and the deposit process, including specific pool types like tri-pool and metapool.
+
+    [:octicons-arrow-right-24: Learn More](./lp/understanding-curve-pools.md)
+
+-   :fontawesome-solid-chart-line:{ .lg .middle } **Reward Gauges**
+
+    ---
+
+    Explore gauges in-depth, including creation, boosting CRV rewards, understanding gauge weights, and permissionless rewards.
+
+    [:octicons-arrow-right-24: Learn More](./reward-gauges/understanding-gauges.md)
+
+-   :logos-crvusd:{ .lg .middle } **Stablecoin**
+
+    ---
+
+    Learn about crvUSD, including its creation, management, and key concepts, along with a comprehensive FAQ section.
+
+    [:octicons-arrow-right-24: Learn More](./crvusd/understanding-crvusd.md)
+
+-   :fontawesome-solid-gavel:{ .lg .middle } **Governance**
+
+    ---
+
+    Gain insights into Curve's governance structure: Vote Locking, Voting, and Proposals.
+
+    [:octicons-arrow-right-24: Learn More](./governance/understanding-governance.md)
+
+-   :fontawesome-solid-globe:{ .lg .middle } **Multi-Chain**
+
+    ---
+
+    Explore the multi-chain aspect of Curve, including bridging funds and understanding the cross-chain functionalities.
+
+    [:octicons-arrow-right-24: Learn More](./multichain/understanding-multichain.md)
+
+-   :material-factory:{ .lg .middle } **Creating Pools**
+
+    ---
+
+    Understand the Pool Factory and dive into the pool creation process.
+
+    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-factory.md)
+
+-   :material-wrench:{ .lg .middle } **Troubleshooting**
+
+    ---
+
+    Find solutions for common issues like cross-asset swaps, stuck transactions, and wallet integrations.
+
+    [:octicons-arrow-right-24: Learn More](./troubleshooting/support.md)
+
+</div>
+
+
+
+## **Useful Links**
+
+
+<div class="grid cards" markdown>
+
+- <a href="http://dao.curve.fi/" style="color: inherit; text-decoration: none;">:material-view-dashboard: **Governance Dashboard**</a>
+- <a href="https://gov.curve.fi/" style="color: inherit; text-decoration: none;">:material-forum: **Governance Forum**</a>
+- <a href="https://t.me/curvefi" style="color: inherit; text-decoration: none;">:fontawesome-brands-telegram: **Telegram**</a>
+- <a href="https://twitter.com/curvefinance" style="color: inherit; text-decoration: none;">:fontawesome-brands-twitter: **Twitter**</a>
+- <a href="https://discord.gg/rgrfS7W" style="color: inherit; text-decoration: none;">:fontawesome-brands-discord: **Discord**</a>
+- <a href="http://www.youtube.com/c/CurveFinance" style="color: inherit; text-decoration: none;">:fontawesome-brands-youtube: **YouTube**</a>
+- <a href="https://docs.curve.fi/" style="color: inherit; text-decoration: none;">:fontawesome-regular-file-code: **Technical Docs**</a>
+
+</div>

@@ -96,6 +96,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -121,6 +125,7 @@ markdown_extensions:
 
 theme:
   name: material
+  custom_dir: overrides
   include_search_page: false
   search_index_only: true
   font:
@@ -157,6 +162,21 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/curvefi
+      name: Telegram
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/curvefinance
+      name: X
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/rgrfS7W
+      name: Discord
+    - icon: fontawesome/brands/youtube
+      link: http://www.youtube.com/c/CurveFinance
+      name: YouTube
 
 extra_css:
   - 'stylesheets/extra.css'
