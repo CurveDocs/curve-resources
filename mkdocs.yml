@@ -15,13 +15,13 @@ nav:
   - Getting Started:
     - Understanding Curve (v1): base-features/understanding-curve.md  
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
-  - $CRV Token:
+  - CRV Token:
     - Understanding CRV: crv-token/understanding-crv.md
     - CRV Basics: crv-token/crv-basics.md
     - CRV Tokenomics: crv-token/crv-tokenomics.md
     - Locking your CRV: crv-token/locking-your-crv.md
     - Claiming trading fees: crv-token/claiming-trading-fees.md
-  - $crvUSD:
+  - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Loan Details & Concepts: crvusd/loan-details.md
@@ -136,11 +136,11 @@ theme:
   features:
     - content.code.annotate
     - content.tabs.link
-    - navigation.expand
     - navigation.indexes
-    - navigation.instant
     - navigation.path
+    - navigation.instant
     - navigation.instant.prefetch
+    - navigation.instant.progress
     - navigation.sections
     - navigation.top
     - navigation.tracking
@@ -148,6 +148,7 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
+    - toc.integrate
     - content.code.copy
   palette:
     - scheme: default
@@ -179,7 +180,8 @@ extra:
       name: YouTube
 
 extra_css:
-  - 'stylesheets/extra.css'
+  - stylesheets/extra.css
+  #- stylesheets/highcharts.css
 
 extra_javascript:
   - javascripts/mathjax.js
