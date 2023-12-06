@@ -4,16 +4,14 @@ hide:
 ---
 
 <h1> Welcome to Curve Finance </h1>
- 
+
+Explore the world of Curve, a leading **decentralized exchange and automated market maker** on Ethereum and EVM-compatible chains, known for its advanced stablecoin trading capabilities. This documentation provides a clear overview of Curve's diverse features and functionalities. Learn about the **different versions of Curve pools, including v1 and v2**, gain insights into the **CRV token**, and understand the innovative **crvUSD stablecoin**. 
+
+Whether a liquidity provider, interested in governance, or exploring multi-chain functionalities, this guide offers valuable information to get to know Curve's dynamic ecosystem.
+
+
+
 <h2 style="font-weight: bold;">Resources and guides to get started with Curve and the Curve DAO</h2>
-
-
-Curve is DeFi's leading **Automated Market Maker** (AMM), with hundreds of liquidity pools launched through Curve's factory and incentivized by Curve's DAO. Users rely on Curve's proprietary formulas to provide high liquidity, low slippage, and low fee transactions among ERC-20 tokens.
-
-These resources are designed to assist both new and existing users in becoming familiar with the [Curve protocol](./lp/understanding-curve-pools.md), [Curve DAO](./governance/understanding-governance.md), and [$CRV token](./crv-token/understanding-crv.md).
-
-
-## **Sections**
 
 <div class="grid cards" markdown>
 
@@ -33,11 +31,19 @@ These resources are designed to assist both new and existing users in becoming f
 
     [:octicons-arrow-right-24: Learn More](./crv-token/understanding-crv.md)
 
+-   :logos-crvusd:{ .lg .middle } **Stablecoin**
+
+    ---
+
+    Learn about crvUSD, including its creation, management, and key concepts, along with a comprehensive FAQ section.
+
+    [:octicons-arrow-right-24: Learn More](./crvusd/understanding-crvusd.md)
+
 -   :fontawesome-solid-water:{ .lg .middle } **Liquidity Providers**
 
     ---
 
-    Understand Curve pools, yield calculations, and the deposit process, including specific pool types like tri-pool and metapool.
+    Understand Curve pools, yield calculations, and the deposit process, including specific pool types like tri-pool, base pool or metapool.
 
     [:octicons-arrow-right-24: Learn More](./lp/understanding-curve-pools.md)
 
@@ -49,13 +55,6 @@ These resources are designed to assist both new and existing users in becoming f
 
     [:octicons-arrow-right-24: Learn More](./reward-gauges/understanding-gauges.md)
 
--   :logos-crvusd:{ .lg .middle } **Stablecoin**
-
-    ---
-
-    Learn about crvUSD, including its creation, management, and key concepts, along with a comprehensive FAQ section.
-
-    [:octicons-arrow-right-24: Learn More](./crvusd/understanding-crvusd.md)
 
 -   :fontawesome-solid-gavel:{ .lg .middle } **Governance**
 
