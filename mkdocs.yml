@@ -5,22 +5,19 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - git-revision-date-localized:
-      type: timeago
   - minify:
       minify_html: true
 
 nav:
-  - index.md  
   - Getting Started:
     - Understanding Curve (v1): base-features/understanding-curve.md  
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
   - CRV Token:
     - Understanding CRV: crv-token/understanding-crv.md
-    - CRV Basics: crv-token/crv-basics.md
-    - CRV Tokenomics: crv-token/crv-tokenomics.md
-    - Locking your CRV: crv-token/locking-your-crv.md
-    - Claiming trading fees: crv-token/claiming-trading-fees.md
+    - Basics: crv-token/crv-basics.md
+    - Tokenomics: crv-token/crv-tokenomics.md
+    - Locking CRV: crv-token/locking-your-crv.md
+    - Claiming Trading Fees: crv-token/claiming-trading-fees.md
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
@@ -33,7 +30,7 @@ nav:
     - Calculating yield: lp/calculating-yield.md
     - Charts and Pool Activity: lp/charts_poolactivity.md
     - Depositing:
-      - Overview: lp/depositing.md
+      - Overview: lp/depositing/depositing.md
       - Despositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
       - Despositing into a metapool: lp/depositing/depositing-into-a-metapool.md
       - Despositing into the susd-pool: lp/depositing/depositing-into-the-susd-pool.md
@@ -131,8 +128,10 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: "images/logo.png"
-  favicon: "images/logo.png"
+  logo: "images/lama.png"
+  favicon: "images/lama.png"
+  icon:
+    repo: fontawesome/brands/github
   features:
     - content.code.annotate
     - content.tabs.link
@@ -148,7 +147,6 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
-    - toc.integrate
     - content.code.copy
   palette:
     - scheme: default
@@ -165,6 +163,7 @@ theme:
         name: Switch to dark mode
 
 extra:
+  generator: false
   social:
     - icon: fontawesome/brands/telegram
       link: https://t.me/curvefi
