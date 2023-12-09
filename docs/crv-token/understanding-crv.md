@@ -1,32 +1,44 @@
-The main purposes of the Curve DAO token are to incentivise liquidity providers on the Curve Finance platform as well as getting as many users involved as possible in the governance of the protocol.
+The main purposes of the Curve DAO token are to **incentivise liquidity providers** on the Curve Finance platform as well as to involve as many users as possible in the governance of the protocol.
 
-Currently CRV has three main uses: voting, staking and boosting. Those three things will require you to vote lock your CRV and acquire veCRV.
+*Currently, CRV has three main uses:*
 
-> veCRV stands for vote-escrowed CRV, it is simply CRV locked for a period of time. The longer you lock CRV for, the more veCRV you receive.
+- **Rewards**
+- **Boosting**
+- **Voting**
 
-## **Locking (admin fees)**
+These three functions will **require users to vote-lock their CRV** and acquire veCRV.
 
-CRV can be locked to receive trading fees from the Curve protocol. A community-lead proposal introduced a 50% admin fee on all trading fees. Those fees are collected and used to buy 3CRV, the LP token for the TriPool, which are then distributed to veCRV holders.
+!!!info
+    veCRV stands for **vote-escrowed CRV**, representing CRV tokens locked for voting in the Curve DAO.  
+    More information about Vote-Locking can be found [here](../governance/vote-locking-boost.md).
 
-[Locking your $CRV](../crv-token/locking-your-crv.md)
+# **Rewards (Admin Fees)**
 
-[Calculating Yield](../lp/calculating-yield.md)
+CRV can be locked to receive trading fees from the Curve protocol. A community-led proposal introduced a 50% admin fee on all trading fees. These fees are collected and converted to 3CRV, which are then distributed to veCRV holders.
 
-## **Boosting**
+[**Locking your $CRV**](../crv-token/locking-your-crv.md)
 
-One of the main incentive for CRV is the ability to boost your rewards on provided liquidity. Vote locking CRV allows you to acquire voting power to participate in the DAO and earn a boost of up to 2.5x on the liquidity you are providing on Curve.
+# **Boosting**
 
-[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
+One of the main incentives for locking CRV is the ability to boost rewards on provided liquidity. Vote-locking CRV allows users to acquire voting power to participate in the DAO and earn up to a 2.5x boost on the liquidity they provide on Curve.
 
-## **Voting**
+[**Boosting your CRV Rewards**](../reward-gauges/boosting-your-crv-rewards.md)
+
+# **Voting**
 
 Once CRV holders vote-lock their veCRV, they can start voting on various DAO proposals and pool parameters.
 
-[Proposals](../governance/proposals.md)
+[**Proposals**](../governance/proposals.md)
 
-## **The CRV Matrix**
+# **The CRV Matrix**
 
 The table below can help you understand the value add of veCRV.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MT5dNbeDEngQ7_tEymQ%2F-MT5dRWFpub2GezqLodd%2Fimage.png?alt=media&token=23e9f550-db0c-4357-a317-a6f21a36eb58)
-
+| | **`Liquidity in Pool & no veCRV`** | **`Liquidity in Pool & veCRV`** | **`Liquidity in Pool & Gauge & no veCRV`** | **`Liquidity in Pool & Gauge & veCRV`** | **`No Liquidity & no veCRV`** | **`No Liquidity & veCRV`** |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| **`Earns lending & trading fees`** | :material-check: Yes | :material-check: Yes | :material-check: Yes | :material-check: Yes | :material-close: No | :material-close: No |
+| **`Earns CRV Emissions`** | :material-close: No | :material-close: No | :material-check: Yes | :material-check: Yes | :material-close: No | :material-close: No |
+| **`Earns boosted CRV Emissions`** | :material-close: No | :material-close: No | :material-close: No | :material-check: Yes | :material-close: No | :material-close: No |
+| **`Can vote on DAO Proposals`** | :material-close: No | :material-check: Yes | :material-close: No | :material-check: Yes | :material-close: No | :material-check: Yes |
+| **`Can vote on Gauge Weight`** | :material-close: No | :material-check: Yes | :material-close: No | :material-check: Yes | :material-close: No | :material-check: Yes |
+| **`Earns Gov Fee`** | :material-close: No | :material-check: Yes | :material-close: No | :material-check: Yes | :material-close: No | :material-check: Yes |

@@ -1,14 +1,19 @@
-Starting on the 19th of September 2020, **50% of all trading fees are distributed to veCRV holders**. This is the result of a community-led proposal to align incentives between liquidity providers and governance participants (veCRV holders).
+*Vote-locking* refers to the process of locking CRV for a specified period. This allows users to participate in the governance process of the protocol.
 
-Collected fees will be used to buy 3CRV (LP token for 3Pool) and distribute them to veCRV holders. This currently represents over $15M in trading fees per year. veCRV stands for vote escrowed $CRV, they are $CRV vote locked in the Curve DAO.
+One of the primary incentives for vote-locking is the **boost mechanism**. Users who provide liquidity to a pool and have some vote-locked CRV receive boosted rewards. Additionally, starting on the 19th of September 2020, **50% of all trading fees are distributed to veCRV holders**. This distribution was implemented following a community-led proposal, aiming to align the incentives between liquidity providers and governance participants (veCRV holders).
 
-[Vote Locking](../governance/vote-locking-boost.md)
 
-You can also lock $CRV to obtain a boost on your provided liquidity.
+Collected fees will be used to buy [**`3CRV`**](https://etherscan.io/address/0x6c3f90f043a72fa612cbac8115ee7e52bde6e490) (LP token for 3Pool) and distribute them to veCRV holders.  
 
-[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
+In addition to receiving 3CRV as fees, users holding veCRV are also **eligible for [boosted CRV rewards](../reward-gauges/boosting-your-crv-rewards.md) on the liquidity they have provided** to pools, if applicable.  
 
-Video about how to lock $CRV: https://www.youtube.com/watch?v=8GAI1lopEdU
+
+!!!info
+    veCRV stands for **vote-escrowed CRV**, which represents CRV tokens locked for voting in the Curve DAO.  
+    More information about Vote-Locking can be found [here](../governance/vote-locking-boost.md).
+
+
+:logos-youtube: **How to lock CRV**
 
 <figure class="video_container">
   <video controls="true" allowfullscreen="true">
@@ -16,30 +21,29 @@ Video about how to lock $CRV: https://www.youtube.com/watch?v=8GAI1lopEdU
   </video>
 </figure>
 
-## **Locking your $CRV**
+# :logos-lock: **Locking CRV**
 
-Once you know how much and how long you wish to lock for, visit the following page: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
+!!! warning
+    When a user locks their CRV tokens for voting, they will receive veCRV based on the lock duration and the amount locked. Locking is **not reversible** and veCRV tokens are **non-transferable**. If a user decides to vote-lock their CRV tokens, they will only be able to **reclaim the CRV tokens after the lock duration has ended**.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MFw5TRvfmVRhy6M2vA0%2F-MFwBH-2tIa-f8oEODRQ%2Fimage.png?alt=media&token=9d7166c8-4231-4996-8fe2-27c0f7f4ae66)
+    Additionally, a user **cannot have multiple locks with different expiry dates**. However, a lock **can be extended**, or **additional CRV can be added** to it **at any time**.
 
-Enter the amount you want to lock and select your expiry. Remember locking is not reversible. The amount of veCRV received will depend on how much and how long you vote for.
 
-You can extend a lock and add $CRV to it at any point but you cannot have $CRV with different expiry dates.
+Users must specify the amount of CRV they wish to lock and their preferred lock duration. The minimum lock period is **one week**, while the maximum is **four years**. The amount of veCRV **linearly decays over time**, reaching 0 when the lock duration ends.
 
-## **Claiming your trading fees**
 
-[Claiming Trading Fees](../crv-token/claiming-trading-fees.md)
+*To lock some CRV token, visit either the [old](https://dao.curve.fi/locker) or [new](https://curve.fi/#/ethereum/locker/create)​ user-interface.*
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MHMEZ_EA6LeyKGdO6S2%2F-MHMEeq-BmYkxTrGtMfS%2Fimage.png?alt=media&token=77601d64-3bd2-487b-a338-0a96271a358f)
+<figure markdown>
+  ![CRV Locker](../images/locker-old.png){ width="500" }
+  <figcaption>old UI</figcaption>
+</figure>
 
-## **How to calculate the APY for staking CRV?**
+<figure markdown>
+  ![CRV Locker](../images/locker.png){ width="300" }
+  <figcaption>new UI</figcaption>
+</figure>
 
-The formula below can help you calculate the daily APY:
 
-$$
-\\frac{DailyTradingVolume * 0.0002 * 365}{TotalveCRV * CRVPrice} * 100
-$$
-
-### **Further Reading**
-
-*   ​[https://www.stakingrewards.com/earn/curve-dao-token/](https://www.stakingrewards.com/earn/curve-dao-token/)​
+!!!tip
+    **The amount of veCRV received per CRV when locking depends on the duration of the lock.** To calculate the amount of veCRV you will receive, multiply the amount of CRV by (n/4), where **`n`** is the lock time denominated in years.

@@ -40,7 +40,7 @@ The other reason behind this is that the pools are always trying to balance them
 
 ## **But does that mean I can still withdraw in my favorite stable coin?**
 
-When you withdraw, the same principle applies (but reversed). If you withdraw the stable coin with the biggest share, you would get a bonus but you still choose what stable coin you want to withdraw.
+When you withdraw, the same principle as in the question above applies- but reversed. If you withdraw the stable coin with the biggest share, you would get a bonus but you still choose what stable coin you want to withdraw.
 
 ## **How quickly does interest accrue/compound?**
 
@@ -50,9 +50,7 @@ Interests for pools using lending protocols compound every block or 15 seconds o
 
 Arbitrage is the simultaneous buying and selling of, in our case, a token to make a profit. Because cryptocurrency markets can often lack liquidity, there are often opportunities for traders to take advantage of price discrepancies to make a profit which can be helped by protocols like Curve.
 
-An example of that below:
-
-​[https://etherscan.io/tx/0x259b7ac1f50554fe5ddcfeea7b4fa90ad70356ddfbbd341289db0dfbf99447f9](https://etherscan.io/tx/0x259b7ac1f50554fe5ddcfeea7b4fa90ad70356ddfbbd341289db0dfbf99447f9)​
+An example transaction: ​[**Etherscan**](https://etherscan.io/tx/0x259b7ac1f50554fe5ddcfeea7b4fa90ad70356ddfbbd341289db0dfbf99447f9)​
 
 In this transaction, someone used Curve and OasisDex and made around $200. This goes back to what was discussed earlier with liquidity pools. The idea is that is you incentivize traders to take advantage of price discrepancies which we all get rewarded for.
 

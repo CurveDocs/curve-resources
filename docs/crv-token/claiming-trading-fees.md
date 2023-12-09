@@ -1,26 +1,52 @@
-Users who lock $CRV can claim trading fees as often as you'd like, but fees will only be converted into 3CRV once a week.
+Every time a trade occurs on Curve Finance, **50% of the trading fee is collected by users who have vote-locked their CRV**. Furthermore, since the introduction of Curve's stablecoin, crvUSD, all accumulated interest rate fees are awarded to veCRV holders.
 
-To claim your fees, visit [https://curve.fi/#/ethereum/dashboard](https://curve.fi/#/ethereum/dashboard) and click the blue "Claim LP Rewards" button. If you are using the classic UI please visit: [https://classic.curve.fi/](https://classic.curve.fi) and look for the green "Claim" button in the box labeled "veCRV 3pool LP claim" at the bottom of the page.
+Fees are collected weekly from the pools, converted to 3CRV, and then distributed. Users who lock CRV can claim trading fees as often as they wish; however, fees will only be converted into 3CRV once a week.
 
-Every time a trade takes place on Curve Finance, 50% of the trading fee is collected by the users who have vote locked their CRV. Every week, fees are collected from the pools, converted to 3CRV and distributed.
+!!!info
+    There is a delay before the first claim of 3CRV can be made after locking. A wait of 8 days from the Thursday following the lock is required before a claim can be done.
 
-There is a delay before you can first claim your 3CRV after locking. It takes 8 days from the Thursday after which you lock before you can claim.
 
-[Understanding $CRV](../crv-token/understanding-crv.md)
+---
 
-## **Swapping 3CRV for a stable coin**
+To claim trading fees, visit [https://curve.fi/#/ethereum/dashboard](https://curve.fi/#/ethereum/dashboard) and click the **`Claim LP Rewards`** button. 
 
-If you would like to withdraw your 3CRV back into a stable coin, you can head to [https://curve.fi/#/ethereum/pools/3pool/withdraw](https://curve.fi/#/ethereum/pools/3pool/withdraw), select the stable you would like to receive (optional) and click "**Withdraw**". After confirming your transaction, you will then receive 3CRV.
+<figure markdown>
+  ![](../images/claim-new.png){ width="300" }
+  <figcaption></figcaption>
+</figure>
 
-## **How does it all work?**
+---
 
-When the burn is triggered, a contract collects all trading fees from all the swap pool contracts. Those fees come in dozen of different stable coins, tokenized Bitcoin and Ethereum flavours. The fee tokens are traded into USDC using Curve and Synthetix, which is then deposited to 3Pool. Finally, the burner creates a checkpoint which updates all the claimable balance of each veCRV holder.
+when using the **classic UI** please visit: [https://classic.curve.fi/](https://classic.curve.fi) and look for the green **`Claim`** button in the box labeled **`veCRV 3pool LP claim`** at the bottom of the page.
 
-Burning is an expensive process, as it involves many complex transactions, but anyone can trigger the process whenever they wish if they are willing to pay for it.
+<figure markdown>
+  ![](../images/claim-old.png){ width="700" }
+  <figcaption></figcaption>
+</figure>
 
-Fees may only be claimed for the week that has already passed, because the burner does not know how much everyone is entitled to before the end of the period. Fees will be available on a weekly basis within 24 hours after Thursday midnight UTC, as long as someone (usually the Curve team) has initiated the burn prior to that.
+---
 
-Technical users can review the burner contracts here: [https://github.com/curvefi/curve-dao-contracts/tree/master/contracts/burners](https://github.com/curvefi/curve-dao-contracts/tree/master/contracts/burners)​
+# **Swapping 3CRV for a Stable Coin**
 
-The following script may be used to initiate the burn process: [https://github.com/curvefi/curve-dao-contracts/blob/master/scripts/burners/claim\_and\_burn\_fees.py](https://github.com/curvefi/curve-dao-contracts/blob/master/scripts/burners/claim_and_burn_fees.py)​
+3CRV is the liquidity provider (LP) token of the 3pool, which consists of USDC, USDT, and DAI. If the pool is perfectly balanced with 33% USDC, 33% USDT, and 33% DAI, then one 3CRV will represent 0.33 USDC, 0.33 USDT, and 0.33 DAI.
 
+If a user wishes to withdraw 3CRV back into a stablecoin, they can do so at: [**https://curve.fi/#/ethereum/pools/3pool/withdraw**](https://curve.fi/#/ethereum/pools/3pool/withdraw). The user needs to select the stablecoin they would like to receive (withdrawing in a balanced or custom proportion is also an option) and click **`Withdraw`**. After the transaction is confirmed, they will receive the withdrawn stablecoin.
+
+<figure markdown>
+  ![](../images/withdraw-3crv.png){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+
+!!! note
+    When withdrawing 3CRV into a stablecoin, it **might be beneficial to take a look at the balance ratios of the pool**. Withdrawing in a token with a higher balance than the other two could result in a small premium for that token. On the other hand, withdrawing a token with a lower balance relative to the other two coins may lead to receiving a slightly lesser amount. Further information can be found [here](../lp/deposit-faqs.md#but-does-that-mean-i-can-still-withdraw-in-my-favorite-stable-coin).
+
+
+
+# **How does it all work?**
+
+When the burn process is initiated, a contract collects fees, which come in dozens of different forms such as stablecoins, volatile assets, or LP tokens. These tokens are then burned through various contracts and pools, and converted into 3CRV by adding liquidity to the 3pool.
+
+Burning is a costly process due to the complexity and number of transactions involved. However, anyone can trigger this process at any time, provided they are willing to cover the associated costs.
+
+Fees can only be claimed for the week that has already concluded, as the burner cannot determine each user's entitlement before the end of that period. Fees will be made available **weekly, within 24 hours after Thursday midnight UTC**, as long as someone — typically the Curve team — has initiated the burn process beforehand.

@@ -1,4 +1,4 @@
-The Stableswap pool creation is appropriate for assets expected to hold a price peg very close to each other, like a pair of dollarcoins. The creation wizard will guide you through the process of creating a pool, but if you have questions throughout you are encouraged to speak with a member of the Curve team in the [Telegram](https://t.me/curvefi) or [Discord](https://discord.gg/rgrfS7W).
+The Stableswap pool creation is appropriate for assets expected to hold a price peg very close to each other, like a pair of dollarcoins. The creation wizard will guide you through the process of creating a pool, but if you have questions throughout you are encouraged to speak with a member of the Curve team in the [**Telegram**](https://t.me/curvefi) or [**Discord**](https://discord.gg/rgrfS7W).
 
 ## **Token Selection**
 
@@ -10,7 +10,7 @@ You can select a token by searching for the symbol of any token that is already 
 
 On Ethereum you might observe a handful of popular assets (ie Tether, USDC, Frax) are not available in the token selection dropdown. Some of these assets have been added to "base pools," which can be used in the creation of other "metapools."
 
-[Base & MetaPools](../lp/pools.md)
+[**Base & Metapools**](../lp/pools.md)
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FkGwoLLuDSbN9XCRBM2BS%2Fimage.png?alt=media&token=18db0494-c75f-4219-b6b2-26d4e1daea9a)
 
@@ -24,7 +24,7 @@ If your pool contains rebasing tokens (a token that adjusts its total supply to 
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FOL4SmkHko2A1uHDdk73h%2FScreenshot%202023-03-04%20at%2010.17.49%20AM.png?alt=media&token=a9ccc536-1e5e-41b5-a178-1d0577cee863)
 
-The UI will not check to see if a pool containing your token pairs already exists. Some protocols have seen opportunities to create two pools containing the same assets but using different parameters (c/f [stETH concentrated](https://curve.fi/#/ethereum/pools/factory-v2-117/deposit)). In most cases you should take care to make sure your pool does not already exist.
+The UI will not check to see if a pool containing your token pairs already exists. Some protocols have seen opportunities to create two pools containing the same assets but using different parameters (c/f [**stETH concentrated**](https://curve.fi/#/ethereum/pools/factory-v2-117/deposit)). In most cases you should take care to make sure your pool does not already exist.
 
 ## **Pool Presets**
 
@@ -50,7 +50,7 @@ The A Parameter is set by default based on your selection on the prior tab. A hi
 
 After the pool launches, the DAO has the capability of adjusting the A parameter.
 
-[Understanding Curve Pools](../lp/understanding-curve-pools.md)
+[**Understanding Curve Pools**](../lp/understanding-curve-pools.md)
 
 ## **Pool Info**
 
@@ -65,4 +65,4 @@ On the Curve UI the pools are grouped by the "Asset Type Tag." This only affects
 *   **BTC:** For pools only containing BTC
 *   **Other:** All other assets
 
-Your pool is ready to launch! It will now appear on the Curve page, but it's not yet eligible to earn $CRV rewards. For next steps you will typically want to seed initial liquidity and [create a pool gauge](../reward-gauges/creating-a-pool-gauge.md).
+Your pool is ready to launch! It will now appear on the Curve page, but it's not yet eligible to earn $CRV rewards. For next steps you will typically want to seed initial liquidity and [**create a pool gauge**](../reward-gauges/creating-a-pool-gauge.md).

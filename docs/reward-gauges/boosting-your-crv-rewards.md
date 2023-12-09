@@ -1,12 +1,13 @@
-This guide is assuming you have already provided liquidity and that you are currently staking your LP tokens on the DAO gauge.
+This guide assumes the reader has already provided liquidity and is currently staking LP tokens on the DAO gauge.
 
-One of the main incentive for CRV is the ability to boost your rewards on provided liquidity. Vote locking CRV allows you to acquire voting power to participate in the DAO and earn a boost of up to 2.5x on the liquidity you are providing on Curve.
+One of the main incentives for CRV is the ability to boost rewards on provided liquidity. Vote locking CRV enables the acquisition of voting power to participate in the DAO and earn a boost of up to 2.5x on the liquidity provided on Curve.
 
-Click below if you have questions about how the vote locking boost works:
+For questions about how the vote locking boost works, click below:
 
-[Vote Locking](../governance/vote-locking-boost.md)
+[**Vote Locking**](../governance/vote-locking-boost.md)
 
-Boosting your rewards video guide: https://www.youtube.com/watch?v=blZTCWu-DQg
+
+:logos-youtube: **Boosting your CRV rewards**
 
 <figure class="video_container">
   <video controls="true" allowfullscreen="true">
@@ -14,58 +15,58 @@ Boosting your rewards video guide: https://www.youtube.com/watch?v=blZTCWu-DQg
   </video>
 </figure>
 
-## **Figuring out your required boost**
+## **Figuring out the required boost**
 
-The first step to getting your rewards boosted is to figure out how much CRV you'll need to lock. All gauges have different requirements meaning some pools are easier to boost than others. It depends on how much others have locked and how much the liquidity gauge has.
+The first step to getting rewards boosted is to determine the amount of CRV needed for lock. Each gauge has different requirements, meaning some pools are easier to boost than others. This depends on the amount others have locked and the liquidity gauge's capacity.
 
-You can find the calculator at this address: [https://dao.curve.fi/minter/calc](https://dao.curve.fi/minter/calc)​
+The calculator can be found at this address: [https://dao.curve.fi/minter/calc](https://dao.curve.fi/minter/calc)
 
-## **Locking your CRV**
+## **Locking CRV**
 
-Once you know how much and how long you wish to lock for, visit the following page: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
+After determining how much and for how long to lock, visit the following page: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MFw5TRvfmVRhy6M2vA0%2F-MFwBH-2tIa-f8oEODRQ%2Fimage.png?alt=media&token=9d7166c8-4231-4996-8fe2-27c0f7f4ae66)
 
-Enter the amount you want to lock and select your expiry. Remember locking is not reversible. The amount of veCRV received will depend on how much and how long you vote for.
+Enter the amount to lock and select the expiry. Remember, locking is not reversible. The amount of veCRV received will depend on the amount and duration of the vote lock.
 
-You can extend a lock and add CRV to it at any point but you cannot have CRV with different expiry dates.
+A lock can be extended, and CRV can be added to it at any point, but having CRV with different expiry dates is not possible.
 
-After creating your lock, you will need to apply your boost.
+After creating a lock, the next step is to apply the boost.
 
-## **Applying your boost**
+## **Applying the boost**
 
-Head over to the minter page: [https://dao.curve.fi/minter/gauges](https://dao.curve.fi/minter/gauges)​
+Proceed to the minter page: [https://dao.curve.fi/minter/gauges](https://dao.curve.fi/minter/gauges)
 
-If you see your new boost after Current boost: then you do not need to do anything else.
+If the new boost is visible after 'Current boost:', then no further action is required.
 
-If your current boost hasn't moved, you will need to claim CRV from each of the gauge you're providing liquidity in to update your boost. After doing so, your boost should be showing.
+If the current boost hasn't updated, it may be necessary to claim CRV from each of the gauges where liquidity is provided to update the boost. After doing so, the boost should be visible.
 
-*Your boost will not be updated until you withdraw, deposit or claim from a liquidity gauge.*
+*The boost will not be updated until a withdrawal, deposit, or claim is made from a liquidity gauge.*
 
-### *Boost Info*
-The list of pools and boost/reward info has moved away from the minter page. You can now find all this information on each pool page, on the classic.curve.fi site.  
+
+### **Boost Info**
+The list of pools and boost/reward information has been relocated from the minter page. This information can now be found on each pool page on the classic.curve.fi site.
 
 <figure markdown>
   ![](../images/classicdetails.png){ width="400" }
   <figcaption></figcaption>
 </figure>
 
-
-Alternatively, this information can also be found in the new UI ([curve.fi](https://curve.fi/)) under the "Your Details" section on the pool page. Be aware: The new UI does not display future boost yet.
+Alternatively, this information is also available in the new UI ([curve.fi](https://curve.fi/)) under the "Your Details" section on the pool page. Note: The new UI does not display future boost yet.
 
 <figure markdown>
   ![](../images/yourdetails.png){ width="400" }
   <figcaption></figcaption>
 </figure>
 
-Head to the [old](https://classic.curve.fi/pools/?see=0x0000000000000000000000000000000000000000) or [new](https://curve.fi/#/ethereum/dashboard) dashboard to see all your pools!
+Visit the [**old**](https://classic.curve.fi/pools/?see=0x0000000000000000000000000000000000000000) or [**new**](https://curve.fi/#/ethereum/dashboard) dashboard to see all your pools!
 
 ## **Formula**
 
-The boost mechanism will calculate your **earning weight** by taking the smaller amount of two values. The first value is simple, it's the amount of liquidity you are providing which in this example is $10,000. This amount is your maximum earning weight.
+The boost mechanism calculates the **earning weight** by taking the smaller of two values. The first value is the amount of liquidity provided, for example, $10,000. This figure represents the maximum earning weight.
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MJCjXQHNjiZe5hYKApB%2F-MJCjcm7RW7EuOXJC46E%2Fimage.png?alt=media&token=aca31750-4ae9-4ffd-991c-46cdccf2b374)
 
 ## **FAQ**
 
-[Vote Locking](../governance/vote-locking-boost.md)
+[**Vote Locking**](../governance/vote-locking-boost.md)
