@@ -1,12 +1,12 @@
 The v2 Curve Factory supports pools of assets with volatile prices, with no expectation of price stability.
 
-[Understanding Curve v2](../base-features/understanding-crypto-pools.md)
+[**Understanding Curve v2**](../base-features/understanding-crypto-pools.md)
 
 ## **Creating a Pool**
 
 The factory can be used to create a pool between any two or three ERC20 tokens. Based on trading activity in the pool, the v2 pools update an internal price oracle that the pool uses to rebalance itself.
 
-If the pool is using [wrapped Ethereum](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) as one of the two assets, the pool will also support depositing either raw ETH or wrapped Ethereum.
+If the pool is using [**wrapped ETH**](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) as one of the two assets, the pool will also support depositing either raw ETH or wrapped Ethereum.
 
 ## **Tokens in Pool**
 
@@ -70,6 +70,6 @@ The Advanced toggle allows you to adjust several of the other parameters under t
 *   **Moving Average Time:** \[0 to 604,800\] In seconds -- the price oracle uses an exponential moving average to dampen the effect of changes. This parameter adjusts the half life used.
     
 
-A more thorough reader on the parameters [can be found here](https://nagaking.substack.com/p/deep-dive-curve-v2-parameters?s=curve). You can [use this interactive tool](https://www.desmos.com/calculator/vbhbicc7mw) to see how some of the parameters interact.
+A more thorough reader on the parameters [**can be found here**](https://nagaking.substack.com/p/deep-dive-curve-v2-parameters?s=curve). You can [**use this interactive tool**](https://www.desmos.com/calculator/vbhbicc7mw) to see how some of the parameters interact.
 
-After deployment, make sure to seed initial liquidity and [create a gauge](../reward-gauges/creating-a-pool-gauge.md).
+After deployment, make sure to seed initial liquidity and [**create a gauge**](../reward-gauges/creating-a-pool-gauge.md).

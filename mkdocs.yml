@@ -5,23 +5,20 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - git-revision-date-localized:
-      type: timeago
   - minify:
       minify_html: true
 
 nav:
-  - index.md  
   - Getting Started:
     - Understanding Curve (v1): base-features/understanding-curve.md  
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
-  - $CRV Token:
+  - CRV Token:
     - Understanding CRV: crv-token/understanding-crv.md
-    - CRV Basics: crv-token/crv-basics.md
-    - CRV Tokenomics: crv-token/crv-tokenomics.md
-    - Locking your CRV: crv-token/locking-your-crv.md
-    - Claiming trading fees: crv-token/claiming-trading-fees.md
-  - $crvUSD:
+    - Basics: crv-token/crv-basics.md
+    - Tokenomics: crv-token/crv-tokenomics.md
+    - Locking CRV: crv-token/locking-your-crv.md
+    - Claiming Trading Fees: crv-token/claiming-trading-fees.md
+  - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Loan Details & Concepts: crvusd/loan-details.md
@@ -33,7 +30,7 @@ nav:
     - Calculating yield: lp/calculating-yield.md
     - Charts and Pool Activity: lp/charts_poolactivity.md
     - Depositing:
-      - Overview: lp/depositing.md
+      - Overview: lp/depositing/depositing.md
       - Despositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
       - Despositing into a metapool: lp/depositing/depositing-into-a-metapool.md
       - Despositing into the susd-pool: lp/depositing/depositing-into-the-susd-pool.md
@@ -96,6 +93,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -121,21 +122,24 @@ markdown_extensions:
 
 theme:
   name: material
+  custom_dir: overrides
   include_search_page: false
   search_index_only: true
   font:
     text: Roboto
     code: Roboto Mono
-  logo: "images/logo.png"
-  favicon: "images/logo.png"
+  logo: "images/lama.png"
+  favicon: "images/lama.png"
+  icon:
+    repo: fontawesome/brands/github
   features:
     - content.code.annotate
     - content.tabs.link
-    - navigation.expand
     - navigation.indexes
-    - navigation.instant
     - navigation.path
+    - navigation.instant
     - navigation.instant.prefetch
+    - navigation.instant.progress
     - navigation.sections
     - navigation.top
     - navigation.tracking
@@ -158,8 +162,25 @@ theme:
         icon: material/weather-night
         name: Switch to dark mode
 
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/curvefi
+      name: Telegram
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/curvefinance
+      name: X
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/rgrfS7W
+      name: Discord
+    - icon: fontawesome/brands/youtube
+      link: http://www.youtube.com/c/CurveFinance
+      name: YouTube
+
 extra_css:
-  - 'stylesheets/extra.css'
+  - stylesheets/extra.css
+  #- stylesheets/highcharts.css
 
 extra_javascript:
   - javascripts/mathjax.js

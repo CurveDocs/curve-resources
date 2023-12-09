@@ -3,4 +3,3 @@ mkdocs-material
 mkdocs-autolinks-plugin
 mkdocs-minify-plugin
 pymdown-extensions
-mkdocs-git-revision-date-localized-plugin

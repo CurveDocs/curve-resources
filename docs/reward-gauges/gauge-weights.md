@@ -16,7 +16,7 @@ The gauge weight is updated once a week on Thursdays.
 
 ## **Who can vote for gauge weights?**
 
-Anybody who has vote [locked CRV](../crv-token/understanding-crv.md) can vote to direct its voting power towards one or multiple Curve pools.
+Anybody who has vote [**locked CRV**](../crv-token/understanding-crv.md) can vote to direct its voting power towards one or multiple Curve pools.
 
 ## **How can I vote?**
 
