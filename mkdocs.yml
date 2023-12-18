@@ -57,6 +57,7 @@ nav:
   - Factory Pools:
     - Understanding pool factory: factory-pools/pool-factory.md
     - Creating a stableswap pool: factory-pools/creating-a-stableswap-pool.md
+    - Creating a stableswap-NG pool: factory-pools/creating-a-stableswap-ng-pool.md
     - Creating a cryptoswap pool: factory-pools/creating-a-cryptoswap-pool.md
     - Understanding oracles: factory-pools/understanding-oracles.md
   - Troubleshooting:
