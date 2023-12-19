@@ -74,7 +74,24 @@ In the example above, the collateral is distributed across 10 bands. The darker 
 
 The borrow rate is variable basd on conditions in the pool. For instance, when collateral price is down and some positions are in soft liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
 
-The formula for calculating borrow rate and a cool tool to play around can be found [**here**](https://crvusd-rate.0xreviews.xyz/).
+<figure markdown>
+  ![](../images/crvusd_rate.png){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+*with:*
+
+- **`r`**:	rate
+- **`rate0`**:	rate when pegkeepers have no debt and price of crvusd is 1
+- **`price_peg`**:	desired crvUSD price: 1.00
+- **`price_crvusd`**:	actual crvUSD price
+- **`DebtFraction`**:	ratio of the PegKeeper's debt to the total outstanding debt
+- **`TargetFraction`**:	target fraction
+- **`PegKeeperDebt`**:	sum of debt of all PegKeepers
+- **`TotalDebt`**:	total crvUSD debt
+
+A tool to experiment with the interest rate model is available [here](https://crvusd-rate.0xreviews.xyz/).
+
 
 ## **Liquidation**
 
