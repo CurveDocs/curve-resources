@@ -1,6 +1,6 @@
 <h1>Deploying a Stableswap-NG pool</h1>
 
-!!!info
+!!!info "Stableswap-NG"
     For a better understanding of what Stableswap-NG is and how it differs from regular Stableswap pools, check [this](../lp/pools.md#stableswap-new-generation).
 
 
@@ -13,7 +13,7 @@ To start the pool creation process, navigate to the **`POOL CREATION`** tab and 
 
 ## **Token Selection**
 The token selection tab can be used to select **between two and four tokens**.  
-A token can be selected by searching for the symbol of any token that is already being used on Curve, or by pasting the pool's address.
+A token can be selected by searching for the symbol of any token that is already being used on Curve, or by pasting the pool's address. Additional tokens can be added through the **`Add token`** button.
 
 *StableSwap-NG supports various asset types:*
 
@@ -27,7 +27,11 @@ A token can be selected by searching for the symbol of any token that is already
   <figcaption></figcaption>
 </figure>
 
-An additional token can be added through the **`Add token`** button.
+!!!warning 
+    - **`ERC20:`** Users are advised to do careful due-diligence on ERC20 tokens that they interact with, as this contract **cannot differentiate between harmless and malicious** ERC20 tokens.
+    - **`Oracle:`** When using tokens with oracles, its important to know that they **may be controlled externally by an EOA**.
+    - **`Rebasing:`** Users and Integrators are advised to understand how the AMM contract works with rebasing balances.
+    - **`ERC4626:`** Some ERC4626 implementations **may be susceptible to Donation/Inflation attacks**. Users are advised to proceed with caution.
 
 
 ### **Tokens with Oracles**
@@ -49,7 +53,7 @@ Stableswap-NG offers two different default **Pool Parameter Presets**:
   <figcaption></figcaption>
 </figure>
 
-Depending on the choice of the preset, some predefined parameters will be chosen. These are recommended parameters based on the chosen preset. Ultimately, parameter values can be freely selected within the supported ranges.
+Depending on the choice of the preset, some predefined parameters will be chosen. These are recommended parameters based on the chosen option. Ultimately, parameter values can be freely selected within the supported ranges.
 
 
 <figure markdown>
@@ -57,9 +61,9 @@ Depending on the choice of the preset, some predefined parameters will be chosen
   <figcaption></figcaption>
 </figure>
 
-Stableswap-NG introduces **dynamic fees**. The use of the `Offpeg Fee Multiplier` allows the system to dynamically adjust fees based on the pool's state.
+Stableswap-NG introduces a **dynamic fee**. The use of the `Offpeg Fee Multiplier` allows the system to dynamically adjust the fee based on the pool's state.
 
-A tool to play around with the dynamic fee: [https://www.desmos.com/calculator/zhrwbvcipo?](https://www.desmos.com/calculator/zhrwbvcipo?).
+A tool to play around with the dynamic fee: [https://www.desmos.com/calculator/zhrwbvcipo?](https://www.desmos.com/calculator/zhrwbvcipo?)
 
 - **`Swap Fee`**: The swap fee charged during transactions.
 - **`A`**: The amplification coefficient, which defines the pool's density.
