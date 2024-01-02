@@ -8,7 +8,7 @@ In standard mode, creating a loan with crvUSD involves specifying a certain amou
 </figure>
 
 
-The user interface (UI) features a dropdown menu for viewing additional loan parameters, such as the current Oracle Price and [**Borrow Rate**](../crvusd/understanding-tokenomics.md#borrow-rate).
+The user interface (UI) features a dropdown menu for viewing additional loan parameters, such as the current Oracle Price and [**Borrow Rate**](../crvusd/loan-details.md#borrow-rate).
 
 
 <figure markdown>
@@ -27,7 +27,7 @@ In the upper right-hand side of the screen, there is a toggle button for advance
 
 ---
 
-The advanced mode adds an additional display with more information about the current distribution across all the [**bands**](../crvusd/understanding-tokenomics.md#bands) within the entire [**LLAMMA**](../crvusd/understanding-tokenomics.md#llamma). 
+The advanced mode adds an additional display with more information about the current distribution across all the [**bands**](../crvusd/loan-details.md#bands)within the entire [**LLAMMA**](../crvusd/loan-details.md#llamma). 
 
 <figure markdown>
 ![](../images/tbtc_loan_details.png){ width="500" }
