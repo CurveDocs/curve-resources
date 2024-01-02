@@ -10,7 +10,7 @@ These three functions will **require users to vote-lock their CRV** and acquire 
 
 !!!info
     veCRV stands for **vote-escrowed CRV**, representing CRV tokens locked for voting in the Curve DAO.  
-    More information about Vote-Locking can be found [here](../governance/vote-locking-boost.md).
+    More information about Vote-Locking can be found [here](./locking-your-crv.md).
 
 # **Rewards (Admin Fees)**
 

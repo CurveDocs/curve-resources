@@ -4,7 +4,7 @@ One of the main incentives for CRV is the ability to boost rewards on provided l
 
 For questions about how the vote locking boost works, click below:
 
-[**Vote Locking**](../governance/vote-locking-boost.md)
+[**Vote Locking**](../crv-token/locking-your-crv.md)
 
 
 :logos-youtube: **Boosting your CRV rewards**
@@ -66,7 +66,3 @@ Visit the [**old**](https://classic.curve.fi/pools/?see=0x0000000000000000000000
 The boost mechanism calculates the **earning weight** by taking the smaller of two values. The first value is the amount of liquidity provided, for example, $10,000. This figure represents the maximum earning weight.
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MJCjXQHNjiZe5hYKApB%2F-MJCjcm7RW7EuOXJC46E%2Fimage.png?alt=media&token=aca31750-4ae9-4ffd-991c-46cdccf2b374)
-
-## **FAQ**
-
-[**Vote Locking**](../governance/vote-locking-boost.md)
