@@ -16,8 +16,10 @@ nav:
     - Understanding CRV: crv-token/understanding-crv.md
     - Basics: crv-token/crv-basics.md
     - Tokenomics: crv-token/crv-tokenomics.md
-    - Locking CRV: crv-token/locking-your-crv.md
     - Claiming Trading Fees: crv-token/claiming-trading-fees.md
+  - veCRV:
+    - Locking CRV: vecrv/locking-your-crv.md
+    - Vote-locking FAQ: vecrv/vote-locking-boost.md
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
@@ -46,7 +48,6 @@ nav:
     - Understanding governance: governance/understanding-governance.md
     - Voting: governance/voting.md
     - Snapshot: governance/snapshot.md
-    - Vote-locking FAQ: governance/vote-locking-boost.md
     - Proposals:
       - Proposals: governance/proposals.md
       - Community fund: governance/proposals/community-fund.md
