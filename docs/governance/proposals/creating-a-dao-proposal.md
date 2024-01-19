@@ -21,3 +21,4 @@ You will then be presented with a template to help you present your proposed cho
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MHFwJbCVuAnFe8eOxmJ%2F-MHG-YXUsCvsptU7-9PQ%2Fimage.png?alt=media&token=44a1ab40-8fee-438c-9f82-446693e67dd3)
 
 After that's done, be sure to engage with members of the community who have questions about your proposal.
+ 
