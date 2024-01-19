@@ -1,4 +1,4 @@
-# Community Fund
+<h1>Community Fund</h1>
 
 CRV initial distribution allowed for a community fund of around $151M to be used in cases of emergencies or awarded to community-lead initiatives.
 

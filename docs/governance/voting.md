@@ -22,6 +22,6 @@ Simply visit the proposal of your choice, click your vote option and confirm you
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MFaCWag3CMFEYuEYadw%2F-MFaDb4b2tFZeaizUTvP%2Fimage.png?alt=media&token=31b6463c-0fe9-4dae-9584-8864bca62569)
 
-Where can I find out about governance?
+## **Where can I find out about governance?**
 
 You can visit the Curve Finance governance forum at this address [http://gov.curve.fi/](http://gov.curve.fi/)​
