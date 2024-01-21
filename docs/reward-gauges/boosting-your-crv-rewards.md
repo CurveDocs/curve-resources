@@ -4,7 +4,7 @@ One of the main incentives for CRV is the ability to boost rewards on provided l
 
 For questions about how the vote locking boost works, click below:
 
-[**Vote Locking**](../crv-token/locking-your-crv.md)
+[**Vote Locking**](../vecrv/vote-locking-boost.md)
 
 
 :logos-youtube: **Boosting your CRV rewards**
