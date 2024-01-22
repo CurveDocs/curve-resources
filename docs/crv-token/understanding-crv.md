@@ -10,13 +10,13 @@ These three functions will **require users to vote-lock their CRV** and acquire 
 
 !!!info
     veCRV stands for **vote-escrowed CRV**, representing CRV tokens locked for voting in the Curve DAO.  
-    More information about Vote-Locking can be found [here](./locking-your-crv.md).
+    More information about Vote-Locking can be found [here](../vecrv/locking-your-crv.md).
 
 # **Rewards (Admin Fees)**
 
 CRV can be locked to receive trading fees from the Curve protocol. A community-led proposal introduced a 50% admin fee on all trading fees. These fees are collected and converted to 3CRV, which are then distributed to veCRV holders.
 
-[**Locking your $CRV**](../crv-token/locking-your-crv.md)
+[**Locking your CRV**](../vecrv/locking-your-crv.md)
 
 # **Boosting**
 
@@ -28,7 +28,7 @@ One of the main incentives for locking CRV is the ability to boost rewards on pr
 
 Once CRV holders vote-lock their CRV, they can start voting on various DAO proposals and pool parameters.
 
-[**Proposals**](../governance/proposals.md)
+[**Proposals**](../governance/understanding-governance.md)
 
 # **The CRV Matrix**
 

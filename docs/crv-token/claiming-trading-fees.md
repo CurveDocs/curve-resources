@@ -1,4 +1,4 @@
-Every time a trade occurs on Curve Finance, **50% of the trading fee is collected by users who have vote-locked their CRV**. Furthermore, since the introduction of Curve's stablecoin, crvUSD, all accumulated interest rate fees are awarded to veCRV holders.
+Every time a trade occurs on Curve Finance, **50% of the trading fee is collected by users who have vote-locked their CRV**. Furthermore, since the introduction of Curve's stablecoin, crvUSD, all **accumulated interest rate fees** are awarded to veCRV holders.
 
 Fees are collected weekly from the pools, converted to 3CRV, and then distributed. Users who lock CRV can claim trading fees as often as they wish; however, fees will only be converted into 3CRV once a week.
 

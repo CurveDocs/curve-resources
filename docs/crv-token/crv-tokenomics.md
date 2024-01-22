@@ -1,6 +1,7 @@
+<h1>Token Supply and Distribution</h1>
+
 CRV officially launched on the **13th of August 2020**. The main purposes of the Curve DAO token are to incentivise liquidity providers on the Curve Finance platform as well as getting as many users involved as possible in the governance of the protocol.
 
-<h2>Token Supply and Distribution</h2>
 
 **The total supply of 3.03b is distributed as such:**
 
@@ -50,4 +51,5 @@ The circulating supply was 0 at launch and the initial release rate will be arou
 <figcaption></figcaption>
 </figure>
 
-Full release schedule here: [https://dao.curve.fi/releaseschedule](https://dao.curve.fi/releaseschedule)
+!!!tip
+    Full release schedule here: [https://dao.curve.fi/releaseschedule](https://dao.curve.fi/releaseschedule)
