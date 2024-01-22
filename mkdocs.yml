@@ -122,8 +122,7 @@ nav:
     - Understanding Curve (v1): base-features/understanding-curve.md  
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
   - CRV Token:
-    - Understanding CRV: crv-token/understanding-crv.md
-    - Basics: crv-token/crv-basics.md
+    - Understanding CRV: crv-token/crv-basics.md
     - Tokenomics: crv-token/crv-tokenomics.md
     - Claiming Trading Fees: crv-token/claiming-trading-fees.md
   - veCRV:
