@@ -161,6 +161,8 @@ nav:
       - Community fund: governance/proposals/community-fund.md
       - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
   - Multi-Chain:
+    - CRV: multichain/crv.md
+    - crvUSD: multichain/crvusd.md
     - Understanding multi-chain: multichain/understanding-multichain.md
     - Bridging funds: multichain/bridging-funds.md
   - Factory Pools:
