@@ -72,7 +72,7 @@ In the example above, the collateral is distributed across 10 bands. The darker 
 
 ## **Borrow Rate**
 
-The borrow rate is variable basd on conditions in the pool. For instance, when collateral price is down and some positions are in soft liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
+The borrow rate is variable based on conditions in the pool. For instance, when collateral price is down and some positions are in soft liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
 
 <figure markdown>
   ![](../images/crvusd_rate.png){ width="400" }
@@ -82,7 +82,7 @@ The borrow rate is variable basd on conditions in the pool. For instance, when c
 *with:*
 
 - **`r`**:	rate
-- **`rate0`**:	rate when pegkeepers have no debt and price of crvusd is 1
+- **`rate0`**:	rate when pegkeepers have no debt and price of crvUSD is 1
 - **`price_peg`**:	desired crvUSD price: 1.00
 - **`price_crvusd`**:	actual crvUSD price
 - **`DebtFraction`**:	ratio of the PegKeeper's debt to the total outstanding debt
@@ -97,15 +97,15 @@ A tool to experiment with the interest rate model is available [here](https://cr
 
 In soft liquidation, the collateral within a band is at risk of being converted into crvUSD. If the price goes back, it will be rehypothecated into collateral, although it will likely be lower than the initial amount.  While in soft liquidation mode, users cannot modify their collateral. The only options available are to either partially or fully repay the debt or opt to self-liquidate the position.
 
-If a borrower's health continues to decline, they may face a 'hard liquidation,' functioning more like a standard liquidation process, resulting in the erasement of their position.
+If a borrower's health continues to decline, they may face a 'hard liquidation', functioning more like a standard liquidation process, resulting in the erasement of their position.
 
 ## **LLAMMA**
 
-LLAMA (Lending Liquidation AMM Algorithm) is a fully functional AMM with all the functions a user would expect. For more detail [**please check the source code**](https://github.com/curvefi/curve-stablecoin/blob/master/contracts/AMM.vy).
+LLAMMA (Lending-Liquidating AMM Algorithm) is a fully functional AMM with all the functions a user would expect. For more detail [**please check the source code**](https://github.com/curvefi/curve-stablecoin/blob/master/contracts/AMM.vy).
 
 ## **Loan Health**
 
-Based on a users collateral and borrow amount, the UI will display the Health score and status. If the position is in self-liquidation mode, an additional warning will be displayed. Once a loan reaches 0% health, the loan is eligible to be hard-liquidated.
+Based on a users collateral and borrow amount, the UI will display the health score and status. If the position is in self-liquidation mode, an additional warning will be displayed. Once a loan reaches 0% health, the loan is eligible to be hard-liquidated.
 
 !!!warning "Losses in soft-liquidation mode"
     The **health of a loan decreases when the loan enters self-liquidation mode. These losses do not only occur when prices go down but also when the collateral price rises again, resulting in the de-liquidation of the user's loan.** This implies that the health of a loan can decrease even though the collateral value of the position increases. If a loan is not in self-liquidation mode, then no losses occur. Losses also heavily depend on the number of [**bands**](#bands) used; the more bands there are, the fewer the losses.
