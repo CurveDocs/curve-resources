@@ -101,7 +101,7 @@ If a borrower's health continues to decline, they may face a 'hard liquidation,'
 
 ## **LLAMMA**
 
-LLAMA (Lending Liquidation AMM Algorithm) is a fully functional AMM with all the functions a user would expect. For more detail [**please check the source code**](https://github.com/curvefi/curve-stablecoin/blob/master/contracts/AMM.vy).
+LLAMMA (Lending Liquidation AMM Algorithm) is a fully functional AMM with all the functions a user would expect. For more detail [**please check the source code**](https://github.com/curvefi/curve-stablecoin/blob/master/contracts/AMM.vy).
 
 ## **Loan Health**
 
