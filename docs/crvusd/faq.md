@@ -112,7 +112,7 @@ The Borrow Rate for each crvUSD collateral market is calculated based on a serie
 
 ## **What are the risks of using crvUSD**
 
-As with all cryptocurrencies, crvUSD carries several risks, including depeg risks and risk of liquidation of a users collateral. Make sure to [**read the disclaimer**](https://crvusd.curve.fi/#/ethereum/risk-disclaimer) and exercise caution when interacting with smart contracts.
+As with all cryptocurrencies, crvUSD carries several risks, including depeg risks and risk of user collateral liquidation. Make sure to [**read the disclaimer**](https://crvusd.curve.fi/#/ethereum/risk-disclaimer) and exercise caution when interacting with smart contracts.
 
 
 ## **How can I best manage my risks when providing liquidity or borrowing in crvUSD?**
