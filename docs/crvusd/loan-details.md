@@ -72,7 +72,7 @@ In the example above, the collateral is distributed across 10 bands. The darker 
 
 ## **Borrow Rate**
 
-The borrow rate is variable basd on conditions in the pool. For instance, when collateral price is down and some positions are in soft liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
+The borrow rate is variable based on conditions in the pool. For instance, when collateral price is down and some positions are in soft liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
 
 <figure markdown>
   ![](../images/crvusd_rate.png){ width="400" }
