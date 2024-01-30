@@ -107,7 +107,7 @@ Deleveraging a loan — irrespective of it being [**leveraged**](../crvusd/loan-
 
 
 !!!info
-    **When a user's loan is in soft liquidation, deleveraging is only possible if the loan is fully repaid.** Apart from that, the loan can typically be self-liquidated. If the position is not in soft liquidation, the user can deliberately deleverage by any chosen amount.
+    **When a user's loan is in soft-liquidation, deleveraging is only possible if the loan is fully repaid.** Apart from that, the loan can typically be self-liquidated. If the position is not in soft-liquidation, the user can deliberately deleverage by any chosen amount.
 
 
 The UI will provide the user with their updated loan details, such as liquidation and band range, borrow rate, and health, as well as the LLAMMA changes of collateral and debt.

@@ -66,13 +66,13 @@ When loans are created, collateral is spread among several bands. Each band has 
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FyMhYzWHxwO8F9TobC61D%2Fimage.png?alt=media&token=1da21e96-9df2-4f47-b6c3-34d9d3cbefd4)
 
-In the example above, the collateral is distributed across 10 bands. The darker grey indicates collateral that has been converted into crvUSD, while the lighter grey represents the original collateral type. Hovering over any bar reveals details about that specific position within the band, including the corresponding asset prices. During soft liquidation, a band may exhibit a mix of crvUSD and the original collateral.
+In the example above, the collateral is distributed across 10 bands. The darker grey indicates collateral that has been converted into crvUSD, while the lighter grey represents the original collateral type. Hovering over any bar reveals details about that specific position within the band, including the corresponding asset prices. During soft-liquidation, a band may exhibit a mix of crvUSD and the original collateral.
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FZgFJQJm7ol1KmgK1BXXJ%2Fimage.png?alt=media&token=c05ef1d9-8918-4cf2-b041-a38716d9660d)
 
 ## **Borrow Rate**
 
-The borrow rate is variable based on conditions in the pool. For instance, when collateral price is down and some positions are in soft liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
+The borrow rate is variable based on conditions in the pool. For instance, when collateral price is down and some positions are in soft-liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
 
 <figure markdown>
   ![](../images/crvusd_rate.png){ width="400" }
@@ -95,7 +95,7 @@ A tool to experiment with the interest rate model is available [here](https://cr
 
 ## **Liquidation**
 
-In soft liquidation, the collateral within a band is at risk of being converted into crvUSD. If the price goes back, it will be rehypothecated into collateral, although it will likely be lower than the initial amount.  While in soft liquidation mode, users cannot modify their collateral. The only options available are to either partially or fully repay the debt or opt to self-liquidate the position.
+In soft-liquidation, the collateral within a band is at risk of being converted into crvUSD. If the price goes back, it will be rehypothecated into collateral, although it will likely be lower than the initial amount.  While in soft-liquidation mode, users cannot modify their collateral. The only options available are to either partially or fully repay the debt or opt to self-liquidate the position.
 
 If a borrower's health continues to decline, they may face a 'hard liquidation', functioning more like a standard liquidation process, resulting in the erasement of their position.
 
