@@ -1,14 +1,14 @@
-<h1>Mutli-Chain: Curve DAO Token</h1>
+<h1>Multi-Chain: Curve DAO Token</h1>
 
-The Curve token **can be bridged** across some chains, but does **not always have full functionality**. Locking of CRV for veCRV must be done on Ethereum. Rewards voting for cross-chain gauges occurs on Ethereum aswell.
+The Curve token can be bridged across various chains, though it does not always retain full functionality. Locking CRV to obtain veCRV, as well as rewards voting for cross-chain gauges, must be conducted on the Ethereum blockchain.
 
 ---
 
 !!!danger "MULTICHAIN WARNING"
     Multichain statement: https://twitter.com/MultichainOrg/status/1677180114227056641  
-    The Multichain service stopped currently, and all bridge transactions will be stuck on the source chains. 
-    There is no confirmed resume time.  
-    **Please don’t use the Multichain bridging service now.**
+    The Multichain service is currently halted, and all bridge transactions are suspended on their source chains. 
+    There is no confirmed time for service resumption.  
+    **Please refrain from using the Multichain bridging service at this time.**
 
 
 | Network | Contract Address | Bridge |
