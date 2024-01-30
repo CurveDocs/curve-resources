@@ -105,7 +105,7 @@ LLAMMA (Lending-Liquidating AMM Algorithm) is a fully functional AMM with all th
 
 ## **Loan Health**
 
-Based on a users collateral and borrow amount, the UI will display the Health score and status. If the position is in self-liquidation mode, an additional warning will be displayed. Once a loan reaches 0% health, the loan is eligible to be hard-liquidated.
+Based on a users collateral and borrow amount, the UI will display the health score and status. If the position is in self-liquidation mode, an additional warning will be displayed. Once a loan reaches 0% health, the loan is eligible to be hard-liquidated.
 
 !!!warning "Losses in soft-liquidation mode"
     The **health of a loan decreases when the loan enters self-liquidation mode. These losses do not only occur when prices go down but also when the collateral price rises again, resulting in the de-liquidation of the user's loan.** This implies that the health of a loan can decrease even though the collateral value of the position increases. If a loan is not in self-liquidation mode, then no losses occur. Losses also heavily depend on the number of [**bands**](#bands) used; the more bands there are, the fewer the losses.
