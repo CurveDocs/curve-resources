@@ -82,7 +82,7 @@ The borrow rate is variable based on conditions in the pool. For instance, when 
 *with:*
 
 - **`r`**:	rate
-- **`rate0`**:	rate when pegkeepers have no debt and price of crvusd is 1
+- **`rate0`**:	rate when pegkeepers have no debt and price of crvUSD is 1
 - **`price_peg`**:	desired crvUSD price: 1.00
 - **`price_crvusd`**:	actual crvUSD price
 - **`DebtFraction`**:	ratio of the PegKeeper's debt to the total outstanding debt
