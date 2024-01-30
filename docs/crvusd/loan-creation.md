@@ -27,7 +27,7 @@ In the upper right-hand side of the screen, there is a toggle button for advance
 
 ---
 
-The advanced mode adds an additional display with more information about the current distribution across all the [**bands**](../crvusd/loan-details.md#bands)within the entire [**LLAMMA**](../crvusd/loan-details.md#llamma). 
+The advanced mode adds an additional display with more information about the current distribution across all the [**bands**](../crvusd/loan-details.md#bands) within the entire [**LLAMMA**](../crvusd/loan-details.md#llamma). 
 
 <figure markdown>
 ![](../images/tbtc_loan_details.png){ width="500" }
@@ -57,7 +57,7 @@ Everything needed to manage a loan is available in this interface. The features 
 
 
 **`Loan`**   
-This tab provides options to **`Borrow more`** crvUSD, **`Repay`** debt, or **`Self-Liquidate`** a loan
+This tab provides options to **`Borrow more`** crvUSD, **`Repay`** debt, or **`Self-liquidate`** a loan
 
 **`Collateral`**  
 Options to **`add`** or **`remove`** collateral from a loan are available here.
@@ -72,7 +72,7 @@ This tab facilitates loan deleveraging. Find more details [here](#deleveraging-l
 # **Leveraging Loans**
 The UI offers a leveraging feature for loans, accessible by navigating to the **`Leverage`** tab.
 
-More infomation on how to deleverage a loan [here](#deleveraging-loans).
+More information on how to deleverage a loan [here](#deleveraging-loans).
 
 !!!info "Leverage"
     Collateral can be leveraged **up to 9x**, depending on the number of bands chosen. If a user wants to use the maximum leverage (9x), they loan will have the minimum number of bands (4). Using the highest number of bands (50) only allows for a leverage of up to 3x. **For the consequences of using different numbers of bands, see [here](../crvusd/loan-details.md#loan-health).**
