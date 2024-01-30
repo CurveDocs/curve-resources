@@ -97,7 +97,7 @@ A tool to experiment with the interest rate model is available [here](https://cr
 
 In soft liquidation, the collateral within a band is at risk of being converted into crvUSD. If the price goes back, it will be rehypothecated into collateral, although it will likely be lower than the initial amount.  While in soft liquidation mode, users cannot modify their collateral. The only options available are to either partially or fully repay the debt or opt to self-liquidate the position.
 
-If a borrower's health continues to decline, they may face a 'hard liquidation,' functioning more like a standard liquidation process, resulting in the erasement of their position.
+If a borrower's health continues to decline, they may face a 'hard liquidation', functioning more like a standard liquidation process, resulting in the erasement of their position.
 
 ## **LLAMMA**
 
