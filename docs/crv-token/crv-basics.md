@@ -12,7 +12,9 @@ You can find the release schedule for the next six years at this address: [**htt
 
 # **What is the current circulating supply?**
 
-The current circulating supply can be found at this address: [**https://dao.curve.fi/inflation**](https://dao.curve.fi/inflation)​
+The current circulating supply can be found at this address: [**https://dao.curve.fi/inflation**](https://dao.curve.fi/inflation)
+
+An [**on-chain contract**](https://etherscan.io/address/0x14139EB676342b6bC8E41E0d419969f23A49881e) (`0x14139EB676342b6bC8E41E0d419969f23A49881e`) is also available to track the circulating supply, net of locked or otherwise vested tokens.
 
 # **What is the utility of CRV?**
 
