@@ -10,7 +10,7 @@ To obtain the following benefits, users must [lock CRV tokens](../vecrv/locking-
 
     The veCRV balance represents the voting power of a user, which allows them to **vote on on-chain proposals**. Additionally, a crucial part of Curve governance are **gauge weight votes**. Curve token emissions are created in a way that allows **veCRV holders to choose how future emissions are allocated**. Liquidity pools on Curve can be added to the GaugeController via a successfully passed DAO vote, making them eligible to receive CRV token emissions. The gauge weights determine how much CRV each pool receives. Every **Thursday at 00:00 UTC**, the updated gauge weights are applied.
 
-    [Voting](../governance/voting.md)
+    [Voting](../governance/voting.md)  
     [Gauge Weights](../reward-gauges/gauge-weights.md)
 
 
