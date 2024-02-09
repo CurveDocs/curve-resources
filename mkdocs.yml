@@ -177,9 +177,10 @@ nav:
     - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
     - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
     - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
-  - Appendix:
-    - Security: faq/security.md
-    - Glossary: faq/glossary.md
+  - Useful Resources:
+    - Security: resources/security.md
+    - Glossary: resources/glossary.md
+    - Branding: resources/branding.md
   - Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://dao.curve.fi/
