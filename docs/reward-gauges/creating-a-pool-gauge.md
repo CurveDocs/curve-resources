@@ -25,7 +25,9 @@ Before deploying the gauge, ensure you connect your wallet by clicking the **`Co
 
 # **Submit a DAO Vote**
 
-Once you've created your gauge, you need to submit it to the DAO for a vote. [https://classic.curve.fi/factory/create\_vote](https://classic.curve.fi/factory/create_vote)​
+In order for a gauge to become eligible to receive CRV emissions, it has to be added to the GaugeController. This needs to be approved by the DAO.
+
+Once you've created your gauge, you can submit it to the DAO for a vote. [https://classic.curve.fi/factory/create\_vote](https://classic.curve.fi/factory/create_vote)​
 
 The address that submits must have 2500 veCRV in order to create a vote.
 
