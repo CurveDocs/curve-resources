@@ -25,9 +25,19 @@ If you wish to create a new official proposal, you should draft a proposal and p
 
 If you're not sure about the technical details of submitting your proposal to the Ethereum blockchain, you can ask a member of the team to help.
 
+
+## **DAO Votes**
+
+*There are three kinds of votes:*
+
+1. Ownership votes, which control most functionality within the protocol. These votes require a 30% quorum with 51% support.
+2. Parameter votes, which can modify pool parameters. These votes require a 15% quorum with 30% support.
+3. Emergency votes, which consist of nine members, comprised of a mix of the Curve team and prominent figures within the DeFi community. Each member has one vote. Any member may propose a vote. A vote lasts for 24 hours and can be executed immediately once it receives 66% support.
+
+
 ## **Emergency DAO**
 
-The emergency DAO multisig may kill non-factory pools up to 2 months old. It may also kill reward gauges at any time, setting its rate of CRV emissions to 0. Pools that have been killed will only allow users to `remove_liquidity`.
+The EmergencyDAO multisig may kill non-factory pools up to 2 months old. It may also kill reward gauges at any time, setting its rate of CRV emissions to 0. Pools that have been killed will only allow users to `remove_liquidity`.
 
 See the members of the emergency DAO in the technical docs: https://docs.curve.fi/curve_dao/ownership-proxy/Agents/#agents
 
