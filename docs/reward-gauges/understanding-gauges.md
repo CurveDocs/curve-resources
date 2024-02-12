@@ -6,6 +6,7 @@ The liquidity gauge measures how many dollars you have provided in a Curve pool.
 
 # **The weight system**
 
+For a gauge to be able to receive CRV emissions it has to be added to the GaugeController.
 Each gauge also has a weight and a type. Those weights represent how much of the daily CRV inflation will be received by the liquidity gauge.
 
 # **The DAO**
