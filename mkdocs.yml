@@ -12,6 +12,7 @@ plugins:
 
 # extension
 markdown_extensions:
+  - footnotes
   - def_list
   - attr_list
   - md_in_html
@@ -65,6 +66,7 @@ theme:
   features:
     - content.code.annotate
     - content.tabs.link
+    - content.footnote.tooltips
     - navigation.indexes
     - navigation.path
     - navigation.top
@@ -74,6 +76,7 @@ theme:
     - search.suggest
     - toc.follow
     - content.code.copy
+
   palette:
     # - media: "(prefers-color-scheme: dark)"
     - scheme: default
@@ -129,11 +132,20 @@ nav:
     - Overview: vecrv/overview.md
     - Locking CRV: vecrv/locking-your-crv.md
     - Vote-locking FAQ: vecrv/vote-locking-boost.md
+
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Loan Details & Concepts: crvusd/loan-details.md
     - crvUSD FAQ: crvusd/faq.md
+
+  - Curve Lending:
+    - Understanding Lending: lending/understanding-lending.md
+    - Loan Creation & Management: lending/loan-creation.md
+    - Loan Details & Concepts: lending/loan-details.md
+    - Creating Lending Markets: lending/factory.md
+    - Lending FAQ: lending/faq.md
+
   - Liquidity Providers:
     - Understanding curve pools: lp/understanding-curve-pools.md
     - Pools: lp/pools.md
