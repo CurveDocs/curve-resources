@@ -63,7 +63,7 @@ Pools like [**AAVE**](https://curve.fi/#/ethereum/pools/aave/deposit) and [**sAA
 
 # **StableSwap New-Generation**
 
-StableSwap-NG is a new implementation of the stableswap invariant design. It offers several improvements over previous pools, such as dynamic fees or support for rebasing tokens, tokens with oracles, or ERC-4626. These improvements work for plain pools as well as metapools. For more technical documentation, see [**here**](https://docs.curve.fi/stableswap-ng_exchange/pools/overview/).
+StableSwap-NG is a new implementation of the stableswap invariant design. It offers several improvements over previous pools, such as dynamic fees or support for rebasing tokens, tokens with oracles, or ERC-4626. These improvements work for plain pools as well as metapools. For more technical documentation, see [**here**](https://docs.curve.fi/stableswap-exchange/stableswap-ng/overview/).
 
 
 ## **Standard ERC-20 Pool**
