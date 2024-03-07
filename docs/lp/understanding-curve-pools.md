@@ -1,7 +1,7 @@
 It’s important to understand that when you provide liquidity to a pool, no matter what coin you deposit, you essentially **gain exposure to all the coins in the pool** which means you want to find a pool with coins you are comfortable holding.
 
 !!!danger "Liquidity Pool Risks"
-    Before using liquidity pools, it's advisable to review our risk disclaimer page for a comprehensive overview of potential risks.
+    Before using liquidity pools, it's advisable to review our [risk disclaimer](../resources/risks/pool.md) page for a comprehensive overview of potential risks.
 
 
 Before we continue, we assume you have familiarized yourself with the basics of Curve:
