@@ -1,12 +1,15 @@
 It’s important to understand that when you provide liquidity to a pool, no matter what coin you deposit, you essentially **gain exposure to all the coins in the pool** which means you want to find a pool with coins you are comfortable holding.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FnVpxEmHcEWUxva1180pc%2FScreen%20Shot%202022-11-14%20at%203.21.19%20AM.png?alt=media&token=a50cc7f6-de6a-41f5-88da-ca9f90316a2c)
+!!!danger "Liquidity Pool Risks"
+    Before using liquidity pools, it's advisable to review our risk disclaimer page for a comprehensive overview of potential risks.
+
 
 Before we continue, we assume you have familiarized yourself with the basics of Curve:
 
 [**Understanding Curve v1**](../base-features/understanding-curve.md)
 
-All Curve liquidity gauges receive CRV based on how much the DAO allocates to it.
+[**Understanding Curve v2**](../base-features/understanding-crypto-pools.md)
+
 
 # **What are liquidity pools?**
 
