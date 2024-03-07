@@ -178,6 +178,9 @@ nav:
     - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
     - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
   - Useful Resources:
+    - Risks: 
+      - Liquidity Pools: resources/risks/pool.md
+      - crvUSD: resources/risks/crvusd.md
     - Security: resources/security.md
     - Glossary: resources/glossary.md
     - Branding: resources/branding.md
