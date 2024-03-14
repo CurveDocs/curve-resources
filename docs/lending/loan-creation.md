@@ -25,15 +25,24 @@ Additionally, the UI shows the future borrow apy when the users loan is created 
   <figcaption></figcaption>
 </figure>
 
-*Down below, a section containing relevant contracts and the current parameters for the lending market appears.*
+*Below, a section containing relevant contracts and the current parameters for the lending market is displayed.*
 
 <figure markdown="span">
   ![](../images/lending/lend_parameters.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
+- **`Fee`**: The current exchange fee for swapping tokens in the AMM.
+- **`Admin Fee`**: The percentage of the total fee, which is awarded to veCRV holders. Currently, all fees go to liquidity providers in the AMM (which are the borrowers).
+- **`A`**: The amplification parameter A defines the density of liquidity and band size.
+- **`Loan Discount`**: The percentage used to discount the collateral for calculating the maximum borrowable amount when creating a loan.
+- **`Liquidation Discount`**: The percentage used to discount the collateral for calculating the recoverable value upon liquidation at the current market price.
+- **`Base Price`**: The base price is the price of the band number 0.
+- **`Oracle Price`**: The oracle price is the current price of the collateral as determined by the oracle. The oracle price is used to calculate the collateral's value and the loan's health.
 
-*Navigating to the `Your Details` tab displays all the user's loan details:*
+---
+
+*Navigating to the `"Your Details"` tab displays all the user's loan details:*
 
 <figure markdown="span">
   ![](../images/lending/lend_yourdetails.png){ width="600" }
@@ -51,7 +60,7 @@ Everything needed to manage a loan is available in this interface.
 !!!info "Loan Management when in soft-liquidation mode"
     **During soft-liquidation, users are unable to add or withdraw collateral.** They can choose to **either partially or fully repay** their crvUSD debt to improve their health ratio **or** decide to **self-liquidate** their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
 
-*The **`"Manage Loan"`** tab has the following options:*
+*The `"Manage Loan"` tab has the following options:*
 
 <figure markdown="span">
   ![](../images/lending/lend_manageloan.png){ width="400" }
@@ -64,7 +73,7 @@ Everything needed to manage a loan is available in this interface.
 
 ---
 
-*The **`Collateral`**  tab allows the adjustment of collateral:*
+*The `"Collateral"`  tab allows the adjustment of collateral:*
 
 <figure markdown="span">
   ![](../images/lending/lend_collateral.png){ width="400" }
