@@ -69,7 +69,6 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.footnote.tooltips
-    - navigation.instant
     - navigation.indexes
     - navigation.path
     - navigation.top
@@ -147,9 +146,8 @@ nav:
   - Curve Lending:
     - Understanding Lending: lending/understanding-lending.md
     - Loan Creation & Management: lending/loan-creation.md
-    - Supplying Assets (Vault): lending/supplying-tokens.md
+    - Supplying Assets (Vault): lending/supplying-assets.md
     - Loan Details: lending/loan-details.md
-    - Creating Lending Markets: lending/factory.md
     - Lending FAQ: lending/faq.md
 
   - Liquidity Providers:
