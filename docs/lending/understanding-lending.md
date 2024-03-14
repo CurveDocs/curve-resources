@@ -207,7 +207,7 @@ It is a simple intertwine of **supply and demand**: If the utilization is high, 
 
 
 
-### Borrow APR
+### Borrow Rate
 The borrow APR is the rate a **borrower pays for borrowing out assets**.
 
 *The formula for the borrow rate is as follows:*
@@ -218,7 +218,7 @@ $\text{rate}_{\text{min}}$ and $\text{rate}_{\text{max}}$ values are obtained fr
 
 
 
-### Lend APY
+### Lend Rate
 Lend APY is the **annual yield a lender receives in exchange for lending out their assets**.
 
 *Formula to calculate the Lend APR:*
