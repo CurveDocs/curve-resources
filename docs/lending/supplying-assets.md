@@ -14,11 +14,15 @@ Liquidity for borrowers is provided in ERC-4626 vaults. For detailed documentati
 
 ## **Depositing and Withdrawing Assets**
 
-In order to supply tokens to the vault, the user must specify the amount of underlying tokens to add. Underlying tokens are referred to as the asset in the vault, which is the asset that's borrowed. When depositing, the UI previews the amount of shares to receive and projects the lend APY after the deposit. For depositing, there is no cap. Users can deposit as much as they want.
+In order to supply tokens to the vault, the user must specify the amount of underlying tokens to add. Underlying tokens are referred to as the asset in the vault, which is the asset that's borrowed. When depositing, the UI previews the amount of shares to receive and projects the lend APY after the deposit. For depositing, there is no cap. Users can deposit as much as they want. After depositing, if desired, users can stake their vault shares into the corresponding gauge (if there is one) under the "Stake" tab. Liquidity gauges of the vaults can be added to the GaugeController in order to be eligible to receive CRV emissions or external rewards can be added to the gauge by the deployer.
 
-If a user already deposited some shares, they can withdraw the desired amount under the withdraw tab. The desired amount of underlying assets to be withdrawn needs to be specified. Here as well, the UI previews the amount of shares to be burned in order to receive the underlying tokens. When desired, users can stake their vault shares into the corresponding gauge (if there is one) using the "Stake" tab. Liquidity gauges of the vaults can be added to the GaugeController in order to be eligible to receive CRV emissions or external rewards can be added to the gauge by the deployer.
+If a user has already deposited some shares, they can withdraw the desired amount under the withdraw tab. There is also a "Withdraw in full" option, which burns all the user's shares and converts them into the underlying asset[^1]. The UI previews the amount of shares to be burned in order to receive the underlying tokens.  
+If a user has staked the vault shares in a gauge, they are required to unstake them before being able to withdraw.
 
-*Disclaimer: The figure below is just an embedded UI. It is highly recommended to visit: [https://lend.curve.fi/#/ethereum/markets](https://lend.curve.fi/#/ethereum/markets)*
+[^1]: This method will only work if the vault has enough underlying assets to fully redeem all the shares. 
+
+
+*Disclaimer: The figure below is just an embedded link from the official UI. It is highly recommended to visit [https://lend.curve.fi/#/ethereum/markets](https://lend.curve.fi/#/ethereum/markets) to experience the full user experience.*
 
 <iframe src="https://lend.curve.fi/#/ethereum/markets/one-way-market-2/vault/deposit" width="100%" height="500px"></iframe>
 
