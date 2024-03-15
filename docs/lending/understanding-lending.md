@@ -118,8 +118,6 @@ LLAMMA handles liquidation differently than most other lending protocols. In mos
 
 [LLAMMA](#llamma-and-liquidations) works differently. It does not have a single liquidation price, but has rather many "small liquidation ranges" which lead to the **continuous liquidation and de-liquidation of the collateral**. This mechanism may protect a user from a single full liquidation due to an unexpected and heavy price movement.
 
-Some terminologies used in this section might seem confusing or unknown to the reader. Please visit the [Glossary](../resources/glossary.md) for a short explanation of the terms used.
-
 *The following section provides a short overview of the basic concepts of LLAMMA.*
 
 
