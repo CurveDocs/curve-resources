@@ -12,6 +12,7 @@ plugins:
 
 # extension
 markdown_extensions:
+  - footnotes
   - def_list
   - attr_list
   - md_in_html
@@ -20,6 +21,8 @@ markdown_extensions:
   - toc:
       permalink: true
       baselevel: 2
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
@@ -65,6 +68,7 @@ theme:
   features:
     - content.code.annotate
     - content.tabs.link
+    - content.footnote.tooltips
     - navigation.indexes
     - navigation.path
     - navigation.top
@@ -74,6 +78,7 @@ theme:
     - search.suggest
     - toc.follow
     - content.code.copy
+
   palette:
     # - media: "(prefers-color-scheme: dark)"
     - scheme: default
@@ -121,19 +126,29 @@ nav:
   - Getting Started:
     - Understanding Curve (v1): base-features/understanding-curve.md  
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
+
   - CRV Token:
     - Understanding CRV: crv-token/crv-basics.md
     - Tokenomics: crv-token/crv-tokenomics.md
     - Claiming Trading Fees: crv-token/claiming-trading-fees.md
+
   - veCRV:
     - Overview: vecrv/overview.md
     - Locking CRV: vecrv/locking-your-crv.md
     - Vote-locking FAQ: vecrv/vote-locking-boost.md
+
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Loan Details & Concepts: crvusd/loan-details.md
     - crvUSD FAQ: crvusd/faq.md
+
+  - Curve Lending:
+    - Understanding Lending: lending/understanding-lending.md
+    - Loan Creation & Management: lending/loan-creation.md
+    - Supplying Assets (Vault): lending/supplying-assets.md
+    - Lending FAQ: lending/faq.md
+
   - Liquidity Providers:
     - Understanding curve pools: lp/understanding-curve-pools.md
     - Pools: lp/pools.md
@@ -147,12 +162,14 @@ nav:
       - Despositing into the susd-pool: lp/depositing/depositing-into-the-susd-pool.md
       - Despositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
       - Despositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
+
   - Reward Gauges:
     - Understanding gauges: reward-gauges/understanding-gauges.md
     - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
     - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
     - Gauge weights: reward-gauges/gauge-weights.md
     - Permissionless rewards: reward-gauges/permissionless-rewards.md
+
   - Governance:
     - Understanding governance: governance/understanding-governance.md
     - Voting: governance/voting.md
@@ -160,23 +177,27 @@ nav:
     - Proposals:
       - Community fund: governance/proposals/community-fund.md
       - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
+
   - Multi-Chain:
     - CRV: multichain/crv.md
     - crvUSD: multichain/crvusd.md
     - Understanding multi-chain: multichain/understanding-multichain.md
     - Bridging funds: multichain/bridging-funds.md
+
   - Factory Pools:
     - Understanding pool factory: factory-pools/pool-factory.md
     - Creating a stableswap pool: factory-pools/creating-a-stableswap-pool.md
     - Creating a stableswap-NG pool: factory-pools/creating-a-stableswap-ng-pool.md
     - Creating a cryptoswap pool: factory-pools/creating-a-cryptoswap-pool.md
     - Understanding oracles: factory-pools/understanding-oracles.md
+
   - Troubleshooting:
     - Support: troubleshooting/support.md
     - Cross-Asset swaps: troubleshooting/cross-asset-swaps.md
     - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
     - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
     - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
+
   - Useful Resources:
     - Risks: 
       - Liquidity Pools: resources/risks/pool.md
@@ -184,6 +205,7 @@ nav:
     - Security: resources/security.md
     - Glossary: resources/glossary.md
     - Branding: resources/branding.md
+
   - Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://dao.curve.fi/
