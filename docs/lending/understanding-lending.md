@@ -232,15 +232,17 @@ The borrow APR is the rate a **borrower pays for borrowing out assets**.
 
 *The formula for the borrow rate is as follows:*
 
-$$\text{borrowAPR} = \text{rate}_{\text{min}} \cdot \left(\frac{\text{rate}_{\text{max}}}{\text{rate}_{\text{min}}}\right)^{\text{utilization}}$$
+$$\text{rate} = \text{rate}_{\text{min}} \cdot \left(\frac{\text{rate}_{\text{max}}}{\text{rate}_{\text{min}}}\right)^{\text{utilization}}$$
+
+$$\text{borrowAPR} = \text{rate} \cdot (365 * 86400)$$
 
 $\text{rate}_{\text{min}}$ and $\text{rate}_{\text{max}}$ values are obtained from the monetary policy contract, calculations for utilization can be found [here](#utilization-rate).
 
 
 
 ### Lend Rate
-Lend APY is the **annual yield a lender receives in exchange for lending out their assets**.
+Lend APR is the **yield a lender receives in exchange for lending out their assets**.
 
 *Formula to calculate the Lend APR:*
 
-$$\text{lendAPR} = \text{borrow rate} \cdot \left(\frac{\text{borrow rate} \cdot \text{utilization rate}}{\text{borrow rate}}\right)$$
+$$\text{lendAPR} = \text{borrowAPR} \cdot \text{utilization}$$
