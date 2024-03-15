@@ -57,60 +57,120 @@ Advanced mode also adds a tab with more info about the entire [**LLAMMA**](#llam
 
 # **crvUSD Concepts**
 
-## **Bands**
+## **LLAMMA and Liquidations**
 
-When loans are created, collateral is spread among several bands. Each band has a range of prices for the asset. If the [**price oracle**](../factory-pools/understanding-oracles.md) is inside this range of prices, that particular band of collateral is likely to be liquidated.
+LLAMMA (**Lending-Liquidating AMM Algorithm**) is a fully functional two-token AMM containing the collateral token and crvUSD, which is **responsible for the liquidation mechanism**. For more detailed documentation, please refer to the [technical docs](https://docs.curve.fi/crvUSD/amm/).
 
-!!!info 
-    The number of bands has a significant influence on the amount of losses when a loan is in self-liquidation. See [**here**](#loan-health).
+When creating a new loan, the put-up **collateral will be deposited into a specified number of bands across the AMM**. Unlike regular liquidation, which has a single liquidation price, LLAMMA has multiple liquidation ranges (represented by the bands) and **continuously liquidates the collateral if needed**.  
+All bands have lower and upper price limits, each representing a "small liquidation range." The user's total liquidation range is represented by the upper price of the highest band to the lower price of the lowest band.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FyMhYzWHxwO8F9TobC61D%2Fimage.png?alt=media&token=1da21e96-9df2-4f47-b6c3-34d9d3cbefd4)
+A loan only **enters soft-liquidation mode once the price of the collateral asset is within a band**. If the price is outside the bands, there is no need to partially liquidate and therefore not in soft-liquidation.
 
-In the example above, the collateral is distributed across 10 bands. The darker grey indicates collateral that has been converted into crvUSD, while the lighter grey represents the original collateral type. Hovering over any bar reveals details about that specific position within the band, including the corresponding asset prices. During soft-liquidation, a band may exhibit a mix of crvUSD and the original collateral.
+The AMM works in a way that the collateral price within the AMM and the "regular price" are treated a bit differently. If the price falls into a band, prices are adjusted in a way that external arbitrageurs are incentivized to sell the collateral token and buy crvUSD in the band. So, **if the price is within a band, the user's collateral will be sold for crvUSD**, meaning the user's collateral is now a combination of both tokens. This happens for each individual band the user has liquidity deposited into.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FZgFJQJm7ol1KmgK1BXXJ%2Fimage.png?alt=media&token=c05ef1d9-8918-4cf2-b041-a38716d9660d)
+**This liquidation process does not only happen when prices fall but also when they rise again**. If the collateral in a band has been fully converted into crvUSD and the collateral price rises again, the earlier sold-off collateral will be bought up again.
 
-## **Borrow Rate**
+*In short: External traders will soft-liquidate a users collateral when the collateral token's price is falling and de-liquidate it again when prices rise again.*
 
-The borrow rate is variable based on conditions in the pool. For instance, when collateral price is down and some positions are in soft-liquidation, the rate can fall. A decreasing rate creates incentive to borrow and dump, while an increasing rate creates incentives to buy crvUSD and repay.
+
+!!!warning "Losses in Soft-Liquidation"
+    Positions in soft-liquidation / de-liquidation are suffering losses due to the selling and buying of collateral. If the position is not in soft-liquidation, no losses occur. These losses decrease the health of the loan. Once a user's health is at 0%, the user's position may face a hard-liquidation, which closes the loan.
+
+
+---
+
+
+## **Bands (N)**
+
+When creating a loan, the added collateral is spread among the number of bands selected. Minimum amount is 4 bands, and the maximum amount is 50 bands.
+
+**A band essentially is a price range, with an upper and lower price limit**. If the price of the collateral is within the limits of a band, that particular band is likely to be liquidated.
 
 <figure markdown>
-  ![](../images/crvusd_rate.png){ width="400" }
+  ![](../images/llamma/llamma_bands.png){ width="700" }
   <figcaption></figcaption>
 </figure>
 
-*with:*
+In the illustration above, there are multiple bands with different price ranges. The light grey areas represent the collateral token, which in this example is ETH. As depicted, the bands below the collateral token's price are entirely in ETH since there is no need for liquidation, given the higher price. The dark grey areas represent crvUSD. Because the price of ETH fell within the band on the far right, the deposited collateral (ETH) is converted into crvUSD. In this instance, the band consists of both ETH and crvUSD. If the price continues to decline, all collateral in the band will be fully converted into crvUSD, and the band to the left will undergo soft-liquidation.
 
-- **`r`**:	rate
-- **`rate0`**:	rate when pegkeepers have no debt and price of crvUSD is 1
-- **`price_peg`**:	desired crvUSD price: 1.00
-- **`price_crvusd`**:	actual crvUSD price
-- **`DebtFraction`**:	ratio of the PegKeeper's debt to the total outstanding debt
-- **`TargetFraction`**:	target fraction
-- **`PegKeeperDebt`**:	sum of debt of all PegKeepers
-- **`TotalDebt`**:	total crvUSD debt
+*Remember: When prices rise again, the opposite is happening. The ETH which was converted into crvUSD earlier will be converted back into ETH again.*
 
-A tool to experiment with the interest rate model is available [here](https://crvusd-rate.0xreviews.xyz/).
+<figure markdown>
+  ![](../images/llamma/band_borrowable.png){ width="230" }
+  <figcaption>A band which has fully been soft-liquidated. All collateral was converted into crvUSD because the price of the collateral is below the liquidation range.</figcaption>
+</figure>
 
 
-## **Liquidation**
+<figure markdown>
+  ![](../images/llamma/band_both.png){ width="250" }
+  <figcaption>A band which currently is in soft-liquidation. It contains both, the collateral token and crvUSD.</figcaption>
+</figure>
 
-In soft-liquidation, the collateral within a band is at risk of being converted into crvUSD. If the price goes back, it will be rehypothecated into collateral, although it will likely be lower than the initial amount.  While in soft-liquidation mode, users cannot modify their collateral. The only options available are to either partially or fully repay the debt or opt to self-liquidate the position.
 
-If a borrower's health continues to decline, they may face a 'hard liquidation', functioning more like a standard liquidation process, resulting in the erasement of their position.
+<figure markdown>
+  ![](../images/llamma/band_collateral.png){ width="250" }
+  <figcaption>A band which has not been liquidated yet (composition is 100% collateral token). The price of the collateral is above the liquidation range.</figcaption>
+</figure>
 
-## **LLAMMA**
 
-LLAMMA (Lending-Liquidating AMM Algorithm) is a fully functional AMM with all the functions a user would expect. For more detail [**please check the source code**](https://github.com/curvefi/curve-stablecoin/blob/master/contracts/AMM.vy).
+---
+
 
 ## **Loan Health**
 
-Based on a users collateral and borrow amount, the UI will display the health score and status. If the position is in self-liquidation mode, an additional warning will be displayed. Once a loan reaches 0% health, the loan is eligible to be hard-liquidated.
+Based on a user's collateral and debt amount, the UI will display a health score and status. If the position is in self-liquidation mode, an additional warning will be displayed. Once a loan reaches **0% health**, the loan is **eligible to be hard-liquidated**. In a hard-liquidation, someone else can pay off a user's debt and, in exchange, receive their collateral. The loan will then be closed.
 
-!!!warning "Losses in soft-liquidation mode"
-    The **health of a loan decreases when the loan enters self-liquidation mode. These losses do not only occur when prices go down but also when the collateral price rises again, resulting in the de-liquidation of the user's loan.** This implies that the health of a loan can decrease even though the collateral value of the position increases. If a loan is not in self-liquidation mode, then no losses occur. Losses also heavily depend on the number of [**bands**](#bands) used; the more bands there are, the fewer the losses.
+The **health of a loan decreases when the loan is in self-liquidation mode. These losses do not only occur when prices go down but also when the collateral price rises again, resulting in the de-liquidation of the user's loan.** This implies that the health of a loan can decrease even though the collateral value of the position increases. If a loan is not in self-liquidation mode, then no losses occur.
+
+Losses are hard to quantify. There is no general rule on how big the losses are as they are dependent on various external factors such as how fast the collateral price falls or rises or how efficient the arbitrage is. But what can be said is that the **losses heavily depend on the number of bands** used; the more bands used, the fewer the losses.
 
 <figure markdown>
   ![](../images/health.png){ width="600" }
   <figcaption></figcaption>
 </figure>
+
+
+---
+
+
+## **Borrow Rate**
+
+The borrow rate is variable and dependent on various parameters and factors such as the price of crvUSD, PegKeeper debt, etc.
+
+*The formula for the borrow rate is as follows:*
+
+$$r = \text{rate0} * e^{\text{power}}$$
+
+$$\text{power} = \frac{price_{peg} - {price_{crvusd}}}{\text{sigma}} - \frac{\text{DebtFraction}}{\text{TargetFraction}}$$
+
+$$\text{DebtFraction} = \frac{\text{PegKeeperDebt}}{\text{TotalDebt}}$$
+
+
+*with:*
+
+- **`r`**:	The interest rate.
+- **`rate0`**:	The rate when PegKeepers have no debt and the price of crvUSD is excatly 1.00.
+- **`price_peg`**:	Desired crvUSD price: 1.00
+- **`price_crvusd`**:	Current crvUSD price.
+- **`DebtFraction`**:	Ratio of the PegKeeper's debt to the total outstanding debt.
+- **`TargetFraction`**:	Target fraction.
+- **`PegKeeperDebt`**:	The sum of debt of all PegKeepers.
+- **`TotalDebt`**:	Total crvUSD debt across all markets.
+
+*A tool to experiment with the interest rate model is available [here](https://crvusd-rate.0xreviews.xyz/).*
+
+
+---
+
+
+## **PegKeeper**
+
+A PegKeeper is a contract that helps stabilize the crvUSD price. PegKeepers are deployed for special Curve pools, a list of which can be found [here](https://docs.curve.fi/references/deployed-contracts/#curve-stablecoin).
+
+PegKeepers take certain actions based on the price of crvUSD within the pools. All these actions are fully permissionless and callable by any user.
+
+When the price of crvUSD in a pool is above 1.00, they are allowed to take on debt by minting un-collateralized crvUSD and depositing it into specific Curve pools. This increases the balance of crvUSD in the pool, which consequently decreases its price.
+
+If a PegKeeper has taken on debt by depositing crvUSD into a pool, it is able to withdraw those deposited crvUSD from the pool again. This can be done when the price is below 1.00. By withdrawing crvUSD, its token balance will decrease and the price within the pool increases.
+
+[:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.fi/crvUSD/pegkeeper/)
