@@ -54,7 +54,7 @@ Curve utilizes the [LayerZero](https://layerzero.network/) infrastructure for br
     ![](../../images/guide/quote_eth.png){ width="350" }
     <figcaption></figcaption>
     </figure>
-    The `quote` amount represents the cost (in ETH) of calling the bridge method in Step 3.
+    The `quote` amount represents the cost (in ETH) of calling the bridge method in Step 3. This does not include gas costs, which need to be paid additionally.
 
 ---
 
@@ -119,7 +119,7 @@ Curve utilizes the [LayerZero](https://layerzero.network/) infrastructure for br
     ![](../../images/guide/quote_bnb.png){ width="350" }
     <figcaption></figcaption>
     </figure>
-    The `quote` amount represents the cost (in BNB) of calling the bridge method in Step 3.
+    The `quote` amount represents the cost (in BNB) of calling the bridge method in Step 3. This does not include gas costs, which need to be paid additionally.
 
 ---
 
