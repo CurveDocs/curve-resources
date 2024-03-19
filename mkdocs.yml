@@ -202,6 +202,8 @@ nav:
     - Risks: 
       - Liquidity Pools: resources/risks/pool.md
       - crvUSD: resources/risks/crvusd.md
+    - Guides:
+      - Bridging: resources/guides/bridging.md
     - Security: resources/security.md
     - Glossary: resources/glossary.md
     - Branding: resources/branding.md
