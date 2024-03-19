@@ -4,7 +4,7 @@
 ## **Overview**
 This guide explains how to bridge crvUSD tokens from the Ethereum Mainnet to the Binance Smart Chain (BSC) or vice versa using a Layer Zero bridge contract.
 
-Curve utilizes the [LayerZero](https://layerzero.network/) infrastructure for bridging contracts.
+Curve utilizes the [LayerZero](https://layerzero.network/) infrastructure for bridging assets.
 
 **Requirements**
 
