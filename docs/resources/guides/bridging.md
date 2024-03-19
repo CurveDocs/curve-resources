@@ -100,7 +100,7 @@ Requirements include having a wallet with crvUSD tokens and either ETH or BNB, d
 
 
 ### Step 1: Approve the Bridge Contract
-1. Navigate to the crvUSD token contract on BSCScan: [0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E](https://bscscan.com/address/0xe2fb3F127f5450DeE44afe054385d74C392BdeF4).
+1. Navigate to the crvUSD token contract on BSCScan: [0xe2fb3F127f5450DeE44afe054385d74C392BdeF4](https://bscscan.com/address/0xe2fb3F127f5450DeE44afe054385d74C392BdeF4).
 2. Connect your wallet by selecting **`Contract` > `Write Contract` > `Connect to Web3`**.
     <figure markdown="span">
         ![](../../images/guide/connect.png){ width="300" }
