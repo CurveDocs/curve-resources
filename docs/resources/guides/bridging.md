@@ -4,6 +4,8 @@
 ## **Overview**
 This guide explains how to bridge crvUSD tokens from the Ethereum Mainnet to the Binance Smart Chain (BSC) or vice versa using a Layer Zero bridge contract.
 
+Curve utilizes the [LayerZero](https://layerzero.network/) infrastructure for bridging contracts.
+
 **Requirements**
 
 - A Web3 wallet containing crvUSD on Ethereum or BSC.
@@ -16,7 +18,7 @@ This guide explains how to bridge crvUSD tokens from the Ethereum Mainnet to the
     | Contract | Address |
     | -------- | ------- |
     | :logos-ethereum: Ethereum Bridge | [0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f](https://etherscan.io/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f)|
-    | :logos-binance: Binance Bridge | [0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f](https://bscscan.com/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f)|
+    | :logos-bsc: Binance Bridge | [0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f](https://bscscan.com/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f)|
 
 ---
 
@@ -52,6 +54,7 @@ This guide explains how to bridge crvUSD tokens from the Ethereum Mainnet to the
     ![](../../images/guide/quote_eth.png){ width="350" }
     <figcaption></figcaption>
     </figure>
+    The `quote` amount represents the cost (in ETH) of calling the bridge method in Step 3.
 
 ---
 
@@ -116,10 +119,11 @@ This guide explains how to bridge crvUSD tokens from the Ethereum Mainnet to the
     ![](../../images/guide/quote_bnb.png){ width="350" }
     <figcaption></figcaption>
     </figure>
+    The `quote` amount represents the cost (in BNB) of calling the bridge method in Step 3.
 
 ---
 
-## **Step 3: Bridge crvUSD to BSC**
+## **Step 3: Bridge crvUSD to Ethereum**
 1. Access the bridge contract on BSCScan: [0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f#writeContract](https://etherscan.io/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f#writeContract).
 2. Connect your wallet by selecting **`Contract` > `Write Contract` > `Connect to Web3`**.
     <figure markdown="span">
