@@ -7,7 +7,7 @@ This guide explains how to **bridge crvUSD tokens from the Ethereum Mainnet to t
 Requirements include having a wallet with crvUSD tokens and either ETH or BNB, depending on the bridging direction, to cover transaction fees.
 
 
-!!!danger
+!!!danger "Disclaimer"
     This guide is **only applicable for bridging crvUSD** to BSC or vice versa. Using the contracts below will only allow the bridging of crvUSD. **Attempting to use other tokens will cause the transaction to revert**.
 
 !!!deploy "Contract Addresses"
