@@ -56,7 +56,7 @@ Requirements include having a wallet with crvUSD tokens and either ETH or BNB, d
 
 ### Step 2: Read Contract and Quote ETH Amount
 1. Visit the bridge contract on Etherscan: [0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f#readContract](https://etherscan.io/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f#readContract).
-2. Use function **`1. quote`** to determine the amount of ETH required for bridging.
+2. Use function **`1. quote`** to determine the destination chain fees.
     <figure markdown="span">
     ![](../../images/guide/quote_eth.png){ width="350" }
     <figcaption></figcaption>
@@ -124,7 +124,7 @@ Requirements include having a wallet with crvUSD tokens and either ETH or BNB, d
 
 ### Step 2: Read Contract and Quote BNB Amount
 1. Visit the bridge contract on BSCScan: [0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f#readContract](https://bscscan.com/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f#readContract).
-2. Use function **`1. quote`** to determine the amount of BNB required for bridging.
+2. Use function **`1. quote`** to determine the destination chain fees.
     <figure markdown="span">
     ![](../../images/guide/quote_bnb.png){ width="350" }
     <figcaption></figcaption>
