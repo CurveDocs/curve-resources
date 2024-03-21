@@ -181,6 +181,7 @@ nav:
     - Risks: 
       - Liquidity Pools: resources/risks/pool.md
       - crvUSD: resources/risks/crvusd.md
+      - Lending: resources/risks/lending.md
     - Security: resources/security.md
     - Glossary: resources/glossary.md
     - Branding: resources/branding.md
