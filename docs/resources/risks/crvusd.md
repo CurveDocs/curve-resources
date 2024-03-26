@@ -5,7 +5,7 @@ Curve Stablecoin infrastructure enables users to mint crvUSD using a selection o
 
 ---
 
-## Soft and Hard Liquidations
+## **Soft and Hard Liquidations**
 
 Please consider the following risk disclaimers for liquidations in the Curve Stablecoin infrastructure:
 
@@ -19,11 +19,11 @@ Please consider the following risk disclaimers for liquidations in the Curve Sta
 
 * If the health of your loan drops to zero or below, your position will get hard-liquidated with no option of de-liquidation. Please choose your leverage wisely, as you would with any collateralized debt position.
 
-## Interest Rates
+## **Interest Rates**
 
 The [borrow rate](/docs/crvusd/loan-details.md#borrow-rate) for crvUSD is algorithmically determined based on the current peg of crvUSD and the fraction of debt the Peg Keepers currently hold.  This rate can vary rapidly and should be monitored.   Interest rates increase your debt, decreasing your health factor.
 
-## crvUSD Risks
+## **crvUSD Risks**
 Users should be mindful of risks associated with exposure to the crvUSD stablecoin:
 
 * Investing in crvUSD carries inherent risks that could lead to partial or complete loss of your investment due to its experimental nature. You are responsible for understanding the risks of buying, selling, and using crvUSD and its infrastructure.
@@ -31,9 +31,12 @@ Users should be mindful of risks associated with exposure to the crvUSD stableco
 * The value of crvUSD can fluctuate due to stablecoin market volatility or rapid changes in the liquidity of the stablecoin.
 
 * crvUSD is exclusively issued by smart contracts, without an intermediary. However, the parameters that ensure the proper operation of the crvUSD infrastructure are subject to updates approved by Curve DAO. Users must stay informed about any parameter changes in the stablecoin infrastructure.
+
 * crvUSD is not recognized as legal tender by any authority and is not guaranteed to be accepted for payments, subject to changing regulatory landscapes which may affect its legality and utility.
+
 * Information provided by crvUSD front-end is solely for educational purposes and does not constitute any form of professional advice, leaving users solely responsible for ensuring actions meet their financial goals.
+
 * Despite efforts to maintain price stability, crvUSD faces the risk of depegging due to market volatility, regulatory changes, or technological issues, potentially affecting its value.
+
 * Users of crvUSD are exposed to various technological risks, including irreversible transactions, anonymity and security concerns, software dependency, cybersecurity threats, and operational and settlement risks, which can lead to potential asset loss.
 The continued development and functionality of the crvUSD protocol rely on developer contributions, with no guarantee of sustained involvement, posing a risk to its maintenance and scalability.
-
