@@ -9,7 +9,7 @@
 
 
 ### How much can you borrow against your collateral (LTV)?
-The maximum borrowable amount (LTV) is dependent on the parameter `A` and nubmer of bands (`N`) choosen when creating a market. The more bands used, the higher the LTV.
+The maximum borrowable amount (LTV) is dependent on the parameter `A` and number of bands (`N`) chosen when creating a market. The more bands used, the higher the LTV.
 
 
 ### How does the LLAMMA liquidation process differ from other debt-based stablecoins?
@@ -34,7 +34,7 @@ When creating a loan, collateral is deposited and equally distributed over a ran
 
 
 ### When depositing collateral, how do I adjust and select my collateral deposit price range?
-The price range can be optionally adjusted and customized during the initial loan creation process. In the UI, the **`"Advange Mode"`** toggle provides further insights into this range. 
+The price range can be optionally adjusted and customized during the initial loan creation process. In the UI, the **`"Advanced Mode"`** toggle provides further insights into this range. 
 
 
 ### What happens when the collateral price drops into my selected range? (soft-liquidation)
