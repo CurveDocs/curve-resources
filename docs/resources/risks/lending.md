@@ -2,35 +2,41 @@
 
 Curve Lending enables users to permissionlessly create and interact with isolated lending pairs composed of crvUSD, a decentralized stablecoin native to the Curve ecosystem, and various paired tokens. The notifications provided herein address risks associated with Curve Lending activities. The following list is not exhaustive.
 
-Users wishing to acquaint themselves with a broader range of general risk disclosures are encouraged to read the Curve Risk Disclosures for Liquidity Providers. Users are also advised to review the public audit reports to assess the security and reliability of the platform before engaging in any lending or borrowing activities.
+Users wishing to acquaint themselves with a broader range of general risk disclosures are encouraged to read the [Curve Risk Disclosures for Liquidity Providers](./pool.md). Users are also advised to review the public [audit reports](https://docs.curve.fi/references/audits/) to assess the security and reliability of the platform before engaging in any lending or borrowing activities.
 
 ---
 
 
 ## **Permissionless Markets Risks**
 
-Curve Lending markets are permissionless, allowing anyone to create and customize markets with unique token pairs, a price oracle, and parameters that influence the LLAMMA liquidation algorithm and interest rate model. Given the protocol's permissionless nature, users should verify that the market has been instantiated with sensible parameters. Curve provides a LLAMMA-simulator that can be referenced for finding optimal parameters.
+Curve Lending markets are permissionless, allowing anyone to create and customize markets with unique token pairs, a price oracle, and parameters that influence the LLAMMA liquidation algorithm and interest rate model. Given the protocol's permissionless nature, users should verify that the market has been instantiated with sensible parameters. Curve provides a [LLAMMA-simulator](https://github.com/curvefi/llamma-simulator) that can be referenced for finding optimal parameters.
 
 There are several factors users should consider regarding attributes of the permissionless markets:
 
 ### 1) Unvetted Tokens
+
 Curve Lending pairs consist of crvUSD and one other token, which may not undergo rigorous vetting due to the permissionless lending factory and lack of strict onboarding criteria. As a result, some tokens in Curve pools could be unvetted, introducing potential risks such as exchange rate volatility, smart contract vulnerabilities, and liquidity risks. Users should exercise caution and conduct their due diligence before interacting with any token on the platform.
 
 ### 2) Oracle Designation
+
 Curve Lending markets by default use a Curve pool as the oracle, as long as the pool pair contains both tokens in the market and the pool is a Curve tricrypto-ng, twocrypto-ng or stableswap-ng pool, which has manipulation-resistant oracles. However, this creates a dependency on the selected pool oracle, which may become unreliable due to market circumstances (e.g., liquidity migration) or technical bugs.
 
 Alternatively, market deployers may designate a custom oracle, which can introduce additional trust assumptions or technical risks, and these custom oracles may need to be thoroughly vetted due to permissionless market deployment. Users should fully understand the oracle mechanism before interacting with a Curve Lending market.
 
 ### 3) Parameter Configuration
+
 There are several parameters configurable by market deployers, including "A" (number of bands within the LLAMMA algorithm), fee on LLAMMA swaps, loan discount (Loan-To-Value), liquidation discount (Liquidation Threshold), and min/max borrow rate. Misconfigured AMM parameters may result in greater losses than necessary during liquidation and generally negatively impact user experience involving liquidation. Misconfigured borrow rates may prevent the market from adequately reflecting rates in the broader market, potentially leading to insufficient withdrawal liquidity for lenders. Users should be aware of market parameter configurations and ensure they are suitable for the underlying assets and anticipated market conditions.
 
 ### 4) Governance
+
 The Curve Lending admin is the Curve DAO, a decentralized organization made up of veCRV tokenholders. Votes are required to make any change to the Curve Lending system, including individual markets. Votes undergo a 1-week vote period, requiring a 51% approval and a sufficient voter quorum to execute any on-chain actions. The DAO controls critical system functions in Curve Lending, including setting system contract implementations and configuring parameters such as min/max borrow rates, borrow discounts and AMM fees.
 
-## Borrowing Risks
+## **Borrowing Risks**
+
 Borrowers can choose from various lending markets to borrow crvUSD against another asset or provide crvUSD as collateral. Markets are designated as one-way or two-way. In one-way markets, collateral cannot be lent out to other users. These assets serve solely as collateral to secure the loan and maintain the borrowing capacity within the protocol. Two-way markets allow collateral to be lent out, creating an opportunity for borrowers to earn interest.
 
 ### Soft and Hard Liquidation
+
 Curve Lending uses a "soft" liquidation process powered by the LLAMMA algorithm. LLAMMA is a market-making contract that manages the liquidation and de-liquidation of collateral via arbitrageurs. This mechanism facilitates arbitrage between the collateral and borrowed asset in line with changes in market price, allowing a smoother liquidation process that strives to minimize user losses. Additional information can be found in the [LLAMMA Overview](https://docs.curve.fi/crvUSD/amm/) docs.
 
 Please consider the following risks when using the Curve Stablecoin infrastructure:
@@ -57,7 +63,11 @@ In extreme scenarios, Lenders may experience a shortfall through the accumulatio
 
 Curve Lending is designed to minimize the risk of bad debt through over-collateralization and the LLAMMA liquidation algorithm. While over-collateralization and the LLAMMA algorithm act as risk mitigation tools, they do not fully insulate Lenders from the inherent risks associated with Curve Lending and assets in its markets, including smart contract vulnerabilities, market volatility, failures in economic models, and regulatory challenges that threaten product viability. Lenders are advised to understand their exposure to risks associated with the collateral asset in Vaults they choose to interact with and appreciate the possibility of experiencing partial or total loss.
 
-## crvUSD Risks
+
+---
+
+
+## **crvUSD Risks**
 Users should be mindful of risks associated with exposure to the crvUSD stablecoin:
 
 * Investing in crvUSD carries inherent risks that could lead to partial or complete loss of your investment due to its experimental nature. You are responsible for understanding the risks of buying, selling, and using crvUSD and its infrastructure.
@@ -69,7 +79,7 @@ Users should be mindful of risks associated with exposure to the crvUSD stableco
 * Users of crvUSD are exposed to various technological risks, including irreversible transactions, anonymity and security concerns, software dependency, cybersecurity threats, and operational and settlement risks, which can lead to potential asset loss.
 * The continued development and functionality of the crvUSD protocol rely on developer contributions, with no guarantee of sustained involvement, posing a risk to its maintenance and scalability.
 
-## General Financial Risks
+## **General Financial Risks**
 
 ### Volatility
 
