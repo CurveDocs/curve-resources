@@ -53,7 +53,7 @@ Borrowers should be aware that, while in soft liquidation, they essentially pay 
 
 The borrowing rate is algorithmically determined based on the utilization rate of the lending markets. It is calculated using a function that accounts for the spectrum of borrowing activity, ranging from conditions where no assets are borrowed (where the rate is set to a minimum) to conditions where all available assets are borrowed (where the rate is set to a maximum). The rates within the described monetary policy are subject to changes only by Curve DAO. More information on the interest rate model can be found in the Semi-log Monetary Policy docs.
 
-## Lending Risks
+## **Lending Risks**
 
 When participating in lending activities on Curve Lending, Users may deposit crvUSD (or other assets designated for borrowing) into non-custodial Vaults that accrue interest from borrowers. There may also be the opportunity for additional CRV incentives by staking Vault tokens in a Gauge contract, pending DAO approval.
 
