@@ -4,6 +4,7 @@ Curve Lending enables users to permissionlessly create and interact with isolate
 
 Users wishing to acquaint themselves with a broader range of general risk disclosures are encouraged to read the [Curve Risk Disclosures for Liquidity Providers](./pool.md). Users are also advised to review the public [audit reports](https://docs.curve.fi/references/audits/) to assess the security and reliability of the platform before engaging in any lending or borrowing activities.
 
+
 ---
 
 
@@ -46,19 +47,22 @@ Please consider the following risks when using the Curve Stablecoin infrastructu
 * If you are in soft-liquidation mode and the price of the collateral appreciates sharply, this can also result in de-liquidation losses. If your loan's health is low, collateral price appreciation can further reduce the loan's health, potentially triggering a hard liquidation.
 * If the health of your loan drops to zero or below, your position will get hard-liquidated with no option of de-liquidation.
 
-
 Borrowers should be aware that, while in soft liquidation, they essentially pay a fee to arbitrageurs in the form of favorable pricing. This will gradually erode the health of the position, especially during times of high volatility and, importantly, even when the market price of their collateral is increasing. This activity can decrease the position's health and cause it to undergo "hard" liquidation, whereby the collateral is sold off and the Borrower's position is closed. Borrowers are advised to monitor market conditions and actively manage their collateral to mitigate the liquidation risk. Borrowers should also be aware that if the loan's health falls below a certain threshold, hard liquidation could occur, leading to collateral loss.
 
 ### Interest Rates
+
 The borrowing rate is algorithmically determined based on the utilization rate of the lending markets. It is calculated using a function that accounts for the spectrum of borrowing activity, ranging from conditions where no assets are borrowed (where the rate is set to a minimum) to conditions where all available assets are borrowed (where the rate is set to a maximum). The rates within the described monetary policy are subject to changes only by Curve DAO. More information on the interest rate model can be found in the Semi-log Monetary Policy docs.
 
 ## Lending Risks
+
 When participating in lending activities on Curve Lending, Users may deposit crvUSD (or other assets designated for borrowing) into non-custodial Vaults that accrue interest from borrowers. There may also be the opportunity for additional CRV incentives by staking Vault tokens in a Gauge contract, pending DAO approval.
 
 ### Risk of Illiquidity
+
 While these Vaults enable Users to supply liquidity and potentially earn returns, Users maintain the right to withdraw their assets at any time, so long as liquidity is available. There may be temporary or permanent states of illiquidity that prevent Lenders from fully or partially withdrawing their funds. This may result from diverse circumstances, including excessive borrow demand, a poorly configured interest rate model, a failure associated with the collateral asset, or a drastic reduction in incentives to a market. Similarly, there may be high volatility in the behavior of either lenders, borrowers, or both, which causes sharp swings in interest rates.
 
 ### Risk of Bad Debt
+
 In extreme scenarios, Lenders may experience a shortfall through the accumulation of bad debt. This may occur if collateral prices fall sharply, especially in combination with network congestion that inhibits timely liquidation of positions. In such cases, Borrowers may need a financial motive to repay their debt, and Lenders may race to withdraw any available liquidity, saddling the Lenders remaining in the Vault with the shortfall.
 
 Curve Lending is designed to minimize the risk of bad debt through over-collateralization and the LLAMMA liquidation algorithm. While over-collateralization and the LLAMMA algorithm act as risk mitigation tools, they do not fully insulate Lenders from the inherent risks associated with Curve Lending and assets in its markets, including smart contract vulnerabilities, market volatility, failures in economic models, and regulatory challenges that threaten product viability. Lenders are advised to understand their exposure to risks associated with the collateral asset in Vaults they choose to interact with and appreciate the possibility of experiencing partial or total loss.
@@ -68,6 +72,7 @@ Curve Lending is designed to minimize the risk of bad debt through over-collater
 
 
 ## **crvUSD Risks**
+
 Users should be mindful of risks associated with exposure to the crvUSD stablecoin:
 
 * Investing in crvUSD carries inherent risks that could lead to partial or complete loss of your investment due to its experimental nature. You are responsible for understanding the risks of buying, selling, and using crvUSD and its infrastructure.
