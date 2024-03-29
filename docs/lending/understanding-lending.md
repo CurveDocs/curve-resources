@@ -93,7 +93,7 @@ The `Total supplied / Utilization (%)` shows the total amount of borrowable asse
 
 ## **Lending**
 
-Chossing the **`"SUPPLY"`** tab, all relevant market information and values for lenders are displayed:
+Choosing the **`"SUPPLY"`** tab, all relevant market information and values for lenders are displayed:
 
 <figure markdown="span">
   ![](../images/lending/lend_supply.png){ width="800" }
