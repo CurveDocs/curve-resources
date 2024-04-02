@@ -63,6 +63,14 @@ Visit the [**old**](https://classic.curve.fi/pools/?see=0x0000000000000000000000
 
 ## **Formula**
 
-The boost mechanism calculates the **earning weight** by taking the smaller of two values. The first value is the amount of liquidity provided, for example, $10,000. This figure represents the maximum earning weight.
+The boost mechanism calculates the **earning weight** of the liquidity you provide to pools.  If you have enough voting weight (veCRV) you will be able to boost the earning weight of the liquidity you provide by up to 2.5x.  This means if you have a boost of 2.5x and deposit \$10,000 of value to a pool your rewards are for \$25,000 of value in the pool.  The formula for calculating your boost ($B$) is given below.  $B$ has a maximum of 2.5 so if the formula gives a value greater than 2.5 then your boost is 2.5.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MJCjXQHNjiZe5hYKApB%2F-MJCjcm7RW7EuOXJC46E%2Fimage.png?alt=media&token=aca31750-4ae9-4ffd-991c-46cdccf2b374)
+$$B = 1.5 \times \frac{D \times v}{V \times d} + 1$$
+
+Where:
+
+* $B$ is your rewards boost (if it's more than 2.5 it just equals 2.5)
+* $d$ is the value you deposited to pools (e.g. 10,000 if you deposit 4 ETH worth $2500 each)
+* $D$ is the total value deposited to Curve (TVL), it's shown as Total Deposits at the top of the [curve.fi homepage](https://curve.fi)
+* $v$ is the amount of veCRV you have (vote weight)
+* $V$ is the total veCRV in the system (total vote weight) click [here](https://classic.curve.fi/usecrv) to find the current amount

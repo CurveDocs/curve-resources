@@ -144,6 +144,7 @@ nav:
     - crvUSD FAQ: crvusd/faq.md
 
   - Curve Lending:
+    - About Curve Lending: lending/about.md
     - Understanding Lending: lending/understanding-lending.md
     - Loan Creation & Management: lending/loan-creation.md
     - Supplying Assets (Vault): lending/supplying-assets.md
