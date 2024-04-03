@@ -23,6 +23,13 @@ Curve lending is totally permissionless. Everyone can create markets. The only r
 Although creating a market is totally permissionless, some important parameters need to be simulated ahead of deployment. 
 
 
+### What is a 'loan discount' and what impact does it have?
+
+A 'loan discount' is a percentage applied to reduce the value of collateral for determining the maximum borrowable amount. A higher loan discount results in a lower borrowing limit, acting as a safety margin for lenders against collateral value declines. 
+
+The maximum amount that can be borrowed is also influenced by other factors, such as market conditions and asset volatility. For more details on these factors and their impact on borrowing, see the technical documentation at https://docs.curve.fi/crvUSD/amm/.
+
+
 ---
 
 
