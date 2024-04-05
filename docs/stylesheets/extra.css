@@ -431,3 +431,8 @@ h3 {
 .md-source-file {
   display: none;
 }
+
+.centered {
+  display: block;
+  margin: 0 auto;
+}
