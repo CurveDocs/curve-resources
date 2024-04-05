@@ -73,7 +73,11 @@ By **minimizing the number of bands** (N=4) you can **maximize the amount you bo
 
 Let's have a look what soft liquidation looks like in a simplified example with a single band for an **ETH/crvUSD LLAMMA market**.  This example shows that if the price has declines 20% through the band, 20% of the ETH has been converted to crvUSD to protect it from further price declines.  At the lower bound of the band all the collateral is converted to crvUSD, and at the higher bound the collateral is 100% ETH, 0% crvUSD.
 
-![single llama band](../images/lending/single_llamma_band.svg){: .centered style="height:250px" }
+![single llamma band](../images/lending/single_llamma_band.svg){: .centered style="height:250px" }
+
+We can also look what it looks like for many bands at the same time.  Note the higher bands than the current price are fully converted to crvUSD and the lower bands are still ETH.
+
+![llamma bands](../images/lending/llamma_bands.svg){: .centered style="height:250px" }
 
 There is something **magical** here in that **LLAMMA converts your collateral to the higher worth asset as price increases or decreases**.  This seems impossible when compared to other liquidity range AMMs, which always convert to the lower priced asset no matter the price direction.
 
