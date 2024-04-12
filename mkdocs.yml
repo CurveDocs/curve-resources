@@ -145,9 +145,8 @@ nav:
 
   - Curve Lending:
     - Curve Lending Overview: lending/about.md
-    - Understanding Lending: lending/understanding-lending.md
-    - Loan Creation & Management: lending/loan-creation.md
-    - Supplying Assets (Vault): lending/supplying-assets.md
+    - How to Borrow: lending/loan-creation.md
+    - How to Supply: lending/supplying-assets.md
     - Lending FAQ: lending/faq.md
 
   - Liquidity Providers:

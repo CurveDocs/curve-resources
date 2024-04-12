@@ -1,3 +1,25 @@
+<h1>How to Borrow</h1>
+
+## **Borrowing UI**
+
+When selecting the **`"BORROW"`** tab from the [main UI](https://lend.curve.fi/#/ethereum/markets), all relevant market information and values for borrowers are displayed:
+
+<figure markdown="span">
+  ![](../images/lending/lend_borrow.png){ width="800" }
+  <figcaption></figcaption>
+</figure>
+
+`Collateral` displays the collateral token of the market, while `Borrow` shows the token which can be borrowed. `Borrow APY` represents the current [borrow rate](./about.md#borrow-rate).
+
+The `Available` column shows the amount of assets left to borrow and `Borrowed` is the total amount currently borrowed.
+
+`Supplied` shows the total amount of the borrowable token which has been supplied by users.
+
+The `Utilization (%)` is the ratio of `Borrowed` to `Supplied` tokens, see [here](./about.md#utilization-lend-apy-and-borrow-apy) for more information.
+
+
+---
+
 ## **Creating A New Loan**
 
 In order to create a loan and borrow tokens against collateral, a user first needs to choose a lending market. This can simply be done by clicking the desired market.
