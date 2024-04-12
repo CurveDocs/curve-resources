@@ -82,7 +82,7 @@ The UI previews the amount of shares to be burned in order to receive the underl
 [^2]: This method will only work if the vault has enough underlying assets to fully redeem all the shares. 
 
 !!!tip "Lending Rates when Depositing or Withdrawing Assets"
-    When depositing underlying assets into the vault, the lending rate may decrease depending on the amount of assets added. The reason for this is that when supplying additional assets, the market's [utilization rate](./understanding-lending.md#utilization-rate) will decrease (as there are now more assets to borrow from), which simultaneously decreases the borrow rate. When the borrow rate decreases, the lending rate decreases as well.
+    When depositing underlying assets into the vault, the lending rate may decrease depending on the amount of assets added. The reason for this is that when supplying additional assets, the market's Utilization Rate will decrease (as there are now more assets to borrow from), which simultaneously decreases the borrow rate. When the borrow rate decreases, the lending rate decreases as well.
 
     Vice versa: Withdrawing assets from the vault reduces the total amount of assets. This drives the utilization rate up, which increases the borrow rate and therefore also the lending rate.  
     

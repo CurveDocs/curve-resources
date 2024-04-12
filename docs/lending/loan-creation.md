@@ -32,7 +32,7 @@ Having **`"Advanced Mode"`** activated when creating a loan allows the user to a
 </figure>
 
 !!!tip "Number of Bands (N)"
-    A **higher number of bands results in fewer losses when the loan is in soft-liquidation** mode. See [**here**](./understanding-lending.md#bands-n) for more details. The maximum number of bands is 50, while the minimum is 4.
+    A **higher number of bands results in fewer losses when the loan is in soft-liquidation** mode. The maximum number of bands is 50, while the minimum is 4.
 
 <figure markdown="span">
   ![](../images/lending/lend_createloan.png){ width="300" }

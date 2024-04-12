@@ -13,12 +13,12 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 # **Overview**
 
 
-Let's take a look at a single market to see the basics of how it works:
+*Let's take a look at a single market to see the basics of how it works:*
 
 ![Simple market illustration](../images/lending/single_market.svg#only-light)
 ![Simple market illustration](../images/lending/single_market_dark.svg#only-dark)
 
-Let's breakdown the different entities and their roles in this market:
+*Let's breakdown the different entities and their roles in this market:*
 
 | Entity | | Role |
 |:--:|:--|:--|
@@ -69,7 +69,9 @@ There are many Curve Lending markets listed on the [main UI](https://lend.curve.
 ![Curve lending llamas](../images/lending/llamma_markets.svg)
 
 
+
 ---
+
 
 # **Supplying (Lending)**
 
@@ -136,6 +138,10 @@ There is no set rule for **whether less or more bands are better**.  Different n
 * **More bands** will equate to losing collateral slower in soft-liquidation, but it also widens your Liquidation Range so you could be in soft-liquidation for a longer period of time.  
 * **Less bands** will reduce your Liquidation Range so your collateral will be traded aggressively, but you may stay in the Liquidation Range for a shorter time.
 
+
+---
+
+
 ## **Soft-liquidation**
 
 **Soft-liquidation** begins if the oracle price of your collateral drops into one of your bands. Here, the platform will begin trading your collateral for your borrowed asset linearly as the price declines through each band.
@@ -160,6 +166,10 @@ Re-balancing collateral through soft-liquidation is incentivised to arbitrage tr
     Collateral **cannot** be deposited while in soft-liquidation. **Debt can only be repaid**.
 
 
+
+---
+
+
 ## **Health Factor & Hard-Liquidation**
 
 The **Loan Health Factor** is a measure of debt value to collateral value with a small buffer added for safety.  As long as the health factor is positive, the position remains open.  The health of a loan decreases when the loan is in soft-liquidation mode and when debt increases due to interest rates.
@@ -177,7 +187,9 @@ Soft-liquidation losses do not only occur when prices go down but also when the 
 
 In contrast, most other lending platforms will hard-liquidate your collateral and terminate your loan if your loan falls below a minimum collateral ratio (LTV), even if only by a small amount for a brief time. This can be highly stressful for borrowers and lead to significant losses. Curve Lending offers a safer space and more peace of mind for borrowers.
 
+
 ---
+
 
 ## **Utilization, Lend APY and Borrow APY**
 
