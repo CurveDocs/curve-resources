@@ -201,23 +201,99 @@ The **Lend APY** and **Borrow APY** are based solely on the **Utilization** of t
 
 For the current CRV Collateral Lending Market the Borrow and Lend APYs for different Utilization rates are the following:
 
-<center>
+<canvas id="graphContainer"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        updateGraph(); // Draw the initial graph with hardcoded values
+    });
 
-| Utilization | Borrow APY | Lend APY |
-|-------------|------------|----------|
-| 0           | 1.01%      | 0.00%    |
-| 10.00%      | 1.56%      | 0.16%    |
-| 20.00%      | 2.43%      | 0.49%    |
-| 30.00%      | 3.80%      | 1.14%    |
-| 40.00%      | 5.94%      | 2.38%    |
-| 50.00%      | 9.36%      | 4.68%    |
-| 60.00%      | 14.88%     | 8.93%    |
-| 70.00%      | 23.99%     | 16.79%   |
-| 80.00%      | 39.55%     | 31.64%   |
-| 90.00%      | 67.62%     | 60.86%   |
-| 100.00%     | 122.68%    | 122.68%  |
+    let myChart = null;
 
-</center>
+    function updateGraph() {
+        const rateMin = 0.01; // Hardcoded minimum rate of 1%
+        const rateMax = 0.80; // Hardcoded maximum rate of 80%
+
+        let dataPoints = [];
+        for (let u = 0; u <= 1; u += 0.01) {
+            let rate = rateMin * Math.pow((rateMax / rateMin), u);
+            dataPoints.push({x: u * 100, y: rate * 100});
+        }
+
+        const ctx = document.getElementById('graphContainer').getContext('2d');
+
+        const data = {
+            datasets: [{
+                label: 'Borrow Rate vs. Utilization',
+                data: dataPoints,
+                borderColor: 'rgba(75, 192, 192, 0.9)',
+                fill: false,
+                pointRadius: 0,
+                showLine: true,
+                borderWidth: 2,
+            }]
+        };
+
+        const config = {
+            type: 'scatter',
+            data: data,
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: {
+                            display: true,
+                            text: 'Utilization (%)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Borrow Rate (%)'
+                        },
+                        beginAtZero: true
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    intersect: false,
+                    axis: 'x'
+                },
+                plugins: {
+                    tooltip: {
+                        enabled: true, // Enable tooltips
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Tooltip background color
+                        bodyColor: '#ffffff', // Tooltip text color
+                        bodyFont: {
+                            size: 12, // Smaller font size
+                        },
+                        borderColor: 'rgba(0, 0, 0, 0.7)', // Border color
+                        borderWidth: 1, // Border width
+                        usePointStyle: false, // Disable point style for the items to remove the dot
+                        padding: 4, // Reduce padding for a smaller tooltip
+                        displayColors: false, // Do not display the color box next to the text
+                        callbacks: {
+                            title: function() {
+                                return '';
+                            },
+                            label: function(context) {
+                                const rate = context.parsed.y.toFixed(2);
+                                const utilization = context.parsed.x.toFixed(2);
+                                return [`Rate: ${rate}%`, `Utilization: ${utilization}%`];
+                            }
+                        }
+                    },
+                }
+            }
+        };
+
+        if (myChart) {
+            myChart.destroy();
+        }
+        myChart = new Chart(ctx, config);
+    }
+</script>
 
 ### Utilization Rate
 
