@@ -163,7 +163,7 @@ nav:
       - Despositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
       - Despositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
 
-  - Reward Gauges:
+  - Liquidity Gauges:
     - Understanding gauges: reward-gauges/understanding-gauges.md
     - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
     - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md

@@ -109,7 +109,7 @@ When you withdraw your supplied assets, the Vault Shares you had previously depo
 
 Rewards APR is a combination of CRV emission rewards and any other incentives provided to suppliers. **Rewards accrue altogether and can be claimed at any time.**
 
-!!!warning "Rewards APR is *ONLY* given to Suppliers *STAKED* in the Rewards Gauge"
+!!!warning "Rewards APR is *ONLY* given to Suppliers *STAKED* in the Liquidity Gauge"
     You ***MUST*** stake your Supply Vault Shares in the Lending Market's Liquidity Gauge to receive Reward APR.  
     **You will not get any Rewards APR if you** ***DO NOT*** **stake**.  See [here](./supplying-assets.md#staking-assets)
 
