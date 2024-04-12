@@ -8,6 +8,34 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 !!!danger "Curve Lending Risk Disclaimer"
     Full risk disclaimer on using Curve Lending can be found [here](../resources/risks/lending.md)
 
+
+
+*The above image shows lending markets involve a synergy between two participants:*
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-solid-money-bill-1: **Borrowers**
+
+    ---
+
+    Borrowers are the ones **borrowing assets**. To do so, they create a loan and put up some collateral. In exchange for borrowing, they pay a certain [Borrow Interest Rate (Borrow APY)](#borrow-apy).
+
+    ---
+
+    [:octicons-arrow-right-24: How to Borrow](./loan-creation.md)
+
+-   :material-bank: **Lenders**
+
+    ---
+
+    Lenders **supply their assets so they can be loaned to borrowers**. To do so, they deposit their assets into a [Vault](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). In exchange for supplying their assets, they are awarded a [Lending Interest Rate](#lend-apy).
+
+    ---
+
+    [:octicons-arrow-right-24: How to Supply (Lend)](./supplying-assets.md)
+
+</div>
+
 ---
 
 # **Overview**
@@ -26,37 +54,6 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 | ![bob](../images/lending/bob_head.svg){: style="height:50px"} | **Bob** | Bob always thinks the market will crash, so he **supplies his crvUSD** and Business Llama **lends it out and pays Bob interest (Lend APY)**. |
 | ![alice](../images/lending/alice_head.svg){: style="height:50px"} | **Alice** | Alice wants to go trade meme coins but doesn't want to sell her CRV, so she **deposits CRV and uses it as collateral to borrow crvUSD**.  She feels safe knowing she's better protected here with LLAMMA and soft-liquidations than other lending markets.  She is **charged the Borrow APY on her debt** while the loan is open.  |
 | ![charlie](../images/lending/charlie_head.svg){: style="height:50px"} ![daisy](../images/lending/daisy_head.svg){: style="height:50px"} | **Charlie** & **Daisy** | Charlie and Daisy are just talking to the wrong Business Llama (lending market).  All Curve Lending Markets are one-way, and isolated. They need to go and find the Business Llama that lends out CRV with crvUSD collateral. (Business llama with the red background [here](#markets)) |
-
-The above image shows lending markets involve a synergy between two participants:
-
-
-<div class="grid cards" markdown>
-
--   :fontawesome-solid-money-bill-1: **Borrowers**
-
-    ---
-
-    Borrowers are the ones **borrowing assets**. To do so, they create a loan and put up some collateral. In exchange for borrowing, they pay a certain [Borrow Interest Rate (Borrow APY)](#borrow-apy).
-
-    ---
-
-    [:octicons-arrow-right-24: How to Borrow](./loan-creation.md)
-
-    [:octicons-arrow-right-24: How Borrowing Works](#borrowing)
-
--   :material-bank: **Lenders**
-
-    ---
-
-    Lenders **supply their assets so they can be loaned to borrowers**.  To do so, they deposit their assets into a [Supply Vault](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). In exchange for supplying their assets, they are awarded a [Lending Interest Rate (Lend APY)](#lend-apy).
-
-    ---
-
-    [:octicons-arrow-right-24: How to Supply (Lend)](./supplying-assets.md)
-
-    [:octicons-arrow-right-24: How Supplying Works](#supplying-lending)
-
-</div>
 
 
 ---
@@ -84,6 +81,8 @@ So after 1 year **Bob earned 20 crvUSD** and **$20 worth of CRV**, this equates 
 
 *Note: It's shown here that Bob claims his rewards in 1 transaction and then uses another transaction to unstake, but Bob could have also claimed and unstaked in a single transaction*.
 
+---
+
 ## **Depositing and Withdrawing**
 
 After depositing to a lending market your assets are added to the pool of **available supply**.
@@ -95,12 +94,15 @@ You can withdraw a supplied asset provided there are sufficient available (un-bo
 
 If there are insufficient available assets for a full withdrawal, you can withdraw the maximum amount currently available. The high Utilization rate will cause Borrow APY and Lend APYs to increase, incentivizing borrowers to repay their loans, and more lenders to supply. As available supply increases you can withdraw your remaining balance over time.
 
+---
 
 ## **Supply Vault Share Tokens**
 
 By Supplying assets on Curve Lending, you are given **Supply Vault Shares** ([more info here](https://docs.curve.fi/lending/contracts/vault/)).  These are tokens representing your share of the **Total Supply**.  The **value of these shares increases by Lend APY**.
 
 When you withdraw your supplied assets, the Vault Shares you had previously deposited are returned to the Lending Market. At this point, you receive the current value of the Vault Shares you are returning. This is how your interest on the supplied assets accrues. **By withdrawing your assets, you effectively claim the interest that has been earned** on your initial deposit during the time it was being lent out in the market.
+
+---
 
 ## **Rewards APR**
 
@@ -329,6 +331,8 @@ $$\text{lendAPR} = \text{borrowAPR} \cdot \text{utilization}$$
     *To convert the APR into APY, we need to annualize it and compound it every second (86400 seconds in a day):*
 
     $$\text{APY} = \left(1 + \frac{APR}{86400 \cdot 365}\right)^{86400 \cdot 365} - 1$$
+
+---
 
 ## **More Information**
 
