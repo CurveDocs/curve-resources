@@ -144,7 +144,7 @@ nav:
     - crvUSD FAQ: crvusd/faq.md
 
   - Curve Lending:
-    - Curve Lending Overview: lending/about.md
+    - Overview: lending/about.md
     - How to Borrow: lending/loan-creation.md
     - How to Supply: lending/supplying-assets.md
     - Lending FAQ: lending/faq.md
