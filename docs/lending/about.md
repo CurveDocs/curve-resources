@@ -9,9 +9,6 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
     Full risk disclaimer on using Curve Lending can be found [here](../resources/risks/lending.md)
 
 
-
-*The above image shows lending markets involve a synergy between two participants:*
-
 <div class="grid cards" markdown>
 
 -   :fontawesome-solid-money-bill-1: **Borrowers**
