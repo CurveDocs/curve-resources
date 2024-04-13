@@ -144,10 +144,9 @@ nav:
     - crvUSD FAQ: crvusd/faq.md
 
   - Curve Lending:
-    - About Curve Lending: lending/about.md
-    - Understanding Lending: lending/understanding-lending.md
-    - Loan Creation & Management: lending/loan-creation.md
-    - Supplying Assets (Vault): lending/supplying-assets.md
+    - Curve Lending Overview: lending/about.md
+    - How to Borrow: lending/loan-creation.md
+    - How to Supply: lending/supplying-assets.md
     - Lending FAQ: lending/faq.md
 
   - Liquidity Providers:
@@ -164,7 +163,7 @@ nav:
       - Despositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
       - Despositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
 
-  - Reward Gauges:
+  - Liquidity Gauges:
     - Understanding gauges: reward-gauges/understanding-gauges.md
     - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
     - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
