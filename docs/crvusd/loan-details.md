@@ -166,7 +166,13 @@ Where:
 - $\text{lowerSoftLiqLimit}$ - the lower limit of the user's soft-liquidation range, i.e., the lowest price of their lowest band.
 - $\text{collateralPrice}$ - The price of a single unit of the collateral asset, e.g., if the collateral asset is wBTC, this value is the price of 1 wBTC.
 
+See below for a figure showing these values:
 
+![loan health formula](../images/crvusd/loan_health_formula.svg#only-light){: .centered }
+![loan health formula](../images/crvusd/loan_health_formula_dark.svg#only-dark){: .centered }
+
+
+See below for the UI showing the health in soft liquidation:
 <figure markdown>
   ![](../images/health.png){ width="600" }
   <figcaption></figcaption>

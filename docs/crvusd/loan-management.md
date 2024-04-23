@@ -1,9 +1,9 @@
-take<h1>Loan Strategies & Management</h1>
+<h1>Loan Strategies & Management</h1>
 
-Before taking a crvUSD loan a user should think about two things:
+Before taking a crvUSD loan a user should consider two factors that will influence how they structure their loan:
 
 * How much risk they would like to take?
-* What management style will they employ?  Will they be actively managing their loan i.e., adding, removing collateral and repaying debt.  Or will they be passively taking a loan and letting LLAMMA do it's job?
+* What management style will they employ?  Will they be actively managing their loan i.e., adding, removing collateral and repaying debt.  Or will they be passively taking a loan and leaving it in [LLAMMA's](loan-details.md#llamma-and-liquidations) hands?
 
 Risk and Management styles can be thought of as spectrums, and they can be visualized in the image below.
 
@@ -18,8 +18,6 @@ The above image shows 4 main quadrants:
 
 Example loans for each of the 4 quadrants are given in the [loan example section here](#loan-examples).  The section directly below shows soft-liquidation losses based on user data, so prospective users can estimate losses.
 
-Note that risk is **NOT** directly related to the band range chosen (N).  It is related to a user's LTV and their current health or starting health.
-
 !!!warning "Actively managing loans is gas intensive"
     Actively managing loans is expensive when factoring in gas usage, loan size needs to be sufficient to offset this expense.
 
@@ -27,7 +25,7 @@ Note that risk is **NOT** directly related to the band range chosen (N).  It is 
 
 # **Soft Liquidation Losses**
 
-The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used.  The band range was the biggest factor in how a user performed.  It is interesting to see that the mean loss for all the band ranges are similar, except for the very high band ranges, but there is not a lot of data there.  **The median loss is a good estimate for the loss an average user will see in soft liquidation**. Keep in mind that high volatility periods can make losses much higher than the median.  Conversely, it is possible to be in soft liquidation and have no loss for periods of low volatility.
+The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  It is interesting to see that the mean loss for all the band ranges are similar, except for the very high band ranges, but there is not a lot of data there.  **The median loss is a good estimate for the loss an average user will see in soft liquidation**. Keep in mind that high volatility periods can make losses much higher than the median.  Conversely, it is possible to be in soft liquidation and have no loss for periods of low volatility.
 
 <div class="centered2" markdown="block">
 | band range | days of soft liq data | min loss/day | **median loss/day** | mean loss/day | std loss/day | max loss/6hrs |
@@ -38,9 +36,18 @@ The data from all crvUSD loans so far has shown that for each band range a user 
 | **36-50**      | 65.6                  | 0%         | **0.04%**               | 0.14%             | 0.24%            | 0.51%             |
 </div>
 
+**More bands reduce your soft-liquidation loss per day but increase the time in soft-liquidation, while also reducing the total amount a user can borrow**.  It is up to the user to choose a comfortable number of bands which allows them to borrow their required amount.
+
 # **Managing Loan Health**
 
-[Loan health](./loan-details.md#loan-health) is a direct measure of the risk of a loan.  The lower the loan health, the riskier the loan.  To keep from being hard-liquidated, a loan must have a health above 0.  There are 2 ways of increasing the health of a loan:
+**[Loan health](./loan-details.md#loan-health) is a direct measure of the risk of a loan**.  The lower the loan health, the riskier the loan.  To keep from being hard-liquidated, a loan must have a health above 0.  
+
+There are 2 factors which influence the health of a loan:
+
+1. LTV (Loan-To-Value ratio) - More collateral and less debt increases the health of the loan
+2. Increasing the `a` distance as shown on the figure [here](./loan-details.md#loan-health).  This can be done in 2 ways: reducing the number of bands, reducing the amount borrowed.
+
+There are 2 ways of increasing the health of a loan:
 
 1. Repaying debt
 2. Adding collateral
@@ -123,7 +130,7 @@ This user **deposited 188 wBTC** as collateral.  They **borrowed 1.05 million cr
   <canvas id="loanChart3"></canvas>
 </div>
 
-As you can see from above they never needed to do anything for their loan because they were always so far away from soft-liquidation.  They only fee they incurred was from the borrow interest rate increasing their debt, but luckily wBTC price went up fast enough to offset that.  
+As you can see from above the user remained passive as they were far from soft-liquidation at all times.  They only fee they incurred was from the borrow interest rate increasing their debt, but luckily wBTC price went up fast enough to offset that.  
 
 Throughout the approx. 100 day duration of the loan they increased their loan to 1.27 million crvUSD but their LTV actually went down as wBTC price went up ~30%.
 
@@ -137,7 +144,7 @@ This loan was opened with **N=50**, **93 sfrxETH collateral**, **105500 crvUSD d
   <canvas id="loanChart4"></canvas>
 </div>
 
-This user starts with 105550 crvUSD debt, but slowly over time continually adds collateral and borrows more debt.  Ending with 219 sfrxETH collateral and 298k crvUSD debt.  They continually actively managed to stay out of soft-liquidation, and spend 0.56 ETH of fees on 32 transactions over this 2 month period.  The only fees they incurred were from borrowing interest and Ethereum transactions fees.
+This user starts with 105k crvUSD debt, but slowly over time adds collateral and borrows more debt.  Ending with 219 sfrxETH collateral and 298k crvUSD debt.  They actively managed to stay out of soft-liquidation, and spend 0.56 ETH of fees on 32 transactions over this 2 month period.  The only fees they incurred were from borrowing interest and Ethereum transactions fees.
 
 **This loan LTV is possible in other systems, but soft-liquidations aren't.  Soft-liquidations reassure the user that they are protected from sudden price drops**.
 
@@ -149,7 +156,7 @@ This loan started with **57.07 wstETH collateral**, with **N=4** and **102k crvU
   <canvas id="loanChart5"></canvas>
 </div>
 
-This loan is a great example of the power of LLAMMA and soft-liquidations.  It spent **more than 50% of the loan time under the soft-liquidation range**.  Yet the **loss from soft-liquidation fees was only 6.37%**.  While under the soft-liquidation range the user was shielded from any further losses in the wstETH price as all their collateral was converted to crvUSD.  Yet when the price rose again the user benefited from the price increases as their collateral was swapped back to wstETH.
+This loan is a great example of the power of LLAMMA and soft-liquidations.  The user spent **more than 50% of the loan time under the soft-liquidation range**.  Yet the **loss from soft-liquidation fees was only 6.37%**.  While under the soft-liquidation range the user was shielded from any further losses in the wstETH price as all their collateral was converted to crvUSD.  Yet when the price rose the user benefited from price increases as their collateral was swapped back to wstETH.
 
 The AAVE/Spark Liq price plot for this loan shows that this loan would not be possible in competitor systems except from the 91st day when debt was lower and wstETH price rose.
 
@@ -159,7 +166,7 @@ The AAVE/Spark Liq price plot for this loan shows that this loan would not be po
 
 ## **Borrowing to Lending Rate Arbitrage**
 
-As crvUSD is minted with high quality collateral in crvUSD markets, a user can usually make profit by minting crvUSD and supplying it elsewhere.  This strategy is simple, you borrow crvUSD for cheap and supply it at higher rates, making the difference:
+As crvUSD is minted with high quality collateral in crvUSD markets, a user can usually make profit by minting crvUSD and supplying it elsewhere, especially to riskier markets.  This strategy is simple, you borrow crvUSD and supply it at higher rates, making the difference:
 
 $$\text{profitRate = supplyRate - borrowRate}$$
 
@@ -167,20 +174,19 @@ Strategy:
 
 1. Supply collateral (e.g., ETH, wBTC, wstETH) to a crvUSD market
 2. Borrow crvUSD
-3. Supply crvUSD to where ever the rate is higher than crvUSD borrow rates, e.g., [Curve Lending](https://curve.lend.fi), [Conic Omnipools](https://conic.finance/), [Silo Finance Markets](https://app.silo.finance/).
-4. Profit.
+3. Supply crvUSD to a market with a higher supplying rate than crvUSD borrow rates, e.g., [Curve Lending Markets](https://curve.lend.fi), [Conic Omnipools](https://conic.finance/), [Silo Finance Markets](https://app.silo.finance/).
 
 Risks:
 
-* The user must monitor their loan health to stay out of hard-liquidation and possibly also soft-liquidation, as losses from liquidation may be larger than profit from the rate arbitrage.
+* The user must monitor their loan health to stay out of any liquidations (soft or hard) as losses from liquidation may be larger than profit from the rate arbitrage.
 * crvUSD risk, i.e., smart contract risk from crvUSD stablecoin and the crvUSD markets, see crvUSD risk disclaimer [here](../resources/risks/crvusd.md)
 * Smart contract and bad debt risk from lending markets, i.e., if you supply to Curve lending, see Curve Lending risk disclaimer [here](../resources/risks/lending.md).  Otherwise please research and be informed of risks for other platforms.  **Mentions of platforms here is not an endorsement of their safety.**
 
 ## **Hedging with UniswapV3**
 
-Hedge crvUSD LLAMMA exposure at UniV3, effectively getting a loan that keeps risk asset price exposure at all prices in market while exposed to risk assets.
+Hedge crvUSD LLAMMA exposure at UniV3, effectively getting a loan that keeps risk asset exposure equal at all prices.
 
-As LLAMMA soft-liquidation range effectively works as an inverse UniswapV3 liquidity range, it's possible to hedge the soft-liquidation range in UniV3, keeping the asset exposure equal over all prices.  The image below shows the comparison between a LLAMMA band of \$990-\$1000 and a UniV3 price range of \$990-\$1000.  Note that they are opposites.
+As LLAMMA soft-liquidation bands effectively works as an inverse UniswapV3 liquidity range, it's possible to hedge the soft-liquidation range in UniV3, keeping the asset exposure equal over all prices.  The image below shows the comparison between a LLAMMA band of \$990-\$1000 and a UniV3 price range of \$990-\$1000.  Note that they are opposites.
 
 ![LLAMMA UniV3 Comparison](../images/crvusd/band_comparison.svg#only-light){: .centered }
 ![LLAMMA UniV3 Comparison](../images/crvusd/band_comparison_dark.svg#only-dark){: .centered }
@@ -191,12 +197,12 @@ Strategy:
 2. User calculates their midpoint of soft-liquidation and deposits their chosen stablecoin to a UniV3 pool to buy ETH in the same range as their LLAMMA soft-liquidation, e.g., with a soft-liquidation range of 2101-2324 their midpoint is 2212.50, they deposit 2212.5 USDC into the USDC/ETH UniV3 range 2101-2324.
 3. As the user is soft-liquidated in LLAMMA, their UniV3 position acts as a hedge, so they should maintain the approx. 1 ETH and approx. 2200 of stablecoins.  Their UniV3 fee earnings also offset their fee losses from soft-liquidation.
 
-*Note the midpoint is just a estimation, as bands get smaller the lower a price gets to have an exact equal LP the user would need to split their LP into 10 UniV3 ranges, 1 for each LLAMMA band, see [here](./loan-details.md#bands-n) for information on bands*.
+*Note the midpoint is just a estimation, bands get smaller as prices decrease so to have an exactly equal UniV3 LP the user would need to split their LP into 10 UniV3 ranges, 1 for each LLAMMA band, see [here](./loan-details.md#bands-n) for more information on bands*.
 
 Risks:
 
-* crvUSD risk, i.e., smart contract risk from crvUSD stablecoin and the crvUSD markets, see crvUSD risk disclaimer [here](../resources/risks/crvusd.md)
-* UniV3 position risk, please research potential UniV3 risks
+* crvUSD risk, i.e., smart contract risk from crvUSD stablecoin and the crvUSD markets, see crvUSD risk disclaimer [here](../resources/risks/crvusd.md).
+* UniV3 position risk, please research potential UniV3 risks.
 * Soft-liquidation losses may be much larger than UniV3 fee earnings, especially during times of high volatility.
 * crvUSD/USDC depeg risk, crvUSD and USDC may depeg.  If this happens the strategy won't work.  One way to mitigate this for the user above is to create a crvUSD/ETH UniV3 position instead of a USDC/ETH position, although this may decrease UniV3 earnings.
 
@@ -279,7 +285,7 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y1',
-            borderWidth: 1
+            borderWidth: 2
           },
           {
             label: 'LTV',
