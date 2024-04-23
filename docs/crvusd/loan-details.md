@@ -8,7 +8,7 @@ The Loan Details page displays information of an individual loan, along with fea
 
 # **Loan Details**
 
-When a user creates a loan, their **collateral is allocated across a range of liquidation prices**. Should the asset price fall within this range, the loan will enter soft-liquidation mode. In this state, the user is not allowed to add additional collateral. The only recourse is to either repay with crvUSD or to self-liquidate the loan.
+When a user creates a loan, their **collateral is allocated across a range of bands (liquidation prices)**. Should the asset price fall within this range, the loan will enter soft-liquidation mode. In this state, the user is not allowed to add additional collateral. The only recourse is to either repay with crvUSD or to self-liquidate the loan.
 
 <figure markdown>
   ![](../images/loan_details_2.png){ width="600" }
@@ -16,7 +16,6 @@ When a user creates a loan, their **collateral is allocated across a range of li
 </figure>
 
 The section on the bottom of the page provides information about the entire [**LLAMMA**](#llamma) system, showing aspects such as the total amount of debt, along with individual wallet balances.
-
 
 When a position was or is in soft-liquidation mode, losses occur. The UI displays the total ***LOSS AMOUNT*** as well as the ***% LOST***, which measures the loss in collateral value caused by the soft-liquidation process.
 
@@ -49,10 +48,17 @@ Advanced mode also adds a tab with more info about the entire [**LLAMMA**](#llam
 
 ## **Loan Parameters**
 
+Each crvUSD Market has the following parameters which affect all loans:
+
 - **A:** The amplification parameter A defines the density of liquidity and band size.
-- **Base Price:** The base price is the price of the band number 0.
+- **Base Price:** The base price is the upper price limit of band number 0.  **Borrow Rate increases the Base Price over time**
 - **Oracle Price:** The oracle price is the current price of the collateral as determined by the oracle. The oracle price is used to calculate the collateral's value and the loan's health.
 - **Borrow Rate:** The borrow rate is the annual interest rate charged on the loan. This rate is variable and can change based on market conditions. The borrow rate is expressed as a percentage. For example, a borrow rate of 7.62% means that the user will be charged 7.62% interest on the loan's outstanding balance.
+
+Below you can see a visualization of a theoretical crvUSD WETH Market with A=100, Base Price = \$1000 and Oracle Price = \$1008. Note that Base price increases with Borrow rate, so if Borrow Rate = 10% after a year Base Price would be \$1100.
+
+![Band Parameters](../images/llamma/band_parameters.svg#only-light){: .centered }
+![Band Parameters](../images/llamma/band_parameters_dark.svg#only-dark){: .centered }
 
 
 # **crvUSD Concepts**
@@ -86,6 +92,8 @@ When creating a loan, the added collateral is spread among the number of bands s
 
 **A band essentially is a price range, with an upper and lower price limit**. If the price of the collateral is within the limits of a band, that particular band is likely to be liquidated.
 
+***Note that band price ranges drift higher over time as base price increases by the borrow rate***
+
 <figure markdown>
   ![](../images/llamma/llamma_bands.png){ width="700" }
   <figcaption></figcaption>
@@ -113,6 +121,22 @@ In the illustration above, there are multiple bands with different price ranges.
 </figure>
 
 
+### Band Formulae:
+
+`A` controls the density of the liquidity.  This is directly related to the width of the bands.  Band width at any price can be estimated to be:
+
+$$\text{bandwidth} \approx \frac{\text{price}}{\text{A}}$$
+
+To find the exact **upper price limit** and **lower price limits** of the bands the following formulae can be used:
+
+$$\begin{aligned} \text{upperLimit} &= \text{basePrice} * \left( \frac{A-1}{A} \right)^{n} \\
+\text{lowerLimit} &= \text{basePrice} * \left( \frac{A-1}{A} \right)^{n+1}\end{aligned}$$
+
+Where:
+
+* $\text{basePrice}$: The current base price of the desired market
+* $A$: The amplification factor of the desired market (default is 100)
+* $n$: The Band Number, e.g., $-$67.
 ---
 
 
@@ -123,6 +147,25 @@ Based on a user's collateral and debt amount, the UI will display a health score
 The **health of a loan decreases when the loan is in self-liquidation mode. These losses do not only occur when prices go down but also when the collateral price rises again, resulting in the de-liquidation of the user's loan.** This implies that the health of a loan can decrease even though the collateral value of the position increases. If a loan is not in self-liquidation mode, then no losses occur.
 
 Losses are hard to quantify. There is no general rule on how big the losses are as they are dependent on various external factors such as how fast the collateral price falls or rises or how efficient the arbitrage is. But what can be said is that the **losses heavily depend on the number of bands** used; the more bands used, the fewer the losses.
+
+Health is hard to calculate, but we can reasonably estimate it with the following:
+
+$$\begin{aligned} \text{health} &\approx s \times \left(\frac{1-\text{liqDiscount}}{\text{debt}} \right) - 1 + p \\ 
+s &= \text{collateral} \times \left( \frac{\text{upperSoftLiqLimit}-\text{lowerSoftLiqLimit}}{2} \right)  \\
+p &= \text{max} \left( \text{collateral} \times \left( \frac{\text{collateralPrice} - \text{upperSoftLiqLimit}}{\text{debt}} \right), \quad 0\right) \end{aligned}$$
+
+Where:
+
+- $\text{collateralValue}$ : the value of all collateral at the current LLAMMA prices
+- $\text{liqDiscount}$ : the loan discount for the market (how much to discount the collateral value for safety).
+- $\text{debt}$ : the debt of the user
+- $s$ : An estimation of how much crvUSD a user would have after converting all collateral through their bands in soft-liquidation.  We've estimated it as just the average price.
+- $p$ : The value between soft-liquidation and the current price.  Found by multiplying the amount of collateral by how far above soft liquidation the current price is.  This is a max function, so if a user is already in soft liquidation $p=0$.
+- $\text{collateral}$ - The amount of collateral a user has, e.g., if a user has 5 wBTC, this value is 5.
+- $\text{upperSoftLiqLimit}$ - the upper limit of the user's soft-liquidation range, i.e., the top price of their highest band.
+- $\text{lowerSoftLiqLimit}$ - the lower limit of the user's soft-liquidation range, i.e., the lowest price of their lowest band.
+- $\text{collateralPrice}$ - The price of a single unit of the collateral asset, e.g., if the collateral asset is wBTC, this value is the price of 1 wBTC.
+
 
 <figure markdown>
   ![](../images/health.png){ width="600" }
@@ -135,27 +178,26 @@ Losses are hard to quantify. There is no general rule on how big the losses are 
 
 ## **Borrow Rate**
 
-The borrow rate is variable and dependent on various parameters and factors such as the price of crvUSD, PegKeeper debt, etc.
+The general idea is that **borrow rate increases when crvUSD goes down in value and decreases when crvUSD goes up in value**.  Also, contracts called [PegKeepers](https://docs.curve.fi/crvUSD/pegkeeper/) can also affect the interest rate and crvUSD peg by minting and selling crvUSD or buying and burning crvUSD.
 
 *The formula for the borrow rate is as follows:*
 
-$$r = \text{rate0} * e^{\text{power}}$$
-
-$$\text{power} = \frac{price_{peg} - {price_{crvusd}}}{\text{sigma}} - \frac{\text{DebtFraction}}{\text{TargetFraction}}$$
-
-$$\text{DebtFraction} = \frac{\text{PegKeeperDebt}}{\text{TotalDebt}}$$
+$$\begin{aligned}r &= \text{rate0} * e^{\text{power}} \\
+\text{power} &= \frac{\text{price}_\text{peg} - {\text{price}_\text{crvUSD}}}{\text{sigma}} - \frac{\text{DebtFraction}}{\text{TargetFraction}} \\
+\text{DebtFraction} &= \frac{\text{PegKeeperDebt}}{\text{TotalDebt}}\end{aligned}$$
 
 
 *with:*
 
-- **`r`**:	The interest rate.
-- **`rate0`**:	The rate when PegKeepers have no debt and the price of crvUSD is excatly 1.00.
-- **`price_peg`**:	Desired crvUSD price: 1.00
-- **`price_crvusd`**:	Current crvUSD price.
-- **`DebtFraction`**:	Ratio of the PegKeeper's debt to the total outstanding debt.
-- **`TargetFraction`**:	Target fraction.
-- **`PegKeeperDebt`**:	The sum of debt of all PegKeepers.
-- **`TotalDebt`**:	Total crvUSD debt across all markets.
+- $r$:	The interest rate.
+- $\text{rate0}$:	The rate when PegKeepers have no debt and the price of crvUSD is exactly 1.00.
+- $\text{price}_\text{peg}$:	Desired crvUSD price: 1.00
+- $\text{price}_\text{crvUSD}$:	Current crvUSD price.
+- $\text{sigma}$: variable which can be configured by the DAO, lower value makes the interest rates increase and decrease faster as crvUSD loses and gains value respectively.
+- $\text{DebtFraction}$:	Ratio of the PegKeeper's debt to the total outstanding debt.
+- $\text{TargetFraction}$:	Target fraction.
+- $\text{PegKeeperDebt}$:	The sum of debt of all PegKeepers.
+- $\text{TotalDebt}$:	Total crvUSD debt across all markets.
 
 *A tool to experiment with the interest rate model is available [here](https://crvusd-rate.0xreviews.xyz/).*
 
