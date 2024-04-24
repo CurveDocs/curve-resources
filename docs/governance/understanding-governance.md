@@ -31,8 +31,14 @@ If you're not sure about the technical details of submitting your proposal to th
 *There are three kinds of votes:*
 
 1. Ownership votes, which control most functionality within the protocol. These votes require a 30% quorum with 51% support.
-2. Parameter votes, which can modify pool parameters. These votes require a 15% quorum with 30% support.
+2. Parameter votes, which can modify pool parameters. These votes require a 15% quorum with 60% support.
 3. Emergency votes, which consist of nine members, comprised of a mix of the Curve team and prominent figures within the DeFi community. Each member has one vote. Any member may propose a vote. A vote lasts for 24 hours and can be executed immediately once it receives 66% support.
+
+!!!info "Quorum"
+    Intuitively, one might think that the total number of votes (`YES` and `NO`) would count towards the quorum. However, this is not the case here. Only `YES` votes are counted towards the quorum.
+
+    This can lead to scenarios like this: https://twitter.com/WormholeOracle/status/1782646259536531808
+
 
 
 ## **Emergency DAO**
