@@ -157,7 +157,7 @@ p &= \text{max} \left( \text{collateral} \times \left( \frac{\text{collateralPri
 Where:
 
 - $\text{collateralValue}$ : the value of all collateral at the current LLAMMA prices
-- $\text{liqDiscount}$ : the loan discount for the market (how much to discount the collateral value for safety).
+- $\text{liqDiscount}$ : the liquidation discount for the market.  This is how much to discount the collateral value when performing a hard-liquidation.
 - $\text{debt}$ : the debt of the user
 - $s$ : An estimation of how much crvUSD a user would have after converting all collateral through their bands in soft-liquidation.  We've estimated it as just the average price.
 - $p$ : The value between soft-liquidation and the current price.  Found by multiplying the amount of collateral by how far above soft liquidation the current price is.  This is a max function, so if a user is already in soft liquidation $p=0$.
