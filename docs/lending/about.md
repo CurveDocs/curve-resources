@@ -135,7 +135,7 @@ Collateral is deposited into each lending market's [LLAMMA](https://docs.curve.f
 ![loan to bands](../images/lending/loan_to_bands.svg#only-light){: .centered }
 ![loan to bands](../images/lending/loan_to_bands_dark.svg#only-dark){: .centered }
 
-By **minimizing the number of bands** (N=4), you can **maximize the amount you borrow** (LTV), just like Alice. Charlie, however, prefers spreading his liquidity, so he chooses 10 bands (N=10) and does not maximize his borrowing. This explains why Charlie's loan is split into bands 3-12, while Alice's is split into bands 1-4. When you borrow, you can choose to split your collateral into **any number of bands from 4 to 50**.
+By **minimizing the number of bands** (N=4), you can **maximize the amount you borrow** (LTV), just like Charlie. Alice, however, prefers spreading his liquidity, so he chooses 10 bands (N=10) and does not maximize his borrowing. This explains why Charlie's loan is split into bands 3-12, while Alice's is split into bands 1-4. When you borrow, you can choose to split your collateral into **any number of bands from 4 to 50**.
 
 There is no set rule for **whether fewer or more bands are better**. Different numbers of bands are better in different scenarios:
 
