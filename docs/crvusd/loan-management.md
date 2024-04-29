@@ -25,15 +25,15 @@ Example loans for each of the 4 quadrants are given in the [loan example section
 
 # **Soft Liquidation Losses**
 
-The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  It is interesting to see that the mean loss for all the band ranges are similar, except for the very high band ranges, but there is not a lot of data there.  **The median loss is a good estimate for the loss an average user will see in soft liquidation**. Keep in mind that high volatility periods can make losses much higher than the median.  Conversely, it is possible to be in soft liquidation and have no loss for periods of low volatility.
+The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  As can be seen from the table **soft-liquidation losses are generally very low**, but keep in mind that high volatility periods can cause double digit losses.  
 
 <div class="centered2" markdown="block">
-| band range | days of soft liq data | min loss/day | **median loss/day** | mean loss/day | std loss/day | max loss/6hrs |
+| band range | days of soft liq data | min loss/day | median loss/day | mean loss/day | std loss/day | max loss/day |
 |------------|-----------------------|------------------|---------------------|-------------------|------------------|-------------------|
-| **4-9**        | 6893.1                | 0%         | **0.78%**               | 1.88%             | 4.21%            | 82.47%            |
-| **10-19**      | 2157.6                | 0%         | **0.38%**               | 1.42%             | 4.03%            | 37.02%            |
-| **20-35**      | 121.6                 | 0%         | **0.11%**               | 1.68%             | 19.10%           | 74.19%            |
-| **36-50**      | 65.6                  | 0%         | **0.04%**               | 0.14%             | 0.24%            | 0.51%             |
+| **4-9**        | 4601.17                | 0%         | 0.0927%               | 0.93%             | 2.18%            | 38.93%            |
+| **10-19**      | 2248.19                | 0%         | 0.0331%               | 0.62%             | 1.98%            | 43.06%            |
+| **20-35**      | 124.92                 | 0%         | 0.0127%               | 0.20%             | 0.54%           | 6.41%            |
+| **36-50**      | 114.99                  | 0%         | 0.0004%               | 0.11%             | 0.30%            | 3.98%             |
 </div>
 
 **More bands reduce your soft-liquidation loss per day but increase the time in soft-liquidation, while also reducing the total amount a user can borrow**.  It is up to the user to choose a comfortable number of bands which allows them to borrow their required amount.
