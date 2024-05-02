@@ -11,21 +11,21 @@ Risk and Management styles can be thought of as spectrums, and they can be visua
 ![loan strategies](../images/crvusd/loan_strategies_dark.svg#only-dark){: .centered }
 The above image shows 4 main quadrants:
 
-* **High risk and Passive**: these users are not afraid of soft-liquidations and also not afraid of borrowing near the maximum allowed.  These users have the highest chance of being hard-liquidated.
-* **High risk and Active**: for those borrowing close to the maximum allowed, and actively adding and removing collateral, and debt as required to keep a loan healthy.
-* **Careful and Passive**: these users borrow at low LTV ratios so their soft-liquidation ranges are far below the current price.  They relax and make only a few changes to their loans after significant price changes.
-* **Careful and Active**: they borrow at low LTV ratios but keep adding and removing capital and debt as required to stay away from soft-liquidation.
+* **High risk and Passive**: This is a dangerous strategy, users employing this strategy typically max borrow and make very little changes to the loan until they close or are hard-liquidated.  Some users are lucky and do well, but many are hard-liquidated.  Use at your own risk.
+* **High risk and Active**: Users with these loans are borrowing close to the maximum allowed, and actively adding and removing collateral, and debt as required to keep a loan healthy.
+* **Careful and Passive**: These loans are typically at low LTV ratios so their soft-liquidation ranges are far below the current price.  These loans generally don't need much management and users may only alter their loans after significant price changes.
+* **Careful and Active**: Users borrow at low LTV ratios but actively manage the loans by adding and removing capital and debt as required to keep away from soft-liquidation.
 
 Example loans for each of the 4 quadrants are given in the [loan example section here](#loan-examples).  The section directly below shows soft-liquidation losses based on user data, so prospective users can estimate losses.
 
 !!!warning "Actively managing loans is gas intensive"
-    Actively managing loans is expensive when factoring in gas usage, loan size needs to be sufficient to offset this expense.
+    Actively managing loans is expensive when factoring in gas usage, loan size needs to be sufficient to offset this expense.  As a general rule allow $\text{USD} \approx \text{gasPrice} \times 4$ to add collateral or repay debt, e.g. if gasPrice is 10 gWei allow \$40 to add collateral or repay debt.
 
 ---
 
 # **Soft Liquidation Losses**
 
-The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  As can be seen from the table **soft-liquidation losses are generally very low**, but keep in mind that high volatility periods can cause double digit losses.  
+The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  The table below shows **soft-liquidation losses are generally very low**, but keep in mind that high volatility periods can cause double digit losses.  
 
 <div class="centered2" markdown="block">
 | band range | days of soft liq data | min loss/day | median loss/day | mean loss/day | std loss/day | max loss/day |
@@ -36,7 +36,9 @@ The data from all crvUSD loans so far has shown that for each band range a user 
 | **36-50**      | 114.99                  | 0%         | 0.0004%               | 0.11%             | 0.30%            | 3.98%             |
 </div>
 
-**More bands reduce your soft-liquidation loss per day but increase the time in soft-liquidation, while also reducing the total amount a user can borrow**.  It is up to the user to choose a comfortable number of bands which allows them to borrow their required amount.
+**Using more bands ($\uparrow$N) reduce your soft-liquidation loss per day but increase the time in soft-liquidation, while also reducing the total amount a user can borrow**.  It is up to the user to choose a comfortable number of bands which allows them to borrow their required amount.
+
+*The above results are from the notebook [here](https://github.com/saint-rat/curve-notebooks/blob/main/n_range_softliq_losses.ipynb)*
 
 # **Managing Loan Health**
 
@@ -88,20 +90,32 @@ Here's a list of the plots that can be shown/hidden and their meaning:
 
 ---
 
-## **High Risk and Passive Loan Example**
+## **Careful and Passive Loan Example**
 
-This loan was opened with **N=20**, **1.09 WETH collateral**, **1700 crvUSD debt**.  This was a **LTV (Loan-To-Value) of 82%**.
+This user **deposited 188 wBTC** as collateral.  They **borrowed 1.05 million crvUSD**.  They were very careful and only borrowed with a **21% LTV**.  They used **N=10**.
 
 <div class="centered2" style="width: 100%">
-  <canvas id="loanChart2"></canvas>
+  <canvas id="loanChart3"></canvas>
 </div>
 
-The user max borrowed, putting their soft-liquidation range in the next band lower than the current band.  WETH price declined and they stayed in soft-liquidation for the duration of their loan.  No collateral was added or debt repaid over the duration of the loan.
+As you can see from above the user remained passive as they were far from soft-liquidation at all times.  They only fee they incurred was from the borrow interest rate increasing their debt, but luckily wBTC price went up fast enough to offset that.  
 
-They kept the loan open for ~30 days and **only lost 1.48%** of their collateral in that time due to soft-liquidation fees.  They would have been liquidated on the 28th day in most other competitor platforms and lost >5% from liquidation fees.
+Throughout the approx. 100 day duration of the loan they increased their loan to 1.27 million crvUSD but their LTV actually went down as wBTC price went up ~30%.
 
-!!!warning "Use this strategy at your own risk"
-    Users in this quadrant are at the highest risk of hard-liquidation.  Use this strategy at your own risk.
+**This is a good strategy for loans less than 10,000 crvUSD** as gas costs for managing the loan are minimal.
+
+
+## **Careful and Active Loan Example**
+
+This loan was opened with **N=50**, **93 sfrxETH collateral**, **105500 crvUSD debt**.  This was a **LTV of 67%**.
+
+<div class="centered2" style="width: 100%">
+  <canvas id="loanChart4"></canvas>
+</div>
+
+This user starts with 105k crvUSD debt, but slowly over time adds collateral and borrows more debt.  Ending with 219 sfrxETH collateral and 298k crvUSD debt.  They actively managed to stay out of soft-liquidation, and spend 0.56 ETH of fees on 32 transactions over this 2 month period.  The only fees they incurred were from borrowing interest and Ethereum transactions fees.
+
+**This loan LTV is possible in other systems, but soft-liquidations aren't.  Soft-liquidations reassure the user that they are protected from sudden price drops**.
 
 
 ## **High Risk and Active Loan Example**
@@ -122,31 +136,22 @@ LLAMMA saved the user from hard-liquidation that would have occurred in any othe
 
 This loan shows that **actively managing high risk loans can result in outcomes not possible in any other system**.
 
-## **Careful and Passive Loan Example**
 
-This user **deposited 188 wBTC** as collateral.  They **borrowed 1.05 million crvUSD**.  They were very careful and only borrowed with a **21% LTV**.  They used **N=10**.
+## **High Risk and Passive Loan Example (Hard-liquidation)**
 
-<div class="centered2" style="width: 100%">
-  <canvas id="loanChart3"></canvas>
-</div>
-
-As you can see from above the user remained passive as they were far from soft-liquidation at all times.  They only fee they incurred was from the borrow interest rate increasing their debt, but luckily wBTC price went up fast enough to offset that.  
-
-Throughout the approx. 100 day duration of the loan they increased their loan to 1.27 million crvUSD but their LTV actually went down as wBTC price went up ~30%.
-
-**This is a good strategy for loans less than 10,000 crvUSD** as gas costs for managing the loan are minimal.
-
-## **Careful and Active Loan Example**
-
-This loan was opened with **N=50**, **93 sfrxETH collateral**, **105500 crvUSD debt**.  This was a **LTV of 67%**.
+This loan was opened with **N=4**, **5.95 wstETH collateral**, **10500 crvUSD debt**.  This was a **LTV (Loan-To-Value) of 84%**.
 
 <div class="centered2" style="width: 100%">
-  <canvas id="loanChart4"></canvas>
+  <canvas id="loanChart2"></canvas>
 </div>
 
-This user starts with 105k crvUSD debt, but slowly over time adds collateral and borrows more debt.  Ending with 219 sfrxETH collateral and 298k crvUSD debt.  They actively managed to stay out of soft-liquidation, and spend 0.56 ETH of fees on 32 transactions over this 2 month period.  The only fees they incurred were from borrowing interest and Ethereum transactions fees.
+The user almost max borrowed.  Putting their liquidation range very close to the current price.  They stayed above their soft-liquidation range for a long time before falling into soft liquidation on day 50.  They quickly fell through soft liquidation to the safety on the other side but lost 3.1% to soft liquidation fees.  
 
-**This loan LTV is possible in other systems, but soft-liquidations aren't.  Soft-liquidations reassure the user that they are protected from sudden price drops**.
+At any time from day 50 to day 62 they could have repaid debt to increase their health.  As they were passive and did nothing soft-liquidation fees reduced their health to 0 when going back up through their soft-liquidation range.  This is an unfortunate situation where the increasing collateral price caused hard-liquidation.
+
+!!!warning "Use this strategy at your own risk"
+    Users in this quadrant are at the highest risk of hard-liquidation.  Using this strategy is not advised.
+
 
 ## **Under Soft-Liquidation Loan Example**
 
@@ -490,7 +495,7 @@ Risks:
   }
 
   loadData('loan1.json', 'loanChart1');
-  loadData('loan2.json', 'loanChart2');
+  loadData('hardliq4.json', 'loanChart2');
   loadData('loan3.json', 'loanChart3');
   loadData('loan4.json', 'loanChart4');
   loadData('loan5.json', 'loanChart5');
