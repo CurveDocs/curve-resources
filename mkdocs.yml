@@ -5,7 +5,7 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
   - minify:
       minify_html: true
 
@@ -111,7 +111,7 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
-  #- stylesheets/highcharts.css
+  - stylesheets/highcharts.css
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -141,6 +141,7 @@ nav:
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Loan Details & Concepts: crvusd/loan-details.md
+    - Loan Strategies: crvusd/loan-management.md
     - crvUSD FAQ: crvusd/faq.md
 
   - Curve Lending:
