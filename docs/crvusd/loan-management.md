@@ -187,29 +187,6 @@ Risks:
 * crvUSD risk, i.e., smart contract risk from crvUSD stablecoin and the crvUSD markets, see crvUSD risk disclaimer [here](../resources/risks/crvusd.md)
 * Smart contract and bad debt risk from lending markets, i.e., if you supply to Curve lending, see Curve Lending risk disclaimer [here](../resources/risks/lending.md).  Otherwise please research and be informed of risks for other platforms.  **Mentions of platforms here is not an endorsement of their safety.**
 
-## **Hedging with UniswapV3**
-
-Hedge crvUSD LLAMMA exposure at UniV3, effectively getting a loan that keeps risk asset exposure equal at all prices.
-
-As LLAMMA soft-liquidation bands effectively works as an inverse UniswapV3 liquidity range, it's possible to hedge the soft-liquidation range in UniV3, keeping the asset exposure equal over all prices.  The image below shows the comparison between a LLAMMA band of \$990-\$1000 and a UniV3 price range of \$990-\$1000.  Note that they are opposites.
-
-![LLAMMA UniV3 Comparison](../images/crvusd/band_comparison.svg#only-light){: .centered }
-![LLAMMA UniV3 Comparison](../images/crvusd/band_comparison_dark.svg#only-dark){: .centered }
-
-Strategy:
-
-1. User takes a crvUSD loan against the collateral they choose in a band range they choose, e.g., ETH is worth $3208, user takes a 2000 crvUSD loan with 1 ETH collateral with N=10, their soft-liquidation range is 2101-2324.
-2. User calculates their midpoint of soft-liquidation and deposits their chosen stablecoin to a UniV3 pool to buy ETH in the same range as their LLAMMA soft-liquidation, e.g., with a soft-liquidation range of 2101-2324 their midpoint is 2212.50, they deposit 2212.5 USDC into the USDC/ETH UniV3 range 2101-2324.
-3. As the user is soft-liquidated in LLAMMA, their UniV3 position acts as a hedge, so they should maintain the approx. 1 ETH and approx. 2200 of stablecoins.  Their UniV3 fee earnings also offset their fee losses from soft-liquidation.
-
-*Note the midpoint is just a estimation, bands get smaller as prices decrease so to have an exactly equal UniV3 LP the user would need to split their LP into 10 UniV3 ranges, 1 for each LLAMMA band, see [here](./loan-details.md#bands-n) for more information on bands*.
-
-Risks:
-
-* crvUSD risk, i.e., smart contract risk from crvUSD stablecoin and the crvUSD markets, see crvUSD risk disclaimer [here](../resources/risks/crvusd.md).
-* UniV3 position risk, please research potential UniV3 risks.
-* Soft-liquidation losses may be much larger than UniV3 fee earnings, especially during times of high volatility.
-* crvUSD/USDC depeg risk, crvUSD and USDC may depeg.  If this happens the strategy won't work.  One way to mitigate this for the user above is to create a crvUSD/ETH UniV3 position instead of a USDC/ETH position, although this may decrease UniV3 earnings.
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
