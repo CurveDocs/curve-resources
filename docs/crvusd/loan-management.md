@@ -25,7 +25,22 @@ Example loans for each of the 4 quadrants are given in the [loan example section
 
 # **Soft Liquidation Losses**
 
-The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  The table below shows **soft-liquidation losses are generally very low**, but keep in mind that high volatility periods can cause double digit losses.  
+The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  The histogram and table below show **soft-liquidation losses are generally very low**, but keep in mind that high volatility periods can cause double digit losses.  
+
+*Note: you can show and hide any band ranges by clicking on them in the legend*.
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; justify-content: center; margin-top: 10px;">
+        <label style="margin: 0 10px;">
+            <input type="checkbox" id="percentageCheckbox" checked>
+            Use percent of data for y axis
+        </label>
+        <label style="margin: 0 10px;">
+            <input type="checkbox" id="timeCheckbox">
+            Use days of data (time) for y axis
+        </label>
+    </div>
+    <canvas id="softLiqHistogram"></canvas>
+</div>
 
 <div class="centered2" markdown="block">
 | band range | days of soft liq data | min loss/day | median loss/day | mean loss/day | std loss/day | max loss/day |
@@ -189,6 +204,132 @@ Risks:
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+    // Data
+    const data = [
+        { n_range: 'N: 4-9', loss_range: '0-0.001%', softLiqDays: 32.12, softLiqPercent: 0.92 },
+        { n_range: 'N: 4-9', loss_range: '0.001-0.005%', softLiqDays: 48.82, softLiqPercent: 1.40 },
+        { n_range: 'N: 4-9', loss_range: '0.005-0.02%', softLiqDays: 148.82, softLiqPercent: 4.27 },
+        { n_range: 'N: 4-9', loss_range: '0.02-0.1%', softLiqDays: 587.55, softLiqPercent: 16.86 },
+        { n_range: 'N: 4-9', loss_range: '0.1-0.5%', softLiqDays: 1095.54, softLiqPercent: 31.44 },
+        { n_range: 'N: 4-9', loss_range: '0.5-2%', softLiqDays: 1073.53, softLiqPercent: 30.81 },
+        { n_range: 'N: 4-9', loss_range: '2-10%', softLiqDays: 455.90, softLiqPercent: 13.08 },
+        { n_range: 'N: 4-9', loss_range: '10-50%', softLiqDays: 42.00, softLiqPercent: 1.21 },
+        { n_range: 'N: 10-19', loss_range: '0-0.001%', softLiqDays: 11.35, softLiqPercent: 0.78 },
+        { n_range: 'N: 10-19', loss_range: '0.001-0.005%', softLiqDays: 35.52, softLiqPercent: 2.46 },
+        { n_range: 'N: 10-19', loss_range: '0.005-0.02%', softLiqDays: 128.88, softLiqPercent: 8.91 },
+        { n_range: 'N: 10-19', loss_range: '0.02-0.1%', softLiqDays: 371.83, softLiqPercent: 25.70 },
+        { n_range: 'N: 10-19', loss_range: '0.1-0.5%', softLiqDays: 489.12, softLiqPercent: 33.81 },
+        { n_range: 'N: 10-19', loss_range: '0.5-2%', softLiqDays: 292.61, softLiqPercent: 20.23 },
+        { n_range: 'N: 10-19', loss_range: '2-10%', softLiqDays: 105.74, softLiqPercent: 7.31 },
+        { n_range: 'N: 10-19', loss_range: '10-50%', softLiqDays: 11.64, softLiqPercent: 0.80 },
+        { n_range: 'N: 20-35', loss_range: '0-0.001%', softLiqDays: 2.48, softLiqPercent: 2.23 },
+        { n_range: 'N: 20-35', loss_range: '0.001-0.005%', softLiqDays: 4.63, softLiqPercent: 4.17 },
+        { n_range: 'N: 20-35', loss_range: '0.005-0.02%', softLiqDays: 12.62, softLiqPercent: 11.35 },
+        { n_range: 'N: 20-35', loss_range: '0.02-0.1%', softLiqDays: 37.89, softLiqPercent: 34.09 },
+        { n_range: 'N: 20-35', loss_range: '0.1-0.5%', softLiqDays: 37.20, softLiqPercent: 33.47 },
+        { n_range: 'N: 20-35', loss_range: '0.5-2%', softLiqDays: 13.25, softLiqPercent: 11.92 },
+        { n_range: 'N: 20-35', loss_range: '2-10%', softLiqDays: 3.07, softLiqPercent: 2.76 },
+        { n_range: 'N: 20-35', loss_range: '10-50%', softLiqDays: 0.00, softLiqPercent: 0.00 },
+        { n_range: 'N: 36-50', loss_range: '0-0.001%', softLiqDays: 3.92, softLiqPercent: 6.55 },
+        { n_range: 'N: 36-50', loss_range: '0.001-0.005%', softLiqDays: 4.12, softLiqPercent: 6.88 },
+        { n_range: 'N: 36-50', loss_range: '0.005-0.02%', softLiqDays: 13.42, softLiqPercent: 22.41 },
+        { n_range: 'N: 36-50', loss_range: '0.02-0.1%', softLiqDays: 18.71, softLiqPercent: 31.24 },
+        { n_range: 'N: 36-50', loss_range: '0.1-0.5%', softLiqDays: 15.88, softLiqPercent: 26.51 },
+        { n_range: 'N: 36-50', loss_range: '0.5-2%', softLiqDays: 3.51, softLiqPercent: 5.86 },
+        { n_range: 'N: 36-50', loss_range: '2-10%', softLiqDays: 0.33, softLiqPercent: 0.55 },
+        { n_range: 'N: 36-50', loss_range: '10-50%', softLiqDays: 0.00, softLiqPercent: 0.00 }
+    ];
+
+    // Extract unique n_range values
+    const nRanges = [...new Set(data.map(item => item.n_range))];
+
+    const colors = [
+        'rgba(75, 192, 192, 0.7)',
+        'rgba(255, 99, 132, 0.7)',
+        'rgba(54, 162, 235, 0.7)',
+        'rgba(255, 206, 86, 0.7)'
+    ];
+
+    // Create datasets for each n_range
+    const datasets = nRanges.map((nRange, index) => {
+        const filteredData = data.filter(item => item.n_range === nRange);
+        return {
+            label: nRange,
+            data: filteredData.map(item => item.softLiqPercent),
+            backgroundColor: colors[index % colors.length]
+        };
+    });
+
+    // Create the chart
+    const ctx = document.getElementById('softLiqHistogram').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data.filter(item => item.n_range === nRanges[0]).map(item => item.loss_range),
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Soft Liquidation Loss Range Per Day'
+                    }
+                },
+                y: {
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Percent of data in each range'
+                    }
+                }
+            }
+        }
+    });
+
+    // Function to update the chart based on the selected checkbox
+    function updateChart() {
+        const newDatasets = nRanges.map((nRange, index) => {
+            const filteredData = data.filter(item => item.n_range === nRange);
+            return {
+                label: nRange,
+                data: percentageCheckbox.checked
+                    ? filteredData.map(item => item.softLiqPercent)
+                    : filteredData.map(item => item.softLiqDays),
+                backgroundColor: colors[index % colors.length]
+            };
+        });
+        chart.data.datasets = newDatasets;
+        chart.options.scales.y.title.text = percentageCheckbox.checked
+            ? 'Percent of data in each range'
+            : 'Days of data in each range';
+        chart.update();
+    }
+
+    // Checkbox event listeners
+    const percentageCheckbox = document.getElementById('percentageCheckbox');
+    const timeCheckbox = document.getElementById('timeCheckbox');
+
+    percentageCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            timeCheckbox.checked = false;
+            updateChart();
+        }
+    });
+
+    timeCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            percentageCheckbox.checked = false;
+            updateChart();
+        }
+    });
+</script>
+
 <script>
   function createChart(data, chartId) {
     const ctx = document.getElementById(chartId).getContext('2d');
