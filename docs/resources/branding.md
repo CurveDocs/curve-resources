@@ -5,7 +5,7 @@
 | :logos-crv:  | `CRV`       | SVG       | [GitHub](https://github.com/curvefi/curve-assets/blob/main/branding/logo.svg)         |
 | :logos-crv:  | `CRV`       | PNG       | [GitHub](https://github.com/curvefi/curve-assets/blob/main/branding/logo.png)         |
 | :logos-vecrv:| `veCRV`     | SVG       | [GitHub](https://github.com/curvefi/curve-assets/blob/main/branding/logo-bw.svg)      |
-| :logos-crvusd:| `crvUSD`    | SVG       | [TBD](https://github.com/curvefi/curve-assets/blob/main/branding) |
+| :logos-crvusd:| `crvUSD`   | SVG       | [GitHub](https://github.com/curvefi/curve-assets/blob/main/branding/crvusd.svg)       |
 
 
 !!!info
