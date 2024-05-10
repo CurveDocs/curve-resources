@@ -85,13 +85,13 @@ theme:
       accent: deep purple
       toggle:
         icon: material/weather-sunny
-        name: Switch to light mode
+        name: Switch to dark mode
     # - media: "(prefers-color-scheme: light)"
     - scheme: slate
       accent: amber
       toggle:
         icon: material/weather-night
-        name: Switch to dark mode
+        name: Switch to light mode
 
 extra:
   generator: false
@@ -149,6 +149,7 @@ nav:
     - How to Borrow: lending/loan-creation.md
     - How to Supply: lending/supplying-assets.md
     - Lending FAQ: lending/faq.md
+    - How to Create a Market: lending/create-lending-market.md
 
   - Liquidity Providers:
     - Understanding curve pools: lp/understanding-curve-pools.md
