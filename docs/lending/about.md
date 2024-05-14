@@ -187,7 +187,7 @@ Soft-liquidation **losses do not only occur when prices go down but also when th
 
 **It's even possible to be below your bands with all collateral converted to the borrowed asset (e.g., all CRV converted to crvUSD), while maintaining a positive health factor**. If this happens, further price declines do not affect the position (e.g., all CRV traded for crvUSD, and crvUSD collateral covers debt and safety buffer).
 
-**A loan is elegible to be hard-liquidated if a the health factor reduces to 0**. In a hard-liquidation, someone else can pay off a user's debt and, in exchange, receive their collateral. The loan will then be closed.
+**A loan is eligible to be hard-liquidated if a the health factor reduces to 0**. In a hard-liquidation, someone else can pay off a user's debt and, in exchange, receive their collateral. The loan will then be closed.
 
 In contrast, most other lending platforms will hard-liquidate your collateral and terminate your loan if your loan falls below a minimum collateral ratio (LTV), even if only by a small amount for a brief time. This can be highly stressful for borrowers and lead to significant losses. Curve Lending offers a safer space and more peace of mind for borrowers.
 
@@ -203,7 +203,7 @@ The **Lend APY** and **Borrow APY** are based solely on the **Utilization** of t
 ![Supply Utilization](../images/lending/supply_dark.svg#only-dark){: .centered }
 
 
-*For the current [CRV Lending Market](https://lend.curve.fi/#/ethereum/markets/one-way-market-3/create) the Borrow APR for different Utilization rates is the following:*
+*For the current [CRV Lending Market](https://lend.curve.fi/#/ethereum/markets/one-way-market-3/create) the Borrow APR and Lend APR for different Utilization rates is the following:*
 
 <canvas id="graphContainer"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -214,83 +214,112 @@ The **Lend APY** and **Borrow APY** are based solely on the **Utilization** of t
 
     let myChart = null;
 
-    function updateGraph() {
-        const rateMin = 0.01; // Hardcoded minimum rate of 1%
-        const rateMax = 0.80; // Hardcoded maximum rate of 80%
+function updateGraph() {
+    const rateMin = 0.01;
+    const rateMax = 0.8;
 
-        let dataPoints = [];
-        for (let u = 0; u <= 1; u += 0.01) {
-            let rate = rateMin * Math.pow((rateMax / rateMin), u);
-            dataPoints.push({x: u * 100, y: rate * 100});
-        }
+    let borrowDataPoints = [];
+    for (let u = 0; u <= 1.01; u += 0.01) {
+        let rate = rateMin * Math.pow((rateMax / rateMin), u);
+        borrowDataPoints.push({x: u * 100, y: rate * 100});
+    }
 
-        const ctx = document.getElementById('graphContainer').getContext('2d');
+    let lendDataPoints = [];
+    for (let u = 0; u <= 1.01; u += 0.01) {
+        let rate = u * rateMin * Math.pow((rateMax / rateMin), u);
+        lendDataPoints.push({x: u * 100, y: rate * 100});
+    }
 
-        const data = {
-            datasets: [{
-                label: 'Borrow Rate vs. Utilization',
-                data: dataPoints,
+    const ctx = document.getElementById('graphContainer').getContext('2d');
+
+    const data = {
+        datasets: [
+            {
+                label: 'Borrow APR',
+                data: borrowDataPoints,
                 borderColor: 'rgba(75, 192, 192, 0.9)',
                 fill: false,
                 pointRadius: 0,
                 showLine: true,
                 borderWidth: 2,
-            }]
-        };
+            },
+            {
+                label: 'Lend APR',
+                data: lendDataPoints,
+                borderColor: 'rgba(255, 99, 132, 0.9)',
+                fill: false,
+                pointRadius: 0,
+                showLine: true,
+                borderWidth: 2,
+            }
+        ]
+    };
 
-        const config = {
-            type: 'scatter',
-            data: data,
-            options: {
-                scales: {
-                    x: {
-                        type: 'linear',
-                        position: 'bottom',
-                        title: {
-                            display: true,
-                            text: 'Utilization (%)'
-                        }
+    const config = {
+        type: 'scatter',
+        data: data,
+        options: {
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Utilization (%)'
                     },
-                    y: {
-                        title: {
-                            display: true,
-                            text: 'Borrow Rate (%)'
+                    max: 100
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'APR (%)'
+                    },
+                    beginAtZero: true
+                }
+            },
+            interaction: {
+                mode: 'nearest',
+                intersect: false,
+                axis: 'x'
+            },
+            plugins: {
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    filter: function(tooltipItem) {
+                        return tooltipItem.datasetIndex === 0;
+                    },
+                    enabled: true,
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    bodyColor: '#ffffff',
+                    bodyFont: {
+                        size: 12,
+                    },
+                    borderColor: 'rgba(0, 0, 0, 0.7)',
+                    borderWidth: 1,
+                    usePointStyle: false,
+                    padding: 4,
+                    displayColors: false,
+                    callbacks: {
+                        title: function() {
+                            return '';
                         },
-                        beginAtZero: true
+                        label: function(context) {
+                            const utilization = context.parsed.x.toFixed(2);
+                            const borrowRate = context.chart.data.datasets[0].data[context.dataIndex].y.toFixed(2);
+                            const lendRate = context.chart.data.datasets[1].data[context.dataIndex].y.toFixed(2);
+                            return [
+                                `Utilization: ${utilization}%`,
+                                `Borrow APR: ${borrowRate}%`,
+                                `Lend APR: ${lendRate}%`
+                            ];
+                        }
                     }
                 },
-                interaction: {
-                    mode: 'nearest',
-                    intersect: false,
-                    axis: 'x'
-                },
-                plugins: {
-                    tooltip: {
-                        enabled: true, // Enable tooltips
-                        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Tooltip background color
-                        bodyColor: '#ffffff', // Tooltip text color
-                        bodyFont: {
-                            size: 12, // Smaller font size
-                        },
-                        borderColor: 'rgba(0, 0, 0, 0.7)', // Border color
-                        borderWidth: 1, // Border width
-                        usePointStyle: false, // Disable point style for the items to remove the dot
-                        padding: 4, // Reduce padding for a smaller tooltip
-                        displayColors: false, // Do not display the color box next to the text
-                        callbacks: {
-                            title: function() {
-                                return '';
-                            },
-                            label: function(context) {
-                                const rate = context.parsed.y.toFixed(2);
-                                const utilization = context.parsed.x.toFixed(2);
-                                return [`Rate: ${rate}%`, `Utilization: ${utilization}%`];
-                            }
-                        }
-                    },
-                }
             }
-        };
+        }
+    };
+
 
         if (myChart) {
             myChart.destroy();

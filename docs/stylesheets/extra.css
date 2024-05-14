@@ -437,8 +437,8 @@ h3 {
   margin: 0 auto;
 }
 
-.centered2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
+.input input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

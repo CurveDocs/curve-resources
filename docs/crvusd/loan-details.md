@@ -15,7 +15,7 @@ When a user creates a loan, their **collateral is allocated across a range of ba
   <figcaption></figcaption>
 </figure>
 
-The section on the bottom of the page provides information about the entire [**LLAMMA**](#llamma) system, showing aspects such as the total amount of debt, along with individual wallet balances.
+The section on the bottom of the page provides information about the entire [**LLAMMA**](#llamma-and-liquidations) system, showing aspects such as the total amount of debt, along with individual wallet balances.
 
 When a position was or is in soft-liquidation mode, losses occur. The UI displays the total ***LOSS AMOUNT*** as well as the ***% LOST***, which measures the loss in collateral value caused by the soft-liquidation process.
 
@@ -39,36 +39,38 @@ In advanced mode the UI shows more information about the [**collateral bands**](
   <figcaption></figcaption>
 </figure>
 
-Advanced mode also adds a tab with more info about the entire [**LLAMMA**](#llamma).
+Advanced mode also adds a tab with more info about the entire [**LLAMMA**](#llamma-and-liquidations).
 
 <figure markdown>
   ![](../images/loan_details_4.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
-## **Loan Parameters**
-
-Each crvUSD Market has the following parameters which affect all loans:
-
-- **A:** The amplification parameter A defines the density of liquidity and band size.
-- **Base Price:** The base price is the upper price limit of band number 0.  **Borrow Rate increases the Base Price over time**
-- **Oracle Price:** The oracle price is the current price of the collateral as determined by the oracle. The oracle price is used to calculate the collateral's value and the loan's health.
-- **Borrow Rate:** The borrow rate is the annual interest rate charged on the loan. This rate is variable and can change based on market conditions. The borrow rate is expressed as a percentage. For example, a borrow rate of 7.62% means that the user will be charged 7.62% interest on the loan's outstanding balance.
-
-Below you can see a visualization of a theoretical crvUSD WETH Market with A=100, Base Price = \$1000 and Oracle Price = \$1008. Note that Base price increases with Borrow rate, so if Borrow Rate = 10% after a year Base Price would be \$1100.
-
-![Band Parameters](../images/llamma/band_parameters.svg#only-light){: .centered }
-![Band Parameters](../images/llamma/band_parameters_dark.svg#only-dark){: .centered }
-
+---
 
 # **crvUSD Concepts**
+
+## **Market Parameters**
+
+Each crvUSD market has the following parameters which affect all loans and change automatically due to market forces:
+
+- **Base Price:** The base price is the upper price limit of band number 0.  Borrow rate increases the base price over time.
+- **Oracle Price:** The oracle price is the current price of the collateral as determined by the oracle. The oracle price is used to calculate the collateral's value and the [loan's health](#loan-health).
+- **Borrow Rate:** The borrow rate is the annual interest rate charged on the loan. This rate is variable and can change based on market conditions. The borrow rate is expressed as a percentage. For example, a borrow rate of 7.62% means that the user will be charged 7.62% interest on the loan's outstanding debt.  See [here](#borrow-rate) for how it's calculated.
+
+Each market also has the following parameters which only change if the CurveDAO votes them to change:
+
+- **A:** The amplification parameter A is used to calculate the density of liquidity and [band](#bands-n) width, as well as the [maximum LTV](#loan-discount) of a market.
+- **Loan Discount:** The loan discount defines how much the collateral is discounted when taking a loan, it is directly related to the maximum LTV of each crvUSD market.  See [here](#loan-discount) for more information.
+- **Liquidation Discount:** The liquidation discount is used to discount the collateral when calculating the health of the loan.  See the [health section](#loan-health) for more information.
+- **Sigma:** Sigma changes how quickly rates increase and decrease when crvUSD depegs.  With a higher sigma interest rates will increase slower when crvUSD depegs.  See [here](#borrow-rate) for more information.
+
 
 ## **LLAMMA and Liquidations**
 
 LLAMMA (**Lending-Liquidating AMM Algorithm**) is a fully functional two-token AMM containing the collateral token and crvUSD, which is **responsible for the liquidation mechanism**. For more detailed documentation, please refer to the [technical docs](https://docs.curve.fi/crvUSD/amm/).
 
-When creating a new loan, the put-up **collateral will be deposited into a specified number of bands across the AMM**. Unlike regular liquidation, which has a single liquidation price, LLAMMA has multiple liquidation ranges (represented by the bands) and **continuously liquidates the collateral if needed**.  
-All bands have lower and upper price limits, each representing a "small liquidation range." The user's total liquidation range is represented by the upper price of the highest band to the lower price of the lowest band.
+When creating a new loan, the put-up **collateral will be deposited into a specified number of bands across the AMM**. Unlike regular liquidation, which has a single liquidation price, LLAMMA has multiple liquidation ranges (represented by the bands) and **continuously liquidates the collateral if needed**.   All bands have lower and upper price limits, each representing a "small liquidation range." The user's total liquidation range is represented by the upper price of the highest band to the lower price of the lowest band.
 
 A loan only **enters soft-liquidation mode once the price of the collateral asset is within a band**. If the price is outside the bands, there is no need to partially liquidate and therefore not in soft-liquidation.
 
@@ -137,50 +139,144 @@ Where:
 * $\text{basePrice}$: The current base price of the desired market
 * $A$: The amplification factor of the desired market (default is 100)
 * $n$: The Band Number, e.g., $-$67.
+
+### **Band Calculator**
+
+Use the calculator below to simulate how bands are shaped and how liquidity density changes with different parameters.  By definition the liquidity density will be 100% at band 1.  Liquidity density increases as band width decreases as more collateral will be spread over a smaller price range.
+
+<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+<canvas id="ampChart"></canvas>
+<h4>Inputs:</h4>
+<div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
+<div class="input">
+    <label for="ampInput" style="margin-right: 10px;">A : </label>
+    <input type="number" id="ampInput" min="1" max="10000" step="1" value="30" style="font-size: 16px; width: 80px;">
+    <label for="numBandsInput" style="margin-left: 20px; margin-right: 10px;">N : </label>
+    <input type="number" id="numBandsInput" min="1" max="50" step="1" value="10" style="font-size: 16px; width: 80px;">
+    <label for="basePriceInput" style="margin-left: 20px; margin-right: 10px;">Base Price ($):</label>
+    <input type="number" id="basePriceInput" min="0.01" max="1000000" step="0.01" value="2000" style="font-size: 16px; width: 80px;">
+    </div>
+</div>
+</div>
+
+
 ---
+
+
 
 
 ## **Loan Health**
 
-Based on a user's collateral and debt amount, the UI will display a health score and status. If the position is in self-liquidation mode, an additional warning will be displayed. Once a loan reaches **0% health**, the loan is **eligible to be hard-liquidated**. In a hard-liquidation, someone else can pay off a user's debt and, in exchange, receive their collateral. The loan will then be closed.
+Based on a user's collateral and debt amount, the UI will display a health score and status. If the position is in soft-liquidation mode, an additional warning will be displayed. Once a loan reaches **0% health**, the loan is **eligible to be hard-liquidated**. In a hard-liquidation, someone else can pay off a user's debt and, in exchange, receive their collateral. The loan will then be closed.
 
-The **health of a loan decreases when the loan is in self-liquidation mode. These losses do not only occur when prices go down but also when the collateral price rises again, resulting in the de-liquidation of the user's loan.** This implies that the health of a loan can decrease even though the collateral value of the position increases. If a loan is not in self-liquidation mode, then no losses occur.
+The **health of a loan decreases when the loan is in soft-liquidation mode. These losses do not only occur when prices go down but also when the collateral price rises again, resulting in the de-liquidation of the user's loan.** This implies that the health of a loan can decrease even though the collateral value of the position increases. If a loan is not in soft-liquidation mode, then no losses occur.
 
-Losses are hard to quantify. There is no general rule on how big the losses are as they are dependent on various external factors such as how fast the collateral price falls or rises or how efficient the arbitrage is. But what can be said is that the **losses heavily depend on the number of bands** used; the more bands used, the fewer the losses.
+Losses are hard to quantify. There is no general rule on how big the losses are as they are dependent on various external factors such as how fast the collateral price falls or rises or how efficient the arbitrage is. But what can be said is that the **losses heavily depend on the number of bands** used; the more bands used, the fewer the losses.  Daily losses based on current data are shown [here](./loan-management.md#soft-liquidation-losses).
 
-Health is hard to calculate, but we can reasonably estimate it with the following:
+The formula for health is below, this is visualized in the Health Calculator applet as well.
 
-$$\begin{aligned} \text{health} &\approx s \times \left(\frac{1-\text{liqDiscount}}{\text{debt}} \right) - 1 + p \\ 
-s &= \text{collateral} \times \left( \frac{\text{upperSoftLiqLimit}-\text{lowerSoftLiqLimit}}{2} \right)  \\
-p &= \text{max} \left( \text{collateral} \times \left( \frac{\text{collateralPrice} - \text{upperSoftLiqLimit}}{\text{debt}} \right), \quad 0\right) \end{aligned}$$
+$$\begin{aligned} \text{health} &= \frac{s \times (1-\text{liqDiscount}) + p}{\text{debt}} - 1 \\ 
+p &= \text{collateral} \times \text{priceAboveSoftLiq} \end{aligned}$$
 
 Where:
 
 - $\text{collateralValue}$ : the value of all collateral at the current LLAMMA prices
-- $\text{liqDiscount}$ : the liquidation discount for the market.  This is how much to discount the collateral value when performing a hard-liquidation.
+- $\text{liqDiscount}$ : the liquidation discount for the market (how much to discount the collateral value for safety during hard-liquidation).
 - $\text{debt}$ : the debt of the user
-- $s$ : An estimation of how much crvUSD a user would have after converting all collateral through their bands in soft-liquidation.  We've estimated it as just the average price.
-- $p$ : The value between soft-liquidation and the current price.  Found by multiplying the amount of collateral by how far above soft liquidation the current price is.  This is a max function, so if a user is already in soft liquidation $p=0$.
+- $s$ : an estimation of how much crvUSD a user would have after converting all collateral through their bands in soft-liquidation.  This can be very roughly estimated as: $\text{collateral} \times \left( \frac{\text{softLiqUpperLimit} - \text{softLiqLowerLimit}}{2} \right)$
+- $p$ : The value between soft-liquidation and the current price.  Found by multiplying the amount of collateral by how far above soft-liquidation the current price is.  If user is in or below soft-liquidation, this value is 0.
 - $\text{collateral}$ - The amount of collateral a user has, e.g., if a user has 5 wBTC, this value is 5.
-- $\text{upperSoftLiqLimit}$ - the upper limit of the user's soft-liquidation range, i.e., the top price of their highest band.
-- $\text{lowerSoftLiqLimit}$ - the lower limit of the user's soft-liquidation range, i.e., the lowest price of their lowest band.
 - $\text{collateralPrice}$ - The price of a single unit of the collateral asset, e.g., if the collateral asset is wBTC, this value is the price of 1 wBTC.
 
-See below for a figure showing these values:
+### **Health Calculator**
 
-![loan health formula](../images/crvusd/loan_health_formula.svg#only-light){: .centered }
-![loan health formula](../images/crvusd/loan_health_formula_dark.svg#only-dark){: .centered }
+*Use the applet below to simulate how health works, soft-liquidation losses are given as numbers in a comma separated list, the first number is the starting band onwards.*
 
-
-See below for the UI showing the health in soft liquidation:
-<figure markdown>
-  ![](../images/health.png){ width="600" }
-  <figcaption></figcaption>
-</figure>
+<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+<h4>Inputs:</h4>
+<div class="input">
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: right; margin-right: 20px;">
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
+        <label for="ampInputLiq" style="margin-right: 10px;">A:</label>
+        <input type="number" id="ampInputLiq" min="0" max="1000" step="1" value="10" style="font-size: 16px; width: 80px;">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
+        <label for="startingBandInputLiq" style="margin-right: 10px;">Starting Band:</label>
+        <input type="number" id="startingBandInputLiq" min="-1000" max="1000" step="1" value="2" style="font-size: 16px; width: 80px;">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
+        <label for="oraclePriceLiq" style="margin-right: 10px;">Oracle Price ($):</label>
+        <input type="number" id="oraclePriceLiq" min="0" max="100000" step="0.01" value="1100" style="font-size: 16px; width: 80px;">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
+        <label for="collateralLiq" style="margin-right: 10px;">Collateral Amount:</label>
+        <input type="number" id="collateralLiq" min="0" max="1000000" step="0.01" value="10" style="font-size: 16px; width: 80px;">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; ">
+        <label for="debtLiq" style="margin-right: 10px;">Debt ($):</label>
+        <input type="number" id="debtLiq" min="0" max="1000000" step="0.01" value="5000" style="font-size: 16px; width: 80px;">
+      </div>
+    </div>
+    <div style="text-align: right;">
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
+        <label for="basePriceInputLiq" style="margin-right: 10px;">Base Price ($):</label>
+        <input type="number" id="basePriceInputLiq" min="0" max="100000" step="0.01" value="1000" style="font-size: 16px; width: 80px;">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
+        <label for="finishBandInputLiq" style="margin-right: 10px;">Finish Band:</label>
+        <input type="number" id="finishBandInputLiq" min="-1000" max="1000" step="1" value="5" style="font-size: 16px; width: 80px;">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
+        <label for="liqDiscountLiq" style="margin-right: 10px;">Liquidation Discount %:</label>
+        <input type="number" id="liqDiscountLiq" min="0" max="100" step="0.01" value="10" style="font-size: 16px; width: 80px;">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
+        <label for="slLossesLiq" style="margin-right: 10px;">Soft Liquidation Losses (%):</label>
+        <input type="string" id="slLossesLiq" value="0,0,0,0" style="font-size: 16px; width: 80px;">
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<canvas id="liqChart"></canvas>
+<br>
+<canvas id="healthChart"></canvas>
+<div style="text-align: center; margin-top: 5px;">
+  <p>Health: <span id="healthResult" style="background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span></p>
+</div>
+</div>
 
 
 ---
 
+## **Loan Discount**
+
+The `loan_discount` is used for finding the maximum LTV a user can have in a market.  At the time of writing in crvUSD markets this value is a constant 9%, in Curve Lending markets this value ranges from 7% for WETH to 33% for volatile assets like UwU.  Use the calculator below to see the maximum LTVs a user can have based on the `loan_discount`, amplification factor `A` and their number of bands `N`.  The formula is:
+
+$$\text{maxLTV} = 1 - \text{loan_discount} - \frac{N}{2*A}$$
+
+
+<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+  <h3 style="margin-top: 0;">Maximum LTV Calculator</h3>
+  <h4>Inputs:</h4>
+  <div class="input">
+    <div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
+        <label for="ampInput2" style="margin-right: 10px;">A:</label>
+        <input type="number" id="ampInput2" min="1" max="10000" step="1" value="30" style="font-size: 16px; width: 80px;">
+        <label for="numBandsInput2" style="margin-left: 20px; margin-right: 10px;">N:</label>
+        <input type="number" id="numBandsInput2" min="4" max="50" step="1" value="10" style="font-size: 16px; width: 80px;">
+        <label for="loanDiscountInput" style="margin-left: 20px; margin-right: 10px;">Loan Discount % :</label>
+        <input type="number" id="loanDiscountInput" min="0" max="100" step="1" value="10" style="font-size: 16px; width: 80px;">
+    </div>
+    </div>
+  <h4>Result</h4>
+<div style="text-align: center; margin-top: 5px;">
+  <p>Maximum LTV: <span id="ltvResult" style="background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span></p>
+</div>
+</div>
+
+---
 
 ## **Borrow Rate**
 
@@ -222,3 +318,600 @@ When the price of crvUSD in a pool is above 1.00, they are allowed to take on de
 If a PegKeeper has taken on debt by depositing crvUSD into a pool, it is able to withdraw those deposited crvUSD from the pool again. This can be done when the price is below 1.00. By withdrawing crvUSD, its token balance will decrease and the price within the pool increases.
 
 [:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.fi/crvUSD/pegkeeper/)
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+
+<script>
+
+document.addEventListener("change", function (event) {
+    if (event.target.matches('input[name="__palette"]')) {
+      location.reload();
+    }
+  });
+
+function isUserDarkmode() {
+  var colorScheme = document.querySelector('body').getAttribute('data-md-color-scheme');
+  return colorScheme === 'slate';
+}
+
+// liq chart
+let liqChart = null;
+let healthChart = null;
+document.addEventListener('DOMContentLoaded', function() {
+    updateLiqGraph();
+
+    // liq graph
+    const ampInputLiq = document.getElementById('ampInputLiq');
+    const basePriceInputLiq = document.getElementById('basePriceInputLiq');
+    const startingBandInputLiq = document.getElementById('startingBandInputLiq');
+    const finishBandInputLiq = document.getElementById('finishBandInputLiq');
+    const oraclePriceLiq = document.getElementById('oraclePriceLiq');
+    const liqDiscountLiq = document.getElementById('liqDiscountLiq');
+    const collateralLiq = document.getElementById('collateralLiq');
+    const debtLiq = document.getElementById('debtLiq');
+    const slLossesLiq = document.getElementById('slLossesLiq');
+    ampInputLiq.addEventListener('change', updateLiqGraph);
+    basePriceInputLiq.addEventListener('change', updateLiqGraph);
+    startingBandInputLiq.addEventListener('change', updateLiqGraph);
+    finishBandInputLiq.addEventListener('change', updateLiqGraph);
+    oraclePriceLiq.addEventListener('change', updateLiqGraph);
+    liqDiscountLiq.addEventListener('change', updateLiqGraph);
+    collateralLiq.addEventListener('change', updateLiqGraph);
+    debtLiq.addEventListener('change', updateLiqGraph);
+    slLossesLiq.addEventListener('change', updateLiqGraph);
+});
+
+function generateBandData(basePrice, startN, finishN, A, collateral, oraclePrice, liqDiscount) {
+    const softLiqLosses = document.getElementById('slLossesLiq').value.split(',').map(parseFloat);
+    const bands = Math.abs(finishN - startN);
+    const bandCollateral = collateral/bands;
+    const data = [];
+    const xTicks = [];
+    let xAxisMin, startingWidth;
+    let yAxisMax = 0;
+    let totalValue = 0;
+    let disTotalValue = 0;
+    let collateralLeft = 0;
+    for (let i = startN; i < finishN+1; i++) {
+        const softLiqLoss = softLiqLosses[i-startN];
+        const xMin = basePrice * Math.pow((A - 1) / A, i + 1);
+        const xMax = basePrice * Math.pow((A - 1) / A, i);
+        xAxisMin = xMin;
+
+        let thisBandCollateral = bandCollateral * (1-softLiqLoss/100)
+        let avgSell = (xMax-xMin)/2 + xMin;
+        let collatVal = avgSell * thisBandCollateral;
+        collatVal = collatVal * (1-softLiqLoss/100);
+        collateralLeft += thisBandCollateral;
+        console.log(collateralLeft);
+        if (i == startN) {
+            xAxisMax = Number(xMax.toPrecision(4));
+            xTicks.push(xAxisMax);
+        }
+
+        totalValue += collatVal;
+        let discCollatVal = collatVal*(1-liqDiscount/100);
+
+        xTicks.push(Number(xMin.toPrecision(4)));
+        if (i == startN) {
+            startingWidth = xMax - xMin;
+        }
+
+        if (collatVal > yAxisMax) {
+            yAxisMax = collatVal;
+        }
+
+        let textColor = 'black';
+        if (isUserDarkmode() == true) {
+            textColor = 'white';
+        }
+
+        data.push({
+            type: 'box',
+            xMin: Number(xMin.toPrecision(4)),
+            xMax: Number(xMax.toPrecision(4)),
+            yMin: 0,
+            yMax: Number(collatVal.toPrecision(4)),
+            backgroundColor: 'rgba(80, 150, 220, 0.3)',
+            borderColor: 'rgba(80, 150, 220, 1)',
+            borderWidth: 1,
+        });
+        data.push({
+            type: 'box',
+            xMin: Number(xMin.toPrecision(4)),
+            xMax: Number(xMax.toPrecision(4)),
+            yMin: 0,
+            yMax: Number(discCollatVal.toPrecision(4)),
+            backgroundColor: 'rgba(80, 150, 220, 0.8)',
+            borderColor: 'rgba(80, 150, 220, 1)',
+            borderWidth: 1,
+            label: {
+                backgroundColor: 'rgba(80, 150, 220, 1)',
+                borderRadius: 1,
+                color: textColor,
+                drawTime: 'afterDatasetsDraw',
+                content: (ctx) => ['Band ' + Number(i), 'Collateral: ' + Number(thisBandCollateral.toPrecision(4)), 'Soft Liq Loss: ' + softLiqLoss + '%', 'Avg sell price: $' + Number(avgSell.toPrecision(4)), 'Collat Val: $' + Number(collatVal.toPrecision(4)), 'Liq Collat Val: $' + Number(discCollatVal.toPrecision(4)),'Lower Lim: $' + Number(xMin.toPrecision(4)), 'Upper Lim: $' + Number(xMax.toPrecision(4))],
+                },
+                enter({ element }, event) {
+                    element.label.options.display = true;
+                    return true; // force update
+                },
+                leave({ element }, event) {
+                    element.label.options.display = false;
+                    return true;
+                }
+        });
+    }
+
+    // add oraclePrice line
+    data.push({
+            type: 'line',
+            scaleID: 'x',
+            value: oraclePrice,
+            borderColor: 'red',
+            borderWidth: 2,
+            label: {
+                backgroundColor: 'red',
+                borderRadius: 0,
+                color: 'white',
+                content: (ctx) => ['Oracle Price', '$' + oraclePrice],
+                display: true
+            }
+        });
+    
+    let priceAboveBands = 0;
+    if (oraclePrice > xAxisMax) {
+        priceAboveBands = oraclePrice - xAxisMax;
+        data.push({
+        type: 'line',
+        yMin: yAxisMax/3,
+        yMax: yAxisMax/3,
+        xMin: xAxisMax,
+        xMax: oraclePrice,
+        borderColor: 'green',
+        borderWidth: 2,
+        borderDash: [5, 5],
+        label: {
+            backgroundColor: 'green',
+            borderRadius: 0,
+            color: 'white',
+            content: (ctx) => ['Price Above Bands', '$' + Number(priceAboveBands).toPrecision(4)],
+            display: true
+        }
+        });
+    }
+
+    xTicks.push(Number(oraclePrice.toPrecision(4)));
+
+    if (oraclePrice < xAxisMin) {
+        xAxisMin = oraclePrice - (xAxisMax-oraclePrice)*0.1;
+        xAxisMax = (xAxisMax + (xAxisMax-oraclePrice)*0.1)
+    } else if (oraclePrice > xAxisMax) {
+        xAxisMin = (xAxisMin - (oraclePrice-xAxisMin)*0.1)
+        xAxisMax = oraclePrice + (oraclePrice-xAxisMin)*0.1;
+    } else {
+        xAxisMin = (xAxisMin - (xAxisMax-xAxisMin)*0.1)
+        xAxisMax = (xAxisMax + (xAxisMax-xAxisMin)*0.1)
+    }
+
+    let valueAboveBands = collateralLeft * priceAboveBands;
+
+    return [data, xAxisMin, xAxisMax, yAxisMax, xTicks, valueAboveBands, totalValue];
+}
+
+function updateLiqGraph() {
+
+    const A = parseInt(document.getElementById('ampInputLiq').value);
+    const basePrice = parseFloat(document.getElementById('basePriceInputLiq').value)
+    const startN = parseInt(document.getElementById('startingBandInputLiq').value);
+    const finishN = parseInt(document.getElementById('finishBandInputLiq').value);
+    const oraclePrice = parseFloat(document.getElementById('oraclePriceLiq').value);
+    const liqDiscount = parseFloat(document.getElementById('liqDiscountLiq').value);
+    const collateral = parseFloat(document.getElementById('collateralLiq').value);
+
+    const [annotations, xAxisMin, xAxisMax, yAxisMax, xTicks, valueAboveBands, totalValue] = generateBandData(basePrice, startN, finishN, A, collateral, oraclePrice, liqDiscount);
+
+    updateHealthGraph(totalValue, valueAboveBands, liqDiscount);
+
+    const ctx = document.getElementById('liqChart').getContext('2d');
+
+    const reversedXTicks = xTicks.slice().reverse();
+    const data = {
+      datasets: [{
+        data: [], // Empty dataset
+      }]
+    };
+
+    const options = {
+      scales: {
+        x: {
+            title: {
+                display: true,
+                text: 'Price ($)'
+            },
+            min: xAxisMin,
+            max: xAxisMax,
+            afterBuildTicks: axis => axis.ticks = xTicks.slice().reverse().map(v => ({ value: v }))
+        },
+        y: {
+            title: {
+                display: true,
+                text: 'Collateral Value ($)'
+            },
+            min: 0,
+            max: (yAxisMax*1.1)
+        }
+      },
+      plugins: {
+        annotation: {
+            common: {
+                drawTime: 'beforeDatasetsDraw'
+            },
+            annotations: annotations
+        },
+        tooltip: {
+            display: false,
+        },
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Value in Bands'
+        }
+      },
+      
+    };
+    
+    if (liqChart) {
+            liqChart.destroy();
+    }
+    liqChart = new Chart(ctx, {
+        type: 'scatter',
+        data: data,
+        options: options,
+    });
+}
+
+function updateHealthGraph(valueInBands, valueAboveBands, liqDiscount) {
+
+    const debt = parseFloat(document.getElementById('debtLiq').value);
+    let disValueInBands = valueInBands * (1-liqDiscount/100);
+    let totalValue = disValueInBands + valueAboveBands
+
+    const ctx = document.getElementById('healthChart').getContext('2d');
+
+    var health = (totalValue/debt - 1)*100;
+    document.getElementById('healthResult').textContent = health.toFixed(2) + '%';
+
+    const data = {
+      labels: ['Discounted Value in Bands', 'Value Above Bands', 'Total Value', 'Debt'],
+      datasets: [{
+        label: 'Data',
+        data: [Number(disValueInBands.toPrecision(4)), Number(valueAboveBands.toPrecision(4)), Number(totalValue.toPrecision(4)), Number(debt.toPrecision(4))],
+        backgroundColor: [
+          'rgba(80, 150, 220, 0.8)',
+          'rgba(0, 120, 0, 0.8)',
+          'rgba(80, 180, 180, 0.8)',
+          'rgba(220, 40, 40, 0.8)'
+        ],
+        borderColor: [
+          'rgba(80, 150, 220, 1)',
+          'rgba(0, 120, 0, 1)',
+          'rgba(80, 180, 180, 1)',
+          'rgba(220, 40, 40, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    const options = {
+      scales: {
+        x: {
+        barPercentage: 0.5, // Adjust this value to make the bars thinner (e.g., 0.5 for 50% width)
+        categoryPercentage: 0.5 // Adjust this value to add spacing between categories (e.g., 0.8 for 80% width)
+        },
+        y: {
+            title: {
+                display: true,
+                text: 'Value ($)'
+            },
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        tooltip: {
+            display: true,
+        },
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Value vs. Debt'
+        }
+      },
+      
+    };
+    
+    if (healthChart) {
+            healthChart.destroy();
+    }
+    healthChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options,
+    });
+}
+
+</script>
+
+<script>
+
+let rateChart = null;
+let ampChart = null;
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateAmpGraph(); // Draw the initial amplification chart with default values
+    calculateLTV()
+
+
+    // amp graph
+    const ampInput = document.getElementById('ampInput');
+    const basePriceInput = document.getElementById('basePriceInput');
+    const numBandsInput = document.getElementById('numBandsInput');
+    ampInput.addEventListener('change', updateAmpGraph);
+    basePriceInput.addEventListener('change', updateAmpGraph);
+    numBandsInput.addEventListener('change', updateAmpGraph);
+
+    //ltv calculator
+    const ampInput2 = document.getElementById('ampInput2');
+    const numBandsInput2 = document.getElementById('numBandsInput2');
+    const loanDiscountInput = document.getElementById('loanDiscountInput');
+    ampInput2.addEventListener('change', calculateLTV);
+    numBandsInput2.addEventListener('change', calculateLTV);
+    loanDiscountInput.addEventListener('change', calculateLTV);
+
+    //
+});
+
+function calculateLTV() {
+  var ampFactor2 = parseInt(document.getElementById('ampInput2').value);
+  var numBands2 = parseInt(document.getElementById('numBandsInput2').value);
+  var loanDiscount = parseInt(document.getElementById('loanDiscountInput').value);
+
+  var ltv = 100 - loanDiscount - (100 * (numBands2 / (2 * ampFactor2)));
+  document.getElementById('ltvResult').textContent = ltv.toFixed(2) + '%';
+}
+
+function generateRectangleData(basePrice, count, A, equalHeight) {
+    const data = [];
+    const xTicks = [basePrice];
+    const xAxisMax = basePrice;
+    let xAxisMin, yAxisMax, startingWidth;
+    for (let i = 0; i < count; i++) {
+        const xMin = basePrice * Math.pow((A - 1) / A, i + 1);
+        const xMax = basePrice * Math.pow((A - 1) / A, i);
+        xAxisMin = xMin;
+        xTicks.push(Number(xMin.toPrecision(4)));
+        let height;
+        if (i == 0) {
+            startingWidth = xMax - xMin;
+        }
+        if (equalHeight == true) {
+            height = 100;
+            yAxisMax = 1;
+        } else {
+            height = startingWidth/(xMax-xMin)*100;
+            yAxisMax = height;
+        }
+
+        let textColor = 'black';
+        if (isUserDarkmode() == true) {
+            textColor = 'white';
+        }
+
+        data.push({
+        type: 'box',
+        xMin: Number(xMin.toPrecision(4)),
+        xMax: Number(xMax.toPrecision(4)),
+        yMin: 0,
+        yMax: Number(height.toPrecision(4)),
+        backgroundColor: 'rgba(255, 99, 132, 0.8)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1,
+        label: {
+            color: textColor,
+            drawTime: 'afterDatasetsDraw',
+            content: (ctx) => ['Band ' + Number(i+1), 'Lower Lim: $' + Number(xMin.toPrecision(4)), 'Upper Lim: $' + Number(xMax.toPrecision(4)), 'Width: $' + Number((xMax-xMin).toPrecision(4)), 'Liq Density: ' + Number(height.toPrecision(4)) + '%'],
+            },
+            enter({ element }, event) {
+                element.label.options.display = true;
+                return true; // force update
+            },
+            leave({ element }, event) {
+                element.label.options.display = false;
+                return true;
+            }
+        });
+    }
+    return [data, xAxisMin, xAxisMax, yAxisMax, xTicks];
+}
+
+function updateAmpGraph() {
+    const A = parseInt(document.getElementById('ampInput').value);
+    const numBands = parseInt(document.getElementById('numBandsInput').value);
+    const basePrice = parseFloat(document.getElementById('basePriceInput').value)
+
+    const [annotations, xAxisMin, xAxisMax, yAxisMax, xTicks] = generateRectangleData(basePrice, numBands, A, false);
+    const ctx = document.getElementById('ampChart').getContext('2d');
+    const reversedXTicks = xTicks.slice().reverse();
+    const data = {
+      datasets: [{
+        data: [], // Empty dataset
+      }]
+    };
+
+    const options = {
+      scales: {
+        x: {
+            title: {
+                display: true,
+                text: 'Price ($)'
+            },
+            min: (xAxisMin - (xAxisMax-xAxisMin)*0.1),
+            max: (xAxisMax + (xAxisMax-xAxisMin)*0.1),
+            afterBuildTicks: axis => axis.ticks = xTicks.slice().reverse().map(v => ({ value: v }))
+        },
+        y: {
+            title: {
+                display: true,
+                text: 'Liquidity Density (%)'
+            },
+            min: 0,
+            max: (yAxisMax*1.1)
+        }
+      },
+      plugins: {
+        annotation: {
+            common: {
+                drawTime: 'beforeDatasetsDraw'
+            },
+            annotations: annotations
+        },
+        tooltip: {
+            display: false,
+        },
+        legend: {
+            display: false
+        }
+      }
+    };
+    
+    if (ampChart) {
+            ampChart.destroy();
+    }
+    ampChart = new Chart(ctx, {
+        type: 'scatter',
+        data: data,
+        options: options
+    });
+}
+
+function updateRateGraph() {
+    const rateMin = parseFloat(document.getElementById('rateMinInput').value)/100;
+    const rateMax = parseFloat(document.getElementById('rateMaxInput').value)/100;
+
+    let borrowDataPoints = [];
+    for (let u = 0; u <= 1.01; u += 0.01) {
+        let rate = rateMin * Math.pow((rateMax / rateMin), u);
+        borrowDataPoints.push({x: u * 100, y: rate * 100});
+    }
+
+    let lendDataPoints = [];
+    for (let u = 0; u <= 1.01; u += 0.01) {
+        let rate = u * rateMin * Math.pow((rateMax / rateMin), u);
+        lendDataPoints.push({x: u * 100, y: rate * 100});
+    }
+
+    const ctx = document.getElementById('interestRateChart').getContext('2d');
+
+    const data = {
+        datasets: [
+            {
+                label: 'Borrow APR',
+                data: borrowDataPoints,
+                borderColor: 'rgba(75, 192, 192, 0.9)',
+                fill: false,
+                pointRadius: 0,
+                showLine: true,
+                borderWidth: 2,
+            },
+            {
+                label: 'Lend APR',
+                data: lendDataPoints,
+                borderColor: 'rgba(255, 99, 132, 0.9)',
+                fill: false,
+                pointRadius: 0,
+                showLine: true,
+                borderWidth: 2,
+            }
+        ]
+    };
+
+    const config = {
+        type: 'scatter',
+        data: data,
+        options: {
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Utilization (%)'
+                    },
+                    max: 100
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'APR (%)'
+                    },
+                    beginAtZero: true
+                }
+            },
+            interaction: {
+                mode: 'nearest',
+                intersect: false,
+                axis: 'x'
+            },
+            plugins: {
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    filter: function(tooltipItem) {
+                        return tooltipItem.datasetIndex === 0;
+                    },
+                    enabled: true,
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    bodyColor: '#ffffff',
+                    bodyFont: {
+                        size: 12,
+                    },
+                    borderColor: 'rgba(0, 0, 0, 0.7)',
+                    borderWidth: 1,
+                    usePointStyle: false,
+                    padding: 4,
+                    displayColors: false,
+                    callbacks: {
+                        title: function() {
+                            return '';
+                        },
+                        label: function(context) {
+                            const utilization = context.parsed.x.toFixed(2);
+                            const borrowRate = context.chart.data.datasets[0].data[context.dataIndex].y.toFixed(2);
+                            const lendRate = context.chart.data.datasets[1].data[context.dataIndex].y.toFixed(2);
+                            return [
+                                `Utilization: ${utilization}%`,
+                                `Borrow APR: ${borrowRate}%`,
+                                `Lend APR: ${lendRate}%`
+                            ];
+                        }
+                    }
+                },
+            },
+            legend: {
+                position: 'bottom'
+            }
+        }
+    };
+
+    if (rateChart) {
+            rateChart.destroy();
+    }
+        rateChart = new Chart(ctx, config);
+    }
+</script>
