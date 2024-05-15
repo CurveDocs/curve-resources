@@ -187,10 +187,10 @@ nav:
     - Bridging funds: multichain/bridging-funds.md
 
   - Factory Pools:
-    - Understanding pool factory: factory-pools/pool-factory.md
-    - Creating a stableswap pool: factory-pools/creating-a-stableswap-pool.md
-    - Creating a stableswap-NG pool: factory-pools/creating-a-stableswap-ng-pool.md
-    - Creating a cryptoswap pool: factory-pools/creating-a-cryptoswap-pool.md
+    - Pool Creation Overview: factory-pools/pool-creation-overview.md
+    - StableSwap NG: factory-pools/creating-a-stableswap-ng-pool.md
+    - TwoCrypto NG: factory-pools/creating-a-twocrypto-ng-pool.md
+    - TriCrypto NG: factory-pools/creating-a-tricrypto-ng-pool.md
     - Understanding oracles: factory-pools/understanding-oracles.md
 
   - Troubleshooting:
