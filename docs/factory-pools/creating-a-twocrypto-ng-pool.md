@@ -1,6 +1,6 @@
 <h1>Creating a Twocrypto-NG Pool</h1>
 
-A tricrypto-NG pool is a liquidity pool containing two volatile assets using the CryptoSwap algorithm (Curve V2). For a better understanding of Curve v2, please see here: [**Understanding Curve v2**](../base-features/understanding-crypto-pools.md).
+A twocrypto-NG pool is a liquidity pool containing two volatile assets using the CryptoSwap algorithm (Curve V2). For a better understanding of Curve v2, please see here: [**Understanding Curve v2**](../base-features/understanding-crypto-pools.md).
 
 Due to safety reasons, the use of plain ETH is no longer possible. Instead, [wrapped ETH (wETH)](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) needs to be used.
 
@@ -74,7 +74,7 @@ In CryptoSwap pools, the liquidity is concentrated. These initial liquidity conc
 </figure>
 
 - **`Amplification Parameter (A) ranging from 4,000 to 400,000,000`**: Larger values of A make the curve better resemble a straight line in the center (when the pool is near balance). Highly volatile assets should use a lower value, while assets that are closer together may be best with a higher value.
-- **`Gamma ranging from 0.00000001 to 0.02`**: The gamma parameter can further adjust the shape of the curve. Default values recommend 0.000145 for volatile assets and 0.0001 for less volatile assets.
+- **`Gamma ranging from 0.00000001 to 0.002`**: The gamma parameter can further adjust the shape of the curve. Default values recommend 0.000145 for volatile assets and 0.0001 for less volatile assets.
 - **`Allowed Extra Profit ranging from 0 to 0.01`**: As the pool takes profit, the allowed extra profit parameter allows for greater values. Recommended 0.000002 for volatile assets and 0.00000001 for less volatile assets.
 - **`Fee Gamma ranging from 0 to 1`**: Adjusts how fast the fee increases from Mid Fee to Out Fee. Lower values cause fees to increase faster with imbalance. Recommended value of 0.0023 for volatile assets and 0.005 for less volatile assets.
 - **`Adjustment Step ranging from 0 to 1`**: As the pool rebalances, it must do so in units larger than the adjustment step size. Volatile assets are suggested to use larger values (0.000146), while less volatile assets do not move as frequently and may use smaller step sizes (default 0.0000055).
