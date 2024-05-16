@@ -188,9 +188,9 @@ nav:
 
   - Factory Pools:
     - Pool Creation Overview: factory-pools/pool-creation-overview.md
-    - StableSwap NG: factory-pools/creating-a-stableswap-ng-pool.md
-    - TwoCrypto NG: factory-pools/creating-a-twocrypto-ng-pool.md
-    - TriCrypto NG: factory-pools/creating-a-tricrypto-ng-pool.md
+    - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
+    - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
+    - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
     - Understanding oracles: factory-pools/understanding-oracles.md
 
   - Troubleshooting:
