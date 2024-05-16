@@ -36,8 +36,8 @@ In the token selection tab, two tokens can be chosen. By default, the UI allows 
 
 
 - **`Crypto`:** Suitable for most volatile pairs such as LDO <> ETH
-- **`Forex`:** Suitable for forex pairs with low relative volatility 
-- **`Liquidity Staking Derivatives`:** Suitable for liquid staking derivatives soft-pegged to its underlying asset
+- **`Forex`:** Suitable for forex pairs with low relative volatility such as crvUSD <> EURe
+- **`Liquidity Staking Derivatives`:** Suitable for liquid staking derivatives soft-pegged to its underlying asset such as wETH <> cbETH
 
 
 ---    

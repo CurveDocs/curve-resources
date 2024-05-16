@@ -36,7 +36,7 @@ In the token selection tab, three tokens can be chosen. By default, the UI allow
 
 
 
-- **`Tricrypto`:** Suitable for pools containing a USD stablecoin, BTC, and ETH.
+- **`Tricrypto`:** Suitable for pools containing a USD stablecoin, BTC (e.g., tBTC or wBTC), and ETH.
 - **`Three Coin Volatile`:** Suitable for pools containing a volatile token paired with ETH and USD stablecoins.
 
     

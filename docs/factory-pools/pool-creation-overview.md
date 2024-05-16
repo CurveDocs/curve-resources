@@ -11,7 +11,8 @@ The Curve pool creation interface allows any user to permissionlessly deploy a C
 
 ---
 
-To get started, visit the [**`Pool Creation`**](https://curve.fi/#/ethereum/create-pool) tab at the top of the Curve homepage, and select whether you would like to create a "Stableswap Pool" (a pool with pegged assets) or a "Cryptoswap Pool" (containing assets whose prices may be volatile).
+To get started, visit the [**`Pool Creation`**](https://curve.fi/#/ethereum/create-pool) tab at the top of the Curve homepage, and select whether you would like to create a "Stableswap Pool" (a pool with pegged assets, e.g., crvUSD <> USDT) or a "Cryptoswap Pool" (containing assets whose prices may be volatile, e.g., CRV <> ETH).
+
 
 !!!info
     NG stands for New-Generation and represents enhanced and improved versions of prior implementations. All newly created pools are "new-generation pools".
@@ -22,7 +23,7 @@ To get started, visit the [**`Pool Creation`**](https://curve.fi/#/ethereum/crea
 
     ---
 
-    Stableswap pools are liquidity pools containing up to eight pegged assets.
+    Stableswap pools are liquidity pools containing up to eight pegged assets, for example crvUSD <> USDT <> USDC.
 
     [:octicons-arrow-right-24: `Getting started`](./creating-a-stableswap-ng-pool.md)
 
@@ -30,7 +31,7 @@ To get started, visit the [**`Pool Creation`**](https://curve.fi/#/ethereum/crea
 
     ---
 
-    Twocrypto pools are liquidity pools containing two volatile assets.
+    Twocrypto pools are liquidity pools containing two volatile assets, for example CRV <> ETH.
 
     [:octicons-arrow-right-24: `Getting started`](./creating-a-twocrypto-ng-pool.md)
 
@@ -38,7 +39,7 @@ To get started, visit the [**`Pool Creation`**](https://curve.fi/#/ethereum/crea
 
     ---
 
-    Tricrypto pools are liquidity pools containing three volatile assets.
+    Tricrypto pools are liquidity pools containing three volatile assets, for example crvUSD <> BTC <> ETH.
 
     [:octicons-arrow-right-24: `Getting started`](./creating-a-tricrypto-ng-pool.md)
 
