@@ -1,91 +1,142 @@
-<h1>Deploying a Stableswap-NG pool</h1>
+<h1>Creating a Stableswap-NG pool</h1>
+
+The Stableswap pool creation is appropriate for assets expected to hold a price peg very close to each other, like a pair of dollarcoins. The creation wizard will guide you through the process of creating a pool, but if you have questions throughout you are encouraged to speak with a member of the Curve team in the [**Telegram**](https://t.me/curvefi) or [**Discord**](https://discord.gg/rgrfS7W).
+
+Stableswap pools are liquidity pools containing **up to eight tokens** using the StableSwap algorithm (Curve V1). For a better understanding of Curve V1, please see here: [**Understanding Curve V1**](../base-features/understanding-curve.md).
+
 
 !!!info "Stableswap-NG"
-    For a better understanding of what Stableswap-NG is and how it differs from regular Stableswap pools, check [this](../lp/pools.md#stableswap-new-generation).
+    StableSwap-NG is an improved and refined version of the first StableSwap implementation. For a better understanding of what Stableswap-NG is and how it differs from regular Stableswap pools, check [this](../lp/pools.md#stableswap-new-generation).
 
 
-To start the pool creation process, navigate to the **`POOL CREATION`** tab and choose the **`Stableswap`** option.
+---
 
-<figure markdown>
-  ![](../images/stableswapng_first.png){ width="400" }
-  <figcaption></figcaption>
-</figure>
 
-## **Token Selection**
-The token selection tab can be used to select **between two and four tokens**.  
-A token can be selected by searching for the symbol of any token that is already being used on Curve, or by pasting the pool's address. Additional tokens can be added through the **`Add token`** button.
+## **Tokens in Pool**
 
-*StableSwap-NG supports various asset types:*
+The token selection tab can be used to select **between two and eight tokens**. A token can be selected by searching for the symbol of any token that is already being used on Curve, or by pasting the pool's address. Additional tokens can be added through the blue **`Add token`** button.
 
-- **Standard:** ERC20 tokens with no additional features.
-- **Oracle:** tokens with rate oracles (e.g., rETH or wsETH).
-- **Rebasing:** tokens that rebase (e.g., stETH).
-- **ERC4626:** tokens with a `convertToAssets` method (e.g., sDAI).
+When creating a metapool, only two tokens can be selected. One is the LP token, and the other is the token to pair against it.
 
-<figure markdown>
-  ![](../images/stableswap_token.png){ width="500" }
-  <figcaption></figcaption>
-</figure>
-
-!!!warning 
-    - **`ERC20:`** Users are advised to do careful due-diligence on ERC20 tokens that they interact with, as this contract **cannot differentiate between harmless and malicious** ERC20 tokens.
-    - **`Oracle:`** When using tokens with oracles, its important to know that they **may be controlled externally by an EOA**.
-    - **`Rebasing:`** Users and Integrators are advised to understand how the AMM contract works with rebasing balances.
+!!!warning
+    - **`ERC20:`** Users are advised to do careful due diligence on ERC20 tokens that they interact with, as this contract **cannot differentiate between harmless and malicious** ERC20 tokens.
+    - **`Oracle:`** When using tokens with oracles, it is important to know that they **may be controlled externally by an EOA**.
+    - **`Rebasing:`** Users and integrators are advised to understand how the AMM contract works with rebasing balances.
     - **`ERC4626:`** Some ERC4626 implementations **may be susceptible to Donation/Inflation attacks**. Users are advised to proceed with caution.
 
 
-### **Tokens with Oracles**
-Some tokens might require an oracle. In this case, when selecting a token that has an oracle, the corresponding box needs to be ticked, and an extra section for the contract address and oracle price method appears. Some tokens might retain their price oracle form a contract other than the token contract.
+---
 
-<figure markdown>
-  ![](../images/stableswapng_oracle.png){ width="500" }
+*For the AMM to function correctly, the appropriate asset type needs to be chosen when selecting the assets. The following asset types are supported:*
+
+### **Standard ERC-20**
+
+Standard ERC-20 tokens do not need any additional configuration.
+
+<figure markdown="span">
+  ![](../images/pool_creation/ss_erc20_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_erc20_light.png#only-light){ width="400" }
   <figcaption></figcaption>
 </figure>
+
+
+
+### **Tokens with Oracles**
+
+Some tokens might require an external rate oracle. In this case, when selecting a token that has an oracle, the corresponding box needs to be ticked, and an extra section for the contract address and oracle price method appears. Some tokens might retain their price oracle form a contract other than the token contract.
+
+<figure markdown="span">
+  ![](../images/pool_creation/ss_oracle_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_oracle_light.png#only-light){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+
+### **Rebasing Tokens**
+
+Rebasing tokens in crypto are cryptocurrencies that automatically adjust their supply periodically based on a predetermined algorithm, typically to maintain a stable value or peg to another asset. 
+
+<figure markdown="span">
+  ![](../images/pool_creation/ss_rebasing_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_rebasing_light.png#only-light){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+
+
+### **ERC-4626**
+
+ERC-4626 is a standard to optimize and unify the technical parameters of yield-bearing vaults. It provides a standard API for tokenized yield-bearing vaults that represent shares of a single underlying ERC-20 token. ERC-4626 also outlines an optional extension for tokenized vaults utilizing ERC-20, offering basic functionality for depositing, withdrawing tokens and reading balances.
+
+<figure markdown="span">
+  ![](../images/pool_creation/ss_erc4626_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_erc4626_light.png#only-light){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+
+
+---
 
 
 ## **Parameters**
-After selecting the tokens and possibly setting the oracles, parameters need to be set.
 
-Stableswap-NG offers two different default **Pool Parameter Presets**:
+*Stableswap-NG offers two different default Pool Parameter Presets:*
 
-<figure markdown>
-  ![](../images/stableswapng_preset.png){ width="400" }
+<figure markdown="span">
+  ![](../images/pool_creation/ss_presets_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_presets_light.png#only-light){ width="400" }
   <figcaption></figcaption>
 </figure>
 
-Depending on the choice of the preset, some predefined parameters will be chosen. These are recommended parameters based on the chosen option. Ultimately, parameter values can be freely selected within the supported ranges.
+
+---
 
 
-<figure markdown>
-  ![](../images/stableswapng_parameters.png){ width="400" }
+<figure markdown="span">
+  ![](../images/pool_creation/ss_parameters_advanced_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_parameters_advanced_light.png#only-light){ width="400" }
   <figcaption></figcaption>
 </figure>
 
-Stableswap-NG introduces a **dynamic fee**. The use of the `Offpeg Fee Multiplier` allows the system to dynamically adjust the fee based on the pool's state.
 
-A tool to play around with the dynamic fee: [https://www.desmos.com/calculator/zhrwbvcipo?](https://www.desmos.com/calculator/zhrwbvcipo?)
+- **`Swap Fee ranging from 0% to 1%`**: The swap fee charged during transactions.
+- **`A ranging from 1 to 5,000`**: The amplification coefficient, which defines the pool's density.
+- **`Offpeg Fee Multiplier from 0 to 12.5`**: A multiplier that adjusts the Swap Fee based on the pool's state.
+- **`Moving Average Time ranging from 60 to 3600 seconds`**: The moving average time window for the built-in oracle.
 
-- **`Swap Fee`**: The swap fee charged during transactions.
-- **`A`**: The amplification coefficient, which defines the pool's density.
-- **`Offpeg Fee Multiplier`**: A multiplier that adjusts the Swap Fee based on the pool's state.
-- **`Moving Average Exp Time`**: The moving average time window for the built-in oracle.
+
+!!!info "`Offpeg Fee Multiplier`"
+
+    Stableswap-NG introduces a **dynamic fee**. The use of the `Offpeg Fee Multiplier` allows the system to dynamically adjust the fee based on the pool's state.
+
+    A tool to play around with the dynamic fee: [https://www.desmos.com/calculator/zhrwbvcipo?](https://www.desmos.com/calculator/zhrwbvcipo?)
+
+
+---
 
 
 ## **Pool Info**
 
-Finally, after setting all the parameters, **`name`** and **`symbol`** can be chosen:
+Finally, after setting all the parameters, a **`Pool Name`** and **`Pool Symbol`** can be chosen:
 
-<figure markdown>
-  ![](../images/stableswapng_poolinfo.png){ width="500" }
+<figure markdown="span">
+  ![](../images/pool_creation/ss_info_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_info_light.png#only-light){ width="400" }
   <figcaption></figcaption>
 </figure>
 
+
+---
 
 ## **Deploying the Pool**
 
 On the right-hand side, there is a tab that summarizes all the tokens, parameters, and information. The pool can finally be deployed by pressing the blue **`Create Pool`** button at the bottom.
 
-<figure markdown>
-  ![](../images/stableswapng_summary.png){ width="300" }
+<figure markdown="span">
+  ![](../images/pool_creation/ss_summary_dark.png#only-dark){ width="300" }
+  ![](../images/pool_creation/ss_summary_light.png#only-light){ width="300" }
   <figcaption></figcaption>
 </figure>
+
+After deployment, make sure to seed initial liquidity and [**create a gauge**](../reward-gauges/creating-a-pool-gauge.md).

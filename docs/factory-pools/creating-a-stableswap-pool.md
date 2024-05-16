@@ -26,6 +26,10 @@ If your pool contains rebasing tokens (a token that adjusts its total supply to 
 
 The UI will not check to see if a pool containing your token pairs already exists. Some protocols have seen opportunities to create two pools containing the same assets but using different parameters (c/f [**stETH concentrated**](https://curve.fi/#/ethereum/pools/factory-v2-117/deposit)). In most cases you should take care to make sure your pool does not already exist.
 
+
+---
+
+
 ## **Pool Presets**
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FsYHljGrkzCAis3vfGUGH%2FScreenshot%202023-03-04%20at%2010.23.58%20AM.png?alt=media&token=a111575b-0a30-4639-b513-063b0d975c0b)
@@ -35,6 +39,10 @@ The "Pool Presets" tab contains a few scenarios that prepopulate appropriate par
 The Advanced options toggle includes a variety of options which may not apply to your case.
 
 ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FbFHfimAPjyfQ6YzVZFtu%2FScreenshot%202023-03-04%20at%2010.32.25%20AM.png?alt=media&token=0f0657e7-9c76-4c8b-8079-61375584c9cf)
+
+
+---
+
 
 ## **Parameters**
 
@@ -51,6 +59,10 @@ The A Parameter is set by default based on your selection on the prior tab. A hi
 After the pool launches, the DAO has the capability of adjusting the A parameter.
 
 [**Understanding Curve Pools**](../lp/understanding-curve-pools.md)
+
+
+---
+
 
 ## **Pool Info**
 
