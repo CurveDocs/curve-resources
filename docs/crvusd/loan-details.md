@@ -176,7 +176,7 @@ Losses are hard to quantify. There is no general rule on how big the losses are 
 The formula for health is below, this is visualized in the Health Calculator applet as well.
 
 $$\begin{aligned} \text{health} &= \frac{s \times (1-\text{liqDiscount}) + p}{\text{debt}} - 1 \\ 
-p &= \text{collateral} \times \text{priceAboveSoftLiq} \end{aligned}$$
+p &= \text{collateral} \times \text{priceAboveBands} \end{aligned}$$
 
 Where:
 
@@ -184,13 +184,14 @@ Where:
 - $\text{liqDiscount}$ : the liquidation discount for the market (how much to discount the collateral value for safety during hard-liquidation).
 - $\text{debt}$ : the debt of the user
 - $s$ : an estimation of how much crvUSD a user would have after converting all collateral through their bands in soft-liquidation.  This can be very roughly estimated as: $\text{collateral} \times \left( \frac{\text{softLiqUpperLimit} - \text{softLiqLowerLimit}}{2} \right)$
-- $p$ : The value between soft-liquidation and the current price.  Found by multiplying the amount of collateral by how far above soft-liquidation the current price is.  If user is in or below soft-liquidation, this value is 0.
+- $p$ : The value above the soft-liquidation bands.  Found by multiplying the amount of collateral by how far above soft-liquidation the current price is.  If user is in or below soft-liquidation, this value is 0.
 - $\text{collateral}$ - The amount of collateral a user has, e.g., if a user has 5 wBTC, this value is 5.
+- $\text{priceAboveBands}$ - The price difference between the oracle price and the top of the user's soft-liquidation range (upper limit of top band). See applet below.
 - $\text{collateralPrice}$ - The price of a single unit of the collateral asset, e.g., if the collateral asset is wBTC, this value is the price of 1 wBTC.
 
 ### **Health Calculator**
 
-*Use the applet below to simulate how health works, soft-liquidation losses are given as numbers in a comma separated list, the first number is the starting band onwards.*
+*Use the applet below to simulate how health works, soft-liquidation losses are given as numbers in a comma separated list, the first number is the starting band onwards.  The light blue shaded areas in the bands represent the value without using the soft-liquidation discounts, while the dark blue areas are the values after discounting.*
 
 <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
 <h4>Inputs:</h4>
@@ -365,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function generateBandData(basePrice, startN, finishN, A, collateral, oraclePrice, liqDiscount) {
     const softLiqLosses = document.getElementById('slLossesLiq').value.split(',').map(parseFloat);
-    const bands = Math.abs(finishN - startN);
+    const bands = Math.abs(finishN - startN + 1);
     const bandCollateral = collateral/bands;
     const data = [];
     const xTicks = [];
@@ -375,7 +376,7 @@ function generateBandData(basePrice, startN, finishN, A, collateral, oraclePrice
     let disTotalValue = 0;
     let collateralLeft = 0;
     for (let i = startN; i < finishN+1; i++) {
-        const softLiqLoss = softLiqLosses[i-startN];
+        const softLiqLoss = softLiqLosses[i-startN] || 0;
         const xMin = basePrice * Math.pow((A - 1) / A, i + 1);
         const xMax = basePrice * Math.pow((A - 1) / A, i);
         xAxisMin = xMin;
@@ -432,7 +433,7 @@ function generateBandData(basePrice, startN, finishN, A, collateral, oraclePrice
                 borderRadius: 1,
                 color: textColor,
                 drawTime: 'afterDatasetsDraw',
-                content: (ctx) => ['Band ' + Number(i), 'Collateral: ' + Number(thisBandCollateral.toPrecision(4)), 'Soft Liq Loss: ' + softLiqLoss + '%', 'Avg sell price: $' + Number(avgSell.toPrecision(4)), 'Collat Val: $' + Number(collatVal.toPrecision(4)), 'Liq Collat Val: $' + Number(discCollatVal.toPrecision(4)),'Lower Lim: $' + Number(xMin.toPrecision(4)), 'Upper Lim: $' + Number(xMax.toPrecision(4))],
+                content: (ctx) => ['Band ' + Number(i), 'Collateral: ' + Number(thisBandCollateral.toPrecision(4)), 'Soft Liq Loss: ' + softLiqLoss + '%', 'Avg sell price: $' + Number(avgSell.toPrecision(4)), 'Collat Val: $' + Number(collatVal.toPrecision(4)), 'Disc. Collat Val: $' + Number(discCollatVal.toPrecision(4)),'Lower Lim: $' + Number(xMin.toPrecision(4)), 'Upper Lim: $' + Number(xMax.toPrecision(4))],
                 },
                 enter({ element }, event) {
                     element.label.options.display = true;
