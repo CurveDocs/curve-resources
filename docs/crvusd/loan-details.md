@@ -243,11 +243,24 @@ Where:
 <canvas id="liqChart"></canvas>
 <br>
 <canvas id="healthChart"></canvas>
-<div style="text-align: center; margin-top: 5px;">
-  <p>Health: <span id="healthResult" style="background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span></p>
+<div style="display: flex; justify-content: center;">
+  <div style="text-align: right; margin-right: 10px;">
+    <p><strong>Health</strong> (including value above bands):</p>
+    <p><strong>Health</strong> (not including value above bands):</p>
+  </div>
+  <div>
+    <p>
+      <span id="healthResultGreen" style="color: green; background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span>
+    </p>
+    <p>
+      <span id="healthResultYellow" style="color: #D6B656; background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span>
+    </p>
+  </div>
 </div>
 </div>
+*The Curve UI will either show health adding value above bands or without that value based on how close to liquidation a user is.  If the active band (Oracle price band) is 3 or less bands away from the user's soft liquidation bands, the UI will show the health not including value above bands.  Otherwise it will show the health including the value above bands.*
 
+*The health values on the Curve UI and within smart contracts will always be slightly less than the values here.  Health is calculated by estimating the amount of crvUSD/debt tokens the collateral will be swapped for in each band.  This takes into account how much liquidity is in each band, the more liquidity in a band the less slippage Curve estimates will occur.  This slippage estimation slightly reduces a user's health.*
 
 ---
 
@@ -584,8 +597,10 @@ function updateHealthGraph(valueInBands, valueAboveBands, liqDiscount) {
 
     const ctx = document.getElementById('healthChart').getContext('2d');
 
-    var health = (totalValue/debt - 1)*100;
-    document.getElementById('healthResult').textContent = health.toFixed(2) + '%';
+    var healthGreen = (totalValue/debt - 1)*100;
+    var healthYellow = (disValueInBands/debt - 1)*100;
+    document.getElementById('healthResultGreen').textContent = healthGreen.toFixed(2) + '%';
+    document.getElementById('healthResultYellow').textContent = healthYellow.toFixed(2) + '%';
 
     const data = {
       labels: ['Discounted Value in Bands', 'Value Above Bands', 'Total Value', 'Debt'],
