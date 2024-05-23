@@ -85,6 +85,33 @@ The AMM works in a way that the collateral price within the AMM and the "regular
     Positions in soft-liquidation / de-liquidation are suffering losses due to the selling and buying of collateral. If the position is not in soft-liquidation, no losses occur. These losses decrease the health of the loan. Once a user's health is at 0%, the user's position may face a hard-liquidation, which closes the loan.
 
 
+### **Hard Liquidations**
+
+Hard liquidations occur when the [health](#loan-health) of a loan falls below 0%, allowing a liquidator to liquidate the loan. Anyone can act as a liquidator and liquidate eligible loans, but this is typically done by searchers.
+
+When a liquidator initiates the process, the following occurs within a single transaction, using a market with WETH collateral and crvUSD debt as an example:
+
+1. Any collateral which has been swapped to crvUSD in soft liquidation is transferred to Curve and removed from the user.
+2. The remaining crvUSD debt is repaid to Curve by the liquidator.
+3. The liquidator receives the remaining WETH collateral as a reward, which is normally more than the amount repaid.
+
+This process is illustrated in the image below:
+
+![Hard Liquidation](../images/llamma/hard-liquidation.svg#only-light){: .centered }
+![Hard Liquidation](../images/llamma/hard-liquidation-dark.svg#only-dark){: .centered }
+
+
+### **Bad Debt**
+
+**Bad debt occurs when a loan is not profitable to liquidate**.  This could happen for many reasons, including gas prices being higher than the profit from a liquidation, a sequencer being down on an L2, or simply no one searching for profitable liquidations in a new market.  It looks like the following:
+
+![Bad Debt](../images/llamma/bad-debt.svg#only-light){: .centered }
+![Bad Debt](../images/llamma/bad-debt-dark.svg#only-dark){: .centered }
+
+In this example no rational liquidator will begin the liquidation process because they will lose value by doing so.
+
+crvUSD is only minted on Ethereum and uses high-quality assets with strong liquidity to mitigate the risk of bad debt.  Due to these precautions, **bad debt is not expected to occur within the crvUSD minting system**. However, bad debt can and has occurred within specific Curve Lending markets, as they are permissionless and do not affect the integrity of the crvUSD stablecoin.
+
 ---
 
 
