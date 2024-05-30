@@ -86,7 +86,7 @@ Whether a liquidity provider, interested in governance, or exploring multi-chain
 
     Understand the Pool Factory and dive into the pool creation process.
 
-    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-factory.md)
+    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-creation-overview.md)
 
 -   :material-wrench:{ .lg .middle } **Troubleshooting**
 

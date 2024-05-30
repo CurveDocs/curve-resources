@@ -14,7 +14,7 @@ Before attempting to create a lending market, a curve pool for the ASSET paired 
 
 The easiest way to create a pool is through the official [Create Pool UI](https://curve.fi/#/ethereum/create-pool).
 
-There are also guides on creating a stableswap-ng pool [here](../factory-pools/creating-a-stableswap-ng-pool.md), and creating a twocrypto-ng/tricrypto-ng pool [here](../factory-pools/creating-a-cryptoswap-pool.md).
+Guides are available for creating a [stableswap-ng pool](../factory-pools/creating-a-stableswap-ng-pool.md), [twocrypto-ng pool](../factory-pools/creating-a-twocrypto-ng-pool.md), and a [tricrypto-ng pool](../factory-pools/creating-a-tricrypto-ng-pool.md).
 
 ---
 

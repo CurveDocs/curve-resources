@@ -19,4 +19,4 @@ As with any liquidity providing in blockchain, there are some smart contract ris
 # **Whitepaper**
 
 !!!pdf "CryptoSwap (Curve V2) Whitepaper"
-    For a detailed overview of Curve V2, please read the official [**whitepaper**](../pdf/crypto-pools-paper.pdf).
+    For a detailed overview of Curve V2, please read the official [**whitepaper**](../pdf/curve-cryptopools.pdf).

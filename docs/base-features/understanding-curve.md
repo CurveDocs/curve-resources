@@ -52,4 +52,4 @@ The [**Github repository**](https://github.com/curvefi) also open sources the bu
 # **Whitepaper**
 
 !!!pdf "StableSwap (Curve V1) Whitepaper"
-    For a detailed overview of Curve V1, please read the official [**whitepaper**](../pdf/stableswap-paper.pdf).
+    For a detailed overview of Curve V1, please read the official [**whitepaper**](../pdf/curve-stableswap.pdf).

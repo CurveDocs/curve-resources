@@ -5,7 +5,7 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
   - minify:
       minify_html: true
 
@@ -123,13 +123,14 @@ repo_url: https://github.com/CurveDocs/curve-resources
 
 
 nav:
+  - Home: index.md
   - Getting Started:
     - Understanding Curve (v1): base-features/understanding-curve.md  
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
 
   - CRV Token:
     - Understanding CRV: crv-token/crv-basics.md
-    - Tokenomics: crv-token/crv-tokenomics.md
+    - Supply & Distribution: crv-token/crv-tokenomics.md
     - Claiming Trading Fees: crv-token/claiming-trading-fees.md
 
   - veCRV:
@@ -210,6 +211,12 @@ nav:
     - Security: resources/security.md
     - Glossary: resources/glossary.md
     - Branding: resources/branding.md
+
+  - Whitepapers:
+    - Curve Stableswap (2019): pdf/curve-stableswap.pdf
+    - Curve DAO (2020): pdf/curve-dao.pdf
+    - Curve Cryptopools (2021): pdf/curve-cryptopools.pdf
+    - Curve Stablecoin (2022): pdf/curve-stablecoin.pdf
 
   - Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap

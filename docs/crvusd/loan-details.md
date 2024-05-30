@@ -144,17 +144,17 @@ Where:
 
 Use the calculator below to simulate how bands are shaped and how liquidity density changes with different parameters.  By definition the liquidity density will be 100% at band 1.  Liquidity density increases as band width decreases as more collateral will be spread over a smaller price range.
 
-<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+<div class="chart-container">
 <canvas id="ampChart"></canvas>
 <h4>Inputs:</h4>
 <div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
 <div class="input">
-    <label for="ampInput" style="margin-right: 10px;">A : </label>
-    <input type="number" id="ampInput" min="1" max="10000" step="1" value="30" style="font-size: 16px; width: 80px;">
-    <label for="numBandsInput" style="margin-left: 20px; margin-right: 10px;">N : </label>
-    <input type="number" id="numBandsInput" min="1" max="50" step="1" value="10" style="font-size: 16px; width: 80px;">
-    <label for="basePriceInput" style="margin-left: 20px; margin-right: 10px;">Base Price ($):</label>
-    <input type="number" id="basePriceInput" min="0.01" max="1000000" step="0.01" value="2000" style="font-size: 16px; width: 80px;">
+    <label for="ampInput" style="margin-right: 2%;">A : </label>
+    <input type="number" id="ampInput" min="1" max="10000" step="1" value="30" style="font-size: 16px; width: 15%;">
+    <label for="numBandsInput" style="margin-left: 3%; margin-right: 2%;">N : </label>
+    <input type="number" id="numBandsInput" min="1" max="50" step="1" value="10" style="font-size: 16px; width: 15%;">
+    <label for="basePriceInput" style="margin-left: 3%; margin-right: 2%;">Base Price ($):</label>
+    <input type="number" id="basePriceInput" min="0.01" max="1000000" step="0.01" value="2000" style="font-size: 16px; width: 20%;">
     </div>
 </div>
 </div>
@@ -193,7 +193,7 @@ Where:
 
 *Use the applet below to simulate how health works, soft-liquidation losses are given as numbers in a comma separated list, the first number is the starting band onwards.  The light blue shaded areas in the bands represent the value without using the soft-liquidation discounts, while the dark blue areas are the values after discounting.*
 
-<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+<div class="chart-container">
 <h4>Inputs:</h4>
 <div class="input">
   <div style="display: flex; justify-content: center;">
@@ -271,7 +271,7 @@ The `loan_discount` is used for finding the maximum LTV a user can have in a mar
 $$\text{maxLTV} = 1 - \text{loan_discount} - \frac{N}{2*A}$$
 
 
-<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+<div class="chart-container">
   <h3 style="margin-top: 0;">Maximum LTV Calculator</h3>
   <h4>Inputs:</h4>
   <div class="input">
@@ -294,7 +294,7 @@ $$\text{maxLTV} = 1 - \text{loan_discount} - \frac{N}{2*A}$$
 
 ## **Borrow Rate**
 
-The general idea is that **borrow rate increases when crvUSD goes down in value and decreases when crvUSD goes up in value**.  Also, contracts called [PegKeepers](https://docs.curve.fi/crvUSD/pegkeeper/) can also affect the interest rate and crvUSD peg by minting and selling crvUSD or buying and burning crvUSD.
+The general idea is that **borrow rate increases when crvUSD goes down in value and decreases when crvUSD goes up in value**.  Also, contracts called [PegKeepers](https://docs.curve.fi/crvUSD/pegkeepers/overview/) can also affect the interest rate and crvUSD peg by minting and selling crvUSD or buying and burning crvUSD.
 
 *The formula for the borrow rate is as follows:*
 
@@ -331,7 +331,7 @@ When the price of crvUSD in a pool is above 1.00, they are allowed to take on de
 
 If a PegKeeper has taken on debt by depositing crvUSD into a pool, it is able to withdraw those deposited crvUSD from the pool again. This can be done when the price is below 1.00. By withdrawing crvUSD, its token balance will decrease and the price within the pool increases.
 
-[:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.fi/crvUSD/pegkeeper/)
+[:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.fi/crvUSD/pegkeepers/overview/)
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
