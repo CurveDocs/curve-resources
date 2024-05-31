@@ -5,7 +5,7 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-#  - typeset
+  - typeset
   - minify:
       minify_html: true
 
@@ -111,7 +111,6 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
-  - stylesheets/highcharts.css
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -129,14 +128,12 @@ nav:
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
 
   - CRV Token:
-    - Understanding CRV: crv-token/crv-basics.md
-    - Supply & Distribution: crv-token/crv-tokenomics.md
-    - Claiming Trading Fees: crv-token/claiming-trading-fees.md
-
-  - veCRV:
-    - Overview: vecrv/overview.md
-    - Locking CRV: vecrv/locking-your-crv.md
-    - Vote-locking FAQ: vecrv/vote-locking-boost.md
+    - CRV Overview: crv-token/understanding-crv.md
+    - CRV Supply & Distribution: crv-token/crv-tokenomics.md
+    - Vote-Escrowed CRV (veCRV): crv-token/overview.md
+    - How to Lock CRV for veCRV: crv-token/locking-your-crv.md
+    - How to Claim veCRV Trading Fees: crv-token/claiming-trading-fees.md
+    - CRV & veCRV FAQ: crv-token/crv-basics.md
 
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md

@@ -2,10 +2,6 @@ This guide assumes the reader has already provided liquidity and is currently st
 
 One of the main incentives for CRV is the ability to boost rewards on provided liquidity. Vote locking CRV enables the acquisition of voting power to participate in the DAO and earn a boost of up to 2.5x on the liquidity provided on Curve.
 
-For questions about how the vote locking boost works, click below:
-
-[**Vote Locking**](../vecrv/vote-locking-boost.md)
-
 
 :logos-youtube: **Boosting your CRV rewards**
 
@@ -41,7 +37,8 @@ If the new boost is visible after 'Current boost:', then no further action is re
 
 If the current boost hasn't updated, it may be necessary to claim CRV from each of the gauges where liquidity is provided to update the boost. After doing so, the boost should be visible.
 
-*The boost will not be updated until a withdrawal, deposit, or claim is made from a liquidity gauge.*
+!!!info  "Locking your Boost"
+    Boosts are only updated when a withdrawal, deposit, or claim is made from a liquidity gauge
 
 
 ### **Boost Info**
