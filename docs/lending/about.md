@@ -378,4 +378,4 @@ For information relating to how to supply assets see [supplying assets page](./s
 
 For Frequently Asked Questions about Curve Lending see the [FAQ here](./faq.md)
 
-For more technical information especially relating to the underlying smart contracts please see the [Lending section within the Curve Docs](https://docs.curve.fi/lending/overview)
+For more technical information especially relating to the underlying smart contracts please see the [Lending section within the Curve Docs](https://docs.curve.fi/lending/overview/)
