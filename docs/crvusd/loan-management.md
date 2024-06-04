@@ -42,7 +42,7 @@ The data from all crvUSD loans so far has shown that for each band range a user 
     <canvas id="softLiqHistogram"></canvas>
 </div>
 
-<div class="centered2" markdown="block">
+<div class="centered" markdown="block">
 | band range | days of soft liq data | min loss/day | median loss/day | mean loss/day | std loss/day | max loss/day |
 |------------|-----------------------|------------------|---------------------|-------------------|------------------|-------------------|
 | **4-9**        | 4601.17                | 0%         | 0.0927%               | 0.93%             | 2.18%            | 38.93%            |

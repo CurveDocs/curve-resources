@@ -1,3 +1,27 @@
+<h1>Glossary</h1>
+
+This page should help any new user learn what people are talking about in different social channels or in these resources or the technical documentation.
+
+## **CurveV1**
+
+CurveV1 refers to first product Curve deployed, which was the stablecoin swap pools.  This term is used to describe any stable asset swap pool, e.g., USDT/USDC/DAI, stETH/ETH.
+
+## **CurveV2**
+
+CurveV2 was the second product Curve deployed, this was the cryptopool swap pools.  Cryptopools are swap pools which have assets which are not stable to each other, e.g., BTC/ETH/USDT, CRV/ETH.
+
+## **Stableswap**
+
+See [CurveV1](#curvev1).
+
+## **Cryptoswap**
+
+See [CurveV2](#curvev2)
+
+# **Liquid Lockers**
+
+Some projects offer to take CRV, lock it in a smart contract as veCRV and give a user tokens representing the veCRV in the smart contract.  These are called liquid lockers because the underlying veCRV is locked but can be transferred (is liquid).
+
 ## **3CRV**
 
 3CRV is the LP token for the 3Pool (sometimes referred to as TriPool). Trading fees are distributed in 3CRV.
@@ -42,20 +66,16 @@ Users providing liquidity (funds/assets) on the Curve or other DeFi protocols.
 
 When you deposit into a Curve pool, you receive a counter party token which represents your share of the pool.
 
-veCRV
+## **veCRV**
 
 Stands for vote-escrowed CRV. They are CRV locked for the purpose of voting and earning fees.
 
 [Understanding $CRV](../crv-token/understanding-crv.md)
 
+## **Vote-locked CRV**
+
+This term is used interchangeably with Vote-escrowed CRV and veCRV.
+
 ## **Yearn**
 
 Yearn Protocol is a set of Ethereum Smart Contracts focused on creating a simple way to generate high risk-adjusted returns for depositors of various assets via best-in-class lending protocols, liquidity pools, and community-made yield farming strategies on Ethereum. It was founded by Andre Cronje who has been a long term collaborator of Curve Finance.
-
-## **yCRV**
-
-yCRV is not wrapped CRV, it's a wrapped representation of ownership of yUSDC+yUSDT+yDAI+yTUSD deposits in the Curve Y pool (i.e. your share of the pool). Each pool on Curve has an LP token with a different name.
-
-## **yUSD (also yyCRV)**
-
-Yearn token wrapper that represents shares of the Y pool inside the Yearn Y Pool vault. It is a wrapped version of yCRV.

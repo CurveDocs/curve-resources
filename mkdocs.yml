@@ -111,7 +111,6 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
-  - stylesheets/highcharts.css
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -123,19 +122,18 @@ repo_url: https://github.com/CurveDocs/curve-resources
 
 
 nav:
+  - Home: index.md
   - Getting Started:
     - Understanding Curve (v1): base-features/understanding-curve.md  
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
 
   - CRV Token:
-    - Understanding CRV: crv-token/crv-basics.md
-    - Tokenomics: crv-token/crv-tokenomics.md
-    - Claiming Trading Fees: crv-token/claiming-trading-fees.md
-
-  - veCRV:
-    - Overview: vecrv/overview.md
-    - Locking CRV: vecrv/locking-your-crv.md
-    - Vote-locking FAQ: vecrv/vote-locking-boost.md
+    - CRV Overview: crv-token/understanding-crv.md
+    - CRV Supply & Distribution: crv-token/crv-tokenomics.md
+    - Vote-Escrowed CRV (veCRV): crv-token/overview.md
+    - How to Lock CRV for veCRV: crv-token/locking-your-crv.md
+    - How to Claim veCRV Trading Fees: crv-token/claiming-trading-fees.md
+    - CRV & veCRV FAQ: crv-token/crv-basics.md
 
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
@@ -210,6 +208,12 @@ nav:
     - Security: resources/security.md
     - Glossary: resources/glossary.md
     - Branding: resources/branding.md
+
+  - Whitepapers:
+    - Curve Stableswap (2019): pdf/curve-stableswap.pdf
+    - Curve DAO (2020): pdf/curve-dao.pdf
+    - Curve Cryptopools (2021): pdf/curve-cryptopools.pdf
+    - Curve Stablecoin (2022): pdf/curve-stablecoin.pdf
 
   - Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap

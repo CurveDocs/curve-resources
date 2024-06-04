@@ -432,13 +432,55 @@ h3 {
   display: none;
 }
 
-.centered {
-  display: block;
-  margin: 0 auto;
-}
-
 .input input {
-  padding: 8px;
+  padding: 1%;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.chart-container {
+  /* No default styles */
+}
+
+
+.chart-wrapper {
+  border: 1px solid hsl(0, 0%, 80%);
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 5px;
+}
+
+.chart-wrapper-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 720px) {
+  .chart-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 10px;
+  }
+  .chart-wrapper-container {
+    flex-direction: row;
+  }
+}
+
+.preset-button {
+  background-color: #f0f0f0;
+  border: none;
+  color: #333;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.preset-button:hover {
+  background-color: #ddd;
 }

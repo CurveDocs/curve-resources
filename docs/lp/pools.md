@@ -40,7 +40,7 @@ The Metapool in question would take GUSD and 3Pool LP tokens. This means that li
 
 # **StableSwap Pools**
 
-Stableswap pools utilize the stableswap invariant within liquidity pools. For a better understanding of how it works, see [**Understanding Curve (v1)**](https://resources.curve.fi/base-features/understanding-curve/) or read the [**whitepaper**](https://docs.curve.fi/pdf/stableswap-paper.pdf).
+Stableswap pools utilize the stableswap invariant within liquidity pools. For a better understanding of how it works, see [**Understanding Curve (v1)**](https://resources.curve.fi/base-features/understanding-curve/) or read the [**whitepaper**](https://resources.curve.fi/pdf/curve-stableswap.pdf).
 
 
 

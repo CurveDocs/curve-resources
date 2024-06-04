@@ -15,7 +15,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
     ---
 
-    Borrowers are the ones **borrowing assets**. To do so, they create a loan and put up some collateral. In exchange for borrowing, they pay a certain [Borrow Interest Rate (Borrow APY)](#borrow-apy).
+    Borrowers are the ones **borrowing assets**. To do so, they create a loan and put up some collateral. In exchange for borrowing, they pay a certain [Borrow Interest Rate (Borrow APY)](#borrow-rate).
 
     ---
 
@@ -25,7 +25,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
     ---
 
-    Lenders **supply their assets so they can be loaned to borrowers**. To do so, they deposit their assets into a [Vault](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). In exchange for supplying their assets, they are awarded a [Lending Interest Rate](#lend-apy).
+    Lenders **supply their assets so they can be loaned to borrowers**. To do so, they deposit their assets into a [Vault](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). In exchange for supplying their assets, they are awarded a [Lending Interest Rate](#lend-rate).
 
     ---
 
@@ -93,7 +93,7 @@ You can withdraw a supplied asset provided there are sufficient available (un-bo
 If there are insufficient available assets for a full withdrawal, you can withdraw the maximum amount currently available. The high utilization rate will cause Borrow APY and Lend APYs to increase, incentivizing borrowers to repay their loans, and more lenders to supply. As available supply increases you can withdraw your remaining balance over time.
 
 !!!warning "Bad Debt"
-    [Bad debt](../crvusd/loan-details.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.  It is recommended not to supply assets to markets with large amounts of bad debt.  Use [this notebook](https://try.vyperlang.org/user/saint-rat/lab/workspaces/auto-F/tree/baddebt.ipynb) or see the code on [github here](https://github.com/saint-rat/curve-notebooks/blob/main/bad_debt.ipynb) to find which markets have bad debt.  
+    [Bad debt](../crvusd/loan-details.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.  It is recommended not to supply assets to markets with large amounts of bad debt.  Use [this notebook](https://try.vyperlang.org/hub/user-redirect/lab/tree/shared/saint-rat/baddebt.ipynb) or see the code on [github here](https://github.com/saint-rat/curve-notebooks/blob/main/bad_debt.ipynb) to find which markets have bad debt.  
     
     *At the time of writing (May, 2024) no bad debt exists on Ethereum markets. On Arbitrum, two markets have bad debt - CRV/crvUSD: 1700 crvUSD bad debt, FXN/crvUSD: 39,000 crvUSD bad debt.*
 

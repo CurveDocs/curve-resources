@@ -37,7 +37,7 @@ Whether a liquidity provider, interested in governance, or exploring multi-chain
 
     Obtain veCRV by locking CRV tokens, which allows users to participate in governance, boost their LP rewards, and earn protocol accrued fees.
 
-    [:octicons-arrow-right-24: Learn More](./vecrv/overview.md)
+    [:octicons-arrow-right-24: Learn More](./crv-token/overview.md)
 
 -   :logos-crvusd:{ .lg .middle } **Stablecoin**
 
@@ -86,7 +86,7 @@ Whether a liquidity provider, interested in governance, or exploring multi-chain
 
     Understand the Pool Factory and dive into the pool creation process.
 
-    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-factory.md)
+    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-creation-overview.md)
 
 -   :material-wrench:{ .lg .middle } **Troubleshooting**
 
