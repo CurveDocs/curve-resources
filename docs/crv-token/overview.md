@@ -46,11 +46,11 @@ This means that if Alice locks 100 CRV for 4 years then Alice will receive 100 v
 
 ### **veCRV decay**
 
-The amount of veCRV a user has will decay over time as their unlock date draws closer.  The `lockTime` parameter in the equation above should more aptly be called `lockTimeLeft`.  In the above example if Alice locked 100 CRV for 4 years, then after 3 years she would only have 25 veCRV left as her lock time is now 1 year, if she relocked her CRV for another 4 years after 3 years, she would again have 100 veCRV and the 4 year lock would reset, the chart below shows this situation.  Users can withdraw their CRV at any time after their veCRV has decayed to 0 (lock time has expirted).
+The amount of veCRV a user has will decay over time as their unlock date draws closer.  The `lockTime` parameter in the equation above should more aptly be called `lockTimeLeft`.  In the above example if Alice locked 100 CRV for 4 years, after 3 years she would only have 25 veCRV left as her lock time is now 1 year.  If she relocked her CRV for another 4 years after 3 years, she would again have 100 veCRV and the 4 year lock would reset, the chart below shows this situation.
 
 <canvas id="decayChart"></canvas>
 
-The maximum duration of a lock is 4 years, users cannot lock for longer periods, instead they must re-lock to continue to keep their voting power at their desired level, e.g., 1 veCRV = 1 CRV.
+The maximum duration of a lock is 4 years, users cannot lock for longer periods, instead they must re-lock to continue to keep their voting power at their desired level, e.g., 1 veCRV = 1 CRV.  Users can withdraw their CRV at any time after their veCRV has decayed to 0 (lock time has expired).
 
 ---
 
