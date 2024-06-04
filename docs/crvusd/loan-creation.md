@@ -27,7 +27,7 @@ In the upper right-hand side of the screen, there is a toggle button for advance
 
 ---
 
-The advanced mode adds an additional display with more information about the current distribution across all the [**bands**](../crvusd/loan-details.md#bands) within the entire [**LLAMMA**](../crvusd/loan-details.md#llamma). 
+The advanced mode adds an additional display with more information about the current distribution across all the [**bands**](../crvusd/loan-details.md#bands-n) within the entire [**LLAMMA**](../crvusd/loan-details.md#llamma-and-liquidations).
 
 <figure markdown>
 ![](../images/tbtc_loan_details.png){ width="500" }

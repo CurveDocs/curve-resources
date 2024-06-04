@@ -32,7 +32,7 @@ On the upper right-hand side of the screen, switching to advanced mode provides 
   <figcaption></figcaption>
 </figure>
 
-In advanced mode the UI shows more information about the [**collateral bands**](#bands).
+In advanced mode the UI shows more information about the [**collateral bands**](#bands-n).
 
 <figure markdown>
   ![](../images/loan_details_3.png){ width="600" }

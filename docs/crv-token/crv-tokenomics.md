@@ -2,7 +2,7 @@
 
 There is a **fixed total supply of 3,030,303,032 CRV**.  No CRV tokens can ever be minted after that.  The total supply of CRV tokens allocated to different groups is shown below in the "CRV Total Allocation" chart.  **Not all CRV are currently minted or circulating**.  CRV tokens are slowly minted to the community each week and will continue to be released for over 300 years.  The amount of tokens minted each week is defined in the [community emissions section](#community-emissions).  
 
-Have a look over this page to learn about how CRV has been allocated and how much is distributed each week.  The [Emissions Calculator](#emissions-calculator) is a great tool see the statistics about CRV on any date.
+Have a look over this page to learn about how CRV has been allocated and how much is distributed each week.  The [Supply Calculator](#supply-calculator) is a great tool see the CRV supply and statistics on any date.
 
 ## **Total Supply Allocation**
 
@@ -21,16 +21,16 @@ The below chart shows the total allocation of CRV to different groups within the
 | Investors                                 | 108,129,756   | 3.57%      |
 | Employees                                 | 90,909,091    | 3%         |
 | Community Reserve                         | 151,515,152   | 5%         |
-| **Total**                             | **3,030,303,032** |  **100%**  |
+| **Total**                             | **3,030,303,031** |  **100%**  |
 </div>
 
-The above allocation shows that the **community will own 67% of all CRV** when the total supply is distributed, but note that **CRV tokens will continue to be distributed until 2376**, but meaningful distributions will stop in around 50 years, see [notable emissions years](#notable-emission-years) for how the yearly emissions will change over time.
+The above allocation shows that the **community will own 67% of all CRV** when the total supply is distributed, but note that **CRV tokens will continue to be distributed until 2376**, but meaningful distributions will stop in around 50 years, see [notable emissions years](#notable-emission-years) for how the yearly distribution will change over time.
 
 ---
 
 ## **Token Launch**
 
-CRV officially launched on the **13th of August 2020**.  At the time of launch there were no unlocked tokens.  **All** tokens in the launch were linearly vested for 1-4 years (gradually unlocking over a period of 1-4 years).  The initial supply is quoted as 1,303,030,303 because tokens were minted into the vesting contracts, which gradually unlocked them.  Below shows the allocation to different groups of the initial distribution.
+CRV officially launched on the **13th of August 2020**.  At the time of launch there were no unlocked tokens.  **All** tokens in the launch were linearly vested for 1-4 years (gradually unlocking over a period of 1-4 years).  The initial supply is quoted as 1,303,030,303 because these tokens were pre-mined and sent into the vesting contracts, which gradually unlocked them.  Below shows the allocation to different groups of the initial distribution.
 
 <div class="centered">
   <canvas id="crvLaunchChart"></canvas>
@@ -51,10 +51,10 @@ CRV officially launched on the **13th of August 2020**.  At the time of launch t
 
 [^2]: These tokens had no vesting themselves, but the contract they are allocated to creates other vesting contracts. When tokens are allocated from this pool they create a child vesting contract with a minimum 1 year vesting period.
 
-The circulating supply was 0 at launch. Each day of the first year approx. 750k tokens were given for providing liquidity and 1.65million tokens were vested.  This severely limited liquidity of the CRV token at launch creating high volatility.  Use the [emissions calculator below](#emissions-calculator) to see how quickly tokens became liquid and circulating.
+The circulating supply was 0 at launch. Each day of the first year approx. 750k tokens were emitted to the community for providing liquidity and 1.65million tokens were vested (unlocked).  Use the [supply calculator below](#supply-calculator) to see how quickly tokens became liquid and circulating.
 
 !!!tip
-    Full release schedule here: [https://dao.curve.fi/releaseschedule](https://dao.curve.fi/releaseschedule), or as a google spreadsheet [here](https://docs.google.com/spreadsheets/d/1AEH3XIaQCriE3sItqhhp2RQen3VDzqBB/edit#gid=1654552765) (credit to blockworks research).
+    6 year CRV release schedule is available here: [https://dao.curve.fi/releaseschedule](https://dao.curve.fi/releaseschedule), or the full release schedule is available as a google spreadsheet [here](https://docs.google.com/spreadsheets/d/1kFFdaLCX8ISM7yzvfUmuz151QiRzrFfaljCzEiO6sus/edit?usp=sharing).
 
 ---
 
@@ -68,11 +68,19 @@ $$\text{Yearly Community Emissions} = \frac{274,815,283}{2^{\text{year}/4}}$$
 
 Where `year` is the number of years after 13th August 2020, e.g., year 1 emissions are for the period 13th August 2021 until 13th August 2022.  The emissions for year 10 are for the period of 11th August 2030 - 11th August 2031 (2 leap years with 366 days, yet Curve assumes all years have 365 days), this would come to 48,580,938 CRV emitted for that year.
 
-This means that **community emissions continue for 355 years**.  As CRV has 18 decimal places, the last 0.000000000000000001 of CRV will be distributed in year 2376.  **Emissions are hardcoded and cannot change**.  See the [notable emission years](#notable-emission-years) below, or have a play with the [emissions calculator](#emissions-calculator) to see how much CRV will be distributed and to who in different years.
+In the smart contracts the yearly community emissions is not defined, it's actually defined as a rate of CRV emitted per second, we can convert between the yearly and per second value using the following formula:
+
+$$\text{Emission Rate} = \frac{\text{Yearly Community Emissions}}{365 \times 84600}$$
+
+We divide by $365 \times 84600$ because there is 365 days in a year and 86400 seconds in a day.
+
+The emission rate has 18 decimal places, this means that **emissions continue for 245 years**.  The emission rate will be 0.000000000000000001 CRV/sec in year 2265.  **Emissions are hardcoded and cannot change**.  See the [notable emission years](#notable-emission-years) below, or have a play with the [supply calculator](#supply-calculator) to see how much CRV will be distributed and to who in different years.
+
+See [this section](./crv-basics.md#how-does-the-yearly-emissions-reduction-work) of the FAQ for how the yearly reduction works.  See [this section](./crv-basics.md#how-is-crv-minted) for how CRV is minted and added to the supply.
 
 ### **CRV Emissions for the next 10 years**
 
-See below for a chart of how the CRV will be distributed each year for the next 10 years.  This year (2024), is the last year of the Core Team's CRV allocation vesting.  After August 12th, 2024 all CRV emissions will be distributed to the community through gauges, and CRV inflation will fall dramatically from 20.37% to 6.34% for the year.
+See below for a chart of how the CRV will be distributed each year for the next 10 years.  This year (2024), is the last year of the Core Team's CRV allocation vesting.  After August 12th, 2024 all CRV added to the circulating supply will be distributed to the community through gauges, and CRV inflation will fall dramatically from 20.37% to 6.34% for the year.
 
 *Note: dashed lines are percentage values and relate to the percentage axis, other lines relate to the CRV amount axis, click on datasets to turn them on/off.*
 
@@ -80,7 +88,7 @@ See below for a chart of how the CRV will be distributed each year for the next 
 
 ### **Notable Emission Years**
 
-As CRV will continue to be distributed for the next 355 years, interesting years of CRV distribution are noted below.
+As CRV will continue to be distributed for 245 years, interesting years of CRV distribution are noted below.  See the [google spreadsheet here](https://docs.google.com/spreadsheets/d/1kFFdaLCX8ISM7yzvfUmuz151QiRzrFfaljCzEiO6sus/edit?usp=sharing) for data for all years.
 
 <div class="centered" markdown="block">
 | Year | Date Start | Date Finish | CRV Emissions        | Note                                 |
@@ -88,18 +96,20 @@ As CRV will continue to be distributed for the next 355 years, interesting years
 | 5    | 2025-08-12 | 2026-08-12  | 115,545,593          | Last year emissions > 100M |
 | 19   | 2039-08-09 | 2040-08-08  | 10,212,884           | Last year emissions > 10M  |
 | 32   | 2052-08-05 | 2053-08-05  | 1,073,497            | Last year emissions > 1M   |
-| 45   | 2065-08-02 | 2066-08-02  | 112,837              | Last year emissions > 100k     |
-| 58   | 2078-07-30 | 2079-07-30  | 11,860               | Last year emissions > 10k      |
-| 72   | 2092-07-26 | 2093-07-26  | 1,048                | Last year emissions > 1k       |
-| 85   | 2105-07-24 | 2106-07-24  | 110.1                | Last year emissions > 100         |
-| 98   | 2118-07-21 | 2119-07-21  | 11.58                | Last year emissions > 10          |
-| 112  | 2132-07-17 | 2133-07-17  | 1.023                | Last year emissions > 1           |
-| 355  | 2375-05-20 | 2376-05-19  | 0.000000000000000001 | Last year of emissions               |
+| 45   | 2065-08-02 | 2066-08-02  | 112,837              | Last year emissions > 100k |
+| 58   | 2078-07-30 | 2079-07-30  | 11,860               | Last year emissions > 10k  |
+| 72   | 2092-07-26 | 2093-07-26  | 1,048                | Last year emissions > 1k   |
+| 85   | 2105-07-24 | 2106-07-24  | 110.1                | Last year emissions > 100  |
+| 98   | 2118-07-21 | 2119-07-21  | 11.58                | Last year emissions > 10   |
+| 112  | 2132-07-17 | 2133-07-17  | 1.023                | Last year emissions > 1    |
+| 245  | 2264-06-15 | 2265-06-15  | 0.000000000031536000 | Last year of emissions     |
 </div>
 
 ---
 
-## **Emissions Calculator**
+## **Supply Calculator**
+
+*Vesting CRV tokens were pre-minted but locked in a contract which slowly unlocks them over a period of years.  Unlocked vesting tokens are called vested.  CRV Emissions are minted as they are claimed by users.  There may be a slight discrepancy between the values shown here and the values on Ethereum based on users not claiming their mintable/vested tokens.  This calculator also assumes the community Reserve tokens were vested for a 1 year period.  This is not completely true as they are vested for at least 1 year once allocated to a cause by the DAO.*
 
 <div class="chart-container">
 <div style="display: flex; align-items: center;">
@@ -114,12 +124,18 @@ As CRV will continue to be distributed for the next 355 years, interesting years
 <div id="errorMessage" style="color: red; margin-left: 10px;"></div>
 <div class="chart-wrapper-container">
     <div class="chart-wrapper" style="flex: 1;">
+        <div style="display: flex;">
+        <span style="text-align: center; margin-top: 5px; margin-right: 10px; flex: 2; font-weight: bold;">Total CRV Circulating</span>
+        </div>
       <div class="centered" style="width=65%;">
         <canvas id="totalChart" class="emission-chart"></canvas>
       </div>
       <div id="totalAmounts"></div>
     </div>
     <div class="chart-wrapper" style="flex: 1;">
+      <div style="display: flex;">
+      <span style="text-align: center; margin-top: 5px; margin-right: 10px; flex: 2; font-weight: bold;">Daily CRV Added to Circulating</span>
+      </div>
       <div class="centered" style="width=65%;">
         <canvas id="dailyChart" class="emission-chart"></canvas>
       </div>
@@ -153,7 +169,7 @@ function calcVestingAmount(chosenDate, vestingYears, vestingAmount) {
   if (daysDiff < (365*vestingYears)) {
     var vestedPerDay = vestingAmount / (365*vestingYears);
     var totalVested = vestedPerDay * daysDiff;
-    return [totalVested, vestedPerDay];
+    return [totalVested+vestedPerDay, vestedPerDay];
   } else {
     return [vestingAmount,0];
   }
@@ -186,7 +202,7 @@ function calcEmissionsAmount(chosenDate) {
   const partialYearEmissions = currentDailyEmissions * daysInCurrentYear;
   totalEmissions += partialYearEmissions;
 
-  return [totalEmissions, currentDailyEmissions];
+  return [totalEmissions+currentDailyEmissions, currentDailyEmissions];
 }
 
 function calcAmounts(chosenDate) {
@@ -196,14 +212,16 @@ function calcAmounts(chosenDate) {
     const coreTeam = calcVestingAmount(chosenDate, 4, 800961153);
     const investors = calcVestingAmount(chosenDate, 2, 108129756);
     const employees = calcVestingAmount(chosenDate, 2, 90909091);
-    const reserve = 151515152;
+    const reserve = calcVestingAmount(chosenDate, 1, 151515152);
+    const vestingTotal = 1303030303;
 
-    totalEmitted = community[0] + earlyUsers[0] + coreTeam[0] + investors[0] + employees[0] + reserve;
-    dailyEmitted = community[1] + earlyUsers[1] + coreTeam[1] + investors[1] + employees[1];
+    totalEmitted = community[0] + earlyUsers[0] + coreTeam[0] + investors[0] + employees[0] + reserve[0];
+    dailyEmitted = community[1] + earlyUsers[1] + coreTeam[1] + investors[1] + employees[1] + reserve[1];
     yearlyEmitted = dailyEmitted * 365;
     inflationRate = yearlyEmitted / totalEmitted * 100;
     maxSupply = 3030303032;
     percentEmitted = totalEmitted / maxSupply * 100;
+    vestingRemaining = vestingTotal - earlyUsers[0] - coreTeam[0] - investors[0] - employees[0] - reserve[0];
 
     const amounts = {
         emissionsTotal: community[0],
@@ -216,13 +234,15 @@ function calcAmounts(chosenDate) {
         investorsDaily: investors[1],
         employeesTotal: employees[0],
         employeesDaily: employees[1],
-        reserveTotal: reserve,
+        reserveTotal: reserve[0],
+        reserveDaily: reserve[1],
         totalEmitted: totalEmitted,
         dailyEmitted: dailyEmitted,
         yearlyEmitted: yearlyEmitted,
         inflationRate: inflationRate,
         maxSupply: maxSupply,
-        percentEmitted: percentEmitted
+        percentEmitted: percentEmitted,
+        vestingRemaining: vestingRemaining
     };
     return amounts;
 }
@@ -260,7 +280,7 @@ function renderCharts() {
             roundedAmounts.coreTeamTotal,
             roundedAmounts.investorsTotal,
             roundedAmounts.employeesTotal,
-            amounts.reserveTotal
+            roundedAmounts.reserveTotal
             ],
             backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#8E5EA2', '#3cba9f', '#e8c3b9']
         }]
@@ -269,8 +289,8 @@ function renderCharts() {
         responsive: true,
         plugins: {
             title: {
-                display: true,
-                text: 'Total CRV Emitted'
+                display: false,
+                text: 'Total CRV Circulating'
             }
         }}
     });
@@ -278,24 +298,25 @@ function renderCharts() {
     dailyChart = new Chart(dailyCtx, {
         type: 'pie',
         data: {
-        labels: ['Community', 'Early Users', 'Core Team', 'Investors', 'Employees'],
+        labels: ['Community', 'Early Users', 'Core Team', 'Investors', 'Employees', 'Reserve'],
         datasets: [{
             data: [
             roundedAmounts.emissionsDaily,
             roundedAmounts.earlyUsersDaily,
             roundedAmounts.coreTeamDaily,
             roundedAmounts.investorsDaily,
-            roundedAmounts.employeesDaily
+            roundedAmounts.employeesDaily,
+            roundedAmounts.reserveDaily
             ],
-            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#8E5EA2', '#3cba9f']
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#8E5EA2', '#3cba9f', '#e8c3b9']
         }]
         },
         options: {
         responsive: true,
         plugins: {
             title: {
-                display: true,
-                text: 'Daily CRV Emissions'
+                display: false,
+                text: 'Daily CRV Added to Circulating'
             }
         }}
     });
@@ -304,9 +325,15 @@ function renderCharts() {
     const totalAmountsElement = document.getElementById('totalAmounts');
     totalAmountsElement.innerHTML = `
         <div style="display: flex;">
+        <span style="text-align: center; margin-top: 15px; margin-right: 10px; flex: 2; font-weight: bold;">Total Emissions</span>
+        </div>
+        <div style="display: flex; border-bottom: 1px solid #ddd;">
         <span style="text-align: right; margin-right: 10px; flex: 2;">Community:</span>
         <span style="text-align: left; flex: 2;">${roundedAmounts.emissionsTotal.toLocaleString(undefined)}</span>
         <span style="text-align: left; flex: 1.3; color: grey">${(amounts.emissionsTotal/amounts.totalEmitted*100).toFixed(2)} %</span>
+        </div>
+        <div style="display: flex;">
+        <span style="text-align: center; margin-right: 10px; flex: 2; font-weight: bold;">Total Vested</span>
         </div>
         <div style="display: flex;">
         <span style="text-align: right; margin-right: 10px; flex: 2;">Early Users:</span>
@@ -328,7 +355,7 @@ function renderCharts() {
         <span style="text-align: left; flex: 2;">${roundedAmounts.employeesTotal.toLocaleString(undefined)}</span>
         <span style="text-align: left; flex: 1.3; color: grey">${(amounts.employeesTotal/amounts.totalEmitted*100).toFixed(2)} %</span>
         </div>
-        <div style="display: flex;">
+        <div style="display: flex; border-bottom: 1px solid #ddd;">
         <span style="text-align: right; margin-right: 10px; flex: 2;">Reserve:</span>
         <span style="text-align: left; flex: 2;">${roundedAmounts.reserveTotal.toLocaleString(undefined)}</span>
         <span style="text-align: left; flex: 1.3; color: grey">${(amounts.reserveTotal/amounts.totalEmitted*100).toFixed(2)} %</span>
@@ -344,9 +371,15 @@ function renderCharts() {
     const dailyAmountsElement = document.getElementById('dailyAmounts');
     dailyAmountsElement.innerHTML = `
         <div style="display: flex;">
+        <span style="text-align: center; margin-top: 15px; margin-right: 10px; flex: 2; font-weight: bold;">Daily Emissions</span>
+        </div>
+        <div style="display: flex; border-bottom: 1px solid #ddd;">
         <span style="text-align: right; margin-right: 10px; flex: 2;">Community:</span>
         <span style="text-align: left; flex: 2;">${roundedAmounts.emissionsDaily.toLocaleString(undefined)}</span>
         <span style="text-align: left; flex: 1.3; color: grey">${(amounts.emissionsDaily/amounts.dailyEmitted*100).toFixed(2)} %</span>
+        </div>
+        <div style="display: flex;">
+        <span style="text-align: center; margin-right: 10px; flex: 2; font-weight: bold;">Daily Vested</span>
         </div>
         <div style="display: flex;">
         <span style="text-align: right; margin-right: 10px; flex: 2;">Early Users:</span>
@@ -373,43 +406,52 @@ function renderCharts() {
         <span style="text-align: left; flex: 2;">${(0).toLocaleString(undefined)}</span>
         <span style="text-align: left; flex: 1.3; color: grey">${(0).toFixed(2)} %</span>
         </div>
-        <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2; font-weight: bold;">Total:</span>
+        <div style="display: flex; border-top: 1px solid #ddd;">
+        <span style="text-align: right; margin-right: 10px; flex: 2; font-weight: bold;">Daily Total:</span>
         <span style="text-align: left; flex: 2; font-weight: bold;">${(Math.round(amounts.dailyEmitted)).toLocaleString(undefined)}</span>
         <span style="text-align: left; flex: 1.3; color: grey"></span>
         </div>
     `;
 
+
     // Update the daily amounts
     const totalEmissionsElement = document.getElementById('totalEmissions');
     totalEmissionsElement.innerHTML = `
-    <div style="text-align: center; font-weight: bold;">CRV Stats on ${chosenDateString}</div>
+    <div style="text-align: center; font-weight: bold;border-bottom: 1px solid #ddd;">CRV Stats on ${chosenDateString}</div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">Max CRV supply :</span>
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Max CRV Supply :</span>
         <span style="text-align: left; flex: 2;">${roundAmount(amounts.maxSupply).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">Total CRV circulating :</span>
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Total CRV Circulating :</span>
         <span style="text-align: left; flex: 2;">${roundAmount(amounts.totalEmitted).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">Remaining CRV emissions :</span>
-        <span style="text-align: left; flex: 2;">${roundAmount(amounts.maxSupply - amounts.totalEmitted).toLocaleString(undefined)}</span>
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Total CRV Minted :</span>
+        <span style="text-align: left; flex: 2;">${roundAmount(Math.max(1303030303+amounts.emissionsTotal,amounts.totalEmitted)).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">Percentage of CRV circulating :</span>
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Remaining CRV Emissions :</span>
+        <span style="text-align: left; flex: 2;">${roundAmount(amounts.maxSupply - amounts.totalEmitted - amounts.vestingRemaining).toLocaleString(undefined)}</span>
+    </div>
+    <div style="display: flex;">
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Remaining CRV Vesting :</span>
+        <span style="text-align: left; flex: 2;">${(amounts.vestingRemaining).toLocaleString(undefined)}</span>
+    </div>
+    <div style="display: flex;">
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Percentage of CRV Circulating :</span>
         <span style="text-align: left; flex: 2;">${amounts.percentEmitted.toLocaleString(undefined, { maximumFractionDigits: 2 })} %</span>
     </div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">Daily CRV emissions :</span>
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Daily CRV Emitted & Vested :</span>
         <span style="text-align: left; flex: 2;">${roundAmount(amounts.dailyEmitted).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">Yearly CRV emissions :</span>
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Yearly CRV Emitted & Vested :</span>
         <span style="text-align: left; flex: 2;">${roundAmount(amounts.yearlyEmitted).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">CRV Inflation rate :</span>
+        <span style="text-align: right; margin-right: 10px; flex: 2;">CRV Inflation Rate :</span>
         <span style="text-align: left; flex: 2;">${amounts.inflationRate.toLocaleString(undefined, { maximumFractionDigits: 2 })} %</span>
     </div>
 
@@ -447,12 +489,14 @@ function generateDatasets() {
     employeesTotal: [],
     employeesYearly: [],
     reserveTotal: [],
+    reserveYearly: [],
     totalEmitted: [],
     dailyEmitted: [],
     yearlyEmitted: [],
     inflationRate: [],
     maxSupply: [],
     percentEmitted: [],
+    vestingRemaining: []
   };
 
   const startDate = new Date('2023-08-13');
@@ -464,6 +508,7 @@ function generateDatasets() {
     console.log(date);
 
     for (const key in amounts) {
+      
       let value;
       if (key === 'percentEmitted' || key === 'inflationRate') {
         value = parseFloat(amounts[key].toFixed(2));

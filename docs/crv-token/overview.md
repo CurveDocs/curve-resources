@@ -1,6 +1,6 @@
 <h1>Vote-escrowed CRV (veCRV)</h1>
 
-veCRV is an acronym for **vote-escrowed CRV**.  It represents CRV tokens that are locked in the voting escrow contract for a specified period. CRV is locked by sending it to the voting escrow smart contract.  Voting escrow holds the CRV for the time period a user locks for, in return the user is given veCRV.  **veCRV is not transferrable**.
+veCRV is an acronym for **vote-escrowed CRV**.  A contract called voting escrow holds the CRV for the time period a user locks for, in return the user is given veCRV.  **veCRV is not transferrable**.
 
 **Locking was a concept created to align incentives for governance**.  Many coin voting systems have a problem where someone can buy tokens off the market to influence a governance vote, then sell the tokens after the vote passed/failed.  These users can influence governance votes greatly and only take minimal risk by holding tokens for a few days.  Locking stops this happening.  Users must lock their tokens for a period of time to receive voting power, and users are rewarded with more voting power if they lock their tokens for a longer period of time.
 
@@ -46,9 +46,9 @@ This means that if Alice locks 100 CRV for 4 years then Alice will receive 100 v
 
 ### **veCRV decay**
 
-The amount of veCRV a user has will decay over time as their unlock date draws closer.  The `lockTime` parameter in the equation above should more aptly be called `lockTimeLeft`.  In the above example if Alice locked 100 CRV for 4 years, then after 3 years she would only have 25 veCRV left as her lock time is now 1 year.  The chart below shows the veCRV voting and earning power over time of a user who locks 100 CRV today for 4 years.  The user is able to withdraw their CRV at the end of the locked period if they do not choose to re-lock before this time.
+The amount of veCRV a user has will decay over time as their unlock date draws closer.  The `lockTime` parameter in the equation above should more aptly be called `lockTimeLeft`.  In the above example if Alice locked 100 CRV for 4 years, then after 3 years she would only have 25 veCRV left as her lock time is now 1 year, if she relocked her CRV for another 4 years after 3 years, she would again have 100 veCRV and the 4 year lock would reset, the chart below shows this situation.  Users can withdraw their CRV at any time after their veCRV has decayed to 0 (lock time has expirted).
 
-<canvas id="myChart"></canvas>
+<canvas id="decayChart"></canvas>
 
 The maximum duration of a lock is 4 years, users cannot lock for longer periods, instead they must re-lock to continue to keep their voting power at their desired level, e.g., 1 veCRV = 1 CRV.
 
@@ -83,22 +83,32 @@ These tokens are risky, the only way to guarantee being able to withdraw the sam
     // Get today's date
     const today = new Date();
 
-    // Calculate the end date (4 years from today)
     const endDate = new Date(today);
-    endDate.setFullYear(endDate.getFullYear() + 4);
+    const relockDate = new Date(today);
+    relockDate.setFullYear(endDate.getFullYear() + 3);
+    endDate.setFullYear(endDate.getFullYear() + 7);
+
 
     // Generate data points every 7 days
     const data = [];
     let currentDate = new Date(today);
-    while (currentDate <= endDate) {
+    
+    while (currentDate <= relockDate) {
         const x = (currentDate - today) / (1000 * 60 * 60 * 24); // Convert milliseconds to days
         const veCRV = 100 - 100*x / (4 * 365);
         data.push({ x: currentDate.toISOString().split('T')[0], y: veCRV});
         currentDate.setDate(currentDate.getDate() + 7);
     }
+    currentDate.setDate(currentDate.getDate() - 7);
+    while (currentDate <= endDate) {
+        const x = (currentDate - relockDate) / (1000 * 60 * 60 * 24); // Convert milliseconds to days
+        const veCRV = Math.min(100 - 100*x / (4 * 365), 100);
+        data.push({ x: currentDate.toISOString().split('T')[0], y: veCRV});
+        currentDate.setDate(currentDate.getDate() + 7);
+    }
 
     // Create the chart
-    const ctx = document.getElementById('myChart').getContext('2d');
+    const ctx = document.getElementById('decayChart').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -116,7 +126,7 @@ These tokens are risky, the only way to guarantee being able to withdraw the sam
             plugins: {
                 title: {
                     display: true,
-                    text: 'veCRV decay for 100 CRV locked for 4 years'
+                    text: 'veCRV decay for 100 CRV locked for 4 years then relocked after 3 years for another 4 years'
                 },
                 legend: {
                     display: false

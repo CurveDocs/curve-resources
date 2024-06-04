@@ -17,7 +17,8 @@ A common issue with sidechains is RPC networks that are temporarily or permanent
 ## **Curve Forks**
 
 !!!tip
-    For Bridges and CRV contract addresses on other chains please see [*Important Bridges*](../multichain/bridging-funds.md#important-bridges).
+    For Bridges and CRV contract addresses on other chains please see [*Important Bridges*](../multichain/understanding-multichain.md#
+    ).
 
 Curve forks include the following:
 

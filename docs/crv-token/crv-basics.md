@@ -17,7 +17,7 @@ CRV can be acquired in two ways:
 
 You can find the release schedule for the next six years at this address on the main UI: [**https://dao.curve.fi/inflation**](https://dao.curve.fi/inflation)​.
 
-There is also detailed documentation in the [Supply & Distribution](./crv-tokenomics.md#crv-emissions-for-the-next-10-years) about the CRV emissions for the next 10 years, and the [emissions calculator](./crv-tokenomics.md#emissions-calculator) can be used to see the emissions for any year.
+There is also detailed documentation in the [Supply & Distribution](./crv-tokenomics.md#crv-emissions-for-the-next-10-years) about the CRV emissions for the next 10 years, and the [supply calculator](./crv-tokenomics.md#supply-calculator) can be used to see the emissions for any year.
 
 ## **What is the current circulating supply?**
 
@@ -25,7 +25,7 @@ There are three ways to check the circulating supply:
 
 * On the main UI here: [**https://dao.curve.fi/inflation**](https://dao.curve.fi/inflation).
 
-* In the [emissions calculator](./crv-tokenomics.md#emissions-calculator) in these resources by looking at the statistics for today.
+* In the [supply calculator](./crv-tokenomics.md#supply-calculator) in these resources by looking at the statistics for today.
 
 * The [**on-chain contract**](https://etherscan.io/address/0x14139EB676342b6bC8E41E0d419969f23A49881e) (`0x14139EB676342b6bC8E41E0d419969f23A49881e`) which shows the circulating supply, net of locked or otherwise vested tokens.
 
@@ -91,3 +91,20 @@ Click below for a guide on how locking and boosting your CRV rewards
 If your boost is showing then it is active.
 
 If you have locked but your boost isn't showing then you need to apply it.
+
+## **How does the yearly emissions reduction work?**
+
+The emissions reduction can be triggered by anyone after the time period (exactly 365 days) has elapsed since the last emissions reduction.  This is done by calling the `update_mining_parameters` function on the `CRV` contract at the address [`0xD533a949740bb3306d119CC777fa900bA034cd52`](https://etherscan.io/token/0xD533a949740bb3306d119CC777fa900bA034cd52).
+
+When this is called a new epoch is started, triggering another 365 days.  If no one calls this function then CRV continues to be emitted at the current rate, and no new epoch is triggered.  If for example this was triggered 1 day late it would affect two important functions:
+
+* The CRV supply will be higher than the theoretical maximum of 3,030,303,031.8 CRV
+* The next emissions reduction will be delayed by 1 as the 365 day countdown begins 1 day late.
+
+This also means however, that each time a leap year happens the date at which someone can reduce the emissions will be brought forward one day of the year.
+
+## **How is CRV minted?**
+
+CRV can be minted by users who stake in gauges after they are allocated some to mint.  When this happens CRV tokens are minted into existence, added to the total supply and transferred to the user.
+
+If users choose to not mint until a later date, this can create a discrepancy between the theoretical supply of tokens and the real supply of tokens shown on block explorers.
