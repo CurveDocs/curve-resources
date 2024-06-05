@@ -34,4 +34,4 @@ Users must specify the amount of CRV they wish to lock and their preferred lock 
 
 
 !!!tip
-    **The amount of veCRV received per CRV when locking depends on the duration of the lock.** See the [formula here](overview.md#crv-to-vecrv-formula).
+    **The amount of veCRV received per CRV when locking depends on the duration of the lock.** See the [formula here](vecrv.md#crv-to-vecrv-formula).

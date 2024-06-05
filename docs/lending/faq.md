@@ -93,12 +93,12 @@ In other protocols, this may be referred to as a “liquidation threshold” and
 
 ### What is the borrow rate?
 
-The borrow rate is the variable interest rate charged on the debt of the loan. The borrow rate is solely determined by the [utilization](../lending/about.md#utilization-lend-apy-and-borrow-apy) of the market.
+The borrow rate is the variable interest rate charged on the debt of the loan. The borrow rate is solely determined by the [utilization](./overview.md#utilization-lend-apy-and-borrow-apy) of the market.
 
 
 ### How is the borrow rate calculated?
 
-For the calculation of the borrow rate, see [here](../lending/about.md#borrow-rate).
+For the calculation of the borrow rate, see [here](./overview.md#borrow-rate).
 
 
 ### What is the lend rate?
@@ -108,7 +108,7 @@ The lend rate is the variable interest rate a lender receives in exchange for le
 
 ### How is the lend rate calculated?
 
-For the calculation of the lend rate, see [here](../lending/about.md#lend-rate).
+For the calculation of the lend rate, see [here](./overview.md#lend-rate).
 
 
 ---
@@ -119,7 +119,7 @@ For the calculation of the lend rate, see [here](../lending/about.md#lend-rate).
 
 ### What are the risks of using crvUSD
 
-A risk disclaimer can be found [here](../resources/risks/crvusd.md)
+A risk disclaimer can be found [here](../risks-security/risks/crvusd.md)
 
 
 ### How can I best manage my risks when borrowing assets?
@@ -129,7 +129,7 @@ Best risk management practices include maintaining a safe collateralization rati
 
 ### Has the lending system been audited?
 
-Yes. All public audits can be found [here](https://docs.curve.fi/references/audits/audits_pdf/).
+Yes. All public audits can be found [here](https://docs.curve.fi/references/audits/).
 
 
 ### Can I see the code?

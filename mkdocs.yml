@@ -128,24 +128,24 @@ nav:
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
 
   - CRV Token:
-    - CRV Overview: crv-token/understanding-crv.md
-    - CRV Supply & Distribution: crv-token/crv-tokenomics.md
-    - Vote-Escrowed CRV (veCRV): crv-token/overview.md
+    - CRV Overview: crv-token/overview.md
+    - CRV Supply & Distribution: crv-token/supply-distribution.md
+    - Vote-Escrowed CRV (veCRV): crv-token/vecrv.md
     - How to Lock CRV for veCRV: crv-token/locking-your-crv.md
     - How to Claim veCRV Trading Fees: crv-token/claiming-trading-fees.md
-    - CRV & veCRV FAQ: crv-token/crv-basics.md
+    - CRV & veCRV FAQ: crv-token/faq.md
 
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Loan Details & Concepts: crvusd/loan-details.md
-    - Loan Strategies: crvusd/loan-management.md
+    - Loan Strategies: crvusd/loan-strategies.md
     - crvUSD FAQ: crvusd/faq.md
 
   - Curve Lending:
-    - Overview: lending/about.md
-    - How to Borrow: lending/loan-creation.md
-    - How to Supply: lending/supplying-assets.md
+    - Overview: lending/overview.md
+    - How to Borrow: lending/how-to-borrow.md
+    - How to Supply: lending/how-to-supply.md
     - Lending FAQ: lending/faq.md
     - How to Create a Market: lending/create-lending-market.md
 
@@ -173,7 +173,6 @@ nav:
   - Governance:
     - Understanding governance: governance/understanding-governance.md
     - Voting: governance/voting.md
-    - Snapshot: governance/snapshot.md
     - Proposals:
       - Community fund: governance/proposals/community-fund.md
       - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
@@ -183,6 +182,7 @@ nav:
     - crvUSD: multichain/crvusd.md
     - Understanding multi-chain: multichain/understanding-multichain.md
     - Bridging funds: multichain/bridging-funds.md
+    - How to Bridge crvUSD to BSC: multichain/bridging-crvusd-to-bsc.md
 
   - Factory Pools:
     - Pool Creation Overview: factory-pools/pool-creation-overview.md
@@ -191,23 +191,18 @@ nav:
     - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
     - Understanding oracles: factory-pools/understanding-oracles.md
 
-  - Troubleshooting:
+  - Support & Troubleshooting:
     - Support: troubleshooting/support.md
-    - Cross-Asset swaps: troubleshooting/cross-asset-swaps.md
     - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
     - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
     - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
 
-  - Useful Resources:
+  - Risks, Security & Audits: 
     - Risks: 
-      - Liquidity Pools: resources/risks/pool.md
-      - crvUSD: resources/risks/crvusd.md
-      - Lending: resources/risks/lending.md
-    - Guides:
-      - Bridging: resources/guides/bridging.md
-    - Security: resources/security.md
-    - Glossary: resources/glossary.md
-    - Branding: resources/branding.md
+      - Liquidity Pools: risks-security/risks/pool.md
+      - crvUSD: risks-security/risks/crvusd.md
+      - Lending: risks-security/risks/lending.md
+    - Security & Audits: risks-security/security.md
 
   - Whitepapers:
     - Curve Stableswap (2019): pdf/curve-stableswap.pdf
@@ -216,9 +211,15 @@ nav:
     - Curve Stablecoin (2022): pdf/curve-stablecoin.pdf
 
   - Links:
+    - Branding & Icons: glossary-branding/branding.md
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://dao.curve.fi/
     - Github: https://github.com/curvefi/
     - Governance Forum: https://gov.curve.fi/
     - Twitter: https://twitter.com/curvefinance
     - Technical Docs: https://docs.curve.fi/
+
+  - Glossary: glossary-branding/glossary.md
+
+
+  

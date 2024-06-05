@@ -92,7 +92,7 @@ These pools contain tokens such as sDAI, which has a **`convertToAssets`** metho
 
 
 # **Crypto Pools**
-Crypto pools are pools that use a different market-making algorithm than the stableswap pools. For a better understanding of how pools with volatile assets work, see [**Understanding CryptoPools (v2)**](https://resources.curve.fi/base-features/understanding-curve/) or read the [**whitepaper**](https://docs.curve.fi/pdf/crypto-pools-paper.pdf).
+Crypto pools are pools that use a different market-making algorithm than the stableswap pools. For a better understanding of how pools with volatile assets work, see [**Understanding CryptoPools (v2)**](https://resources.curve.fi/base-features/understanding-crypto-pools/) or read the [**whitepaper**](../pdf/curve-cryptopools.pdf).
 
 Cryptoswap pools are pools that contain two volatile tokens.
 

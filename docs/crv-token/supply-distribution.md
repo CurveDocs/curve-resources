@@ -1,6 +1,6 @@
 <h1>CRV Supply and Distribution</h1>
 
-There is a **fixed total supply of 3,030,303,032 CRV**.  No CRV tokens can ever be minted after that.  The total supply of CRV tokens allocated to different groups is shown below in the "CRV Total Allocation" chart.  **Not all CRV are currently minted or circulating**.  CRV tokens are slowly minted to the community each week and will continue to be released for over 300 years.  The amount of tokens minted each week is defined in the [community emissions section](#community-emissions).  
+There is a **fixed total supply of 3,030,303,031 CRV**.  No CRV tokens can ever be minted after that.  The total supply of CRV tokens allocated to different groups is shown below in the "CRV Total Allocation" chart.  **Not all CRV are currently minted or circulating**.  CRV tokens are slowly minted to the community each week and will continue to be released for over 200 years.  The amount of tokens minted each week is defined in the [community emissions section](#community-emissions).  
 
 Have a look over this page to learn about how CRV has been allocated and how much is distributed each week.  The [Supply Calculator](#supply-calculator) is a great tool see the CRV supply and statistics on any date.
 
@@ -8,7 +8,7 @@ Have a look over this page to learn about how CRV has been allocated and how muc
 
 The below chart shows the total allocation of CRV to different groups within the Curve ecosystem.
 
-<div class="centered">
+<div class="centered" style="transform: scale(1.1);">
   <canvas id="crvAllocationChart"></canvas>
 </div>
 <br>
@@ -32,7 +32,7 @@ The above allocation shows that the **community will own 67% of all CRV** when t
 
 CRV officially launched on the **13th of August 2020**.  At the time of launch there were no unlocked tokens.  **All** tokens in the launch were linearly vested for 1-4 years (gradually unlocking over a period of 1-4 years).  The initial supply is quoted as 1,303,030,303 because these tokens were pre-mined and sent into the vesting contracts, which gradually unlocked them.  Below shows the allocation to different groups of the initial distribution.
 
-<div class="centered">
+<div class="centered" style="transform: scale(1.1);">
   <canvas id="crvLaunchChart"></canvas>
 </div>
 <br>
@@ -44,7 +44,7 @@ CRV officially launched on the **13th of August 2020**.  At the time of launch t
 | Investors                                 | 108,129,756   | 2             | [ 1 ]( https://etherscan.io/tx/0x5f762bc8e2929b76cf22936595b2e2a58cbaa9f31ec896bfaf63f798c4c65d38 ), [ 2 ]( https://etherscan.io/tx/0xcaf8fc449a2c28e13877f6e0dc3e12cb2ba585a86f771d92ae8959cc3303c5d4 ), [ 3 ]( https://etherscan.io/tx/0x2bada5103c3c1c64879125b8832961bc30a6e1524861272347e9f32a9593a084 ) |
 | Employees                                 | 90,909,091    | 2             | [ 1 ]( https://etherscan.io/tx/0xe99a98d6aa3ee2413c58a28c9505be123e02399336364ab47e10bf13102816f1 ), [ 2 ]( https://etherscan.io/tx/0xb84eb0488e9696e063ce829cfad38aeaced814c54d897078fdc7267c567b0f8e )                                                                                                      |
 | Community Reserve                         | 151,515,152   | N/A[^2]       | [1]( https://etherscan.io/tx/0x3f9aa0ff15fbd00cce60e36f32f25d6f85a43a19d983100d98007a84609f861a )                                                                                                                                                                                                             |
-| **Total**                             | **1,303,030,303** |  **100%**  |  [1](https://etherscan.io/tx/0x5dc4a688b63cea09bf4d73a695175b77572792a2e2b3656297809ad3596d4bfe)  |
+| **Total**                             | **1,303,030,303** |    |  [1](https://etherscan.io/tx/0x5dc4a688b63cea09bf4d73a695175b77572792a2e2b3656297809ad3596d4bfe)  |
 </div>
 
 [^1]: This was vested through the public vesting contract
@@ -58,9 +58,9 @@ The circulating supply was 0 at launch. Each day of the first year approx. 750k 
 
 ---
 
-## **Community Emissions**
+## **Community Emissions (CRV Inflation)**
 
-Community emissions are minted and allocated to gauges based on the weekly weight gauge vote.  Gauges have a very flexible design and can direct emissions to liquidity pools and suppliers of a lending market, or even to funding for the Vyper programming language.
+Community emissions (regularly called CRV Inflation) are minted and allocated to gauges based on the weekly weight gauge vote.  Gauges have a very flexible design and can direct emissions to liquidity pools and suppliers of a lending market, or even to funding for the Vyper programming language.
 
 Community emissions reduce each year.  They are modelled off the Bitcoin Halving which halves the allocation every 4 years, in Curve however, we reduce rewards by $2^{\frac{1}{4}}$ every 365 days instead.  This works out to be approx. 16% each year and 50% every 4 years.  Community emissions were initially set at 274,815,283 CRV for the first year.  This means the formula for how much CRV is emitted to the community in any year is:
 
@@ -76,7 +76,7 @@ We divide by $365 \times 84600$ because there is 365 days in a year and 86400 se
 
 The emission rate has 18 decimal places, this means that **emissions continue for 245 years**.  The emission rate will be 0.000000000000000001 CRV/sec in year 2265.  **Emissions are hardcoded and cannot change**.  See the [notable emission years](#notable-emission-years) below, or have a play with the [supply calculator](#supply-calculator) to see how much CRV will be distributed and to who in different years.
 
-See [this section](./crv-basics.md#how-does-the-yearly-emissions-reduction-work) of the FAQ for how the yearly reduction works.  See [this section](./crv-basics.md#how-is-crv-minted) for how CRV is minted and added to the supply.
+See [this section](./faq.md#how-does-the-yearly-emissions-reduction-work) of the FAQ for how the yearly reduction works.  See [this section](./faq.md#how-is-crv-minted) for how CRV is minted and added to the supply.
 
 ### **CRV Emissions for the next 10 years**
 
@@ -109,7 +109,7 @@ As CRV will continue to be distributed for 245 years, interesting years of CRV d
 
 ## **Supply Calculator**
 
-*Vesting CRV tokens were pre-minted but locked in a contract which slowly unlocks them over a period of years.  Unlocked vesting tokens are called vested.  CRV Emissions are minted as they are claimed by users.  There may be a slight discrepancy between the values shown here and the values on Ethereum based on users not claiming their mintable/vested tokens.  This calculator also assumes the community Reserve tokens were vested for a 1 year period.  This is not completely true as they are vested for at least 1 year once allocated to a cause by the DAO.*
+*Accuracy Disclaimer*: ***This calculator is theoretical based on vesting schedules and smart contract formulae***. *It does not pull data from the Ethereum blockchain.  It may show slightly different values because users can wait any period of time before minting CRV from liquidity emissions, or unlocking claimable tokens from vesting contracts.  It is also assumed that community reserve tokens are vested for a 1 year period.  This is not completely true as they are vested for at least 1 year once allocated to a cause by the DAO.*
 
 <div class="chart-container">
 <div style="display: flex; align-items: center;">
@@ -146,6 +146,18 @@ As CRV will continue to be distributed for 245 years, interesting years of CRV d
     <div id="totalEmissions"></div>
   </div>
 </div>
+
+Definition of terms in the calculator:
+
+* `Vesting/Vested` - Vesting tokens are locked for a time period.  Vested tokens are unlocked as the vesting time period elapsed.
+* `Emissions/Emitted` - Emissions are CRV Inflation from newly minted CRV increasing the supply.  Emitted are the CRV which were added to the supply.
+* `Max CRV Supply` - Unchanging value, the max CRV that can exist.
+* `Total CRV Circulating` - The total supply of CRV unlocked from vesting and released from community emissions.  Including rewards that can currently be claimed/minted by users.
+* `Total CRV Supply` - The amount of minted CRV which currently exists, including pre-mined CRV locked in vesting contracts.
+* `Remaining CRV Emissions` - Remaining amount of CRV to be emitted to the community.
+* `Remaining CRV Vesting` - Remaining CRV to be unlocked from vesting contracts.
+* `Percentage of CRV Circulating` - Measure of the max CRV supply compared to the current circulating supply.  `Total CRV Circulating` divided by `Max CRV Supply`.
+* `CRV Inflation Rate` - Measure of the yearly CRV emitted & vested compared to the current circulating supply.  `Yearly CRV Emitted & Vested` divided by `Total CRV Circulating`.
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -286,6 +298,7 @@ function renderCharts() {
         }]
         },
         options: {
+        devicePixelRatio: 2.5,
         responsive: true,
         plugins: {
             title: {
@@ -297,6 +310,7 @@ function renderCharts() {
 
     dailyChart = new Chart(dailyCtx, {
         type: 'pie',
+        devicePixelRatio: 2.5,
         data: {
         labels: ['Community', 'Early Users', 'Core Team', 'Investors', 'Employees', 'Reserve'],
         datasets: [{
@@ -427,7 +441,7 @@ function renderCharts() {
         <span style="text-align: left; flex: 2;">${roundAmount(amounts.totalEmitted).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">Total CRV Minted :</span>
+        <span style="text-align: right; margin-right: 10px; flex: 2;">Total CRV Supply :</span>
         <span style="text-align: left; flex: 2;">${roundAmount(Math.max(1303030303+amounts.emissionsTotal,amounts.totalEmitted)).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
@@ -436,7 +450,7 @@ function renderCharts() {
     </div>
     <div style="display: flex;">
         <span style="text-align: right; margin-right: 10px; flex: 2;">Remaining CRV Vesting :</span>
-        <span style="text-align: left; flex: 2;">${(amounts.vestingRemaining).toLocaleString(undefined)}</span>
+        <span style="text-align: left; flex: 2;">${(roundAmount(amounts.vestingRemaining)).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
         <span style="text-align: right; margin-right: 10px; flex: 2;">Percentage of CRV Circulating :</span>
@@ -587,6 +601,7 @@ new Chart(crv10yearChartctx, {
     ],
   },
   options: {
+    devicePixelRatio: 2.5,
     scales: {
       x: {
         type: 'time',
@@ -699,6 +714,7 @@ new Chart(crv10yearChartctx, {
             }]
         },
         options: {
+            devicePixelRatio: 2.5,
             responsive: true,
             plugins: {
                 tooltip: {
@@ -749,6 +765,7 @@ new Chart(crv10yearChartctx, {
             }]
         },
         options: {
+            devicePixelRatio: 2.5,
             responsive: true,
             plugins: {
                 tooltip: {

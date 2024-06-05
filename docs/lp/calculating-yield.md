@@ -10,7 +10,7 @@ Curve UI displaying different types of displayed Curve yield (tAPY and tAPR).
 
 In the above screenshot you can see a Curve pool has the potential to offer many different types of yield. The documentation provides an overview of the different types of yield here:
 
-[**Understanding CRV**](../crv-token/understanding-crv.md)
+[**Understanding CRV**](../crv-token/overview.md)
 
 It’s important to remember that these numbers are a projections of historical pool performance. The user would get this rate if the pool performance stays exactly the same for one year.
 
@@ -95,7 +95,7 @@ These parameters are obtained from various data sources, mostly on-chain:
     
 The magic number `12614400` is number of seconds in a year `(60 * 60 * 24 * 365 = 31536000)` times 0.4. In this case the 0.4 is due to the effect of boosts (minimum boost of 1 / maximum boost of 2.5 = 0.4).
 
-As shown in the UI, all tAPR values are displayed as a range, with the base rate on the left of the arrow representing the default rate one would receive if the user has no boost, and the value on the right of the arrow representing the maximum value a user could receive if the user has the maximum boost, which is 2.5 times higher than the minimum boost. Further details about calculating boosts [**are provided here**](https://resources.curve.fi/governance/vote-locking-boost#how-is-your-boost-calculated).
+As shown in the UI, all tAPR values are displayed as a range, with the base rate on the left of the arrow representing the default rate one would receive if the user has no boost, and the value on the right of the arrow representing the maximum value a user could receive if the user has the maximum boost, which is 2.5 times higher than the minimum boost. Further details about calculating boosts [**are provided here**](../reward-gauges/boosting-your-crv-rewards.md).
 
 For developers, here are relevant links to the technical documentation:
 

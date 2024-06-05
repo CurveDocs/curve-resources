@@ -9,6 +9,4 @@
 
 
 !!!info
-    To have a protocol's asset icon deployed on the Curve frontend, the icon needs to be added to the [`curve-assets`](https://github.com/curvefi/curve-assets) repository on GitHub.
-
-    Please consider the following [template](https://github.com/curvefi/curve-assets/blob/main/pull_request_template.md).
+    To have a protocol's asset icon deployed on the Curve frontend, the icon needs to be added to the [`curve-assets`](https://github.com/curvefi/curve-assets) repository on GitHub.  See the repository for more information.

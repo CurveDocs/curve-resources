@@ -62,13 +62,13 @@ Using the `OneWay Lending Factory` will add the pool to the Curve UI and deploy 
 
 ### **Deploying a Gauge**
 
-A **Curve lending market requires a gauge** linked to the supply vault **before suppliers can stake their [vault shares](./about.md#supply-vault-share-tokens) to receive incentives/rewards**.  A gauge can be easily deployed through the `OneWay Lending Factory` by calling the `deploy_gauge` method and supplying the newly created `vault` contract address.  **Anyone can deploy a gauge** for a market that does not have one.
+A **Curve lending market requires a gauge** linked to the supply vault **before suppliers can stake their [vault shares](./overview.md#supply-vault-share-tokens) to receive incentives/rewards**.  A gauge can be easily deployed through the `OneWay Lending Factory` by calling the `deploy_gauge` method and supplying the newly created `vault` contract address.  **Anyone can deploy a gauge** for a market that does not have one.
 
 ### **Receiving CRV rewards from weekly emissions**
 
 Before a gauge is eligible to receive CRV from weekly emissions, it must be added to the `Gauge Controller` contract, the contract is deployed on Ethereum [here](https://etherscan.io/address/0x2F50D538606Fa9EDD2B11E2446BEb18C9D5846bB).  To be added to the `Gauge Controller` the CurveDAO must vote to add the lending market's gauge.  See [here](../reward-gauges/creating-a-pool-gauge.md#submit-a-dao-vote) for how to create a vote to add a gauge to the `Gauge Controller`.
 
-Once a Curve lending market has a gauge added to the `Gauge Controller` and it receives some [gauge weight](../reward-gauges/gauge-weights.md), the suppliers will receive CRV rewards when they stake their [vault shares](./about.md#supply-vault-share-tokens) into the gauge.
+Once a Curve lending market has a gauge added to the `Gauge Controller` and it receives some [gauge weight](../reward-gauges/gauge-weights.md), the suppliers will receive CRV rewards when they stake their [vault shares](./overview.md#supply-vault-share-tokens) into the gauge.
 
 ### **Adding other incentives for suppliers**
 
@@ -96,7 +96,7 @@ $$\text{max_LTV} = 1 - \text{loan_discount} - \frac{N}{2*A}$$
 
 ### **Borrowing Interest Rates**
 
-When creating a market the creator must define the `min_borrow_rate` and `max_borrow_rate` of the market.  Use the tool below to simulate how [utilization](./about.md#utilization-rate) affects borrowing and lending interest rates.  In the smart contracts the rates they are given as **interest per second**, converting from a desired `APR` to a `borrow_rate` in interest per second is as follows:
+When creating a market the creator must define the `min_borrow_rate` and `max_borrow_rate` of the market.  Use the tool below to simulate how [utilization](./overview.md#utilization-rate) affects borrowing and lending interest rates.  In the smart contracts the rates they are given as **interest per second**, converting from a desired `APR` to a `borrow_rate` in interest per second is as follows:
 
 $$\text{borrow_rate} = \frac{\text{APR}}{\text{seconds_in_year}} = \frac{\text{APR}}{86400 \times 365}$$
 

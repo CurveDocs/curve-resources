@@ -70,7 +70,7 @@ When you deposit into a Curve pool, you receive a counter party token which repr
 
 Stands for vote-escrowed CRV. They are CRV locked for the purpose of voting and earning fees.
 
-[Understanding $CRV](../crv-token/understanding-crv.md)
+[Understanding $CRV](../crv-token/overview.md)
 
 ## **Vote-locked CRV**
 
