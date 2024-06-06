@@ -8,6 +8,20 @@ plugins:
   - typeset
   - minify:
       minify_html: true
+  - redirects:
+      redirect_maps:
+        "crv-token/crv-basics.md": "crv-token/faq.md"
+        "crv-token/crv-tokenomics.md": "crv-token/supply-distribution.md"
+        "lending/about.md": "lending/overview.md"
+        "lending/loan-creation.md": "lending/how-to-borrow.md"
+        "lending/supplying-assets.md": "lending/how-to-supply.md"
+        "crvusd/loan-management.md": "crvusd/loan-strategies.md"
+        "resources/branding.md": "glossary-branding/branding.md"
+        "resources/glossary.md": "glossary-branding/glossary.md"
+        "resources/risks/pool.md": "risks-security/risks/pool.md"
+        "resources/risks/crvusd.md": "risks-security/risks/crvusd.md"
+        "resources/risks/lending.md": "risks-security/risks/lending.md"
+        "resources/security.md": "risks-security/security.md"
 
 
 # extension
@@ -218,6 +232,7 @@ nav:
     - Governance Forum: https://gov.curve.fi/
     - Twitter: https://twitter.com/curvefinance
     - Technical Docs: https://docs.curve.fi/
+    - Telegram: https://t.me/curvefi
 
   - Glossary: glossary-branding/glossary.md
 

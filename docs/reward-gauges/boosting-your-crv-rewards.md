@@ -21,7 +21,7 @@ The calculator can be found at this address: [https://dao.curve.fi/minter/calc](
 
 After determining how much and for how long to lock, visit the following page: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MFw5TRvfmVRhy6M2vA0%2F-MFwBH-2tIa-f8oEODRQ%2Fimage.png?alt=media&token=9d7166c8-4231-4996-8fe2-27c0f7f4ae66)
+![Locking UI](../images/ui/lock.webp)
 
 Enter the amount to lock and select the expiry. Remember, locking is not reversible. The amount of veCRV received will depend on the amount and duration of the vote lock.
 

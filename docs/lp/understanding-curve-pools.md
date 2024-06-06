@@ -23,14 +23,14 @@ If trader 1 comes and exchange 100 DAI for 100 USDC, you would then have 1,100 D
 You can see those details for each pool and it is something you can take advantage of when depositing.
 
 <figure markdown="span">
-  ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2Fd7dTKDeNENM7MoLMpmpC%2FScreen%20Shot%202022-11-14%20at%203.26.45%20AM.png?alt=media&token=ed5838c7-e4a9-408c-bccb-fc99af8d43e5){ width="500" }
+  ![Pool Balances](../images/ui/pool-balances.webp){ width="500" }
   <figcaption></figcaption>
 </figure>
 
 On the screenshot above for the [**TriCrypto v2 Pool**](https://curve.fi/#/ethereum/pools/tricrypto2/deposit), the three volatilely priced tokens are held in proportions similar to their price. If the coins are out of proportion traders are incentivized to take advantage of the arbitrage, which will push the balances in the pool back towards proportion
 
 <figure markdown="span">
-  ![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FdvMCRy7o4YBh8gBfkreP%2FScreen%20Shot%202022-11-14%20at%203.33.31%20AM.png?alt=media&token=a8a373dc-4c9e-4345-80f0-0679aee69415){ width="350" }
+  ![TriCrypto Swap](../images/ui/tricrypto-swap.webp){ width="350" }
   <figcaption></figcaption>
 </figure>
 

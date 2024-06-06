@@ -20,7 +20,7 @@ You can only vote using your voting weight at the block where a proposal was cre
 
 Simply visit the proposal of your choice, click your vote option and confirm your transaction. You can find DAO proposals at this address: [https://dao.curve.fi/dao](https://dao.curve.fi/dao)​
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MFaCWag3CMFEYuEYadw%2F-MFaDb4b2tFZeaizUTvP%2Fimage.png?alt=media&token=31b6463c-0fe9-4dae-9584-8864bca62569)
+![Voting UI](../images/ui/how-to-vote.webp)
 
 ## **Where can I find out about governance?**
 

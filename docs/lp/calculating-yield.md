@@ -1,10 +1,13 @@
 Explanation of how the Curve UI displays yield calculations
 
+!!!warning "Warning"
+    **This page is outdated and will be updated soon.**  Much of this information has changed.  If you need up to date information please check the [**new Technical Documentation**](https://docs.curve.fi/) or ask in the [**Curve Telegram**](https://t.me/curvefi).  There are some links here to the [**old Technical Documentation**](https://curve.readthedocs.io/), documentation there is also outdated.
+
 Like all documentation within this guide, this article is intended to be detailed but non-technical, outside of a few light mathematical formulas. While we highlight specific smart contract function names that the Curve UI may reference for convenience, no knowledge of coding is otherwise necessary to understand this article.
 
 # **Types of Yield**
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FuU5W9iUW3C2C8XLwunvN%2Fimage.png?alt=media&token=ea3b4fe0-1297-4df0-9f45-71860c323d60)
+![Curve Pools](../images/ui/pools.png)
 
 Curve UI displaying different types of displayed Curve yield (tAPY and tAPR).
 
@@ -30,7 +33,7 @@ When Curve pools are launched, they receive a value for both the **`fee`** (the 
 
 These fees are displayed on the Curve UI pool page:
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FOdWnoPKYUYbnkdJk3hcB%2Fimage.png?alt=media&token=8a6f3f31-39aa-413d-90b5-cdd6cb9859a9)
+![UI Pool Fee](../images/ui/fee.png)
 
 These parameters may also be updated in the future by the Curve DAO by calling the **`commit_new_fee`** method. If the fees are in the process of being changed, these are readable in the smart contract via the **`future_fee`** and **`future_admin_fee`** methods.
 
@@ -46,8 +49,7 @@ $$
 
 In other words, the vAPY measures the change in the pool’s _**"virtual price"**_ between today and yesterday, then annualizes this rate. The _**"virtual price"**_ is a measure of the pool growth over time, and is viewable directly on the UI.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FqqcRLlYyvbn5A0bDD4WN%2Fimage.png?alt=media&token=f237c6ce-a9d6-4947-b419-35525b1752c3)
-
+![Virtual Price](../images/ui/virtual-price.webp)
 
 The UI receives this value directly by calling the **`get_virtual_price`** method on the pool contract.
 
@@ -85,7 +87,7 @@ These parameters are obtained from various data sources, mostly on-chain:
 *   **`inflation_rate:`** The inflation rate of the $CRV token, accessed from the `rate` function of the $CRV token.
 *   **`relative_weight:`** Based on weekly voting, each Curve pool rewards gauge has a weighting relative to all other Curve gauges. This value can be calculated by calling the same function on the Curve [**gauge controller contract**](https://curve.readthedocs.io/dao-gauges.html#the-gauge-controller).
     
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FkbK4WEzw5h5a4KRPjvt5%2Fimage.png?alt=media&token=7b88916f-c1ca-47c4-bb1c-5ba90180ef6a)
+![Gauge Weights](../images/ui/gauge-weights.webp)
 
 ​[https://dao.curve.fi/](https://dao.curve.fi/)​
 
@@ -108,11 +110,11 @@ For developers, here are relevant links to the technical documentation:
 
 All pools may permissionlessly stream other token rewards without approval from the Curve DAO. The UI displays these bonus rewards only when applicable. In the example of stETH below, note how the pool is streaming $LDO tokens in addition to $CRV rewards.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FeVepA0567eDpywgwnLm5%2Fimage.png?alt=media&token=ac4507a4-8ef3-4647-9dc7-e43ba1e595e7)
+![tAPR Rewards](../images/ui/tAPR.webp)
 
 ​[**Pool Overview Page**](https://curve.fi/#/ethereum/pools)​
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FflHlTfGPJlMu6UWF8TSo%2Fimage.png?alt=media&token=0877737d-7d27-48be-8461-0c6184b771bd)
+![stETH Pool Overview](../images/ui/steth-overview.webp)
 
 ​[**stETH Pool Page**](https://curve.fi/#/ethereum/pools/steth/deposit)​
 

@@ -7,11 +7,11 @@ If Curve has lost transaction of your cross asset swap, do not panic, there is a
 
 Visit your address on Etherscan and click on ERC721:
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MR9ubqWLHIRfrYKO2XU%2F-MRADY08qo-NU8_dmOF9%2Fimage.png?alt=media&token=463fc70f-57a6-4e87-8dc1-4591529a9db3)
+![Etherscan ERC721](../images/etherscan-erc721.webp)
 
 And then click on your latest cross-asset swap, you should find a long string of numbers like below:
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MR9ubqWLHIRfrYKO2XU%2F-MRADoI1nOzkj6rWw7qK%2Fimage.png?alt=media&token=0f9c4500-c221-44f7-b9a0-3cb68e99f52b)
+![Etherscan ERC721 ID](../images/etherscan-erc721-id.webp)
 
 ## **Initiate recovery**
 

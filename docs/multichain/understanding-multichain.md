@@ -2,7 +2,7 @@ Curve exists across several chains, with several more planned. Curve's primary c
 
 All of Curve's active chains can be found in the "Networks" menu on the Curve homepage.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FrNRuEPvEd4oGghvN5GG5%2FScreen%20Shot%202022-11-14%20at%203.49.11%20AM.png?alt=media&token=50dc415d-ca51-4024-8eb2-0fda38ce7d3e)
+![Curve Networks UI](../images/ui/networks.png)
 
 > Supported Sidechains as of 11/14/2022
 
@@ -10,7 +10,7 @@ All of Curve's active chains can be found in the "Networks" menu on the Curve ho
 
 When you move to new chains, you will need to connect your wallet with the chain's RPC and chain ID. Generally Curve sidechain pages have a button you can press to automatically switch networks and populate this information for you.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FA850nJPaT929gFzF9WRo%2FScreen%20Shot%202022-11-14%20at%203.51.18%20AM.png?alt=media&token=867a6339-29e1-4c18-9266-6545f1f5f60f)
+![Connect Wallet UI](../images/ui/connect-wallet.webp)
 
 A common issue with sidechains is RPC networks that are temporarily or permanently unavailable. If you are having trouble connecting with RPC networks you may need to visit the chain's support networks to find a new RPC network.
 

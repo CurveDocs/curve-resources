@@ -1,6 +1,6 @@
 <h1>CRV Supply and Distribution</h1>
 
-There is a **fixed total supply of 3,030,303,031 CRV**.  No CRV tokens can ever be minted after that.  The total supply of CRV tokens allocated to different groups is shown below in the "CRV Total Allocation" chart.  **Not all CRV are currently minted or circulating**.  CRV tokens are slowly minted to the community each week and will continue to be released for over 200 years.  The amount of tokens minted each week is defined in the [community emissions section](#community-emissions).  
+There is a **fixed total supply of 3,030,303,031 CRV**.  No CRV tokens can ever be minted after that.  The total supply of CRV tokens allocated to different groups is shown below in the "CRV Total Allocation" chart.  **Not all CRV are currently minted or circulating**.  CRV tokens are slowly minted to the community each week and will continue to be released for over 200 years.  The amount of tokens minted each week is defined in the [community emissions section](#community-emissions-crv-inflation).  
 
 Have a look over this page to learn about how CRV has been allocated and how much is distributed each week.  The [Supply Calculator](#supply-calculator) is a great tool see the CRV supply and statistics on any date.
 
