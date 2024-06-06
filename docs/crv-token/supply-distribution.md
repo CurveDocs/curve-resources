@@ -119,7 +119,9 @@ As CRV will continue to be distributed for 245 years, interesting years of CRV d
     </div>
     <button class="preset-button" onclick="setDate('2020-08-13')">Launch Day</button>
     <button class="preset-button" onclick="setDate(getCurrentDate())">Today</button>
+    <button class="preset-button" onclick="setDate(getNextReductionDate())">Next Reduction</button>
     <button class="preset-button" onclick="setDate('2040-08-13')">20 Years</button>
+
 </div>
 <div id="errorMessage" style="color: red; margin-left: 10px;"></div>
 <div class="chart-wrapper-container">
@@ -481,6 +483,19 @@ function getCurrentDate() {
   return new Date().toISOString().slice(0, 10);
 }
 
+function getNextReductionDate() {
+  const startDate = new Date('2020-08-13');
+  const currentDate = new Date();
+  
+  let nextEventDate = new Date(startDate);
+  
+  while (nextEventDate < currentDate) {
+    nextEventDate.setDate(nextEventDate.getDate() + 365);
+  }
+
+  return nextEventDate.toISOString().slice(0, 10);
+}
+
 function setDate(date) {
   document.getElementById('dateInput').value = date;
   renderCharts();
@@ -519,7 +534,6 @@ function generateDatasets() {
 
   for (let date = startDate; date <= endDate; date.setDate(date.getDate() + 365)) {
     const amounts = calcAmounts(date);
-    console.log(date);
 
     for (const key in amounts) {
       
@@ -546,8 +560,6 @@ const datasets = generateDatasets();
 
 /*['Community', 'Early Users', 'Core Team', 'Investors', 'Employees', 'Reserve'],
 ['#FF6384', '#36A2EB', '#FFCE56', '#8E5EA2', '#3cba9f', '#e8c3b9'] */
-
-console.log(datasets);
 
 new Chart(crv10yearChartctx, {
   type: 'line',
