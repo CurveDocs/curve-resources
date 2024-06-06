@@ -9,13 +9,13 @@ When selecting the **`"BORROW"`** tab from the [main UI](https://lend.curve.fi/#
   <figcaption></figcaption>
 </figure>
 
-`Collateral` displays the collateral token of the market, while `Borrow` shows the token which can be borrowed. `Borrow APY` represents the current [borrow rate](./about.md#borrow-rate).
+`Collateral` displays the collateral token of the market, while `Borrow` shows the token which can be borrowed. `Borrow APY` represents the current [borrow rate](./overview.md#borrow-rate).
 
 The `Available` column shows the amount of assets left to borrow and `Borrowed` is the total amount currently borrowed.
 
 `Supplied` shows the total amount of the borrowable token which has been supplied by users.
 
-The `Utilization (%)` is the ratio of `Borrowed` to `Supplied` tokens, see [here](./about.md#utilization-lend-apy-and-borrow-apy) for more information.
+The `Utilization (%)` is the ratio of `Borrowed` to `Supplied` tokens, see [here](./overview.md#utilization-lend-apy-and-borrow-apy) for more information.
 
 
 ---

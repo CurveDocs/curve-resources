@@ -12,13 +12,13 @@ If you want to understand how this works, you should know that Ethereum transact
 
 Visit Metamask and select "Settings", then "Advanced" and scroll down to find and enable "Customize transaction nonce".
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MH2RkfSqu_NcBcXAPRa%2F-MH2S7B2niRurKQcVHXA%2Fimage.png?alt=media&token=39bff9f2-732a-47cf-a132-8e926c7856be)
+![Metamask Settings](../images/metamask-settings.webp)
 
 ## **Finding your pending transaction nonce**
 
 Visit your address on Etherscan and click on your pending transaction. If you scroll down you will find "Nonce":
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MH2RkfSqu_NcBcXAPRa%2F-MH2SPevpAo5kwTwxPpJ%2Fimage.png?alt=media&token=9d685855-1deb-42ce-bc13-e966d05c6dcb)
+![Etherscan Nonce](../images/etherscan-nonce.webp)
 
 Write down this nonce and return to Metamask.
 
@@ -28,6 +28,6 @@ Now that you have your nonce, go back to Ethereum and send yourself 0 Ethereum, 
 
 Make sure your gas price is suitable this time by checking [https://ethgasstation.info/](https://ethgasstation.info/) for example.
 
-![](https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MFA0rQI3SzfbVFgp3Ic%2F-MH2RkfSqu_NcBcXAPRa%2F-MH2SUNTxULYUYeHdZBE%2Fimage.png?alt=media&token=5611c4a4-d26a-4c58-9a18-8b115503874a)
+![Metamask Nonce](../images/metamask-settings.webp)
 
 Confirm your transaction and that's it. Your 0 Ethereum transaction should be mined which will drop and replace your stuck transaction which you can confirm on Etherscan.

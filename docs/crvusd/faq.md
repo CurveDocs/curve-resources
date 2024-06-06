@@ -143,7 +143,7 @@ Best risk management practices include maintaining a safe collateralization rati
 
 ### Has crvUSD been audited?
 
-Yes, please read the full crvUSD [**MixByte audit**](https://github.com/mixbytes/audits_public/tree/master/Curve%20Finance/Curve%20Stablecoin%20(crvUSD)) and other audits for Curve may be published to [**Github**](https://github.com/curvefi/security-incident-reports/tree/main/audits).
+Yes, please see the audits here [**Curve Stablecoin Audits**](https://docs.curve.fi/references/audits/#curve-stablecoin-and-lending).
 
 
 ### Can I see the code?

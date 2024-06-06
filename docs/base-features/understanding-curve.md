@@ -16,7 +16,7 @@ Liquidity pools are pools of tokens that sit in smart contracts and can be excha
 
 Curve pools may have several different percentages shown next to them in the UI.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FqKa9dimsxzJ2Zl0paYEQ%2FScreen%20Shot%202022-11-14%20at%203.21.19%20AM.png?alt=media&token=49c819a1-8b2c-4306-8f0b-7a3ad37682a7)
+![Pools UI](../images/pools.webp)
 
 The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Any activity on every Curve pool generates fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](../lp/understanding-curve-pools.md).
 
@@ -26,7 +26,7 @@ The second column refers to the reward gauges. This entitles liquidity providers
 
 CRV token is a governance and utility token for Curve.
 
-[**Understanding CRV**](../crv-token/understanding-crv.md)
+[**Understanding CRV**](../crv-token/overview.md)
 
 [**Understanding Governance**](../governance/understanding-governance.md)
 

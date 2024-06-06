@@ -4,7 +4,7 @@
 Providing liquidity on Curve doesn't come without risks. Before making a deposit, it is best to research and understand the risks involved.
 
 [Curve Whitepapers](https://docs.curve.fi/references/whitepapers/overview/)  
-[Smart Contract Audits](https://docs.curve.fi/references/audits/audits_pdf/)
+[Smart Contract Audits](https://docs.curve.fi/references/audits/)
 
 ---
 

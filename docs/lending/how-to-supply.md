@@ -12,7 +12,7 @@ By choosing the **`"SUPPLY"`** tab from the [main UI](https://lend.curve.fi/#/et
 
 `Supply` shows the underlying token of the vault which can be supplied. `Lend APY` is the current annualized rate for doing so.
 
-Additionally, vaults can have gauges, which are eligible to receive CRV emissions once they are added to the GaugeController. These rewards will show up in the `Rewards APR / CRV + Incentives` column if there are any.  See [here](./about.md#rewards-apr) for information about what's required to have CRV rewards.
+Additionally, vaults can have gauges, which are eligible to receive CRV emissions once they are added to the GaugeController. These rewards will show up in the `Rewards APR / CRV + Incentives` column if there are any.  See [here](./overview.md#rewards-apr) for information about what's required to have CRV rewards.
 
 `TVL` displays the total value locked into the vault.
 
@@ -86,7 +86,7 @@ The UI previews the amount of shares to be burned in order to receive the underl
 
     Vice versa: Withdrawing assets from the vault reduces the total amount of assets. This drives the utilization rate up, which increases the borrow rate and therefore also the lending rate.  
     
-    See [here](./about.md#utilization-lend-apy-and-borrow-apy) for more information about Utilization and how it affects lending and borrow rates
+    See [here](./overview.md#utilization-lend-apy-and-borrow-apy) for more information about Utilization and how it affects lending and borrow rates
 
 
 ---

@@ -6,7 +6,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
     The collateral used in Curve Lending markets does not back crvUSD. **All crvUSD within Curve Lending is supplied by users**.  Conversely, minting new crvUSD requires high-quality crypto collateral approved by the DAO.  The **crvUSD minting system is separate from the lending markets**. *[See here for more differences between Curve Lending and minting crvUSD](./faq.md#whats-the-difference-between-minting-crvusd-and-lending-markets)*.
 
 !!!danger "Curve Lending Risk Disclaimer"
-    Full risk disclaimer on using Curve Lending can be found [here](../resources/risks/lending.md)
+    Full risk disclaimer on using Curve Lending can be found [here](../risks-security/risks/lending.md)
 
 
 <div class="grid cards" markdown>
@@ -19,7 +19,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
     ---
 
-    [:octicons-arrow-right-24: How to Borrow](./loan-creation.md)
+    [:octicons-arrow-right-24: How to Borrow](./how-to-borrow.md)
 
 -   :material-bank: **Lenders**
 
@@ -29,7 +29,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
     ---
 
-    [:octicons-arrow-right-24: How to Supply (Lend)](./supplying-assets.md)
+    [:octicons-arrow-right-24: How to Supply (Lend)](./how-to-supply.md)
 
 </div>
 
@@ -113,7 +113,7 @@ Rewards APR is a combination of CRV emission rewards and any other incentives pr
 
 !!!warning "Rewards APR is *ONLY* given to Suppliers *STAKED* in the Liquidity Gauge"
     You ***MUST*** stake your Supply Vault Shares in the Lending Market's Liquidity Gauge to receive Reward APR.  
-    **You will not get any Rewards APR if you** ***DO NOT*** **stake**.  See [here](./supplying-assets.md#staking-assets)
+    **You will not get any Rewards APR if you** ***DO NOT*** **stake**.  See [here](./how-to-supply.md#staking-assets)
 
 *For a market to have CRV rewards the following conditions must be met:*
 
@@ -372,9 +372,9 @@ $$\text{lendAPR} = \text{borrowAPR} \cdot \text{utilization}$$
 
 ## **More Information**
 
-For information relating to opening loans see the [loan creation page](./loan-creation.md)
+For information relating to opening loans see the [loan creation page](./how-to-borrow.md)
 
-For information relating to how to supply assets see [supplying assets page](./supplying-assets.md)
+For information relating to how to supply assets see [supplying assets page](./how-to-supply.md)
 
 For Frequently Asked Questions about Curve Lending see the [FAQ here](./faq.md)
 

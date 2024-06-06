@@ -17,7 +17,7 @@ CRV can be acquired in two ways:
 
 You can find the release schedule for the next six years at this address on the main UI: [**https://dao.curve.fi/inflation**](https://dao.curve.fi/inflation)​.
 
-There is also detailed documentation in the [Supply & Distribution](./crv-tokenomics.md#crv-emissions-for-the-next-10-years) about the CRV emissions for the next 10 years, and the [supply calculator](./crv-tokenomics.md#supply-calculator) can be used to see the emissions for any year.
+There is also detailed documentation in the [Supply & Distribution](./supply-distribution.md#crv-emissions-for-the-next-10-years) about the CRV emissions for the next 10 years, and the [supply calculator](./supply-distribution.md#supply-calculator) can be used to see the emissions for any year.
 
 ## **What is the current circulating supply?**
 
@@ -25,7 +25,7 @@ There are three ways to check the circulating supply:
 
 * On the main UI here: [**https://dao.curve.fi/inflation**](https://dao.curve.fi/inflation).
 
-* In the [supply calculator](./crv-tokenomics.md#supply-calculator) in these resources by looking at the statistics for today.
+* In the [supply calculator](./supply-distribution.md#supply-calculator) in these resources by looking at the statistics for today.
 
 * The [**on-chain contract**](https://etherscan.io/address/0x14139EB676342b6bC8E41E0d419969f23A49881e) (`0x14139EB676342b6bC8E41E0d419969f23A49881e`) which shows the circulating supply, net of locked or otherwise vested tokens.
 
