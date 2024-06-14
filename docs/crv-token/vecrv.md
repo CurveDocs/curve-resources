@@ -44,13 +44,23 @@ $$ \text{veCRV} = \frac{\text{CRV} \times \text{lockTime}}{4 \text{ years}} $$
 
 This means that if Alice locks 100 CRV for 4 years then Alice will receive 100 veCRV, if Alice locks for 1 year they will receive 25 veCRV.  When a user creates a lock, they specify the unlock date, so any amount of time can be chosen from 1 week to 4 years.
 
+The maximum duration of a lock is 4 years, users cannot lock for longer periods to keep the 1 CRV: 1 veCRV ratio, they must instead continue extending their lock.  Users can withdraw their CRV at any time after their veCRV has decayed to 0 (lock time has expired).
+
 ### **veCRV decay**
 
-The amount of veCRV a user has will decay over time as their unlock date draws closer.  The `lockTime` parameter in the equation above should more aptly be called `lockTimeLeft`.  In the above example if Alice locked 100 CRV for 4 years, after 3 years she would only have 25 veCRV left as her lock time is now 1 year.  If she relocked her CRV for another 4 years after 3 years, she would again have 100 veCRV and the 4 year lock would reset, the chart below shows this situation.
+The amount of veCRV a user has will decay over time as their unlock date draws closer.  The `lockTime` parameter in the equation above should more aptly be called `lockTimeLeft` as a user's veCRV is recalculated every day.  There are two ways a user can change their lock.  They can add to their lock or they can extend their lock.  What happens in both situations and how it affects their veCRV and the decay is shown in the charts below.
 
-<canvas id="decayChart"></canvas>
+#### **Extending Locks**
 
-The maximum duration of a lock is 4 years, users cannot lock for longer periods, instead they must re-lock to continue to keep their voting power at their desired level, e.g., 1 veCRV = 1 CRV.  Users can withdraw their CRV at any time after their veCRV has decayed to 0 (lock time has expired).
+Extending locks means increasing the time left on a lock.  In the above example if Alice locked 100 CRV for 4 years, after 3 years she would only have 25 veCRV left as her lock time is now 1 year.  If she extended her lock to be 4 years again after these 3 years, she would again have 100 veCRV:
+
+<canvas id="extendLockChart"></canvas>
+
+#### **Adding CRV to Locks**
+
+Adding CRV to locks means the unlock date will remain the same, but more CRV will be locked, meaning more veCRV. If Alice locked 100 CRV for 4 years, but after 2 years added 200 CRV to her lock, she would have 150 veCRV (300 CRV total locked for 2 years).  This veCRV would continue to decay to 0 over the next 2 years:
+
+<canvas id="addLockChart"></canvas>
 
 ---
 
@@ -77,20 +87,19 @@ These tokens are risky, the only way to guarantee being able to withdraw the sam
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
 
 
 <script>
     // Get today's date
     const today = new Date();
-
     const endDate = new Date(today);
     const relockDate = new Date(today);
-    relockDate.setFullYear(endDate.getFullYear() + 3);
-    endDate.setFullYear(endDate.getFullYear() + 7);
-
+    relockDate.setFullYear(today.getFullYear() + 3);
+    endDate.setFullYear(today.getFullYear() + 7);
 
     // Generate data points every 7 days
-    const data = [];
+    let data = [];
     let currentDate = new Date(today);
     
     while (currentDate <= relockDate) {
@@ -106,9 +115,10 @@ These tokens are risky, the only way to guarantee being able to withdraw the sam
         data.push({ x: currentDate.toISOString().split('T')[0], y: veCRV});
         currentDate.setDate(currentDate.getDate() + 7);
     }
+    
 
     // Create the chart
-    const ctx = document.getElementById('decayChart').getContext('2d');
+    const ctx = document.getElementById('extendLockChart').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -124,9 +134,134 @@ These tokens are risky, the only way to guarantee being able to withdraw the sam
         },
         options: {
             plugins: {
+                annotation: {
+                    common: {
+                        drawTime: 'beforeDatasetsDraw'
+                    },
+                    annotations: [{
+                        type: 'line',
+                        scaleID: 'x',
+                        value: relockDate,
+                        borderColor: 'red',
+                        borderWidth: 2,
+                        borderDash: [3,3],
+                        label: {
+                            backgroundColor: 'red',
+                            borderRadius: 0,
+                            color: 'white',
+                            content: (ctx) => ['Extend lock for 4 years'],
+                            display: true,
+                            position: 'end'
+                        }
+                    }]
+                },
                 title: {
                     display: true,
-                    text: 'veCRV decay for 100 CRV locked for 4 years then relocked after 3 years for another 4 years'
+                    text: 'veCRV decay for 100 CRV locked for 4 years with lock extended after 3 years for 4 more years'
+                },
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    displayColors: false,
+                    callbacks: {
+                        title: (context) => {
+                            const date = new Date(context[0].parsed.x);
+                            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+                        },
+                        label: (context) => {
+                            return `100 CRV = ${context.parsed.y.toFixed(1)} veCRV`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'time',
+                    time: {
+                        unit: 'month'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Date'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'veCRV'
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    const addLockDate = new Date(today);
+    endDate.setFullYear(today.getFullYear() + 4);
+    addLockDate.setFullYear(today.getFullYear() + 2);
+
+    // Generate data points every 7 days
+    data = [];
+    currentDate = new Date(today);
+    
+    while (currentDate <= addLockDate) {
+        const x = (currentDate - today) / (1000 * 60 * 60 * 24); // Convert milliseconds to days
+        const veCRV = 100 - 100*x / (4 * 365);
+        data.push({ x: currentDate.toISOString().split('T')[0], y: veCRV});
+        currentDate.setDate(currentDate.getDate() + 7);
+    }
+    currentDate.setDate(currentDate.getDate() - 7);
+    while (currentDate <= endDate) {
+        const x = (currentDate - addLockDate) / (1000 * 60 * 60 * 24); // Convert milliseconds to days
+        const veCRV = Math.min(150 - 150*x / (2 * 365), 150);
+        data.push({ x: currentDate.toISOString().split('T')[0], y: veCRV});
+        currentDate.setDate(currentDate.getDate() + 7);
+    }
+    
+
+    // Create the chart
+    const addLockCtx = document.getElementById('addLockChart').getContext('2d');
+    new Chart(addLockCtx, {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'veCRV Percentage',
+                data: data,
+                borderColor: 'blue',
+                fill: false,
+                pointRadius: 0,
+                pointHoverRadius: 10,
+                pointHitRadius: 10
+            }]
+        },
+        options: {
+            plugins: {
+                annotation: {
+                    common: {
+                        drawTime: 'beforeDatasetsDraw'
+                    },
+                    annotations: [{
+                        type: 'line',
+                        scaleID: 'x',
+                        value: addLockDate,
+                        borderColor: 'green',
+                        borderWidth: 2,
+                        borderDash: [3,3],
+                        label: {
+                            backgroundColor: 'green',
+                            borderRadius: 0,
+                            color: 'white',
+                            content: (addLockCtx) => ['Add 200 CRV to lock'],
+                            display: true,
+                            position: 'end'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'veCRV decay for 100 CRV locked for 4 years with 200 CRV added to lock after 2 years'
                 },
                 legend: {
                     display: false
