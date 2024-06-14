@@ -5,6 +5,10 @@ To vote on the Curve DAO, users need to lock vote lock their CRV. By doing so, p
 !!!warning
     When voting on DAO votes, a user's voting power starts to decay halfway through the vote as a measure to protect against manipulation by whales. This does not apply to gauge weight votes.
 
+
+---
+
+
 ## **Voting Power**
 
 veCRV stands for vote-escrowed CRV. It's a mechanism where users can lock their CRV tokens for varying lengths of time to gain voting power. Users have the option to lock their CRV for a minimum of one week and a maximum of four years. Those with longer voting escrows wield more stake, thereby receiving greater voting power.
@@ -13,11 +17,19 @@ A user's voting power gradually decreases over time until it reaches zero at the
 
 The existing lock can be extended at every point in time, resulting in a increased veCRV balance again.
 
+
+---
+
+
 ## **The DAO Dashboard**
 
 You can visit the Curve DAO dashboard at this address: [https://dao.curve.fi/dao](https://dao.curve.fi/dao)​
 
 On this page, you can find all current and closed votes. All proposals should have a topic on the Curve governance forum at this address: [https://gov.curve.fi/](https://gov.curve.fi/)​
+
+
+---
+
 
 ## **Submitting proposals**
 
@@ -26,13 +38,16 @@ If you wish to create a new official proposal, you should draft a proposal and p
 If you're not sure about the technical details of submitting your proposal to the Ethereum blockchain, you can ask a member of the team to help.
 
 
+---
+
+
 ## **DAO Votes**
 
 *There are three kinds of votes:*
 
-1. Ownership votes, which control most functionality within the protocol. These votes require a 30% quorum with 51% support.
-2. Parameter votes, which can modify pool parameters. These votes require a 15% quorum with 60% support.
-3. Emergency votes, which consist of nine members, comprised of a mix of the Curve team and prominent figures within the DeFi community. Each member has one vote. Any member may propose a vote. A vote lasts for 24 hours and can be executed immediately once it receives 66% support.
+1. **Ownership votes**, which control most functionality within the protocol. These votes require a 30% quorum with 51% support.
+2. **Parameter votes**, which can modify pool parameters. These votes require a 15% quorum with 60% support.
+3. **Emergency votes**, which are executed through a multisig consisting of nine members, comprised of reputable figures within the DeFi and Crypto community. More here: [Emergency DAO](#emergency-dao).
 
 !!!info "Quorum"
     Intuitively, one might think that the total number of votes (`YES` and `NO`) would count towards the quorum. However, this is not the case here. Only `YES` votes are counted towards the quorum.
@@ -40,11 +55,23 @@ If you're not sure about the technical details of submitting your proposal to th
     This can lead to scenarios like this: https://twitter.com/WormholeOracle/status/1782646259536531808
 
 
+---
+
 
 ## **Emergency DAO**
 
-The EmergencyDAO multisig may kill non-factory pools up to 2 months old. It may also kill reward gauges at any time, setting its rate of CRV emissions to 0. Pools that have been killed will only allow users to `remove_liquidity`.
+The EmergencyDAO is a **5 of 9 multisig** which has **very limited actions**. It **may kill non-factory pools** up to 2 months old. Pools that have been killed will only allow users to `remove_liquidity`. It may also **kill liquidity gauges** at any time, setting its rate of CRV emissions to 0 and therefore not allowing any further CRV emission to the pool. 
 
-See the members of the emergency DAO in the technical docs: https://docs.curve.fi/curve_dao/ownership-proxy/Agents/#agents
+*The EmergencyDAO multisig is deployed at [`0x467947EE34aF926cF1DCac093870f613C96B1E0c`](https://etherscan.io/address/0x467947EE34aF926cF1DCac093870f613C96B1E0c) and currently consists of the following signers:*
 
-The Curve DAO may override the emergency DAO decision of killing a pool, making it alive again.
+| Name            | Details - Telegram Handle |
+| --------------- | ------------------------- |
+| `banteg`        | `Yearn, @banteg`          |
+| `Calvin`        | `@calchulus`              |
+| `C2tP`          | `Convex, @c2tp_eth`       |
+| `Darly Lau`     | `@Daryllautk`             |
+| `Ga3b_node`     | `@ga3b_node`              |
+| `Naga King`     | `@nagakingg`              |
+| `Peter MM`      | `@PeterMm`                |
+| `Addison`       | `@addisonthunderhead`     |
+| `Quentin Milne` |  `StakeDAO, @Kii_iu`      |
