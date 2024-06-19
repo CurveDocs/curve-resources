@@ -151,30 +151,34 @@ After navigating to the `leverage` tab, the following options will be displayed:
 
 This shows all the information and options to open a leveraged loan.  Notice that the `ADD FROM WALLET` allows both assets to be added to the loan.  In this market a user could add WBTC, or crvUSD or both.  See the information about [depositing a combination of assets](./leverage.md#depositing-a-combination-of-assets) for how this works.
 
-The `BORROW AMOUNT` lets the user specify how much they would like to borrow.
+The **`BORROW AMOUNT`** lets the user specify how much they would like to borrow.
 
-If `Advanced Mode` is enabled, then the user can adjust the number of bands `N` for their liquidation range.
+If [**`Advanced Mode` is enabled**](#creating-a-new-loan), then the user can click on the **`adjust`** button next to the liquidation range.  This allows a user to change the number of bands `N` for their liquidation range.  An example of this is shown below with the other loan details:
 
-`Leverage` is calculated using the following formula:
+![Leverage Menu](../images/ui/leverage_details.png){: .centered }
+
+**`Leverage`** is calculated using the following formula:
 
 $$ \text{Leverage} = \frac{\text{value deposited} + \text{value borrowed}}{\text{value deposited}}$$
 
 For example if \$10,000 crvUSD and \$10,000 of WBTC is deposited (\$20,000 value total deposited) and the user borrows \$80,000 crvUSD, then leverage is 5x.
 
-`Expected` and `Expected avg. price` both relate in this case to how much WBTC is expected to be received after swapping the borrowed crvUSD, and what the expected average price for swapping is.  `Expected` has a details collapsible menu which shows the route the assets will be swapped through.
+**`Expected`** and **`Expected avg. price`** both relate in this case to how much WBTC is expected to be received after swapping the borrowed crvUSD, and what the expected average price for swapping is.  **`Expected`** has collapsible details which shows the route the assets will be swapped through.  These **swaps are always provided by 1inch**.  An example of these details are provided below and show that 125 crvUSD will be swapped to 0.0019074 WBTC.
 
-`Price impact` is the difference between the oracle price and the average swap price.
+![Routing Details](../images/ui/routing_details.png){: .centered }
 
-`Band range` is the starting and finishing bands of liquidity for the loan, e.g., "6 to 9" means the loan will begin soft-liquidation in band 6, and finish in band 9.  `Price range` shows the `Band range` but as a price range, e.g., band 6 to 9 could be a price range like 2,425 to 2,568. See [here](../crvusd/loan-details.md#bands-n) for more information about bands.
+**`Price impact`** is the difference between the oracle price and the average swap price.
 
-`Health` is how healthy the loan is, this value must be positive, if it is less than or equal to 0 then the loan can be hard liquidated.  See [here](../crvusd/loan-details.md#loan-health) for more information about health.
+**`Band range`** is the starting and finishing bands of liquidity for the loan, e.g., "4 to 13" means the loan will begin soft-liquidation in band 4, and finish in band 13.  **`Price range`** shows the `Band range` but as a price range, e.g., band 4 to 13 could be a price range like 52,994 to 60,607. See [here](../crvusd/loan-details.md#bands-n) for more information about bands.
 
-`Borrow APY` shows the interest rate before and after the loan is created.
+**`Health`** is how healthy the loan is, this value must be positive, if it is less than or equal to 0 then the loan can be hard liquidated.  See [here](../crvusd/loan-details.md#loan-health) for more information about health.
 
-`Estimated TX Cost` shows the gas cost in USD.  `Slippage tolerance` is the maximum slippage allowed when swapping.
+**`Borrow APY`** shows the interest rate before and after the loan is created.  **`Loan to Value Ratio`** shows the deposited collateral value compared to the borrowed collateral.
+
+**`Estimated TX Cost`** shows the gas cost in USD.  **`Slippage tolerance`** is the maximum slippage allowed when swapping.
 
 Before taking out a loan, a screen will appear showing the details of the loan, for example: 
 
 ![Example loan details](../images/ui/get_leverage_loan.png){: .centered }
 
-Then the tokens which will be used as collateral need to be approved and then the loan can be taken out by clicking the `Get Loan` and sending the transaction.
+Then the tokens which will be used as collateral need to be approved and then the loan can be taken out by clicking the **`Get Loan`** and sending the transaction.
