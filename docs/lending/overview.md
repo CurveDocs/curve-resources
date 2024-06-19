@@ -196,7 +196,11 @@ Soft-liquidation **losses do not only occur when prices go down but also when th
 
 In contrast, most other lending platforms will hard-liquidate your collateral and terminate your loan if your loan falls below a minimum collateral ratio (LTV), even if only by a small amount for a brief time. This can be highly stressful for borrowers and lead to significant losses. Curve Lending offers a safer space and more peace of mind for borrowers.
 
+---
 
+## **Leverage**
+
+Some lending markets allow leverage.  In a WETH/crvUSD market for example, this would allow the user to borrow more crvUSD than their WETH is worth.  The caveat is that the user doesn't receive the crvUSD into their wallet, it is swapped for more WETH and deposited into the lending market.  This allows the user to **make money if the price increases**, but also lose money if the price decreases.  To see how leverage works please see the dedicated page.
 ---
 
 

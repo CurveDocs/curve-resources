@@ -5,7 +5,7 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
   - minify:
       minify_html: true
   - redirects:
@@ -158,7 +158,8 @@ nav:
 
   - Curve Lending:
     - Overview: lending/overview.md
-    - How to Borrow: lending/how-to-borrow.md
+    - Leverage: lending/leverage.md
+    - How to Borrow & Use Leverage: lending/how-to-borrow.md
     - How to Supply: lending/how-to-supply.md
     - Lending FAQ: lending/faq.md
     - How to Create a Market: lending/create-lending-market.md
