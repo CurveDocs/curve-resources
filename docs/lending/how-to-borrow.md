@@ -134,7 +134,7 @@ Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH a
 
 ## **How to take out a leverage loan**
 
-Some markets allow a user to use leverage.  E.g., the WBTC market below allows up to 11x leverage when borrowing from this lending market.
+All new lending markets allow users to use leverage.  E.g., the WBTC market below allows up to 11x leverage when borrowing from this lending market.  11x leverage means 10x the deposited amount of WBTC is borrowed as crvUSD and swapped to WBTC using 1inch.
 
 ![WBTC Leverage](../images/ui/leverage.png){: .centered }
 

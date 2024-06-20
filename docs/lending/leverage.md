@@ -1,8 +1,10 @@
 <h1>Leverage</h1>
 
+This section explains how leverage works, if you would like to know how to take out a leverage loan, see [How to take out a leverage loan](how-to-borrow.md#how-to-take-out-a-leverage-loan) section of the how to borrow page.
+
 # **How Leverage Works**
 
-Leverage on Curve Lending allows a user make money if the collateral of a loan increases in value compared to the asset they've borrowed.  More leverage means the user makes more money if the value increases, but they lose more if the asset decreases.  These gains and loses are multiplied by the leverage.  For example, if a user is borrowing crvUSD with WETH collateral at 2x leverage, they will make twice as much profit in crvUSD compared to just holding their WETH without leverage (not accounting for borrowing rates).  Let's look at a few quick examples:
+Leverage on Curve Lending allows a user to **multiply their gains (and losses) by the amount of leverage** they desire. For example, if a user is borrowing crvUSD with WETH collateral at 2x leverage, they will make twice as much profit in crvUSD compared to just holding their WETH without leverage (not accounting for borrowing rates).  Let's look at a few quick examples:
 
 | ETH starting price | ETH end price | Deposited Collateral | Borrowed Collateral | Total Collateral | Leverage | Profit | ETH Profit |
 |---|---|---|---|---|---|---|---|
