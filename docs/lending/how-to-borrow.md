@@ -1,4 +1,4 @@
-<h1>How to Borrow</h1>
+<h1>How to Borrow & Use Leverage</h1>
 
 ## **Borrowing UI**
 
@@ -9,13 +9,11 @@ When selecting the **`"BORROW"`** tab from the [main UI](https://lend.curve.fi/#
   <figcaption></figcaption>
 </figure>
 
-`Collateral` displays the collateral token of the market, while `Borrow` shows the token which can be borrowed. `Borrow APY` represents the current [borrow rate](./overview.md#borrow-rate).
+`Collateral` displays the collateral token of the market, while `Borrow` shows the token which can be borrowed.  The `leverage` column shows whether or not built-in leverage is available in the market.
 
-The `Available` column shows the amount of assets left to borrow and `Borrowed` is the total amount currently borrowed.
+`Borrow APY` represents the current [borrow rate](./overview.md#borrow-rate).  The `Available` column shows the amount of assets left to borrow and `Borrowed` is the total amount currently borrowed.
 
-`Supplied` shows the total amount of the borrowable token which has been supplied by users.
-
-The `Utilization (%)` is the ratio of `Borrowed` to `Supplied` tokens, see [here](./overview.md#utilization-lend-apy-and-borrow-apy) for more information.
+`Supplied` shows the total amount of the borrowable token which has been supplied by users.  The `Utilization (%)` is the ratio of `Borrowed` to `Supplied` tokens, see [here](./overview.md#utilization-lend-apy-and-borrow-apy) for more information.
 
 
 ---
@@ -97,10 +95,29 @@ Everything needed to manage a loan is available in the UI.
   <figcaption></figcaption>
 </figure>
 
-- **`Borrow more`**: Borrowing more assets, while adding additional collateral (not necessary).
-- **`Repay`**: Partially or fully repay debt.
-- **`Self-liquidate`**: Close their loan via self-liquidation.
+### **Borrow More**
 
+Borrow more simply allows the user to borrow more debt and add more collateral at the same time.
+
+### **Repay**
+
+Repay has the following options, and all options allow the user to **partially** or **fully repay** their loans.  If only a partial repayment is done then the liquidation range will change for the user.
+
+![Repay UI](../images/ui/repay.png){: .centered }
+
+**`REPAY FROM COLLATERAL`** will remove the collateral (e.g., WETH or crvUSD) out of the lending market, convert them all to the debt asset if required (e.g., crvUSD), and send any leftover debt asset (e.g., crvUSD) back to the user if the loan is fully paid and closed.
+
+**`REPAY FROM WALLET`** has two boxes, one for the collateral asset, and one for the debt asset:
+
+ * **Collateral asset, e.g., WETH**: this works the same way as `REPAY FROM COLLATERAL`, all sent WETH would be converted to crvUSD, debt would be repaid and any remaining crvUSD transferred back to the user if the loan is fully paid and closed.
+
+* **Debt asset, e.g., crvUSD**: this repays the debt with the sent crvUSD.  If all debt is repaid the loan is closed and all collateral in the lending market is sent back to the user, in the above case the user would receive back their WETH.
+
+### **Self-liquidate**
+
+This allows a user to liquidate themselves before they get hard-liquidated.  Users using this feature will most likely already be in soft-liquidation.  This lets the user retrieve their collateral and stops them from losing the amount defined by the [`liquidation_discount`](../crvusd/loan-details.md#market-parameters).
+
+Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH as collateral for how this works.  Alice is in soft liquidation and her health is getting low.  In soft liquidation 0.2 WETH has been converted to 250 crvUSD, so she now has 0.8 WETH and 250 crvUSD backing her 1000 crvUSD loan.  Alice wants to self liquidate.  Alice only needs to send 750 crvUSD to self-liquidate, because she already has 250 crvUSD of collateral, both these amounts together will pay off the 1000 crvUSD debt.  Alice then receives back her 0.8 WETH.
 
 ---
 
@@ -113,3 +130,55 @@ Everything needed to manage a loan is available in the UI.
 
 - **`Add collateral`**: Add more collateral to the loan.
 - **`Remove collateral`**: Remove collateral from the loan.
+
+
+## **How to take out a leverage loan**
+
+All new lending markets allow users to use leverage.  E.g., the WBTC market below allows up to 11x leverage when borrowing from this lending market.  11x leverage means 10x the deposited amount of WBTC is borrowed as crvUSD and swapped to WBTC using 1inch.
+
+![WBTC Leverage](../images/ui/leverage.png){: .centered }
+
+!!!info "Info"
+    If the market does not display a value in the leverage column, then leverage can still be built up manually by [looping](./leverage.md#leverage-looping).
+
+Click on the desired market with leverage, then navigate to the `leverage` tab next to the `create loan` tab shown here:
+
+![Navigating to leverage](../images/ui/navigate_leverage.png){: .centered }
+
+After navigating to the `leverage` tab, the following options will be displayed:
+
+![Leverage Menu](../images/ui/leverage_menu.png){: .centered }
+
+This shows all the information and options to open a leveraged loan.  Notice that the `ADD FROM WALLET` allows both assets to be added to the loan.  In this market a user could add WBTC, or crvUSD or both.  See the information about [depositing a combination of assets](./leverage.md#depositing-a-combination-of-assets) for how this works.
+
+The **`BORROW AMOUNT`** lets the user specify how much they would like to borrow.
+
+If [**`Advanced Mode` is enabled**](#creating-a-new-loan), then the user can click on the **`adjust`** button next to the liquidation range.  This allows a user to change the number of bands `N` for their liquidation range.  An example of this is shown below with the other loan details:
+
+![Leverage Menu](../images/ui/leverage_details.png){: .centered }
+
+**`Leverage`** is calculated using the following formula:
+
+$$ \text{Leverage} = \frac{\text{value deposited} + \text{value borrowed}}{\text{value deposited}}$$
+
+For example if \$10,000 crvUSD and \$10,000 of WBTC is deposited (\$20,000 value total deposited) and the user borrows \$80,000 crvUSD, then leverage is 5x.
+
+**`Expected`** and **`Expected avg. price`** both relate in this case to how much WBTC is expected to be received after swapping the borrowed crvUSD, and what the expected average price for swapping is.  **`Expected`** has collapsible details which shows the route the assets will be swapped through.  These **swaps are always provided by 1inch**.  An example of these details are provided below and show that 125 crvUSD will be swapped to 0.0019074 WBTC.
+
+![Routing Details](../images/ui/routing_details.png){: .centered }
+
+**`Price impact`** is the difference between the oracle price and the average swap price.
+
+**`Band range`** is the starting and finishing bands of liquidity for the loan, e.g., "4 to 13" means the loan will begin soft-liquidation in band 4, and finish in band 13.  **`Price range`** shows the `Band range` but as a price range, e.g., band 4 to 13 could be a price range like 52,994 to 60,607. See [here](../crvusd/loan-details.md#bands-n) for more information about bands.
+
+**`Health`** is how healthy the loan is, this value must be positive, if it is less than or equal to 0 then the loan can be hard liquidated.  See [here](../crvusd/loan-details.md#loan-health) for more information about health.
+
+**`Borrow APY`** shows the interest rate before and after the loan is created.  **`Loan to Value Ratio`** shows the deposited collateral value compared to the borrowed collateral.
+
+**`Estimated TX Cost`** shows the gas cost in USD.  **`Slippage tolerance`** is the maximum slippage allowed when swapping.
+
+Before taking out a loan, a screen will appear showing the details of the loan, for example: 
+
+![Example loan details](../images/ui/get_leverage_loan.png){: .centered }
+
+Then the tokens which will be used as collateral need to be approved and then the loan can be taken out by clicking the **`Get Loan`** and sending the transaction.
