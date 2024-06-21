@@ -207,11 +207,57 @@ All new lending markets allow leverage.  This allows users to multiply their gai
 
 ## **Utilization, Lend APY and Borrow APY**
 
-The **Lend APY** and **Borrow APY** are based solely on the **Utilization** of the market.  It is the ratio of assets supplied, to assets borrowed. In the image below the Utilization is 80% as 80% of the Supply is borrowed. **Higher Utilization means a higher Lending APY and Borrowing APY**.
+The **Lend APY** and **Borrow APY** are affected by the **Utilization** of the market.  It is the ratio of assets supplied, to assets borrowed. In the image below the Utilization is 80% as 80% of the Supply is borrowed. **Higher Utilization means a higher Lending APY and Borrowing APY**.
 
 ![Supply Utilization](../images/lending/supply.svg#only-light){: .centered }
 ![Supply Utilization](../images/lending/supply_dark.svg#only-dark){: .centered }
 
+### Utilization Rate
+
+*The formula for Utilization is the following:*
+
+$$\text{Utilization} = \frac{\text{Total assets borrowed}}{\text{Total assets supplied}}$$
+
+
+### Borrow Rate
+
+The borrow APR is the rate a **borrower pays for borrowing out assets**.  In the **Curve UI this is quoted as an APY not an APR**, see the info box below for the conversion formula and difference.
+
+Borrowing rates are calculated differently based on whether the collateral asset has a crvUSD minting market.
+
+#### Borrow Rate for assets with a crvUSD Minting Market
+
+Assets with minting markets currently are: ETH (=WETH in lending markets), WBTC, wstETH, sfrxETH, tBTC.  For these assets, the borrowing rates on Curve Lend depend on two factors: the borrow rate for minting crvUSD and the utilization of the lending pool.  The technical documentation shows the [borrowing rate formula here](https://docs.curve.fi/lending/contracts/secondary-mp/#borrow-rate).  To decide whether to mint crvUSD or borrow from the lending market, consider the following:
+
+* Lending market **utilization below 80%** -> Borrowing rate will be lower on the [Lending Market](https://lend.curve.fi/#/ethereum)
+* Lending market **utilization above 80%** -> Borrowing rate will be lower on the [crvUSD Minting Market](https://crvusd.curve.fi/#/ethereum)
+* Lending market **utilization equals 80%** -> Borrowing rates will be equal
+
+#### Borrow Rate for all other Assets
+
+The formula for the borrow rate if the collateral asset does not have a minting market (e.g., CRV, pufETH, sUSDe, etc) is as follows:
+
+$$\text{rate} = \text{rate}_{\text{min}} \cdot \left(\frac{\text{rate}_{\text{max}}}{\text{rate}_{\text{min}}}\right)^{\text{utilization}}$$
+
+$$\text{borrowAPR} = \text{rate} \cdot (365 \cdot 86400)$$
+
+$\text{rate}_{\text{min}}$ and $\text{rate}_{\text{max}}$ values are obtained from the monetary policy contract of each Lending Market and are given in interest per second.  We multiply the rate by $365 \cdot 86400$ to get the APR because this is the amount of seconds in a year ($365$ days $\times 86400$ seconds in a day).
+
+### Lend Rate
+
+Lend APR is the **yield a lender receives in exchange for lending out their assets**.  The lend APR is calculated the same way for all lending markets.
+
+*Formula to calculate the Lend APR:*
+
+$$\text{lendAPR} = \text{borrowAPR} \cdot \text{utilization}$$
+
+!!!info "Difference between `APR` and `APY`"
+    - **`APR`** represents the Annual Percentage Rate (**interest without compounding**)
+    - **`APY`** is the Annual Percentage Yield (**interest with compounding**)
+
+    *To convert the APR into APY, we need to annualize it and compound it every second (86400 seconds in a day):*
+
+    $$\text{APY} = \left(1 + \frac{APR}{86400 \cdot 365}\right)^{86400 \cdot 365} - 1$$
 
 *For the current [CRV Lending Market](https://lend.curve.fi/#/ethereum/markets/one-way-market-3/create) the Borrow APR and Lend APR for different Utilization rates is the following:*
 
@@ -337,41 +383,6 @@ function updateGraph() {
         myChart = new Chart(ctx, config);
     }
 </script>
-
-!!!info "Difference between `APR` and `APY`"
-    - **`APR`** represents the Annual Percentage Rate (**interest without compounding**)
-    - **`APY`** is the Annual Percentage Yield (**interest with compounding**)
-
-    *To convert the APR into APY, we need to annualize it and compound it every second (86400 seconds in a day):*
-
-    $$\text{APY} = \left(1 + \frac{APR}{86400 \cdot 365}\right)^{86400 \cdot 365} - 1$$
-
-### Utilization Rate
-
-*The formula for Utilization is the following:*
-
-$$\text{Utilization} = \frac{\text{Total assets borrowed}}{\text{Total assets supplied}}$$
-
-
-### Borrow Rate
-
-The borrow APR is the rate a **borrower pays for borrowing out assets**.
-
-*The formula for the borrow rate is as follows:*
-
-$$\text{rate} = \text{rate}_{\text{min}} \cdot \left(\frac{\text{rate}_{\text{max}}}{\text{rate}_{\text{min}}}\right)^{\text{utilization}}$$
-
-$$\text{borrowAPR} = \text{rate} \cdot (365 \cdot 86400)$$
-
-$\text{rate}_{\text{min}}$ and $\text{rate}_{\text{max}}$ values are obtained from the monetary policy contract of each Lending Market and are given in interest per second.  We multiply the rate by $365 \cdot 86400$ to get the APR because this is the amount of seconds in a year ($365$ days $\times 86400$ seconds in a day).
-
-### Lend Rate
-
-Lend APR is the **yield a lender receives in exchange for lending out their assets**.
-
-*Formula to calculate the Lend APR:*
-
-$$\text{lendAPR} = \text{borrowAPR} \cdot \text{utilization}$$
 
 ---
 
