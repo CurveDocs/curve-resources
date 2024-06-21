@@ -229,9 +229,9 @@ Borrowing rates are calculated differently based on whether the collateral asset
 
 Assets with minting markets currently are: ETH (=WETH in lending markets), WBTC, wstETH, sfrxETH, tBTC.  For these assets, the borrowing rates on Curve Lend depend on two factors: the borrow rate for minting crvUSD and the utilization of the lending pool.  The technical documentation shows the [borrowing rate formula here](https://docs.curve.fi/lending/contracts/secondary-mp/#borrow-rate).  To decide whether to mint crvUSD or borrow from the lending market, consider the following:
 
-* Lending market **utilization below 80%** -> Borrowing rate will be lower on the [Lending Market](https://lend.curve.fi/#/ethereum)
-* Lending market **utilization above 80%** -> Borrowing rate will be lower on the [crvUSD Minting Market](https://crvusd.curve.fi/#/ethereum)
-* Lending market **utilization equals 80%** -> Borrowing rates will be equal
+* Lending market **utilization below 85%** -> Borrowing rate will be lower on the [Lending Market](https://lend.curve.fi/#/ethereum)
+* Lending market **utilization above 85%** -> Borrowing rate will be lower on the [crvUSD Minting Market](https://crvusd.curve.fi/#/ethereum)
+* Lending market **utilization equals 85%** -> Borrowing rates will be equal
 
 #### Borrow Rate for all other Assets
 
