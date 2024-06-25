@@ -61,7 +61,7 @@ The `forwarding` phase happens on Wednesday.  All the target coin (currently crv
 Distribution of the fees to the veCRV holders begins on Thursday and continues until the following Thursday.  The fees are split evenly between all veCRV holders, and linearly streamed to them over the week, claimable at any time.
 
 !!!info "Info"
-    For more technical information regarding this process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/curve_dao/fee-collection-distribution/curve-burner/overview/](https://docs.curve.fi/curve_dao/fee-collection-distribution/curve-burner/overview/)
+    For more technical information regarding this new process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/curve_dao/fee-collection-distribution/curve-burner/overview/](https://docs.curve.fi/curve_dao/fee-collection-distribution/curve-burner/overview/)
 
 ---
 
@@ -87,3 +87,6 @@ This process worked well, but became cumbersome when an exchange route was neede
 ### **Distribution**
 
 After the exchanging process is completed distribution happens by forwarding the exchanged coins to the fee distributor which streams the fees to veCRV holders evenly and linearly over the week.
+
+!!!info "Info"
+    For more technical information regarding this old process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/curve_dao/fee-collection-distribution/overview/](https://docs.curve.fi/curve_dao/fee-collection-distribution/overview/)
