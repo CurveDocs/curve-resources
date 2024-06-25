@@ -188,6 +188,7 @@ nav:
   - Governance:
     - Understanding governance: governance/understanding-governance.md
     - Voting: governance/voting.md
+    - Fee Collection & Distribution: governance/fee-collection-distribution.md
     - Proposals:
       - Community fund: governance/proposals/community-fund.md
       - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
