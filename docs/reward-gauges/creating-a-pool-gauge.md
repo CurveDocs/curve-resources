@@ -61,7 +61,7 @@ After clicking on deploy and the transaction is confirmed, the gauge is deployed
 
 ---
 
-# **Deploy an Ethereum Mainnet Gauge via Etherscan**
+# **Deploy a Gauge for an Ethereum Mainnet Pool via Etherscan**
 
 In addition to the UI, there is an option to deploy the gauge directly through Etherscan. If the pool was deployed recently, check the [Deployment Addresses](https://docs.curve.fi/references/deployed-contracts/) for the factory contracts, otherwise use the deployment transaction to find which contract deployed the pool/lending market, this will be the factory contract.
 
