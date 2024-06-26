@@ -30,7 +30,9 @@ All accrued interest on debt in crvUSD minting markets is collected as crvUSD.  
 
 Currently there are two ways fee collection, and distribution is being achieved.  The old way relies on hardcoding exchange routes for each coin collected, and the manual collection of these each week.  This is being phased out as a new architecture has been developed which incentivizes 3rd parties to do the collection of fees and uses [Cowswap's conditional orders](https://blog.cow.fi/introducing-the-programmatic-order-framework-from-cow-protocol-088a14cb0375) to flexibly sell any coin/token collected.
 
-The distribution of each week's fees happens on Thursday at 00:00 UTC.  The fees are evenly split between all veCRV and streamed over the week until the following Thursday, at which time the next week begins.
+The distribution of each week's fees happens on Thursday.  The fees are evenly split between all veCRV and can be claimed by veCRV holders at any time.  See [How to Claim veCRV Trading Fees](../crv-token/claiming-trading-fees.md) for more information.
+
+---
 
 ## **The New Cowswap Architecture**
 
