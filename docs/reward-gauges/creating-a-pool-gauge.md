@@ -1,19 +1,72 @@
-# **Deploy a Gauge**
+You can deploy the gauge directly **through the UI if the gauge is for a pool**.  To do so go to the following page: [https://curve.fi/#/ethereum/deploy-gauge](https://curve.fi/#/ethereum/deploy-gauge).  If you would like **to deploy a gauge for a lending market**, then follow the guide on the [Create Lending Market](../lending/create-lending-market.md#deploying-a-gauge) page.
 
-You can deploy the gauge directly through the UI if the pool is on Ethereum through the following page: [https://classic.curve.fi/factory/create\_gauge](https://classic.curve.fi/factory/create_gauge).
+---
 
-Simply input the pool address (0x...) and the pool type: stable pool for pools with pegged assets (pool with USDC and USDT), or crypto pool for volatile assets (pool with USDC and ETH).
+# **Deploying a Pool Gauge with the UI**
 
-![Deploy Gauge UI](../images/ui/deploy-gauge.png)
+Go to the Curve page to deploy a gauge here: [https://curve.fi/#/ethereum/deploy-gauge](https://curve.fi/#/ethereum/deploy-gauge).  This page has a switch with 2 options:
 
-If the pool is not on Ethereum please ask in the [Telegram](https://t.me/curvefi) or directly interact with the factory contract using Etherscan, etc using the guide below.
+- [**Deploy Mainnet Gauge**](#deploy-mainnet-pool-gauge) - Deploy a gauge for a pool on Ethereum Mainnet
+- [**Deploy Sidechain Gauge**](#deploy-sidechain-pool-gauge) - Deploy a gauge for a pool on any other chain Curve has deployed to.
 
-# **Deploy a Gauge via Etherscan**
+These different options have slightly different processes for deploying the gauge, but both options require that you choose the correct pool type for the gauge that is being deployed.
+
+### **Pool Types:**
+
+- **Stableswap** - a pool with up to 8 pegged assets e.g., USDC and USDT
+- **Two Coin Cryptoswap** - a pool with 2 volatile assets e.g., USDC and ETH
+- **Three Coin Cryptoswap** - a pool with 3 volatile assets e.g., USDC, ETH and CRV
+- **Stableswap (old)** - an old pool with pegged assets e.g., USDC and USDT.
+- **Two Coin Cryptoswap (old)** - an old pool with 2 volatile assets e.g., USDC and ETH
+
+A pool is classified as *old* if it is not a New Generation (NG) pool.  If the pool was deployed from 2024 onwards it should be a NG pool.  If you are not sure on the pool type then try all options when deploying the gauge, the UI will show an error if the wrong option is chosen or the pool already has a gauge deployed.
+
+---
+
+## **Deploy Mainnet Pool Gauge**
+
+Go to the [Deploy Gauge](https://curve.fi/#/ethereum/deploy-gauge) page, and make sure the switch in the right hand corner is set to the left as shown below.  The  "Deploy Mainnet Gauge" screen should be visible as below.
+
+![Deploy Mainnet Gauge UI](../images/ui/deploy-mainnet-gauge.png){: .centered }
+
+Simply **input the  pool address (same as the LP token address)** (0x...) and **select the [pool type](#pool-types) from the drop down menu**.
+
+After the options have been inputted, click on deploy gauge and submit the transaction using your preferred wallet.  The UI will show an error if the incorrect pool type is selected, or a gauge already exists for the pool, so there is no harm in trying all options if you are unsure of the pool type.
+
+After clicking on deploy and the transaction is confirmed the gauge is deployed.  A [vote can then be created to add it to the gauge controller](#submit-a-dao-vote).  Adding the gauge to the gauge controller allows the gauge to receive CRV rewards for stakers when the gauge is allocated [gauge weight](./gauge-weights.md).
+
+---
+
+## **Deploy Sidechain Pool Gauge**
+
+Sidechain gauges (the same as L2 gauges) work differently to a mainnet gauge.  They have a gauge on the sidechain which distributes rewards, as well as a mirror gauge on Ethereum mainnet so that the gauge can receive [gauge weight](./gauge-weights.md) and CRV inflation rewards.  This parent-child relationship is required because all Curve governance currently happens on Ethereum Mainnet.
+
+To deploy a sidechain gauge go to the [Deploy Gauge](https://curve.fi/#/ethereum/deploy-gauge) page. The click the  switch so it's on the right as shown below.  The "Deploy Sidechain Gauge" screen will then be shown.
+
+![Deploy Sidechain Gauge UI](../images/ui/deploy-sidechain-gauge.png){: .centered }
+
+Then connect to the chain you would like to deploy the sidechain gauge to, which is the chain the pool resides on.  In this example we are choosing Base as shown below, after choosing and connecting to the network, Step 1 of deploying the sidechain gauge will be shown.
+
+![Deploy Sidechain Gauge UI - Step 1](../images/ui/deploy-sidechain-gauge-step1.png){: .centered }
+
+For step 1 simply **input the LP Token Address (same as the Pool Address)** (0x...) and **select the [pool type](#pool-types) from the drop down menu** and click **deploy gauge**. The UI will show an error if the incorrect pool type is selected, or a gauge already exists for the pool, so there is no harm in trying all options if you are unsure of the pool type.
+
+After the gauge has been deployed on the sidechain (called the child gauge), the mirror gauge must be deployed on Ethereum Mainnet (the parent gauge), this connects the Sidechain to Ethereum and Curve governance.  To go to step 2 click on the little arrow shown in the red rectangle in the picture below:
+
+![Deploy Sidechain Gauge UI - Step 2](../images/ui/deploy-sidechain-gauge-step2.png){: .centered }
+
+Then choose the network the pool resides by clicking on the Network dropdown menu, in this example we have chosen base, as that's where the sidechain gauge was deployed.  The same pool type as in step 1 must be selected carefully in step 2, as the UI will not raise an error if the wrong option is selected.  Then we input the LP Token address (pool address) on the L2.  **The LP Token Address in step 2 is the same address as used for step 1**.  
+
+After clicking on deploy and the transaction is confirmed, the gauge is deployed and a [vote can be created to add it to the gauge controller](#submit-a-dao-vote).  Adding the gauge to the gauge controller allows the gauge to receive CRV rewards for stakers when the gauge is allocated [gauge weight](./gauge-weights.md).
+
+---
+
+# **Deploy an Ethereum Mainnet Gauge via Etherscan**
 
 In addition to the UI, there is an option to deploy the gauge directly through Etherscan. If the pool was deployed recently, check the [Deployment Addresses](https://docs.curve.fi/references/deployed-contracts/) for the factory contracts, otherwise use the deployment transaction to find which contract deployed the pool/lending market, this will be the factory contract.
 
 !!!warning
-    Calling **`deploy_gauge`** on Etherscan will only work if the function is called on the Factory contract that also deployed the pool, and the 
+    Calling **`deploy_gauge`** on Etherscan will only work if the function is called on the Factory contract that also deployed the pool.
 
 To navigate to this page, first search for the corresponding Factory contract on Etherscan. Then, go to **`Contract -> Write Contract -> deploy_gauge`**.  
 Then insert the pool address you want to add a gauge for, press on **`Write`** and sign the transaction.  
@@ -25,13 +78,15 @@ Before deploying the gauge, ensure you connect your wallet by clicking the **`Co
   <figcaption></figcaption>
 </figure>
 
-
+---
 
 # **Submit a DAO Vote**
 
 In order for a gauge to become eligible to receive CRV emissions, it has to be added to the GaugeController. This needs to be approved by the DAO.
 
-Once you've created your gauge, and if the pool is on Ethereum, you can submit it to the DAO for a vote. [https://classic.curve.fi/factory/create\_vote](https://classic.curve.fi/factory/create_vote)​.  If the pool is not on Ethereum please ask in [Telegram](https://t.me/curvefi) about the steps to deploy a vote.
+Once you've created your gauge, you can submit it to the DAO for a vote: [https://classic.curve.fi/factory/create\_vote](https://classic.curve.fi/factory/create_vote)​.
+
+If the gauge is for a pool on a sidechain, input the parent gauge address (Ethereum gauge address) here.
 
 The address that submits must have 2500 veCRV in order to create a vote.
 
