@@ -54,11 +54,11 @@ The `exchanging` phase happens on Tuesday.  In this phase the conditional sell o
 
 ### **Forwarding** - Wednesday
 
-The `forwarding` phase happens on Wednesday.  All the target coin (currently crvUSD) which was exchanged for on Tuesday is forwarded to the Distributor through an intermediary contract called a hooker.  The hooker contract is a future proofing contract which can implement any arbitrary functions that are approved by the DAO.  Calling the function to do this transfer is incentivized by giving the caller a reward.
+The `forwarding` phase happens on Wednesday.  All the target coin (currently crvUSD) which was exchanged for on Tuesday is forwarded to the Fee Distributor on Ethereum Mainnet through an intermediary contract called a hooker.  The hooker contract is a future proofing contract which can implement any arbitrary functions that are approved by the DAO.  Calling the function to do this transfer is incentivized by giving the caller a reward.
 
 ### **Distribution** - Thursday
 
-Distribution of the fees to the veCRV holders begins on Thursday and continues until the following Thursday.  The fees are split evenly between all veCRV holders, and linearly streamed to them over the week, claimable at any time.
+Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:00 UTC. These fees are split evenly among all veCRV holders, who can claim their share once each week after distribution. Users can first claim trading fees 8 days after the first Thursday following their lock. For example, if you lock on a Tuesday, you can claim trading fees 10 days later on Thursday. See [How to Claim veCRV Trading Fees](../crv-token/claiming-trading-fees.md) for more information.
 
 !!!info "Info"
     For more technical information regarding this new process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/curve_dao/fee-collection-distribution/curve-burner/overview/](https://docs.curve.fi/curve_dao/fee-collection-distribution/curve-burner/overview/)
@@ -86,7 +86,7 @@ This process worked well, but became cumbersome when an exchange route was neede
 
 ### **Distribution**
 
-After the exchanging process is completed distribution happens by forwarding the exchanged coins to the fee distributor which streams the fees to veCRV holders evenly and linearly over the week.
+After the exchanging process is completed distribution happens by forwarding the exchanged coins to the fee distributor on Ethereum Mainnet.  Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:00 UTC. These fees are split evenly among all veCRV holders, who can claim their share once each week after distribution. Users can first claim trading fees 8 days after the first Thursday following their lock. For example, if you lock on a Tuesday, you can claim trading fees 10 days later on Thursday. See [How to Claim veCRV Trading Fees](../crv-token/claiming-trading-fees.md) for more information.
 
 !!!info "Info"
     For more technical information regarding this old process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/curve_dao/fee-collection-distribution/overview/](https://docs.curve.fi/curve_dao/fee-collection-distribution/overview/)
