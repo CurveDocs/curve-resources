@@ -90,6 +90,9 @@ To deploy a sidechain gauge we have to deploy 2 different gauges which link toge
 - **Child Gauge** - This is the gauge on the sidechain, it is deployed first.
 - **Root (Parent) Gauge** - This is the gauge on Ethereum Mainnet, it is deployed after the child and links the child gauge to mainnet.  The root gauge can be added to the gauge controller, allowing CRV inflation rewards to flow to the sidechain gauge.
 
+!!!warning
+    When deploying the Child Gauge and Root Gauge for a sidechain pool, they must be deployed using the **same address** and the **same salt** for **both gauges**.  This creates the same address for the gauge on the sidechain and ethereum.  If the addresses are not the same, the gauges cannot be linked.
+
 ## **Deploying the Sidechain (Child) Gauge**
 
 To deploy the sidechain child gauge go to [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.fi/references/deployed-contracts/#evm-sidechain-gauges).
