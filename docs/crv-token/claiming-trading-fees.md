@@ -31,7 +31,7 @@ To claim trading fees, visit [https://curve.fi/#/ethereum/dashboard](https://cur
 !!!warning
     The classic UI has not been updated to claim crvUSD fees.
 
-when using the **classic UI** please visit: [https://classic.curve.fi/](https://classic.curve.fi) and look for the green **`Claim`** button in the box labeled **`veCRV crvUSD claim`** at the bottom of the page.
+when using the **classic UI** please visit: [https://classic.curve.fi/](https://classic.curve.fi) and look for the green **`Claim`** button in the box labeled **`veCRV 3pool LP claim`** at the bottom of the page.
 
 <figure markdown>
   ![](../images/claim-old.png){ width="700" }
@@ -43,7 +43,7 @@ when using the **classic UI** please visit: [https://classic.curve.fi/](https://
 # **Swapping 3CRV for a Stable Coin**
 
 !!! note
-    **No more 3CRV will be distributed as fees going forward**.  The last week of 3CRV fees was 13th June, 2024.  However, there may be users who haven't claimed their 3CRV yet, so this information left for them.
+    **No more 3CRV will be distributed as fees going forward**.  The last week of 3CRV fees was 13th June, 2024.  However, there may be users who haven't claimed their 3CRV yet, so this information is left for them.
 
 3CRV is the liquidity provider (LP) token of the 3pool, which consists of USDC, USDT, and DAI. If the pool is perfectly balanced with 33% USDC, 33% USDT, and 33% DAI, then one 3CRV will represent 0.33 USDC, 0.33 USDT, and 0.33 DAI.
 
