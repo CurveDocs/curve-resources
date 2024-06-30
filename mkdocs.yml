@@ -22,6 +22,8 @@ plugins:
         "resources/risks/crvusd.md": "risks-security/risks/crvusd.md"
         "resources/risks/lending.md": "risks-security/risks/lending.md"
         "resources/security.md": "risks-security/security.md"
+        "governance/fee-collection-distribution.md": "fee-collection-distribution/overview.md"
+
 
 
 # extension
@@ -185,10 +187,13 @@ nav:
     - Gauge weights: reward-gauges/gauge-weights.md
     - Permissionless rewards: reward-gauges/permissionless-rewards.md
 
+  - Fee Collection & Distribution: 
+    - Overview: fee-collection-distribution/overview.md
+    - How to Claim veCRV Trading Fees: crv-token/claiming-trading-fees.md
+
   - Governance:
     - Understanding governance: governance/understanding-governance.md
     - Voting: governance/voting.md
-    - Fee Collection & Distribution: governance/fee-collection-distribution.md
     - Proposals:
       - Community fund: governance/proposals/community-fund.md
       - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
