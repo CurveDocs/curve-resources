@@ -30,7 +30,7 @@ All accrued interest on debt in crvUSD minting markets is collected as crvUSD.  
 
 Currently there are two ways fee collection, and distribution is being achieved.  The old way relies on hardcoding exchange routes for each coin collected, and the manual collection of these each week.  This is being phased out as a new architecture has been developed which incentivizes 3rd parties to do the collection of fees and uses [Cowswap's conditional orders](https://blog.cow.fi/introducing-the-programmatic-order-framework-from-cow-protocol-088a14cb0375) to flexibly sell any coin/token collected.
 
-The distribution of each week's fees happens on Thursday.  The fees are evenly split between all veCRV and can be claimed by veCRV holders at any time.  See [How to Claim veCRV Trading Fees](../crv-token/claiming-trading-fees.md) for more information.
+The distribution of each week's fees happens on Thursday.  The fees are evenly split between all veCRV and can be claimed by veCRV holders at any time.  See [How to Claim veCRV Trading Fees](./claiming-trading-fees.md) for more information.
 
 ---
 
@@ -60,7 +60,7 @@ The `forwarding` phase happens on Wednesday.  All the target coin (currently crv
 
 ### **Distribution** - Thursday
 
-Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:00 UTC. These fees are split evenly among all veCRV holders, who can claim their share once each week after distribution. Users can first claim trading fees 8 days after the first Thursday following their lock. For example, if you lock on a Tuesday, you can claim trading fees 10 days later on Thursday. See [How to Claim veCRV Trading Fees](../crv-token/claiming-trading-fees.md) for more information.
+Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:00 UTC. These fees are split evenly among all veCRV holders, who can claim their share once each week after distribution. Users can first claim trading fees 8 days after the first Thursday following their lock. For example, if you lock on a Tuesday, you can claim trading fees 10 days later on Thursday. See [How to Claim veCRV Trading Fees](./claiming-trading-fees.md) for more information.
 
 !!!info "Info"
     For more technical information regarding this new process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/curve_dao/fee-collection-distribution/curve-burner/overview/](https://docs.curve.fi/curve_dao/fee-collection-distribution/curve-burner/overview/)
@@ -88,7 +88,7 @@ This process worked well, but became cumbersome when an exchange route was neede
 
 ### **Distribution**
 
-After the exchanging process is completed distribution happens by forwarding the exchanged coins to the fee distributor on Ethereum Mainnet.  Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:00 UTC. These fees are split evenly among all veCRV holders, who can claim their share once each week after distribution. Users can first claim trading fees 8 days after the first Thursday following their lock. For example, if you lock on a Tuesday, you can claim trading fees 10 days later on Thursday. See [How to Claim veCRV Trading Fees](../crv-token/claiming-trading-fees.md) for more information.
+After the exchanging process is completed distribution happens by forwarding the exchanged coins to the fee distributor on Ethereum Mainnet.  Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:00 UTC. These fees are split evenly among all veCRV holders, who can claim their share once each week after distribution. Users can first claim trading fees 8 days after the first Thursday following their lock. For example, if you lock on a Tuesday, you can claim trading fees 10 days later on Thursday. See [How to Claim veCRV Trading Fees](./claiming-trading-fees.md) for more information.
 
 !!!info "Info"
     For more technical information regarding this old process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/curve_dao/fee-collection-distribution/overview/](https://docs.curve.fi/curve_dao/fee-collection-distribution/overview/)

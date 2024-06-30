@@ -23,6 +23,7 @@ plugins:
         "resources/risks/lending.md": "risks-security/risks/lending.md"
         "resources/security.md": "risks-security/security.md"
         "governance/fee-collection-distribution.md": "fee-collection-distribution/overview.md"
+        "crv-token/claiming-trading-fees.md": "fee-collection-distribution/claiming-trading-fees.md"
 
 
 
@@ -148,7 +149,6 @@ nav:
     - CRV Supply & Distribution: crv-token/supply-distribution.md
     - Vote-Escrowed CRV (veCRV): crv-token/vecrv.md
     - How to Lock CRV for veCRV: crv-token/locking-your-crv.md
-    - How to Claim veCRV Trading Fees: crv-token/claiming-trading-fees.md
     - CRV & veCRV FAQ: crv-token/faq.md
 
   - Curve Stablecoin (crvUSD):
@@ -189,7 +189,7 @@ nav:
 
   - Fee Collection & Distribution: 
     - Overview: fee-collection-distribution/overview.md
-    - How to Claim veCRV Trading Fees: crv-token/claiming-trading-fees.md
+    - How to Claim veCRV Trading Fees: fee-collection-distribution/claiming-trading-fees.md
 
   - Governance:
     - Understanding governance: governance/understanding-governance.md
