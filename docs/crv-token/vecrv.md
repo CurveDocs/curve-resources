@@ -22,7 +22,7 @@ The veCRV balance represents the voting power of a user in the Curve DAO, which 
 
 After 2 community-led proposals and subsequent governance votes in September 2020 (Link to votes: [[1]](https://curvemonitor.com/#/dao/proposal/parameter/2), [[2]](https://curvemonitor.com/#/dao/proposal/parameter/3)), the admin fees of Curve pools were set to 50%, this means **50% of all trading fees are distributed to veCRV holders**, while the remaining 50% goes to the respective liquidity providers of the pools. This distribution was implemented to align the incentives between liquidity providers and governance participants (veCRV holders). Additionally, since the launch of Curve's own stablecoin (crvUSD), **100% of the accrued interest from crvUSD markets** also goes to veCRV holders.  veCRV holders don't receive any direct value from lending markets, but they do receive indirect value from increasing crvUSD supply.
 
-All collected fees are converted to `crvUSD`  and distributed among veCRV holders. See [Claiming Trading Fees](./claiming-trading-fees.md) for how to claim, or [Fee Collection & Distribution](../fee-collection-distribution/overview.md) for how they are collected.
+All collected fees are converted to `crvUSD`  and distributed among veCRV holders. See [Claiming Trading Fees](../fee-collection-distribution/claiming-trading-fees.md) for how to claim, or [Fee Collection & Distribution](../fee-collection-distribution/overview.md) for how they are collected.
 
 ### **Boosting CRV Rewards**
 
