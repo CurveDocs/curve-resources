@@ -187,6 +187,13 @@ nav:
     - Gauge weights: reward-gauges/gauge-weights.md
     - Permissionless rewards: reward-gauges/permissionless-rewards.md
 
+  - Factory Pools:
+    - Pool Creation Overview: factory-pools/pool-creation-overview.md
+    - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
+    - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
+    - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
+    - Understanding oracles: factory-pools/understanding-oracles.md
+
   - Fee Collection & Distribution: 
     - Overview: fee-collection-distribution/overview.md
     - How to Claim veCRV Trading Fees: fee-collection-distribution/claiming-trading-fees.md
@@ -204,13 +211,6 @@ nav:
     - Understanding multi-chain: multichain/understanding-multichain.md
     - Bridging funds: multichain/bridging-funds.md
     - How to Bridge crvUSD to BSC: multichain/bridging-crvusd-to-bsc.md
-
-  - Factory Pools:
-    - Pool Creation Overview: factory-pools/pool-creation-overview.md
-    - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
-    - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
-    - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
-    - Understanding oracles: factory-pools/understanding-oracles.md
 
   - Support & Troubleshooting:
     - Support: troubleshooting/support.md
