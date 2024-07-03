@@ -86,40 +86,14 @@ Additionally, the UI shows the future borrow APY when the user's loan is created
 !!!info "Loan Management when in soft-liquidation mode"
     **During soft-liquidation, users are unable to add or withdraw collateral.** They can choose to **either partially or fully repay** their crvUSD debt to improve their health ratio **or** decide to **self-liquidate** their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
 
-Everything needed to manage a loan is available in the UI.
+Understanding how soft-liquidations, loan health and hard-liquidations work is essential for understanding how to manage loans on Curve.  Be sure to read and understand the following sections before taking out a loan:
 
-*The `"Manage Loan"` tab has the following options:*
+- [**Understanding Soft-Liquidations**](./overview.md#soft-liquidation)
+- [**Understanding Loan Health & Hard-Liquidations**](./overview.md#health-hard-liquidation)
 
-<figure markdown="span">
-  ![](../images/lending/lend_manageloan.png){ width="400" }
-  <figcaption></figcaption>
-</figure>
+The rest of this section talks about how to use the UI to manage loans and collateral.
 
-### **Borrow More**
-
-Borrow more simply allows the user to borrow more debt and add more collateral at the same time.
-
-### **Repay**
-
-Repay has the following options, and all options allow the user to **partially** or **fully repay** their loans.  If only a partial repayment is done then the liquidation range will change for the user.
-
-![Repay UI](../images/ui/repay.png){: .centered }
-
-**`REPAY FROM COLLATERAL`** will remove the collateral (e.g., WETH or crvUSD) out of the lending market, convert them all to the debt asset if required (e.g., crvUSD), and send any leftover debt asset (e.g., crvUSD) back to the user if the loan is fully paid and closed.
-
-**`REPAY FROM WALLET`** has two boxes, one for the collateral asset, and one for the debt asset:
-
- * **Collateral asset, e.g., WETH**: this works the same way as `REPAY FROM COLLATERAL`, all sent WETH would be converted to crvUSD, debt would be repaid and any remaining crvUSD transferred back to the user if the loan is fully paid and closed.
-
-* **Debt asset, e.g., crvUSD**: this repays the debt with the sent crvUSD.  If all debt is repaid the loan is closed and all collateral in the lending market is sent back to the user, in the above case the user would receive back their WETH.
-
-### **Self-liquidate**
-
-This allows a user to liquidate themselves before they get hard-liquidated.  Users using this feature will most likely already be in soft-liquidation.  This lets the user retrieve their collateral and stops them from losing the amount defined by the [`liquidation_discount`](../crvusd/loan-details.md#market-parameters).
-
-Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH as collateral for how this works.  Alice is in soft liquidation and her health is getting low.  In soft liquidation 0.2 WETH has been converted to 250 crvUSD, so she now has 0.8 WETH and 250 crvUSD backing her 1000 crvUSD loan.  Alice wants to self liquidate.  Alice only needs to send 750 crvUSD to self-liquidate, because she already has 250 crvUSD of collateral, both these amounts together will pay off the 1000 crvUSD debt.  Alice then receives back her 0.8 WETH.
-
----
+### **Collateral Tab**
 
 *The `"Collateral"` tab allows the adjustment of collateral:*
 
@@ -128,8 +102,49 @@ Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH a
   <figcaption></figcaption>
 </figure>
 
-- **`Add collateral`**: Add more collateral to the loan.
-- **`Remove collateral`**: Remove collateral from the loan.
+#### Add collateral
+
+Add more collateral to the loan.  *This is not possible while in soft-liquidation.  If health is getting low, some debt must be repaid instead of adding more collateral*.
+
+#### Remove collateral 
+
+Remove collateral from the loan.
+
+
+### **Manage Loan Tab**
+
+*The `"Manage Loan"` tab has the following options:*
+
+<figure markdown="span">
+  ![](../images/lending/lend_manageloan.png){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+#### **Borrow More**
+
+Borrow more simply allows the user to borrow more debt and add more collateral at the same time.
+
+#### **Repay**
+
+Repay has the following options, and all options allow the user to **partially** or **fully repay** their loans.  If only a partial repayment is done then the liquidation range will change for the user.
+
+![Repay UI](../images/ui/repay.png){: .centered }
+
+**Repay From Collateral** will remove the collateral (e.g., WETH or crvUSD) out of the lending market, convert them all to the debt asset if required (e.g., crvUSD), and send any leftover debt asset (e.g., crvUSD) back to the user if the loan is fully paid and closed.
+
+**Repay from wallet** has two boxes, one for the collateral asset, and one for the debt asset:
+
+ * **Collateral asset, e.g., WETH**: this works the same way as **Repay From Collateral**, all sent WETH would be converted to crvUSD, debt would be repaid and any remaining crvUSD transferred back to the user if the loan is fully paid and closed.
+
+* **Debt asset, e.g., crvUSD**: this repays the debt with the sent crvUSD.  If all debt is repaid the loan is closed and all collateral in the lending market is sent back to the user, in the above case the user would receive back their WETH.
+
+#### **Self-liquidate**
+
+This allows a user to liquidate themselves before they get hard-liquidated.  Users using this feature will most likely already be in soft-liquidation.  This lets the user retrieve their collateral and stops them from losing the amount defined by the [`liquidation_discount`](../crvusd/loan-details.md#market-parameters).
+
+Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH as collateral for how this works.  Alice is in soft liquidation and her health is getting low.  In soft liquidation 0.2 WETH has been converted to 250 crvUSD, so she now has 0.8 WETH and 250 crvUSD backing her 1000 crvUSD loan.  Alice wants to self liquidate.  Alice only needs to send 750 crvUSD to self-liquidate, because she already has 250 crvUSD of collateral, both these amounts together will pay off the 1000 crvUSD debt.  Alice then receives back her 0.8 WETH.
+
+---
 
 
 ## **How to take out a leverage loan**
