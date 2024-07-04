@@ -43,9 +43,10 @@ When you call methods to preview how many tokens you might receive for interacti
 
 Theoretically, one could calculate the base vAPY for any period by calculating the fees for every transaction and summing over the entire range. However, the Curve UI utilizes a simpler methodology to calculate the base vAPY, where **`t`** is the time in days:
 
-$$
-\\left\[ \\frac{virtual\\\_price({t=0})}{virtual\\\_price({t=-1})} \\right\] ^{365} - 1
-$$
+
+
+$$\left( \frac{\text{virtual_price}(t=0)}{\text{virtual_price}(t=-1)} \right)^{365} - 1$$
+
 
 In other words, the vAPY measures the change in the pool’s _**"virtual price"**_ between today and yesterday, then annualizes this rate. The _**"virtual price"**_ is a measure of the pool growth over time, and is viewable directly on the UI.
 
@@ -55,9 +56,10 @@ The UI receives this value directly by calling the **`get_virtual_price`** metho
 
 Every time a transaction occurs that charges a fee, the virtual price is incremented accordingly. Thus, when a pool launches with a virtual price of exactly 1, if the pool’s virtual price is 1.01 at some future time, an LP holding a token has seen the token’s value increase by 1%.
 
-$$
-\\frac{1.01}{1.00} - 1 = 0.01 = 1\\%
-$$
+
+$$\frac{1.01}{1.00} - 1 = 0.01 = 1\%$$
+
+
 
 A virtual price of 1.01 means an LP will get 1% more value back on removing liquidity. Similarly, new users adding liquidity will receive 1% fewer LP tokens on deposit.
 
@@ -76,9 +78,7 @@ The Curve DAO also authorizes some pools to receive bonus rewards from $CRV toke
 
 The formula used here to calculate rewards tAPR:
 
-$$
-tAPR = \\frac{(crv\\_price \* inflation\\_rate \* relative\\_weight \* 12614400)}{working\\_supply \* asset\\_price \* virtual\\_price}
-$$
+$$tAPR = \frac{\text{crv_price} \times \text{inflation_rate} \times \text{relative_weight} \times 12614400}{\text{working_supply} \times \text{asset_price} \times \text{virtual_price}}$$
 
 
 These parameters are obtained from various data sources, mostly on-chain:
