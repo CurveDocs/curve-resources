@@ -147,10 +147,7 @@ There is no set rule for **whether fewer or more bands are better**. Different n
 * **More bands** equate to having fewer losses in soft-liquidation, but this also widens your Liquidation Range, potentially extending the duration of soft-liquidation.
 * **Fewer bands** will narrow your Liquidation Range, causing your collateral to be traded more aggressively, but you may remain in the Liquidation Range for a shorter time.
 
-
-
 ---
-
 
 ## **Soft-liquidation**
 
@@ -175,9 +172,7 @@ Rebalancing collateral through soft-liquidation is incentivized for arbitrage tr
 !!!warning "Collateral *CANNOT* be deposited while in soft-liquidation"
     Collateral **cannot** be deposited during soft-liquidation. **Only debt repayment is allowed**.
 
-
 ---
-
 
 ## **Health & Hard-Liquidation**
 
@@ -185,19 +180,9 @@ Rebalancing collateral through soft-liquidation is incentivized for arbitrage tr
 
 Soft-liquidation **losses do not only occur when prices go down but also when the collateral price rises again**. This implies that the health of a loan can decrease even though the collateral value of the position increases.
 
-A loan becomes eligible for **hard-liquidation when its health drops below 0**. In this process, an external party can repay the user's debt and claim their collateral in return, closing the loan. **Going below the soft-liquidation range does not trigger a hard-liquidation**. The key trigger is the health falling below 0, as illustrated in the image below of a hard-liquidated user loan.
+A loan becomes eligible for **hard-liquidation when its health drops below 0**. In this process, an external party can repay the user's debt and claim their collateral in return, closing the loan. **Going below the soft-liquidation range does not trigger a hard-liquidation**. The key trigger is the health falling below 0.
 
-<figure markdown="span">
-  ![Hard-liquidation](../images/lending/hard_liq.svg){: .centered }
-  <figcaption>An example of a real hard-liquidation.</figcaption>
-</figure>
-
-**It's possible for a loan to be below the soft-liquidation range, and have all its collateral converted to the borrowed asset (e.g., all CRV to crvUSD) while still maintaining a positive health**.  In this scenario, further price drops don't impact the position, as the converted collateral covers both the debt and safety buffer. The image below illustrates this: notice how the health stabilizes once below the soft-liquidation range, only decreasing at the rate of debt interest accumulation.
-
-<figure markdown="span">
-  ![Below Soft-liquidation](../images/lending/hard_liq4.svg){: .centered }
-  <figcaption>A real example of a user being below their soft-liquidation range.</figcaption>
-</figure>
+**It's possible for a loan to be below the soft-liquidation range, and have all its collateral converted to the borrowed asset (e.g., all CRV to crvUSD) while still maintaining a positive health**.  In this scenario, further price drops don't impact the position, as the converted collateral covers both the debt and safety buffer.
 
 In contrast, most other lending platforms will hard-liquidate your collateral and terminate your loan if your loan falls below a minimum collateral ratio (LTV), even if only by a small amount for a brief time. This can be highly stressful for borrowers and lead to significant losses. Curve Lending offers a safer space and more peace of mind for borrowers.
 
