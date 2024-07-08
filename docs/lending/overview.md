@@ -147,17 +147,15 @@ There is no set rule for **whether fewer or more bands are better**. Different n
 * **More bands** equate to having fewer losses in soft-liquidation, but this also widens your Liquidation Range, potentially extending the duration of soft-liquidation.
 * **Fewer bands** will narrow your Liquidation Range, causing your collateral to be traded more aggressively, but you may remain in the Liquidation Range for a shorter time.
 
-
-
 ---
 
-
 ## **Soft-liquidation**
+
+Soft-liquidation is a mechanism that gradually exchanges collateral (e.g., WETH) for the borrowed asset (e.g., crvUSD) as the collateral's value declines, avoiding the need for a single large liquidation. It also reverses this process if the collateral's value rises. The system sells collateral at a small discount, which increases with market volatility. Users undergoing soft-liquidation experience minor losses over time (in crvUSD minting markets typical losses are <0.1% per day), though this can vary based on loan and market conditions.
 
 Soft-liquidation begins if the oracle price of your collateral falls into one of your bands. At this point, your collateral will be linearly traded for your borrowed asset as the price continues to drop through each band.
 
 Let's examine what soft-liquidation looks like in a simplified example with a **single band** in an **ETH/crvUSD LLAMMA market**. This example illustrates that if the price declines by 20% within the band, 20% of the ETH is converted to crvUSD. When the price is below the lower bound of the band (<\$990), all the collateral is converted to crvUSD (100% crvUSD, 0% ETH). Conversely, when the price exceeds the upper bound (>\$1000), all collateral remains as ETH (100% ETH, 0% crvUSD).
-
 
 ![single llamma band](../images/lending/single_llamma_band.svg#only-light){: .centered style="height:250px" }
 ![single llamma band](../images/lending/single_llamma_band_dark.svg#only-dark){: .centered style="height:250px" }
@@ -167,7 +165,6 @@ The below image represents **multiple bands** through soft-liquidation.  Note th
 ![llamma bands](../images/lending/llamma_bands.svg#only-light){: .centered style="height:250px" }
 ![llamma bands](../images/lending/llamma_bands_dark.svg#only-dark){: .centered style="height:250px" }
 
-
 The value of traded assets remains as loan collateral throughout soft-liquidation. For example, if ETH is swapped for crvUSD, the value of that crvUSD is added to the collateral backing the loan. Additionally, **LLAMMA works both ways; if prices increase through your bands, any swapped collateral will be traded back for your initial collateral** (e.g., ETH swapped to crvUSD as the price decreased will be swapped back to ETH as the price increases).
 
 Rebalancing collateral through soft-liquidation is incentivized for arbitrage traders by offering a small discount (when required) to buy or sell through LLAMMA. Trading back and forth your collateral is the reason why your **health factor erodes over time during soft-liquidation**. Higher volatility generally leads to greater losses. However, your losses are partly recouped by the earned trading fees for providing liquidity.
@@ -175,24 +172,17 @@ Rebalancing collateral through soft-liquidation is incentivized for arbitrage tr
 !!!warning "Collateral *CANNOT* be deposited while in soft-liquidation"
     Collateral **cannot** be deposited during soft-liquidation. **Only debt repayment is allowed**.
 
-
 ---
 
+## **Health & Hard-Liquidation**
 
-## **Health Factor & Hard-Liquidation**
+**Loan Health** is a measure of debt to collateral value.  As long as health is positive, the position remains open. The health of a loan decreases due to losses in soft-liquidation and when debt increases due to interest paid.
 
-The **Loan Health Factor** is a measure of debt to collateral value.  As long as the health factor is positive, the position remains open. The health of a loan decreases when the loan is in soft-liquidation mode and when debt increases due to interest paid.
+Soft-liquidation **losses do not only occur when prices go down but also when the collateral price rises again**. This implies that the health of a loan can decrease even though the collateral value of the position increases.
 
-<figure markdown>
-  ![](../images/health.png){ width="600" }
-  <figcaption></figcaption>
-</figure>
+A loan becomes eligible for **hard-liquidation when its health drops below 0**. In this process, an external party can repay the user's debt and claim their collateral in return, closing the loan. **Going below the soft-liquidation range does not trigger a hard-liquidation**. The key trigger is the health falling below 0.
 
-Soft-liquidation **losses do not only occur when prices go down but also when the collateral price rises again**, resulting in the de-liquidation of the user's loan. This implies that the health of a loan can decrease even though the collateral value of the position increases.
-
-**It's even possible to be below your bands with all collateral converted to the borrowed asset (e.g., all CRV converted to crvUSD), while maintaining a positive health factor**. If this happens, further price declines do not affect the position (e.g., all CRV traded for crvUSD, and crvUSD collateral covers debt and safety buffer).
-
-**A loan is eligible to be hard-liquidated if a the health factor reduces to 0**. In a hard-liquidation, someone else can pay off a user's debt and, in exchange, receive their collateral. The loan will then be closed.
+**It's possible for a loan to be below the soft-liquidation range, and have all its collateral converted to the borrowed asset (e.g., all CRV to crvUSD) while still maintaining a positive health**.  In this scenario, further price drops don't impact the position, as the converted collateral covers both the debt and safety buffer.
 
 In contrast, most other lending platforms will hard-liquidate your collateral and terminate your loan if your loan falls below a minimum collateral ratio (LTV), even if only by a small amount for a brief time. This can be highly stressful for borrowers and lead to significant losses. Curve Lending offers a safer space and more peace of mind for borrowers.
 
