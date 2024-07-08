@@ -38,6 +38,15 @@ A 'loan discount' is a percentage applied to reduce the value of collateral for 
 The maximum amount that can be borrowed is also influenced by other factors, such as market conditions and asset volatility. For more details on these factors and their impact on borrowing, see the technical documentation at https://docs.curve.fi/crvUSD/amm/.
 
 
+### What is the difference between self-liquidating and repaying?
+
+You cannot self-liquidate a partial amount of a loan, self-liquidating closes the loan, but you can repay a partial amount, e.g., 20% of the debt, this increases the health of the loan.  If the repayment takes you out of soft-liquidation, your bands may move.
+
+When repaying and self-liquidating the whole loan, repaying and self liquidating work slightly differently, let's show this using a market lending crvUSD using WETH as collateral:
+
+- For self-liquidating, if some WETH has been converted to crvUSD during soft-liquidation, then the user must transfer the difference between the crvUSD held as collateral and the debt.
+- When repaying with crvUSD, you must transfer enough crvUSD to cover the debt, and you receive all the collateral in return.  However in new markets (markets with leverage), it's possible to repay with collateral.  In this case, the user does not need to send anything, all collateral is transferred to crvUSD, and the user receives back any crvUSD left after debt is repaid.
+
 ---
 
 
