@@ -42,7 +42,12 @@ When locking CRV to veCRV you are rewarded with an amount of veCRV based on how 
 
 $$ \text{veCRV} = \frac{\text{CRV} \times \text{lockTime}}{4 \text{ years}} $$
 
-This means that if Alice locks 100 CRV for 4 years then Alice will receive 100 veCRV, if Alice locks for 1 year they will receive 25 veCRV.  When a user creates a lock, they specify the unlock date, so any amount of time can be chosen from 1 week to 4 years.
+For example this means:
+
+- 1 CRV locked for 4 years = 1 veCRV
+- 1 CRV locked for 3 years = 0.75 veCRV
+- 1 CRV locked for 2 years = 0.5 veCRV
+- 1 CRV locked for 1 years = 0.25 veCRV
 
 The maximum duration of a lock is 4 years, users cannot lock for longer periods to keep the 1 CRV: 1 veCRV ratio, they must instead continue extending their lock.  Users can withdraw their CRV at any time after their veCRV has decayed to 0 (lock time has expired).
 
