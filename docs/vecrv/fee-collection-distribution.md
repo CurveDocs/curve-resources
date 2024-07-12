@@ -1,6 +1,6 @@
 <h1>Fee Collection & Distribution</h1>
 
-The Curve DAO earns revenue from pools and crvUSD minting markets within the ecosystem.  Each week this revenue is collected in different tokens and exchanged for a single token (currently crvUSD) which is then distributed to [veCRV](../crv-token/vecrv.md) holders.
+The Curve DAO earns revenue from pools and crvUSD minting markets within the ecosystem.  Each week this revenue is collected in different tokens and exchanged for a single token (currently crvUSD) which is then distributed to [veCRV](./overview.md) holders.
 
 # **Admin Fees**
 

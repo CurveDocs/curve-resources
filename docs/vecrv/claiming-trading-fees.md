@@ -69,4 +69,4 @@ Burning is a costly process due to the complexity and number of transactions inv
 Fees can only be claimed for the week that has already concluded, as the burner cannot determine each user's entitlement before the end of that period. Fees will be made available **weekly, within 24 hours after Thursday midnight UTC**, as long as someone — typically the Curve team — has initiated the burn process beforehand.
 
 !!!info
-    See the [Fee Collection & Distribution page](./overview.md) for more information about this process.
+    See the [Fee Collection & Distribution page](./fee-collection-distribution.md) for more information about this process.
