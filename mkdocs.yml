@@ -145,8 +145,8 @@ nav:
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
 
   - CRV Token:
-    - CRV Overview: crv-token/overview.md
-    - CRV Supply & Distribution: crv-token/supply-distribution.md
+    - Overview: crv-token/overview.md
+    - Supply & Distribution: crv-token/supply-distribution.md
     - CRV & veCRV FAQ: crv-token/faq.md
 
   - Locked CRV (veCRV):
