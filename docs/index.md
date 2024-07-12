@@ -37,7 +37,7 @@ Whether a liquidity provider, interested in governance, or exploring multi-chain
 
     Obtain veCRV by locking CRV tokens, which allows users to participate in governance, boost their LP rewards, and earn protocol accrued fees.
 
-    [:octicons-arrow-right-24: Learn More](./crv-token/vecrv.md)
+    [:octicons-arrow-right-24: Learn More](./vecrv/overview.md)
 
 -   :logos-crvusd:{ .lg .middle } **Stablecoin**
 
