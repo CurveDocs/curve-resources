@@ -232,7 +232,6 @@ nav:
     - Curve Stablecoin (2022): pdf/curve-stablecoin.pdf
 
   - Links:
-    - Branding & Icons: glossary-branding/branding.md
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://dao.curve.fi/
     - Discord: https://discord.gg/twUngQYz85
@@ -241,5 +240,7 @@ nav:
     - Twitter: https://twitter.com/curvefinance
     - Technical Docs: https://docs.curve.fi/
     - Telegram: https://t.me/curvefi
+
+  - Branding & Icons: glossary-branding/branding.md
 
   - Glossary: glossary-branding/glossary.md
