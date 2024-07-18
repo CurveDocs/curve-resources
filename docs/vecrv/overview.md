@@ -1,6 +1,11 @@
-<h1>Vote-escrowed CRV (veCRV)</h1>
+<h1>Locked CRV (veCRV)</h1>
 
-veCRV is an acronym for **vote-escrowed CRV**.  A contract called voting escrow holds the CRV for the time period a user locks for, in return the user is given veCRV.  **veCRV is not transferrable**.
+veCRV is an acronym for **vote-escrowed CRV**.  Users can lock their CRV for a **minimum of 1 week**, **maximum of 4 years**, in return the user is given veCRV.  **veCRV is not transferrable**.  The longer you lock the more veCRV you receive, see the [locking formula section](#crv-to-vecrv-formula) for a detailed explanation but the simple explanation is:
+
+- 1 CRV locked for 4 years = 1 veCRV
+- 1 CRV locked for 3 years = 0.75 veCRV
+- 1 CRV locked for 2 years = 0.5 veCRV
+- 1 CRV locked for 1 year = 0.25 veCRV
 
 **Locking was a concept created to align incentives for governance**.  Many coin voting systems have a problem where someone can buy tokens off the market to influence a governance vote, then sell the tokens after the vote passed/failed.  These users can influence governance votes greatly and only take minimal risk by holding tokens for a few days.  Locking stops this happening.  Users must lock their tokens for a period of time to receive voting power, and users are rewarded with more voting power if they lock their tokens for a longer period of time.
 
@@ -17,7 +22,7 @@ Users with veCRV are given the following benefits:
 
 After 2 community-led proposals and subsequent governance votes in September 2020 (Link to votes: [[1]](https://curvemonitor.com/#/dao/proposal/parameter/2), [[2]](https://curvemonitor.com/#/dao/proposal/parameter/3)), the admin fees of Curve pools were set to 50%, this means **50% of all trading fees are distributed to veCRV holders**, while the remaining 50% goes to the respective liquidity providers of the pools. This distribution was implemented to align the incentives between liquidity providers and governance participants (veCRV holders). Additionally, since the launch of Curve's own stablecoin (crvUSD), **100% of the accrued interest from crvUSD markets** also goes to veCRV holders.  veCRV holders don't receive any direct value from lending markets, but they do receive indirect value from increasing crvUSD supply.
 
-All collected fees are converted to `crvUSD`  and distributed among veCRV holders. See [Claiming Trading Fees](../fee-collection-distribution/claiming-trading-fees.md) for how to claim, or [Fee Collection & Distribution](../fee-collection-distribution/overview.md) for how they are collected.
+All collected fees are converted to `crvUSD`  and distributed among veCRV holders. See [Claiming Trading Fees](./claiming-trading-fees.md) for how to claim, or [Fee Collection & Distribution](./fee-collection-distribution.md) for how they are collected.
 
 ### **Boosting CRV Rewards**
 
@@ -42,13 +47,6 @@ Additionally, a user **cannot have multiple locks with different expiry dates**.
 When locking CRV to veCRV you are rewarded with an amount of veCRV based on how long you lock, the minimum time is 1 week, the maximum time is 4 years:
 
 $$ \text{veCRV} = \frac{\text{CRV} \times \text{lockTime}}{4 \text{ years}} $$
-
-For example this means:
-
-- 1 CRV locked for 4 years = 1 veCRV
-- 1 CRV locked for 3 years = 0.75 veCRV
-- 1 CRV locked for 2 years = 0.5 veCRV
-- 1 CRV locked for 1 years = 0.25 veCRV
 
 The maximum duration of a lock is 4 years, users cannot lock for longer periods to keep the 1 CRV: 1 veCRV ratio, they must instead continue extending their lock.  Users can withdraw their CRV at any time after their veCRV has decayed to 0 (lock time has expired).
 

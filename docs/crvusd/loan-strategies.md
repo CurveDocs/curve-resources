@@ -343,7 +343,9 @@ Risks:
             data: data.oraclePrice,
             borderColor: 'orange',
             pointRadius: 0,
-            yAxisID: 'y1'
+            yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: 'Soft-Liquidation Price Range',
@@ -374,6 +376,8 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: '$ CV wstETH',
@@ -383,6 +387,8 @@ Risks:
             pointRadius: 0,
             borderWidth: 2,
             yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: '$ CV crvUSD',
@@ -392,6 +398,8 @@ Risks:
             pointRadius: 0,
             borderWidth: 2,
             yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: 'Debt Value',
@@ -400,6 +408,8 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: 'AAVE/Spark Liq Price',
@@ -408,7 +418,9 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y1',
-            borderWidth: 2
+            borderWidth: 2,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: 'LTV',
@@ -416,7 +428,9 @@ Risks:
             borderColor: 'black',
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: 'Health',
@@ -424,7 +438,9 @@ Risks:
             borderColor: 'purple',
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: '% CV wstETH',
@@ -433,7 +449,9 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: '% CV crvUSD',
@@ -442,7 +460,9 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: '% SL Collateral Loss',
@@ -451,7 +471,9 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: '% Total Collateral Loss',
@@ -460,7 +482,9 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: '% Interest Collateral Loss',
@@ -469,7 +493,9 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: '% Max Deposited Collateral',
@@ -478,7 +504,9 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           },
           {
             label: 'Interest Rate',
@@ -487,14 +515,16 @@ Risks:
             hidden: true,
             pointRadius: 0,
             yAxisID: 'y2',
-            borderWidth: 1
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
           }
         ]
       },
       options: {
         responsive: true,
         aspectRatio: 4/3,
-        devicePixelRatio: 2.5,
+        devicePixelRatio: 1,
         scales: {
           x: {
             title: {

@@ -31,7 +31,7 @@ See the [Supply & Distribution page](./supply-distribution.md) for more detailed
 
 ## **Utility**
 
-There are 4 main use-cases for CRV:
+There are 4 main use-cases for CRV, most require locked CRV (veCRV):
 
 1. **Incentivizing liquidity providers** to provide liquidity to pools and lending markets through CRV rewards.  This is how CRV tokens are distributed to the community.
 2. Allowing liquidity providers to **boost their CRV rewards** up to 2.5x by holding veCRV.
@@ -39,9 +39,9 @@ There are 4 main use-cases for CRV:
 4. **Collecting a portion of the fees** from swaps and loans that occur on Curve through holding veCRV.
 
 !!!info
-    veCRV stands for **vote-escrowed CRV**, representing CRV tokens locked for voting in the Curve DAO.  Vote-locked CRV and vote-escrowed CRV both mean veCRV, these terms are used interchangeably throughout the ecosystem.
+    veCRV stands for **vote-escrowed CRV**, representing CRV tokens locked for voting in the Curve DAO.  Locked CRV, Vote-locked CRV and vote-escrowed CRV all mean veCRV, these terms are used interchangeably throughout the ecosystem.
 
-    For information about how to lock see the [**locking guide**](./locking-your-crv.md), or for more information about veCRV, see the [**veCRV page**](./vecrv.md).
+    For information about how to lock see the [**locking guide**](../vecrv/locking-your-crv.md), or for more information about veCRV, see the [**veCRV page**](../vecrv/overview.md).
 
 ---
 
@@ -73,7 +73,7 @@ The table below can help you understand the value of CRV and veCRV in different 
   font-family: Arial, sans-serif;
   font-size: 14px;
   overflow: hidden;
-  padding: 10px;
+  padding: 4px;
   word-break: normal;
   text-align: center;
   vertical-align: bottom;
@@ -81,6 +81,7 @@ The table below can help you understand the value of CRV and veCRV in different 
 .tg .tg-hs62 {
   background-color: #9aff99;
   border-color: #656565;
+  color: black;
 }
 .tg .tg-3lxi {
   border-color: #656565;
@@ -92,19 +93,23 @@ The table below can help you understand the value of CRV and veCRV in different 
   background-color: #9aff99;
   border-color: #656565;
   font-size: 12px;
+  color: black;
 }
 .tg .tg-hkgo {
   border-color: #656565;
   font-weight: bold;
+  color: black;
 }
 .tg .tg-jlsk {
   background-color: #ffccc9;
   border-color: #656565;
+  color: black;
 }
 .tg .tg-gtpm {
   background-color: #ffccc9;
   border-color: #656565;
   font-size: 12px;
+  color: black;
 }
 </style>
 <table class="tg"><thead>
