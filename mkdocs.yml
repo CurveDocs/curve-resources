@@ -169,6 +169,7 @@ nav:
     - How to Supply: lending/how-to-supply.md
     - Lending FAQ: lending/faq.md
     - How to Create a Market: lending/create-lending-market.md
+    - Liquidation Examples: lending/liquidations.md
 
   - Liquidity Providers:
     - Understanding curve pools: lp/understanding-curve-pools.md
@@ -241,6 +242,6 @@ nav:
     - Technical Docs: https://docs.curve.fi/
     - Telegram: https://t.me/curvefi
 
-  - Branding & Icons: glossary-branding/branding.md
 
   - Glossary: glossary-branding/glossary.md
+  - Branding & Icons: glossary-branding/branding.md
