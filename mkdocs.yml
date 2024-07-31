@@ -5,7 +5,7 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
   - minify:
       minify_html: true
   - redirects:
@@ -145,7 +145,7 @@ nav:
     - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
 
   - CRV Token:
-    - Overview: crv-token/overview.md
+    - Tokenomics: crv-token/overview.md
     - Supply & Distribution: crv-token/supply-distribution.md
     - CRV & veCRV FAQ: crv-token/faq.md
 
@@ -161,6 +161,7 @@ nav:
     - Loan Details & Concepts: crvusd/loan-details.md
     - Loan Strategies: crvusd/loan-strategies.md
     - crvUSD FAQ: crvusd/faq.md
+    - Autobribe: crvusd/autobribe.md
 
   - Curve Lending:
     - Overview: lending/overview.md
