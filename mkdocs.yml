@@ -150,9 +150,9 @@ nav:
 
   - Locked CRV (veCRV):
     - Overview: vecrv/overview.md
-    - Fee Collection & Distribution: vecrv/fee-collection-distribution.md
     - How to Lock CRV: vecrv/locking-your-crv.md
     - Claiming Trading Fees: vecrv/claiming-trading-fees.md
+    - Fee Collection & Distribution: vecrv/fee-collection-distribution.md
 
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
