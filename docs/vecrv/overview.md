@@ -1,6 +1,6 @@
 <h1>Locked CRV (veCRV)</h1>
 
-veCRV is an acronym for **vote-escrowed CRV**.  Users can lock their CRV for a **minimum of 1 week**, **maximum of 4 years**, in return the user is given veCRV.  **veCRV is not transferrable**.  The longer you lock the more veCRV you receive, see the [locking formula section](#crv-to-vecrv-formula) for a detailed explanation but the simple explanation is:
+veCRV is an acronym for **vote-escrowed CRV**.  Users can lock their CRV for a **minimum of 1 week**, **maximum of 4 years**, in return the user is given veCRV, **veCRV amount [decays](#vecrv-decay) linearly over the chosen lock time**.  **veCRV is not transferrable**.  The longer you lock the more veCRV you receive, see the [locking formula section](#crv-to-vecrv-formula) for a detailed explanation but the simple explanation is:
 
 - 1 CRV locked for 4 years = 1 veCRV
 - 1 CRV locked for 3 years = 0.75 veCRV
