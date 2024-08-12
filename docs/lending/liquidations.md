@@ -8,7 +8,9 @@ Soft-liquidation losses are hard to estimate, but the general idea is that if pr
 
 ## Hard-Liquidation
 
-**Hard-liquidation can only occur when the health of a loan is negative**.  If the health is negative anyone can pay off the debt and claim the collateral backing the loan, this should always be profitable, but in rare circumstances it may not be, if this happens it's called [bad debt](../crvusd/loan-details.md#bad-debt).
+**Hard Liquidation does not happen at the bottom of the soft-liquidation range**.
+
+**Hard-liquidation can only occur when the health goes below 0**.  If the health is negative anyone can pay off the debt and claim the collateral backing the loan, this should always be profitable, but in rare circumstances it may not be, if this happens it's called [bad debt](../crvusd/loan-details.md#bad-debt).
 
 The example below shows a loan in the CRV/crvUSD lending market which was hard-liquidated.  The chart is interactive, by hovering over prices, you can see how the health of the loan decreases over time.  See that hard-liquidation only relies on health.  **The bottom of the soft-liquidation range is not where hard-liquidation happens.**
 

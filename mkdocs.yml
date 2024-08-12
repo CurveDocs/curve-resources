@@ -5,7 +5,7 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
   - minify:
       minify_html: true
   - redirects:
@@ -164,14 +164,14 @@ nav:
   - Curve Lending:
     - Overview: lending/overview.md
     - Leverage: lending/leverage.md
+    - Liquidation Examples: lending/liquidations.md
     - How to Borrow & Use Leverage: lending/how-to-borrow.md
     - How to Supply: lending/how-to-supply.md
+    - How to Create a Lending Market: lending/create-lending-market.md
     - Lending FAQ: lending/faq.md
-    - How to Create a Market: lending/create-lending-market.md
-    - Liquidation Examples: lending/liquidations.md
 
-  - Liquidity Providers:
-    - Understanding curve pools: lp/understanding-curve-pools.md
+  - Pools:
+    - Overview: lp/overview.md
     - Pools: lp/pools.md
     - Deposit FAQ: lp/deposit-faqs.md
     - Calculating yield: lp/calculating-yield.md
@@ -184,19 +184,19 @@ nav:
       - Depositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
       - Depositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
 
+  - Pool Creation:
+    - Pool Creation Overview: factory-pools/pool-creation-overview.md
+    - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
+    - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
+    - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
+    - Understanding oracles: factory-pools/understanding-oracles.md
+
   - Liquidity Gauges:
     - Understanding gauges: reward-gauges/understanding-gauges.md
     - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
     - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
     - Gauge weights: reward-gauges/gauge-weights.md
     - Permissionless rewards: reward-gauges/permissionless-rewards.md
-
-  - Factory Pools:
-    - Pool Creation Overview: factory-pools/pool-creation-overview.md
-    - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
-    - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
-    - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
-    - Understanding oracles: factory-pools/understanding-oracles.md
 
   - Governance:
     - Understanding governance: governance/understanding-governance.md
