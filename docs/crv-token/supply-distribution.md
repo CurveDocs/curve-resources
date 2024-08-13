@@ -451,8 +451,10 @@ function renderCharts() {
         <span style="text-align: left; flex: 2;">${roundAmount(amounts.maxSupply - amounts.totalEmitted - amounts.vestingRemaining).toLocaleString(undefined)}</span>
     </div>
     <div style="display: flex;">
-        <span style="text-align: right; margin-right: 10px; flex: 2;">Remaining CRV Vesting :</span>
-        <span style="text-align: left; flex: 2;">${(roundAmount(amounts.vestingRemaining)).toLocaleString(undefined)}</span>
+      <span style="text-align: right; margin-right: 10px; flex: 2;">Remaining CRV Vesting :</span>
+      <span style="text-align: left; flex: 2;">
+        ${Math.max(0, roundAmount(amounts.vestingRemaining)).toLocaleString(undefined)}
+      </span>
     </div>
     <div style="display: flex;">
         <span style="text-align: right; margin-right: 10px; flex: 2;">Percentage of CRV Circulating :</span>
