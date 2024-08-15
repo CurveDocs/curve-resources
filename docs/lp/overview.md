@@ -18,7 +18,6 @@ Pools have 2 or more pools of tokens, and users can swap between the tokens in t
 ![](../images/pools/general-pool.svg){.centered}
 
 
-
 ## STABLESWAP
 
 Stableswap is the name given to pools which have assets pegged to each other.  For example USDC and USDT, their value should always be very close to 1:1 so these assets can be added to a Stableswap pool.
