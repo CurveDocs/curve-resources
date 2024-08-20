@@ -1,6 +1,6 @@
 <h1>Community Fund</h1>
 
-CRV initial distribution allowed for a community fund of around $151M to be used in cases of emergencies or awarded to community-lead initiatives.
+CRV initial distribution allowed for a community fund of around 151M CRV to be used in cases of emergencies or awarded to community-lead initiatives.
 
 The Curve DAO can decide to award part of this fund through a proposal.
 
