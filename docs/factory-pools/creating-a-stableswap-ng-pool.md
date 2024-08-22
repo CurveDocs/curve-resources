@@ -43,7 +43,10 @@ Standard ERC-20 tokens do not need any additional configuration.
 
 ### **Tokens with Oracles**
 
-Some tokens might require an external rate oracle. In this case, when selecting a token that has an oracle, the corresponding box needs to be ticked, and an extra section for the contract address and oracle price method appears. Some tokens might retain their price oracle form a contract other than the token contract.
+!!!warning "Oracle Precision"
+    The precision of the rate oracle **must be $10^{18}$**. Otherwise, the liquidity pool will not function correctly, as the exchange rate will be broken.
+
+Some tokens might require an external rate oracle to ensure correct calculations within the AMM. This is especially useful for tokens with rates against their underlying tokens, such as rETH against ETH. In this case, when selecting a token with an oracle, the corresponding box needs to be ticked, and an extra section for the contract address and oracle price method will appear. Some tokens might source their price oracle from a contract other than the token contract.
 
 <figure markdown="span">
   ![](../images/pool_creation/ss_oracle_dark.png#only-dark){ width="400" }
@@ -75,13 +78,12 @@ ERC-4626 is a standard to optimize and unify the technical parameters of yield-b
 </figure>
 
 
-
 ---
 
 
 ## **Parameters**
 
-*Stableswap-NG offers two different default Pool Parameter Presets:*
+*Stableswap-NG offers three different default Pool Parameter Presets:*
 
 <figure markdown="span">
   ![](../images/pool_creation/ss_presets_dark.png#only-dark){ width="400" }
@@ -139,4 +141,4 @@ On the right-hand side, there is a tab that summarizes all the tokens, parameter
   <figcaption></figcaption>
 </figure>
 
-After deployment, make sure to seed initial liquidity and [**create a gauge**](../reward-gauges/creating-a-pool-gauge.md).
+After deployment, make sure to seed initial liquidity and potentially [**create a gauge**](../reward-gauges/creating-a-pool-gauge.md).
