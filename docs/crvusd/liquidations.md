@@ -5,12 +5,12 @@ Liquidations on Curve Lending and crvUSD work differently to other DeFi loans.  
 !!!warning "Soft-Liquidation"
     **Soft-liquidation converts collateral into the borrowed asset as price decreases, and back to the original asset as price increases**.  The process happens linearly through the Soft-liquidation range.  If a user is halfway through their range, half of their collateral should be in the original asset and half converted to their borrowed asset.  Health deteriorates as small fees are paid to convert collateral.
 
-    **Soft-liquidation turns into Hard-liquidation when health is 0**.  The bottom of the Soft-liquidation range does not trigger hard-liquidation.  A user can have their collateral fully converted and still have positive health if they manage it carefully.
+    **Soft-liquidation turns into Hard-liquidation when health is 0%**.  The bottom of the Soft-liquidation range does not trigger hard-liquidation.  A user can have their collateral fully converted and still have positive health if they manage it carefully.
 
 !!!danger "Hard-Liquidation"
-    **Hard-liquidation occurs when health is 0%**.  This will **most likely happen before the bottom of the Soft-liquidation range**, unless health is measured carefully.  In Hard-liquidation the borrower keeps their borrowed assets (normally crvUSD) but lose their collateral.  
+    **Hard-liquidation occurs when health is 0%**.  This will **most likely happen before the bottom of the Soft-liquidation range**, unless health is monitored carefully.  In Hard-liquidation the borrower keeps their borrowed assets (normally crvUSD) but lose their collateral.  
     
-    Health deteriorates in Soft-liquidation which causes Hard-liquidation.  **Hard-liquidation does not trigger below the Soft-liquidation range, it only relies on health**.
+    Health deteriorates in Soft-liquidation which causes Hard-liquidation.  **Hard-liquidation does not trigger at the bottom of the Soft-liquidation range, it only relies on health**.
 
     **Users MUST manage their health to avoid Hard-liquidation.**
 
@@ -18,10 +18,12 @@ Liquidations on Curve Lending and crvUSD work differently to other DeFi loans.  
 
 ## **Loan Opening Information**
 
-When a loan is opened a Soft-liquidation range and health are defined.  **Health must be monitored, if it gets to 0% hard liquidation will occur**, no matter where in the soft-liquidation range the price is.  An example loan using ETH collateral to borrow crvUSD is below:
+When a loan is opened a Soft-liquidation range and health are defined.  **Health must be monitored, if it gets to 0% hard liquidation will occur**, no matter where in the soft-liquidation range the price is.  An example loan using ETH collateral to borrow crvUSD is below to define terms:
 
 ![Example Loan](../images/crvusd/example_loan.svg#only-light){: .centered }
 ![Example Loan](../images/crvusd/example_loan_dark.svg#only-dark){: .centered }
+
+## **Soft-Liquidation**
 
 When the position enters Soft-liquidation it's a warning.  The system will try and protect user loans by converting the original collateral to the borrowed asset as prices decrease, and back to the original collateral as prices increase.  The system does not perfectly protect users though.  If their health gets to 0% or below Hard-liquidation occurs.
 
@@ -56,21 +58,22 @@ The applet shows how collateral is converted in Soft-liquidation (SL), note that
 </style>
 
 <div id="ethCrvUsdChartContainer">
+    <h2 style="margin: 10px 0 20px; text-align: center;">Soft-liquidation Collateral Conversion</h2>
     <div style="margin-top: 10px;">
         <label for="collateralInput">Collateral Amount (ETH):</label>
         <input type="number" id="collateralInput" class="price-input" value="10" min="0" step="0.1">
     </div>
     <div style="position: relative; margin-top: 20px;">
         <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <span>Bottom of SL Range</span>
-            <span>Top of SL Range</span>
+            <span>Bottom of SL Range:</span>
+            <span>Top of SL Range:</span>
         </div>
-        <input type="range" id="ethCrvUsdSlider" style="width: 100%;" min="0" max="100" value="50">
         <div style="display: flex; justify-content: space-between; margin-top: 5px;">
             <input type="number" id="bottomRange" class="price-input" value="2311.92">
             <span id="currentPrice" style="font-weight: bold;"></span>
             <input type="number" id="topRange" class="price-input" value="2556.35">
         </div>
+        <input type="range" id="ethCrvUsdSlider" style="width: 100%;" min="0" max="100" value="50">
     </div>
     <canvas id="ethCrvUsdChart"></canvas>
     <div id="ethCrvUsdValues" style="text-align: center; margin-top: 10px;"></div>
@@ -84,11 +87,10 @@ In Soft-liquidation, collateral will slowly be lost to fees from swapping back a
 
 The soft-liquidation engine is also an AMM, so users make trading fees as trades occur.  These fees are dynamic; fees automatically increase in high volatility periods.
 
-![Collateral Loss](../images/crvusd/softliq-engine.svg){: .centered }
+![Collateral Loss](../images/crvusd/softliq-engine.svg#only-light){: .centered }
+![Collateral Loss](../images/crvusd/softliq-engine-dark.svg#only-dark){: .centered }
 
 ---
-
-# **Examples**
 
 ## **Hard-Liquidation Example**
 
@@ -96,6 +98,7 @@ The soft-liquidation engine is also an AMM, so users make trading fees as trades
 
 The example below shows a loan in the CRV/crvUSD lending market which was hard-liquidated.  The chart is interactive, by hovering over prices, you can see how the health of the loan decreases over time.  See that hard-liquidation only relies on health.  **The bottom of the soft-liquidation range is not where hard-liquidation happens.**
 
+<h2 style="margin: 10px 0 20px; text-align: center;">Hard-liquidation - Borrowing crvUSD using CRV</h2>
 <div class="centered2" style="width: 100%">
   <canvas id="crvHardLiq"></canvas>
 </div>
@@ -110,6 +113,7 @@ The below example shows how to manage health and how self-liquidation works, thi
 
 Self-liquidating here was a good idea, this is because they already had 38,857 crvUSD as collateral (from swapped WETH in soft-liquidation), and their debt was 98,299 crvUSD, they only had to send 59,442 crvUSD and they received back their 24.3371 WETH.  If they chose to repay they would have had to repay all 98,299 crvUSD of debt, and received all collateral back (38,857 crvUSD and 24.3371 WETH) in return.
 
+<h2 style="margin: 10px 0 20px; text-align: center;">Self-liquidation - Borrowing crvUSD using WETH</h2>
 <div class="centered2" style="width: 100%">
   <canvas id="wethSelfLiq"></canvas>
 </div>
@@ -588,7 +592,7 @@ loadData('wethSelfLiqData.json', 'wethSelfLiq', 3200, 3200, 'WETH', 'crvUSD')
     const ethCrvUsdChart = new Chart(ethCrvUsdCtx, {
     type: 'bar',
     data: {
-        labels: ['Assets'],  // Single label
+        labels: ['Collateral'],  // Single label
         datasets: [
             {
                 label: 'ETH',
@@ -613,7 +617,7 @@ loadData('wethSelfLiqData.json', 'wethSelfLiq', 3200, 3200, 'WETH', 'crvUSD')
                 barPercentage: 0.9,  // Adjusts the width of each individual bar
                 title: {
                     display: false,
-                    text: 'Assets'
+                    text: 'Collateral'
                 }
             },
             y: {
@@ -623,7 +627,7 @@ loadData('wethSelfLiqData.json', 'wethSelfLiq', 3200, 3200, 'WETH', 'crvUSD')
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: 'ETH Amount'
+                    text: 'ETH Collateral'
                 },
                 ticks: {
                     callback: function(value) {
@@ -638,11 +642,11 @@ loadData('wethSelfLiqData.json', 'wethSelfLiq', 3200, 3200, 'WETH', 'crvUSD')
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: 'crvUSD Value ($)'
+                    text: 'crvUSD Collateral'
                 },
                 ticks: {
                     callback: function(value) {
-                        return '$' + value.toFixed(0);
+                        return value.toFixed(0) + ' crvUSD';
                     }
                 },
                 grid: {
@@ -655,7 +659,7 @@ loadData('wethSelfLiqData.json', 'wethSelfLiq', 3200, 3200, 'WETH', 'crvUSD')
                 display: true
             },
             title: {
-                display: true,
+                display: false,
                 text: 'Soft-Liquidation Collateral Conversion'
             },
             tooltip: {
@@ -663,9 +667,9 @@ loadData('wethSelfLiqData.json', 'wethSelfLiq', 3200, 3200, 'WETH', 'crvUSD')
                     label: function(context) {
                         const label = context.dataset.label || '';
                         if (label === 'ETH') {
-                            return label + ': ' + context.parsed.y.toFixed(2) + ' ETH';
+                            return context.parsed.y.toFixed(2) + ' ETH';
                         } else {
-                            return label + ': $' + context.parsed.y.toFixed(2);
+                            return context.parsed.y.toFixed(2) + ' crvUSD';
                         }
                     }
                 }
@@ -696,7 +700,7 @@ loadData('wethSelfLiqData.json', 'wethSelfLiq', 3200, 3200, 'WETH', 'crvUSD')
         
         ethCrvUsdChart.update();
 
-        ethCrvUsdValuesDisplay.innerHTML = `Collateral: ${eth.toFixed(2)} ETH, ${crvUSDValue.toFixed(2)} crvUSD<br>Average Swap Price: ${avgSellPrice.toFixed(2)} crvUSD/ETH`;
+        ethCrvUsdValuesDisplay.innerHTML = `Collateral: ${eth.toFixed(2)} ETH, ${crvUSDValue.toFixed(2)} crvUSD<br>Average Swap Price: ${avgSellPrice.toFixed(2)} crvUSD/ETH<br>ETH Swapped to crvUSD: ${crvUSDPercentage}%`;
 
         currentPriceDisplay.textContent = '$' + currentPrice.toFixed(2);
         ethPercentageDisplay.textContent = ethPercentage;
