@@ -139,29 +139,61 @@ repo_url: https://github.com/CurveDocs/curve-resources
 
 nav:
   - Home: index.md
-  - Getting Started:
-    - Understanding Curve (v1): base-features/understanding-curve.md  
-    - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
 
-  - CRV Token:
-    - Overview & Tokenomics: crv-token/overview.md
-    - Supply & Distribution: crv-token/supply-distribution.md
-    - CRV & veCRV FAQ: crv-token/faq.md
+  - CRV & veCRV:
+      - Overview: crv-vecrv/overview.md
+      - CRV Tokenomics: crv-vecrv/crv-tokenonomics.md
+      - veCRV: crv-vecrv/vecrv.md
+      - FAQ: crv-vecrv/faq.md
 
-  - Locked CRV (veCRV):
-    - Overview: vecrv/overview.md
+  - DAO & Governance:
     - How to Lock CRV: vecrv/locking-your-crv.md
     - Claiming Trading Fees: vecrv/claiming-trading-fees.md
+    - Understanding governance: governance/understanding-governance.md
+    - Voting: governance/voting.md
+    - Proposals:
+      - Community fund: governance/proposals/community-fund.md
+      - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
     - Fee Collection & Distribution: vecrv/fee-collection-distribution.md
 
-  - Curve Stablecoin (crvUSD):
+  - DEX:
+    - Getting Started:
+      - Understanding Curve (v1): base-features/understanding-curve.md  
+      - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
+    - Liquidity Providers:
+      - Understanding curve pools: lp/understanding-curve-pools.md
+      - Pools: lp/pools.md
+      - Deposit FAQ: lp/deposit-faqs.md
+      - Calculating yield: lp/calculating-yield.md
+      - Charts and Pool Activity: lp/charts_poolactivity.md
+      - Depositing:
+        - Overview: lp/depositing/depositing.md
+        - Depositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
+        - Depositing into a metapool: lp/depositing/depositing-into-a-metapool.md
+        - Depositing into the susd-pool: lp/depositing/depositing-into-the-susd-pool.md
+        - Depositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
+        - Depositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
+    - Liquidity Gauges:
+      - Understanding gauges: reward-gauges/understanding-gauges.md
+      - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
+      - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
+      - Gauge weights: reward-gauges/gauge-weights.md
+      - Permissionless rewards: reward-gauges/permissionless-rewards.md
+    - Factory Pools:
+      - Pool Creation Overview: factory-pools/pool-creation-overview.md
+      - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
+      - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
+      - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
+      - Understanding oracles: factory-pools/understanding-oracles.md
+
+  - Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Loan Details & Concepts: crvusd/loan-details.md
     - Loan Strategies: crvusd/loan-strategies.md
     - crvUSD FAQ: crvusd/faq.md
 
-  - Curve Lending:
+  - Lending:
     - Overview: lending/overview.md
     - Leverage: lending/leverage.md
     - How to Borrow & Use Leverage: lending/how-to-borrow.md
@@ -170,53 +202,13 @@ nav:
     - How to Create a Market: lending/create-lending-market.md
     - Liquidation Examples: lending/liquidations.md
 
-  - Liquidity Providers:
-    - Understanding curve pools: lp/understanding-curve-pools.md
-    - Pools: lp/pools.md
-    - Deposit FAQ: lp/deposit-faqs.md
-    - Calculating yield: lp/calculating-yield.md
-    - Charts and Pool Activity: lp/charts_poolactivity.md
-    - Depositing:
-      - Overview: lp/depositing/depositing.md
-      - Depositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
-      - Depositing into a metapool: lp/depositing/depositing-into-a-metapool.md
-      - Depositing into the susd-pool: lp/depositing/depositing-into-the-susd-pool.md
-      - Depositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
-      - Depositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
 
-  - Liquidity Gauges:
-    - Understanding gauges: reward-gauges/understanding-gauges.md
-    - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
-    - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
-    - Gauge weights: reward-gauges/gauge-weights.md
-    - Permissionless rewards: reward-gauges/permissionless-rewards.md
-
-  - Factory Pools:
-    - Pool Creation Overview: factory-pools/pool-creation-overview.md
-    - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
-    - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
-    - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
-    - Understanding oracles: factory-pools/understanding-oracles.md
-
-  - Governance:
-    - Understanding governance: governance/understanding-governance.md
-    - Voting: governance/voting.md
-    - Proposals:
-      - Community fund: governance/proposals/community-fund.md
-      - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
-
-  - Multi-Chain:
+  - Multi-Chain Operations:
     - CRV: multichain/crv.md
     - crvUSD: multichain/crvusd.md
     - Understanding multi-chain: multichain/understanding-multichain.md
     - Bridging funds: multichain/bridging-funds.md
     - How to Bridge crvUSD to BSC: multichain/bridging-crvusd-to-bsc.md
-
-  - Support & Troubleshooting:
-    - Support: troubleshooting/support.md
-    - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
-    - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
-    - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
 
   - Risks, Security & Audits: 
     - Risks: 
@@ -242,5 +234,12 @@ nav:
     - Technical Docs: https://docs.curve.fi/
     - Telegram: https://t.me/curvefi
 
-  - Glossary: glossary-branding/glossary.md
-  - Branding & Icons: glossary-branding/branding.md
+
+  - Others:
+    - Glossary: glossary-branding/glossary.md
+    - Branding & Icons: glossary-branding/branding.md
+    - Support & Troubleshooting:
+      - Support: troubleshooting/support.md
+      - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
+      - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
+      - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md

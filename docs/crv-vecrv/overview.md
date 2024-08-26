@@ -1,35 +1,8 @@
 <h1>CRV Overview</h1>
 
-The CRV token is the token for Curve DAO which governs the whole Curve Finance ecosystem.  CRV was launched on August 13, 2020.
+The CRV token is the token for Curve DAO which governs the whole Curve Finance ecosystem. CRV was launched on August 13, 2020.
 
-## **Supply**
-
-The total supply of 3.03 billion is distributed as such:
-
-* 62% to community liquidity providers
-* 30% to shareholders (team and investors) with 2-4 years vesting
-* 5% to the community reserve
-* 3% to employees with 2 years vesting
-
-<div class="centered" style="transform: scale(1.1);">
-  <canvas id="crvAllocationChart"></canvas>
-</div>
-<br>
-
-The initial supply of around 1.3b (~43%) was distributed as such:
-
-* 5% to pre-CRV liquidity providers with 1 year vesting
-* 30% to shareholders (team and investors) with 2-4 years vesting
-* 3% to employees with 2 years vesting
-* 5% to the community reserve
-
-The circulating supply was 0 at launch and the initial release rate was around 2m CRV per day.
-
-CRV inflation (community emissions for providing liquidity) started at 274 million tokens a year in 2020, and each year it decreases by roughly 16%.
-
-See the [Supply & Distribution page](./supply-distribution.md) for more detailed information.
-
-## **Utility**
+# **Utility**
 
 There are 4 main use-cases for CRV, most require locked CRV (veCRV):
 
@@ -179,50 +152,36 @@ The table below can help you understand the value of CRV and veCRV in different 
   </tr>
 </tbody></table>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script>
-    var ctx = document.getElementById('crvAllocationChart').getContext('2d');
-    var data = [1727272729+151515152, 800961153, 108129756, 90909091, 151515152];
-    var totalSum = data.reduce((a, b) => a + b, 0);
-    var percentages = data.map(value => ((value / totalSum) * 100).toFixed(2));
+---
 
-    var crvAllocationChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Community', 'Core Team', 'Investors', 'Employees', 'Reserve'],
-            datasets: [{
-                data: data,
-                backgroundColor: ['#FF6384', '#FFCE56', '#8E5EA2', '#3cba9f', '#e8c3b9'],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            devicePixelRatio: 2.5,
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                                var label = context.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                var value = context.raw;
-                                var percentage = percentages[context.dataIndex];
-                                label += value.toLocaleString() + ' (' + percentage + '%)';
-                                return label;
-                            }
-                    }
-                },
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'CRV Total Supply'
-                }
-            }
-        }
-    });
-</script>
+
+# **Locking Information**
+
+When a user locks their CRV tokens for voting, they will receive veCRV based on the lock duration and the amount locked. Locking is **not reversible** and veCRV tokens are **non-transferable**. If a user decides to vote-lock their CRV tokens, they will only be able to **reclaim the CRV tokens after the lock duration has ended**.
+
+Additionally, a user **cannot have multiple locks with different expiry dates**. However, a lock **can be extended**, or **additional CRV can be added** to it **at any time**.
+
+## **CRV to veCRV formula**
+
+When locking CRV to veCRV you are rewarded with an amount of veCRV based on how long you lock, the minimum time is 1 week, the maximum time is 4 years:
+
+$$ \text{veCRV} = \frac{\text{CRV} \times \text{lockTime}}{4 \text{ years}} $$
+
+The maximum duration of a lock is 4 years, users cannot lock for longer periods to keep the 1 CRV: 1 veCRV ratio, they must instead continue extending their lock.  Users can withdraw their CRV at any time after their veCRV has decayed to 0 (lock time has expired).
+
+## **veCRV decay**
+
+The amount of veCRV a user has will decay over time as their unlock date draws closer.  The `lockTime` parameter in the equation above should more aptly be called `lockTimeLeft` as a user's veCRV is constantly recalculated.  There are two ways a user can change their lock.  They can add to their lock or they can extend their lock.  What happens in both situations and how it affects their veCRV and the decay is shown in the charts below.
+
+### **Extending Locks**
+
+Extending locks means increasing the time left on a lock.  In the above example if Alice locked 100 CRV for 4 years, after 3 years she would only have 25 veCRV left as her lock time is now 1 year.  If she extended her lock to be 4 years again after these 3 years, she would again have 100 veCRV:
+
+<canvas id="extendLockChart"></canvas>
+
+### **Adding CRV to Locks**
+
+Adding CRV to locks means the unlock date will remain the same, but more CRV will be locked, meaning more veCRV. If Alice locked 100 CRV for 4 years, but after 2 years added 200 CRV to her lock, she would have 150 veCRV (300 CRV total locked for 2 years).  This veCRV would continue to decay to 0 over the next 2 years:
+
+<canvas id="addLockChart"></canvas>
