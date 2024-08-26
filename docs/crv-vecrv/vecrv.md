@@ -1,16 +1,16 @@
 <h1>Locked CRV (veCRV)</h1>
 
-veCRV is an acronym for **vote-escrowed CRV**.  Users can lock their CRV for a **minimum of 1 week**, **maximum of 4 years**, in return the user is given veCRV, **veCRV amount [decays](#vecrv-decay) linearly over the chosen lock time**.  **veCRV is not transferrable**.  The longer you lock the more veCRV you receive, see the [locking formula section](#crv-to-vecrv-formula) for a detailed explanation but the simple explanation is:
+veCRV is an acronym for **vote-escrowed CRV**.  Users can lock their CRV for a **minimum of 1 week**, **maximum of 4 years**, in return the user is given veCRV, **veCRV amount decays linearly over the chosen lock time**. **veCRV is not transferrable**. The longer you lock the more veCRV you receive, see the [locking formula section](#crv-to-vecrv-formula) for a detailed explanation but the simple explanation is:
 
 - 1 CRV locked for 4 years = 1 veCRV
 - 1 CRV locked for 3 years = 0.75 veCRV
 - 1 CRV locked for 2 years = 0.5 veCRV
 - 1 CRV locked for 1 year = 0.25 veCRV
 
-**Locking was a concept created to align incentives for governance**.  Many coin voting systems have a problem where someone can buy tokens off the market to influence a governance vote, then sell the tokens after the vote passed/failed.  These users can influence governance votes greatly and only take minimal risk by holding tokens for a few days.  Locking stops this happening.  Users must lock their tokens for a period of time to receive voting power, and users are rewarded with more voting power if they lock their tokens for a longer period of time.
+**Locking was a concept created to align incentives for governance**.  Many coin voting systems have a problem where someone can buy tokens off the market to influence a governance vote, then sell the tokens after the vote passed/failed. These users can influence governance votes greatly and only take minimal risk by holding tokens for a few days. Locking stops this happening. Users must lock their tokens for a period of time to receive voting power, and users are rewarded with more voting power if they lock their tokens for a longer period of time.
 
 !!!info
-    The amount of veCRV shown as a statistic in various places is not a true reflection of the amount of locked CRV.  As 1 veCRV does not equal 1 CRV due to locking time and decay. Read the [locking information](#locking-information) section of this page for more information
+    The amount of veCRV shown as a statistic in various places is not a true reflection of the amount of locked CRV.  As 1 veCRV does not equal 1 CRV due to locking time and decay. Read the [locking information](./overview.md#locking-information) section of this page for more information
 
 
 ---
