@@ -1,32 +1,23 @@
 <Pools Overview>
 
-## INTRO
-
 If you are new to Ethereum or DeFi, liquidity pools are a seemingly complicated concept to understand.  
 
-Pools are two or more assets pooled so other users can swap between any of the assets, and the liquidity providers who deposit to the pools earn fees from trades.
+Pools are two or more assets pooled so other users can swap between any of the assets, and the liquidity providers who deposit to the pools earn fees from trades.  In Curve pools can be 2 different types.  There are Stableswap pools for coins that are pegged to each other, for example USDC and USDT, or stETH and ETH.  There are also Cryptoswap pools which are for assets which fluctuate in value against each other, for example USDT and ETH, or CRV and ETH.
 
 It’s important to understand that when you provide liquidity to a pool, no matter what coin you deposit, you essentially **gain exposure to all the coins in the pool** which means you want to find a pool with coins you are comfortable holding.
 
 !!!danger "Liquidity Pool Risks"
     Before using liquidity pools, it's advisable to review our [risk disclaimer](../risks-security/risks/pool.md) page for a comprehensive overview of potential risks.
 
-## HOW POOLS GENERALLY WORK
+## **Stableswap** (**Curve V1**)
 
-Pools have 2 or more pools of tokens, and users can swap between the tokens in the pool by sending 1 token, and in return receiving the other.  Below you can find an example.  There's a pool with Token A and Token B.  Charlie sends Token A, which gets added to the pool, and in return he receives some Token B from the pool.
-
-![](../images/pools/general-pool.svg){.centered}
-
-
-## STABLESWAP
-
-Stableswap is the name given to pools which have assets pegged to each other.  For example USDC and USDT, their value should always be very close to 1:1 so these assets can be added to a Stableswap pool.
+Stableswap is the name given to pools which have assets pegged to each other.  For example USDC and USDT, their value should always be very close to 1:1.
 
 Because the value of the assets in the pool are the same, the amounts of each asset in the pool can change a lot.  It can be 80% USDT and 20% USDC and the price will still be very close to 1:1.
 
 PICTURE ABOUT HOW STABLESWAP WORKS
 
-## CRYPTOSWAP
+## **Cryptoswap** (**Curve V2**)
 
 Cryptoswap is the name given to pools which have assets which are not pegged to each other.  For example USDC and ETH, their value relative to each other is always changing, because of this a different type of pool is needed compared to Stableswap.
 
@@ -39,11 +30,6 @@ PICTURE ABOUT HOW CRYPTOSWAP WORKS
 Basepools, metapools, etc.
 
 ## FEES
-
-
-
-
-
 
 ---
 
