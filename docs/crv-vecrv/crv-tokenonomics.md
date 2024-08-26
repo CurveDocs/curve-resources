@@ -4,7 +4,9 @@ There is a **fixed total supply of 3,030,303,031 CRV**.  No CRV tokens can ever 
 
 Have a look over this page to learn about how CRV has been allocated and how much is distributed each week.  The [Supply Calculator](#supply-calculator) is a great tool see the CRV supply and statistics on any date.
 
-## **Total Supply Allocation**
+---
+
+# **Total Supply Allocation**
 
 The below chart shows the total allocation of CRV to different groups within the Curve ecosystem.
 
@@ -24,11 +26,21 @@ The below chart shows the total allocation of CRV to different groups within the
 | **Total**                             | **3,030,303,031** |  **100%**  |
 </div>
 
-The above allocation shows that the **community will own 67% of all CRV** when the total supply is distributed, but note that **CRV tokens will continue to be distributed until 2376**, but meaningful distributions will stop in around 50 years, see [notable emissions years](#notable-emission-years) for how the yearly distribution will change over time.
+The above allocation shows that the **community will own 67% of all CRV** when the total supply is distributed, but note that **CRV tokens will continue to be distributed until 2376**, but meaningful distributions will stop in around 50 years, see [notable emissions years](#notable-emission-years) for how the yearly distribution will change over time. CRV inflation (community emissions for providing liquidity) started at 274 million tokens a year in 2020, and each year it decreases by roughly 16%.
+
+
+*The total supply of 3.03 billion is distributed as such:*
+
+* 62% to community liquidity providers
+* 30% to shareholders (team and investors) with 2-4 years vesting
+* 5% to the community reserve
+* 3% to employees with 2 years vesting
+
 
 ---
 
-## **Token Launch**
+
+# **Token Launch**
 
 CRV officially launched on the **13th of August 2020**.  At the time of launch there were no unlocked tokens.  **All** tokens in the launch were linearly vested for 1-4 years (gradually unlocking over a period of 1-4 years).  The initial supply is quoted as 1,303,030,303 because these tokens were pre-mined and sent into the vesting contracts, which gradually unlocked them.  Below shows the allocation to different groups of the initial distribution.
 
@@ -53,12 +65,19 @@ CRV officially launched on the **13th of August 2020**.  At the time of launch t
 
 The circulating supply was 0 at launch. Each day of the first year approx. 750k tokens were emitted to the community for providing liquidity and 1.65million tokens were vested (unlocked).  Use the [supply calculator below](#supply-calculator) to see how quickly tokens became liquid and circulating.
 
+*The initial supply of around 1.3b (~43%) was distributed as such:*
+
+* 5% to pre-CRV liquidity providers with 1 year vesting
+* 30% to shareholders (team and investors) with 2-4 years vesting
+* 3% to employees with 2 years vesting
+* 5% to the community reserve
+
 !!!tip
     6 year CRV release schedule is available here: [https://dao.curve.fi/releaseschedule](https://dao.curve.fi/releaseschedule), or the full release schedule is available as a google spreadsheet [here](https://docs.google.com/spreadsheets/d/1kFFdaLCX8ISM7yzvfUmuz151QiRzrFfaljCzEiO6sus/edit?usp=sharing).
 
 ---
 
-## **Community Emissions (CRV Inflation)**
+# **Community Emissions (CRV Inflation)**
 
 Community emissions (regularly called CRV Inflation) are minted and allocated to gauges based on the weekly weight gauge vote.  Gauges have a very flexible design and can direct emissions to liquidity pools and suppliers of a lending market, or even to funding for the Vyper programming language.
 
@@ -78,7 +97,7 @@ The emission rate has 18 decimal places, this means that **emissions continue fo
 
 See [this section](./faq.md#how-does-the-yearly-emissions-reduction-work) of the FAQ for how the yearly reduction works.  See [this section](./faq.md#how-is-crv-minted) for how CRV is minted and added to the supply.
 
-### **CRV Emissions for the next 10 years**
+## **CRV Emissions for the next 10 years**
 
 See below for a chart of how the CRV will be distributed each year for the next 10 years.  This year (2024), is the last year of the Core Team's CRV allocation vesting.  After August 12th, 2024 all CRV added to the circulating supply will be distributed to the community through gauges, and CRV inflation will fall dramatically from 20.37% to 6.34% for the year.
 
@@ -86,7 +105,7 @@ See below for a chart of how the CRV will be distributed each year for the next 
 
 <canvas id="crv10yearChart"></canvas>
 
-### **Notable Emission Years**
+## **Notable Emission Years**
 
 As CRV will continue to be distributed for 245 years, interesting years of CRV distribution are noted below.  See the [google spreadsheet here](https://docs.google.com/spreadsheets/d/1kFFdaLCX8ISM7yzvfUmuz151QiRzrFfaljCzEiO6sus/edit?usp=sharing) for data for all years.
 
@@ -105,9 +124,11 @@ As CRV will continue to be distributed for 245 years, interesting years of CRV d
 | 245  | 2264-06-15 | 2265-06-15  | 0.000000000031536000 | Last year of emissions     |
 </div>
 
+
 ---
 
-## **Supply Calculator**
+
+# **Supply Calculator**
 
 *Accuracy Disclaimer*: ***This calculator is theoretical based on vesting schedules and smart contract formulae***. *It does not pull data from the Ethereum blockchain.  It may show slightly different values because users can wait any period of time before minting CRV from liquidity emissions, or unlocking claimable tokens from vesting contracts.  It is also assumed that community reserve tokens are vested for a 1 year period.  This is not completely true as they are vested for at least 1 year once allocated to a cause by the DAO.*
 
