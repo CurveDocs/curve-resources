@@ -158,17 +158,19 @@ nav:
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Loan Details & Concepts: crvusd/loan-details.md
+    - Liquidations: crvusd/liquidations.md
     - Loan Strategies: crvusd/loan-strategies.md
     - crvUSD FAQ: crvusd/faq.md
 
   - Curve Lending:
     - Overview: lending/overview.md
     - Leverage: lending/leverage.md
+    - Liquidations: crvusd/liquidations.md
     - How to Borrow & Use Leverage: lending/how-to-borrow.md
     - How to Supply: lending/how-to-supply.md
     - Lending FAQ: lending/faq.md
     - How to Create a Market: lending/create-lending-market.md
-    - Liquidation Examples: lending/liquidations.md
+
 
   - Liquidity Providers:
     - Understanding curve pools: lp/understanding-curve-pools.md
