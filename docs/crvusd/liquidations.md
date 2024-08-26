@@ -1,37 +1,64 @@
 <h1>Soft & Hard Liquidations</h1>
 
-Liquidations on Curve Lending and crvUSD work differently to other DeFi loans.  There are Soft-liquidations and Hard-liquidations.  Let's define them:
-
-!!!warning "Soft-Liquidation"
-    **Soft-liquidation converts collateral into the borrowed asset as price decreases, and back to the original asset as price increases**.  The process happens linearly through the Soft-liquidation range.  If a user is halfway through their range, half of their collateral should be in the original asset and half converted to their borrowed asset.  Health deteriorates as small fees are paid to convert collateral.
-
-    **Soft-liquidation turns into Hard-liquidation when health is 0%**.  The bottom of the Soft-liquidation range does not trigger hard-liquidation.  A user can have their collateral fully converted and still have positive health if they manage it carefully.
-
-!!!danger "Hard-Liquidation"
-    **Hard-liquidation occurs when health is 0%**.  This will **most likely happen before the bottom of the Soft-liquidation range**, unless health is monitored carefully.  In Hard-liquidation the borrower keeps their borrowed assets (normally crvUSD) but lose their collateral.  
-    
-    Health deteriorates in Soft-liquidation which causes Hard-liquidation.  **Hard-liquidation does not trigger at the bottom of the Soft-liquidation range, it only relies on health**.
-
-    **Users MUST manage their health to avoid Hard-liquidation.**
-
----
-
-## **Loan Opening Information**
-
-When a loan is opened a Soft-liquidation range and health are defined.  **Health must be monitored, if it gets to 0% hard liquidation will occur**, no matter where in the soft-liquidation range the price is.  An example loan using ETH collateral to borrow crvUSD is below to define terms:
-
-![Example Loan](../images/crvusd/example_loan.svg#only-light){: .centered }
-![Example Loan](../images/crvusd/example_loan_dark.svg#only-dark){: .centered }
+Liquidations on Curve Lending and crvUSD work differently to other DeFi loans.  There are Soft-liquidations (including de-liquidations) and Hard-liquidations.  This page defines them and shows examples.
 
 ## **Soft-Liquidation**
 
-When the position enters Soft-liquidation it's a warning.  The system will try and protect user loans by converting the original collateral to the borrowed asset as prices decrease, and back to the original collateral as prices increase.  The system does not perfectly protect users though.  If their health gets to 0% or below Hard-liquidation occurs.
+When the position enters Soft-liquidation it's a warning.  The system will try to protect user loans by converting the original collateral to the borrowed asset as prices decrease, and back to the original collateral as prices increase.
 
-**Health can deteriorate very quickly when prices are moving quickly**.  Many loans are Hard-liquidated near the top of their Soft-liquidation range.  **Users must keep their health above 0% to avoid Hard-liquidation**.
+![Collateral Loss](../images/crvusd/soft-liq.svg#only-light){: .centered }
+![Collateral Loss](../images/crvusd/soft-liq-dark.svg#only-dark){: .centered }
 
-Soft-liquidation ranges are defined by how much a user borrows and the number of bands they choose to split their collateral equally into.  Each band is an individual small range where all user collateral is pooled together if their Soft-liquidation ranges overlap.
+In Soft-liquidation and de-liquidation, collateral will slowly be lost to fees from swapping back and forth as prices move higher and lower, this is how health deteriorates over time.  **Health can deteriorate very quickly when volatility is high**.  More information on health can be found [here](./loan-details.md#loan-health).
 
-The applet shows how collateral is converted in Soft-liquidation (SL), note that this applet assumes no Soft-liquidation losses occur:
+The [soft-liquidation applet](#soft-liquidation-applet) also simulates how Collateral is converted through the soft-liquidation range.
+
+---
+
+## **Hard-Liquidation**
+
+**Soft-liquidation turns into Hard-liquidation when health is 0%**.  In Hard-liquidation the borrower keeps their borrowed assets (normally crvUSD) but loses their collateral.  
+
+**Hard-liquidation does not trigger at the bottom of the Soft-liquidation range, it only relies on health**.  A user can have all their collateral fully converted to their borrowed asset and be below the Soft-liquidation range if they manage their health carefully.
+
+Health can be increased in soft-liquidation by repaying some or all debt.
+
+---
+
+## **Hard-Liquidation Example**
+
+**Hard-liquidation can only occur when the health of a loan is 0% or below**.  If the health is 0% or below anyone can pay off the debt and claim the collateral backing the loan, this should always be profitable, but in rare circumstances it may not be, if this happens it's called [bad debt](../crvusd/loan-details.md#bad-debt).
+
+The example below shows a loan in the CRV/crvUSD lending market which was hard-liquidated.  The chart is interactive, by hovering over prices, you can see how the health of the loan decreases over time.  See that hard-liquidation only relies on health.  **The bottom of the soft-liquidation range is not where hard-liquidation happens.**
+
+<h2 style="margin: 10px 0 20px; text-align: center;">Hard-liquidation - Borrowing crvUSD using CRV</h2>
+<div class="centered2" style="width: 100%">
+  <canvas id="crvHardLiq"></canvas>
+</div>
+
+**It is always better to self-liquidate a loan before a loan is hard-liquidated**.  This is because the health calculation values your collateral lower than its actual worth. In this example, the borrower would have gotten back 11,107 crvUSD more if they had self-liquidated their loan instead of letting it be hard-liquidated.
+
+---
+
+## **Managing Health & Self-Liquidation Example**
+
+The below example shows how to manage health and how self-liquidation works, this shows a loan in the WETH/crvUSD lending market.  When the user got into soft-liquidation they decided to repay around 10% of their debt, this increased their health from approx. 3% to 13%, but kept their soft-liquidation range the same.   They then stayed in soft-liquidation for a long time, so they self-liquidated.  **If some debt is repaid while in soft-liquidation the range will stay the same but health will increase**, if debt is repaid outside the soft-liquidation range, the range will move lower.
+
+Self-liquidating here was a good idea, this is because they already had 38,857 crvUSD as collateral (from swapped WETH in soft-liquidation), and their debt was 98,299 crvUSD, they only had to send 59,442 crvUSD and they received back their 24.3371 WETH.  If they chose to repay they would have had to repay all 98,299 crvUSD of debt, and received all collateral back (38,857 crvUSD and 24.3371 WETH) in return.
+
+<h2 style="margin: 10px 0 20px; text-align: center;">Self-liquidation - Borrowing crvUSD using WETH</h2>
+<div class="centered2" style="width: 100%">
+  <canvas id="wethSelfLiq"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.2.1/chartjs-plugin-annotation.min.js"></script>
+
+
+## **Soft-liquidation Applet**
+
+This applet simulates how collateral is converted through a soft-liquidation range.
 
 <style>
     .price-input {
@@ -78,49 +105,6 @@ The applet shows how collateral is converted in Soft-liquidation (SL), note that
     <canvas id="ethCrvUsdChart"></canvas>
     <div id="ethCrvUsdValues" style="text-align: center; margin-top: 10px;"></div>
 </div>
-
----
-
-## **Soft-liquidation Loss (Collateral Erosion)**
-
-In Soft-liquidation, collateral will slowly be lost to fees from swapping back and forth as prices move higher and lower.  The **soft-liquidation engine is an AMM**, and it tracks an **external price** (**oracle price**).  When it needs to swap collateral it **offers a discount relative to the difference between the internal price and oracle price**, the bigger the difference, the bigger the discount.
-
-The soft-liquidation engine is also an AMM, so users make trading fees as trades occur.  These fees are dynamic; fees automatically increase in high volatility periods.
-
-![Collateral Loss](../images/crvusd/softliq-engine.svg#only-light){: .centered }
-![Collateral Loss](../images/crvusd/softliq-engine-dark.svg#only-dark){: .centered }
-
----
-
-## **Hard-Liquidation Example**
-
-**Hard-liquidation can only occur when the health of a loan is 0% or below**.  If the health is 0% or below anyone can pay off the debt and claim the collateral backing the loan, this should always be profitable, but in rare circumstances it may not be, if this happens it's called [bad debt](../crvusd/loan-details.md#bad-debt).
-
-The example below shows a loan in the CRV/crvUSD lending market which was hard-liquidated.  The chart is interactive, by hovering over prices, you can see how the health of the loan decreases over time.  See that hard-liquidation only relies on health.  **The bottom of the soft-liquidation range is not where hard-liquidation happens.**
-
-<h2 style="margin: 10px 0 20px; text-align: center;">Hard-liquidation - Borrowing crvUSD using CRV</h2>
-<div class="centered2" style="width: 100%">
-  <canvas id="crvHardLiq"></canvas>
-</div>
-
-**It is always better to self-liquidate a loan before a loan is hard-liquidated**.  This is because the health calculation values your collateral lower than its actual worth. In this example, the borrower would have gotten back 11,107 crvUSD more if they had self-liquidated their loan instead of letting it be hard-liquidated.
-
----
-
-## **Managing Health & Self-Liquidation Example**
-
-The below example shows how to manage health and how self-liquidation works, this shows a loan in the WETH/crvUSD lending market.  When the user got into soft-liquidation they decided to repay around 10% of their debt, this increased their health from approx. 3% to 13%, but kept their soft-liquidation range the same.   They then stayed in soft-liquidation for a long time, so they self-liquidated.  **If some debt is repaid while in soft-liquidation the range will stay the same but health will increase**, if debt is repaid outside the soft-liquidation range, the range will move lower.
-
-Self-liquidating here was a good idea, this is because they already had 38,857 crvUSD as collateral (from swapped WETH in soft-liquidation), and their debt was 98,299 crvUSD, they only had to send 59,442 crvUSD and they received back their 24.3371 WETH.  If they chose to repay they would have had to repay all 98,299 crvUSD of debt, and received all collateral back (38,857 crvUSD and 24.3371 WETH) in return.
-
-<h2 style="margin: 10px 0 20px; text-align: center;">Self-liquidation - Borrowing crvUSD using WETH</h2>
-<div class="centered2" style="width: 100%">
-  <canvas id="wethSelfLiq"></canvas>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.2.1/chartjs-plugin-annotation.min.js"></script>
 
 
 <script>
