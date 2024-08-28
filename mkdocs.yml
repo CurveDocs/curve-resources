@@ -203,8 +203,8 @@ nav:
   - Governance:
     - Understanding governance: governance/understanding-governance.md
     - Voting: governance/voting.md
+    - Community Fund: governance/community-fund.md
     - Proposals:
-      - Community fund: governance/proposals/community-fund.md
       - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
 
   - Multi-Chain:
