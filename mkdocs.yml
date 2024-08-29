@@ -5,7 +5,7 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
   - minify:
       minify_html: true
   - redirects:
@@ -165,24 +165,16 @@ nav:
   - Curve Lending:
     - Overview: lending/overview.md
     - Leverage: lending/leverage.md
-<<<<<<< HEAD
-    - Liquidation Examples: lending/liquidations.md
-=======
     - Liquidations: crvusd/liquidations.md
->>>>>>> d2b17a00c34b7115c80b1aa476e71ed87bf0d546
     - How to Borrow & Use Leverage: lending/how-to-borrow.md
     - How to Supply: lending/how-to-supply.md
     - How to Create a Lending Market: lending/create-lending-market.md
     - Lending FAQ: lending/faq.md
-<<<<<<< HEAD
-=======
     - How to Create a Market: lending/create-lending-market.md
 
->>>>>>> d2b17a00c34b7115c80b1aa476e71ed87bf0d546
 
   - Pools:
     - Overview: lp/overview.md
-    - Pools: lp/pools.md
     - Deposit FAQ: lp/deposit-faqs.md
     - Calculating yield: lp/calculating-yield.md
     - Charts and Pool Activity: lp/charts_poolactivity.md
