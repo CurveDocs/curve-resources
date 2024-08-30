@@ -24,7 +24,7 @@ Because the value of the assets in the pool should always be around 1:1, the amo
 
 Let's look at an example about how it works for a liquidity provider:
 
-![Stableswap](../images/pools/stableswap.svg){: .centered }
+![Stableswap](../images/pools/stableswap.svg){: .full-width }
 
 ---
 
@@ -36,7 +36,7 @@ Cryptoswap pools maintain an equal value balance between their assets. For examp
 
 Let's look at an example about how it works for a liquidity provider:
 
-![Cryptoswap](../images/pools/cryptoswap.svg){: .centered }
+![Cryptoswap](../images/pools/cryptoswap.svg){: .full-width }
 
 ---
 
@@ -57,6 +57,6 @@ Liquidity providers are rewarded with 2 different types of yield:
 * **Base vAPY**: This is how much the LP token value is increasing due to accruing pool fees.
 * **Rewards tAPR**: These are CRV inflation rewards, other token incentives and points.  LP tokens must be staked to earn these rewards as they accrue through the pool's gauge.
 
-![Rewards](../images/pools/rewards.svg){: .centered }
+![Rewards](../images/pools/rewards.png){: .centered style="width: 70%;" }
 
 Some pools contain yield-bearing tokens, such as sUSDe and sDAI. These tokens generate additional yield within themselves, separate from the pool's operations.
