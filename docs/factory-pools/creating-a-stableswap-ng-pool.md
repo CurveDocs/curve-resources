@@ -6,7 +6,7 @@ Stableswap pools are liquidity pools containing **up to eight tokens** using the
 
 
 !!!info "Stableswap-NG"
-    StableSwap-NG is an improved and refined version of the first StableSwap implementation. For a better understanding of what Stableswap-NG is and how it differs from regular Stableswap pools, check [this](../lp/pools.md#stableswap-new-generation).
+    StableSwap-NG is an improved and refined version of the first StableSwap implementation. It is highly gas optimized and also includes dynamic fees which increases as liquidity utilization increases.
 
 
 ---

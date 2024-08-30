@@ -1,6 +1,6 @@
 <h1>Curve Pool Creation</h1>
 
-The Curve pool creation interface allows any user to permissionlessly deploy a Curve pool. These pools can contain a variety of assets, including pegged tokens, unpegged tokens, and [**metapools**](../lp/pools.md) built off of other [**base pools**](../lp/pools.md). This interface supports deploying pools on most chains, although there might be some chains that are not supported yet.
+The Curve pool creation interface allows any user to permissionlessly deploy a Curve pool. These pools can contain a variety of assets, including pegged tokens, unpegged tokens, and some pool tokens, for example 3crv. This interface supports deploying pools on most chains, although there might be some chains that are not supported yet.
 
 !!!danger "Liquidity Pool Risks"
     Each liquidity pool brings risks with it. Before using or creating any pools, please read the [**Risk Disclaimer**](../risks-security/risks/pool.md).
@@ -19,7 +19,7 @@ To get started, visit the [**`Pool Creation`**](https://curve.fi/#/ethereum/crea
 
 <div class="grid cards" markdown>
 
--   **Stableswap NG**
+-   **Stableswap**
 
     ---
 
