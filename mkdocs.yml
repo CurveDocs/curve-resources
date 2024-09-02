@@ -168,9 +168,8 @@ nav:
     - Liquidations: crvusd/liquidations.md
     - How to Borrow & Use Leverage: lending/how-to-borrow.md
     - How to Supply: lending/how-to-supply.md
-    - How to Create a Lending Market: lending/create-lending-market.md
     - Lending FAQ: lending/faq.md
-    - How to Create a Market: lending/create-lending-market.md
+    - How to Create a Lending Market: lending/create-lending-market.md
 
 
   - Pools:
