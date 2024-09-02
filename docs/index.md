@@ -3,25 +3,15 @@ hide:
   - toc
 ---
 
-<h1>Welcome to Curve Finance</h1>
+<h1>Welcome to Curve Finance Resources</h1>
 
-Explore the world of Curve, a leading **decentralized exchange and automated market maker** on Ethereum and EVM-compatible chains, known for its advanced stablecoin trading capabilities. This documentation provides a clear overview of Curve's diverse features and functionalities. Learn about the **different versions of Curve pools, including v1 and v2**, gain insights into the **CRV token**, and understand the innovative **crvUSD stablecoin** and new **lending** platform.
+Use the information within to explore the world of Curve, a leading **decentralized exchange, stablecoin provider, and lending platform** on Ethereum and EVM-compatible chains.  It's known for it's advanced aautomated market-makers for stablecoins and volatile assets, and it's unique soft-liquidation system for loans. This documentation provides a clear overview of Curve's diverse features and functionalities. Learn about **Curve pools**, including stablecoin pools and volatile pools, gain insights into the **CRV token**, and understand the innovative **crvUSD stablecoin** and new **lending** platform.
 
-Whether a liquidity provider, interested in governance, or exploring multi-chain functionalities, this guide offers valuable information to get to know Curve's dynamic ecosystem.
-
-
+This website offers an easy to understand guide to get to know the whole of Curve's dynamic ecosystem in an easy to read way.  Please see the [technical documentation](https://docs.curve.fi) for developer information.
 
 <h2 style="font-weight: bold;">Resources and guides to get started with Curve and the Curve DAO</h2>
 
 <div class="grid cards" markdown>
-
--   :fontawesome-brands-html5:{ .lg .middle } Getting Started with **Curve v1** and **Curve v2**
-
-    ---
-
-    Discover the fundamentals of Curve, including versions v1 and v2, and get familiar with the platform's core features.
-
-    [:octicons-arrow-right-24: Curve v1](./base-features/understanding-curve.md), [Curve v2](./base-features/understanding-crypto-pools.md)
 
 -   :logos-crv:{ .lg .middle } **CRV Token**
 
@@ -47,13 +37,29 @@ Whether a liquidity provider, interested in governance, or exploring multi-chain
 
     [:octicons-arrow-right-24: Learn More](./crvusd/understanding-crvusd.md)
 
--   :fontawesome-solid-water:{ .lg .middle } **Liquidity Providers**
+-   :fontawesome-solid-briefcase:{ .lg .middle } **Lend**
 
     ---
 
-    Understand Curve pools, yield calculations, and the deposit process, including specific pool types like tri-pool, base pool or metapool.
+    Discover Curve's lending system, including how to supply, borrow, and create lending markets.
 
-    [:octicons-arrow-right-24: Learn More](./lp/understanding-curve-pools.md)
+    [:octicons-arrow-right-24: Learn More](./lending/overview.md)
+
+-   :fontawesome-solid-water:{ .lg .middle } **Pools**
+
+    ---
+
+    Understand Curve pools, yield calculations, and the deposit process.
+
+    [:octicons-arrow-right-24: Learn More](./lp/overview.md)
+
+-   :material-factory:{ .lg .middle } **Creating Pools**
+
+    ---
+
+    Understand the Pool Factory and dive into the pool creation process.
+
+    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-creation-overview.md)
 
 -   :fontawesome-solid-chart-line:{ .lg .middle } **Reward Gauges**
 
@@ -79,14 +85,6 @@ Whether a liquidity provider, interested in governance, or exploring multi-chain
     Explore the multi-chain aspect of Curve, including bridging funds and understanding the cross-chain functionalities.
 
     [:octicons-arrow-right-24: Learn More](./multichain/understanding-multichain.md)
-
--   :material-factory:{ .lg .middle } **Creating Pools**
-
-    ---
-
-    Understand the Pool Factory and dive into the pool creation process.
-
-    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-creation-overview.md)
 
 -   :material-wrench:{ .lg .middle } **Troubleshooting**
 

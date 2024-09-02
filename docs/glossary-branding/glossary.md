@@ -30,6 +30,10 @@ Some projects offer to take CRV, lock it in a smart contract as veCRV and give a
 
 Admin fee is the share of trading fees that are received by governance participants who have locked their CRV (see veCRV).
 
+## **Base Pools**
+
+Base pools are an old Curve concept, yet still working in some pools such as GUSD.  Base pool tokens can be paired with other tokens to create new pools, e.g. 3crv pool token (USDT, USDC, DAI) paired with GUSD.
+
 ## **Boosting (also boosties)**
 
 The act of locking your CRV to earn more CRV on your provided liquidity.
@@ -51,8 +55,6 @@ Metamask is an Ethereum wallet that allows you to interact with Curve and other 
 ## **Metapool**
 
 Metapools are a type of pool on Curve composed of one asset as well as as LP tokens from another pool.
-
-[Base & MetaPools](../lp/pools.md)
 
 ## **Llamas**
 

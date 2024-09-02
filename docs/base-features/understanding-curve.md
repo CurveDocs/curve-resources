@@ -10,7 +10,7 @@ Curve is **non-custodial**, meaning the Curve developers do not have access to y
 
 Liquidity pools are pools of tokens that sit in smart contracts and can be exchanged or withdrawn at rates set by the parameters of the smart contract. Adding liquidity to a liquidity pool gives you the opportunity to earn trading fees and possibly rewards. For more information, visit the following section:
 
-[**Understanding Curve Pools**](../lp/understanding-curve-pools.md)
+[**Understanding Curve Pools**](../lp/overview.md)
 
 # **What are those percentages next to each pool?**
 
@@ -18,7 +18,7 @@ Curve pools may have several different percentages shown next to them in the UI.
 
 ![Pools UI](../images/pools.webp)
 
-The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Any activity on every Curve pool generates fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](../lp/understanding-curve-pools.md).
+The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Any activity on every Curve pool generates fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](../lp/overview.md).
 
 The second column refers to the reward gauges. This entitles liquidity providers to earn bonus CRV emissions. More detail on these bonuses are in the [Reward Gauges section](../reward-gauges/understanding-gauges.md).
 

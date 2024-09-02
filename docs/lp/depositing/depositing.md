@@ -11,4 +11,4 @@ You can do so by visiting the page below:
 
 Curve has many pools to choose from currently accepting stable coins and tokenised Bitcoin (Bitcoin on Ethereum). If you are not sure which pool is right for you, click the link below:
 
-[**Understanding Curve Pools**](../../lp/understanding-curve-pools.md)
+[**Understanding Curve Pools**](../../lp/overview.md)

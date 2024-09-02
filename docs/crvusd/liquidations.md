@@ -9,6 +9,11 @@ When the position enters Soft-liquidation it's a warning.  The system will try t
 ![Collateral Loss](../images/crvusd/soft-liq.svg#only-light){: .centered }
 ![Collateral Loss](../images/crvusd/soft-liq-dark.svg#only-dark){: .centered }
 
+<<<<<<< HEAD:docs/lending/liquidations.md
+**Hard Liquidation does not happen at the bottom of the soft-liquidation range**.
+
+**Hard-liquidation can only occur when the health goes below 0**.  If the health is negative anyone can pay off the debt and claim the collateral backing the loan, this should always be profitable, but in rare circumstances it may not be, if this happens it's called [bad debt](../crvusd/loan-details.md#bad-debt).
+=======
 In Soft-liquidation and de-liquidation, collateral will slowly be lost to fees from swapping back and forth as prices move higher and lower, this is how health deteriorates over time.  **Health can deteriorate very quickly when volatility is high**.  More information on health can be found [here](./loan-details.md#loan-health).
 
 The [soft-liquidation applet](#soft-liquidation-applet) also simulates how Collateral is converted through the soft-liquidation range.
@@ -28,6 +33,7 @@ Health can be increased in soft-liquidation by repaying some or all debt.
 ## **Hard-Liquidation Example**
 
 **Hard-liquidation can only occur when the health of a loan is 0% or below**.  If the health is 0% or below anyone can pay off the debt and claim the collateral backing the loan, this should always be profitable, but in rare circumstances it may not be, if this happens it's called [bad debt](../crvusd/loan-details.md#bad-debt).
+>>>>>>> d2b17a00c34b7115c80b1aa476e71ed87bf0d546:docs/crvusd/liquidations.md
 
 The example below shows a loan in the CRV/crvUSD lending market which was hard-liquidated.  The chart is interactive, by hovering over prices, you can see how the health of the loan decreases over time.  See that hard-liquidation only relies on health.  **The bottom of the soft-liquidation range is not where hard-liquidation happens.**
 
