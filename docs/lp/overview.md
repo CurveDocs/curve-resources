@@ -22,7 +22,8 @@ Stableswap pools have assets pegged to each other.  For example USDC and USDT, a
 
 Let's look at an example about how it works for a liquidity provider:
 
-![Stableswap](../images/pools/stableswap.svg){: .full-width }
+![Stableswap](../images/pools/stableswap.svg#only-light){: .centered }
+![Stableswap](../images/pools/stableswap-dark.svg#only-dark){: .centered }
 
 ---
 
@@ -34,7 +35,8 @@ Cryptoswap pools maintain an equal value balance between their assets. For examp
 
 Let's look at an example about how it works for a liquidity provider:
 
-![Cryptoswap](../images/pools/cryptoswap.svg){: .full-width }
+![Cryptoswap](../images/pools/cryptoswap.svg#only-light){: .centered }
+![Cryptoswap](../images/pools/cryptoswap-dark.svg#only-dark){: .centered }
 
 ---
 
@@ -55,6 +57,7 @@ Liquidity providers are rewarded with 2 different types of yield:
 * **Base vAPY**: This is how much the LP token value is increasing due to accruing pool fees.
 * **Rewards tAPR**: These are CRV inflation rewards, other token incentives, and points. Staking LP tokens is required to earn CRV and other token rewards, which accrue through the pool's gauge. Points programs are project-specific; many don't require LP token staking. Refer to each project's point program for the most accurate information.
 
-![Rewards](../images/pools/rewards.png){: .centered style="width: 70%;" }
+![Rewards](../images/pools/rewards.svg#only-light){: .centered style="width: 500px;" }
+![Rewards](../images/pools/rewards-dark.svg#only-dark){: .centered style="width: 500px;" }
 
-Some pools contain yield-bearing tokens, such as sUSDe and sDAI. These tokens generate additional yield within themselves, separate from the pool's operations.
+Some pools include yield-bearing tokens like sUSDe and sDAI. All yield from these tokens goes directly to Liquidity Providers, none is taken away by fees or the pool.
