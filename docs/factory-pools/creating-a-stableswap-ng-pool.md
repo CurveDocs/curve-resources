@@ -69,7 +69,7 @@ Rebasing tokens in crypto are cryptocurrencies that automatically adjust their s
 
 ### **ERC-4626**
 
-ERC-4626 is a standard to optimize and unify the technical parameters of yield-bearing vaults. It provides a standard API for tokenized yield-bearing vaults that represent shares of a single underlying ERC-20 token. ERC-4626 also outlines an optional extension for tokenized vaults utilizing ERC-20, offering basic functionality for depositing, withdrawing tokens and reading balances.
+ERC-4626 is a standard designed to optimize and unify the technical parameters of yield-bearing vaults. It provides a standard API for tokenized yield-bearing vaults that represent shares of a single underlying ERC-20 token. When using these kinds of tokens, the pool calculates the underlying amount as if the underlying tokens were in the pool.
 
 <figure markdown="span">
   ![](../images/pool_creation/ss_erc4626_dark.png#only-dark){ width="400" }
