@@ -27,6 +27,7 @@ When creating a metapool, only two tokens can be selected. One is the LP token, 
 
 ---
 
+
 *For the AMM to function correctly, the appropriate asset type needs to be chosen when selecting the assets. The following asset types are supported:*
 
 ### **Standard ERC-20**
@@ -53,6 +54,7 @@ Some tokens might require an external rate oracle to ensure correct calculations
   ![](../images/pool_creation/ss_oracle_light.png#only-light){ width="400" }
   <figcaption></figcaption>
 </figure>
+
 
 
 ### **Rebasing Tokens**
