@@ -171,7 +171,6 @@ nav:
     - Lending FAQ: lending/faq.md
     - How to Create a Lending Market: lending/create-lending-market.md
 
-
   - Pools:
     - Overview: lp/overview.md
     - Deposit FAQ: lp/deposit-faqs.md
@@ -192,8 +191,8 @@ nav:
     - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
     - Understanding oracles: factory-pools/understanding-oracles.md
 
-  - Liquidity Gauges:
-    - Understanding gauges: reward-gauges/understanding-gauges.md
+  - Reward Gauges:
+    - Overview: reward-gauges/understanding-gauges.md
     - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
     - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
     - Gauge weights: reward-gauges/gauge-weights.md

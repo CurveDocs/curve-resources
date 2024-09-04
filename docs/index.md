@@ -67,7 +67,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Explore gauges in-depth, including creation, boosting CRV rewards, understanding gauge weights, and permissionless rewards.
 
-    [:octicons-arrow-right-24: Learn More](./reward-gauges/understanding-gauges.md)
+    [:octicons-arrow-right-24: Learn More](./reward-gauges/overview.md)
 
 
 -   :fontawesome-solid-gavel:{ .lg .middle } **Governance**
