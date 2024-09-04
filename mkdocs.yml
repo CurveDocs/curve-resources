@@ -192,7 +192,7 @@ nav:
     - Understanding oracles: factory-pools/understanding-oracles.md
 
   - Reward Gauges:
-    - Overview: reward-gauges/understanding-gauges.md
+    - Overview: reward-gauges/overview.md
     - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
     - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
     - Gauge weights: reward-gauges/gauge-weights.md
