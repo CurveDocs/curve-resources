@@ -18,6 +18,6 @@ By doing so, users with veCRV can put direct their voting power towards the pool
 
 # **When are the weights and rewards updated?**
 
-On Ethereum mainnet weights and rewards are updated every Thursday 00:00 UTC.
+On Ethereum mainnet **weights and rewards are updated every Thursday 00:00 UTC**.
 
 On L2s and other chains, weights and rewards start on flow to intermediary gauge contracts on Ethereum mainnet every Thursday 00:00 UTC, then from the following Thursday 00:00 UTC (1 week later) they flow to gauge stakers on the L2s.  So **cross-chain gauge rewards are 1 week behind Ethereum mainnet**.
