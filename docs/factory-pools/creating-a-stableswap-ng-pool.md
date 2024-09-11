@@ -105,7 +105,7 @@ ERC-4626 is a standard designed to optimize and unify the technical parameters o
 
 
 - **`Swap Fee ranging from 0% to 1%`**: The swap fee charged during transactions.
-- **`A ranging from 1 to 5,000`**: The amplification coefficient, which defines the pool's density.
+- **`A ranging from 1 to 5,000`**: `A` is an amplification coefficient, which defines the pool's liquidity depth. The higher the value of `A`, the deeper the liquidity.
 - **`Offpeg Fee Multiplier from 0 to 12.5`**: A multiplier that adjusts the Swap Fee based on the pool's state.
 - **`Moving Average Time ranging from 60 to 3600 seconds`**: The moving average time window for the built-in oracle.
 
