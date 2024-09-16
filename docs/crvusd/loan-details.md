@@ -169,7 +169,7 @@ Where:
 
 ### **Band Calculator**
 
-Use the calculator below to simulate how bands are shaped and how liquidity density changes with different parameters.  By definition the liquidity density will be 100% at band 1.  Liquidity density increases as band width decreases as more collateral will be spread over a smaller price range.
+Use the calculator below to simulate how bands are shaped and how liquidity density changes with different parameters.  By definition the liquidity density will be 100% at band 1.  Liquidity density increases as band width decreases as the same amount of collateral will be spread over a smaller price range.
 
 <div class="chart-container">
 <canvas id="ampChart"></canvas>
