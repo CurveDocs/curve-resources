@@ -21,7 +21,7 @@ The [soft-liquidation applet](#soft-liquidation-applet) also simulates how Colla
 
 ## **Hard-Liquidation**
 
-**Soft-liquidation turns into Hard-liquidation when health is 0%**.  In Hard-liquidation the borrower keeps their borrowed assets (normally crvUSD) but loses their collateral.  
+**Soft-liquidation turns into Hard-liquidation when health is 0%**.  In Hard-liquidation the borrower keeps their borrowed assets (normally crvUSD) but loses their collateral, the process is detailed [here](loan-concepts.md#hard-liquidations).
 
 **Hard-liquidation does not trigger at the bottom of the Soft-liquidation range, it only relies on health**.  A user can have all their collateral fully converted to their borrowed asset and be below the Soft-liquidation range if they manage their health carefully.
 
