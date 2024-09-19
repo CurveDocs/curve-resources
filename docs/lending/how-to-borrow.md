@@ -137,7 +137,7 @@ Repay has the following options, and all options allow the user to **partially**
 
 #### **Self-liquidate**
 
-This allows a user to liquidate themselves before they get hard-liquidated.  Users using this feature will most likely already be in soft-liquidation.  This lets the user retrieve their collateral and stops them from losing the amount defined by the [`liquidation_discount`](../crvusd/loan-details.md#market-parameters).
+This allows a user to liquidate themselves before they get hard-liquidated.  Users using this feature will most likely already be in soft-liquidation.  This lets the user retrieve their collateral and stops them from losing the amount defined by the [`liquidation_discount`](../crvusd/loan-concepts.md#market-parameters).
 
 Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH as collateral for how this works.  Alice is in soft liquidation and her health is getting low.  In soft liquidation 0.2 WETH has been converted to 250 crvUSD, so she now has 0.8 WETH and 250 crvUSD backing her 1000 crvUSD loan.  Alice wants to self liquidate.  Alice only needs to send 750 crvUSD to self-liquidate, because she already has 250 crvUSD of collateral, both these amounts together will pay off the 1000 crvUSD debt.  Alice then receives back her 0.8 WETH.
 
@@ -180,9 +180,9 @@ For example if \$10,000 crvUSD and \$10,000 of WBTC is deposited (\$20,000 value
 
 **`Price impact`** is the difference between the oracle price and the average swap price.
 
-**`Band range`** is the starting and finishing bands of liquidity for the loan, e.g., "4 to 13" means the loan will begin soft-liquidation in band 4, and finish in band 13.  **`Price range`** shows the `Band range` but as a price range, e.g., band 4 to 13 could be a price range like 52,994 to 60,607. See [here](../crvusd/loan-details.md#bands-n) for more information about bands.
+**`Band range`** is the starting and finishing bands of liquidity for the loan, e.g., "4 to 13" means the loan will begin soft-liquidation in band 4, and finish in band 13.  **`Price range`** shows the `Band range` but as a price range, e.g., band 4 to 13 could be a price range like 52,994 to 60,607. See [here](../crvusd/loan-concepts.md#bands-n) for more information about bands.
 
-**`Health`** is how healthy the loan is, this value must be positive, if it is less than or equal to 0 then the loan can be hard liquidated.  See [here](../crvusd/loan-details.md#loan-health) for more information about health.
+**`Health`** is how healthy the loan is, this value must be positive, if it is less than or equal to 0 then the loan can be hard liquidated.  See [here](../crvusd/loan-concepts.md#loan-health) for more information about health.
 
 **`Borrow APY`** shows the interest rate before and after the loan is created.  **`Loan to Value Ratio`** shows the deposited collateral value compared to the borrowed collateral.
 

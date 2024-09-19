@@ -3,7 +3,7 @@
 Before taking a crvUSD loan a user should consider two factors that will influence how they structure their loan:
 
 * How much risk they would like to take?
-* What management style will they employ?  Will they be actively managing their loan i.e., adding, removing collateral and repaying debt.  Or will they be passively taking a loan and leaving it in [LLAMMA's](loan-details.md#llamma-and-liquidations) hands?
+* What management style will they employ?  Will they be actively managing their loan i.e., adding, removing collateral and repaying debt.  Or will they be passively taking a loan and leaving it in [LLAMMA's](loan-concepts.md#llamma-and-liquidations) hands?
 
 Risk and Management styles can be thought of as spectrums, and they can be visualized in the image below.
 
@@ -57,12 +57,12 @@ The data from all crvUSD loans so far has shown that for each band range a user 
 
 # **Managing Loan Health**
 
-**[Loan health](./loan-details.md#loan-health) is a direct measure of the risk of a loan**.  The lower the loan health, the riskier the loan.  To keep from being hard-liquidated, a loan must have a health above 0.  
+**[Loan health](./loan-concepts.md#loan-health) is a direct measure of the risk of a loan**.  The lower the loan health, the riskier the loan.  To keep from being hard-liquidated, a loan must have a health above 0.  
 
 There are 2 factors which influence the health of a loan:
 
 1. LTV (Loan-To-Value ratio) - More collateral and less debt increases the health of the loan
-2. Increasing the `a` distance as shown on the figure [here](./loan-details.md#loan-health).  This can be done in 2 ways: reducing the number of bands, reducing the amount borrowed.
+2. Increasing the `a` distance as shown on the figure [here](./loan-concepts.md#loan-health).  This can be done in 2 ways: reducing the number of bands, reducing the amount borrowed.
 
 There are 2 ways of increasing the health of a loan:
 
@@ -94,10 +94,10 @@ Here's a list of the plots that can be shown/hidden and their meaning:
 *These plots only relate to the right axis, the value axis has no meaning for them*
 
 * `LTV`: The loan to value ratio, this is the `Debt Value` divided by the `Total CV`.
-* `Health`: The health factor of the loan, a loan is Hard-liquidated when this gets to 0, see [here](loan-details.md#loan-health) for more info.
+* `Health`: The health factor of the loan, a loan is Hard-liquidated when this gets to 0, see [here](loan-concepts.md#loan-health) for more info.
 * `% CV in <asset>`: The percentage of `Total CV` currently in the deposited collateral asset (e.g., wstETH, wBTC, etc).  This is `CV in <asset>` divided by `Total CV`.
 * `% CV in crvUSD`: The percentage of `Total CV` currently swapped to crvUSD.  This is `CV in crvUSD` divided by `Total CV`.
-* `% SL Collateral Loss`: The percentage of collateral lost to soft-liquidation.  See [here](loan-details.md#llamma-and-liquidations) for more information.
+* `% SL Collateral Loss`: The percentage of collateral lost to soft-liquidation.  See [here](loan-concepts.md#llamma-and-liquidations) for more information.
 * `% Interest Collateral Loss`: The collateral loss due to interest accruing on the debt.  This amount is included in the `Debt Value` plot.
 * `% Total Collateral Loss`: `% SL Collateral Loss` plus `% Interest Collateral Loss`.
 * `% Max Deposited Collateral`: This is the percentage of the current deposited collateral vs. the maximum that will get deposited over the life of the loan.  This is shown as a percentage so it can be represented along side other plots.  This is just to show the magnitude and timing of deposits/withdrawals, not exact amounts. An example would be if there were 20 wstETH deposited at the beginning, but the user deposits another 5 (total 25 wstETH) at another point without withdrawing any, this value will be start at $20/25=80\%$.
