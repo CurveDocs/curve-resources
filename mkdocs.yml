@@ -16,6 +16,7 @@ plugins:
         "lending/loan-creation.md": "lending/how-to-borrow.md"
         "lending/supplying-assets.md": "lending/how-to-supply.md"
         "crvusd/loan-management.md": "crvusd/loan-strategies.md"
+        "crvusd/loan-details.md": "crvusd/loan-concepts.md"
         "resources/branding.md": "glossary-branding/branding.md"
         "resources/glossary.md": "glossary-branding/glossary.md"
         "resources/risks/pool.md": "risks-security/risks/pool.md"
@@ -24,6 +25,7 @@ plugins:
         "resources/security.md": "risks-security/security.md"
         "governance/fee-collection-distribution.md": "vecrv/overview.md"
         "crv-token/claiming-trading-fees.md": "vecrv/claiming-trading-fees.md"
+
 
 
 
@@ -157,7 +159,7 @@ nav:
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
-    - Loan Details & Concepts: crvusd/loan-details.md
+    - Loan Concepts: crvusd/loan-concepts.md
     - Liquidations: crvusd/liquidations.md
     - Loan Strategies: crvusd/loan-strategies.md
     - crvUSD FAQ: crvusd/faq.md

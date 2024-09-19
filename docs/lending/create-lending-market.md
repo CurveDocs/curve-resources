@@ -80,19 +80,19 @@ The deployer of the Curve Lending Market is given the role of `manager`.  The `m
 
 ### **Amplification Factor (A)**
 
-The amplification factor `A` defines the width of bands, see formula below and more detailed information [here](../crvusd/loan-details.md#bands-n) and applet [here](../crvusd/loan-details.md#band-calculator).  `A` is also a part of the calculation for the maximum LTV of the market, see [`loan_discount` section](#loan-discount).
+The amplification factor `A` defines the width of bands, see formula below and more detailed information [here](../crvusd/loan-concepts.md#bands-n) and applet [here](../crvusd/loan-concepts.md#band-calculator).  `A` is also a part of the calculation for the maximum LTV of the market, see [`loan_discount` section](#loan-discount).
 
 $$\text{band_width} \approx \frac{\text{price}}{\text{A}}$$
 
 ### **Loan Discount**
 
-The `loan_discount` is used for finding the maximum LTV (loan-to-value) a user can have in a lending market.  At the time of writing this value ranges from 7% for WETH to 33% for volatile and less liquid assets like UwU.  Use the calculator [here](../crvusd/loan-details.md#loan-discount) to see the maximum LTVs a user can have based on the `loan_discount`, amplification factor `A` and their number of bands `N`.  The formula is:
+The `loan_discount` is used for finding the maximum LTV (loan-to-value) a user can have in a lending market.  At the time of writing this value ranges from 7% for WETH to 33% for volatile and less liquid assets like UwU.  Use the calculator [here](../crvusd/loan-concepts.md#loan-discount) to see the maximum LTVs a user can have based on the `loan_discount`, amplification factor `A` and their number of bands `N`.  The formula is:
 
 $$\text{max_LTV} = 1 - \text{loan_discount} - \frac{N}{2*A}$$
 
 ### **Liquidation Discount**
 
-`liquidation_discount` defines how much to discount the collateral for the purpose of a hard-liquidation.  This is usually 3-4% lower than the `loan_discount`.  A user is hard-liquidated when their health is less than 0, and the `liquidation_discount` is an integral part of the health calculation.  See [here](../crvusd/loan-details.md#loan-health) for more information
+`liquidation_discount` defines how much to discount the collateral for the purpose of a hard-liquidation.  This is usually 3-4% lower than the `loan_discount`.  A user is hard-liquidated when their health is less than 0, and the `liquidation_discount` is an integral part of the health calculation.  See [here](../crvusd/loan-concepts.md#loan-health) for more information
 
 ### **Borrowing Interest Rates**
 

@@ -11,7 +11,7 @@ Manage crvUSD positions at [**https://crvusd.curve.fi/**](https://crvusd.curve.f
 # **Markets**
 On the **`Markets`** tab, all available collateral types are displayed.
 
-The page displays the current [**borrow rate**](./loan-details.md#borrow-rate), total debt, debt cap, remaining amount available for borrowing, and the total value of collateral.
+The page displays the current [**borrow rate**](./loan-concepts.md#borrow-rate), total debt, debt cap, remaining amount available for borrowing, and the total value of collateral.
 
 <figure markdown>
   ![](../images/crvusd_markets.png){ width="700" }
