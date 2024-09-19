@@ -159,9 +159,9 @@ nav:
   - Curve Stablecoin (crvUSD):
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
-    - Loan Concepts In Depth: crvusd/loan-concepts.md
     - Liquidations: crvusd/liquidations.md
     - Loan Strategies: crvusd/loan-strategies.md
+    - Loan Concepts In Depth: crvusd/loan-concepts.md
     - crvUSD FAQ: crvusd/faq.md
 
   - Curve Lending:
