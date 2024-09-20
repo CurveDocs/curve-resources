@@ -25,6 +25,7 @@ plugins:
         "resources/security.md": "risks-security/security.md"
         "governance/fee-collection-distribution.md": "vecrv/overview.md"
         "crv-token/claiming-trading-fees.md": "vecrv/claiming-trading-fees.md"
+        "lending/understanding-lending.md": "lending/overview.md"
 
 
 
