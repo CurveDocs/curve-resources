@@ -106,9 +106,9 @@ $$\text{borrow_rate} = \frac{\text{APR}}{\text{seconds_in_year}} = \frac{\text{A
 <div class="input">
 <div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
     <label for="rateMinInput" style="margin-right: 10px;">Min Borrow APR % :</label>
-    <input type="number" id="rateMinInput" min="0" max="1000" step="1" value="1" style="font-size: 16px; width: 80px;">
+    <input type="number" id="rateMinInput" min="0" max="1000" step="1" value="0.5" style="font-size: 16px; width: 80px;">
     <label for="rateMaxInput" style="margin-left: 20px; margin-right: 10px;">Max Borrow APR % :</label>
-    <input type="number" id="rateMaxInput" min="0" max="1000" step="1" value="80" style="font-size: 16px; width: 80px;">
+    <input type="number" id="rateMaxInput" min="0" max="1000" step="1" value="50" style="font-size: 16px; width: 80px;">
 </div>
 
 </div>
