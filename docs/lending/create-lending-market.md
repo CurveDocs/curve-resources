@@ -148,17 +148,22 @@ document.addEventListener('DOMContentLoaded', function() {
 function updateRateGraph() {
     const rateMin = parseFloat(document.getElementById('rateMinInput').value)/100;
     const rateMax = parseFloat(document.getElementById('rateMaxInput').value)/100;
-
     let borrowDataPoints = [];
-    for (let u = 0; u <= 1.01; u += 0.01) {
-        let rate = rateMin * Math.pow((rateMax / rateMin), u);
-        borrowDataPoints.push({x: u * 100, y: rate * 100});
-    }
-
     let lendDataPoints = [];
+    let tableData = [];
+
     for (let u = 0; u <= 1.01; u += 0.01) {
-        let rate = u * rateMin * Math.pow((rateMax / rateMin), u);
-        lendDataPoints.push({x: u * 100, y: rate * 100});
+        let borrowRate = rateMin * Math.pow((rateMax / rateMin), u);
+        let lendRate = u * rateMin * Math.pow((rateMax / rateMin), u);
+        borrowDataPoints.push({x: u * 100, y: borrowRate * 100});
+        lendDataPoints.push({x: u * 100, y: lendRate * 100});
+        
+        // Add data to table array (rounded to 2 decimal places)
+        tableData.push({
+            utilization: (u * 100).toFixed(2),
+            borrowAPR: (borrowRate * 100).toFixed(2),
+            lendAPR: (lendRate * 100).toFixed(2)
+        });
     }
 
     const ctx = document.getElementById('interestRateChart').getContext('2d');
@@ -259,4 +264,38 @@ function updateRateGraph() {
     }
         rateChart = new Chart(ctx, config);
     }
+
+   // Create and populate the table
+    const tableContainer = document.getElementById('dataTable');
+    let tableHTML = `
+        <table>
+            <thead>
+                <tr>
+                    <th>Utilization (%)</th>
+                    <th>Borrow APR (%)</th>
+                    <th>Lend APR (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    for (let i = 0; i < tableData.length; i++) {
+        if (i % 5 === 0) { // Only add rows for every 5% step
+            const row = tableData[i];
+            tableHTML += `
+                <tr>
+                    <td>${row.utilization}</td>
+                    <td>${row.borrowAPR}</td>
+                    <td>${row.lendAPR}</td>
+                </tr>
+            `;
+        }
+    }
+
+    tableHTML += `
+            </tbody>
+        </table>
+    `;
+
+    tableContainer.innerHTML = tableHTML;
 </script>
