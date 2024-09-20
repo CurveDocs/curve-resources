@@ -112,7 +112,7 @@ $$\text{borrow_rate} = \frac{\text{APR}}{\text{seconds_in_year}} = \frac{\text{A
 </div>
 
 </div>
- <div id="dataTable"></div>
+ <div id="dataTable" class="md-typeset__table"></div>
 </div>
 
 
@@ -168,7 +168,8 @@ function updateRateGraph() {
         tableData.push({
             utilization: (u * 100).toFixed(2),
             borrowAPR: (borrowRate * 100).toFixed(2),
-            lendAPR: (lendRate * 100).toFixed(2)
+            lendAPR: (lendRate * 100).toFixed(2),
+            spread:  ((borrowRate-lendRate) * 100).toFixed(2)
         });
     }
 
@@ -274,6 +275,7 @@ function updateRateGraph() {
    function updateTable() {
     // Create and populate the table
     const tableContainer = document.getElementById('dataTable');
+    let csv = `Utilization; Borrow APR; Lend APR; Spread`
     let tableHTML = `
         <table>
             <thead>
@@ -281,19 +283,23 @@ function updateRateGraph() {
                     <th>Utilization (%)</th>
                     <th>Borrow APR (%)</th>
                     <th>Lend APR (%)</th>
+                    <th>Spread (%)</th>
                 </tr>
             </thead>
             <tbody>
     `;
 
+    
     for (let i = 0; i < tableData.length; i++) {
         if (i % 5 === 0) { // Only add rows for every 5% step
             const row = tableData[i];
+            csv += ${row.utilization};${row.borrowAPR};${row.lendAPR};${row.spread}
             tableHTML += `
                 <tr>
                     <td>${row.utilization}</td>
                     <td>${row.borrowAPR}</td>
                     <td>${row.lendAPR}</td>
+                     <td>${row.spread}</td>
                 </tr>
             `;
         }
@@ -305,7 +311,7 @@ function updateRateGraph() {
     `;
 
    tableContainer.innerHTML = tableHTML;
-   console.log(tableHTML);
+   console.log(csv);
    }
  
 </script>
