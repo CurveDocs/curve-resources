@@ -275,7 +275,7 @@ function updateRateGraph() {
    function updateTable() {
     // Create and populate the table
     const tableContainer = document.getElementById('dataTable');
-    let csv = `Utilization; Borrow APR; Lend APR; Spread`
+    let csv = `Utilization; Borrow APR; Lend APR; Spread`;
     let tableHTML = `
         <table>
             <thead>
@@ -293,7 +293,7 @@ function updateRateGraph() {
     for (let i = 0; i < tableData.length; i++) {
         if (i % 5 === 0) { // Only add rows for every 5% step
             const row = tableData[i];
-            csv += ${row.utilization};${row.borrowAPR};${row.lendAPR};${row.spread}
+            csv += `${row.utilization};${row.borrowAPR};${row.lendAPR};${row.spread}`;
             tableHTML += `
                 <tr>
                     <td>${row.utilization}</td>
