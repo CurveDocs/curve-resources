@@ -299,5 +299,5 @@ function updateRateGraph() {
     `;
 
     tableContainer.innerHTML = tableHTML;
-   console.log(tableContainer);
+   console.log(tableHTML);
 </script>
