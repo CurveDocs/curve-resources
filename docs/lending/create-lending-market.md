@@ -110,6 +110,7 @@ $$\text{borrow_rate} = \frac{\text{APR}}{\text{seconds_in_year}} = \frac{\text{A
     <label for="rateMaxInput" style="margin-left: 20px; margin-right: 10px;">Max Borrow APR % :</label>
     <input type="number" id="rateMaxInput" min="0" max="1000" step="1" value="80" style="font-size: 16px; width: 80px;">
 </div>
+ <div id="dataTable"></div>
 </div>
 </div>
 
