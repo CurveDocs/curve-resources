@@ -5,11 +5,7 @@ One of the main incentives for CRV is the ability to boost rewards on provided l
 
 :logos-youtube: **Boosting your CRV rewards**
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true">
-    <source src="https://storage.googleapis.com/curvedocs/boosting-rewards.mp4" type="video/mp4">
-  </video>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/blZTCWu-DQg?si=3VPX1Tjh384D6xnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## **Figuring out the required boost**
 
@@ -68,6 +64,6 @@ Where:
 
 * $B$ is your rewards boost (if it's more than 2.5 it just equals 2.5).
 * $d$ is the value you deposit, in USD.
-* $D$ is the total value deposited to the pool/vault, in USD.
+* $D$ is the total value deposited to the pool's reward gauge, in USD.
 * $v$ is the amount of veCRV you have (vote weight).
 * $V$ is the total veCRV in the system (total vote weight) click [here](https://classic.curve.fi/usecrv) to find the current amount.
