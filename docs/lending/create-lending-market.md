@@ -259,15 +259,8 @@ function updateRateGraph() {
                 position: 'bottom'
             }
         }
-    };
 
-    if (rateChart) {
-            rateChart.destroy();
-    }
-        rateChart = new Chart(ctx, config);
-    }
-
-   // Create and populate the table
+         // Create and populate the table
     const tableContainer = document.getElementById('dataTable');
     let tableHTML = `
         <table>
@@ -301,4 +294,14 @@ function updateRateGraph() {
 
     tableContainer.innerHTML = tableHTML;
    console.log(tableHTML);
+     
+    };
+
+    if (rateChart) {
+            rateChart.destroy();
+    }
+        rateChart = new Chart(ctx, config);
+    }
+
+
 </script>
