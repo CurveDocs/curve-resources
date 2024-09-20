@@ -134,25 +134,29 @@ function isUserDarkmode() {
 }
 
 let rateChart = null;
+let tableData = [];
+
+ function updateAll() {
+    updateRateGraph();
+    updateTable();
+}
 
 document.addEventListener('DOMContentLoaded', function() {
-    updateRateGraph(); // Draw the initial rate graph with default values
+    updateAll(); // Draw the initial rate graph with default values
 
     // rate graph
     const rateMinInput = document.getElementById('rateMinInput');
     const rateMaxInput = document.getElementById('rateMaxInput');
-    rateMinInput.addEventListener('change', updateRateGraph);
-    rateMaxInput.addEventListener('change', updateRateGraph);
+    rateMinInput.addEventListener('change', updateAll);
+    rateMaxInput.addEventListener('change', updateAll);
 });
-
-
 
 function updateRateGraph() {
     const rateMin = parseFloat(document.getElementById('rateMinInput').value)/100;
     const rateMax = parseFloat(document.getElementById('rateMaxInput').value)/100;
     let borrowDataPoints = [];
     let lendDataPoints = [];
-    let tableData = [];
+    tableData = [];
 
     for (let u = 0; u <= 1.01; u += 0.01) {
         let borrowRate = rateMin * Math.pow((rateMax / rateMin), u);
@@ -258,9 +262,17 @@ function updateRateGraph() {
             legend: {
                 position: 'bottom'
             }
-        }
+        }     
+    };
 
-         // Create and populate the table
+    if (rateChart) {
+            rateChart.destroy();
+    }
+        rateChart = new Chart(ctx, config);
+    }
+  
+   function updateTable() {
+    // Create and populate the table
     const tableContainer = document.getElementById('dataTable');
     let tableHTML = `
         <table>
@@ -292,16 +304,8 @@ function updateRateGraph() {
         </table>
     `;
 
-    tableContainer.innerHTML = tableHTML;
+   tableContainer.innerHTML = tableHTML;
    console.log(tableHTML);
-     
-    };
-
-    if (rateChart) {
-            rateChart.destroy();
-    }
-        rateChart = new Chart(ctx, config);
-    }
-
-
+   }
+ 
 </script>
