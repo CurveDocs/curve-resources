@@ -74,14 +74,14 @@ In the upper right-hand side of the screen, there is a toggle button for advance
   <figcaption></figcaption>
 </figure>
 
-In advanced mode the UI shows more information about the [**Collateral Bands**](#bands-n) for your personal loan:
+In advanced mode the UI shows more information about the [**Collateral Bands**](./loan-concepts.md#bands-n) for your personal loan:
 
 <figure markdown>
   ![](../images/loan_details_3.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
-Advanced mode also adds a tab with info about the [**LLAMMA Bands**](#llamma-and-liquidations) for all loans together:
+Advanced mode also adds a tab with info about the [**LLAMMA Bands**](./loan-concepts.md#bands-n) for all loans together:
 
 <figure markdown>
   ![](../images/loan_details_4.png){ width="600" }

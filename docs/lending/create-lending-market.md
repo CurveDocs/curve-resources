@@ -100,16 +100,25 @@ When creating a market the creator must define the `min_borrow_rate` and `max_bo
 
 $$\text{borrow_rate} = \frac{\text{APR}}{\text{seconds_in_year}} = \frac{\text{APR}}{86400 \times 365}$$
 
-<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
-<canvas id="interestRateChart"></canvas>
+<div style="border: 1px solid #ccc; padding: 20px; margin-bottom:0;">
+<h3>Rate Calculator</h3>
 <h4>Inputs:</h4>
 <div class="input">
 <div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
     <label for="rateMinInput" style="margin-right: 10px;">Min Borrow APR % :</label>
-    <input type="number" id="rateMinInput" min="0" max="1000" step="1" value="1" style="font-size: 16px; width: 80px;">
+    <input type="number" id="rateMinInput" min="0" max="1000" step="1" value="0.5" style="font-size: 16px; width: 80px;">
     <label for="rateMaxInput" style="margin-left: 20px; margin-right: 10px;">Max Borrow APR % :</label>
-    <input type="number" id="rateMaxInput" min="0" max="1000" step="1" value="80" style="font-size: 16px; width: 80px;">
+    <input type="number" id="rateMaxInput" min="0" max="1000" step="1" value="50" style="font-size: 16px; width: 80px;">
 </div>
+<h4>Utilization Chart</h4>
+<canvas id="interestRateChart"></canvas>
+</div>
+<div class="collapsible-table">
+  <h4 class="collapsible-heading">
+    Utilization Table
+    <span class="expand-text"></span>
+  </h4>
+  <div id="dataTable" class="md-typeset__table"></div>
 </div>
 </div>
 
@@ -132,33 +141,43 @@ function isUserDarkmode() {
 }
 
 let rateChart = null;
+let tableData = [];
+
+ function updateAll() {
+    updateRateGraph();
+    updateTable();
+}
 
 document.addEventListener('DOMContentLoaded', function() {
-    updateRateGraph(); // Draw the initial rate graph with default values
+    updateAll(); // Draw the initial rate graph with default values
 
     // rate graph
     const rateMinInput = document.getElementById('rateMinInput');
     const rateMaxInput = document.getElementById('rateMaxInput');
-    rateMinInput.addEventListener('change', updateRateGraph);
-    rateMaxInput.addEventListener('change', updateRateGraph);
+    rateMinInput.addEventListener('change', updateAll);
+    rateMaxInput.addEventListener('change', updateAll);
 });
-
-
 
 function updateRateGraph() {
     const rateMin = parseFloat(document.getElementById('rateMinInput').value)/100;
     const rateMax = parseFloat(document.getElementById('rateMaxInput').value)/100;
-
     let borrowDataPoints = [];
-    for (let u = 0; u <= 1.01; u += 0.01) {
-        let rate = rateMin * Math.pow((rateMax / rateMin), u);
-        borrowDataPoints.push({x: u * 100, y: rate * 100});
-    }
-
     let lendDataPoints = [];
+    tableData = [];
+
     for (let u = 0; u <= 1.01; u += 0.01) {
-        let rate = u * rateMin * Math.pow((rateMax / rateMin), u);
-        lendDataPoints.push({x: u * 100, y: rate * 100});
+        let borrowRate = rateMin * Math.pow((rateMax / rateMin), u);
+        let lendRate = u * rateMin * Math.pow((rateMax / rateMin), u);
+        borrowDataPoints.push({x: u * 100, y: borrowRate * 100});
+        lendDataPoints.push({x: u * 100, y: lendRate * 100});
+        
+        // Add data to table array (rounded to 2 decimal places)
+        tableData.push({
+            utilization: (u * 100).toFixed(2),
+            borrowAPR: (borrowRate * 100).toFixed(2),
+            lendAPR: (lendRate * 100).toFixed(2),
+            spread:  ((borrowRate-lendRate) * 100).toFixed(2)
+        });
     }
 
     const ctx = document.getElementById('interestRateChart').getContext('2d');
@@ -251,7 +270,7 @@ function updateRateGraph() {
             legend: {
                 position: 'bottom'
             }
-        }
+        }     
     };
 
     if (rateChart) {
@@ -259,4 +278,99 @@ function updateRateGraph() {
     }
         rateChart = new Chart(ctx, config);
     }
+  
+   function updateTable() {
+    // Create and populate the table
+    const tableContainer = document.getElementById('dataTable');
+    let csv = `Utilization; Borrow APR; Lend APR; Spread`;
+    let tableHTML = `
+        <table>
+            <thead>
+                <tr>
+                    <th>Utilization (%)</th>
+                    <th>Borrow APR (%)</th>
+                    <th>Lend APR (%)</th>
+                    <th>Spread (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    
+    for (let i = 0; i < tableData.length; i++) {
+        if (i % 5 === 0) { // Only add rows for every 5% step
+            const row = tableData[i];
+            csv += `${row.utilization};${row.borrowAPR};${row.lendAPR};${row.spread}`;
+            tableHTML += `
+                <tr>
+                    <td>${row.utilization}</td>
+                    <td>${row.borrowAPR}</td>
+                    <td>${row.lendAPR}</td>
+                     <td>${row.spread}</td>
+                </tr>
+            `;
+        }
+    }
+
+    tableHTML += `
+            </tbody>
+        </table>
+    `;
+
+   tableContainer.innerHTML = tableHTML;
+   console.log(csv);
+   }
+ 
+</script>
+
+<style>
+  .collapsible-heading {
+    cursor: pointer;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  .collapsible-heading::after {
+    content: '\25BC';
+    margin-left: 0.5em;
+    display: inline-block;
+    transition: transform 0.15s ease-in-out;
+  }
+  .collapsible-heading.collapsed::after {
+    transform: rotate(-90deg);
+  }
+  .collapsible-table.collapsed #dataTable {
+    display: none;
+  }
+  .expand-text {
+    font-weight: normal;
+    color: grey;
+    font-size: 0.8em;
+    margin-left: 0.3em;
+    order: 1;
+  }
+  .collapsible-heading::after {
+    order: 0;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const heading = document.querySelector('.collapsible-heading');
+  const table = document.querySelector('.collapsible-table');
+  const expandText = heading.querySelector('.expand-text');
+  
+  // Set initial state to collapsed and set initial text
+  table.classList.add('collapsed');
+  heading.classList.add('collapsed');
+  expandText.textContent = '(click to expand)';
+
+  heading.addEventListener('click', function() {
+    table.classList.toggle('collapsed');
+    heading.classList.toggle('collapsed');
+    
+    // Update expand/collapse text
+    expandText.textContent = table.classList.contains('collapsed') ? '(click to expand)' : '(click to collapse)';
+  });
+});
 </script>
