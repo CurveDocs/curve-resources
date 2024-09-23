@@ -100,8 +100,8 @@ When creating a market the creator must define the `min_borrow_rate` and `max_bo
 
 $$\text{borrow_rate} = \frac{\text{APR}}{\text{seconds_in_year}} = \frac{\text{APR}}{86400 \times 365}$$
 
-<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
-<canvas id="interestRateChart"></canvas>
+<div style="border: 1px solid #ccc; padding: 20px; margin-bottom:0;">
+<h3>Rate Calculator</h3>
 <h4>Inputs:</h4>
 <div class="input">
 <div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
@@ -110,9 +110,16 @@ $$\text{borrow_rate} = \frac{\text{APR}}{\text{seconds_in_year}} = \frac{\text{A
     <label for="rateMaxInput" style="margin-left: 20px; margin-right: 10px;">Max Borrow APR % :</label>
     <input type="number" id="rateMaxInput" min="0" max="1000" step="1" value="50" style="font-size: 16px; width: 80px;">
 </div>
-
+<h4>Utilization Chart</h4>
+<canvas id="interestRateChart"></canvas>
 </div>
- <div id="dataTable" class="md-typeset__table"></div>
+<div class="collapsible-table">
+  <h4 class="collapsible-heading">
+    Utilization Table
+    <span class="expand-text"></span>
+  </h4>
+  <div id="dataTable" class="md-typeset__table"></div>
+</div>
 </div>
 
 
@@ -314,4 +321,56 @@ function updateRateGraph() {
    console.log(csv);
    }
  
+</script>
+
+<style>
+  .collapsible-heading {
+    cursor: pointer;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  .collapsible-heading::after {
+    content: '\25BC';
+    margin-left: 0.5em;
+    display: inline-block;
+    transition: transform 0.15s ease-in-out;
+  }
+  .collapsible-heading.collapsed::after {
+    transform: rotate(-90deg);
+  }
+  .collapsible-table.collapsed #dataTable {
+    display: none;
+  }
+  .expand-text {
+    font-weight: normal;
+    color: grey;
+    font-size: 0.8em;
+    margin-left: 0.3em;
+    order: 1;
+  }
+  .collapsible-heading::after {
+    order: 0;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const heading = document.querySelector('.collapsible-heading');
+  const table = document.querySelector('.collapsible-table');
+  const expandText = heading.querySelector('.expand-text');
+  
+  // Set initial state to collapsed and set initial text
+  table.classList.add('collapsed');
+  heading.classList.add('collapsed');
+  expandText.textContent = '(click to expand)';
+
+  heading.addEventListener('click', function() {
+    table.classList.toggle('collapsed');
+    heading.classList.toggle('collapsed');
+    
+    // Update expand/collapse text
+    expandText.textContent = table.classList.contains('collapsed') ? '(click to expand)' : '(click to collapse)';
+  });
+});
 </script>
