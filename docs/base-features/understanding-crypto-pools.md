@@ -10,7 +10,7 @@ Becoming a liquidity provider in a Curve Crypto pool is in all ways similar to s
 
 # **Fees**
 
-Fees on those pool range from 0.04% to 0.4%. The current fee varies based on how close the price is from the internal oracle. You can check a pool's current fee which changes every trade on the bottom of a pool page.
+Fees in these pools are dynamic, but they typically sit between 0.03% to 0.4%. The current fee varies based on how close the price is from the internal oracle. You can check a pool's current fee which changes every trade on the bottom of a pool page.  The minimum fee for these pools is 0.005% and max fee is 3%.
 
 # **Risks**
 
