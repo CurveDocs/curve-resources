@@ -8,7 +8,7 @@ Curve is **non-custodial**, meaning the Curve developers do not have access to y
 
 # **What are liquidity pools & why should I deposit?**
 
-Liquidity pools are pools of tokens held in smart contracts that allow users to exchange or withdraw tokens at set rates. By adding liquidity to a Curve pool, you earn passive income through trading fees, with rewards based on your contribution. Additionally, you may receive extra incentives like CRV tokens or Points, increasing your returns. Providing liquidity also helps maintain efficient, low-cost trades, benefiting the DeFi ecosystem.
+Liquidity pools are pools of tokens held in smart contracts that allow users to exchange or withdraw tokens at set rates. By adding liquidity to a Curve pool, you earn passive income through trading fees, with rewards based on your contribution. Additionally, you may receive extra incentives like CRV tokens or Points, increasing your returns. Providing liquidity also helps maintain efficient, low-cost trades for all swappers, benefiting the whole DeFi ecosystem.
 
 For more information, visit the following section:
 
@@ -16,7 +16,7 @@ For more information, visit the following section:
 
 # **How much does it cost to swap through Curve?**
 
-Different pools have different fees.  Most are typically in the range of 0.01-0.4%.  Newer pools have dynamic fees, and so these fees can go higher if the pool is in high  demand.  The current fee is listed on the pool page.  
+Different pools have different fees.  Most are typically in the range of 0.01-0.4%.  Newer pools have dynamic fees, and so these fees can go higher if the pool is in high  demand.  The current fee is listed on each pool's page.
 
 # **What are those percentages next to each pool?**
 
