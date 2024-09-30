@@ -6,7 +6,7 @@ The easiest way to understand Curve is to see it as an exchange. Its main goal i
 
 Curve is **non-custodial**, meaning the Curve developers do not have access to your tokens. Curve pools are also non-upgradable, so you can have confidence that the logic protecting your funds can never change.
 
-# **What are liquidity pools & why would I deposit?**
+# **What are liquidity pools & why should I deposit?**
 
 Liquidity pools are pools of tokens held in smart contracts that allow users to exchange or withdraw tokens at set rates. By adding liquidity to a Curve pool, you earn passive income through trading fees, with rewards based on your contribution. Additionally, you may receive extra incentives like CRV tokens or Points, increasing your returns. Providing liquidity also helps maintain efficient, low-cost trades, benefiting the DeFi ecosystem.
 
