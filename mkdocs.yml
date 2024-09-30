@@ -29,8 +29,6 @@ plugins:
         "crvusd/loan-details.md": "crvusd/loan-concepts.md"
 
 
-
-
 # extension
 markdown_extensions:
   - footnotes
@@ -144,8 +142,8 @@ repo_url: https://github.com/CurveDocs/curve-resources
 nav:
   - Home: index.md
   - Getting Started:
-    - Understanding Curve (v1): base-features/understanding-curve.md  
-    - Understanding CryptoPools (v2): base-features/understanding-crypto-pools.md  
+    - Understanding Curve & Stableswap (v1): base-features/understanding-curve.md  
+    - Understanding Cryptoswap (v2): base-features/understanding-crypto-pools.md
 
   - CRV Token:
     - Overview & Tokenomics: crv-token/overview.md

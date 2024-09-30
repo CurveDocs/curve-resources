@@ -6,11 +6,17 @@ The easiest way to understand Curve is to see it as an exchange. Its main goal i
 
 Curve is **non-custodial**, meaning the Curve developers do not have access to your tokens. Curve pools are also non-upgradable, so you can have confidence that the logic protecting your funds can never change.
 
-# **What are liquidity pools?**
+# **What are liquidity pools & why should I deposit?**
 
-Liquidity pools are pools of tokens that sit in smart contracts and can be exchanged or withdrawn at rates set by the parameters of the smart contract. Adding liquidity to a liquidity pool gives you the opportunity to earn trading fees and possibly rewards. For more information, visit the following section:
+Liquidity pools are pools of tokens held in smart contracts that allow users to exchange or withdraw tokens at set rates. By adding liquidity to a Curve pool, you earn passive income through trading fees, with rewards based on your contribution. Additionally, you may receive extra incentives like CRV tokens or Points, increasing your returns. Providing liquidity also helps maintain efficient, low-cost trades for all swappers, benefiting the whole DeFi ecosystem.
+
+For more information, visit the following section:
 
 [**Understanding Curve Pools**](../lp/overview.md)
+
+# **How much does it cost to swap through Curve?**
+
+Different pools have different fees.  Most are typically in the range of 0.01-0.4%.  Newer pools have dynamic fees, and so these fees can go higher if the pool is in high  demand.  The current fee is listed on each pool's page.
 
 # **What are those percentages next to each pool?**
 
@@ -18,7 +24,7 @@ Curve pools may have several different percentages shown next to them in the UI.
 
 ![Pools UI](../images/pools.webp)
 
-The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Any activity on every Curve pool generates fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](../lp/overview.md).
+The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Swaps through Curve pools generate fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](../lp/overview.md).
 
 The second column refers to the reward gauges. This entitles liquidity providers to earn bonus CRV emissions. More detail on these bonuses are in the [Reward Gauges section](../reward-gauges/overview.md).
 

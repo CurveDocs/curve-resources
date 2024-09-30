@@ -25,6 +25,8 @@ Let's look at an example about how it works for a liquidity provider:
 ![Stableswap](../images/pools/stableswap.svg#only-light){: .centered }
 ![Stableswap](../images/pools/stableswap-dark.svg#only-dark){: .centered }
 
+*Note: Alice can deposit/withdraw any combination of assets/amounts, but pays a small [fee](#pool-fees) for unbalanced actions (e.g., USDC-only deposit).*
+
 ---
 
 ## **Cryptoswap** (**Curve V2**)
@@ -38,6 +40,8 @@ Let's look at an example about how it works for a liquidity provider:
 ![Cryptoswap](../images/pools/cryptoswap.svg#only-light){: .centered }
 ![Cryptoswap](../images/pools/cryptoswap-dark.svg#only-dark){: .centered }
 
+*Note: Bob can deposit/withdraw any combination of assets/amounts, but pays a small [fee](#pool-fees) for unbalanced actions (e.g., ETH-only deposit).*
+
 ---
 
 ## **Pool Fees**
@@ -46,7 +50,7 @@ Pool fees are specific to each pool, they typically range from 0.01%-0.04%.  The
 
 **50% of the pool fees go to the Liquidity Providers** increasing the value of LP tokens, and **50% to DAO (veCRV holders)**.
 
-**Balanced deposits and withdrawals are free**.  Imbalanced deposits and withdrawals have a small fee.   If fees were 0%, users could, for example, deposit in USDC and withdraw in USDT for free.
+**Balanced deposits and withdrawals are free**. Unbalanced actions incur a small fee (max 50% of swap fee). This prevents free swaps via deposit/withdraw cycles. *Note: "Balanced" means equal asset values in Cryptoswap pools, but matches current ratios in Stableswap pools*.
 
 ---
 
