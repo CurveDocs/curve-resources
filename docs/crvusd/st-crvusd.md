@@ -30,16 +30,17 @@ Before st-crvUSD, all the crvUSD minting fees[^2] went to the Curve DAO (veCRV h
 ![Fee split](../images/stcrvusd/stcrvusd_fee_split.svg#only-light){: .centered style="width: 75%;" }
 ![Fee split](../images/stcrvusd/stcrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
 
-**Curve DAO sets min and max percentages of crvUSD fees for st-crvUSD**. Each reward period[^3], the average ratio of staked to circulating crvUSD is calculated and this percentage is requested from the DAO to stream to st-crvUSD over the next reward period[^3], capped by the DAO limits.
+**The Curve DAO sets minimum and maximum percentages of crvUSD fees allocated to st-crvUSD holders**. It also sets a boost factor that can increase or decrease rewards within these limits. At the start of each reward period[^3], the system calculates the average ratio of staked to circulating crvUSD. Based on this ratio, it requests a percentage of fees from the DAO to distribute to st-crvUSD holders over the next period[^3], subject to the predetermined limits.
 
 [^3]: Reward periods will most likely be 1 week.  But these can change, so users can't abuse the calculations of staked-ratios, etc.
 
 Example:
 
 - **$100k fees** generated over a **1 week** reward period[^3]
-- st-crvUSD DAO allocation limits: **2% min, 20% max**
+- st-crvUSD DAO allocation limits: **2% min, 20% max**, with a boost factor of 1
 - If **15%** of **crvUSD staked**: **$15k** (15%) is streamed to crvUSD stakers over the following week
 - If **30%** of **crvUSD staked**: **$20k** (20%) is streamed to crvUSD stakers over the following week (capped at max)
+- If **10%** of **crvUSD staked** with a boost factor of 1.2: **$12k** (12%) is streamed to crvUSD stakers over the following week
 
 ## **Does this reduce veCRV yield?**
 
