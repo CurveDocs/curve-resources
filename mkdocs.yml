@@ -162,6 +162,7 @@ nav:
     - Liquidations: crvusd/liquidations.md
     - Loan Strategies: crvusd/loan-strategies.md
     - Loan Concepts In Depth: crvusd/loan-concepts.md
+    - st-crvUSD: crvusd/st-crvusd.md
     - crvUSD FAQ: crvusd/faq.md
 
   - Curve Lending:
