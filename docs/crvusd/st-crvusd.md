@@ -1,8 +1,10 @@
 <h1>st-crvUSD (Staked crvUSD)</h1>
 
-st-crvUSD is a new product allowing users earn risk-free[^1] yield on their crvUSD. Users deposit into the interest earning vault, and their crvUSD auto-compounds by receiving a portion of crvUSD minting fees.
+st-crvUSD is a new product allowing users earn risk-free[^1] yield on their crvUSD. Users deposit into the interest earning vault, and their crvUSD auto-compounds by receiving a portion of crvUSD minting fees[^2] (borrowing interest fees).
 
 [^1]: **Risk-free** means your crvUSD is not used/rehypothecated anywhere, it just sits within the vault, earning interest.  However, there is always smart contract risk, but st-crvUSD is built upon Yearn v3 Vaults, which are in production in many DeFi applications, and have undergone [extensive audits](https://github.com/yearn/yearn-vaults-v3/tree/master/audits).
+
+[^2]: **crvUSD Minting Fees/Minting Rates**: These are also known as crvUSD Borrowing fees/Borrowing rates or interest rate fees.  We've called them minting fees here to differentiate between the borrowing interest fees in Llamalend, which do not flow to the DAO but instead go to lenders of that Llamalend market.
 
 ## **Purpose**
 
@@ -18,32 +20,32 @@ st-crvUSD serves as a supply sink for crvUSD, creating more demand to hold crvUS
 
 Users deposit to the st-crvUSD vault, their **deposits are auto-compounded** within the vault at the current interest rate, and they **can deposit and withdraw at any time** (there are no locks).  Let's look at an example:
 
-![stcrvUSD as a user](../images/stcrvusd/stcrvusd-as-a-user.svg#only-light){: .centered }
-![stcrvUSD as a user](../images/stcrvusd/stcrvusd-as-a-user_dark.svg#only-dark){: .centered }
+![stcrvUSD as a user](../images/stcrvusd/stcrvusd_as_a_user.svg#only-light){: .centered }
+![stcrvUSD as a user](../images/stcrvusd/stcrvusd_as_a_user_dark.svg#only-dark){: .centered }
 
 ## **Where does the yield come from?**
 
-Before st-crvUSD, all the crvUSD minting fees went to the Curve DAO (veCRV holders).  With st-crvUSD, most of the fees are still directed to the DAO, but a small amount is directed to the st-crvUSD vault:
+Before st-crvUSD, all the crvUSD minting fees[^2] went to the Curve DAO (veCRV holders).  With st-crvUSD, most of the fees are still directed to the DAO, but a small amount are directed to the st-crvUSD vault through the [Fee Splitter](../vecrv/fee-collection-distribution.md#fee-splitter):
 
 ![Fee split](../images/stcrvusd/stcrvusd_fee_split.svg#only-light){: .centered style="width: 75%;" }
 ![Fee split](../images/stcrvusd/stcrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
 
-**Curve DAO sets min and max percentages of crvUSD fees for st-crvUSD**. Each reward period[^2], the average ratio of staked to circulating crvUSD is calculated and this percentage is requested from the DAO to stream to st-crvUSD over the next reward period[^2], capped by the DAO limits.
+**Curve DAO sets min and max percentages of crvUSD fees for st-crvUSD**. Each reward period[^3], the average ratio of staked to circulating crvUSD is calculated and this percentage is requested from the DAO to stream to st-crvUSD over the next reward period[^3], capped by the DAO limits.
 
-[^2]: Reward periods will most likely be 1 week.  But these can change, so users can't abuse the calculations of staked-ratios, etc.
+[^3]: Reward periods will most likely be 1 week.  But these can change, so users can't abuse the calculations of staked-ratios, etc.
 
 Example:
 
-- $100k fees generated over a 1 week reward period[^2]
-- DAO limits: 2% min, 20% max
-- If 15% of crvUSD staked: $15k (15%) is streamed to crvUSD stakers over the following week
-- If 30% of crvUSD staked: $20k (20%) is streamed to crvUSD stakers over the following week (capped at max)
+- **$100k fees** generated over a **1 week** reward period[^3]
+- st-crvUSD DAO allocation limits: **2% min, 20% max**
+- If **15%** of **crvUSD staked**: **$15k** (15%) is streamed to crvUSD stakers over the following week
+- If **30%** of **crvUSD staked**: **$20k** (20%) is streamed to crvUSD stakers over the following week (capped at max)
 
 ## **Does this reduce veCRV yield?**
 
 Short-term: Yes. **Long-term: No.**
 
-Currently, crvUSD supply is stagnating/contracting, this is not good for veCRV holders and the DAO in the long term. Let's look at what's happening without st-crvUSD:
+The current stagnation and contraction of crvUSD supply pose long-term challenges for veCRV holders and the DAO.  Let's look at what's happening without st-crvUSD:
 
 ![State Diagram before st-crvUSD](../images/stcrvusd/current_crvusd_state_diagram.svg#only-light){: .centered style="width: 85%;" }
 ![State Diagram before st-crvUSD](../images/stcrvusd/current_crvusd_state_diagram_dark.svg#only-dark){: .centered style="width: 85%;" }
@@ -59,19 +61,54 @@ Over time, with these dynamics, the peg should become tighter and minting rates 
 
 The yield earned on deposits relies on multiple factors:
 
-- Average ratio of staked to circulating crvUSD over a reward period[^2]
+- Average ratio of staked to circulating crvUSD over a reward period[^3]
 - Min and Max crvUSD fee share (set by the DAO)
-- crvUSD generated minting fees over a reward period[^2]
+- crvUSD generated minting fees[^2] over a reward period[^3]
 
-When the average staked-to-circulating crvUSD ratio is below the DAO's max fee share, st-crvUSD's APR roughly equals the average minting rate of the previous rewards period[^2].  For example, in a 1 week reward period[^2], with a staked ratio of 15% and a DAO max fee share of 20%, if the previous week's average minting rate was 7%, then st-crvUSD APR for the next week will be roughly 7%.  If the staked ratio was 40%, st-crvUSD APR would be 3.5% (half the minting rate).
+### **Simple Formula**
+
+When the staked ratio is between the DAO's min and max fee allocation:
+
+$$\textsf{APR} \approx \textsf{avg. previous period minting rate} \times \textsf{boost}$$
+
+If the staked ratio is below the min fee allocation, the rewards will be proportionally higher than the above formula, and if above the max, they will be proportionally lower.
+
+For example, in a 1 week reward period[^3], with a staked ratio of 15% and a DAO max fee share of 20%, if the previous week's average minting rate was 10%, and boost factor is 1, then st-crvUSD APR for the next week will be roughly 10%.  If the staked ratio was 40%, st-crvUSD APR would be 5% (half the minting rate), as the maximum fees (20%) are spread over twice as many deposits (40%).  See example below for a step-by-step explanation.
+
+??? Example
+
+    Using the formulas below let's setup the example:
+
+    - 52M crvUSD circulating supply, and 10.4M crvUSD staked
+    - The DAO has set the following parameters: boost = 1, min fee share = 5%, max fee share = 20%
+    - 1 week reward period with 100k fees generated.
+
+    Step by step:
+
+    1. $\textsf{staked-ratio} = \frac{10,400,000}{\textsf{52,000,000}} = 20\%$
+    2. $\textsf{staked-ratio} \times \textsf{boost} = 20\% \times 1 = 20\%$
+        
+        20% is higher than the minimum (10%), and actually equals the maximum, so $\textsf{stcrvUSD-share}=20\%$
+    3. $\textsf{stcrvUSD-fees}=20\% \times 100,000 = 20,000$
+    4. $\textsf{stcrvUSD-APR} = \frac{20,000 \times 52}{10,400,000} = 10\%$
+
+    So the APR for the above example is 10%.
+
+
 
 ### **Formulas**
 
 $$\begin{aligned} 
 \textsf{staked-ratio} &= \frac{\textsf{staked-crvUSD}}{\textsf{crvUSD-circulating-supply}} \\
-\textsf{stcrvUSD-fees} &= \textsf{min} \left( \textsf{staked-ratio} \textsf{, max-fee-share} \right) \times \textsf{crvUSD-fees} \\
+\textsf{stcrvUSD-share} &= \textsf{min} \left( \textsf{max} (\textsf{staked-ratio} \times \textsf{boost} , \textsf{min-fee-share}) , \textsf{max-fee-share} \right) \\
+\textsf{stcrvUSD-fees} &=  \textsf{stcrvUSD-share} \times \textsf{crvUSD-fees} \\
 \textsf{stcrvUSD-APR} &= \frac{\textsf{stcrvUSD-fees} \times \textsf{reward-periods-in-year}}{\textsf{staked-crvUSD}}
 \end{aligned}
 $$
 
-Where $\textsf{max-fee-share}$ is the maximum fee share set by the Curve DAO, and $\textsf{reward-periods-in-year}$ means how many reward periods[^2] there are between fee distributions, e.g., if fee distribution to st-crvUSD happens weekly, $\textsf{reward-periods-in-year}=52$.
+Where :
+
+- $\textsf{min-fee-share}$ and $\textsf{max-fee-share}$ is the minimum and maximum fee share set by the Curve DAO
+- $\textsf{stcrvUSD-share}$ is the percentage st-crvUSD is allocated
+- $\textsf{boost}$ is a parameter which can be set by the DAO to increase or limit st-crvUSD allocations
+- $\textsf{reward-periods-in-year}$ means how many reward periods[^3] there are between fee distributions, e.g., if fee distribution to st-crvUSD happens weekly, $\textsf{reward-periods-in-year}=52$.
