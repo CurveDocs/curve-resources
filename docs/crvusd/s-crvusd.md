@@ -1,115 +1,119 @@
-<h1>st-crvUSD (Staked crvUSD)</h1>
+<h1>Savings-crvUSD</h1>
 
-st-crvUSD is a new product allowing users earn risk-free[^1] yield on their crvUSD. Users deposit into the interest earning vault, and their crvUSD auto-compounds by receiving a portion of crvUSD minting fees[^2] (borrowing interest fees).
+Savings-crvUSD, or scrvUSD for short, is a **yield-bearing version of crvUSD** that earns rewards simply by holding the token. Users do not need to manually claim rewards, as they are passively accrued.
 
-[^1]: **Risk-free** means your crvUSD is not used/rehypothecated anywhere, it just sits within the vault, earning interest.  However, there is always smart contract risk, but st-crvUSD is built upon Yearn v3 Vaults, which are in production in many DeFi applications, and have undergone [extensive audits](https://github.com/yearn/yearn-vaults-v3/tree/master/audits).
 
-[^2]: **crvUSD Minting Fees/Minting Rates**: These are also known as crvUSD Borrowing fees/Borrowing rates or interest rate fees.  We've called them minting fees here to differentiate between the borrowing interest fees in Llamalend, which do not flow to the DAO but instead go to lenders of that Llamalend market.
+---
 
-## **Purpose**
 
-st-crvUSD serves as a supply sink for crvUSD, creating more demand to hold crvUSD beyond depositing in swap pools or supplying to lending markets. It aims to:
+## **Why s-crvUSD?**
 
-- **Make crvUSD attractive to just hold**: By providing a risk-free[^1] way to earn stablecoin yield.
-- **Improve crvUSD peg stability**: With a risk-free[^1] form of yield, crvUSD buying demand is increased, solidifying peg.
-- **Reduce crvUSD minting rates**: Minting rates increase as crvUSD falls below peg to incentivize borrowers to buy back crvUSD and close loans.  By increasing demand for crvUSD the peg tightens, reducing minting rates.
-- **Increase crvUSD minting over time**: By decreasing minting rates and solidifying peg, borrowing costs become more predictable, all these factors make Curve a more attractive venue to borrow from.
-- **Fee Revenue increases over time**: With more crvUSD minted, fees sustainably increase over time.
+scrvUSD provides an additional yield-earning opportunity for crvUSD, diversifying the ways users can earn on their crvUSD holdings. It aims to:
 
-## **How the vault works for users**
+- **Increase crvUSD attractiveness**: By offering a low-risk[^1] way to earn stablecoin yield.
+- **Improve crvUSD peg stability**: The low-risk[^1] yield increases demand for crvUSD, which helps solidify its peg.
+- **Reduce and stabilize crvUSD borrow rates**: Borrow rates for crvUSD rise when its price falls below the peg. By increasing demand for crvUSD, the peg tightens, reducing borrow rates and aiming to stabilize them over the long term.
+- **Increase crvUSD supply over time**: As borrow rates decrease and stabilize, borrowing becomes more predictable, making Curve a more attractive platform for loans.
+- **Increase fee revenue over time**: With more crvUSD in circulation, fee revenue sustainably grows over time.
 
-Users deposit to the st-crvUSD vault, their **deposits are auto-compounded** within the vault at the current interest rate, and they **can deposit and withdraw at any time** (there are no locks).  Let's look at an example:
+[^1]: **Low-risk** is subjective and depends on the user's risk tolerance. In this context, it means the deposited crvUSD is not used or rehypothecated; it simply remains in the Savings Vault, earning interest. However, smart contract risks remain. That said, st-crvUSD is built upon Yearn v3 Vaults, which are widely used in DeFi and have undergone [extensive audits](https://github.com/yearn/yearn-vaults-v3/tree/master/audits).
 
-![stcrvUSD as a user](../images/stcrvusd/stcrvusd_as_a_user.svg#only-light){: .centered }
-![stcrvUSD as a user](../images/stcrvusd/stcrvusd_as_a_user_dark.svg#only-dark){: .centered }
+
+
+---
+
+
+## **How to deposit and withdraw crvUSD**
+
+Users can obtain scrvUSD by simply depositing crvUSD into the Savings Vault[^2]. In exchange, they receive scrvUSD tokens. To earn yield, users don't need to do anything else—the yield is accrued in the background. Therefore, the user's balance of scrvUSD doesn't increase. When redeeming scrvUSD, users receive their initial deposit plus the accrued yield.
+
+[^2]: While depositing crvUSD into the Savings Vault is the most straightforward way to get scrvUSD, the token can technically also be bought on secondary markets such as liquidity pools on Curve.
+
+Simply deposit and withdraw crvUSD in the UI: [Depositing and Withdrawing crvUSD](https://yearn.finance/savings-crvusd).
+
+Let's look at an example:
+
+![stcrvUSD as a user](../images/scrvusd/scrvusd_as_a_user_light.svg#only-light){: .centered }
+![stcrvUSD as a user](../images/scrvusd/scrvusd_as_a_user_dark.svg#only-dark){: .centered }
+
+
+---
+
+
+## **How is the yield accrued?**
+
+Earning yield with scrvUSD is very simple. Simply holding scrvUSD in a wallet is enough to earn yield. There is no need to stake or lock scrvUSD to be eligible to earn rewards.
+
+The yield is accrued passively and constantly increases the underlying value of scrvUSD. For example, if a user deposits 100 crvUSD and receives 100 scrvUSD in exchange, and the yield accrued is 10% per year, the user will still have 100 scrvUSD, but the value of each scrvUSD token will have increased by 10% due to the accrued yield. The user can then withdraw 110 crvUSD from their 100 scrvUSD.
+
+
+---
+
 
 ## **Where does the yield come from?**
 
-Before st-crvUSD, all the crvUSD minting fees[^2] went to the Curve DAO (veCRV holders).  With st-crvUSD, most of the fees are still directed to the DAO, but a small amount are directed to the st-crvUSD vault through the [Fee Splitter](../vecrv/fee-collection-distribution.md#fee-splitter):
+The yield paid to scrvUSD holders comes directly from the crvUSD interest rate fees paid by borrowers for taking out crvUSD loans.
 
-![Fee split](../images/stcrvusd/stcrvusd_fee_split.svg#only-light){: .centered style="width: 75%;" }
-![Fee split](../images/stcrvusd/stcrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
+*The amount of rewards allocated to scrvUSD varies and depends on two factors:*
 
-**The Curve DAO sets minimum and maximum percentages of crvUSD fees allocated to st-crvUSD holders**. It also sets a boost factor that can increase or decrease rewards within these limits. At the start of each reward period[^3], the system calculates the average ratio of staked to circulating crvUSD. Based on this ratio, it requests a percentage of fees from the DAO to distribute to st-crvUSD holders over the next period[^3], subject to the predetermined limits.
+1. The amount of crvUSD fees generated.
+2. The percentage of the total crvUSD fees allocated to scrvUSD, as determined by the Curve DAO.
 
-[^3]: Reward periods will most likely be 1 week.  But these can change, so users can't abuse the calculations of staked-ratios, etc.
+![Fee split](../images/scrvusd/scrvusd_fee_split_light.svg#only-light){: .centered style="width: 75%;" }
+![Fee split](../images/scrvusd/scrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
 
-Example:
+The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on the average percentage of scrvUSD supply compared to the total circulating supply of crvUSD (see example below). The DAO sets both a minimum and maximum percentage of crvUSD fees allocated to scrvUSD, which serve as upper and lower bounds.
 
-- **$100k fees** generated over a **1 week** reward period[^3]
-- st-crvUSD DAO allocation limits: **2% min, 20% max**, with a boost factor of 1
-- If **15%** of **crvUSD staked**: **$15k** (15%) is streamed to crvUSD stakers over the following week
-- If **30%** of **crvUSD staked**: **$20k** (20%) is streamed to crvUSD stakers over the following week (capped at max)
-- If **10%** of **crvUSD staked** with a boost factor of 1.2: **$12k** (12%) is streamed to crvUSD stakers over the following week
+!!!example "How much yield is allocated to scrvUSD?"
 
-## **Does this reduce veCRV yield?**
+    Let's assume the total crvUSD fees generated over a one-week reward period is $100k. The DAO has set the following parameters: a 2% minimum and a 20% maximum.
 
-Short-term: Yes. **Long-term: No.**
+    - If 0% of crvUSD is staked, 2% of the $100k will be allocated to scrvUSD.
+    - If 15% of crvUSD is staked, 15% of the $100k will be allocated to scrvUSD.
+    - If 30% of crvUSD is staked, 20% of the $100k will be allocated to scrvUSD.
 
-The current stagnation and contraction of crvUSD supply pose long-term challenges for veCRV holders and the DAO.  Let's look at what's happening without st-crvUSD:
 
-![State Diagram before st-crvUSD](../images/stcrvusd/current_crvusd_state_diagram.svg#only-light){: .centered style="width: 85%;" }
-![State Diagram before st-crvUSD](../images/stcrvusd/current_crvusd_state_diagram_dark.svg#only-dark){: .centered style="width: 85%;" }
+---
 
-Borrowers mint crvUSD to buy assets, which means selling crvUSD and raising minting rates. **With st-crvUSD, as minting rates rise, st-crvUSD interest rate (APR) increases**. Borrowers needn't close loans to repeg crvUSD, as stakers are incentivized to buy crvUSD due to higher st-crvUSD APR:
 
-![st-crvUSD State Diagram](../images/stcrvusd/stcrvusd_state_diagram.svg#only-light){: .centered style="width: 90%;" }
-![st-crvUSD State Diagram](../images/stcrvusd/stcrvusd_state_diagram_dark.svg#only-dark){: .centered style="width: 90%;" }
+## **How does scrvUSD affect the current veCRV yield?**
 
-Over time, with these dynamics, the peg should become tighter and minting rates should stabilize and lower over time, **allowing the crvUSD supply to sustainably grow, and revenue for veCRV holders to increase**.
+The current stagnation and contraction of crvUSD supply pose long-term challenges for veCRV holders and the DAO. Let's take a look at what is happening without scrvUSD:
+
+![State Diagram before st-crvUSD](../images/scrvusd/before_light.svg#only-light){: .centered style="width: 85%;" }
+![State Diagram before st-crvUSD](../images/scrvusd/before_dark.svg#only-dark){: .centered style="width: 85%;" }
+
+Borrowers mint crvUSD to buy assets, which leads to selling crvUSD. This lowers the price of crvUSD, which in turn raises borrowing rates, making crvUSD less attractive to borrow.
+
+**With scrvUSD in place, as borrowing rates rise, the yield (APR) for scrvUSD increases simultaneously.** Due to this mechanism, buying crvUSD to convert it to scrvUSD becomes attractive, increasing demand for crvUSD and tightening the peg (which leads to lower borrowing rates again):
+
+![st-crvUSD State Diagram](../images/scrvusd/scrvusd_light.svg#only-light){: .centered style="width: 90%;" }
+![st-crvUSD State Diagram](../images/scrvusd/scrvusd_dark.svg#only-dark){: .centered style="width: 90%;" }
+
+Over time, with these dynamics, the peg should become tighter, and borrowing rates should stabilize. This **will allow the crvUSD supply to grow sustainably, increasing revenue for veCRV holders**.
+
+
+---
+
 
 ## **How much yield will I earn?**
 
-The yield earned on deposits relies on multiple factors:
+The yield earned by holding scrvUSD is not fixed because it **depends on several dynamic factors**:
 
-- Average ratio of staked to circulating crvUSD over a reward period[^3]
-- Min and Max crvUSD fee share (set by the DAO)
-- crvUSD generated minting fees[^2] over a reward period[^3]
+- The ratio of scrvUSD to the total circulating crvUSD supply
+- The amount of crvUSD fees generated
+- The minimum and maximum crvUSD fee share allocated to scrvUSD, as set by the DAO
 
-### **Simple Formula**
+In general, **if the ratio of scrvUSD to the total crvUSD supply stays within the minimum and maximum fee allocation limits set by the DAO, the APR for scrvUSD will roughly align with the average borrowing rate for crvUSD**. However, if the ratio exceeds the maximum limit, the yield will be capped at the maximum fee allocation.
 
-When the staked ratio is between the DAO's min and max fee allocation:
+??? example "Example: APR calculation"
 
-$$\textsf{APR} \approx \textsf{avg. previous period minting rate} \times \textsf{boost}$$
+    Let’s simplify the scenario by considering a timeframe of one year. Assume that over the year, the total crvUSD fees generated amounted to 10 million crvUSD, the average borrowing rate during this time was 10%, and the total supply of crvUSD was 100 million. The DAO set the following parameters throughout the year: a 2% minimum and a 20% maximum fee allocation.
 
-If the staked ratio is below the min fee allocation, the rewards will be proportionally higher than the above formula, and if above the max, they will be proportionally lower.
+    The percentage of crvUSD fees allocated to scrvUSD depends entirely on how much crvUSD is deposited into the Savings Vault. This scenario holds true as long as the staked ratio is within the DAO's minimum and maximum fee allocation range.
 
-For example, in a 1 week reward period[^3], with a staked ratio of 15% and a DAO max fee share of 20%, if the previous week's average minting rate was 10%, and boost factor is 1, then st-crvUSD APR for the next week will be roughly 10%.  If the staked ratio was 40%, st-crvUSD APR would be 5% (half the minting rate), as the maximum fees (20%) are spread over twice as many deposits (40%).  See example below for a step-by-step explanation.
+    - **Ratio is between the min and max allocation limit**: If 15% of crvUSD is deposited into the Savings Vault, then 15% of the 10 million crvUSD in fees earned will be allocated to scrvUSD. This equals 1.5 million crvUSD allocated to 15 million scrvUSD, resulting in an APR of 10%, which aligns with the average borrowing rate of 10%.
 
-??? Example
+    - **Ratio exceeds the maximum allocation limit**: If the staked ratio exceeds the maximum allocation limit, the APR for scrvUSD will be lower than the average borrowing rate. For example, if the ratio is 25% (above the 20% maximum limit), the fee allocation to scrvUSD will be capped at 20%. This means 2 million crvUSD in fees will be allocated to 25 million scrvUSD, resulting in an APR of 8% (2 million crvUSD / 25 million scrvUSD = 8%).
 
-    Using the formulas below let's setup the example:
-
-    - 52M crvUSD circulating supply, and 10.4M crvUSD staked
-    - The DAO has set the following parameters: boost = 1, min fee share = 5%, max fee share = 20%
-    - 1 week reward period with 100k fees generated.
-
-    Step by step:
-
-    1. $\textsf{staked-ratio} = \frac{10,400,000}{\textsf{52,000,000}} = 20\%$
-    2. $\textsf{staked-ratio} \times \textsf{boost} = 20\% \times 1 = 20\%$
-        
-        20% is higher than the minimum (10%), and actually equals the maximum, so $\textsf{stcrvUSD-share}=20\%$
-    3. $\textsf{stcrvUSD-fees}=20\% \times 100,000 = 20,000$
-    4. $\textsf{stcrvUSD-APR} = \frac{20,000 \times 52}{10,400,000} = 10\%$
-
-    So the APR for the above example is 10%.
-
-
-
-### **Formulas**
-
-$$\begin{aligned} 
-\textsf{staked-ratio} &= \frac{\textsf{staked-crvUSD}}{\textsf{crvUSD-circulating-supply}} \\
-\textsf{stcrvUSD-share} &= \textsf{min} \left( \textsf{max} (\textsf{staked-ratio} \times \textsf{boost} , \textsf{min-fee-share}) , \textsf{max-fee-share} \right) \\
-\textsf{stcrvUSD-fees} &=  \textsf{stcrvUSD-share} \times \textsf{crvUSD-fees} \\
-\textsf{stcrvUSD-APR} &= \frac{\textsf{stcrvUSD-fees} \times \textsf{reward-periods-in-year}}{\textsf{staked-crvUSD}}
-\end{aligned}
-$$
-
-Where :
-
-- $\textsf{min-fee-share}$ and $\textsf{max-fee-share}$ is the minimum and maximum fee share set by the Curve DAO
-- $\textsf{stcrvUSD-share}$ is the percentage st-crvUSD is allocated
-- $\textsf{boost}$ is a parameter which can be set by the DAO to increase or limit st-crvUSD allocations
-- $\textsf{reward-periods-in-year}$ means how many reward periods[^3] there are between fee distributions, e.g., if fee distribution to st-crvUSD happens weekly, $\textsf{reward-periods-in-year}=52$.
+    - **Ratio is below the minimum allocation limit**: If the ratio is below the minimum allocation limit, the APR will be higher than the average borrowing rate. For example, if the ratio is 1% (below the 2% minimum limit), the fee allocation to scrvUSD will be set at 2%. This means 0.2 million crvUSD in fees will be allocated to 1 million scrvUSD, resulting in an APR of 20% (0.2 million crvUSD / 1 million scrvUSD = 20%).
