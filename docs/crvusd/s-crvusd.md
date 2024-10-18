@@ -1,12 +1,12 @@
-<h1>Savings-crvUSD</h1>
+<h1>Savings crvUSD</h1>
 
-Savings-crvUSD, abbreviated as scrvUSD, is a **yield-bearing version of crvUSD** that earns yield simply by holding the token. Users do not need to manually claim any rewards whatsoever, as they are passively accrued.
+Savings crvUSD, abbreviated as scrvUSD, is a **yield-bearing version of crvUSD** that earns yield simply by holding the token. Users do not need to manually claim any rewards whatsoever, as they are passively accrued.
 
 
 ---
 
 
-## **Why s-crvUSD?**
+## **Why scrvUSD?**
 
 scrvUSD provides an additional yield-earning opportunity for crvUSD, diversifying the ways users can earn on their crvUSD holdings. It aims to:
 
@@ -28,7 +28,7 @@ Users can obtain scrvUSD by simply depositing crvUSD into the Savings Vault[^2].
 
 [^2]: While depositing crvUSD into the Savings Vault is the most straightforward way to get scrvUSD, the token can technically also be bought on secondary markets such as liquidity pools on Curve.
 
-Simply deposit and withdraw crvUSD in the UI: [Depositing and Withdrawing crvUSD](https://yearn.finance/savings-crvusd).
+Simply deposit and withdraw crvUSD in the UI: [Depositing and Withdrawing crvUSD](tbd).
 
 Let's look at an example:
 
