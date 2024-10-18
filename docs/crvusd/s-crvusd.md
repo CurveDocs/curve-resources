@@ -1,6 +1,6 @@
 <h1>Savings-crvUSD</h1>
 
-Savings-crvUSD, or scrvUSD for short, is a **yield-bearing version of crvUSD** that earns rewards simply by holding the token. Users do not need to manually claim rewards, as they are passively accrued.
+Savings-crvUSD, abbreviated as scrvUSD, is a **yield-bearing version of crvUSD** that earns yield simply by holding the token. Users do not need to manually claim any rewards whatsoever, as they are passively accrued.
 
 
 ---
@@ -17,7 +17,6 @@ scrvUSD provides an additional yield-earning opportunity for crvUSD, diversifyin
 - **Increase fee revenue over time**: With more crvUSD in circulation, fee revenue sustainably grows over time.
 
 [^1]: **Low-risk** is subjective and depends on the user's risk tolerance. In this context, it means the deposited crvUSD is not used or rehypothecated; it simply remains in the Savings Vault, earning interest. However, smart contract risks remain. That said, st-crvUSD is built upon Yearn v3 Vaults, which are widely used in DeFi and have undergone [extensive audits](https://github.com/yearn/yearn-vaults-v3/tree/master/audits).
-
 
 
 ---
