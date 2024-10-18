@@ -1,6 +1,6 @@
 <h1>Savings crvUSD</h1>
 
-Savings crvUSD, abbreviated as scrvUSD, is a **yield-bearing version of crvUSD** that earns yield simply by holding the token. Users do not need to manually claim any rewards whatsoever, as they are passively accrued.
+Savings crvUSD, abbreviated as scrvUSD, is a **yield-bearing version of crvUSD** that earns yield simply by holding the token. Users do not need to take any action whatsoever, as the yield is passively accrued.
 
 
 ---
