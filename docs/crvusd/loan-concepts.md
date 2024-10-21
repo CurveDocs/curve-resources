@@ -241,9 +241,9 @@ Where:
 
 ## **Loan Discount**
 
-The `loan_discount` is used for finding the maximum LTV a user can have in a market.  At the time of writing in crvUSD markets this value is a constant 9%, in Curve Lending markets this value ranges from 7% for WETH to 33% for volatile assets like UwU.  Use the calculator below to see the maximum LTVs a user can have based on the `loan_discount`, amplification factor `A` and their number of bands `N`.  The formula is:
+The `loan_discount` is used for finding the maximum LTV a user can have in a market.  At the time of writing in crvUSD markets this value is a constant 9%, in Curve Lending markets this value ranges from 7% for WETH to 33% for volatile assets like UwU.  Use the calculator below to see the maximum LTVs a user can have based on the `loan_discount`, and amplification factor `A` (with 4 bands, N=4).  The formula is:
 
-$$\text{maxLTV} = 1 - \text{loan_discount} - \frac{N}{2*A}$$
+$$\text{maxLTV} = \left(\frac{A - 1}{A}\right)^2 \times (1 - \text{loan_discount})$$
 
 
 <div class="chart-container">
@@ -253,15 +253,13 @@ $$\text{maxLTV} = 1 - \text{loan_discount} - \frac{N}{2*A}$$
     <div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
         <label for="ampInput2" style="margin-right: 10px;">A:</label>
         <input type="number" id="ampInput2" min="1" max="10000" step="1" value="30" style="font-size: 16px; width: 80px;">
-        <label for="numBandsInput2" style="margin-left: 20px; margin-right: 10px;">N:</label>
-        <input type="number" id="numBandsInput2" min="4" max="50" step="1" value="10" style="font-size: 16px; width: 80px;">
         <label for="loanDiscountInput" style="margin-left: 20px; margin-right: 10px;">Loan Discount % :</label>
         <input type="number" id="loanDiscountInput" min="0" max="100" step="1" value="10" style="font-size: 16px; width: 80px;">
     </div>
     </div>
   <h4>Result</h4>
 <div style="text-align: center; margin-top: 5px;">
-  <p>Maximum LTV: <span id="ltvResult" style="background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span></p>
+  <p>Maximum LTV: <span id="ltvResult" style="color: #000000; background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span></p>
 </div>
 </div>
 
@@ -662,7 +660,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const numBandsInput2 = document.getElementById('numBandsInput2');
     const loanDiscountInput = document.getElementById('loanDiscountInput');
     ampInput2.addEventListener('change', calculateLTV);
-    numBandsInput2.addEventListener('change', calculateLTV);
+    // numBandsInput2.addEventListener('change', calculateLTV);
     loanDiscountInput.addEventListener('change', calculateLTV);
 
     //
@@ -670,10 +668,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function calculateLTV() {
   var ampFactor2 = parseInt(document.getElementById('ampInput2').value);
-  var numBands2 = parseInt(document.getElementById('numBandsInput2').value);
+  // var numBands2 = parseInt(document.getElementById('numBandsInput2').value);
   var loanDiscount = parseInt(document.getElementById('loanDiscountInput').value);
-
-  var ltv = 100 - loanDiscount - (100 * (numBands2 / (2 * ampFactor2)));
+  console.log(loanDiscount);
+  console.log(ampFactor2);
+  var ltv = ((ampFactor2 - 1) / ampFactor2) ** 2 * (1 - loanDiscount / 100) * 100;
   document.getElementById('ltvResult').textContent = ltv.toFixed(2) + '%';
 }
 
