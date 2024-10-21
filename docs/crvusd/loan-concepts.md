@@ -259,7 +259,7 @@ $$\text{maxLTV} = \left(\frac{A - 1}{A}\right)^2 \times (1 - \text{loan_discount
     </div>
   <h4>Result</h4>
 <div style="text-align: center; margin-top: 5px;">
-  <p>Maximum LTV: <span id="ltvResult" style="background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span></p>
+  <p>Maximum LTV: <span id="ltvResult" style="color: #000000; background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;"></span></p>
 </div>
 </div>
 
