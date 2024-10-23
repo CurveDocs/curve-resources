@@ -29,7 +29,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     [:octicons-arrow-right-24: Learn More](./vecrv/overview.md)
 
--   :logos-crvusd:{ .lg .middle } **Stablecoin**
+-   :logos-crvusd:{ .lg .middle } **crvUSD**
 
     ---
 

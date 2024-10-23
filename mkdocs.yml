@@ -143,7 +143,6 @@ nav:
   - Home: index.md
   - Getting Started:
     - Understanding Curve & Stableswap (v1): base-features/understanding-curve.md  
-    - Understanding Cryptoswap (v2): base-features/understanding-crypto-pools.md
 
   - CRV Token:
     - Overview & Tokenomics: crv-token/overview.md
