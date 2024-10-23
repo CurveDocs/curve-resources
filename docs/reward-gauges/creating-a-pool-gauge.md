@@ -95,7 +95,7 @@ To deploy a sidechain gauge we have to deploy 2 different gauges which link toge
 
 ## **Deploying the Sidechain (Child) Gauge**
 
-To deploy the sidechain child gauge go to [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.fi/references/deployed-contracts/#evm-sidechain-gauges).
+To deploy the sidechain child gauge go to [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.fi/deployments/crosschain/).
 
 Find the `ChildLiquidityGaugeFactory` address for your sidechain and click on it.  This will take you to the contract page on the sidechain's block explorer.  Then go to **`Contract -> Write Contract -> Connect to Web3`**.
 

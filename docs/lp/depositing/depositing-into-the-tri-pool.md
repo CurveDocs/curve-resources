@@ -11,11 +11,7 @@ This pool is expected to become the most liquid and the cheapest to interact wit
 
 *See how to deposit and stake into the 3Pool: https://www.youtube.com/watch?v=OsRrGij9Ou8*
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true">
-    <source src="https://storage.googleapis.com/curvedocs/staking-3pool.mp4" type="video/mp4">
-  </video>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OsRrGij9Ou8?si=zglQ5gl1J9LkbLPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## **Depositing into the pool**
 

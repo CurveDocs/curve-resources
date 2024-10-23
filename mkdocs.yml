@@ -143,7 +143,6 @@ nav:
   - Home: index.md
   - Getting Started:
     - Understanding Curve & Stableswap (v1): base-features/understanding-curve.md  
-    - Understanding Cryptoswap (v2): base-features/understanding-crypto-pools.md
 
   - CRV Token:
     - Overview & Tokenomics: crv-token/overview.md
@@ -182,7 +181,6 @@ nav:
       - Overview: lp/depositing/depositing.md
       - Depositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
       - Depositing into a metapool: lp/depositing/depositing-into-a-metapool.md
-      - Depositing into the susd-pool: lp/depositing/depositing-into-the-susd-pool.md
       - Depositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
       - Depositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
 
