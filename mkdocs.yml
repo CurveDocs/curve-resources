@@ -181,7 +181,6 @@ nav:
       - Overview: lp/depositing/depositing.md
       - Depositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
       - Depositing into a metapool: lp/depositing/depositing-into-a-metapool.md
-      - Depositing into the susd-pool: lp/depositing/depositing-into-the-susd-pool.md
       - Depositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
       - Depositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
 
