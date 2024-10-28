@@ -75,7 +75,9 @@ As the collateral price increases, the aforementioned process reverses. The posi
 
 ### Under what circumstances can I be liquidated? (hard-liquidation)
 
-Should a loan's health drop below 0%, it becomes eligible for liquidation. In this scenario, the collateral is sold off, and the position closes. Although the crvUSD collateral conversion mechanism within the AMM is designed to protect against liquidations, it might not keep up with severe price fluctuations. It is advisable for borrowers to maintain their loan health, especially when prices fall within the selected liquidation range.
+When a loan's health falls below 0%, it becomes eligible for liquidation. In this case, another party (called a liquidator) can step in to repay the debt. The liquidator receives the user's collateral in return for this service. While the user gets to keep what they borrowed, they permanently lose their collateral that was securing the loan.
+
+Although the crvUSD collateral conversion mechanism within the AMM is designed to protect against liquidations, it might not keep up with severe price fluctuations. It is advisable for borrowers to maintain their loan health, especially when prices fall within the selected liquidation range.
 
 
 ### How do I maintain my loan health if collateral price drops into my range?
