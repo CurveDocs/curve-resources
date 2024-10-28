@@ -1,6 +1,6 @@
 <h1>Savings crvUSD</h1>
 
-Savings crvUSD, abbreviated as scrvUSD, is a **yield-bearing version of crvUSD** that earns yield simply by holding the token. Users do not need to take any action whatsoever, as the yield is passively accrued.
+Savings crvUSD, abbreviated as scrvUSD, is an **interest-bearing stablecoin** that earns yield simply by holding the token. Users do not need to take any action whatsoever, as the yield is passively accrued.
 
 
 ---
@@ -8,9 +8,9 @@ Savings crvUSD, abbreviated as scrvUSD, is a **yield-bearing version of crvUSD**
 
 ## **Why scrvUSD?**
 
-scrvUSD provides an additional yield-earning opportunity for crvUSD, diversifying the ways users can earn on their crvUSD holdings. It aims to:
+scrvUSD provides an additional interest-earning opportunity for crvUSD, diversifying the ways users can earn on their crvUSD holdings. It aims to:
 
-- **Increase crvUSD attractiveness**: By offering a low-risk[^1] way to earn stablecoin yield.
+- **Increase crvUSD attractiveness**: By offering a low-risk[^1] way to earn stablecoin interest.
 - **Improve crvUSD peg stability**: The low-risk[^1] yield increases demand for crvUSD, which helps solidify its peg.
 - **Reduce and stabilize crvUSD borrow rates**: Borrow rates for crvUSD rise when its price falls below the peg. By increasing demand for crvUSD, the peg tightens, reducing borrow rates and aiming to stabilize them over the long term.
 - **Increase crvUSD supply over time**: As borrow rates decrease and stabilize, borrowing becomes more predictable, making Curve a more attractive platform for loans.
@@ -24,7 +24,7 @@ scrvUSD provides an additional yield-earning opportunity for crvUSD, diversifyin
 
 ## **How to deposit and withdraw crvUSD**
 
-Users can obtain scrvUSD by simply depositing crvUSD into the Savings Vault[^2]. In exchange, they receive scrvUSD tokens. To earn yield, users don't need to do anything else—the yield is accrued in the background. Therefore, the user's balance of scrvUSD doesn't increase. When redeeming scrvUSD, users receive their initial deposit plus the accrued yield.
+Users can obtain scrvUSD by simply depositing crvUSD into the Savings Vault[^2]. In exchange, they receive scrvUSD tokens. To earn interest, users don't need to do anything else—the interest accrues in the background. Therefore, the user's balance of scrvUSD doesn't increase. When redeeming scrvUSD, users receive their initial deposit plus the accrued interest.
 
 [^2]: While depositing crvUSD into the Savings Vault is the most straightforward way to get scrvUSD, the token can technically also be bought on secondary markets such as liquidity pools on Curve.
 
@@ -39,17 +39,17 @@ Let's look at an example:
 ---
 
 
-## **How is the yield accrued?**
+## **How does the interest accrue?**
 
-Earning yield with scrvUSD is very simple. Simply holding scrvUSD in a wallet is enough to earn yield. There is no need to stake or lock scrvUSD to be eligible to earn rewards.
+Earning interest with scrvUSD is very simple. Simply holding scrvUSD in a wallet is enough to earn interest. There is no need to stake or lock scrvUSD to be eligible to earn rewards.
 
-The yield is accrued passively and constantly increases the underlying value of scrvUSD. For example, if a user deposits 100 crvUSD and receives 100 scrvUSD in exchange, and the yield accrued is 10% per year, the user will still have 100 scrvUSD, but the value of each scrvUSD token will have increased by 10% due to the accrued yield. The user can then withdraw 110 crvUSD from their 100 scrvUSD.
+The interest is accrued passively and constantly increases the underlying value of scrvUSD. For example, if a user deposits 100 crvUSD and receives 100 scrvUSD in exchange, and the interest accrued is 10% per year, the user will still have 100 scrvUSD, but the value of each scrvUSD token will have increased by 10% due to the accrued yield. The user can then withdraw 110 crvUSD from their 100 scrvUSD.
 
 
 ---
 
 
-## **Where does the yield come from?**
+## **Where does the interest come from?**
 
 The yield paid to scrvUSD holders comes directly from the crvUSD interest rate fees paid by borrowers for taking out crvUSD loans.
 
@@ -58,8 +58,8 @@ The yield paid to scrvUSD holders comes directly from the crvUSD interest rate f
 1. The amount of crvUSD fees generated.
 2. The percentage of the total crvUSD fees allocated to scrvUSD, as determined by the Curve DAO.
 
-![Fee split](../images/scrvusd/scrvusd_fee_split_light.svg#only-light){: .centered style="width: 75%;" }
-![Fee split](../images/scrvusd/scrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
+![Revenue Distributor](../images/scrvusd/scrvusd_fee_split_light.svg#only-light){: .centered style="width: 75%;" }
+![Revenue Distributor](../images/scrvusd/scrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
 
 The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on the average percentage of scrvUSD supply compared to the total circulating supply of crvUSD (see example below). The DAO sets both a minimum and maximum percentage of crvUSD fees allocated to scrvUSD, which serve as upper and lower bounds.
 
@@ -95,15 +95,15 @@ Over time, with these dynamics, the peg should become tighter, and borrowing rat
 ---
 
 
-## **How much yield will I earn?**
+## **How much interest will I earn?**
 
-The yield earned by holding scrvUSD is not fixed because it **depends on several dynamic factors**:
+The interest earned by holding scrvUSD is not fixed because it **depends on several dynamic factors**:
 
 - The ratio of scrvUSD to the total circulating crvUSD supply
 - The amount of crvUSD fees generated
 - The minimum and maximum crvUSD fee share allocated to scrvUSD, as set by the DAO
 
-In general, **if the ratio of scrvUSD to the total crvUSD supply stays within the minimum and maximum fee allocation limits set by the DAO, the APR for scrvUSD will roughly align with the average borrowing rate for crvUSD**. However, if the ratio exceeds the maximum limit, the yield will be capped at the maximum fee allocation.
+In general, **if the ratio of scrvUSD to the total crvUSD supply stays within the minimum and maximum fee allocation limits set by the DAO, the APR for scrvUSD will roughly align with the average borrowing rate for crvUSD**. However, if the ratio exceeds the maximum limit, the interest will be capped at the maximum fee allocation.
 
 ??? example "Example: APR calculation"
 
