@@ -1,0 +1,440 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content=CurveFi><link href=https://resources.curve.fi/crvusd/loan-strategies/ rel=canonical><link href=../liquidations/ rel=prev><link href=../loan-concepts/ rel=next><link rel=icon href=../../images/lama.png><meta name=generator content="mkdocs-1.6.0, mkdocs-material-9.5.25"><title>Loan Strategies - Curve Resources</title><link rel=stylesheet href=../../assets/stylesheets/main.6543a935.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><link rel=stylesheet href=../../stylesheets/extra.css><script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=deep-purple> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#soft-liquidation-losses class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../.. title="Curve Resources" class="md-header__button md-logo" aria-label="Curve Resources" data-md-component=logo> <img src=../../images/lama.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Curve Resources </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Loan Strategies </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=deep-purple aria-label="Switch to dark mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=indigo data-md-color-accent=amber aria-label="Switch to light mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg> </label> </form> <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <div class=md-header__option> <div class=md-select> <button class="md-header__button md-icon" aria-label="Select language"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg> </button> <div class=md-select__inner> <ul class=md-select__list> <li class=md-select__item> <a href=/en/ hreflang=en class=md-select__link> English </a> </li> <li class=md-select__item> <a href=/ru/ hreflang=ru class=md-select__link> русский </a> </li> </ul> </div> </div> </div> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/CurveDocs/curve-resources title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> CurveDocs/curve-resources </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="Curve Resources" class="md-nav__button md-logo" aria-label="Curve Resources" data-md-component=logo> <img src=../../images/lama.png alt=logo> </a> Curve Resources </label> <div class=md-nav__source> <a href=https://github.com/CurveDocs/curve-resources title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> CurveDocs/curve-resources </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=false> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../base-features/understanding-curve/ class=md-nav__link> <span class=md-ellipsis> Understanding Curve & Stableswap (v1) </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3 id=__nav_3_label tabindex=0> <span class=md-ellipsis> CRV Token </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> CRV Token </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../crv-token/overview/ class=md-nav__link> <span class=md-ellipsis> Overview & Tokenomics </span> </a> </li> <li class=md-nav__item> <a href=../../crv-token/supply-distribution/ class=md-nav__link> <span class=md-ellipsis> Supply & Distribution </span> </a> </li> <li class=md-nav__item> <a href=../../crv-token/faq/ class=md-nav__link> <span class=md-ellipsis> CRV & veCRV FAQ </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Locked CRV (veCRV) </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Locked CRV (veCRV) </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../vecrv/overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../vecrv/locking-your-crv/ class=md-nav__link> <span class=md-ellipsis> How to Lock CRV </span> </a> </li> <li class=md-nav__item> <a href=../../vecrv/claiming-trading-fees/ class=md-nav__link> <span class=md-ellipsis> Claiming Trading Fees </span> </a> </li> <li class=md-nav__item> <a href=../../vecrv/fee-collection-distribution/ class=md-nav__link> <span class=md-ellipsis> Fee Collection & Distribution </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_5 checked> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Curve Stablecoin (crvUSD) </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=true> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Curve Stablecoin (crvUSD) </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../understanding-crvusd/ class=md-nav__link> <span class=md-ellipsis> Understanding crvUSD </span> </a> </li> <li class=md-nav__item> <a href=../loan-creation/ class=md-nav__link> <span class=md-ellipsis> Loan Creation & Management </span> </a> </li> <li class=md-nav__item> <a href=../liquidations/ class=md-nav__link> <span class=md-ellipsis> Liquidations </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> Loan Strategies </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Loan Strategies </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#soft-liquidation-losses class=md-nav__link> <span class=md-ellipsis> Soft Liquidation Losses </span> </a> </li> <li class=md-nav__item> <a href=#managing-loan-health class=md-nav__link> <span class=md-ellipsis> Managing Loan Health </span> </a> </li> <li class=md-nav__item> <a href=#loan-examples class=md-nav__link> <span class=md-ellipsis> Loan Examples </span> </a> <nav class=md-nav aria-label="Loan Examples"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#careful-and-passive-loan-example class=md-nav__link> <span class=md-ellipsis> Careful and Passive Loan Example </span> </a> </li> <li class=md-nav__item> <a href=#careful-and-active-loan-example class=md-nav__link> <span class=md-ellipsis> Careful and Active Loan Example </span> </a> </li> <li class=md-nav__item> <a href=#high-risk-and-active-loan-example class=md-nav__link> <span class=md-ellipsis> High Risk and Active Loan Example </span> </a> </li> <li class=md-nav__item> <a href=#high-risk-and-passive-loan-example-hard-liquidation class=md-nav__link> <span class=md-ellipsis> High Risk and Passive Loan Example (Hard-liquidation) </span> </a> </li> <li class=md-nav__item> <a href=#under-soft-liquidation-loan-example class=md-nav__link> <span class=md-ellipsis> Under Soft-Liquidation Loan Example </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#strategies class=md-nav__link> <span class=md-ellipsis> Strategies </span> </a> <nav class=md-nav aria-label=Strategies> <ul class=md-nav__list> <li class=md-nav__item> <a href=#borrowing-to-lending-rate-arbitrage class=md-nav__link> <span class=md-ellipsis> Borrowing to Lending Rate Arbitrage </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../loan-concepts/ class=md-nav__link> <span class=md-ellipsis> Loan Concepts In Depth </span> </a> </li> <li class=md-nav__item> <a href=../faq/ class=md-nav__link> <span class=md-ellipsis> crvUSD FAQ </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> Curve Lending </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Curve Lending </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../lending/overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../lending/leverage/ class=md-nav__link> <span class=md-ellipsis> Leverage </span> </a> </li> <li class=md-nav__item> <a href=../liquidations/ class=md-nav__link> <span class=md-ellipsis> Liquidations </span> </a> </li> <li class=md-nav__item> <a href=../../lending/how-to-borrow/ class=md-nav__link> <span class=md-ellipsis> How to Borrow & Use Leverage </span> </a> </li> <li class=md-nav__item> <a href=../../lending/how-to-supply/ class=md-nav__link> <span class=md-ellipsis> How to Supply </span> </a> </li> <li class=md-nav__item> <a href=../../lending/faq/ class=md-nav__link> <span class=md-ellipsis> Lending FAQ </span> </a> </li> <li class=md-nav__item> <a href=../../lending/create-lending-market/ class=md-nav__link> <span class=md-ellipsis> How to Create a Lending Market </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_7> <label class=md-nav__link for=__nav_7 id=__nav_7_label tabindex=0> <span class=md-ellipsis> Pools </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=false> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Pools </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../lp/overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../lp/deposit-faqs/ class=md-nav__link> <span class=md-ellipsis> Deposit FAQ </span> </a> </li> <li class=md-nav__item> <a href=../../lp/calculating-yield/ class=md-nav__link> <span class=md-ellipsis> Calculating yield </span> </a> </li> <li class=md-nav__item> <a href=../../lp/charts_poolactivity/ class=md-nav__link> <span class=md-ellipsis> Charts and Pool Activity </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_7_5> <label class=md-nav__link for=__nav_7_5 id=__nav_7_5_label tabindex=0> <span class=md-ellipsis> Depositing </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_7_5_label aria-expanded=false> <label class=md-nav__title for=__nav_7_5> <span class="md-nav__icon md-icon"></span> Depositing </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../lp/depositing/depositing/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../lp/depositing/depositing-into-the-tri-pool/ class=md-nav__link> <span class=md-ellipsis> Depositing into the tri-pool </span> </a> </li> <li class=md-nav__item> <a href=../../lp/depositing/depositing-into-a-metapool/ class=md-nav__link> <span class=md-ellipsis> Depositing into a metapool </span> </a> </li> <li class=md-nav__item> <a href=../../lp/depositing/depositing-into-a-cryptoswap-pool/ class=md-nav__link> <span class=md-ellipsis> Depositing into a cryptoswap-pool </span> </a> </li> <li class=md-nav__item> <a href=../../lp/depositing/depositing-into-a-tricrypto-pool/ class=md-nav__link> <span class=md-ellipsis> Depositing into a tricrypto-pool </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Pool Creation </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Pool Creation </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../factory-pools/pool-creation-overview/ class=md-nav__link> <span class=md-ellipsis> Pool Creation Overview </span> </a> </li> <li class=md-nav__item> <a href=../../factory-pools/creating-a-stableswap-ng-pool/ class=md-nav__link> <span class=md-ellipsis> Creating a Stableswap NG Pool </span> </a> </li> <li class=md-nav__item> <a href=../../factory-pools/creating-a-twocrypto-ng-pool/ class=md-nav__link> <span class=md-ellipsis> Creating a Twocrypto NG Pool </span> </a> </li> <li class=md-nav__item> <a href=../../factory-pools/creating-a-tricrypto-ng-pool/ class=md-nav__link> <span class=md-ellipsis> Creating a Tricrypto NG Pool </span> </a> </li> <li class=md-nav__item> <a href=../../factory-pools/understanding-oracles/ class=md-nav__link> <span class=md-ellipsis> Understanding oracles </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Reward Gauges </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Reward Gauges </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../reward-gauges/overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../reward-gauges/creating-a-pool-gauge/ class=md-nav__link> <span class=md-ellipsis> Creating a pool gauge </span> </a> </li> <li class=md-nav__item> <a href=../../reward-gauges/boosting-your-crv-rewards/ class=md-nav__link> <span class=md-ellipsis> Boosting your CRV rewards </span> </a> </li> <li class=md-nav__item> <a href=../../reward-gauges/gauge-weights/ class=md-nav__link> <span class=md-ellipsis> Gauge weights </span> </a> </li> <li class=md-nav__item> <a href=../../reward-gauges/permissionless-rewards/ class=md-nav__link> <span class=md-ellipsis> Permissionless rewards </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_10> <label class=md-nav__link for=__nav_10 id=__nav_10_label tabindex=0> <span class=md-ellipsis> Governance </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_10_label aria-expanded=false> <label class=md-nav__title for=__nav_10> <span class="md-nav__icon md-icon"></span> Governance </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../governance/understanding-governance/ class=md-nav__link> <span class=md-ellipsis> Understanding Governance </span> </a> </li> <li class=md-nav__item> <a href=../../governance/voting/ class=md-nav__link> <span class=md-ellipsis> Voting </span> </a> </li> <li class=md-nav__item> <a href=../../governance/community-fund/ class=md-nav__link> <span class=md-ellipsis> Community Fund </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_10_4> <label class=md-nav__link for=__nav_10_4 id=__nav_10_4_label tabindex=0> <span class=md-ellipsis> Proposals </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_10_4_label aria-expanded=false> <label class=md-nav__title for=__nav_10_4> <span class="md-nav__icon md-icon"></span> Proposals </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../governance/proposals/creating-a-dao-proposal/ class=md-nav__link> <span class=md-ellipsis> Creating a DAO proposal </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_11> <label class=md-nav__link for=__nav_11 id=__nav_11_label tabindex=0> <span class=md-ellipsis> Multi-Chain </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_11_label aria-expanded=false> <label class=md-nav__title for=__nav_11> <span class="md-nav__icon md-icon"></span> Multi-Chain </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../multichain/crv/ class=md-nav__link> <span class=md-ellipsis> CRV </span> </a> </li> <li class=md-nav__item> <a href=../../multichain/crvusd/ class=md-nav__link> <span class=md-ellipsis> crvUSD </span> </a> </li> <li class=md-nav__item> <a href=../../multichain/understanding-multichain/ class=md-nav__link> <span class=md-ellipsis> Understanding multi-chain </span> </a> </li> <li class=md-nav__item> <a href=../../multichain/bridging-funds/ class=md-nav__link> <span class=md-ellipsis> Bridging funds </span> </a> </li> <li class=md-nav__item> <a href=../../multichain/bridging-crvusd-to-bsc/ class=md-nav__link> <span class=md-ellipsis> How to Bridge crvUSD to BSC </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_12> <label class=md-nav__link for=__nav_12 id=__nav_12_label tabindex=0> <span class=md-ellipsis> Support & Troubleshooting </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_12_label aria-expanded=false> <label class=md-nav__title for=__nav_12> <span class="md-nav__icon md-icon"></span> Support & Troubleshooting </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../troubleshooting/support/ class=md-nav__link> <span class=md-ellipsis> Support </span> </a> </li> <li class=md-nav__item> <a href=../../troubleshooting/recovering-a-cross-asset-swap/ class=md-nav__link> <span class=md-ellipsis> Recovering cross-asset swaps </span> </a> </li> <li class=md-nav__item> <a href=../../troubleshooting/dropping-and-replacing-a-stuck-transaction/ class=md-nav__link> <span class=md-ellipsis> Dropping and replacing a stuck transaction </span> </a> </li> <li class=md-nav__item> <a href=../../troubleshooting/disabling-crypto-wallets-in-brave/ class=md-nav__link> <span class=md-ellipsis> Disabling crypto wallets in brave </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_13> <label class=md-nav__link for=__nav_13 id=__nav_13_label tabindex=0> <span class=md-ellipsis> Risks, Security & Audits </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_13_label aria-expanded=false> <label class=md-nav__title for=__nav_13> <span class="md-nav__icon md-icon"></span> Risks, Security & Audits </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_13_1> <label class=md-nav__link for=__nav_13_1 id=__nav_13_1_label tabindex=0> <span class=md-ellipsis> Risks </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_13_1_label aria-expanded=false> <label class=md-nav__title for=__nav_13_1> <span class="md-nav__icon md-icon"></span> Risks </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../risks-security/risks/pool/ class=md-nav__link> <span class=md-ellipsis> Liquidity Pools </span> </a> </li> <li class=md-nav__item> <a href=../../risks-security/risks/crvusd/ class=md-nav__link> <span class=md-ellipsis> crvUSD </span> </a> </li> <li class=md-nav__item> <a href=../../risks-security/risks/lending/ class=md-nav__link> <span class=md-ellipsis> Lending </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../risks-security/security/ class=md-nav__link> <span class=md-ellipsis> Security & Audits </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_14> <label class=md-nav__link for=__nav_14 id=__nav_14_label tabindex=0> <span class=md-ellipsis> Whitepapers </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_14_label aria-expanded=false> <label class=md-nav__title for=__nav_14> <span class="md-nav__icon md-icon"></span> Whitepapers </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../pdf/curve-stableswap.pdf class=md-nav__link> <span class=md-ellipsis> Curve Stableswap (2019) </span> </a> </li> <li class=md-nav__item> <a href=../../pdf/curve-dao.pdf class=md-nav__link> <span class=md-ellipsis> Curve DAO (2020) </span> </a> </li> <li class=md-nav__item> <a href=../../pdf/curve-cryptopools.pdf class=md-nav__link> <span class=md-ellipsis> Curve Cryptopools (2021) </span> </a> </li> <li class=md-nav__item> <a href=../../pdf/curve-stablecoin.pdf class=md-nav__link> <span class=md-ellipsis> Curve Stablecoin (2022) </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_15> <label class=md-nav__link for=__nav_15 id=__nav_15_label tabindex=0> <span class=md-ellipsis> Links </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_15_label aria-expanded=false> <label class=md-nav__title for=__nav_15> <span class="md-nav__icon md-icon"></span> Links </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=https://curve.fi/#/ethereum/swap class=md-nav__link> <span class=md-ellipsis> Curve.fi </span> </a> </li> <li class=md-nav__item> <a href=https://dao.curve.fi/ class=md-nav__link> <span class=md-ellipsis> Curve DAO </span> </a> </li> <li class=md-nav__item> <a href=https://news.curve.fi/ class=md-nav__link> <span class=md-ellipsis> Curve News </span> </a> </li> <li class=md-nav__item> <a href=https://discord.gg/twUngQYz85 class=md-nav__link> <span class=md-ellipsis> Discord </span> </a> </li> <li class=md-nav__item> <a href=https://github.com/curvefi/ class=md-nav__link> <span class=md-ellipsis> Github </span> </a> </li> <li class=md-nav__item> <a href=https://gov.curve.fi/ class=md-nav__link> <span class=md-ellipsis> Governance Forum </span> </a> </li> <li class=md-nav__item> <a href=https://twitter.com/curvefinance class=md-nav__link> <span class=md-ellipsis> Twitter </span> </a> </li> <li class=md-nav__item> <a href=https://docs.curve.fi/ class=md-nav__link> <span class=md-ellipsis> Technical Docs </span> </a> </li> <li class=md-nav__item> <a href=https://t.me/curvefi class=md-nav__link> <span class=md-ellipsis> Telegram </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../glossary-branding/glossary/ class=md-nav__link> <span class=md-ellipsis> Glossary </span> </a> </li> <li class=md-nav__item> <a href=../../glossary-branding/branding/ class=md-nav__link> <span class=md-ellipsis> Branding & Icons </span> </a> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#soft-liquidation-losses class=md-nav__link> <span class=md-ellipsis> Soft Liquidation Losses </span> </a> </li> <li class=md-nav__item> <a href=#managing-loan-health class=md-nav__link> <span class=md-ellipsis> Managing Loan Health </span> </a> </li> <li class=md-nav__item> <a href=#loan-examples class=md-nav__link> <span class=md-ellipsis> Loan Examples </span> </a> <nav class=md-nav aria-label="Loan Examples"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#careful-and-passive-loan-example class=md-nav__link> <span class=md-ellipsis> Careful and Passive Loan Example </span> </a> </li> <li class=md-nav__item> <a href=#careful-and-active-loan-example class=md-nav__link> <span class=md-ellipsis> Careful and Active Loan Example </span> </a> </li> <li class=md-nav__item> <a href=#high-risk-and-active-loan-example class=md-nav__link> <span class=md-ellipsis> High Risk and Active Loan Example </span> </a> </li> <li class=md-nav__item> <a href=#high-risk-and-passive-loan-example-hard-liquidation class=md-nav__link> <span class=md-ellipsis> High Risk and Passive Loan Example (Hard-liquidation) </span> </a> </li> <li class=md-nav__item> <a href=#under-soft-liquidation-loan-example class=md-nav__link> <span class=md-ellipsis> Under Soft-Liquidation Loan Example </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#strategies class=md-nav__link> <span class=md-ellipsis> Strategies </span> </a> <nav class=md-nav aria-label=Strategies> <ul class=md-nav__list> <li class=md-nav__item> <a href=#borrowing-to-lending-rate-arbitrage class=md-nav__link> <span class=md-ellipsis> Borrowing to Lending Rate Arbitrage </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1>Loan Strategies & Management</h1> <p>Before taking a crvUSD loan a user should consider two factors that will influence how they structure their loan:</p> <ul> <li>How much risk they would like to take?</li> <li>What management style will they employ? Will they be actively managing their loan i.e., adding, removing collateral and repaying debt. Or will they be passively taking a loan and leaving it in <a href=../loan-concepts/#llamma-and-liquidations>LLAMMA's</a> hands?</li> </ul> <p>Risk and Management styles can be thought of as spectrums, and they can be visualized in the image below.</p> <p><img alt="loan strategies" class=centered src=../../images/crvusd/loan_strategies.svg#only-light> <img alt="loan strategies" class=centered src=../../images/crvusd/loan_strategies_dark.svg#only-dark> The above image shows 4 main quadrants:</p> <ul> <li><strong>High risk and Passive</strong>: This is a dangerous strategy, users employing this strategy typically max borrow and make very little changes to the loan until they close or are hard-liquidated. Some users are lucky and do well, but many are hard-liquidated. Use at your own risk.</li> <li><strong>High risk and Active</strong>: Users with these loans are borrowing close to the maximum allowed, and actively adding and removing collateral, and debt as required to keep a loan healthy.</li> <li><strong>Careful and Passive</strong>: These loans are typically at low LTV ratios so their soft-liquidation ranges are far below the current price. These loans generally don't need much management and users may only alter their loans after significant price changes.</li> <li><strong>Careful and Active</strong>: Users borrow at low LTV ratios but actively manage the loans by adding and removing capital and debt as required to keep away from soft-liquidation.</li> </ul> <p>Example loans for each of the 4 quadrants are given in the <a href=#loan-examples>loan example section here</a>. The section directly below shows soft-liquidation losses based on user data, so prospective users can estimate losses.</p> <div class="admonition warning"> <p class=admonition-title>Actively managing loans is gas intensive</p> <p>Actively managing loans is expensive when factoring in gas usage, loan size needs to be sufficient to offset this expense. As a general rule allow <span class=arithmatex>\(\text{USD} \approx \text{gasPrice} \times 4\)</span> to add collateral or repay debt, e.g. if gasPrice is 10 gWei allow $40 to add collateral or repay debt.</p> </div> <hr> <h2 id=soft-liquidation-losses><strong>Soft Liquidation Losses</strong><a class=headerlink href=#soft-liquidation-losses title="Permanent link">&para;</a></h2> <p>The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below. Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH). The band range was the biggest factor in how a user performed. The histogram and table below show <strong>soft-liquidation losses are generally very low</strong>, but keep in mind that high volatility periods can cause double digit losses. </p> <p><em>Note: you can show and hide any band ranges by clicking on them in the legend</em>.</p> <div style="display: flex; flex-direction: column; align-items: center;"> <div style="display: flex; justify-content: center; margin-top: 10px;"> <label style="margin: 0 10px;"> <input type=checkbox id=percentageCheckbox checked> Use percent of data for y axis </label> <label style="margin: 0 10px;"> <input type=checkbox id=timeCheckbox> Use days of data (time) for y axis </label> </div> <canvas id=softLiqHistogram></canvas> </div> <div class=centered> <table> <thead> <tr> <th>band range</th> <th>days of soft liq data</th> <th>min loss/day</th> <th>median loss/day</th> <th>mean loss/day</th> <th>std loss/day</th> <th>max loss/day</th> </tr> </thead> <tbody> <tr> <td><strong>4-9</strong></td> <td>4601.17</td> <td>0%</td> <td>0.0927%</td> <td>0.93%</td> <td>2.18%</td> <td>38.93%</td> </tr> <tr> <td><strong>10-19</strong></td> <td>2248.19</td> <td>0%</td> <td>0.0331%</td> <td>0.62%</td> <td>1.98%</td> <td>43.06%</td> </tr> <tr> <td><strong>20-35</strong></td> <td>124.92</td> <td>0%</td> <td>0.0127%</td> <td>0.20%</td> <td>0.54%</td> <td>6.41%</td> </tr> <tr> <td><strong>36-50</strong></td> <td>114.99</td> <td>0%</td> <td>0.0004%</td> <td>0.11%</td> <td>0.30%</td> <td>3.98%</td> </tr> </tbody> </table> </div> <p><strong>Using more bands (<span class=arithmatex>\(\uparrow\)</span>N) reduce your soft-liquidation loss per day but increase the time in soft-liquidation, while also reducing the total amount a user can borrow</strong>. It is up to the user to choose a comfortable number of bands which allows them to borrow their required amount.</p> <p><em>The above results are from the notebook <a href=https://github.com/saint-rat/curve-notebooks/blob/main/n_range_softliq_losses.ipynb>here</a></em></p> <h2 id=managing-loan-health><strong>Managing Loan Health</strong><a class=headerlink href=#managing-loan-health title="Permanent link">&para;</a></h2> <p><strong><a href=../loan-concepts/#loan-health>Loan health</a> is a direct measure of the risk of a loan</strong>. The lower the loan health, the riskier the loan. To keep from being hard-liquidated, a loan must have a health above 0. </p> <p>There are 2 factors which influence the health of a loan:</p> <ol> <li>LTV (Loan-To-Value ratio) - More collateral and less debt increases the health of the loan</li> <li>Increasing the <code>a</code> distance as shown on the figure <a href=../loan-concepts/#loan-health>here</a>. This can be done in 2 ways: reducing the number of bands, reducing the amount borrowed.</li> </ol> <p>There are 2 ways of increasing the health of a loan:</p> <ol> <li>Repaying debt</li> <li>Adding collateral</li> </ol> <p>However if a loan is in soft-liquidation collateral cannot be added, debt must be repaid to increase the health.</p> <hr> <h2 id=loan-examples><strong>Loan Examples</strong><a class=headerlink href=#loan-examples title="Permanent link">&para;</a></h2> <p><em>All the charts provided in this section are interactive.</em> <strong><em>Click on different items in the legend to show/hide that plot.</em></strong></p> <p>Here's a list of the plots that can be shown/hidden and their meaning:</p> <p><strong>Value (Left Axis) plots</strong>:<br> <em>These plots only relate to the left axis, the percentage axis has no meaning for them</em>.</p> <ul> <li><code>Oracle Price</code>: The oracle price for 1 unit of the chosen deposited collateral asset (e.g., 1 wBTC, 1 wstETH, etc)</li> <li><code>Soft-Liquidation Price Range</code>: This is the soft-liquidation price range of the user. This can also be thought of as all the small band ranges together. This drifts higher over time with the <code>Interest Rate</code>.</li> <li><code>CV in &lt;asset&gt;</code>: The collateral value in the deposited asset (e.g., wstETH, wBTC, etc).</li> <li><code>CV in crvUSD</code>: The value of the crvUSD held as collateral. <code>&lt;asset&gt;</code> is swapped to crvUSD through the soft-liquidation process to protect from further declines in price.</li> <li><code>Total CV</code>: Total Collateral Value. <code>CV in &lt;asset&gt;</code> plus <code>CV in crvUSD</code>.</li> <li><code>Debt Value</code>: The total amount of debt owed (this includes interest)</li> <li><code>AAVE/Spark Liq Price</code>: The price at which this loan would be liquidated in AAVE/Spark. When the <code>Oracle Price</code> is lower than this price, the loan would be liquidated/not possible.</li> </ul> <p><strong>Percentage (Right Axis) plots</strong>: <em>These plots only relate to the right axis, the value axis has no meaning for them</em></p> <ul> <li><code>LTV</code>: The loan to value ratio, this is the <code>Debt Value</code> divided by the <code>Total CV</code>.</li> <li><code>Health</code>: The health factor of the loan, a loan is Hard-liquidated when this gets to 0, see <a href=../loan-concepts/#loan-health>here</a> for more info.</li> <li><code>% CV in &lt;asset&gt;</code>: The percentage of <code>Total CV</code> currently in the deposited collateral asset (e.g., wstETH, wBTC, etc). This is <code>CV in &lt;asset&gt;</code> divided by <code>Total CV</code>.</li> <li><code>% CV in crvUSD</code>: The percentage of <code>Total CV</code> currently swapped to crvUSD. This is <code>CV in crvUSD</code> divided by <code>Total CV</code>.</li> <li><code>% SL Collateral Loss</code>: The percentage of collateral lost to soft-liquidation. See <a href=../loan-concepts/#llamma-and-liquidations>here</a> for more information.</li> <li><code>% Interest Collateral Loss</code>: The collateral loss due to interest accruing on the debt. This amount is included in the <code>Debt Value</code> plot.</li> <li><code>% Total Collateral Loss</code>: <code>% SL Collateral Loss</code> plus <code>% Interest Collateral Loss</code>.</li> <li><code>% Max Deposited Collateral</code>: This is the percentage of the current deposited collateral vs. the maximum that will get deposited over the life of the loan. This is shown as a percentage so it can be represented along side other plots. This is just to show the magnitude and timing of deposits/withdrawals, not exact amounts. An example would be if there were 20 wstETH deposited at the beginning, but the user deposits another 5 (total 25 wstETH) at another point without withdrawing any, this value will be start at <span class=arithmatex>\(20/25=80\%\)</span>.</li> <li><code>Interest Rate</code>: The current borrow interest rate for the market.</li> </ul> <hr> <h3 id=careful-and-passive-loan-example><strong>Careful and Passive Loan Example</strong><a class=headerlink href=#careful-and-passive-loan-example title="Permanent link">&para;</a></h3> <p>This user <strong>deposited 188 wBTC</strong> as collateral. They <strong>borrowed 1.05 million crvUSD</strong>. They were very careful and only borrowed with a <strong>21% LTV</strong>. They used <strong>N=10</strong>.</p> <div class=centered2 style="width: 100%"> <canvas id=loanChart3></canvas> </div> <p>As you can see from above the user remained passive as they were far from soft-liquidation at all times. They only fee they incurred was from the borrow interest rate increasing their debt, but luckily wBTC price went up fast enough to offset that. </p> <p>Throughout the approx. 100 day duration of the loan they increased their loan to 1.27 million crvUSD but their LTV actually went down as wBTC price went up ~30%.</p> <p><strong>This is a good strategy for loans less than 10,000 crvUSD</strong> as gas costs for managing the loan are minimal.</p> <h3 id=careful-and-active-loan-example><strong>Careful and Active Loan Example</strong><a class=headerlink href=#careful-and-active-loan-example title="Permanent link">&para;</a></h3> <p>This loan was opened with <strong>N=50</strong>, <strong>93 sfrxETH collateral</strong>, <strong>105500 crvUSD debt</strong>. This was a <strong>LTV of 67%</strong>.</p> <div class=centered2 style="width: 100%"> <canvas id=loanChart4></canvas> </div> <p>This user starts with 105k crvUSD debt, but slowly over time adds collateral and borrows more debt. Ending with 219 sfrxETH collateral and 298k crvUSD debt. They actively managed to stay out of soft-liquidation, and spend 0.56 ETH of fees on 32 transactions over this 2 month period. The only fees they incurred were from borrowing interest and Ethereum transactions fees.</p> <p><strong>This loan LTV is possible in other systems, but soft-liquidations aren't. Soft-liquidations reassure the user that they are protected from sudden price drops</strong>.</p> <h3 id=high-risk-and-active-loan-example><strong>High Risk and Active Loan Example</strong><a class=headerlink href=#high-risk-and-active-loan-example title="Permanent link">&para;</a></h3> <p>This user opened their loan using <strong>N=4</strong>, <strong>deposited 20 wstETH</strong>, and <strong>borrowed 32600 crvUSD</strong>. This equated to an <strong>85% LTV</strong>.</p> <div class=centered2 style="width: 100%"> <canvas id=loanChart1></canvas> </div> <p>The user with the loan pictured above is tracked over a period of ~102 days, during which they actively managed their loan to maintain an LTV around 85%. By taking a crvUSD loan, the user locked in 85% of the value of wstETH instantly while still benefiting from price increases on wstETH. This loan would not have been possible on other platforms due to the LTV of the wstETH collateral.</p> <p>The user fell into soft-liquidation around the 15-day mark and experienced health erosion, the user repaid 10% of their debt on the 18<sup>th</sup> day, restoring their health. As the price of wstETH rose around the 70-day mark, the user decided to borrow more, changing their soft-liquidation range. They quickly repaid the newly added debt after falling into soft-liquidation in this higher range. Around the 85<sup>th</sup> day, the user chose to add more collateral and increased their debt.</p> <p>Throughout this period, the user seemed comfortable in soft-liquidation, only losing ~22% of their collateral from soft-liquidation and borrowing interest. Their collateral was fully swapped to crvUSD multiple times, protecting them from further price declines.</p> <p>LLAMMA saved the user from hard-liquidation that would have occurred in any other system, which can be seen by making the <code>AAVE/Spark Liquidation Price</code> plot visible. Even after reducing the LTV on the 18<sup>th</sup> day, the user would have been liquidated on other platforms by the two wicks below $1767 on the 25<sup>th</sup> and 55<sup>th</sup> days, preventing them from recouping value during the subsequent price appreciation.</p> <p>This loan shows that <strong>actively managing high risk loans can result in outcomes not possible in any other system</strong>.</p> <h3 id=high-risk-and-passive-loan-example-hard-liquidation><strong>High Risk and Passive Loan Example (Hard-liquidation)</strong><a class=headerlink href=#high-risk-and-passive-loan-example-hard-liquidation title="Permanent link">&para;</a></h3> <p>This loan was opened with <strong>N=4</strong>, <strong>5.95 wstETH collateral</strong>, <strong>10500 crvUSD debt</strong>. This was a <strong>LTV (Loan-To-Value) of 84%</strong>.</p> <div class=centered2 style="width: 100%"> <canvas id=loanChart2></canvas> </div> <p>The user almost max borrowed. Putting their liquidation range very close to the current price. They stayed above their soft-liquidation range for a long time before falling into soft liquidation on day 50. They quickly fell through soft liquidation to the safety on the other side but lost 3.1% to soft liquidation fees. </p> <p>At any time from day 50 to day 62 they could have repaid debt to increase their health. As they were passive and did nothing soft-liquidation fees reduced their health to 0 when going back up through their soft-liquidation range. This is an unfortunate situation where the increasing collateral price caused hard-liquidation.</p> <div class="admonition warning"> <p class=admonition-title>Use this strategy at your own risk</p> <p>Users in this quadrant are at the highest risk of hard-liquidation. Using this strategy is not advised.</p> </div> <h3 id=under-soft-liquidation-loan-example><strong>Under Soft-Liquidation Loan Example</strong><a class=headerlink href=#under-soft-liquidation-loan-example title="Permanent link">&para;</a></h3> <p>This loan started with <strong>57.07 wstETH collateral</strong>, with <strong>N=4</strong> and <strong>102k crvUSD debt</strong>. They paid off small amounts of debt a few times throughout the loan and finished with <strong>93.5k crvUSD debt</strong> and <strong>53.44 wstETH collateral</strong>.</p> <div class=centered2 style="width: 100%"> <canvas id=loanChart5></canvas> </div> <p>This loan is a great example of the power of LLAMMA and soft-liquidations. The user spent <strong>more than 50% of the loan time under the soft-liquidation range</strong>. Yet the <strong>loss from soft-liquidation fees was only 6.37%</strong>. While under the soft-liquidation range the user was shielded from any further losses in the wstETH price as all their collateral was converted to crvUSD. Yet when the price rose the user benefited from price increases as their collateral was swapped back to wstETH.</p> <p>The AAVE/Spark Liq price plot for this loan shows that this loan would not be possible in competitor systems except from the 91<sup>st</sup> day when debt was lower and wstETH price rose.</p> <hr> <h2 id=strategies><strong>Strategies</strong><a class=headerlink href=#strategies title="Permanent link">&para;</a></h2> <h3 id=borrowing-to-lending-rate-arbitrage><strong>Borrowing to Lending Rate Arbitrage</strong><a class=headerlink href=#borrowing-to-lending-rate-arbitrage title="Permanent link">&para;</a></h3> <p>As crvUSD is minted with high quality collateral in crvUSD markets, a user can usually make profit by minting crvUSD and supplying it elsewhere, especially to riskier markets. This strategy is simple, you borrow crvUSD and supply it at higher rates, making the difference:</p> <div class=arithmatex>\[\text{profitRate = supplyRate - borrowRate}\]</div> <p>Strategy:</p> <ol> <li>Supply collateral (e.g., ETH, wBTC, wstETH) to a crvUSD market</li> <li>Borrow crvUSD</li> <li>Supply crvUSD to a market with a higher supplying rate than crvUSD borrow rates, e.g., <a href=https://lend.curve.fi>Curve Lending Markets</a>, <a href=https://conic.finance/ >Conic Omnipools</a>, <a href=https://app.silo.finance/ >Silo Finance Markets</a>.</li> </ol> <p>Risks:</p> <ul> <li>The user must monitor their loan health to stay out of any liquidations (soft or hard) as losses from liquidation may be larger than profit from the rate arbitrage.</li> <li>crvUSD risk, i.e., smart contract risk from crvUSD stablecoin and the crvUSD markets, see crvUSD risk disclaimer <a href=../../risks-security/risks/crvusd/ >here</a></li> <li>Smart contract and bad debt risk from lending markets, i.e., if you supply to Curve lending, see Curve Lending risk disclaimer <a href=../../risks-security/risks/lending/ >here</a>. Otherwise please research and be informed of risks for other platforms. <strong>Mentions of platforms here is not an endorsement of their safety.</strong></li> </ul> <script src=https://cdn.jsdelivr.net/npm/chart.js></script> <script>
+    // Data
+    const data = [
+        { n_range: 'N: 4-9', loss_range: '0-0.001%', softLiqDays: 32.12, softLiqPercent: 0.92 },
+        { n_range: 'N: 4-9', loss_range: '0.001-0.005%', softLiqDays: 48.82, softLiqPercent: 1.40 },
+        { n_range: 'N: 4-9', loss_range: '0.005-0.02%', softLiqDays: 148.82, softLiqPercent: 4.27 },
+        { n_range: 'N: 4-9', loss_range: '0.02-0.1%', softLiqDays: 587.55, softLiqPercent: 16.86 },
+        { n_range: 'N: 4-9', loss_range: '0.1-0.5%', softLiqDays: 1095.54, softLiqPercent: 31.44 },
+        { n_range: 'N: 4-9', loss_range: '0.5-2%', softLiqDays: 1073.53, softLiqPercent: 30.81 },
+        { n_range: 'N: 4-9', loss_range: '2-10%', softLiqDays: 455.90, softLiqPercent: 13.08 },
+        { n_range: 'N: 4-9', loss_range: '10-50%', softLiqDays: 42.00, softLiqPercent: 1.21 },
+        { n_range: 'N: 10-19', loss_range: '0-0.001%', softLiqDays: 11.35, softLiqPercent: 0.78 },
+        { n_range: 'N: 10-19', loss_range: '0.001-0.005%', softLiqDays: 35.52, softLiqPercent: 2.46 },
+        { n_range: 'N: 10-19', loss_range: '0.005-0.02%', softLiqDays: 128.88, softLiqPercent: 8.91 },
+        { n_range: 'N: 10-19', loss_range: '0.02-0.1%', softLiqDays: 371.83, softLiqPercent: 25.70 },
+        { n_range: 'N: 10-19', loss_range: '0.1-0.5%', softLiqDays: 489.12, softLiqPercent: 33.81 },
+        { n_range: 'N: 10-19', loss_range: '0.5-2%', softLiqDays: 292.61, softLiqPercent: 20.23 },
+        { n_range: 'N: 10-19', loss_range: '2-10%', softLiqDays: 105.74, softLiqPercent: 7.31 },
+        { n_range: 'N: 10-19', loss_range: '10-50%', softLiqDays: 11.64, softLiqPercent: 0.80 },
+        { n_range: 'N: 20-35', loss_range: '0-0.001%', softLiqDays: 2.48, softLiqPercent: 2.23 },
+        { n_range: 'N: 20-35', loss_range: '0.001-0.005%', softLiqDays: 4.63, softLiqPercent: 4.17 },
+        { n_range: 'N: 20-35', loss_range: '0.005-0.02%', softLiqDays: 12.62, softLiqPercent: 11.35 },
+        { n_range: 'N: 20-35', loss_range: '0.02-0.1%', softLiqDays: 37.89, softLiqPercent: 34.09 },
+        { n_range: 'N: 20-35', loss_range: '0.1-0.5%', softLiqDays: 37.20, softLiqPercent: 33.47 },
+        { n_range: 'N: 20-35', loss_range: '0.5-2%', softLiqDays: 13.25, softLiqPercent: 11.92 },
+        { n_range: 'N: 20-35', loss_range: '2-10%', softLiqDays: 3.07, softLiqPercent: 2.76 },
+        { n_range: 'N: 20-35', loss_range: '10-50%', softLiqDays: 0.00, softLiqPercent: 0.00 },
+        { n_range: 'N: 36-50', loss_range: '0-0.001%', softLiqDays: 3.92, softLiqPercent: 6.55 },
+        { n_range: 'N: 36-50', loss_range: '0.001-0.005%', softLiqDays: 4.12, softLiqPercent: 6.88 },
+        { n_range: 'N: 36-50', loss_range: '0.005-0.02%', softLiqDays: 13.42, softLiqPercent: 22.41 },
+        { n_range: 'N: 36-50', loss_range: '0.02-0.1%', softLiqDays: 18.71, softLiqPercent: 31.24 },
+        { n_range: 'N: 36-50', loss_range: '0.1-0.5%', softLiqDays: 15.88, softLiqPercent: 26.51 },
+        { n_range: 'N: 36-50', loss_range: '0.5-2%', softLiqDays: 3.51, softLiqPercent: 5.86 },
+        { n_range: 'N: 36-50', loss_range: '2-10%', softLiqDays: 0.33, softLiqPercent: 0.55 },
+        { n_range: 'N: 36-50', loss_range: '10-50%', softLiqDays: 0.00, softLiqPercent: 0.00 }
+    ];
+
+    // Extract unique n_range values
+    const nRanges = [...new Set(data.map(item => item.n_range))];
+
+    const colors = [
+        'rgba(75, 192, 192, 0.7)',
+        'rgba(255, 99, 132, 0.7)',
+        'rgba(54, 162, 235, 0.7)',
+        'rgba(255, 206, 86, 0.7)'
+    ];
+
+    // Create datasets for each n_range
+    const datasets = nRanges.map((nRange, index) => {
+        const filteredData = data.filter(item => item.n_range === nRange);
+        return {
+            label: nRange,
+            data: filteredData.map(item => item.softLiqPercent),
+            backgroundColor: colors[index % colors.length]
+        };
+    });
+
+    // Create the chart
+    const ctx = document.getElementById('softLiqHistogram').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data.filter(item => item.n_range === nRanges[0]).map(item => item.loss_range),
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Soft Liquidation Loss Range Per Day'
+                    }
+                },
+                y: {
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Percent of data in each range'
+                    }
+                }
+            }
+        }
+    });
+
+    // Function to update the chart based on the selected checkbox
+    function updateChart() {
+        const newDatasets = nRanges.map((nRange, index) => {
+            const filteredData = data.filter(item => item.n_range === nRange);
+            return {
+                label: nRange,
+                data: percentageCheckbox.checked
+                    ? filteredData.map(item => item.softLiqPercent)
+                    : filteredData.map(item => item.softLiqDays),
+                backgroundColor: colors[index % colors.length]
+            };
+        });
+        chart.data.datasets = newDatasets;
+        chart.options.scales.y.title.text = percentageCheckbox.checked
+            ? 'Percent of data in each range'
+            : 'Days of data in each range';
+        chart.update();
+    }
+
+    // Checkbox event listeners
+    const percentageCheckbox = document.getElementById('percentageCheckbox');
+    const timeCheckbox = document.getElementById('timeCheckbox');
+
+    percentageCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            timeCheckbox.checked = false;
+            updateChart();
+        }
+    });
+
+    timeCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            percentageCheckbox.checked = false;
+            updateChart();
+        }
+    });
+</script> <script>
+  function createChart(data, chartId) {
+    const ctx = document.getElementById(chartId).getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.timeDays,
+        datasets: [
+          {
+            label: 'Oracle Price',
+            data: data.oraclePrice,
+            borderColor: 'orange',
+            pointRadius: 0,
+            yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: 'Soft-Liquidation Price Range',
+            data: data.n1Price,
+            fill: '+1',
+            backgroundColor: 'rgba(255, 255, 0, 0.25)',
+            borderColor: 'rgba(255, 255, 0, 0.25)',
+            borderWidth: 0,
+            pointHitRadius: 0,
+            pointRadius: 0,
+            yAxisID: 'y1'
+          },
+          {
+            label: 'Soft-Liquidation Price Range',
+            data: data.n2Price,
+            fill: '-1',
+            backgroundColor: 'rgba(255, 255, 0, 0.25)',
+            borderColor: 'rgba(255, 255, 0, 0.25)',
+            borderWidth: 0,
+            pointHitRadius: 0,
+            pointRadius: 0,
+            yAxisID: 'y1'
+          },
+          {
+            label: 'Total CV',
+            data: data.collateralTotalValue,
+            borderColor: 'rgba(0, 180, 180, 1)',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: '$ CV wstETH',
+            data: data.collateralUsd,
+            borderColor: 'rgba(0, 255, 255, 1)',
+            hidden: true,
+            pointRadius: 0,
+            borderWidth: 2,
+            yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: '$ CV crvUSD',
+            data: data.stablecoin,
+            borderColor: 'rgba(0, 255, 0, 1)',
+            hidden: true,
+            pointRadius: 0,
+            borderWidth: 2,
+            yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: 'Debt Value',
+            data: data.debt,
+            borderColor: 'rgba(153, 153, 153, 1)',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y1',
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: 'AAVE/Spark Liq Price',
+            data: data.aaveLiqPrice,
+            borderColor: 'rgba(169, 196, 235, 1)',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y1',
+            borderWidth: 2,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: 'LTV',
+            data: data.ltv,
+            borderColor: 'black',
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: 'Health',
+            data: data.health,
+            borderColor: 'purple',
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: '% CV wstETH',
+            data: data.collateralPct,
+            borderColor: 'blue',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: '% CV crvUSD',
+            data: data.stablecoinPct,
+            borderColor: 'green',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: '% SL Collateral Loss',
+            data: data.lossPct,
+            borderColor: 'brown',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: '% Total Collateral Loss',
+            data: data.totalLossPct,
+            borderColor: 'red',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: '% Interest Collateral Loss',
+            data: data.interestDebt,
+            borderColor: 'magenta',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: '% Max Deposited Collateral',
+            data: data.depositedCollateralPct,
+            borderColor: 'rgba(153, 132, 63, 1)',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          },
+          {
+            label: 'Interest Rate',
+            data: data.rate,
+            borderColor: 'rgba(204, 153, 255, 1)',
+            hidden: true,
+            pointRadius: 0,
+            yAxisID: 'y2',
+            borderWidth: 1,
+            pointHoverRadius: 10,
+            pointHitRadius: 10
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        aspectRatio: 4/3,
+        devicePixelRatio: 1,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Time (days)'
+            },
+          },
+          y1: {
+            type: 'linear',
+            position: 'left',
+            title: {
+              display: true,
+              text: 'Value ($)'
+            }
+          },
+          y2: {
+            type: 'linear',
+            position: 'right',
+            title: {
+              display: true,
+              text: 'Percentage (%)'
+            },
+            grid: {
+              drawOnChartArea: false
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              usePointStyle: true,
+              boxWidth: 6,
+              generateLabels: function(chart) {
+                const datasets = chart.data.datasets;
+                const legendItems = Chart.defaults.plugins.legend.labels.generateLabels(chart);
+                legendItems.forEach((item, index) => {
+                  if (item.text !== '') {
+                    item.fillStyle = datasets[item.datasetIndex].borderColor;
+                    item.strokeStyle = 'rgba(0, 0, 0, 0)';
+                    item.pointStyle = 'rectRounded';
+                    item.text = datasets[item.datasetIndex].label;
+                    item.fontColor = 'black';
+                  }
+                });
+                legendItems.unshift({
+                  text: 'Value (Left Axis):',
+                  fillStyle: 'rgba(0, 0, 0, 0)',
+                  hidden: false,
+                  lineWidth: 0
+                });
+                const sharedLegendItem = {
+                  text: 'Soft-Liquidation Price Range',
+                  fillStyle: datasets[1].borderColor,
+                  hidden: datasets[1].hidden || datasets[2].hidden,
+                  lineWidth: 0,
+                  datasetIndex: 1
+                };
+                const index = legendItems.findIndex(item => item.text === sharedLegendItem.text);
+                if (index !== -1) {
+                  legendItems[index] = sharedLegendItem;
+                  legendItems.splice(2, 1); // Remove the duplicate entry under "Percentage"
+                }
+                legendItems.splice(8, 0, {
+                  text: '  |  ',
+                  fillStyle: 'rgba(0, 0, 0, 0)',
+                  hidden: false,
+                  lineWidth: 0
+                });
+                legendItems.splice(9, 0, {
+                  text: 'Percentage (Right Axis):',
+                  fillStyle: 'rgba(0, 0, 0, 0)',
+                  hidden: false,
+                  lineWidth: 0
+                });
+                return legendItems;
+              }
+            },
+            onClick: function(e, legendItem, legend) {
+              const index = legendItem.datasetIndex;
+              const chart = legend.chart;
+              if (index === 1) {
+                // Toggle visibility of both datasets when clicking "Soft-Liquidation Price Range"
+                const softLiqDataset1 = chart.data.datasets[1];
+                const softLiqDataset2 = chart.data.datasets[2];
+                const isHidden = softLiqDataset1.hidden || softLiqDataset2.hidden;
+                softLiqDataset1.hidden = !isHidden;
+                softLiqDataset2.hidden = !isHidden;
+                chart.update();
+              } else {
+                // Default behavior for other legend items
+                Chart.defaults.plugins.legend.onClick.call(this, e, legendItem, legend);
+              }
+                }
+                  },
+                  title: {
+                    display: false,
+                    text: 'Loan Chart'
+                  }
+                }
+              }
+            });
+            const canvas = document.getElementById(chartId);
+            canvas.style.backgroundColor = 'white';
+          }
+
+  function loadData(jsonFile, chartId) {
+    fetch(jsonFile)
+      .then(response => response.json())
+      .then(data => {
+        createChart(data, chartId);
+      })
+      .catch(error => {
+        console.error('Error loading JSON file:', error);
+      });
+  }
+
+  loadData('loan1.json', 'loanChart1');
+  loadData('hardliq4.json', 'loanChart2');
+  loadData('loan3.json', 'loanChart3');
+  loadData('loan4.json', 'loanChart4');
+  loadData('loan5.json', 'loanChart5');
+</script> </article> </div> <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> </div> <div class=md-social> <a href=https://t.me/curvefi target=_blank rel=noopener title=Telegram class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg> </a> <a href=https://twitter.com/curvefinance target=_blank rel=noopener title=X class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg> </a> <a href=https://discord.gg/rgrfS7W target=_blank rel=noopener title=Discord class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg> </a> <a href=http://www.youtube.com/c/CurveFinance target=_blank rel=noopener title=YouTube class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 576 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "content.footnote.tooltips", "navigation.indexes", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=../../assets/javascripts/bundle.081f42fc.min.js></script> <script src=../../javascripts/mathjax.js></script> <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script> </body> </html>
