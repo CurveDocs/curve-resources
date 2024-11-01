@@ -1,5 +1,5 @@
 site_name: Curve Resources
-site_url: https://resources.curve.fi/
+site_url: https://resources.curve.fi/en/
 site_author: CurveFi
 docs_dir: '../../docs/en'                           # Where to find the English markdown files
 site_dir: '../../generated/en'  

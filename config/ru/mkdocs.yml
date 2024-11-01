@@ -7,7 +7,7 @@ site_dir: '../../generated/ru'
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
   - minify:
       minify_html: true
 
