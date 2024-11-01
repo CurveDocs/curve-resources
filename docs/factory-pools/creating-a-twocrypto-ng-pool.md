@@ -1,6 +1,6 @@
 <h1>Creating a Twocrypto-NG Pool</h1>
 
-A twocrypto-NG pool is a liquidity pool containing two volatile assets using the CryptoSwap algorithm (Curve V2). For a better understanding of Curve v2, please see here: [**Understanding Curve v2**](../base-features/understanding-crypto-pools.md).
+A twocrypto-NG pool is a liquidity pool containing two volatile assets using the CryptoSwap algorithm (Curve V2). These pools will always have half of their value in each of the 2 pool assets  See the [Pool overview](../lp/overview.md) for a simple explanation of CryptoSwap pools.
 
 Due to safety reasons, the use of plain ETH is no longer possible. Instead, [wrapped ETH (wETH)](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) needs to be used.
 

@@ -1,10 +1,10 @@
-This article primarily covers the role of internal “price oracles” within Curve Finance v2 pools, with a brief note at the end of [**LLAMMA price oracles**](../factory-pools/understanding-oracles.md#llamma).
+This article primarily covers the role of internal “price oracles” within Curve Finance CryptoSwap pools, with a brief note at the end of [**LLAMMA price oracles**](../factory-pools/understanding-oracles.md#llamma).
 
 Please note that Curve v1 and v2 pools do not rely on external price oracles. **Misuse of external price oracles is a contributing factor to several major DeFi hacks.** If you are looking to use Curve’s “price oracle” functions, or any price oracle, to provide on-chain pricing data in a decentralized application you are building, we recommend extreme caution.
 
 ###  **Purpose**
 
-​[**Curve v2 pools**](../base-features/understanding-crypto-pools.md), which consist of assets with volatile prices, require a means of tracking prices. Instead of relying on external oracles, the pool instead calculates the price of these assets internally based on the trading activity within the pool.
+​[**CrytoSwap pools**](../lp/overview.md), which consist of assets with volatile prices, require a means of tracking prices. Instead of relying on external oracles, the pool instead calculates the price of these assets internally based on the trading activity within the pool.
 
 This is tracked by two similar but distinct parameters:
 

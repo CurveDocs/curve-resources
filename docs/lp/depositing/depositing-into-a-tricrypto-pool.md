@@ -1,6 +1,6 @@
 Tricrypto pools contain three volatile assets.
 
-[Learn more about v2 pools](../../base-features/understanding-crypto-pools.md)
+[Learn more about v2 pools](../../lp/overview.md)
 
 *For instance, the [TriCRV pool](https://curve.fi/#/ethereum/pools/factory-tricrypto-4/deposit) is used in the examples below.*
 
