@@ -112,18 +112,18 @@ The interest earned by holding scrvUSD is not fixed because it **depends on seve
 
 In general, **if the ratio of scrvUSD to the total crvUSD supply stays within the minimum and maximum fee allocation limits set by the DAO, the yield for scrvUSD will roughly align with the average borrowing rate for crvUSD**. However, if the ratio exceeds the maximum limit, the yield will be capped because of the maximum revenue share.
 
-??? example "Example: APR calculation"
+??? example "Example: yield calculation"
 
     Parameters:
 
     - Timeframe: 1 year
-    - Total supply of crvUSD: 100M
-    - crvUSD fees for the year: 10M crvUSD
+    - Circulating supply of crvUSD: 100M
+    - crvUSD yearly fees: 10M crvUSD
     - Average borrow rate: 10%
-    - DAO set a 5% minimum and 10% maximum split for scrvUSD
+    - crvUSD revenue to scrvUSD: 5% min, 10% max
 
-    Let's look at three scenarios, each based on the ratio of crvUSD staked in scrvUSD, compared to the circulating crvUSD:
+    Example yield calculation changing the ratio of crvUSD staked in scrvUSD vs crvUSD circulating supply:
 
-    - if 1M crvUSD is staked in scrvUSD (1% staked) - 5% of the 10M in fees ($500k) goes to 1M of crvUSD - yield is 50%
-    - if 8M crvUSD is staked in scrvUSD (8% staked) - 8% of the 10M in fees ($800k) goes to 8M of crvUSD - yield is 10%
-    - if 20M crvUSD is staked in scrvUSD (20% staked) - 10% of the 10M in fees ($1M) goes to 20M of crvUSD - yield is 5%
+    - 1M staked (1%): 5% of fees ($500k) → 50% yield
+    - 8M staked (8%): 8% of fees ($800k) → 10% yield
+    - 20M staked (20%): 10% of fees ($1M) → 5% yield"
