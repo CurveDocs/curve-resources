@@ -12,11 +12,13 @@ Savings crvUSD, abbreviated as scrvUSD, is an **interest-bearing stablecoin** th
 
 scrvUSD provides an additional interest-earning opportunity for crvUSD, diversifying the ways users can earn on their crvUSD holdings. It aims to:
 
+- **Support true decentralization**: In a market dominated by centralized solutions, crvUSD stands out as a truly decentralized stablecoin, backed solely by ETH, safe ETH liquid staking tokens, and wrapped Bitcoin assets.
 - **Increase crvUSD attractiveness**: By offering a low-risk[^1] way to earn stablecoin interest.
 - **Improve crvUSD peg stability**: The low-risk[^1] yield increases demand for crvUSD, which helps solidify its peg.
 - **Reduce and stabilize crvUSD borrow rates**: Borrow rates for crvUSD rise when its price falls below the peg. By increasing demand for crvUSD, the peg tightens, reducing borrow rates and aiming to stabilize them over the long term.
 - **Increase crvUSD supply over time**: As borrow rates decrease and stabilize, borrowing becomes more predictable, making Curve a more attractive platform for loans.
 - **Increase fee revenue over time**: With more crvUSD in circulation, fee revenue sustainably grows over time.
+- 
 
 [^1]: **Low-risk** is subjective and depends on the user's risk tolerance. In this context, it means the deposited crvUSD is not used or rehypothecated; it simply remains in the Savings Vault, earning interest. However, smart contract risks remain. That said, scrvUSD is built upon Yearn v3 Vaults, which are widely used in DeFi and have undergone [extensive audits](https://github.com/yearn/yearn-vaults-v3/tree/master/audits).
 
