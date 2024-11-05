@@ -2,7 +2,7 @@ site_name: Curve Resources Russia
 site_url: https://resources.curve.fi/ru/
 site_author: CurveFi
 docs_dir: '../../docs/ru'                           # Where to find the English markdown files
-site_dir: '../../generated/ru'  
+site_dir: '../../generated/ru'
 
 plugins:
   - search
@@ -131,6 +131,96 @@ repo_url: https://github.com/CurveDocs/curve-resources
 
 nav:
   - Home: index.md
+  - Getting Started:
+    - Understanding Curve & Stableswap (v1): base-features/understanding-curve.md  
+
+  - CRV Token:
+    - Overview & Tokenomics: crv-token/overview.md
+    - Supply & Distribution: crv-token/supply-distribution.md
+    - CRV & veCRV FAQ: crv-token/faq.md
+
+  - Locked CRV (veCRV):
+    - Overview: vecrv/overview.md
+    - How to Lock CRV: vecrv/locking-your-crv.md
+    - Claiming Trading Fees: vecrv/claiming-trading-fees.md
+    - Fee Collection & Distribution: vecrv/fee-collection-distribution.md
+
+  - Curve Stablecoin (crvUSD):
+    - Understanding crvUSD: crvusd/understanding-crvusd.md
+    - Loan Creation & Management: crvusd/loan-creation.md
+    - Liquidations: crvusd/liquidations.md
+    - Loan Strategies: crvusd/loan-strategies.md
+    - Loan Concepts In Depth: crvusd/loan-concepts.md
+    - crvUSD FAQ: crvusd/faq.md
+
+  - Curve Lending:
+    - Overview: lending/overview.md
+    - Leverage: lending/leverage.md
+    - Liquidations: crvusd/liquidations.md
+    - How to Borrow & Use Leverage: lending/how-to-borrow.md
+    - How to Supply: lending/how-to-supply.md
+    - Lending FAQ: lending/faq.md
+    - How to Create a Lending Market: lending/create-lending-market.md
+
+  - Pools:
+    - Overview: lp/overview.md
+    - Deposit FAQ: lp/deposit-faqs.md
+    - Calculating yield: lp/calculating-yield.md
+    - Charts and Pool Activity: lp/charts_poolactivity.md
+    - Depositing:
+      - Overview: lp/depositing/depositing.md
+      - Depositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
+      - Depositing into a metapool: lp/depositing/depositing-into-a-metapool.md
+      - Depositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
+      - Depositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
+
+  - Pool Creation:
+    - Pool Creation Overview: factory-pools/pool-creation-overview.md
+    - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
+    - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
+    - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
+    - Understanding oracles: factory-pools/understanding-oracles.md
+
+  - Reward Gauges:
+    - Overview: reward-gauges/overview.md
+    - Creating a pool gauge: reward-gauges/creating-a-pool-gauge.md
+    - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
+    - Gauge weights: reward-gauges/gauge-weights.md
+    - Permissionless rewards: reward-gauges/permissionless-rewards.md
+
+  - Governance:
+    - Understanding Governance: governance/understanding-governance.md
+    - Voting: governance/voting.md
+    - Community Fund: governance/community-fund.md
+    - Proposals:
+      - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
+
+  - Multi-Chain:
+    - CRV: multichain/crv.md
+    - crvUSD: multichain/crvusd.md
+    - Understanding multi-chain: multichain/understanding-multichain.md
+    - Bridging funds: multichain/bridging-funds.md
+    - How to Bridge crvUSD to BSC: multichain/bridging-crvusd-to-bsc.md
+
+  - Support & Troubleshooting:
+    - Support: troubleshooting/support.md
+    - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
+    - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
+    - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
+
+  - Risks, Security & Audits: 
+    - Risks: 
+      - Liquidity Pools: risks-security/risks/pool.md
+      - crvUSD: risks-security/risks/crvusd.md
+      - Lending: risks-security/risks/lending.md
+    - Security & Audits: risks-security/security.md
+
+  - Whitepapers:
+    - Curve Stableswap (2019): pdf/curve-stableswap.pdf
+    - Curve DAO (2020): pdf/curve-dao.pdf
+    - Curve Cryptopools (2021): pdf/curve-cryptopools.pdf
+    - Curve Stablecoin (2022): pdf/curve-stablecoin.pdf
+
   - Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://dao.curve.fi/
@@ -141,3 +231,6 @@ nav:
     - Twitter: https://twitter.com/curvefinance
     - Technical Docs: https://docs.curve.fi/
     - Telegram: https://t.me/curvefi
+
+  - Glossary: glossary-branding/glossary.md
+  - Branding & Icons: glossary-branding/branding.md
