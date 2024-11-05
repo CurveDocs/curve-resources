@@ -107,9 +107,9 @@ After the exchanging process is completed distribution happens by forwarding the
 
 The Fee splitter is a contract to leverage a portion of generated admin fees to strategically incentivize long-term project growth.
 
-The fee splitter currently manages admin fees from crvUSD minting markets. It distributes the majority to the Curve DAO (veCRV holders), while allocating a small fraction to st-crvUSD to stimulate crvUSD supply growth, potentially increasing future DAO revenue.
+The fee splitter currently manages admin fees from crvUSD minting markets. It distributes the majority to the Curve DAO (veCRV holders), while allocating a small fraction to scrvUSD to stimulate crvUSD supply growth, potentially increasing future DAO revenue.
 
-The Fee Splitter's flexible design allows for DAO-approved addition of new products. The DAO (veCRV holders) determines fee allocation weights for each product, with some products capable of requesting variable amounts within DAO-set limits. For instance, st-crvUSD's allocation fluctuates based on the ratio of staked to circulating crvUSD, subject to the DAO-defined maximum and minimum allocation weights.
+The Fee Splitter's flexible design allows for DAO-approved addition of new products. The DAO (veCRV holders) determines fee allocation weights for each product, with some products capable of requesting variable amounts within DAO-set limits. For instance, scrvUSD's allocation fluctuates based on the ratio of staked to circulating crvUSD, subject to the DAO-defined maximum and minimum allocation weights.
 
 ![Fee Splitter](../images/fee_collection/fee_splitter.svg#only-light){ : .centered}
 ![Fee Splitter](../images/fee_collection/fee_splitter_dark.svg#only-dark){ : .centered}
