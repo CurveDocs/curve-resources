@@ -2,7 +2,7 @@
 
 ## **Voting on the Curve DAO**
 
-To vote in the Curve DAO, users need to [vote lock their CRV](../vecrv/locking-your-crv.md). By doing so, participants can earn a boost on their provided liquidity and vote on all DAO proposals. Users who reach a voting power of 2,500 veCRV can also create new proposals. There is no **minimum voting power required to participate in voting. The duration of governance proposals is seven days**.
+To vote in the Curve DAO, users need to [vote lock their CRV](./../vecrv/locking-your-crv.md). By doing so, participants can earn a boost on their provided liquidity and vote on all DAO proposals. Users who reach a voting power of 2,500 veCRV can also create new proposals. There is no **minimum voting power required to participate in voting. The duration of governance proposals is seven days**.
 
 !!!warning "Voting Power Decay"
     When voting on DAO proposals, a user's voting power on an individual proposal starts to decay halfway through the vote as a measure to protect against manipulation by whales. This does not apply to gauge weight votes. Additionally, overall voting power decays linearly over time. More details are provided in the section below.
@@ -15,7 +15,7 @@ To vote in the Curve DAO, users need to [vote lock their CRV](../vecrv/locking-y
 
 ## **Voting Power**
 
-veCRV stands for [vote-escrowed CRV](../vecrv/overview.md). It's a mechanism where users can lock their CRV tokens for varying lengths of time to gain voting power. Users have the option to lock their CRV for a minimum of one week and a maximum of four years. Those with longer voting escrows wield more stake, thereby receiving greater voting power.
+veCRV stands for [vote-escrowed CRV](./../vecrv/overview.md). It's a mechanism where users can lock their CRV tokens for varying lengths of time to gain voting power. Users have the option to lock their CRV for a minimum of one week and a maximum of four years. Those with longer voting escrows wield more stake, thereby receiving greater voting power.
 
 A user's voting power gradually decreases over time until it reaches zero at the time of unlock. For instance, if a user decides to lock 100 CRV for four years, they will initially receive 100 veCRV. After one year, due to the constant decay, the user's veCRV balance will reduce to 75 veCRV, then to 50 veCRV after two years, etc... until it finally zeroes out after four years.
 

@@ -10,19 +10,19 @@ The revenue comes in the form of admin fees.  There are three different ways the
 
 Stableswap admin fees are 50% of the total fee charged using a Stableswap pool.  The fee is taken in the output token of the swap and calculated against the final amount received. For example, if swapping from USDC to DAI, the fee is taken in DAI.  Because of this every week each coin in the pool will have accrued fees that can be collected, e.g., for the pool below Admin Fees in USDC and DAI can both be collected.
 
-![Stableswap Fees](../images/governance/stableswap_fees.svg){ : .centered }
+![Stableswap Fees](./../images/governance/stableswap_fees.svg){ : .centered }
 
 ## **Cryptoswap Fees**
 
 Cryptoswap admin fees are 50% of the total fee charged from a Cryptoswap pool.  As Cryptoswap pools always maintain balance, these fees accrue in the LP token of a pool, which represents an equal share of all assets in the pool.  LP shares are collected each week for these pools.
 
-![Cryptoswap Fees](../images/governance/cryptoswap_fees.svg){ : .centered }
+![Cryptoswap Fees](./../images/governance/cryptoswap_fees.svg){ : .centered }
 
 ## **crvUSD Minting Market Fees**
 
 All accrued interest on debt in crvUSD minting markets is collected as crvUSD.  Also the AMM for crvUSD minting markets (LLAMMA) has the ability to collect admin fees on swaps, but currently all fees in these pools go to liquidity providers.
 
-![crvUSD Minting Market Fees](../images/governance/crvusd_fees.svg){ : .centered }
+![crvUSD Minting Market Fees](./../images/governance/crvusd_fees.svg){ : .centered }
 
 ---
 
@@ -46,13 +46,13 @@ Newer pools automatically claim admin fees throughout the week when users withdr
 
 Otherwise, on Monday anyone can call functions which claim the fees from pools and then create conditional orders on Cowswap to sell the coins/tokens on Tuesday.  Doing this work is incentivized by giving the caller a reward.
 
-![Fee Collection](../images/governance/fee_collecting_phase.svg){ : .centered}
+![Fee Collection](./../images/governance/fee_collecting_phase.svg){ : .centered}
 
 ### **Exchanging** - Tuesday
 
 The `exchanging` phase happens on Tuesday.  In this phase the conditional sell orders which were created on Monday during the `collection` phase can be executed by Cowswap searchers.  Each coin/token is swapped separately, and by the end of the day all coins and tokens should be swapped into the target coin (currently crvUSD).
 
-![Fee Exchanging](../images/governance/fee_exchanging_phase.svg){ : .centered}
+![Fee Exchanging](./../images/governance/fee_exchanging_phase.svg){ : .centered}
 
 ### **Forwarding** - Wednesday
 

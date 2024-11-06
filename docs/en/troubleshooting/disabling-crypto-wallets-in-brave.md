@@ -4,6 +4,6 @@ The native "Crypto Wallets" app in your Brave browser can often interfere with y
 
 Open your web browser, and paste the following in your URL bar: _brave://settings/extensions_
 
-![Disable Wallet Brave](../images/disable-crypto-wallet-brave.webp)
+![Disable Wallet Brave](./../images/disable-crypto-wallet-brave.webp)
 
 Click the dropdown and switch to Metamask. You can also disable Crypto Wallets on startup.

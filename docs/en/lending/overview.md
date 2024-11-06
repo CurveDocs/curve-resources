@@ -6,7 +6,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
     The collateral used in Curve Lending markets does not back crvUSD. **All crvUSD within Curve Lending is supplied by users**.  Conversely, minting new crvUSD requires high-quality crypto collateral approved by the DAO.  The **crvUSD minting system is separate from the lending markets**. *[See here for more differences between Curve Lending and minting crvUSD](./faq.md#whats-the-difference-between-minting-crvusd-and-lending-markets)*.
 
 !!!danger "Curve Lending Risk Disclaimer"
-    Full risk disclaimer on using Curve Lending can be found [here](../risks-security/risks/lending.md)
+    Full risk disclaimer on using Curve Lending can be found [here](./../risks-security/risks/lending.md)
 
 
 <div class="grid cards" markdown>
@@ -40,17 +40,17 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
 *Let's take a look at a single market to see the basics of how it works:*
 
-![Simple market illustration](../images/lending/single_market.svg#only-light)
-![Simple market illustration](../images/lending/single_market_dark.svg#only-dark)
+![Simple market illustration](./../images/lending/single_market.svg#only-light)
+![Simple market illustration](./../images/lending/single_market_dark.svg#only-dark)
 
 *Let's breakdown the different entities and their roles in this market:*
 
 | Entity | | Role |
 |:--:|:--|:--|
-| ![Business Llama](../images/lending/llama_head.svg){: style="height:50px"} | **Business Llama** | Business Llama represents the lending market and smart contracts in the system.  This llama uses CRV as collateral, and lends out crvUSD.  Business Llama **charges interest on crvUSD users borrow (Borrow APY)**, and **pays interest to lenders who supply crvUSD (Lend APY)**. |
-| ![bob](../images/lending/bob_head.svg){: style="height:50px"} | **Bob** | Bob always thinks the market will crash, so he **supplies his crvUSD** and Business Llama **lends it out and pays Bob interest (Lend APY)**. |
-| ![alice](../images/lending/alice_head.svg){: style="height:50px"} | **Alice** | Alice wants to go trade meme coins but doesn't want to sell her CRV, so she **deposits CRV and uses it as collateral to borrow crvUSD**.  She feels safe knowing she's better protected here with LLAMMA and soft-liquidations than other lending markets.  She is **charged the Borrow APY on her debt** while the loan is open.  |
-| ![charlie](../images/lending/charlie_head.svg){: style="height:50px"} ![daisy](../images/lending/daisy_head.svg){: style="height:50px"} | **Charlie** & **Daisy** | Charlie and Daisy are just talking to the wrong Business Llama (lending market).  All Curve Lending Markets are one-way, and isolated. They need to go and find the Business Llama that lends out CRV with crvUSD collateral. (Business llama with the red background [here](#markets)) |
+| ![Business Llama](./../images/lending/llama_head.svg){: style="height:50px"} | **Business Llama** | Business Llama represents the lending market and smart contracts in the system.  This llama uses CRV as collateral, and lends out crvUSD.  Business Llama **charges interest on crvUSD users borrow (Borrow APY)**, and **pays interest to lenders who supply crvUSD (Lend APY)**. |
+| ![bob](./../images/lending/bob_head.svg){: style="height:50px"} | **Bob** | Bob always thinks the market will crash, so he **supplies his crvUSD** and Business Llama **lends it out and pays Bob interest (Lend APY)**. |
+| ![alice](./../images/lending/alice_head.svg){: style="height:50px"} | **Alice** | Alice wants to go trade meme coins but doesn't want to sell her CRV, so she **deposits CRV and uses it as collateral to borrow crvUSD**.  She feels safe knowing she's better protected here with LLAMMA and soft-liquidations than other lending markets.  She is **charged the Borrow APY on her debt** while the loan is open.  |
+| ![charlie](./../images/lending/charlie_head.svg){: style="height:50px"} ![daisy](./../images/lending/daisy_head.svg){: style="height:50px"} | **Charlie** & **Daisy** | Charlie and Daisy are just talking to the wrong Business Llama (lending market).  All Curve Lending Markets are one-way, and isolated. They need to go and find the Business Llama that lends out CRV with crvUSD collateral. (Business llama with the red background [here](#markets)) |
 
 
 ---
@@ -60,7 +60,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
 There are many Curve Lending markets listed on the [main UI](https://lend.curve.fi/#/ethereum/markets).  Each market uses a single type of collateral, and make loans in a single asset (**all markets are one-way**, and **all markets are isolated**).  Some of the markets available are pictured below (we've used llamas in suits to illustrate different markets), but there are many more available, and **new markets can be permissionlessly deployed** by anyone, at anytime (as long as the asset has a suitable [price oracle](https://docs.curve.fi/stableswap-exchange/stableswap-ng/pools/oracles/)).  
 
-![Curve lending llamas](../images/lending/llamma_markets.svg)
+![Curve lending llamas](./../images/lending/llamma_markets.svg)
 
 *Note: All markets are paired with crvUSD. crvUSD must be either the collateral or the coin being borrowed.*
 
@@ -73,8 +73,8 @@ Earning interest for supplying assets to Curve Lending is simple.
 
 *Let's have a look at an example where Bob lends his crvUSD for a year and how much he earns:*
 
-![Lending Interest](../images/lending/lending_market_simple.svg#only-light)
-![Lending Interest](../images/lending/lending_market_simple_dark.svg#only-dark)
+![Lending Interest](./../images/lending/lending_market_simple.svg#only-light)
+![Lending Interest](./../images/lending/lending_market_simple_dark.svg#only-dark)
 
 So after 1 year **Bob earned 20 crvUSD** and **$20 worth of CRV**, this equates to an **APR of 40%** over that year.
 
@@ -87,13 +87,13 @@ After depositing to a lending market your assets are added to the pool of **avai
 
 You can withdraw a supplied asset provided there are sufficient available (un-borrowed) assets in the market. For example in the below image Bob could have withdrawn up to 1200 crvUSD from the market, but he only withdrew 300 crvUSD.  
 
-![Withdrawing Supply](../images/lending/supply_withdrawal.svg#only-light){: .centered }
-![Withdrawing Supply](../images/lending/supply_withdrawal_dark.svg#only-dark){: .centered }
+![Withdrawing Supply](./../images/lending/supply_withdrawal.svg#only-light){: .centered }
+![Withdrawing Supply](./../images/lending/supply_withdrawal_dark.svg#only-dark){: .centered }
 
 If there are insufficient available assets for a full withdrawal, you can withdraw the maximum amount currently available. The high utilization rate will cause Borrow APY and Lend APYs to increase, incentivizing borrowers to repay their loans, and more lenders to supply. As available supply increases you can withdraw your remaining balance over time.
 
 !!!warning "Bad Debt"
-    [Bad debt](../crvusd/loan-concepts.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.  It is recommended not to supply assets to markets with large amounts of bad debt.  Use [this notebook](https://try.vyperlang.org/hub/user-redirect/lab/tree/shared/saint-rat/baddebt.ipynb) or see the code on [github here](https://github.com/saint-rat/curve-notebooks/blob/main/bad_debt.ipynb) to find which markets have bad debt.  
+    [Bad debt](./../crvusd/loan-concepts.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.  It is recommended not to supply assets to markets with large amounts of bad debt.  Use [this notebook](https://try.vyperlang.org/hub/user-redirect/lab/tree/shared/saint-rat/baddebt.ipynb) or see the code on [github here](https://github.com/saint-rat/curve-notebooks/blob/main/bad_debt.ipynb) to find which markets have bad debt.  
     
     *At the time of writing (May, 2024) no bad debt exists on Ethereum markets. On Arbitrum, two markets have bad debt - CRV/crvUSD: 1700 crvUSD bad debt, FXN/crvUSD: 39,000 crvUSD bad debt.*
 
@@ -118,12 +118,12 @@ Rewards APR is a combination of CRV emission rewards and any other incentives pr
 *For a market to have CRV rewards the following conditions must be met:*
 
 1. The Curve DAO must vote to add a [Liquidity Gauge](https://resources.curve.fi/reward-gauges/understanding-gauges/) to the `GaugeController` for that specific lending market
-2. The liquidity gauge must receive a positive [gauge weight](../reward-gauges/gauge-weights.md) through votes from veCRV holders. This will result in CRV being emitted to the liquidity gauge.
+2. The liquidity gauge must receive a positive [gauge weight](./../reward-gauges/gauge-weights.md) through votes from veCRV holders. This will result in CRV being emitted to the liquidity gauge.
 
-Due to the boosting mechanism of liquidity gauges, the Reward APR will be displayed as a range based on the user's boost factor. Learn more about boosting [here](../reward-gauges/boosting-your-crv-rewards.md).
+Due to the boosting mechanism of liquidity gauges, the Reward APR will be displayed as a range based on the user's boost factor. Learn more about boosting [here](./../reward-gauges/boosting-your-crv-rewards.md).
 
 
-Other incentives can be added by anyone, i.e., if a project wants to incentivize their token being used as collateral they may add incentives to a Lending Market. See [here](../reward-gauges/permissionless-rewards.md) for more details and how to add them.
+Other incentives can be added by anyone, i.e., if a project wants to incentivize their token being used as collateral they may add incentives to a Lending Market. See [here](./../reward-gauges/permissionless-rewards.md) for more details and how to add them.
 
 
 ---
@@ -137,8 +137,8 @@ Collateral is deposited into each lending market's [LLAMMA](https://docs.curve.f
 
 *See the image below for a breakdown of how supplied assets are borrowed, and how collateral is deposited into bands.*
 
-![loan to bands](../images/lending/loan_to_bands.svg#only-light){: .centered }
-![loan to bands](../images/lending/loan_to_bands_dark.svg#only-dark){: .centered }
+![loan to bands](./../images/lending/loan_to_bands.svg#only-light){: .centered }
+![loan to bands](./../images/lending/loan_to_bands_dark.svg#only-dark){: .centered }
 
 By **minimizing the number of bands** (N=4), you can **maximize the amount you borrow** (LTV), just like Charlie. Alice, however, prefers spreading his liquidity, so he chooses 10 bands (N=10) and does not maximize his borrowing. This explains why Charlie's loan is split into bands 3-12, while Alice's is split into bands 1-4. When you borrow, you can choose to split your collateral into **any number of bands from 4 to 50**.
 
@@ -157,13 +157,13 @@ Soft-liquidation begins if the oracle price of your collateral falls into one of
 
 Let's examine what soft-liquidation looks like in a simplified example with a **single band** in an **ETH/crvUSD LLAMMA market**. This example illustrates that if the price declines by 20% within the band, 20% of the ETH is converted to crvUSD. When the price is below the lower bound of the band (<\$990), all the collateral is converted to crvUSD (100% crvUSD, 0% ETH). Conversely, when the price exceeds the upper bound (>\$1000), all collateral remains as ETH (100% ETH, 0% crvUSD).
 
-![single llamma band](../images/lending/single_llamma_band.svg#only-light){: .centered style="height:250px" }
-![single llamma band](../images/lending/single_llamma_band_dark.svg#only-dark){: .centered style="height:250px" }
+![single llamma band](./../images/lending/single_llamma_band.svg#only-light){: .centered style="height:250px" }
+![single llamma band](./../images/lending/single_llamma_band_dark.svg#only-dark){: .centered style="height:250px" }
 
 The below image represents **multiple bands** through soft-liquidation.  Note the higher bands than the current price are fully converted to crvUSD and the lower bands are still ETH.
 
-![llamma bands](../images/lending/llamma_bands.svg#only-light){: .centered style="height:250px" }
-![llamma bands](../images/lending/llamma_bands_dark.svg#only-dark){: .centered style="height:250px" }
+![llamma bands](./../images/lending/llamma_bands.svg#only-light){: .centered style="height:250px" }
+![llamma bands](./../images/lending/llamma_bands_dark.svg#only-dark){: .centered style="height:250px" }
 
 The value of traded assets remains as loan collateral throughout soft-liquidation. For example, if ETH is swapped for crvUSD, the value of that crvUSD is added to the collateral backing the loan. Additionally, **LLAMMA works both ways; if prices increase through your bands, any swapped collateral will be traded back for your initial collateral** (e.g., ETH swapped to crvUSD as the price decreased will be swapped back to ETH as the price increases).
 
@@ -199,8 +199,8 @@ All new lending markets allow leverage.  This allows users to multiply their gai
 
 The **Lend APY** and **Borrow APY** are affected by the **Utilization** of the market.  It is the ratio of assets supplied, to assets borrowed. In the image below the Utilization is 80% as 80% of the Supply is borrowed. **Higher Utilization means a higher Lending APY and Borrowing APY**.
 
-![Supply Utilization](../images/lending/supply.svg#only-light){: .centered }
-![Supply Utilization](../images/lending/supply_dark.svg#only-dark){: .centered }
+![Supply Utilization](./../images/lending/supply.svg#only-light){: .centered }
+![Supply Utilization](./../images/lending/supply_dark.svg#only-dark){: .centered }
 
 ### Utilization Rate
 

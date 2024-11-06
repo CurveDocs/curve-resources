@@ -45,16 +45,16 @@ When a liquidator initiates the process, the following occurs within a single tr
 
 This process is illustrated in the image below:
 
-![Hard Liquidation](../images/llamma/hard-liquidation.svg#only-light){: .centered }
-![Hard Liquidation](../images/llamma/hard-liquidation-dark.svg#only-dark){: .centered }
+![Hard Liquidation](./../images/llamma/hard-liquidation.svg#only-light){: .centered }
+![Hard Liquidation](./../images/llamma/hard-liquidation-dark.svg#only-dark){: .centered }
 
 
 ### **Bad Debt**
 
 **Bad debt occurs when a loan is not profitable to liquidate**.  This could happen for many reasons, including gas prices being higher than the profit from a liquidation, a sequencer being down on an L2, or simply no one searching for profitable liquidations in a new market.  It looks like the following:
 
-![Bad Debt](../images/llamma/bad-debt.svg#only-light){: .centered }
-![Bad Debt](../images/llamma/bad-debt-dark.svg#only-dark){: .centered }
+![Bad Debt](./../images/llamma/bad-debt.svg#only-light){: .centered }
+![Bad Debt](./../images/llamma/bad-debt-dark.svg#only-dark){: .centered }
 
 In this example no rational liquidator will begin the liquidation process because they will lose value by doing so.
 

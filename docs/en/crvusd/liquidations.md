@@ -6,8 +6,8 @@ Liquidations on Curve Lending and crvUSD work differently to other DeFi loans.  
 
 When the position enters Soft-liquidation it's a warning.  The system will try to protect user loans by converting the original collateral to the borrowed asset as prices decrease, and back to the original collateral as prices increase.
 
-![Collateral Loss](../images/crvusd/soft-liq.svg#only-light){: .centered }
-![Collateral Loss](../images/crvusd/soft-liq-dark.svg#only-dark){: .centered }
+![Collateral Loss](./../images/crvusd/soft-liq.svg#only-light){: .centered }
+![Collateral Loss](./../images/crvusd/soft-liq-dark.svg#only-dark){: .centered }
 
 **Hard Liquidation does not happen at the bottom of the soft-liquidation range**.
 

@@ -19,7 +19,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Explore the dynamics of the CRV Token: Tokenomics, Staking, Claiming Fees, and more.
 
-    [:octicons-arrow-right-24: Learn More](./crv-token/overview.md)
+    [:octicons-arrow-right-24: Learn More](../../en/crv-token/overview.md)
 
 -   :logos-vecrv:{ .lg .middle } **veCRV**
 
@@ -27,7 +27,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Obtain veCRV by locking CRV tokens, which allows users to participate in governance, boost their LP rewards, and earn protocol accrued fees.
 
-    [:octicons-arrow-right-24: Learn More](./vecrv/overview.md)
+    [:octicons-arrow-right-24: Learn More](../../en/vecrv/overview.md)
 
 -   :logos-crvusd:{ .lg .middle } **crvUSD**
 
@@ -35,7 +35,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Learn about crvUSD, including its creation, management, and key concepts, along with a comprehensive FAQ section.
 
-    [:octicons-arrow-right-24: Learn More](./crvusd/understanding-crvusd.md)
+    [:octicons-arrow-right-24: Learn More](../../en/crvusd/understanding-crvusd.md)
 
 -   :fontawesome-solid-briefcase:{ .lg .middle } **Lend**
 
@@ -43,7 +43,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Discover Curve's lending system, including how to supply, borrow, and create lending markets.
 
-    [:octicons-arrow-right-24: Learn More](./lending/overview.md)
+    [:octicons-arrow-right-24: Learn More](../../en/lending/overview.md)
 
 -   :fontawesome-solid-water:{ .lg .middle } **Pools**
 
@@ -51,7 +51,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Understand Curve pools, yield calculations, and the deposit process.
 
-    [:octicons-arrow-right-24: Learn More](./lp/overview.md)
+    [:octicons-arrow-right-24: Learn More](../../en/lp/overview.md)
 
 -   :material-factory:{ .lg .middle } **Creating Pools**
 
@@ -59,7 +59,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Understand the Pool Factory and dive into the pool creation process.
 
-    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-creation-overview.md)
+    [:octicons-arrow-right-24: Learn More](../../en/factory-pools/pool-creation-overview.md)
 
 -   :fontawesome-solid-chart-line:{ .lg .middle } **Reward Gauges**
 
@@ -67,7 +67,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Explore gauges in-depth, including creation, boosting CRV rewards, understanding gauge weights, and permissionless rewards.
 
-    [:octicons-arrow-right-24: Learn More](./reward-gauges/overview.md)
+    [:octicons-arrow-right-24: Learn More](../../en/reward-gauges/overview.md)
 
 
 -   :fontawesome-solid-gavel:{ .lg .middle } **Governance**
@@ -76,7 +76,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Gain insights into Curve's governance structure: Vote Locking, Voting, and Proposals.
 
-    [:octicons-arrow-right-24: Learn More](./governance/understanding-governance.md)
+    [:octicons-arrow-right-24: Learn More](../../en/governance/understanding-governance.md)
 
 -   :fontawesome-solid-globe:{ .lg .middle } **Multi-Chain**
 
@@ -84,7 +84,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Explore the multi-chain aspect of Curve, including bridging funds and understanding the cross-chain functionalities.
 
-    [:octicons-arrow-right-24: Learn More](./multichain/understanding-multichain.md)
+    [:octicons-arrow-right-24: Learn More](../../en/multichain/understanding-multichain.md)
 
 -   :material-wrench:{ .lg .middle } **Troubleshooting**
 
@@ -92,7 +92,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Find solutions for common issues like cross-asset swaps, stuck transactions, and wallet integrations.
 
-    [:octicons-arrow-right-24: Learn More](./troubleshooting/support.md)
+    [:octicons-arrow-right-24: Learn More](../../en/troubleshooting/support.md)
 
 </div>
 

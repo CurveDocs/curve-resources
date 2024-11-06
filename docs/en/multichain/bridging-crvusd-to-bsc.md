@@ -40,7 +40,7 @@ Requirements include having a wallet with crvUSD tokens and either ETH or BNB, d
     </figure>
 3. Locate the method **`3. approve`** and approve the bridge contract as a spender.
         <figure markdown="span">
-            ![](../images/guide/approve.png){ width="350" }
+            ![](./../images/guide/approve.png){ width="350" }
             <figcaption></figcaption>
         </figure>
     - **`_spender`**: Enter `0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f`, the bridge contract address.
@@ -74,7 +74,7 @@ Requirements include having a wallet with crvUSD tokens and either ETH or BNB, d
     </figure>
 3. Navigate to method **`2. bridge`** and input your values:
         <figure markdown="span">
-        ![](../images/guide/bridge_eth.png){ width="400" }
+        ![](./../images/guide/bridge_eth.png){ width="400" }
         <figcaption></figcaption>
         </figure>
     - **`bridge`**: Enter the ETH amount quoted in [Step 2](#step-2-read-contract-and-quote-eth-amount). Ensure you enter the **amount denominated in Ether** (quoted amount / 1e18).
@@ -108,7 +108,7 @@ Requirements include having a wallet with crvUSD tokens and either ETH or BNB, d
     </figure>
 3. Locate the method **`3. approve`** and approve the bridge contract as a spender.
         <figure markdown="span">
-            ![](../images/guide/approve.png){ width="350" }
+            ![](./../images/guide/approve.png){ width="350" }
             <figcaption></figcaption>
         </figure>
     - **`_spender`**: Enter `0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f`, the bridge contract address.
@@ -142,7 +142,7 @@ Requirements include having a wallet with crvUSD tokens and either ETH or BNB, d
     </figure>
 3. Navigate to method **`2. bridge`** and input your values:
         <figure markdown="span">
-        ![](../images/guide/bridge_bnb.png){ width="400" }
+        ![](./../images/guide/bridge_bnb.png){ width="400" }
         <figcaption></figcaption>
         </figure>
     - **`bridge`**: Enter the ETH amount quoted in [Step 2](#step-2-read-contract-and-quote-bnb-amount). Ensure you enter the **amount denominated in Ether** (quoted amount / 1e18).

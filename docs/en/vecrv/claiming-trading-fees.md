@@ -56,7 +56,7 @@ If a user wishes to withdraw 3CRV back into a stablecoin, they can do so at: [**
 
 
 !!! note
-    When withdrawing 3CRV into a stablecoin, it **might be beneficial to take a look at the balance ratios of the pool**. Withdrawing in a token with a higher balance than the other two could result in a small premium for that token. On the other hand, withdrawing a token with a lower balance relative to the other two coins may lead to receiving a slightly lesser amount. Further information can be found [here](../lp/deposit-faqs.md#but-does-that-mean-i-can-still-withdraw-in-my-favorite-stable-coin).
+    When withdrawing 3CRV into a stablecoin, it **might be beneficial to take a look at the balance ratios of the pool**. Withdrawing in a token with a higher balance than the other two could result in a small premium for that token. On the other hand, withdrawing a token with a lower balance relative to the other two coins may lead to receiving a slightly lesser amount. Further information can be found [here](./../lp/deposit-faqs.md#but-does-that-mean-i-can-still-withdraw-in-my-favorite-stable-coin).
 
 ---
 

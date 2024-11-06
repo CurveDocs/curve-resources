@@ -14,7 +14,7 @@ Before attempting to create a lending market, a curve pool for the ASSET paired 
 
 The easiest way to create a pool is through the official [Create Pool UI](https://curve.fi/#/ethereum/create-pool).
 
-Guides are available for creating a [stableswap-ng pool](../factory-pools/creating-a-stableswap-ng-pool.md), [twocrypto-ng pool](../factory-pools/creating-a-twocrypto-ng-pool.md), and a [tricrypto-ng pool](../factory-pools/creating-a-tricrypto-ng-pool.md).
+Guides are available for creating a [stableswap-ng pool](./../factory-pools/creating-a-stableswap-ng-pool.md), [twocrypto-ng pool](./../factory-pools/creating-a-twocrypto-ng-pool.md), and a [tricrypto-ng pool](./../factory-pools/creating-a-tricrypto-ng-pool.md).
 
 ---
 
@@ -66,9 +66,9 @@ A **Curve lending market requires a gauge** linked to the supply vault **before 
 
 ### **Receiving CRV rewards from weekly emissions**
 
-Before a gauge is eligible to receive CRV from weekly emissions, it must be added to the `Gauge Controller` contract, the contract is deployed on Ethereum [here](https://etherscan.io/address/0x2F50D538606Fa9EDD2B11E2446BEb18C9D5846bB).  To be added to the `Gauge Controller` the CurveDAO must vote to add the lending market's gauge.  See [here](../reward-gauges/creating-a-pool-gauge.md#submit-a-dao-vote) for how to create a vote to add a gauge to the `Gauge Controller`.
+Before a gauge is eligible to receive CRV from weekly emissions, it must be added to the `Gauge Controller` contract, the contract is deployed on Ethereum [here](https://etherscan.io/address/0x2F50D538606Fa9EDD2B11E2446BEb18C9D5846bB).  To be added to the `Gauge Controller` the CurveDAO must vote to add the lending market's gauge.  See [here](./../reward-gauges/creating-a-pool-gauge.md#submit-a-dao-vote) for how to create a vote to add a gauge to the `Gauge Controller`.
 
-Once a Curve lending market has a gauge added to the `Gauge Controller` and it receives some [gauge weight](../reward-gauges/gauge-weights.md), the suppliers will receive CRV rewards when they stake their [vault shares](./overview.md#supply-vault-share-tokens) into the gauge.
+Once a Curve lending market has a gauge added to the `Gauge Controller` and it receives some [gauge weight](./../reward-gauges/gauge-weights.md), the suppliers will receive CRV rewards when they stake their [vault shares](./overview.md#supply-vault-share-tokens) into the gauge.
 
 ### **Adding other incentives for suppliers**
 
@@ -80,19 +80,19 @@ The deployer of the Curve Lending Market is given the role of `manager`.  The `m
 
 ### **Amplification Factor (A)**
 
-The amplification factor `A` defines the width of bands, see formula below and more detailed information [here](../crvusd/loan-concepts.md#bands-n) and applet [here](../crvusd/loan-concepts.md#band-calculator).  `A` is also a part of the calculation for the maximum LTV of the market, see [`loan_discount` section](#loan-discount).
+The amplification factor `A` defines the width of bands, see formula below and more detailed information [here](./../crvusd/loan-concepts.md#bands-n) and applet [here](./../crvusd/loan-concepts.md#band-calculator).  `A` is also a part of the calculation for the maximum LTV of the market, see [`loan_discount` section](#loan-discount).
 
 $$\text{band_width} \approx \frac{\text{price}}{\text{A}}$$
 
 ### **Loan Discount**
 
-The `loan_discount` is used for finding the maximum LTV (loan-to-value) a user can have in a lending market.  At the time of writing this value ranges from 7% for WETH to 33% for volatile and less liquid assets like UwU.  Use the calculator [here](../crvusd/loan-concepts.md#loan-discount) to see the maximum LTVs a user can have based on the `loan_discount`, amplification factor `A` and their number of bands `N`.  The formula is:
+The `loan_discount` is used for finding the maximum LTV (loan-to-value) a user can have in a lending market.  At the time of writing this value ranges from 7% for WETH to 33% for volatile and less liquid assets like UwU.  Use the calculator [here](./../crvusd/loan-concepts.md#loan-discount) to see the maximum LTVs a user can have based on the `loan_discount`, amplification factor `A` and their number of bands `N`.  The formula is:
 
 $$\text{max_LTV} = 1 - \text{loan_discount} - \frac{N}{2*A}$$
 
 ### **Liquidation Discount**
 
-`liquidation_discount` defines how much to discount the collateral for the purpose of a hard-liquidation.  This is usually 3-4% lower than the `loan_discount`.  A user is hard-liquidated when their health is less than 0, and the `liquidation_discount` is an integral part of the health calculation.  See [here](../crvusd/loan-concepts.md#loan-health) for more information
+`liquidation_discount` defines how much to discount the collateral for the purpose of a hard-liquidation.  This is usually 3-4% lower than the `loan_discount`.  A user is hard-liquidated when their health is less than 0, and the `liquidation_discount` is an integral part of the health calculation.  See [here](./../crvusd/loan-concepts.md#loan-health) for more information
 
 ### **Borrowing Interest Rates**
 

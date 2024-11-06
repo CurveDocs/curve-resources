@@ -1,6 +1,6 @@
 ## **How to participate in governance?**
 
-To participate in governance, Curve Finance users need to [lock](../vecrv/locking-your-crv.md) their CRV into a voting escrow.
+To participate in governance, Curve Finance users need to [lock](./../vecrv/locking-your-crv.md) their CRV into a voting escrow.
 
 You can do so at this address: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
 
@@ -20,7 +20,7 @@ You can only vote using your voting weight at the block where a proposal was cre
 
 Simply visit the proposal of your choice, click your vote option and confirm your transaction. You can find DAO proposals at this address: [https://dao.curve.fi/dao](https://dao.curve.fi/dao)​
 
-![Voting UI](../images/ui/how-to-vote.webp)
+![Voting UI](./../images/ui/how-to-vote.webp)
 
 ## **Where can I find out about governance?**
 

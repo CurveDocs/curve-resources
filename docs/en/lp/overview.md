@@ -12,7 +12,7 @@ In Curve, pools can be 2 different types, these are:
 It’s important to understand that when you provide liquidity to a pool, no matter what coin you deposit, you essentially **gain exposure to all the coins in the pool** which means you want to find a pool with coins you are comfortable holding.
 
 !!!danger "Liquidity Pool Risks"
-    Before using liquidity pools, it's advisable to review our [risk disclaimer](../risks-security/risks/pool.md) page for a comprehensive overview of potential risks.
+    Before using liquidity pools, it's advisable to review our [risk disclaimer](./../risks-security/risks/pool.md) page for a comprehensive overview of potential risks.
 
 ---
 
@@ -22,8 +22,8 @@ Stableswap pools have assets pegged to each other.  For example USDC and USDT, a
 
 Let's look at an example about how it works for a liquidity provider:
 
-![Stableswap](../images/pools/stableswap.svg#only-light){: .centered }
-![Stableswap](../images/pools/stableswap-dark.svg#only-dark){: .centered }
+![Stableswap](./../images/pools/stableswap.svg#only-light){: .centered }
+![Stableswap](./../images/pools/stableswap-dark.svg#only-dark){: .centered }
 
 *Note: Alice can deposit/withdraw any combination of assets/amounts, but pays a small [fee](#pool-fees) for unbalanced actions (e.g., USDC-only deposit).*
 
@@ -37,8 +37,8 @@ Cryptoswap pools maintain an equal value balance between their assets. For examp
 
 Let's look at an example about how it works for a liquidity provider:
 
-![Cryptoswap](../images/pools/cryptoswap.svg#only-light){: .centered }
-![Cryptoswap](../images/pools/cryptoswap-dark.svg#only-dark){: .centered }
+![Cryptoswap](./../images/pools/cryptoswap.svg#only-light){: .centered }
+![Cryptoswap](./../images/pools/cryptoswap-dark.svg#only-dark){: .centered }
 
 *Note: Bob can deposit/withdraw any combination of assets/amounts, but pays a small [fee](#pool-fees) for unbalanced actions (e.g., ETH-only deposit).*
 
@@ -61,7 +61,7 @@ Liquidity providers are rewarded with 2 different types of yield:
 * **Base vAPY**: This is how much the LP token value is increasing due to accruing pool fees.
 * **Rewards tAPR**: These are CRV inflation rewards, other token incentives, and points. Staking LP tokens is required to earn CRV and other token rewards, which accrue through the pool's gauge. Points programs are project-specific; many don't require LP token staking. Refer to each project's point program for the most accurate information.
 
-![Rewards](../images/pools/rewards.svg#only-light){: .centered style="width: 500px;" }
-![Rewards](../images/pools/rewards-dark.svg#only-dark){: .centered style="width: 500px;" }
+![Rewards](./../images/pools/rewards.svg#only-light){: .centered style="width: 500px;" }
+![Rewards](./../images/pools/rewards-dark.svg#only-dark){: .centered style="width: 500px;" }
 
 Some pools include yield-bearing tokens like sUSDe and sDAI. All yield from these tokens goes directly to Liquidity Providers, none is taken away by fees or the pool.

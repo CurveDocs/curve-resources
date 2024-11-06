@@ -5,3 +5,4 @@ mkdocs-minify-plugin
 pymdown-extensions
 mkdocs-git-revision-date-localized-plugin
 mkdocs-redirects
+mkdocs-static-i18n

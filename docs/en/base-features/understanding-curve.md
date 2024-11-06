@@ -12,7 +12,7 @@ Liquidity pools are pools of tokens held in smart contracts that allow users to 
 
 For more information, visit the following section:
 
-[**Understanding Curve Pools**](../lp/overview.md)
+[**Understanding Curve Pools**](./../lp/overview.md)
 
 # **How much does it cost to swap through Curve?**
 
@@ -22,19 +22,19 @@ Different pools have different fees.  Most are typically in the range of 0.01-0.
 
 Curve pools may have several different percentages shown next to them in the UI.
 
-![Pools UI](../images/pools.webp)
+![Pools UI](./../images/pools.webp)
 
-The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Swaps through Curve pools generate fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](../lp/overview.md).
+The first column, vAPY, refers to the annualized rate of trading fees earned by liquidity providers in the pool. Swaps through Curve pools generate fees, a portion of which accrue to everybody who has a stake in the pool. Further information is in the [Liquidity Provider section](./../lp/overview.md).
 
-The second column refers to the reward gauges. This entitles liquidity providers to earn bonus CRV emissions. More detail on these bonuses are in the [Reward Gauges section](../reward-gauges/overview.md).
+The second column refers to the reward gauges. This entitles liquidity providers to earn bonus CRV emissions. More detail on these bonuses are in the [Reward Gauges section](./../reward-gauges/overview.md).
 
 # **What is the CRV token?**
 
 CRV token is a governance and utility token for Curve.
 
-[**Understanding CRV**](../crv-token/overview.md)
+[**Understanding CRV**](./../crv-token/overview.md)
 
-[**Understanding Governance**](../governance/understanding-governance.md)
+[**Understanding Governance**](./../governance/understanding-governance.md)
 
 # **Can I use Curve on sidechains?**
 
@@ -58,4 +58,4 @@ The [**Github repository**](https://github.com/curvefi) also open sources the bu
 # **Whitepaper**
 
 !!!pdf "StableSwap (Curve V1) Whitepaper"
-    For a detailed overview of Curve V1, please read the official [**whitepaper**](../pdf/curve-stableswap.pdf).
+    For a detailed overview of Curve V1, please read the official [**whitepaper**](./../pdf/curve-stableswap.pdf).

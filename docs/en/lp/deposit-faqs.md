@@ -60,7 +60,7 @@ Liquidity pools (particularly one without an opportunity cost) are a great way t
 
 As a result, some pools on Curve are “incentivized”. That means that on top of trading fees and lending fees, the companies will give rewards to people providing liquidity to the pools with their coins.
 
-![Pool Incentives](../images/ui/pool-incentives.png)
+![Pool Incentives](./../images/ui/pool-incentives.png)
 
 ## **What makes the incentives APR move?**
 

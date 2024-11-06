@@ -125,7 +125,7 @@ Borrow more simply allows the user to borrow more debt and add more collateral a
 
 Repay has the following options, and all options allow the user to **partially** or **fully repay** their loans.  If only a partial repayment is done then the liquidation range will change for the user.
 
-![Repay UI](../images/ui/repay.png){: .centered }
+![Repay UI](./../images/ui/repay.png){: .centered }
 
 **Repay From Collateral** will remove the collateral (e.g., WETH or crvUSD) out of the lending market, convert them all to the debt asset if required (e.g., crvUSD), and send any leftover debt asset (e.g., crvUSD) back to the user if the loan is fully paid and closed.  *Note this is only available on new markets (markets which allow leverage allow this feature).  For older markets it's required to repay with the debt token.*
 
@@ -137,7 +137,7 @@ Repay has the following options, and all options allow the user to **partially**
 
 #### **Self-liquidate**
 
-This allows a user to liquidate themselves before they get hard-liquidated.  Users using this feature will most likely already be in soft-liquidation.  This lets the user retrieve their collateral and stops them from losing the amount defined by the [`liquidation_discount`](../crvusd/loan-concepts.md#market-parameters).
+This allows a user to liquidate themselves before they get hard-liquidated.  Users using this feature will most likely already be in soft-liquidation.  This lets the user retrieve their collateral and stops them from losing the amount defined by the [`liquidation_discount`](./../crvusd/loan-concepts.md#market-parameters).
 
 Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH as collateral for how this works.  Alice is in soft liquidation and her health is getting low.  In soft liquidation 0.2 WETH has been converted to 250 crvUSD, so she now has 0.8 WETH and 250 crvUSD backing her 1000 crvUSD loan.  Alice wants to self liquidate.  Alice only needs to send 750 crvUSD to self-liquidate, because she already has 250 crvUSD of collateral, both these amounts together will pay off the 1000 crvUSD debt.  Alice then receives back her 0.8 WETH.
 
@@ -147,18 +147,18 @@ Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH a
 
 All new lending markets allow users to use leverage.  E.g., the WBTC market below allows up to 11x leverage when borrowing from this lending market.  11x leverage means 10x the deposited amount of WBTC is borrowed as crvUSD and swapped to WBTC using 1inch.
 
-![WBTC Leverage](../images/ui/leverage.png){: .centered }
+![WBTC Leverage](./../images/ui/leverage.png){: .centered }
 
 !!!info "Info"
     If the market does not display a value in the leverage column, then leverage can still be built up manually by [looping](./leverage.md#leverage-looping).
 
 Click on the desired market with leverage, then navigate to the `leverage` tab next to the `create loan` tab shown here:
 
-![Navigating to leverage](../images/ui/navigate_leverage.png){: .centered }
+![Navigating to leverage](./../images/ui/navigate_leverage.png){: .centered }
 
 After navigating to the `leverage` tab, the following options will be displayed:
 
-![Leverage Menu](../images/ui/leverage_menu.png){: .centered }
+![Leverage Menu](./../images/ui/leverage_menu.png){: .centered }
 
 This shows all the information and options to open a leveraged loan.  Notice that the `ADD FROM WALLET` allows both assets to be added to the loan.  In this market a user could add WBTC, or crvUSD or both.  See the information about [depositing a combination of assets](./leverage.md#depositing-a-combination-of-assets) for how this works.
 
@@ -166,7 +166,7 @@ The **`BORROW AMOUNT`** lets the user specify how much they would like to borrow
 
 If [**`Advanced Mode` is enabled**](#creating-a-new-loan), then the user can click on the **`adjust`** button next to the liquidation range.  This allows a user to change the number of bands `N` for their liquidation range.  An example of this is shown below with the other loan details:
 
-![Leverage Menu](../images/ui/leverage_details.png){: .centered }
+![Leverage Menu](./../images/ui/leverage_details.png){: .centered }
 
 **`Leverage`** is calculated using the following formula:
 
@@ -176,13 +176,13 @@ For example if \$10,000 crvUSD and \$10,000 of WBTC is deposited (\$20,000 value
 
 **`Expected`** and **`Expected avg. price`** both relate in this case to how much WBTC is expected to be received after swapping the borrowed crvUSD, and what the expected average price for swapping is.  **`Expected`** has collapsible details which shows the route the assets will be swapped through.  These **swaps are always provided by 1inch**.  An example of these details are provided below and show that 125 crvUSD will be swapped to 0.0019074 WBTC.
 
-![Routing Details](../images/ui/routing_details.png){: .centered }
+![Routing Details](./../images/ui/routing_details.png){: .centered }
 
 **`Price impact`** is the difference between the oracle price and the average swap price.
 
-**`Band range`** is the starting and finishing bands of liquidity for the loan, e.g., "4 to 13" means the loan will begin soft-liquidation in band 4, and finish in band 13.  **`Price range`** shows the `Band range` but as a price range, e.g., band 4 to 13 could be a price range like 52,994 to 60,607. See [here](../crvusd/loan-concepts.md#bands-n) for more information about bands.
+**`Band range`** is the starting and finishing bands of liquidity for the loan, e.g., "4 to 13" means the loan will begin soft-liquidation in band 4, and finish in band 13.  **`Price range`** shows the `Band range` but as a price range, e.g., band 4 to 13 could be a price range like 52,994 to 60,607. See [here](./../crvusd/loan-concepts.md#bands-n) for more information about bands.
 
-**`Health`** is how healthy the loan is, this value must be positive, if it is less than or equal to 0 then the loan can be hard liquidated.  See [here](../crvusd/loan-concepts.md#loan-health) for more information about health.
+**`Health`** is how healthy the loan is, this value must be positive, if it is less than or equal to 0 then the loan can be hard liquidated.  See [here](./../crvusd/loan-concepts.md#loan-health) for more information about health.
 
 **`Borrow APY`** shows the interest rate before and after the loan is created.  **`Loan to Value Ratio`** shows the deposited collateral value compared to the borrowed collateral.
 
@@ -190,7 +190,7 @@ For example if \$10,000 crvUSD and \$10,000 of WBTC is deposited (\$20,000 value
 
 Before taking out a loan, a screen will appear showing the details of the loan, for example: 
 
-![Example loan details](../images/ui/get_leverage_loan.png){: .centered }
+![Example loan details](./../images/ui/get_leverage_loan.png){: .centered }
 
 Then the tokens which will be used as collateral need to be approved and then the loan can be taken out by clicking the **`Get Loan`** and sending the transaction.
 

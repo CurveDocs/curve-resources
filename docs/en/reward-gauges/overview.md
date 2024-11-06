@@ -1,4 +1,4 @@
-On Curve Finance, [CRV inflation](../crv-token/supply-distribution.md#community-emissions-crv-inflation) goes to users who stake in Reward Gauges in Pools and Lending markets.
+On Curve Finance, [CRV inflation](./../crv-token/supply-distribution.md#community-emissions-crv-inflation) goes to users who stake in Reward Gauges in Pools and Lending markets.
 
 Many Curve pools and lending markets have Reward Gauges. By staking liquidity provider tokens in these gauges, users earn rewards proportional to their share of the total staked value.
 

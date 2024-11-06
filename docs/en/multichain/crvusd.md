@@ -2,7 +2,7 @@
 
 crvUSD was first introduced in May 2023 on the Ethereum blockchain. As of [specific date or period], this stablecoin can be minted exclusively on the Ethereum mainnet.
 
-[Understanding crvUSD](../crvusd/understanding-crvusd.md)
+[Understanding crvUSD](./../crvusd/understanding-crvusd.md)
 
 ---
 

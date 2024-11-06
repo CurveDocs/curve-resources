@@ -59,7 +59,7 @@ The `LLAMMA BALANCES` section shows the breakdown of your current loan collatera
 
 
 !!!info "Soft-Liquidation Mode"
-    **During [soft-liquidation](./liquidations.md#soft-liquidation), users are unable to add or withdraw collateral.** They can choose to **either partially or fully repay** their crvUSD debt to improve their [**health**](./loan-concepts.md#loan-health) **or** decide to [**self-liquidate**](../lending/how-to-borrow.md#self-liquidate) their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
+    **During [soft-liquidation](./liquidations.md#soft-liquidation), users are unable to add or withdraw collateral.** They can choose to **either partially or fully repay** their crvUSD debt to improve their [**health**](./loan-concepts.md#loan-health) **or** decide to [**self-liquidate**](./../lending/how-to-borrow.md#self-liquidate) their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
 
     If their health declines to 0, they are [**hard-liquidated**](./liquidations.md#hard-liquidation) and lose their collateral but keep their debt.
 
@@ -132,7 +132,7 @@ Toggling the advanced mode expands the display to show additional information ab
 
 ## **Deleveraging Loans**
 
-Deleveraging a loan — irrespective of it being [**leveraged**](../crvusd/loan-creation.md#leveraged-loans)  — is an option available through the UI. Users must navigate to the `Deleverage` tab and input the amount of collateral they intend to allocate for deleveraging. This particular collateral is then converted into crvUSD, which is used to facilitate debt repayment.
+Deleveraging a loan — irrespective of it being [**leveraged**](./loan-creation.md#leveraged-loans)  — is an option available through the UI. Users must navigate to the `Deleverage` tab and input the amount of collateral they intend to allocate for deleveraging. This particular collateral is then converted into crvUSD, which is used to facilitate debt repayment.
 
 <figure markdown>
   ![](../images/delev_no_softliq1.png){ width="300" }
