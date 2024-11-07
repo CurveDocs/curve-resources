@@ -163,6 +163,8 @@ nav:
     - Loan Concepts In Depth: crvusd/loan-concepts.md
     - crvUSD FAQ: crvusd/faq.md
 
+  - Savings-crvUSD (scrvUSD): crvusd/scrvusd.md
+
   - Curve Lending:
     - Overview: lending/overview.md
     - Leverage: lending/leverage.md
