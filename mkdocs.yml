@@ -5,7 +5,7 @@ site_author: CurveFi
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
   - minify:
       minify_html: true
   - redirects:
@@ -27,6 +27,10 @@ plugins:
         "crv-token/claiming-trading-fees.md": "vecrv/claiming-trading-fees.md"
         "lending/understanding-lending.md": "lending/overview.md"
         "crvusd/loan-details.md": "crvusd/loan-concepts.md"
+        "factory-pools/creating-a-twocrypto-ng-pool.md": "pool-creation/creating-a-cryptoswap-pool.md"
+        "factory-pools/creating-a-stableswap-ng-pool.md": "pool-creation/creating-a-stableswap-pool.md"
+        "base-features/understanding-crypto-pools.md": "pools/overview.md"
+        "lp/calculating-yield.md": "pools/calculating-yield.md"
 
 
 # extension
@@ -141,8 +145,8 @@ repo_url: https://github.com/CurveDocs/curve-resources
 
 nav:
   - Home: index.md
-  - Getting Started:
-    - Understanding Curve & Stableswap (v1): base-features/understanding-curve.md  
+
+  - Getting Started with Curve: getting-started.md
 
   - CRV Token:
     - Overview & Tokenomics: crv-token/overview.md
@@ -175,23 +179,22 @@ nav:
     - How to Create a Lending Market: lending/create-lending-market.md
 
   - Pools:
-    - Overview: lp/overview.md
-    - Deposit FAQ: lp/deposit-faqs.md
-    - Calculating yield: lp/calculating-yield.md
-    - Charts and Pool Activity: lp/charts_poolactivity.md
+    - Overview: pools/overview.md
+    - Deposit FAQ: pools/deposit-faqs.md
+    - Calculating yield: pools/calculating-yield.md
+    - Charts and Pool Activity: pools/charts_poolactivity.md
     - Depositing:
-      - Overview: lp/depositing/depositing.md
-      - Depositing into the tri-pool: lp/depositing/depositing-into-the-tri-pool.md
-      - Depositing into a metapool: lp/depositing/depositing-into-a-metapool.md
-      - Depositing into a cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
-      - Depositing into a tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
+      - Overview: pools/depositing/depositing.md
+      - Depositing into the tri-pool: pools/depositing/depositing-into-the-tri-pool.md
+      - Depositing into a metapool: pools/depositing/depositing-into-a-metapool.md
+      - Depositing into a cryptoswap-pool: pools/depositing/depositing-into-a-cryptoswap-pool.md
+      - Depositing into a tricrypto-pool: pools/depositing/depositing-into-a-tricrypto-pool.md
 
   - Pool Creation:
-    - Pool Creation Overview: factory-pools/pool-creation-overview.md
-    - Creating a Stableswap NG Pool: factory-pools/creating-a-stableswap-ng-pool.md
-    - Creating a Twocrypto NG Pool: factory-pools/creating-a-twocrypto-ng-pool.md
-    - Creating a Tricrypto NG Pool: factory-pools/creating-a-tricrypto-ng-pool.md
-    - Understanding oracles: factory-pools/understanding-oracles.md
+    - Pool Creation Overview: pool-creation/pool-creation-overview.md
+    - Creating a Stableswap Pool: pool-creation/creating-a-stableswap-pool.md
+    - Creating a Cryptoswap Pool: pool-creation/creating-a-cryptoswap-pool.md
+    - Understanding Oracles: pool-creation/understanding-oracles.md
 
   - Reward Gauges:
     - Overview: reward-gauges/overview.md

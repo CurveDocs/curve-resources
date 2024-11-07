@@ -51,7 +51,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Understand Curve pools, yield calculations, and the deposit process.
 
-    [:octicons-arrow-right-24: Learn More](./lp/overview.md)
+    [:octicons-arrow-right-24: Learn More](./pools/overview.md)
 
 -   :material-factory:{ .lg .middle } **Creating Pools**
 
@@ -59,7 +59,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Understand the Pool Factory and dive into the pool creation process.
 
-    [:octicons-arrow-right-24: Learn More](./factory-pools/pool-creation-overview.md)
+    [:octicons-arrow-right-24: Learn More](./pool-creation/pool-creation-overview.md)
 
 -   :fontawesome-solid-chart-line:{ .lg .middle } **Reward Gauges**
 

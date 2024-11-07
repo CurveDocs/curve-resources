@@ -4,7 +4,7 @@ Before depositing into a Curve pool, it is highly recommended to familiarize you
 
 You can do so by visiting the page below:
 
-[**Understanding Curve Pools**](../../lp/overview.md)
+[**Understanding Curve Pools**](../../pools/overview.md)
 
 ## **Choosing the right pool**
 

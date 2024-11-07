@@ -1,6 +1,6 @@
 Cryptoswap pools contain two volatile assets and are designed to offer deep liquidity for a wide variety of assets with different levels of volatility.
 
-[Learn more about v2 pools](../../lp/overview.md)
+[Learn more about Cryptoswap pools](../../pools/overview.md)
 
 *For instance, the [CVX/ETH pool](https://curve.fi/#/ethereum/pools/cvxeth/deposit) is used in the examples below.*
 
