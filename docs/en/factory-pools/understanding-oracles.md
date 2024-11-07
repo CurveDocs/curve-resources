@@ -1,21 +1,21 @@
-This article primarily covers the role of internal “price oracles” within Curve Finance v2 pools, with a brief note at the end of [**LLAMMA price oracles**](./understanding-oracles.md#llamma).
+This article primarily covers the role of internal “price oracles” within Curve Finance v2 pools, with a brief note at the end of [**LLAMMA price oracles**](../factory-pools/understanding-oracles.md#llamma).
 
 Please note that Curve v1 and v2 pools do not rely on external price oracles. **Misuse of external price oracles is a contributing factor to several major DeFi hacks.** If you are looking to use Curve’s “price oracle” functions, or any price oracle, to provide on-chain pricing data in a decentralized application you are building, we recommend extreme caution.
 
 ###  **Purpose**
 
-​[**Curve v2 pools**](./../base-features/understanding-crypto-pools.md), which consist of assets with volatile prices, require a means of tracking prices. Instead of relying on external oracles, the pool instead calculates the price of these assets internally based on the trading activity within the pool.
+​[**Curve v2 pools**](../base-features/understanding-crypto-pools.md), which consist of assets with volatile prices, require a means of tracking prices. Instead of relying on external oracles, the pool instead calculates the price of these assets internally based on the trading activity within the pool.
 
 This is tracked by two similar but distinct parameters:
 
 *   **Price Oracle:** The pool’s expectation of the asset’s price
 *   **Price Scale:** The price based on the pool’s actual concentration of liquidity
     
-Pools keep track of recent trades within the pool as a variable called **`last_prices`**. The **`price_oracle`** is calculated as an [**exponential moving average**](./understanding-oracles.md#exponential-moving-average) of recent trade prices. The **`price_oracle`** represents what the pool believes is the fair price of the asset .
+Pools keep track of recent trades within the pool as a variable called **`last_prices`**. The **`price_oracle`** is calculated as an [**exponential moving average**](../factory-pools/understanding-oracles.md#exponential-moving-average) of recent trade prices. The **`price_oracle`** represents what the pool believes is the fair price of the asset .
 
-In contrast, **`price_scale`** is a snapshot of how the liquidity in the pool is _actually_ distributed. For this reason, **`price_scale`** lags **`price_oracle`**. As users make trades, the pool calculates how to [profitably readjust liquidity](./understanding-oracles.md#profits-and-liquidity-balances), and the **`price_scale`** moves in the direction of the **`price_oracle`**.
+In contrast, **`price_scale`** is a snapshot of how the liquidity in the pool is _actually_ distributed. For this reason, **`price_scale`** lags **`price_oracle`**. As users make trades, the pool calculates how to [profitably readjust liquidity](../factory-pools/understanding-oracles.md#profits-and-liquidity-balances), and the **`price_scale`** moves in the direction of the **`price_oracle`**.
 
-![Price Data](./../images/ui/price-data.webp)
+![Price Data](../images/ui/price-data.webp)
 
 Price Oracle and Price Scale shown in the Curve UI
 
@@ -27,7 +27,7 @@ For comparison, traders commonly rely on a “simple moving average” as a tech
 
 The “exponential moving average" is similar, except it applies a weighting to emphasize newer data over older data. This weighting falls off exponentially as it looks further back in time, so it can react quicker to recent trends.
 
-![EMA](./../images/ui/ema.webp)
+![EMA](../images/ui/ema.webp)
 
 ### **Updates**
 
@@ -66,9 +66,9 @@ We do not recommend using Curve pools by themselves as canonical price oracles. 
 
 Curve pools nonetheless include protections against some forms of manipulation. The logic of the Curve **`price_oracle`** variable only updates once per block, which makes it more resistant to manipulation from malicious trading activity within a single block.
 
-Due to the fact that changes to **`price_oracle`** are dampened by an [**exponential moving average**](./understanding-oracles.md#exponential-moving-average), attempts to manipulate the price may succeed but would require a prolonged attack over several blocks.
+Due to the fact that changes to **`price_oracle`** are dampened by an [**exponential moving average**](../factory-pools/understanding-oracles.md#exponential-moving-average), attempts to manipulate the price may succeed but would require a prolonged attack over several blocks.
 
-![CVX EMA Oracle](./../images/ui/cvx-oracle.png)
+![CVX EMA Oracle](../images/ui/cvx-oracle.png)
 
 Actual $CVX price versus CVX-ETH Pool Price Oracle and Price Scale during rapid volatility
 
@@ -86,8 +86,8 @@ The LLAMMA use of oracles is quite different than Curve v2 pools in that it can 
 
 For example, LLAMMA uses **`price_oracle`** to convert $ETH to $crvUSD at a specific collateral price. When the external price is higher than the upper price (internally: **`P_UP`**), all assets in the band range are converted to $ETH. When the price is lower than the lower price (internally: **`P_DOWN`**), all assets are converted to $crvUSD. When the oracle price is in the middle, the current band is partially converted, with the exact proportion determined by price changes.
 
-![LLAMMA](./../images/ui/llamma.png)
+![LLAMMA](../images/ui/llamma.png)
 
-When the external price changes, an arbitrage opportunity exists. External arbitrageurs can deposit $ETH or $crvUSD to balance the pool, until the pool price reaches parity with the external price. LLAMMA applies an [**exponential moving average**](./understanding-oracles.md#exponential-moving-average) to the **`price_oracle`** to prevent users from absorbing losses due to drastic fluctuations.
+When the external price changes, an arbitrage opportunity exists. External arbitrageurs can deposit $ETH or $crvUSD to balance the pool, until the pool price reaches parity with the external price. LLAMMA applies an [**exponential moving average**](../factory-pools/understanding-oracles.md#exponential-moving-average) to the **`price_oracle`** to prevent users from absorbing losses due to drastic fluctuations.
 
 More information on price oracles and other LLAMMA dynamics are [**available at this article**](https://mirror.xyz/0x07b05D3A1ed958944033060d058b8F0771ad1A6e/H0m3nyq65anotTWhTdWDIWEfMPOofNPy-0qyARYXNF4).

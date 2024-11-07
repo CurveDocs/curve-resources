@@ -38,7 +38,7 @@ Base pools are an old Curve concept, yet still working in some pools such as GUS
 
 The act of locking your CRV to earn more CRV on your provided liquidity.
 
-[Boosting your CRV Rewards](./../reward-gauges/boosting-your-crv-rewards.md)
+[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
 
 ## **CRV**
 
@@ -72,7 +72,7 @@ When you deposit into a Curve pool, you receive a counter party token which repr
 
 Stands for vote-escrowed CRV. They are CRV locked for the purpose of voting and earning fees.
 
-[Understanding $CRV](./../crv-token/overview.md)
+[Understanding $CRV](../crv-token/overview.md)
 
 ## **Vote-locked CRV**
 

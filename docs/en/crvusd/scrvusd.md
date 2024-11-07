@@ -1,6 +1,6 @@
 <h1>Savings crvUSD (scrvUSD)</h1>
 
-![scrvUSD](../../../en/images/scrvusd/scrvusd_150.png){: .centered}
+![scrvUSD](../images/scrvusd/scrvusd_150.png){: .centered}
 
 Savings crvUSD, abbreviated as scrvUSD, is an **interest-bearing stablecoin** that earns yield simply by holding the token. Users do not need to take any action whatsoever, as the yield is passively accrued.
 
@@ -49,8 +49,8 @@ Users can obtain scrvUSD by simply depositing crvUSD into the Savings Vault[^2].
 
 Let's look at an example:
 
-![scrvUSD as a user](../../../en/images/scrvusd/scrvusd_as_a_user_light.svg#only-light){: .centered }
-![scrvUSD as a user](../../../en/images/scrvusd/scrvusd_as_a_user_dark.svg#only-dark){: .centered }
+![scrvUSD as a user](../images/scrvusd/scrvusd_as_a_user_light.svg#only-light){: .centered }
+![scrvUSD as a user](../images/scrvusd/scrvusd_as_a_user_dark.svg#only-dark){: .centered }
 
 
 ---
@@ -75,8 +75,8 @@ The yield paid to scrvUSD holders comes directly from the crvUSD interest rate f
 1. The amount of crvUSD fees generated.
 2. The percentage of the total crvUSD fees allocated to scrvUSD, as determined by the Curve DAO.  [Currently, the DAO is voting on a proposal](#what-is-the-current-proposal) with a **5% minimum**, and **10% maximum** revenue share for scrvUSD.
 
-![Revenue Distributor](../../../en/images/scrvusd/scrvusd_fee_split_light.svg#only-light){: .centered style="width: 75%;" }
-![Revenue Distributor](../../../en/images/scrvusd/scrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
+![Revenue Distributor](../images/scrvusd/scrvusd_fee_split_light.svg#only-light){: .centered style="width: 75%;" }
+![Revenue Distributor](../images/scrvusd/scrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
 
 The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on the ratio of crvUSD staked in scrvUSD compared to the total circulating supply of crvUSD. The DAO sets both a minimum and maximum percentage of crvUSD fees allocated to scrvUSD, which serve as upper and lower bounds.  See the [current proposal above](#what-is-the-current-proposal) for an example.
 
@@ -88,15 +88,15 @@ The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on th
 
 The current stagnation and contraction of crvUSD supply pose long-term challenges for veCRV holders and the DAO. Let's take a look at what is happening without scrvUSD:
 
-![scrvUSD before State Diagram](../../../en/images/scrvusd/before_scrvusd_light.svg#only-light){: .centered style="width: 85%;" }
-![scrvUSD before State Diagram](../../../en/images/scrvusd/before_scrvusd_dark.svg#only-dark){: .centered style="width: 85%;" }
+![scrvUSD before State Diagram](../images/scrvusd/before_scrvusd_light.svg#only-light){: .centered style="width: 85%;" }
+![scrvUSD before State Diagram](../images/scrvusd/before_scrvusd_dark.svg#only-dark){: .centered style="width: 85%;" }
 
 Borrowers mint crvUSD to buy assets, which leads to selling crvUSD. This lowers the price of crvUSD, which in turn raises borrowing rates, making crvUSD less attractive to borrow.
 
 **With scrvUSD in place, as borrowing rates rise, the yield (APR) for scrvUSD increases simultaneously.** Due to this mechanism, buying crvUSD to convert it to scrvUSD becomes attractive, increasing demand for crvUSD and tightening the peg (which leads to lower borrowing rates again):
 
-![scrvUSD after State Diagram](../../../en/images/scrvusd/after_scrvusd_light.svg#only-light){: .centered style="width: 90%;" }
-![scrvUSD after State Diagram](../../../en/images/scrvusd/after_scrvusd_dark.svg#only-dark){: .centered style="width: 90%;" }
+![scrvUSD after State Diagram](../images/scrvusd/after_scrvusd_light.svg#only-light){: .centered style="width: 90%;" }
+![scrvUSD after State Diagram](../images/scrvusd/after_scrvusd_dark.svg#only-dark){: .centered style="width: 90%;" }
 
 Over time, with these dynamics, the peg should become tighter, and borrowing rates should stabilize. This **will allow the crvUSD supply to grow sustainably, increasing revenue for veCRV holders**.
 

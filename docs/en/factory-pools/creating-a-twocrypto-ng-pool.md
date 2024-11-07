@@ -1,6 +1,6 @@
 <h1>Creating a Twocrypto-NG Pool</h1>
 
-A twocrypto-NG pool is a liquidity pool containing two volatile assets using the CryptoSwap algorithm (Curve V2). For a better understanding of Curve v2, please see here: [**Understanding Curve v2**](./../base-features/understanding-crypto-pools.md).
+A twocrypto-NG pool is a liquidity pool containing two volatile assets using the CryptoSwap algorithm (Curve V2). For a better understanding of Curve v2, please see here: [**Understanding Curve v2**](../base-features/understanding-crypto-pools.md).
 
 Due to safety reasons, the use of plain ETH is no longer possible. Instead, [wrapped ETH (wETH)](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) needs to be used.
 
@@ -108,4 +108,4 @@ On the right-hand side, there is a tab that summarizes all the tokens, parameter
   <figcaption></figcaption>
 </figure>
 
-After deployment, make sure to seed initial liquidity and [**create a gauge**](./../reward-gauges/creating-a-pool-gauge.md).
+After deployment, make sure to seed initial liquidity and [**create a gauge**](../reward-gauges/creating-a-pool-gauge.md).

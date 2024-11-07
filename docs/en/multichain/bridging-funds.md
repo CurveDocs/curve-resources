@@ -1,6 +1,6 @@
 In order to use Curve on chains other than Ethereum, you will need to _bridge_ funds to the sidechain. Curve operates on several chains, documented here:
 
-[Understanding Multichain](./understanding-multichain.md)
+[Understanding Multichain](../multichain/understanding-multichain.md)
 
 Bridges are not operated by Curve, so Curve cannot offer support for using bridges. The following issues may affect users of bridges, so make sure to do research and exercise caution.
 

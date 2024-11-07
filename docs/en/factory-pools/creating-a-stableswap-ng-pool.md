@@ -2,7 +2,7 @@
 
 The Stableswap pool creation is appropriate for assets expected to hold a price peg very close to each other, like a pair of dollarcoins. The creation wizard will guide you through the process of creating a pool, but if you have questions throughout you are encouraged to speak with a member of the Curve team in the [**Telegram**](https://t.me/curvefi) or [**Discord**](https://discord.gg/rgrfS7W).
 
-Stableswap pools are liquidity pools containing **up to eight tokens** using the StableSwap algorithm (Curve V1). For a better understanding of Curve V1, please see here: [**Understanding Curve V1**](./../base-features/understanding-curve.md).
+Stableswap pools are liquidity pools containing **up to eight tokens** using the StableSwap algorithm (Curve V1). For a better understanding of Curve V1, please see here: [**Understanding Curve V1**](../base-features/understanding-curve.md).
 
 
 !!!info "Stableswap-NG"
@@ -143,4 +143,4 @@ On the right-hand side, there is a tab that summarizes all the tokens, parameter
   <figcaption></figcaption>
 </figure>
 
-After deployment, make sure to seed initial liquidity and potentially [**create a gauge**](./../reward-gauges/creating-a-pool-gauge.md).
+After deployment, make sure to seed initial liquidity and potentially [**create a gauge**](../reward-gauges/creating-a-pool-gauge.md).

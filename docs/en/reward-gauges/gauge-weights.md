@@ -4,7 +4,7 @@ Simply put, a gauge weight translates into how much of the daily CRV inflation i
 
 For example on the below chart, the Y pool is currently receiving around 72% of the daily CRV inflation. This means that all liquidity providers in the Y pool share 72% of the daily CRV.
 
-![Gauge Weights](./../images/ui/gauge-weights-ypool.webp)
+![Gauge Weights](../images/ui/gauge-weights-ypool.webp)
 
 You can find each liquidity gauge relative weight on this page: [https://dao.curve.fi/minter/gauges](https://dao.curve.fi/minter/gauges)​
 
@@ -16,7 +16,7 @@ The gauge weight is updated once a week on Thursdays.
 
 ## **Who can vote for gauge weights?**
 
-Anybody who has vote [**locked CRV**](./../crv-token/overview.md) can vote to direct its voting power towards one or multiple Curve pools.
+Anybody who has vote [**locked CRV**](../crv-token/overview.md) can vote to direct its voting power towards one or multiple Curve pools.
 
 ## **How can I vote?**
 

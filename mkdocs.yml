@@ -6,42 +6,23 @@ docs_dir: 'docs'
 plugins:
   - search
   - autolinks
-  - i18n:                          # Add the i18n plugin
-      default_language: en
+#  - typeset
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: false
       languages:
-        en:
+        - locale: en
+          default: true
           name: English
           build: true
-          site_name: "Curve Resources"
-          docs_dir: 'docs/en'      # Path to English docs
-          site_dir: 'generated' # Where English site will be built
-        ru:
+        - locale: ru
           name: Русский
           build: true
-          site_name: "Curve Resources"
-          docs_dir: 'docs/ru'      # Path to Russian docs
-          site_dir: 'generated/ru' # Where Russian site will be built
+          nav: 
+            - Главная: index.md
+
   - minify:
       minify_html: true
-  - redirects:
-      redirect_maps:
-        "crv-token/crv-basics.md": "crv-token/faq.md"
-        "crv-token/crv-tokenomics.md": "crv-token/supply-distribution.md"
-        "lending/about.md": "lending/overview.md"
-        "lending/loan-creation.md": "lending/how-to-borrow.md"
-        "lending/supplying-assets.md": "lending/how-to-supply.md"
-        "crvusd/loan-management.md": "crvusd/loan-strategies.md"
-        "crvusd/loan-details.md": "crvusd/loan-concepts.md"
-        "resources/branding.md": "glossary-branding/branding.md"
-        "resources/glossary.md": "glossary-branding/glossary.md"
-        "resources/risks/pool.md": "risks-security/risks/pool.md"
-        "resources/risks/crvusd.md": "risks-security/risks/crvusd.md"
-        "resources/risks/lending.md": "risks-security/risks/lending.md"
-        "resources/security.md": "risks-security/security.md"
-        "governance/fee-collection-distribution.md": "vecrv/overview.md"
-        "crv-token/claiming-trading-fees.md": "vecrv/claiming-trading-fees.md"
-        "lending/understanding-lending.md": "lending/overview.md"
-        "crvusd/loan-details.md": "crvusd/loan-concepts.md"
 
 
 # extension
@@ -128,13 +109,6 @@ theme:
         name: Switch to light mode
 
 extra:
-  alternate:
-    - name: English
-      link: /
-      lang: en
-    - name: Русский
-      link: /ru/
-      lang: ru
   generator: false
   social:
     - icon: fontawesome/brands/telegram

@@ -7,8 +7,8 @@ Before taking a crvUSD loan a user should consider two factors that will influen
 
 Risk and Management styles can be thought of as spectrums, and they can be visualized in the image below.
 
-![loan strategies](./../images/crvusd/loan_strategies.svg#only-light){: .centered }
-![loan strategies](./../images/crvusd/loan_strategies_dark.svg#only-dark){: .centered }
+![loan strategies](../images/crvusd/loan_strategies.svg#only-light){: .centered }
+![loan strategies](../images/crvusd/loan_strategies_dark.svg#only-dark){: .centered }
 The above image shows 4 main quadrants:
 
 * **High risk and Passive**: This is a dangerous strategy, users employing this strategy typically max borrow and make very little changes to the loan until they close or are hard-liquidated.  Some users are lucky and do well, but many are hard-liquidated.  Use at your own risk.
@@ -199,8 +199,8 @@ Strategy:
 Risks:
 
 * The user must monitor their loan health to stay out of any liquidations (soft or hard) as losses from liquidation may be larger than profit from the rate arbitrage.
-* crvUSD risk, i.e., smart contract risk from crvUSD stablecoin and the crvUSD markets, see crvUSD risk disclaimer [here](./../risks-security/risks/crvusd.md)
-* Smart contract and bad debt risk from lending markets, i.e., if you supply to Curve lending, see Curve Lending risk disclaimer [here](./../risks-security/risks/lending.md).  Otherwise please research and be informed of risks for other platforms.  **Mentions of platforms here is not an endorsement of their safety.**
+* crvUSD risk, i.e., smart contract risk from crvUSD stablecoin and the crvUSD markets, see crvUSD risk disclaimer [here](../risks-security/risks/crvusd.md)
+* Smart contract and bad debt risk from lending markets, i.e., if you supply to Curve lending, see Curve Lending risk disclaimer [here](../risks-security/risks/lending.md).  Otherwise please research and be informed of risks for other platforms.  **Mentions of platforms here is not an endorsement of their safety.**
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

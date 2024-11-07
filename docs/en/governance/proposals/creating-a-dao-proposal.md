@@ -14,7 +14,7 @@ To actually create an on-chain proposal, 2500 veCRV are required. (1)
 
 Visit the Curve DAO: [https://dao.curve.fi/dao](https://dao.curve.fi/dao), select your type of vote and submit it.
 
-![Create Vote UI](./../../images/ui/crate-vote.webp)
+![Create Vote UI](../../images/ui/crate-vote.webp)
 
 ## **Creating your proposal**
 
@@ -22,6 +22,6 @@ Every DAO proposal must be accompanied with a proposal on the Curve governance f
 
 You will then be presented with a template to help you present your proposed choices to the community.
 
-![Proposal Guidelines](./../../images/ui/proposal_guidelines.webp)
+![Proposal Guidelines](../../images/ui/proposal_guidelines.webp)
 
 After that's done, be sure to engage with members of the community who have questions about your proposal.

@@ -130,7 +130,7 @@ For the calculation of the lend rate, see [here](./overview.md#lend-rate).
 
 ### What are the risks of using crvUSD
 
-A risk disclaimer can be found [here](./../risks-security/risks/crvusd.md)
+A risk disclaimer can be found [here](../risks-security/risks/crvusd.md)
 
 
 ### How can I best manage my risks when borrowing assets?

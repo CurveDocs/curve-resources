@@ -42,7 +42,7 @@ CRV was officially launched on the 13th of August 2020.
 
 ## **What is the vote locking boost?**
 
-When vote locking CRV, you will also earn a boost on your provided liquidity of up to 2.5x. The goal is to incentivize users to participate in governance by rewarding them with a bigger share of the daily CRV inflation.  See more [here](./../reward-gauges/boosting-your-crv-rewards.md)
+When vote locking CRV, you will also earn a boost on your provided liquidity of up to 2.5x. The goal is to incentivize users to participate in governance by rewarding them with a bigger share of the daily CRV inflation.  See more [here](../reward-gauges/boosting-your-crv-rewards.md)
 
 ## **When did the boost start?**
 
@@ -58,7 +58,7 @@ Your veCRV weight gradually decreases as your escrowed tokens approach their loc
 
 ## **How is your boost calculated?**
 
-To reach your maximum boost of 2.5x, there are several parameters to take into consideration.  You can see the formula for boosting [here](./../reward-gauges/boosting-your-crv-rewards.md#formula)
+To reach your maximum boost of 2.5x, there are several parameters to take into consideration.  You can see the formula for boosting [here](../reward-gauges/boosting-your-crv-rewards.md#formula)
 
 You can find the current DAO voting power at this address: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
 
@@ -84,7 +84,7 @@ After creating or adding to your lock, you need to click the apply boost button 
 
 Click below for a guide on how locking and boosting your CRV rewards
 
-[Boosting your CRV Rewards](./../reward-gauges/boosting-your-crv-rewards.md)
+[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
 
 ## **How to know my boost is active?**
 

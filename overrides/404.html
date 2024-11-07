@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+{% block extrahead %}
+<script>
+    // Create an object containing all your redirects
+    const redirects = {
+        "/crv-token/crv-basics": "/crv-token/faq",
+        "/crv-token/crv-tokenomics": "/crv-token/supply-distribution",
+        "/lending/about": "/lending/overview",
+        "/lending/loan-creation": "/lending/how-to-borrow",
+        "/lending/supplying-assets": "/lending/how-to-supply",
+        "/crvusd/loan-management": "/crvusd/loan-strategies",
+        "/crvusd/loan-details": "/crvusd/loan-concepts",
+        "/resources/branding": "/glossary-branding/branding",
+        "/resources/glossary": "/glossary-branding/glossary",
+        "/resources/risks/pool": "/risks-security/risks/pool",
+        "/resources/risks/crvusd": "/risks-security/risks/crvusd",
+        "/resources/risks/lending": "/risks-security/risks/lending",
+        "/resources/security": "/risks-security/security",
+        "/governance/fee-collection-distribution": "/vecrv/overview",
+        "/crv-token/claiming-trading-fees": "/vecrv/claiming-trading-fees",
+        "/lending/understanding-lending": "/lending/overview",
+        "/crvusd/loan-details": "/crvusd/loan-concepts"
+    };
+
+    (function redirect() {
+        const currentPath = window.location.pathname.replace(/\.md$/, ''); // Remove .md if present
+        const redirectUrl = redirects[currentPath];
+        if (redirectUrl) {
+            window.location.href = `${window.location.origin}${redirectUrl}`;
+            return;
+        }
+    })();		
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>404 - Page Not Found</h1>
+<p>If you're not automatically redirected, please check the URL or return to the <a href="/">homepage</a>.</p>
+{% endblock %}

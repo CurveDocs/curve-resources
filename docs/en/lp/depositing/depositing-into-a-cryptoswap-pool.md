@@ -1,6 +1,6 @@
 Cryptoswap pools contain two volatile assets and are designed to offer deep liquidity for a wide variety of assets with different levels of volatility.
 
-[Learn more about v2 pools](./../../base-features/understanding-crypto-pools.md)
+[Learn more about v2 pools](../../base-features/understanding-crypto-pools.md)
 
 *For instance, the [CVX/ETH pool](https://curve.fi/#/ethereum/pools/cvxeth/deposit) is used in the examples below.*
 
@@ -33,5 +33,5 @@ If you already have LP tokens, you can also directly stake them into the gauge u
 
 *You can click the link below to learn how to boost your CRV rewards by locking CRV on the Curve DAO:*
 
-- [Boosting your CRV Rewards](./../../reward-gauges/boosting-your-crv-rewards.md)
-- [Staking your $CRV](./../../vecrv/locking-your-crv.md)
+- [Boosting your CRV Rewards](../../reward-gauges/boosting-your-crv-rewards.md)
+- [Staking your $CRV](../../vecrv/locking-your-crv.md)

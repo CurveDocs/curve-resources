@@ -7,13 +7,13 @@ Like all documentation within this guide, this article is intended to be detaile
 
 # **Types of Yield**
 
-![Curve Pools](./../images/ui/pools.png)
+![Curve Pools](../images/ui/pools.png)
 
 Curve UI displaying different types of displayed Curve yield (tAPY and tAPR).
 
 In the above screenshot you can see a Curve pool has the potential to offer many different types of yield. The documentation provides an overview of the different types of yield here:
 
-[**Understanding CRV**](./../crv-token/overview.md)
+[**Understanding CRV**](../crv-token/overview.md)
 
 It’s important to remember that these numbers are a projections of historical pool performance. The user would get this rate if the pool performance stays exactly the same for one year.
 
@@ -33,7 +33,7 @@ When Curve pools are launched, they receive a value for both the **`fee`** (the 
 
 These fees are displayed on the Curve UI pool page:
 
-![UI Pool Fee](./../images/ui/fee.png)
+![UI Pool Fee](../images/ui/fee.png)
 
 These parameters may also be updated in the future by the Curve DAO by calling the **`commit_new_fee`** method. If the fees are in the process of being changed, these are readable in the smart contract via the **`future_fee`** and **`future_admin_fee`** methods.
 
@@ -50,7 +50,7 @@ $$\left( \frac{\text{virtual_price}(t=0)}{\text{virtual_price}(t=-1)} \right)^{3
 
 In other words, the vAPY measures the change in the pool’s _**"virtual price"**_ between today and yesterday, then annualizes this rate. The _**"virtual price"**_ is a measure of the pool growth over time, and is viewable directly on the UI.
 
-![Virtual Price](./../images/ui/virtual-price.webp)
+![Virtual Price](../images/ui/virtual-price.webp)
 
 The UI receives this value directly by calling the **`get_virtual_price`** method on the pool contract.
 
@@ -87,7 +87,7 @@ These parameters are obtained from various data sources, mostly on-chain:
 *   **`inflation_rate:`** The inflation rate of the $CRV token, accessed from the `rate` function of the $CRV token.
 *   **`relative_weight:`** Based on weekly voting, each Curve pool rewards gauge has a weighting relative to all other Curve gauges. This value can be calculated by calling the same function on the Curve [**gauge controller contract**](https://curve.readthedocs.io/dao-gauges.html#the-gauge-controller).
     
-![Gauge Weights](./../images/ui/gauge-weights.webp)
+![Gauge Weights](../images/ui/gauge-weights.webp)
 
 ​[https://dao.curve.fi/](https://dao.curve.fi/)​
 
@@ -97,7 +97,7 @@ These parameters are obtained from various data sources, mostly on-chain:
     
 The magic number `12614400` is number of seconds in a year `(60 * 60 * 24 * 365 = 31536000)` times 0.4. In this case the 0.4 is due to the effect of boosts (minimum boost of 1 / maximum boost of 2.5 = 0.4).
 
-As shown in the UI, all tAPR values are displayed as a range, with the base rate on the left of the arrow representing the default rate one would receive if the user has no boost, and the value on the right of the arrow representing the maximum value a user could receive if the user has the maximum boost, which is 2.5 times higher than the minimum boost. Further details about calculating boosts [**are provided here**](./../reward-gauges/boosting-your-crv-rewards.md).
+As shown in the UI, all tAPR values are displayed as a range, with the base rate on the left of the arrow representing the default rate one would receive if the user has no boost, and the value on the right of the arrow representing the maximum value a user could receive if the user has the maximum boost, which is 2.5 times higher than the minimum boost. Further details about calculating boosts [**are provided here**](../reward-gauges/boosting-your-crv-rewards.md).
 
 For developers, here are relevant links to the technical documentation:
 
@@ -110,11 +110,11 @@ For developers, here are relevant links to the technical documentation:
 
 All pools may permissionlessly stream other token rewards without approval from the Curve DAO. The UI displays these bonus rewards only when applicable. In the example of stETH below, note how the pool is streaming $LDO tokens in addition to $CRV rewards.
 
-![tAPR Rewards](./../images/ui/tAPR.webp)
+![tAPR Rewards](../images/ui/tAPR.webp)
 
 ​[**Pool Overview Page**](https://curve.fi/#/ethereum/pools)​
 
-![stETH Pool Overview](./../images/ui/steth-overview.webp)
+![stETH Pool Overview](../images/ui/steth-overview.webp)
 
 ​[**stETH Pool Page**](https://curve.fi/#/ethereum/pools/steth/deposit)​
 
