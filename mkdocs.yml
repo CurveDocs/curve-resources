@@ -8,29 +8,6 @@ plugins:
   - typeset
   - minify:
       minify_html: true
-  - redirects:
-      redirect_maps:
-        "crv-token/crv-basics.md": "crv-token/faq.md"
-        "crv-token/crv-tokenomics.md": "crv-token/supply-distribution.md"
-        "lending/about.md": "lending/overview.md"
-        "lending/loan-creation.md": "lending/how-to-borrow.md"
-        "lending/supplying-assets.md": "lending/how-to-supply.md"
-        "crvusd/loan-management.md": "crvusd/loan-strategies.md"
-        "crvusd/loan-details.md": "crvusd/loan-concepts.md"
-        "resources/branding.md": "glossary-branding/branding.md"
-        "resources/glossary.md": "glossary-branding/glossary.md"
-        "resources/risks/pool.md": "risks-security/risks/pool.md"
-        "resources/risks/crvusd.md": "risks-security/risks/crvusd.md"
-        "resources/risks/lending.md": "risks-security/risks/lending.md"
-        "resources/security.md": "risks-security/security.md"
-        "governance/fee-collection-distribution.md": "vecrv/overview.md"
-        "crv-token/claiming-trading-fees.md": "vecrv/claiming-trading-fees.md"
-        "lending/understanding-lending.md": "lending/overview.md"
-        "crvusd/loan-details.md": "crvusd/loan-concepts.md"
-        "factory-pools/creating-a-twocrypto-ng-pool.md": "pool-creation/creating-a-cryptoswap-pool.md"
-        "factory-pools/creating-a-stableswap-ng-pool.md": "pool-creation/creating-a-stableswap-pool.md"
-        "base-features/understanding-crypto-pools.md": "pools/overview.md"
-        "lp/calculating-yield.md": "pools/calculating-yield.md"
 
 
 # extension
