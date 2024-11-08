@@ -1,8 +1,5 @@
 The [Curve UI](https://curve.fi/) offers a variety of charts related to **token prices**, as well as an **overview of exchanges and liquidity activities** (such as adding or removing liquidity) for each pool."
 
-!!!info 
-    Chart and Pool Activity information is currently only available for pools on ethereum mainnet.
-
 ## **Charts**
 
 LP tokens are tokens received upon depositing assets into a liquidity pool. These tokens represent the holder's share of the pool and can be redeemed for a portion of the funds, plus any fees accrued over time. Similar to other tokens, their value is contingent on the prices of the underlying assets in the liquidity pool.

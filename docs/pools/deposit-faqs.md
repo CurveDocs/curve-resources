@@ -21,7 +21,12 @@ When you go to the deposit page and deposit one stablecoin, it then gets split b
 
 ## **Does the coin I deposit matter?**
 
-Besides the deposit bonus explained below, it doesn’t matter. Your tokens will get split into the pool and it doesn’t affect your returns so you can deposit one, some or all the coins into the pool without worrying about it affecting your returns.
+For most typical deposits, it doesn't matter which coin you use - your tokens will automatically get split into the pool proportions. However, there are two important considerations:
+
+1. There's a deposit bonus explained below that can affect your choice.
+2. If you're making a large deposit relative to the pool's size or if the pool has low liquidity, depositing a single token could result in unfavorable exchange rates due to slippage. In these cases, it's better to pre-swap your tokens to match the pool's proportions before depositing.
+
+For normal-sized deposits into liquid pools, you can comfortably deposit one, some, or all the coins without worrying about it affecting your returns.
 
 ## **Understanding deposit bonuses**
 
