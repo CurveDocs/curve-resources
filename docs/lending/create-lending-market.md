@@ -4,9 +4,9 @@
 
 Before attempting to create a lending market, a curve pool for the ASSET paired with crvUSD which implements an unmanipulatable price oracle must exist.   Pools with unmanipulatable oracles are the following:
 
- - [twocrypto-ng](https://docs.curve.fi/references/deployed-contracts/#twocrypto-ng) - for 2 unpegged assets, e.g., crvUSD/CRV
- - [tricrypto-ng](https://docs.curve.fi/references/deployed-contracts/#tricrypto-ng) - for 3 unpegged assets, e.g., crvUSD/WETH/CRV
- - [stableswap-ng](https://docs.curve.fi/references/deployed-contracts/#stableswap-ng) - for 2 pegged assets, e.g., crvUSD/USDC
+ - [Cryptoswap Two Asset Pool](https://docs.curve.fi/references/deployed-contracts/#twocrypto-ng) - for two unpegged assets, e.g., crvUSD/CRV
+ - [Cryptoswap Three Asset Pool](https://docs.curve.fi/references/deployed-contracts/#tricrypto-ng) - for three unpegged assets, e.g., crvUSD/WETH/CRV
+ - [Stableswap Pool](https://docs.curve.fi/references/deployed-contracts/#stableswap-ng) - for two or more pegged assets, e.g., crvUSD/USDC
 
 
 !!!info "Custom Price Oracles" 
@@ -14,7 +14,7 @@ Before attempting to create a lending market, a curve pool for the ASSET paired 
 
 The easiest way to create a pool is through the official [Create Pool UI](https://curve.fi/#/ethereum/create-pool).
 
-Guides are available for creating a [stableswap-ng pool](../factory-pools/creating-a-stableswap-ng-pool.md), [twocrypto-ng pool](../factory-pools/creating-a-twocrypto-ng-pool.md), and a [tricrypto-ng pool](../factory-pools/creating-a-tricrypto-ng-pool.md).
+Guides are available for creating a [Stableswap Pool](../pool-creation/creating-a-stableswap-pool.md), and creating a [Cryptoswap Pool](../pool-creation/creating-a-cryptoswap-pool.md)
 
 ---
 

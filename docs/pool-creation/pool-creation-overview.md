@@ -25,23 +25,15 @@ To get started, visit the [**`Pool Creation`**](https://curve.fi/#/ethereum/crea
 
     Stableswap pools are liquidity pools containing up to eight pegged assets, for example crvUSD <> USDT <> USDC.
 
-    [:octicons-arrow-right-24: `Getting started`](./creating-a-stableswap-ng-pool.md)
+    [:octicons-arrow-right-24: `Getting started`](./creating-a-stableswap-pool.md)
 
--   **Twocrypto NG**
-
-    ---
-
-    Twocrypto pools are liquidity pools containing two volatile assets, for example CRV <> ETH.
-
-    [:octicons-arrow-right-24: `Getting started`](./creating-a-twocrypto-ng-pool.md)
-
--   **Tricrypto NG**
+-   **Cryptoswap**
 
     ---
 
-    Tricrypto pools are liquidity pools containing three volatile assets, for example crvUSD <> BTC <> ETH.
+    Cryptoswap pools are liquidity pools containing two or three volatile assets, for example CRV <> ETH.
 
-    [:octicons-arrow-right-24: `Getting started`](./creating-a-tricrypto-ng-pool.md)
+    [:octicons-arrow-right-24: `Getting started`](./creating-a-cryptoswap-pool.md)
 
 </div>
 

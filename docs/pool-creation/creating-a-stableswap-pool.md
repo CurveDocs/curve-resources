@@ -2,12 +2,11 @@
 
 The Stableswap pool creation is appropriate for assets expected to hold a price peg very close to each other, like a pair of dollarcoins. The creation wizard will guide you through the process of creating a pool, but if you have questions throughout you are encouraged to speak with a member of the Curve team in the [**Telegram**](https://t.me/curvefi) or [**Discord**](https://discord.gg/rgrfS7W).
 
-Stableswap pools are liquidity pools containing **up to eight tokens** using the StableSwap algorithm (Curve V1). For a better understanding of Curve V1, please see here: [**Understanding Curve V1**](../base-features/understanding-curve.md).
+Stableswap pools are liquidity pools containing **up to eight tokens** using the StableSwap algorithm (Curve V1). For a better understanding of StableSwap, please see here: [**Understanding Curve Pools**](../pools/overview.md).
 
 
 !!!info "Stableswap-NG"
     StableSwap-NG is an improved and refined version of the first StableSwap implementation. It is highly gas optimized and also includes dynamic fees which increases as liquidity utilization increases.
-
 
 ---
 

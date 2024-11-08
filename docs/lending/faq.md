@@ -40,7 +40,7 @@ The maximum amount that can be borrowed is also influenced by other factors, suc
 
 ### What is the difference between self-liquidating and repaying?
 
-You cannot self-liquidate a partial amount of a loan, self-liquidating closes the loan, but you can repay a partial amount, e.g., 20% of the debt, this increases the health of the loan.  If the repayment takes you out of soft-liquidation, your bands may move.
+You cannot self-liquidate a partial amount of a loan, self-liquidating closes the loan, but you can repay a partial amount, e.g., 20% of the debt, this increases the health of the loan.  Your bands will not move if you repay some debt while in soft-liquidation.
 
 When repaying and self-liquidating the whole loan, repaying and self liquidating work slightly differently, let's show this using a market lending crvUSD using WETH as collateral:
 
@@ -87,7 +87,7 @@ When the collateral price falls into the liquidation range, adding new collatera
 
 ### What happens to the collateral in the event of hard liquidation?
 
-In the event of a hard liquidation, all available collateral is sold off by the AMM system, the debt is covered, and the loan is closed.
+In the event of a hard liquidation, all available collateral is offered for sale at a discount.  Anyone can come and claim the collateral by repaying the remaining debt, after which the loan is closed.
 
 
 ### What is a ‘liquidation discount’ and how is the 'liquidation discount' calculated during a liquidation?
