@@ -23,32 +23,34 @@
         "/factory-pools/creating-a-twocrypto-ng-pool": "/pool-creation/creating-a-cryptoswap-pool",
         "/factory-pools/creating-a-stableswap-ng-pool": "/pool-creation/creating-a-stableswap-pool",
         "/base-features/understanding-crypto-pools": "/pools/overview",
-        "/lp/calculating-yield/#base-vapy": "/pools/calculating-yield/#base-vapy"
+        "/lp/calculating-yield/#base-vapy": "/pools/calculating-yield/#base-vapy",
+        "/lp/calculating-yield": "/pools/calculating-yield",
     };
 
     (function redirect() {
-        // Get the path without .md if present
-        const cleanPath = window.location.pathname.replace(/\.md$/, '');
-        // Add the hash if it exists
-        const fullPath = cleanPath + (window.location.hash || '');
+        // Remove .md extension first
+        const pathWithoutMd = window.location.pathname.replace(/\.md$/, '');
+        const hash = window.location.hash;
+        console.log(pathWithoutMd, hash);
+        let cleanPath;
         
-        // First try the full path with hash
-        let redirectUrl = redirects[fullPath];
-        
-        // If no match found, try just the path without hash
-        if (!redirectUrl) {
-            redirectUrl = redirects[cleanPath];
+        if (hash) {
+            // Keep slash on path but remove it from end of hash if present
+            cleanPath = pathWithoutMd + hash.replace(/\/$/, '');
+        } else {
+            // No hash - remove trailing slash from path
+            cleanPath = pathWithoutMd.replace(/\/$/, '');
         }
-        
+        console.log(cleanPath);
+        // Check redirects
+        const redirectUrl = redirects[cleanPath];
+        console.log(redirectUrl);
         if (redirectUrl) {
-            // If the original redirect doesn't include a hash but we had one, append it
-            if (!redirectUrl.includes('#') && window.location.hash) {
-                redirectUrl += window.location.hash;
-            }
-            window.location.href = `${window.location.origin}${redirectUrl}`;
+            // Add trailing slash to final redirect
+            window.location.href = `${window.location.origin}${redirectUrl}/`;
             return;
         }
-    })();        
+    })();
 </script>
 {% endblock %}
 
