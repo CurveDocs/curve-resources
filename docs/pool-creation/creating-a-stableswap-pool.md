@@ -1,4 +1,4 @@
-<h1>Creating a Stableswap-NG pool</h1>
+<h1>Creating a Stableswap pool</h1>
 
 The Stableswap pool creation is appropriate for assets expected to hold a price peg very close to each other, like a pair of dollarcoins. The creation wizard will guide you through the process of creating a pool, but if you have questions throughout you are encouraged to speak with a member of the Curve team in the [**Telegram**](https://t.me/curvefi) or [**Discord**](https://discord.gg/rgrfS7W).
 
