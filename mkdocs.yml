@@ -192,7 +192,7 @@ nav:
     - crvUSD: multichain/crvusd.md
     - Understanding multi-chain: multichain/understanding-multichain.md
     - Bridging funds: multichain/bridging-funds.md
-    - How to Bridge crvUSD to BSC: multichain/bridging-crvusd-to-bsc.md
+    - How to Bridge CRV, crvUSD and scrvUSD to L1s: multichain/bridging-crvusd-to-bsc.md
 
   - Support & Troubleshooting:
     - Support: troubleshooting/support.md
