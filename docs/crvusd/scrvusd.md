@@ -65,7 +65,7 @@ The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on th
 
 !!!example "How much crvUSD revenue will be allocated to scrvUSD?"
 
-    Currently, the DAO has allocated a 5% minimum and a 10% maximum of crvUSD revenue to go to scrvUSD.  If the revenue from crvUSD is $100k in a week then: 
+    Currently, the DAO has allocated a **5% minimum** and a **10% maximum** of crvUSD revenue to go to scrvUSD.  If the revenue from crvUSD is $100k in a week then: 
 
     - If 2% of crvUSD is staked, 5% of the $100k will be allocated to scrvUSD.
     - If 8% of crvUSD is staked, 8% of the $100k will be allocated to scrvUSD.
