@@ -158,14 +158,10 @@ nav:
   - Pools:
     - Overview: pools/overview.md
     - Deposit FAQ: pools/deposit-faqs.md
+    - Depositing into a Stableswap Pool: pools/depositing-into-a-stableswap-pool.md
+    - Depositing into a Cryptoswap Pool: pools/depositing-into-a-cryptoswap-pool.md
     - Calculating yield: pools/calculating-yield.md
     - Charts and Pool Activity: pools/charts_poolactivity.md
-    - Depositing:
-      - Overview: pools/depositing/depositing.md
-      - Depositing into the tri-pool: pools/depositing/depositing-into-the-tri-pool.md
-      - Depositing into a metapool: pools/depositing/depositing-into-a-metapool.md
-      - Depositing into a cryptoswap-pool: pools/depositing/depositing-into-a-cryptoswap-pool.md
-      - Depositing into a tricrypto-pool: pools/depositing/depositing-into-a-tricrypto-pool.md
 
   - Pool Creation:
     - Pool Creation Overview: pool-creation/pool-creation-overview.md
