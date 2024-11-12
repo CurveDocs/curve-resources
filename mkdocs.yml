@@ -184,11 +184,11 @@ nav:
       - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
 
   - Multi-Chain:
+    - Understanding multi-chain: multichain/understanding-multichain.md
     - CRV: multichain/crv.md
     - crvUSD: multichain/crvusd.md
-    - Understanding multi-chain: multichain/understanding-multichain.md
-    - Bridging funds: multichain/bridging-funds.md
-    - How to Bridge crvUSD to BSC: multichain/bridging-crvusd-to-bsc.md
+    - scrvUSD: multichain/scrvusd.md
+    - How to Bridge CRV, crvUSD and scrvUSD to L1s: multichain/bridging-curve-eco-tokens.md
 
   - Support & Troubleshooting:
     - Support: troubleshooting/support.md
