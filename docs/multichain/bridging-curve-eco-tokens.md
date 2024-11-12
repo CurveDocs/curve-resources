@@ -1,9 +1,9 @@
-<h1>User Guide: Bridging crvUSD</h1>
+<h1>User Guide: Bridging Curve Ecosystem Tokens</h1>
 
-Curve makes use of [LayerZero](https://layerzero.network/) to enable cross-chain transfers of `CRV`, `crvUSD` and `scrvUSD` to other L1 blockchains such as Binance Smart Chain, Avalanche and Fantom.
-
+Curve uses [LayerZero](https://layerzero.network/) to enable **cross-chain transfers of `CRV`, `crvUSD`, and `scrvUSD`** to other L1 blockchains such as `BinanceSmartChain`, `Avalanche`, and `Fantom`. This allows users to use any LayerZero-compatible bridge, such as Stargate, which many find simpler and more convenient. However, this guide focuses on bridging using only blockchain explorers, reducing reliance on third-party interfaces and avoiding any additional fees they may charge.
 
 This guide explains how to **bridge any of the three tokens from the Ethereum Mainnet to other L1 blockchains or vice versa**. The only requirements include having a wallet with the token to be bridged and ETH or the gas token of the L1, depending on the bridging direction, to cover transaction fees.
+
 
 !!!info "Contract Addresses"
     This guide is applicable for bridging `CRV`, `crvUSD` and `scrvUSD` to other L1 blockchains. When following this guide, one needs to make sure to use the correct contract addresses depending on the token to be bridged. 
@@ -157,7 +157,8 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
 
 ### Step 1: Approve the Bridge Contract to Spend Your Tokens
 
-1. Navigate to the token contract on the L1 blockchain you want to bridge from.
+1. Navigate to the token contract on the block explorer for the L1 network you want to bridge from. For example, to bridge crvUSD from BSC to Ethereum, you would need to navigate to the crvUSD token contract on BSCScan. All token addresses are listed in the table at the top of the page.
+
 
 2. Connect your wallet by navigating to **`Contract` > `Write Contract`** and clicking the **`Connect to Web3`** option.
 
