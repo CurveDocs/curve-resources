@@ -1,4 +1,4 @@
-<h1>Multi-Chain: Curve Stablecoin (crvUSD)</h1>
+<h1>Crosschain: Curve Stablecoin (crvUSD)</h1>
 
 crvUSD was first introduced in May 2023 on the Ethereum blockchain. As of [specific date or period], this stablecoin can be minted exclusively on the Ethereum mainnet.
 
