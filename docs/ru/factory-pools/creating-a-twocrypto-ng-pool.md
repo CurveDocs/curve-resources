@@ -1,92 +1,108 @@
-<h1>Creating a Twocrypto-NG Pool</h1>
+<h1>Создание пула Twocrypto-NG</h1>
 
-A twocrypto-NG pool is a liquidity pool containing two volatile assets using the CryptoSwap algorithm (Curve V2). For a better understanding of Curve v2, please see here: [**Understanding Curve v2**](../base-features/understanding-crypto-pools.md).
+Пул Twocrypto-NG — это пул ликвидности, содержащий два волатильных актива с использованием алгоритма CryptoSwap (Curve V2). Для лучшего понимания Curve V2, пожалуйста, смотрите здесь: [**Понимание Curve V2**](../base-features/understanding-crypto-pools.md).
 
-Due to safety reasons, the use of plain ETH is no longer possible. Instead, [wrapped ETH (wETH)](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) needs to be used.
-
-
----
-
-
-*The following documentation will present a rundown of the process of creating such a pool using the [Pool Creation Interface](https://curve.fi/#/ethereum/create-pool):*
-
-## **Tokens in Pool**
-
-In the token selection tab, two tokens can be chosen. By default, the UI allows a user to select two tokens, but clicking on the blue `Add token` button will extend the token selection by one more token, which would result in the [creation of a Tricrypto-NG pool](./creating-a-tricrypto-ng-pool.md).
-
-<figure markdown="span">
-  ![](../images/pool_creation/two_tokens_dark.png#only-dark){ width="400" }
-  ![](../images/pool_creation/two_tokens_light.png#only-light){ width="400" }
-  <figcaption></figcaption>
-</figure>
-
+По соображениям безопасности использование простого ETH больше невозможно. Вместо этого необходимо использовать [обернутый ETH (wETH)](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2).
 
 ---
 
+*Следующая документация представит обзор процесса создания такого пула с использованием [Интерфейса создания пула](https://curve.fi/#/ethereum/create-pool):*
 
-## **Parameters**
+## **Токены в пуле** {#tokens-in-pool}
 
-*The UI provides three presets for parameter values:*
+Вкладка выбора токенов может быть использована для выбора **от двух до восьми токенов**. Токен можно выбрать, выполнив поиск по символу любого токена, который уже используется на Curve, или вставив адрес пула. Дополнительные токены можно добавить с помощью синей кнопки **`Add token`**.
 
-<figure markdown="span">
-  ![](../images/pool_creation/two_presets_dark.png#only-dark){ width="300" }
-  ![](../images/pool_creation/two_presets_light.png#only-light){ width="300" }
-  <figcaption></figcaption>
-</figure>
+При создании метапула можно выбрать только два токена. Один из них — LP токен, а другой — токен для его пары.
 
-
-- **`Crypto`:** Suitable for most volatile pairs such as LDO <> ETH
-- **`Forex`:** Suitable for forex pairs with low relative volatility such as crvUSD <> EURe
-- **`Liquidity Staking Derivatives`:** Suitable for liquid staking derivatives soft-pegged to its underlying asset such as wETH <> cbETH
-- **`Liquid Restaking Tokens`:** Suitable for liquid restaking tokens such as WETH <> pufETH.
-
----    
-
-
-On the parameters tab, you can review and adjust the predefined parameters from the preset. Crypto v2 pools contain many parameters. If you are uncertain which parameters to use, you may want to ask for help in any Curve channel before deploying.
-
-<figure markdown="span">
-  ![](../images/pool_creation/two_parameters_dark.png#only-dark){ width="400" }
-  ![](../images/pool_creation/two_parameters_light.png#only-light){ width="400" }
-  <figcaption></figcaption>
-</figure>
-
-The basic parameters include the fees charged to users who interact with the pool. This is divided dynamically into a `Mid fee` and `Out fee` parameter, which represent the minimum and maximum fees during periods of low and high volatility.
-
-- **`Mid Fee ranging from 0.005% to 3%`**: This is the minimum fee and is charged when the pool is perfectly balanced.
-- **`Out Fee ranging from 0.26% to 3%`**: This is the maximum fee and is charged when the pool is completely out of balance.
-
-In CryptoSwap pools, the liquidity is concentrated. These initial liquidity concentration prices are fetched from [CoinGecko](https://www.coingecko.com/). If the tokens do not exist there or for some reason cannot be fetched, the user must set these values manually.
-
+!!!warning
+    - **`ERC20:`** Пользователям рекомендуется тщательно проверять ERC20 токены, с которыми они взаимодействуют, так как этот контракт **не может различать безвредные и вредоносные** ERC20 токены.
+    - **`Oracle:`** При использовании токенов с оракулами важно знать, что они **могут контролироваться извне с помощью EOA.**.
+    - **`Rebasing:`** Пользователям и интеграторам рекомендуется понимать, как контракт AMM работает с перебазированием балансов (Rebasing).
+    - **`ERC4626:`** Некоторые реализации ERC4626 **могут быть подвержены атакам на донаты/инфляцию**. Пользователям рекомендуется действовать с осторожностью.
 
 ---
 
+*Чтобы AMM работал корректно, при выборе активов необходимо выбрать соответствующий им тип. Поддерживаются следующие типы активов:*
 
-*The Advanced toggle allows you to adjust several other parameters under the hood.*
+### **Стандартный ERC-20** {#standard-erc20}
 
-!!!tip
-    A great article on understanding parameters can be found here: [https://nagaking.substack.com/p/deep-dive-curve-v2-parameters?s=curve](https://nagaking.substack.com/p/deep-dive-curve-v2-parameters?s=curve).
+Стандартные ERC-20 токены не требуют дополнительной конфигурации.
 
 <figure markdown="span">
-  ![](../images/pool_creation/two_parameters_advanced_dark.png#only-dark){ width="400" }
-  ![](../images/pool_creation/two_parameters_advanced_light.png#only-light){ width="400" }
+  ![](../images/pool_creation/ss_erc20_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_erc20_light.png#only-light){ width="400" }
   <figcaption></figcaption>
 </figure>
 
-- **`Amplification Parameter (A) ranging from 4,000 to 400,000,000`**: Larger values of A make the curve better resemble a straight line in the center (when the pool is near balance). Highly volatile assets should use a lower value, while assets that are closer together may be best with a higher value.
-- **`Gamma ranging from 0.00000001 to 1.99`**: The gamma parameter can further adjust the shape of the curve. Default values recommend 0.000145 for volatile assets and 0.0001 for less volatile assets.
-- **`Allowed Extra Profit ranging from 0 to 0.01`**: As the pool takes profit, the allowed extra profit parameter allows for greater values. Recommended 0.000002 for volatile assets and 0.00000001 for less volatile assets.
-- **`Fee Gamma ranging from 0 to 1`**: Adjusts how fast the fee increases from Mid Fee to Out Fee. Lower values cause fees to increase faster with imbalance. Recommended value of 0.0023 for volatile assets and 0.005 for less volatile assets.
-- **`Adjustment Step ranging from 0 to 1`**: As the pool rebalances, it must do so in units larger than the adjustment step size. Volatile assets are suggested to use larger values (0.000146), while less volatile assets do not move as frequently and may use smaller step sizes (default 0.0000055).
-- **`Moving Average Time ranging from 0 to 604,800 seconds`**: The price oracle uses an exponential moving average to dampen the effect of changes. This parameter adjusts the half-life used.
+### **Токены с оракулами** {#tokens-with-oracles}
 
+!!!warning "Точность оракула"
+    Точность оракула ставки **должна быть $10^{18}$**. В противном случае пул ликвидности не будет функционировать корректно, так как обменный курс будет нарушен.
+
+Некоторые токены могут требовать внешнего оракула курса для обеспечения корректных расчетов внутри AMM. Это особенно полезно для токенов с курсами относительно их базовых токенов, таких как rETH относительно ETH. В этом случае, при выборе токена с оракулом необходимо поставить галочку, и появится дополнительный раздел для адреса контракта и метода получения цены от оракула. Некоторые токены могут получать цену своего оракула из контракта, отличного от контракта токена.
+
+<figure markdown="span">
+  ![](../images/pool_creation/ss_oracle_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_oracle_light.png#only-light){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+### **Токены с ребейзом** {#rebasing-tokens}
+
+Токены с ребейзом в криптовалюте — это криптовалюты, которые автоматически корректируют свое предложение периодически на основе заранее определенного алгоритма, обычно для поддержания стабильной стоимости или пега к другому активу.
+
+<figure markdown="span">
+  ![](../images/pool_creation/ss_rebasing_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_rebasing_light.png#only-light){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+### **ERC-4626** {#erc4626}
+
+ERC-4626 — это стандарт, разработанный для оптимизации и унификации технических параметров доходных хранилищ. Он предоставляет стандартный API для токенизированных доходных хранилищ, которые представляют собой доли одного базового токена стандарта ERC-20. При использовании таких токенов пул рассчитывает базовую сумму, как если бы базовые токены находились в пуле.
+
+<figure markdown="span">
+  ![](../images/pool_creation/ss_erc4626_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_erc4626_light.png#only-light){ width="400" }
+  <figcaption></figcaption>
+</figure>
 
 ---
 
+## **Параметры** {#parameters}
 
-## **Pool Info**
+*Stableswap-NG предлагает три различных стандартных пресета параметров пула:*
 
-Finally, after setting all the parameters, a **`Pool Name`** and **`Pool Symbol`** can be chosen:
+<figure markdown="span">
+  ![](../images/pool_creation/ss_presets_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_presets_light.png#only-light){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+---
+
+<figure markdown="span">
+  ![](../images/pool_creation/ss_parameters_advanced_dark.png#only-dark){ width="400" }
+  ![](../images/pool_creation/ss_parameters_advanced_light.png#only-light){ width="400" }
+  <figcaption></figcaption>
+</figure>
+
+- **`Swap Fee ranging from 0% to 1%`**: Комиссия за своп, взимаемая во время транзакций.
+- **`A ranging from 1 to 5,000`**: `A` — это коэффициент усиления, который определяет глубину ликвидности пула. Чем выше значение `A`, тем глубже ликвидность.
+- **`Offpeg Fee Multiplier from 0 to 12.5`**: Множитель, который регулирует комиссию за своп в зависимости от состояния пула.
+- **`Moving Average Time ranging from 60 to 3600 seconds`**: Временное окно скользящего среднего для встроенного оракула.
+
+!!!info "`Offpeg Fee Multiplier`"
+    
+    Stableswap-NG вводит **динамическую комиссию**. Использование `Offpeg Fee Multiplier` позволяет системе динамически регулировать комиссию в зависимости от состояния пула.
+    
+    Инструмент для экспериментов с динамической комиссией: [https://www.desmos.com/calculator/zhrwbvcipo?](https://www.desmos.com/calculator/zhrwbvcipo?)
+
+---
+
+## **Информация о пуле** {#pool-info}
+
+Наконец, после настройки всех параметров, можно выбрать **`Pool Name`** и **`Pool Symbol`**:
 
 <figure markdown="span">
   ![](../images/pool_creation/ss_info_dark.png#only-dark){ width="400" }
@@ -94,13 +110,11 @@ Finally, after setting all the parameters, a **`Pool Name`** and **`Pool Symbol`
   <figcaption></figcaption>
 </figure>
 
-
 ---
 
+## **Развертывание пула** {#deploying-the-pool}
 
-## **Deploying the Pool**
-
-On the right-hand side, there is a tab that summarizes all the tokens, parameters, and information. The pool can finally be deployed by pressing the blue **`Create Pool`** button at the bottom.
+С правой стороны находится вкладка, которая суммирует всю информацию о токенах и параметрах нового пула. Пул наконец-то можно развернуть, нажав синюю кнопку **`Create Pool`** внизу.
 
 <figure markdown="span">
   ![](../images/pool_creation/two_summary_dark.png#only-dark){ width="300" }
@@ -108,4 +122,6 @@ On the right-hand side, there is a tab that summarizes all the tokens, parameter
   <figcaption></figcaption>
 </figure>
 
-After deployment, make sure to seed initial liquidity and [**create a gauge**](../reward-gauges/creating-a-pool-gauge.md).
+После развертывания заложите первоначальную ликвидность и, возможно, вам стоит [**создать гейдж**](../reward-gauges/creating-a-pool-gauge.md) для начисления эмиссии CRV и других стимулов.
+
+
