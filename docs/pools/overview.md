@@ -56,12 +56,12 @@ Pool fees are specific to each pool, they typically range from 0.01%-0.04%.  The
 
 ## **Rewards & Yield**
 
-Liquidity providers are rewarded with 2 different types of yield:
+When users deposit to a pool, they receive Liquidity Provider tokens (LP tokens) representing their assets in the pool.  With these LP tokens, users can earn two different types of yield:
 
-* **Base vAPY**: This is how much the LP token value is increasing due to accruing pool fees.
-* **Rewards tAPR**: These are CRV inflation rewards, other token incentives, and points. Staking LP tokens is required to earn CRV and other token rewards, which accrue through the pool's gauge. Points programs are project-specific; many don't require LP token staking. Refer to each project's point program for the most accurate information.
+* **Base vAPY**: This increases the value of LP token due to accruing pool fees.  *Note that for rebasing tokens such as stETH, this yield is also included in the Base vAPY*.
+* **Rewards tAPR**: These are CRV inflation rewards, other token incentives, and points. To earn asset based rewards, such as CRV or other assets, users must stake their LP tokens. However, many points programs don't require LP token staking. Refer to each project's point program for the most accurate information.
 
 ![Rewards](../images/pools/rewards.svg#only-light){: .centered style="width: 500px;" }
 ![Rewards](../images/pools/rewards-dark.svg#only-dark){: .centered style="width: 500px;" }
 
-Some pools include yield-bearing tokens like sUSDe and sDAI. All yield from these tokens goes directly to Liquidity Providers, none is taken away by fees or the pool.
+Some pools include yield-bearing tokens like sUSDe and sDAI. All yield from these tokens, goes directly to Liquidity Providers, none is taken away by fees or the pool.  This also applies to rebasing tokens, such as stETH, all rebasing yield stays with Liquidity Providers.
