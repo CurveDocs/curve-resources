@@ -41,7 +41,7 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
         | :logos-fantom: Fantom Bridge | `0x76EAfda658C54548B460B3f190386699DE3827d8` | [Ethereum](https://etherscan.io/address/0x76EAfda658C54548B460B3f190386699DE3827d8), [Fantom](https://ftmscan.com/address/0x76EAfda658C54548B460B3f190386699DE3827d8) |
 
 
-    === "scrvUSD"
+    === ":logos-scrvusd: scrvUSD"
 
         The contract addresses for bridges are mirrored meaning the bridge contract on Ethereum is the same as the one on the L1 blockchain. But the crvUSD token address is different for each chain.
 
