@@ -137,9 +137,9 @@ Repay has the following options, and all options allow the user to **partially**
 
 #### **Self-liquidate**
 
-This allows a user to liquidate themselves before they get hard-liquidated.  Users using this feature will most likely already be in soft-liquidation.  This lets the user retrieve their collateral and stops them from losing the amount defined by the [`liquidation_discount`](../crvusd/loan-concepts.md#market-parameters).
+Self-liquidation allows users to voluntarily close their position before reaching hard-liquidation, typically when they're already in soft-liquidation. This feature helps users recover their remaining collateral while avoiding the [`liquidation_discount`](../crvusd/loan-concepts.md#market-parameters) penalty.
 
-Let's look at user called Alice who intially borrowed 1000 crvUSD using 1 WETH as collateral for how this works.  Alice is in soft liquidation and her health is getting low.  In soft liquidation 0.2 WETH has been converted to 250 crvUSD, so she now has 0.8 WETH and 250 crvUSD backing her 1000 crvUSD loan.  Alice wants to self liquidate.  Alice only needs to send 750 crvUSD to self-liquidate, because she already has 250 crvUSD of collateral, both these amounts together will pay off the 1000 crvUSD debt.  Alice then receives back her 0.8 WETH.
+See the [self-liquidation section](../crvusd/liquidations.md#self-liquidation) of the liquidation page for an example.
 
 ---
 
@@ -150,7 +150,7 @@ All new lending markets allow users to use leverage.  E.g., the WBTC market belo
 ![WBTC Leverage](../images/ui/leverage.png){: .centered }
 
 !!!info "Info"
-    If the market does not display a value in the leverage column, then leverage can still be built up manually by [looping](./leverage.md#leverage-looping).
+    If the market does not display a value in the leverage column, then leverage can still be built up manually by [looping](./leverage.md#manual-leverage-looping).
 
 Click on the desired market with leverage, then navigate to the `leverage` tab next to the `create loan` tab shown here:
 
@@ -160,7 +160,7 @@ After navigating to the `leverage` tab, the following options will be displayed:
 
 ![Leverage Menu](../images/ui/leverage_menu.png){: .centered }
 
-This shows all the information and options to open a leveraged loan.  Notice that the `ADD FROM WALLET` allows both assets to be added to the loan.  In this market a user could add WBTC, or crvUSD or both.  See the information about [depositing a combination of assets](./leverage.md#depositing-a-combination-of-assets) for how this works.
+This shows all the information and options to open a leveraged loan.  Notice that the `ADD FROM WALLET` allows both assets to be added to the loan.  In this market a user could add WBTC, or crvUSD or both.  See the information about [depositing a combination of assets](./leverage.md#depositing-combined-assets-curve-lending-only) for how this works.
 
 The **`BORROW AMOUNT`** lets the user specify how much they would like to borrow.
 

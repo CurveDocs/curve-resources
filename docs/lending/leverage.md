@@ -1,10 +1,15 @@
 <h1>Leverage</h1>
 
-This section explains how leverage works, if you would like to know how to take out a leverage loan, see [How to take out a leverage loan](how-to-borrow.md#how-to-take-out-a-leverage-loan) section of the how to borrow page.
+This section explains how leverage works in crvUSD and Curve lending markets. For step-by-step instructions on taking out a leveraged loans, see the following guides:
+
+- [crvUSD: How to Take Out a Leveraged Loan](../crvusd/loan-creation.md#leveraged-loans)
+- [Curve Lending: How to Take Out a Leveraged Loan](../lending/how-to-borrow.md#how-to-take-out-a-leverage-loan)
 
 # **How Leverage Works**
 
-Leverage on Curve Lending allows a user to **multiply their gains (and losses) by the amount of leverage** they desire. For example, if a user is borrowing crvUSD with WETH collateral at 2x leverage, they will make twice as much profit in crvUSD compared to just holding their WETH without leverage (not accounting for borrowing rates).  Let's look at a few quick examples:
+Leverage in Curve loans multiplies both potential gains and losses. For example, with 2x leverage on WETH collateral, profits and losses in crvUSD terms are doubled compared to holding WETH without leverage (excluding borrowing rates).
+
+Example scenarios with different leverage levels:
 
 | ETH starting price | ETH end price | Deposited Collateral | Borrowed Collateral | Total Collateral | Leverage | Profit | ETH Profit |
 |---|---|---|---|---|---|---|---|
@@ -13,33 +18,51 @@ Leverage on Curve Lending allows a user to **multiply their gains (and losses) b
 | 1000 crvUSD| 2000 crvUSD| 1 ETH | 2 ETH | 3 ETH | 3x | 3000 crvUSD | 2 ETH |
 
 !!!warning "Warning"
-    Multiplied profits from leverage also means multiplied loses when prices decrease.
+    Leverage multiplies both profits AND losses. A price decrease will result in proportionally larger losses based on your leverage amount.
 
-## **Leverage Looping**
+---
 
-Anyone can create their own leverage in any lending market, let's see how it can be done:
+# **Leverage Methods**
+
+## **Manual Leverage Looping**
+
+Users can create leverage in any crvUSD or lending market through manual looping:
 
 ![Leverage Looping](../images/lending/leverage_simple.svg#only-light){: .centered }
 ![Leverage Looping](../images/lending/leverage_simple.svg#only-dark){: .centered }
 
-In the above example Alice can create her own leverage by simply continually depositing her WETH, borrowing crvUSD, swapping the borrowed crvUSD back to WETH, and then depositing the new WETH, and borrowing more crvUSD.  This process can be repeated as much as desired, but each time the user will loop less and less as the loan LTV is always less than 100%.
+Users, in this process:
 
-If 1 WETH is worth 3,000 crvUSD and the user has borrowed 6,000 crvUSD then that is called 2x leverage.
+1. Deposit WETH as collateral
+2. Borrow crvUSD
+3. Swap borrowed crvUSD back to WETH
+4. Repeat the process
+
+Each loop provides less additional leverage since loan LTV is always below 100%.  If a user uses 1 WETH worth 3,000 crvUSD, and borrows a total of 6,000 crvUSD, this is called 2x leverage.
+
+---
 
 ## **Built-in Leverage**
 
-Some Curve Lending markets allow leverage without doing the looping strategy mentioned above.  This built-in leverage allows the user to achieve their desired leverage using a single transaction.  Only some lending markets have this functionality, below is a image of the lending UI which shows the WBTC market.  This market allows a leverage of up to 11x.  
+All crvUSD minting markets and some Curve lending markets offer built-in leverage functionality, allowing users to achieve their desired leverage in a single transaction.   Below is a image of the lending UI showing the WBTC lending market, this market allows built-in leverage of up to 11x.
+
+*Note: This feature is not available in crvUSD markets.*
 
 ![UI Leverage](../images/ui/leverage.png){: .centered }
 
-Built-in leverage works and can be used in the following way:
+How built-in leverage works:
 
 ![UI Leverage](../images/lending/leverage.svg){: .centered }
 
-### **Depositing a combination of assets**
+### **Depositing Combined Assets (Curve Lending Only)**
 
-Instead of depositing only WETH, Curve Lending also lets Alice deposit crvUSD and WETH together.  If Alice chooses to do this, then any crvUSD she deposits will be added to the borrowed crvUSD and converted to WETH through 1inch before it's all deposited into the lending market, let's look at that quickly below.
+Users can deposit both crvUSD and collateral assets (e.g., WETH) together. In this case, during the single transaction:
+
+1. WETH collateral is used to borrow crvUSD
+2. Borrowed crvUSD is added to the deposited crvUSD
+3. The total amount is converted to WETH through 1inch
+4. All assets are deposited into the lending market
 
 ![Leverage with a combination of assets](../images/lending/add_both_leverage.svg){: .centered }
 
-*Note: as Alice's total collateral is still worth 3,000 crvUSD (1,500 crvUSD + 0.5 WETH), with 5x leverage she still borrows 12,000 crvUSD (4x her deposited collateral).  Also, the repayments transaction and profit made in this instance work exactly the same as shown in the other image above as all the collateral is converted to WETH even though she deposited WETH and crvUSD together.*
+*Note: With combined deposits, the leverage calculation remains the same. For example, with 1,500 crvUSD + 0.5 WETH (total value 3,000 crvUSD) at 5x leverage, the borrowed amount is still 12,000 crvUSD (4x deposited collateral). Repayment process and profit calculation remain unchanged from single-asset deposits, and after repayment the user will receive profit in their borrowed asset.*
