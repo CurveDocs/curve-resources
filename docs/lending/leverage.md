@@ -46,8 +46,6 @@ Each loop provides less additional leverage since loan LTV is always below 100%.
 
 All crvUSD minting markets and some Curve lending markets offer built-in leverage functionality, allowing users to achieve their desired leverage in a single transaction.   Below is a image of the lending UI showing the WBTC lending market, this market allows built-in leverage of up to 11x.
 
-*Note: This feature is not available in crvUSD markets.*
-
 ![UI Leverage](../images/ui/leverage.png){: .centered }
 
 How built-in leverage works:
