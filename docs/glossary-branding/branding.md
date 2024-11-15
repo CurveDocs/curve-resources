@@ -8,10 +8,12 @@
 <div class="centered" markdown="block">
 | Logo           | Description | Data Type and Size | Link                                      |
 | :------------: | :---------: | :----------------: | :---------------------------------------: |
-| :logos-crv:    | `CRV`       | SVG                | [Download](../images/branding/crv.svg)    |
-| :logos-crv:    | `CRV`       | PNG `(200x200)`    | [Download](../images/branding/crv.png)    |
-| :logos-vecrv:  | `veCRV`     | SVG                | [Download](../images/branding/vecrv.svg)  |
-| :logos-vecrv:  | `veCRV`     | PNG `(256x256)`    | [Download](../images/branding/vecrv.png)  |
-| :logos-crvusd: | `crvUSD`    | SVG                | [Download](../images/branding/crvusd.svg) |
-| :logos-crvusd: | `crvUSD`    | PNG `(200x200)`    | [Download](../images/branding/crvusd.png) |
+| :logos-crv:    | `CRV`       | SVG                | [Download](../images/branding/CRV.svg)    |
+| :logos-crv:    | `CRV`       | PNG                | [Download](../images/branding/CRV.png)    |
+| :logos-vecrv:  | `veCRV`     | SVG                | [Download](../images/branding/veCRV.svg)  |
+| :logos-vecrv:  | `veCRV`     | PNG                | [Download](../images/branding/veCRV.png)  |
+| :logos-crvusd: | `crvUSD`    | SVG                | [Download](../images/branding/crvUSD.svg) |
+| :logos-crvusd: | `crvUSD`    | PNG                | [Download](../images/branding/crvUSD.png) |
+| :logos-scrvusd: | `scrvUSD`    | SVG                | [Download](../images/branding/scrvUSD.svg) |
+| :logos-scrvusd: | `scrvUSD`    | PNG                | [Download](../images/branding/scrvUSD.png) |
 </div>
