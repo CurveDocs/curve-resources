@@ -1,4 +1,4 @@
-// The code in this file is used to generate the charts in the shared/curve-loans/loan-strategies.md page
+// The code in this file is used to generate the charts in the crvusd/loan-strategies.md page
 
 const data = [
     { n_range: 'N: 4-9', loss_range: '0-0.001%', softLiqDays: 32.12, softLiqPercent: 0.92 },

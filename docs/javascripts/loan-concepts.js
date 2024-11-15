@@ -1,4 +1,4 @@
-// The code in this file is used to generate the charts and calculators in the shared/curve-loans/loan-concepts.md page
+// The code in this file is used to generate the charts and calculators in the crvusd/loan-concepts.md page
 
 document.addEventListener("change", function (event) {
     if (event.target.matches('input[name="__palette"]')) {

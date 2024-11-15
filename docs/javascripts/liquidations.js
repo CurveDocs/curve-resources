@@ -1,4 +1,4 @@
-// The code in this file is used to generate the charts and calculators in the shared/curve-loans/liquidations.md page
+// The code in this file is used to generate the charts and calculators in the crvusd/liquidations.md page
 
 function createChart(data, chartId, yOpenLabel, yCloseLabel, tokenCOL, tokenDEBT) {
   const ctx = document.getElementById(chartId).getContext('2d');
