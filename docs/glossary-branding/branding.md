@@ -14,6 +14,7 @@
 | :logos-vecrv:  | `veCRV`     | PNG                | [Download](../images/branding/veCRV.png)  |
 | :logos-crvusd: | `crvUSD`    | SVG                | [Download](../images/branding/crvUSD.svg) |
 | :logos-crvusd: | `crvUSD`    | PNG                | [Download](../images/branding/crvUSD.png) |
-| :logos-scrvusd: | `scrvUSD`    | SVG                | [Download](../images/branding/scrvUSD.svg) |
-| :logos-scrvusd: | `scrvUSD`    | PNG                | [Download](../images/branding/scrvUSD.png) |
+| :logos-scrvusd: | `scrvUSD`    | SVG              | [Download](../images/branding/scrvUSD.svg) |
+| :logos-scrvusd: | `scrvUSD`    | PNG              | [Download](../images/branding/scrvUSD.png) |
+| :logos-scrvusd: | `scrvUSD 200x200`    | PNG      | [Download](../images/branding/scrvUSD-200x200.png) |
 </div>
