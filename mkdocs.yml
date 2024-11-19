@@ -184,12 +184,11 @@ nav:
     - Proposals:
       - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
 
-  - Multi-Chain:
-    - Understanding multi-chain: multichain/understanding-multichain.md
-    - CRV: multichain/crv.md
-    - crvUSD: multichain/crvusd.md
-    - scrvUSD: multichain/scrvusd.md
-    - How to Bridge CRV, crvUSD and scrvUSD to L1s: multichain/bridging-curve-eco-tokens.md
+  - Cross-Chain:
+    - Overview: cross-chain/overview.md
+    - Dex & Lending: cross-chain/dex-lending.md
+    - Curve Assets (CRV, crvUSD, scrvUSD): cross-chain/curve-assets.md
+    - How to Bridge Curve Assets to L1s: cross-chain/bridging-curve-eco-tokens.md
 
   - Support & Troubleshooting:
     - Support: troubleshooting/support.md
