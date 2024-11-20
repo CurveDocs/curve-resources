@@ -19,6 +19,7 @@
         "/governance/fee-collection-distribution": "/vecrv/overview",
         "/crv-token/claiming-trading-fees": "/vecrv/claiming-trading-fees",
         "/lending/understanding-lending": "/lending/overview",
+<<<<<<< HEAD
         "/crvusd/loan-details": "/crvusd/loan-concepts"
     };
 
@@ -30,6 +31,40 @@
             return;
         }
     })();		
+=======
+        "/crvusd/loan-details": "/crvusd/loan-concepts",
+        "/factory-pools/creating-a-twocrypto-ng-pool": "/pool-creation/creating-a-cryptoswap-pool",
+        "/factory-pools/creating-a-stableswap-ng-pool": "/pool-creation/creating-a-stableswap-pool",
+        "/base-features/understanding-crypto-pools": "/pools/overview",
+        "/lp/calculating-yield/#base-vapy": "/pools/calculating-yield/#base-vapy",
+        "/lp/calculating-yield": "/pools/calculating-yield",
+    };
+
+    (function redirect() {
+        // Remove .md extension first
+        const pathWithoutMd = window.location.pathname.replace(/\.md$/, '');
+        const hash = window.location.hash;
+        console.log(pathWithoutMd, hash);
+        let cleanPath;
+        
+        if (hash) {
+            // Keep slash on path but remove it from end of hash if present
+            cleanPath = pathWithoutMd + hash.replace(/\/$/, '');
+        } else {
+            // No hash - remove trailing slash from path
+            cleanPath = pathWithoutMd.replace(/\/$/, '');
+        }
+        console.log(cleanPath);
+        // Check redirects
+        const redirectUrl = redirects[cleanPath];
+        console.log(redirectUrl);
+        if (redirectUrl) {
+            // Add trailing slash to final redirect
+            window.location.href = `${window.location.origin}${redirectUrl}/`;
+            return;
+        }
+    })();
+>>>>>>> main
 </script>
 {% endblock %}
 

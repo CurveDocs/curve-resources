@@ -3,5 +3,9 @@ mkdocs-material
 mkdocs-autolinks-plugin
 mkdocs-minify-plugin
 pymdown-extensions
+<<<<<<< HEAD
 mkdocs-git-revision-date-localized-plugin
 mkdocs-static-i18n
+=======
+mkdocs-git-revision-date-localized-plugin
+>>>>>>> main

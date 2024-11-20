@@ -7,7 +7,10 @@ Savings crvUSD, abbreviated as scrvUSD, is an **interest-bearing stablecoin** th
 
 ---
 
+<<<<<<< HEAD:docs/en/crvusd/scrvusd.md
 
+=======
+>>>>>>> main:docs/crvusd/scrvusd.md
 ## **Why scrvUSD?**
 
 scrvUSD provides an additional interest-earning opportunity for crvUSD, diversifying the ways users can earn on their crvUSD holdings. It aims to:
@@ -18,6 +21,7 @@ scrvUSD provides an additional interest-earning opportunity for crvUSD, diversif
 - **Reduce and stabilize crvUSD borrow rates**: Borrow rates for crvUSD rise when its price falls below the peg. By increasing demand for crvUSD, the peg tightens, reducing borrow rates and aiming to stabilize them over the long term.
 - **Increase crvUSD supply over time**: As borrow rates decrease and stabilize, borrowing becomes more predictable, making Curve a more attractive platform for loans.
 - **Increase fee revenue over time**: With more crvUSD in circulation, fee revenue sustainably grows over time.
+<<<<<<< HEAD:docs/en/crvusd/scrvusd.md
 - 
 
 [^1]: **Low-risk** is subjective and depends on the user's risk tolerance. In this context, it means the deposited crvUSD is not used or rehypothecated; it simply remains in the Savings Vault, earning interest. However, smart contract risks remain. That said, scrvUSD is built upon Yearn v3 Vaults, which are widely used in DeFi and have undergone [extensive audits](https://github.com/yearn/yearn-vaults-v3/tree/master/audits).
@@ -37,6 +41,11 @@ The [proposal currently being voted on](https://curvemonitor.com/dao/proposal/ow
     - If 8% of crvUSD is staked, 8% of the $100k will be allocated to scrvUSD.
     - If 20% of crvUSD is staked, 10% of the $100k will be allocated to scrvUSD.
 
+=======
+
+[^1]: **Low-risk** is subjective and depends on the user's risk tolerance. In this context, it means the deposited crvUSD is not used or rehypothecated; it simply remains in the Savings Vault, earning interest. However, smart contract risks remain. That said, scrvUSD is built upon Yearn v3 Vaults, which are widely used in DeFi and have undergone [extensive audits](https://github.com/yearn/yearn-vaults-v3/tree/master/audits).
+
+>>>>>>> main:docs/crvusd/scrvusd.md
 ---
 
 ## **How to Deposit and Withdraw crvUSD**
@@ -73,12 +82,28 @@ The yield paid to scrvUSD holders comes directly from the crvUSD interest rate f
 *The amount of rewards allocated to scrvUSD varies and depends on two factors:*
 
 1. The amount of crvUSD fees generated.
+<<<<<<< HEAD:docs/en/crvusd/scrvusd.md
 2. The percentage of the total crvUSD fees allocated to scrvUSD, as determined by the Curve DAO.  [Currently, the DAO is voting on a proposal](#what-is-the-current-proposal) with a **5% minimum**, and **10% maximum** revenue share for scrvUSD.
+=======
+2. The percentage of the total crvUSD fees allocated to scrvUSD, as determined by the Curve DAO.  Currently there is a **5% minimum**, and **10% maximum** revenue share for scrvUSD.
+>>>>>>> main:docs/crvusd/scrvusd.md
 
 ![Revenue Distributor](../images/scrvusd/scrvusd_fee_split_light.svg#only-light){: .centered style="width: 75%;" }
 ![Revenue Distributor](../images/scrvusd/scrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
 
+<<<<<<< HEAD:docs/en/crvusd/scrvusd.md
 The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on the ratio of crvUSD staked in scrvUSD compared to the total circulating supply of crvUSD. The DAO sets both a minimum and maximum percentage of crvUSD fees allocated to scrvUSD, which serve as upper and lower bounds.  See the [current proposal above](#what-is-the-current-proposal) for an example.
+=======
+The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on the ratio of crvUSD staked in scrvUSD compared to the total circulating supply of crvUSD. The DAO sets both a minimum and maximum percentage of crvUSD fees allocated to scrvUSD, which serve as upper and lower bounds.  See below for an example:
+
+!!!example "How much crvUSD revenue will be allocated to scrvUSD?"
+
+    Currently, the DAO has allocated a **5% minimum** and a **10% maximum** of crvUSD revenue to go to scrvUSD.  If the revenue from crvUSD is $100k in a week then: 
+
+    - If 2% of crvUSD is staked, 5% of the $100k will be allocated to scrvUSD.
+    - If 8% of crvUSD is staked, 8% of the $100k will be allocated to scrvUSD.
+    - If 20% of crvUSD is staked, 10% of the $100k will be allocated to scrvUSD.
+>>>>>>> main:docs/crvusd/scrvusd.md
 
 
 ---
