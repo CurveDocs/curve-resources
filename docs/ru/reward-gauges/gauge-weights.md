@@ -1,37 +1,37 @@
-## **What are gauge weights?**
+## **Что такое веса гейджей?** {#what-are-gauge-weights}
 
-Simply put, a gauge weight translates into how much of the daily CRV inflation it receives.
+Проще говоря, вес гейджа определяет, какую часть ежедневной инфляции CRV он получает.
 
-For example on the below chart, the Y pool is currently receiving around 72% of the daily CRV inflation. This means that all liquidity providers in the Y pool share 72% of the daily CRV.
+Например, на диаграмме ниже пул Y в настоящее время получает около 72% ежедневной инфляции CRV. Это означает, что все поставщики ликвидности в пуле Y делят между собой 72% ежедневного CRV.
 
 ![Gauge Weights](../images/ui/gauge-weights-ypool.webp)
 
-You can find each liquidity gauge relative weight on this page: [https://dao.curve.fi/minter/gauges](https://dao.curve.fi/minter/gauges)​
+Вы можете найти относительный вес каждого гейджа ликвидности на этой странице: [https://dao.curve.fi/minter/gauges](https://dao.curve.fi/minter/gauges)
 
-## **Why are gauge weights so important?**
+## **Почему веса гейджей так важны?** {#why-are-gauge-weights-so-important}
 
-Because those weights decide where the CRV inflation goes, it allows the DAO to control where most of the liquidity should go and balance liquidity. It's a powerful tool for voters that must be used responsibly.
+Поскольку эти веса решают, куда направляется инфляция CRV, они позволяют DAO контролировать, куда должна идти основная часть ликвидности, и балансировать ее. Это мощный инструмент для голосующих, который должен использоваться ответственно.
 
-The gauge weight is updated once a week on Thursdays.
+Вес гейджа обновляется раз в неделю по четвергам.
 
-## **Who can vote for gauge weights?**
+## **Кто может голосовать за веса гейджей?** {#who-can-vote-for-gauge-weights}
 
-Anybody who has vote [**locked CRV**](../crv-token/overview.md) can vote to direct its voting power towards one or multiple Curve pools.
+Любой, кто [**заблокировал CRV для голосования**](../crv-token/overview.md), может направить свою голосующую мощность на один или несколько пулов Curve.
 
-## **How can I vote?**
+## **Как я могу проголосовать?** {#how-can-i-vote}
 
-Visit this link: [https://dao.curve.fi/gaugeweight](https://dao.curve.fi/gaugeweight)​
+Посетите эту ссылку: [https://dao.curve.fi/gaugeweight](https://dao.curve.fi/gaugeweight)
 
-Select the gauge you would like to put your voting weight towards, enter an amount in BPS (10,000 = 100% the maximum) and confirm your transaction.
+Выберите гейдж, которому вы хотите отдать свой голосовой вес, введите сумму в BPS (10,000 = 100% максимум) и подтвердите свою транзакцию.
 
-## **How often can I move my voting weight?**
+## **Как часто я могу перемещать свой голосовой вес?** {#how-often-can-i-move-my-voting-weight}
 
-You can change your voting weight once every 10 days.
+Вы можете менять свой голосовой вес раз в 10 дней.
 
+## **Что происходит, когда я добавляю дополнительные CRV к моей существующей блокировке или продлеваю время блокировки?** {#what-happens-when-i-add-additional-crv-to-my-existing-lock-or-extend-the-locktime}
 
-## **What happens when I add additional CRV to my existing lock or extend the locktime?**
+Добавление большего количества $CRV к вашей блокировке или продление времени блокировки увеличивает ваш баланс veCRV. Это увеличение не учитывается автоматически в ваших текущих голосах за веса гейджей. Если вы хотите распределить всю вашу новую голосующую мощность, убедитесь, что вы проголосовали снова.
 
-Adding more $CRV to your lock or extending the locktime increases your veCRV balance. This increase is not automatically accounted for in your current gauge weight votes. If you want to allocate all of your newly acquired voting power, make sure to re-vote.
+!!!warning "Предупреждение"
+    Сброс веса гейджа перед повторным голосованием означает, что вам нужно будет ждать 10 дней, чтобы проголосовать за гейджи, вес которых вы сбросили. Поэтому, пожалуйста, убедитесь, что вы просто голосуете снова; нет необходимости сбрасывать ваши голоса за веса гейджей перед повторным голосованием.
 
-!!!warning
-    Resetting your gauge weight before re-voting means you'll need to wait 10 days to vote for the gauges whose weight you've reset. So, please ensure you simply re-vote; there is no need to reset your gauge weight votes before voting again.

@@ -1,89 +1,84 @@
-<h1>Permissionless Token Rewards </h1>
+<h1>Награды за токены без разрешений (permissionless)</h1>
 
-This section explains the process of setting any token reward using Etherscan. It's assumed that the user possesses some familiarity with Etherscan or are competent in executing the transaction through an alternative tool.  
+В этом разделе объясняется процесс установки любой награды за токены с помощью Etherscan. Предполагается, что пользователь имеет некоторый опыт работы с Etherscan или умеет выполнять транзакции через альтернативный инструмент.
 
-These rewards are called **permissionless as the CurveDAO does not control them**.  They are not completely permissionless however, as **only the admin or manager of the gauge can approve and add these token rewards**.
+Эти награды называются **permissionless, поскольку CurveDAO не контролирует их**. Однако они не полностью permissionless, так как **только администратор или менеджер гейджа может одобрять и добавлять эти награды за токены**.
 
-!!!warning
-    Note that Curve has employed various gauge versions over time. If your attempts are unsuccessful, it might be due to version differences. Please don't hesitate to reach out to the Curve team.
+!!!warning "Предупреждение"
+    Обратите внимание, что Curve использовал различные версии гейджей со временем. Если ваши попытки безуспешны, это может быть из-за различий в версиях. Пожалуйста, не стесняйтесь обратиться к команде Curve.
 
-*Permissionless rewards are added in the following flow:*
+*Награды без разрешений добавляются в следующем порядке:*
 
-1. Set reward token and distributor address.
-2. Approve reward token.
-3. Add rewards.
+1. Установить токен награды и адрес дистрибьютора.
+2. Одобрить токен награды.
+3. Добавить награды.
 
-## **Setting the Reward Token and Distributor Address**
+## **Установка токена награды и адреса дистрибьютора** {#setting-the-reward-token-and-distributor-address}
 
-By calling the `add_reward` function on a specific gauge a token can be added to the gauge's list of approved reward tokens.  To call the function the **reward token** contract address and the **distributor address** must be specified. The distributor address is the source from which the reward token will be sent to the gauge.
+Вызвав функцию `add_reward` на конкретном гейдже, можно добавить токен в список одобренных токенов награды этого гейджа. Чтобы вызвать функцию, необходимо указать адрес контракта **токена награды** и **адрес дистрибьютора**. Адрес дистрибьютора — это источник, откуда токен награды будет отправлен в гейдж.
 
-!!!info
-    Ensure you have the required `admin/manager` permissions for the gauge. The address that deployed the gauge is set as the `admin/manager`.
-    If you are not admin/manager, the transaction will fail.
+!!!info "Информация"
+    Убедитесь, что у вас есть необходимые разрешения `admin/manager` для гейджа. Адрес, который развернул гейдж, установлен как `admin/manager`.
+    Если вы не администратор/менеджер, транзакция не удастся.
 
-To identify the manager, check the `manager/admin` in the "Read Contract" section on Etherscan. Some versions of this contract may also allow the factory owner to execute this call.
+Чтобы определить менеджера, проверьте `manager/admin` в разделе "Read Contract" на Etherscan. Некоторые версии этого контракта также могут позволять владельцу Factory контракта выполнить этот вызов.
 
-The deployer of the gauge is usually the manager of the gauge if the gauge was deployed via the Factory Contracts.
+Развертыватель гейджа обычно является менеджером гейджа, если гейдж был развернут через Factory контракты.
 
-This function should be called only once for a specific reward token. A repeated call to `add_reward` using a previously set reward token will fail. However, the distributor address for an already added reward token can be updated using the `set_reward_distributor` function. Over the lifetime of a gauge, a total of 8 different reward tokens can be set.
+Эту функцию следует вызывать только один раз для конкретного токена награды. Повторный вызов `add_reward` с ранее установленным токеном награды завершится неудачей. Однако адрес дистрибьютора для уже добавленного токена награды можно обновить с помощью функции `set_reward_distributor`. За время существования гейджа можно установить всего 8 различных токенов награды.
 
 !!! description "`add_reward(_reward_token: address, _distributor: address):`"
 
-    Function to add specify a reward token and distributor for the gauge. Once a reward tokens is added, it can not be removed anymore.
+    Функция для добавления токена награды и дистрибьютора для гейджа. После добавления токена награды его нельзя удалить.
 
     ![](../images/add_reward.png){ align=left, width="180" }
 
+    | Параметр         | Тип       | Описание                                      |
+    | ---------------- | --------- | --------------------------------------------- |
+    | `_reward_token`  | `address` | Адрес токена награды                          |
+    | `_distributor`   | `address` | Адрес дистрибьютора, который может добавить токен награды |
 
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `_reward_token` | `address` | Reward Token Address |
-    | `_distributor` | `address` | Distributor Address, who can add the Reward Token |
+## **Одобрение токена награды для депозита** {#approving-the-reward-token-for-deposit}
 
-
-
-## **Approving the Reward Token for Deposit**
-
-Visit the reward token's contract address (not the gauge contract address) on Etherscan and switch to the "Write Contract" tab. Use the `approve` function, setting the spender as the gauge contract address and specifying the desired amount.
+Перейдите на адрес контракта токена награды (не адрес контракта гейджа) на Etherscan и перейдите на вкладку "Write Contract". Используйте функцию `approve`, установив `spender` как адрес контракта гейджа и указав желаемую сумму.
 
 !!! description "`approve(_spender : address, _value : uint256) -> bool:`"
 
-    Function to approve `_spender` to transfer `_value` tokens.
-    
+    Функция для одобрения `_spender` на перевод `_value` токенов.
+
     ![](../images/approve.png){ align=left, width="150" }
 
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | **`_spender`** | `address` | Gauge Contract Address |
-    | **`_value`** | `uint256` | Amount to approve |
+    | Параметр     | Тип       | Описание                   |
+    | ------------ | --------- | -------------------------- |
+    | **`_spender`** | `address` | Адрес контракта гейджа     |
+    | **`_value`**   | `uint256` | Сумма для одобрения        |
 
+## **Депонирование токена награды** {#depositing-the-reward-token}
 
+При депонировании токена награды в контракт выбирается период времени (`_epoch` в секундах). После депонирования начинается эпоха награды, продолжающаяся заданное число секунд, выбранное депонентом (`_epoch` секунд). Награды распределяются с постоянной скоростью в секунду всем стейкерам гейджа в течение периода эпохи. Если дополнительные награды этого токена не депонируются до конца этого периода, награды прекращаются по истечении времени.
 
-## **Depositing the Reward Token**
+Эпохи наград специфичны для токена. Разные токены награды могут иметь разные периоды эпохи.
 
-When depositing the reward token to the contract a time period is chosen (`_epoche` seconds).  After depositing the reward epoch begins, lasting the defined number of seconds chosen by the depositor (`_epoch` seconds). Rewards are streamed at a constant rate per second to all gauge stakers over the epoch time period.  If no additional rewards of this token are deposited before the end of this time period, the rewards stop when the time period elapses.
+Если дополнительные награды для текущего токена, распределяемого в течение эпохи, добавляются в середине эпохи, то вновь добавленные токены и все оставшиеся токены объединяются (награды = оставшиеся + новые), инициируя новую эпоху для вновь определенного периода времени.
 
-Reward epochs are token specific.  Different reward tokens can have different epoch time periods.
+Для равномерного распределения наград рекомендуется депонировать ближе к концу эпохи. Если пополняете в середине эпохи, убедитесь, что вы рассчитали соответствующую сумму для постоянной скорости распределения.
 
-If additional rewards for a currently streaming token are added mid epoch, both the newly added tokens and all the remaining tokens are combined (rewards = remaining + new), triggering a fresh epoch for the newly defined period of time.
-
-For consistent reward distributions, it's advisable to deposit near the end of an epoch. If replenishing mid-epoch, ensure you compute the appropriate amount for a steady distribution rate.  
-
-More information [here](https://docs.curve.fi/curve_dao/liquidity-gauge-and-minting-crv/gauges/LiquidityGaugeV6/#deposit_reward_token).
-
+Больше информации [здесь](https://docs.curve.fi/curve_dao/liquidity-gauge-and-minting-crv/gauges/LiquidityGaugeV6/#deposit_reward_token).
 
 !!! description "`deposit_reward_token(_reward_token: address, _amount: uint256, _epoch: uint256 = WEEK)`"
 
-    Function to deposit `_amount` of `_reward_token` into the gauge over the period of `_epoch` seconds.
-    
-    When depositing it is optional to use the `_epoch` parameter.  This is set to `WEEK` which means the rewards will be streamed to the gauge stakers over a 1 week period (604800 seconds).
+    Функция для депонирования `_amount` токенов `_reward_token` в гейдж на период `_epoch` секунд.
+
+    При депонировании параметр `_epoch` является необязательным. По умолчанию он установлен на `WEEK`, что означает, что награды будут распределяться стейкерам гейджа в течение 1 недели (604800 секунд).
 
     !!!info
-        The `_epoch` parameter was added in newer versions of the gauge.  In older versions, rewards are all streamed over a 1 week period.
+        Параметр `_epoch` был добавлен в более новых версиях гейджа. В старых версиях все награды распределяются в течение 1 недели.
 
     ![](../images/deposit_reward_token.png){ align=left, width="240" }
 
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `_reward_token` | `address` | Reward Token Address |
-    | `_amount` | `uint256` | Amount to be distributed over the week |
-    | `_epoch` | `uint256` | Duration the rewards are distributed across, denominated in seconds. Defaults to a week (604800s). |
+    | Параметр        | Тип       | Описание                                                            |
+    | --------------- | --------- | ------------------------------------------------------------------- |
+    | `_reward_token` | `address` | Адрес токена награды                                                |
+    | `_amount`       | `uint256` | Сумма для распределения                                             |
+    | `_epoch`        | `uint256` | Длительность распределения наград, в секундах. По умолчанию — неделя (604800 с). |
+

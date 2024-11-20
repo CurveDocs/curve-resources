@@ -1,83 +1,83 @@
-<h1>Glossary</h1>
+<h1>Глоссарий</h1>
 
-This page should help any new user learn what people are talking about in different social channels or in these resources or the technical documentation.
+Эта страница должна помочь любому новому пользователю понять, о чем говорят люди в различных социальных каналах, а также в этих ресурсах или технической документации.
 
-## **CurveV1**
+## **CurveV1** {#curvev1}
 
-CurveV1 refers to first product Curve deployed, which was the stablecoin swap pools.  This term is used to describe any stable asset swap pool, e.g., USDT/USDC/DAI, stETH/ETH.
+CurveV1 относится к первому продукту, развернутому Curve, а именно к пулам свопов стейблкоинов. Этот термин используется для обозначения любого пула обмена стабильных активов, например, USDT/USDC/DAI, stETH/ETH.
 
-## **CurveV2**
+## **CurveV2** {#curvev2}
 
-CurveV2 was the second product Curve deployed, this was the cryptopool swap pools.  Cryptopools are swap pools which have assets which are not stable to each other, e.g., BTC/ETH/USDT, CRV/ETH.
+CurveV2 был вторым продуктом, развернутым Curve, а именно пулами свопов криптовалют. Криптопулы – это пулы свопов, в которых активы не стабильны друг к другу, например, BTC/ETH/USDT, CRV/ETH.
 
-## **Stableswap**
+## **Stableswap** {#stableswap}
 
-See [CurveV1](#curvev1).
+См. [CurveV1](#curvev1).
 
-## **Cryptoswap**
+## **Cryptoswap** {#cryptoswap}
 
-See [CurveV2](#curvev2)
+См. [CurveV2](#curvev2).
 
-# **Liquid Lockers**
+## **Liquid Lockers** {#liquid-lockers}
 
-Some projects offer to take CRV, lock it in a smart contract as veCRV and give a user tokens representing the veCRV in the smart contract.  These are called liquid lockers because the underlying veCRV is locked but can be transferred (is liquid).
+Некоторые проекты предлагают заблокировать CRV в смарт-контракте как veCRV и предоставить пользователю токены, представляющие veCRV в смарт-контракте. Эти токены называются ликвидными локерами, поскольку основной veCRV заблокирован, но может быть передан (является ликвидным).
 
-## **3CRV**
+## **3CRV** {#3crv}
 
-3CRV is the LP token for the 3Pool (sometimes referred to as TriPool). Trading fees are distributed in 3CRV.
+3CRV – это токен поставщика ликвидности для пула 3Pool (иногда называемого TriPool). Торговые комиссии распределяются в 3CRV.
 
-## **Admin fee**
+## **Административная комиссия (Admin Fee)** {#admin-fee}
 
-Admin fee is the share of trading fees that are received by governance participants who have locked their CRV (see veCRV).
+Административная комиссия – это доля торговых комиссий, получаемая участниками управления, которые заблокировали свой CRV (см. veCRV).
 
-## **Base Pools**
+## **Базовые пулы** {#base-pools}
 
-Base pools are an old Curve concept, yet still working in some pools such as GUSD.  Base pool tokens can be paired with other tokens to create new pools, e.g. 3crv pool token (USDT, USDC, DAI) paired with GUSD.
+Базовые пулы – это старая концепция Curve, которая все еще используется в некоторых пулах, таких как GUSD. Токены базового пула могут быть объединены с другими токенами для создания новых пулов, например, токен пула 3CRV (USDT, USDC, DAI) в паре с GUSD.
 
-## **Boosting (also boosties)**
+## **Увеличение доходности (boosting)** {#boosting}
 
-The act of locking your CRV to earn more CRV on your provided liquidity.
+Процесс блокировки вашего CRV для получения большего количества CRV на вашу предоставленную ликвидность.
 
-[Boosting your CRV Rewards](../reward-gauges/boosting-your-crv-rewards.md)
+[Увеличение доходности от CRV](../reward-gauges/boosting-your-crv-rewards.md)
 
-## **CRV**
+## **CRV** {#crv}
 
-Governance and utility token for the Curve DAO.
+Государственный и утилитарный токен для Curve DAO.
 
-## **DeFi (Decentralized Finance)**
+## **DeFi (Decentralized Finance)** {#defi}
 
-Decentralized finance (commonly referred to as DeFi) is an experimental form of finance that does not rely on financial intermediaries such as brokerages, exchanges, or banks, and instead utilizes blockchains, most commonly the Ethereum blockchain.
+Децентрализованное финансирование (часто называемое DeFi) – это экспериментальная форма финансов, которая не полагается на финансовых посредников, таких как брокеры, биржи или банки, а вместо этого использует блокчейны, чаще всего блокчейн Ethereum.
 
-## **Metamask**
+## **Metamask** {#metamask}
 
-Metamask is an Ethereum wallet that allows you to interact with Curve and other dapps. You can also use it with Ledger and Trezor hardware wallets. It's the most popular Ethereum web wallet and is available as an add-on for most browsers.
+Metamask – это кошелек для Ethereum, который позволяет взаимодействовать с Curve и другими децентрализованными приложениями (dapps). Вы также можете использовать его с аппаратными кошельками Ledger и Trezor. Это самый популярный веб-кошелек для Ethereum, доступный как дополнение для большинства браузеров.
 
-## **Metapool**
+## **Metapool** {#metapool}
 
-Metapools are a type of pool on Curve composed of one asset as well as as LP tokens from another pool.
+Метапулы – это тип пулов на Curve, состоящих из одного актива и токенов поставщика ликвидности (LP) из другого пула.
 
-## **Llamas**
+## **Llamas** {#llamas}
 
-Llamas are wonderful and magical creatures. Each Curve team member must own at least one llama as part of their contract with Curve Finance.
+Лламы – замечательные и волшебные создания. Каждый член команды Curve должен владеть хотя бы одной ламой, чтобы работать в Curve Finance.
 
-## **LP (Liquidity provider)**
+## **LP (Поставщик ликвидности)** {#lp}
 
-Users providing liquidity (funds/assets) on the Curve or other DeFi protocols.
+Пользователи, предоставляющие ликвидность (средства/активы) на Curve или других DeFi протоколах.
 
-## **LP tokens (Liquidity provider token)**
+## **LP токены (Токен поставщика ликвидности)** {#lp-tokens}
 
-When you deposit into a Curve pool, you receive a counter party token which represents your share of the pool.
+Когда вы депонируете активы в пул Curve, вы получаете токен контрагента, представляющий вашу долю в пуле.
 
-## **veCRV**
+## **veCRV** {#vecrv}
 
-Stands for vote-escrowed CRV. They are CRV locked for the purpose of voting and earning fees.
+Означает vote-escrowed CRV. Это CRV, заблокированные для целей голосования и получения комиссий.
 
-[Understanding $CRV](../crv-token/overview.md)
+[Понимание $CRV](../crv-token/overview.md)
 
-## **Vote-locked CRV**
+## **Заблокированный для голосования CRV** {#vote-locked-crv}
 
-This term is used interchangeably with Vote-escrowed CRV and veCRV.
+Этот термин используется как синоним vote-escrowed CRV и veCRV.
 
-## **Yearn**
+## **Yearn** {#yearn}
 
-Yearn Protocol is a set of Ethereum Smart Contracts focused on creating a simple way to generate high risk-adjusted returns for depositors of various assets via best-in-class lending protocols, liquidity pools, and community-made yield farming strategies on Ethereum. It was founded by Andre Cronje who has been a long term collaborator of Curve Finance.
+Протокол Yearn – это набор смарт-контрактов Ethereum, ориентированных на создание простого способа получения высоких доходов с учетом риска для вкладчиков различных активов через лучшие в своем классе кредитные протоколы, пулы ликвидности и стратегии фермерства, созданные сообществом на Ethereum. Его основал Андре Кронье, который долгое время был сотрудником Curve Finance.

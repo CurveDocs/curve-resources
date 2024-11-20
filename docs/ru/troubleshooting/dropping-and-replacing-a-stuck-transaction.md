@@ -1,33 +1,37 @@
-A short tutorial on dropping and replacing a stuck Ethereum transaction.
+Краткое руководство по отмене и замене зависшей транзакции Ethereum.
 
-You've submitted a transaction in Metamask and it just won't come through. Those gas estimates betrayed you and you're stuck looking at your pending transaction on Etherscan. It's happened to everyone and it's not pleasant but there's a fairly simple solution which most people will come to learn about.
 
-This guide isn't Curve Finance specific but as gas prices are reaching new highs, stuck transactions are getting more common and knowing how to drop and replace is thus become more and more useful.
+Если вы отправили транзакцию в Metamask, и она зависла, оставаясь в статусе ожидания на Etherscan, не переживайте — это случается со многими. Существует простое решение для отмены или замены таких транзакций.
 
-First and foremost, it's important to understand you can only do this if your transaction is pending. If it isn't your transaction cannot be cancelled anymore.
+**Основные шаги**
 
-If you want to understand how this works, you should know that Ethereum transactions must be submitted with an incremental nonce. Each transaction has a nonce (a number) assigned to it and a number cannot be skipped. The way to replace and drop is to submit a new transaction with a higher gas price and the same nonce. This will tell the miners this more expensive transaction is the one that should be mined and your stuck transaction will be discarded.
+1. **Проверьте статус**: Отменить или заменить можно только ожидающую транзакцию. Если транзакция уже обработана, её изменить нельзя.
 
-## **Enable custom nonce in Metamask**
+2. **Понимание nonce**: Каждая транзакция в Ethereum имеет уникальный номер (nonce), который присваивается по порядку. Чтобы отменить или заменить транзакцию, нужно отправить новую с тем же nonce, но с более высокой ценой газа. Это сигнализирует майнерам, что новая транзакция более приоритетная, и предыдущая зависшая транзакция будет отброшена.
 
-Visit Metamask and select "Settings", then "Advanced" and scroll down to find and enable "Customize transaction nonce".
+Этот метод особенно полезен, когда цены на газ высоки и зависшие транзакции становятся всё более распространёнными.
 
-![Metamask Settings](../images/metamask-settings.webp)
+## **Включение пользовательского nonce в Metamask** {#enable-custom-nonce-in-metamask}
 
-## **Finding your pending transaction nonce**
+Зайдите в Metamask и выберите «Настройки», затем «Дополнительно» и прокрутите вниз, чтобы найти и включить «Настроить nonce транзакции».
 
-Visit your address on Etherscan and click on your pending transaction. If you scroll down you will find "Nonce":
+![Настройки Metamask](../images/metamask-settings.webp)
 
-![Etherscan Nonce](../images/etherscan-nonce.webp)
+## **Поиск nonce вашей ожидающей транзакции** {#finding-your-pending-transaction-nonce}
 
-Write down this nonce and return to Metamask.
+Посетите ваш адрес на Etherscan и нажмите на вашу ожидающую транзакцию. Если вы прокрутите вниз, вы найдете «Nonce»:
 
-## **Replacing your transaction**
+![Nonce в Etherscan](../images/etherscan-nonce.webp)
 
-Now that you have your nonce, go back to Ethereum and send yourself 0 Ethereum, on the confirmation screen, type the nonce you got from Etherscan.
+Запишите этот nonce и вернитесь в Metamask.
 
-Make sure your gas price is suitable this time by checking [https://ethgasstation.info/](https://ethgasstation.info/) for example.
+## **Замена вашей транзакции** {#replacing-your-transaction}
 
-![Metamask Nonce](../images/metamask-settings.webp)
+Теперь, когда у вас есть ваш nonce, вернитесь в Ethereum и отправьте себе 0 Ethereum, на экране подтверждения введите nonce, который вы получили из Etherscan.
 
-Confirm your transaction and that's it. Your 0 Ethereum transaction should be mined which will drop and replace your stuck transaction which you can confirm on Etherscan.
+Убедитесь, что на этот раз ваша цена газа подходит, проверив, например, [https://ethgasstation.info/](https://ethgasstation.info/).
+
+![Nonce в Metamask](../images/metamask-settings.webp)
+
+Подтвердите вашу транзакцию, и все готово. Ваша транзакция на 0 Ethereum должна быть замайнена, что отменит и заменит вашу зависшую транзакцию, что вы можете подтвердить на Etherscan.
+

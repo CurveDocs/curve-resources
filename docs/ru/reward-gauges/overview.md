@@ -1,23 +1,24 @@
-On Curve Finance, [CRV inflation](../crv-token/supply-distribution.md#community-emissions-crv-inflation) goes to users who stake in Reward Gauges in Pools and Lending markets.
+На Curve Finance [инфляция CRV](../crv-token/supply-distribution.md#community-emissions-crv-inflation) распределяется между пользователями протокола, которые стейкают свои токены в пулах и кредитных рынках. Для этого используются специальные контракты - Reward Gauges (счётчики вознаграждений), которые в данной документации будут часто называться русифицированным термином «гейджи».
 
-Many Curve pools and lending markets have Reward Gauges. By staking liquidity provider tokens in these gauges, users earn rewards proportional to their share of the total staked value.
+Многие пулы Curve и кредитные рынки имеют Reward Gauges. Поставщики ликвидности стейкая свои токены  в этих гейджах, пользователи получают вознаграждения, пропорциональные их доле в общем объеме ставок.
 
-Some special gauges also exist to fund specific initiatives, like Vyper development (veFunder-vyper).
+Существуют также специальные гейджи для финансирования определённых инициатив, таких как разработка Vyper (veFunder-vyper).
 
-# **Gauge Weights**
+# **Веса гейджей** {#gauge-weights}
 
-For a Gauge to receive CRV emissions it must be added to the `GaugeController`.  The DAO must vote and approve each new gauge added, [more details here](./creating-a-pool-gauge.md#submit-a-dao-vote).
+Чтобы гейдж получал эмиссии CRV, он должен быть добавлен в GaugeController. DAO должно проголосовать и утвердить каждый новый добавленный гейдж, [подробнее здесь](./creating-a-pool-gauge.md#submit-a-dao-vote).
 
-Each Gauge added to the `GaugeController` has a weight and a type. The weights represent how much of the daily [CRV inflation]](../crv-token/supply-distribution.md#community-emissions-crv-inflation) will be received by the rewards gauge.
+Каждый гейдж, добавленный в GaugeController, имеет вес и тип. Веса показывают, какая доля ежедневной [инфляции CRV](../crv-token/supply-distribution.md#community-emissions-crv-inflation) будет направлена на данный гейдж наград.
 
-# **Gauge Weight Voting**
+# **Голосование за веса гейджей** {#gauge-weight-voting}
 
-The weight system allow the Curve DAO to dictate where the CRV inflation should go. You can vote at this address: [https://dao.curve.fi/gaugeweight](https://dao.curve.fi/gaugeweight)​
+Система весов позволяет DAO Curve определять, куда должна направляться инфляция CRV. Вы можете проголосовать по этому адресу: [https://dao.curve.fi/gaugeweight](https://dao.curve.fi/gaugeweight)
 
-By doing so, users with veCRV can put direct their voting power towards the pool, lending market or other gauge they think should receive the most CRV.
+Таким образом, пользователи с veCRV могут направлять свою голосующую силу в пользу пула или кредитного рынка, который, по их мнению, должен получать наибольшее количество CRV.
 
-# **When are the weights and rewards updated?**
+# **Когда обновляются веса и награды?** {#when-are-the-weights-and-rewards-updated}
 
-On Ethereum mainnet **weights and rewards are updated every Thursday 00:00 UTC**.
+В основной сети Ethereum **веса и награды обновляются каждый четверг в 00:00 UTC**.
 
-On L2s and other chains, weights and rewards start on flow to intermediary gauge contracts on Ethereum mainnet every Thursday 00:00 UTC, then from the following Thursday 00:00 UTC (1 week later) they flow to gauge stakers on the L2s.  So **cross-chain gauge rewards are 1 week behind Ethereum mainnet**.
+На L2 и других сетях веса и награды начинают поступать в промежуточные гейдж-контракты в основной сети Ethereum каждый четверг в 00:00 UTC, а затем с последующего четверга в 00:00 UTC (через 1 неделю) они поступают к стейкерам гейджей на L2. Таким образом, **награды кросс-чейн гейджей отстают от основной сети Ethereum на 1 неделю**.
+

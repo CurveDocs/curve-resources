@@ -78,7 +78,7 @@
 
 *Переключатель "Advanced" позволяет настроить несколько других параметров под капотом.*
 
-!!!tip
+!!!tip "Рекомендация"
     Отличная статья по пониманию параметров доступна здесь: [https://nagaking.substack.com/p/deep-dive-curve-v2-parameters?s=curve](https://nagaking.substack.com/p/deep-dive-curve-v2-parameters?s=curve).
 
 <figure markdown="span">

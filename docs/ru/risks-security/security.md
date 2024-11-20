@@ -1,9 +1,10 @@
-Curve Finance emphasizes its commitment to security by regularly undergoing audits from reputable third-party firms. These audits aim to uncover potential vulnerabilities and ensure that the protocol's smart contracts function as intended. 
+Curve Finance подчеркивает свою приверженность безопасности, регулярно проходя аудиты у авторитетных сторонних фирм. Эти аудиты направлены на выявление потенциальных уязвимостей и обеспечение корректного функционирования смарт-контрактов протокола.
 
-However, as with all DeFi platforms, users should be aware that engaging with Curve Finance carries inherent risks. Despite the thoroughness of audits, they **do not guarantee complete security**, and potential vulnerabilities might still emerge in the future. 
+Однако, как и со всеми платформами DeFi, пользователи должны понимать, что взаимодействие с Curve Finance несет присущие риски. Несмотря на тщательность аудитов, они **не гарантируют полную безопасность**, и в будущем могут возникнуть потенциальные уязвимости.
 
-Therefore, individuals should always proceed with caution and understand that the **use of the protocol is at their own risk**. 
+Поэтому пользователи всегда должны действовать с осторожностью и осознавать, что **использование протокола осуществляется на свой страх и риск**.
 
-## **Audits**
+## **Аудиты** {#audits}
 
-For a detailed look into the audits Curve Finance has undergone, please refer to [here](https://docs.curve.fi/references/audits/).
+Для подробной информации о пройденных Curve Finance аудитах, пожалуйста, перейдите по [ссылке](https://docs.curve.fi/references/audits/).
+

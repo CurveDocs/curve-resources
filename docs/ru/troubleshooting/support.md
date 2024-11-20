@@ -1,10 +1,11 @@
-Curve is to be used entirely at your own risk. Admins have no special keys and cannot recover funds if sent improperly.
+Curve следует использовать исключительно на свой страх и риск. Администраторы не имеют специальных ключей и не могут восстановить средства, если они были отправлены неправильно.
 
-However, a wide variety of resources are still available to help you avoid issues. If you have questions, please make sure to check with the following sources:
+Тем не менее, по-прежнему доступен широкий спектр ресурсов, которые помогут вам избежать проблем. Если у вас есть вопросы, пожалуйста, обратитесь к следующим источникам:
 
-*   This section contains common troubleshooting questions, as does the entirety of this documentation.
-*   The [technical documentation](https://docs.curve.fi/) is a comprehensive resource for coders.
-*   The [Telegram channel](https://t.me/curvefi) is an active place to seek support.
-*   The [Discord also has an active support](https://discord.gg/rgrfS7W) channel.
-    
-Most users use Curve without issue, however we understand it can be complicated so make sure to ask first and save yourself any possible trouble later!
+*   Этот раздел содержит общие вопросы по устранению неполадок, как и вся эта документация.
+*   [Техническая документация](https://docs.curve.fi/) — исчерпывающий ресурс для разработчиков.
+*   [Канал в Telegram](https://t.me/curvefi) — активное место для получения поддержки.
+*   [В Discord также есть активный канал поддержки](https://discord.gg/rgrfS7W).
+
+Большинство пользователей используют Curve без проблем, однако мы понимаем, что это может быть сложно, поэтому убедитесь, что сначала задали вопросы и избавили себя от возможных проблем в дальнейшем!
+

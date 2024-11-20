@@ -1,59 +1,59 @@
-Curve exists across several chains, with several more planned. Curve's primary chain will always be Ethereum, but other sidechains have advantages including speed and cost. In order to use Curve on other chains, you must typically send your funds from Ethereum to the sidechain using the chain's bridge.
+Curve существует на множестве блокчейн сетей, и планируется еще больше. Основной цепочкой Curve всегда будет Ethereum, но другие сайдчейны имеют преимущества, включая скорость и стоимость. Чтобы использовать Curve на других блокчейнах, вам обычно нужно отправить свои средства из Ethereum в сайдчейн, используя мост этого блокчейна.
 
-All of Curve's active chains can be found in the "Networks" menu on the Curve homepage.
+Все активные блокчейны сети Curve можно найти в меню «Networks» на главной странице Curve.
 
-![Curve Networks UI](../images/ui/networks.png)
+![Интерфейс сетей Curve](../images/ui/networks.png)
 
-> Supported Sidechains as of 11/14/2022
+> Поддерживаемые сайдчейны по состоянию на 14.11.2022
 
-## **Connecting your Wallet**
+## **Подключение вашего кошелька** {#connecting-your-wallet}
 
-When you move to new chains, you will need to connect your wallet with the chain's RPC and chain ID. Generally Curve sidechain pages have a button you can press to automatically switch networks and populate this information for you.
+Когда вы переходите на новые блокчейны, вам нужно подключить свой кошелек с помощью RPC и идентификатора цепочки. Обычно на страницах сайдчейнов Curve есть кнопка, которую вы можете нажать, чтобы автоматически переключить сеть и заполнить эту информацию для вас.
 
-![Connect Wallet UI](../images/ui/connect-wallet.webp)
+![Интерфейс подключения кошелька](../images/ui/connect-wallet.webp)
 
-A common issue with sidechains is RPC networks that are temporarily or permanently unavailable. If you are having trouble connecting with RPC networks you may need to visit the chain's support networks to find a new RPC network.
+Распространенной проблемой с сайдчейнами являются RPC-сети, которые временно или постоянно недоступны. Если у вас возникают проблемы с подключением к RPC-сетям, вам может потребоваться посетить службы поддержки блокчейна, чтобы найти новую RPC-сеть.
 
-## **Curve Forks**
+## **Форки Curve** {#curve-forks}
 
-!!!tip
-    For Bridges and CRV contract addresses on other chains please see [*Important Bridges*](../multichain/understanding-multichain.md#
-    ).
+!!!tip "Подсказка"
+    Адреса контрактов Bridges и CRV в других цепочках см. в разделе [*Важные мосты*](../multichain/understanding-multichain.md#).
 
-Curve forks include the following:
+Форки Curve включают:
 
-###  *Avalanche*
+### *Avalanche* {#avalanche}
 
-Avalanche is a sidechain that bills itself as "blazingly fast, low-cost and eco-friendly." Curve's Avalanche site is hosted at [https://avax.curve.fi/](https://avax.curve.fi/)​
+Avalanche — это сайдчейн, который позиционирует себя как «молниеносно быстрый, недорогой и экологичный». Сайт Curve на Avalanche находится по адресу [https://avax.curve.fi/](https://avax.curve.fi/)
 
-### *Arbitrum*
-Arbitrum is an Optimistic Ethereum L2. Arbitrum validators _optimistically_ assume nodes will be operating in good faith, which allows for faster transactions. However, to retroactively allow opportunity to challenge malicious behavior, settlement time can be slower. In some cases this could mean it takes up to one week to bridge funds off-chain, so plan accordingly.  
-Curve on Arbitrum: [https://curve.fi/#/arbitrum/pools](https://curve.fi/#/arbitrum/pools)
-​
-  
-### *Binance Smart Chain*
-Curve does not operate on Binance Smart Chain. The team at Ellipsis ([https://ellipsis.finance/](https://ellipsis.finance/)) launched a fork of Curve that provides similar functionality. The Curve team authorized this fork, but does not actively maintain this fund.
+### *Arbitrum* {#arbitrum}
 
+Arbitrum — это Optimistic Ethereum L2. Валидаторы Arbitrum _оптимистично_ предполагают, что узлы будут работать добросовестно, что позволяет быстрее выполнять транзакции. Однако, чтобы дать возможность ретроактивно оспорить злонамеренное поведение, время расчетов может быть медленнее. В некоторых случаях это может означать, что потребуется до недели, чтобы перенести средства вне блокчейна, поэтому планируйте соответственно.
+Curve на Arbitrum: [https://curve.fi/#/arbitrum/pools](https://curve.fi/#/arbitrum/pools)
 
-### *Fantom*
-Fantom is a high-performance, scalable, and secure smart contract platform designed to overcome the limitations of traditional blockchain networks by utilizing a DAG-based consensus algorithm.  
-Curve on Fantom: [https://curve.fi/#/fantom/pools](https://curve.fi/#/fantom/pools)
+### *Binance Smart Chain* {#binance-smart-chain}
 
+Curve не работает на Binance Smart Chain. Команда Ellipsis ([https://ellipsis.finance/](https://ellipsis.finance/)) запустила форк Curve, который предоставляет аналогичный функционал. Команда Curve разрешила этот форк, но не поддерживает этот проект активно.
 
-### *Harmony*
-Harmony is a proof-of-stake sidechain promising two seconds of transaction speed and a hundred times lower gas fee. Curve's Harmony offerings are at [https://harmony.curve.fi/](https://harmony.curve.fi/)​.
+### *Fantom* {#fantom}
 
+Fantom — это высокопроизводительная, масштабируемая платформа смарт-контрактов, разработанная для преодоления ограничений традиционных блокчейн-сетей путем использования DAG-базированного алгоритма консенсуса.
+Curve на Fantom: [https://curve.fi/#/fantom/pools](https://curve.fi/#/fantom/pools)
 
-### *Optimism*
-Optimism is verified by a series of smart contracts on the Ethereum mainnet and thus not considered a real sidechain. Curve's Optimism branch is located at [https://curve.fi/#/optimism/pools](https://curve.fi/#/optimism/pools)​
+### *Harmony* {#harmony}
 
+Harmony — это сайдчейн с доказательством доли владения (proof-of-stake), обещающий две секунды скорости транзакций и в сто раз более низкую комиссию за газ. Предложения Curve на Harmony находятся по адресу [https://harmony.curve.fi/](https://harmony.curve.fi/)
 
-### *Polygon*
-Polygon (previously known as Matic Network) is a multi-chain scaling solution for Ethereum that aims to provide faster and cheaper transactions using Layer 2 sidechains.
-Curve on Polygon: [https://curve.fi/#/polygon/pools](https://curve.fi/#/polygon/pools)
+### *Optimism* {#optimism}
 
+Optimism проверяется серией смарт-контрактов в основной сети Ethereum и, таким образом, не считается настоящим сайдчейном. Ветка Curve на Optimism находится по адресу [https://curve.fi/#/optimism/pools](https://curve.fi/#/optimism/pools)
 
-### *xDai/Gnosis*
-The xDai chain is a stable payments EVM (Ethereum Virtual Machine) blockchain designed for fast and inexpensive transactions.
-Curve on xDai/Gnosis: [https://curve.fi/#/xdai/pools](https://curve.fi/#/xdai/pools)
-​
+### *Polygon* {#polygon}
+
+Polygon (ранее известный как Matic Network) — это многосетевая масштабируемая решение для Ethereum, которое стремится обеспечить более быстрые и дешевые транзакции, используя сайдчейны второго уровня.
+Curve на Polygon: [https://curve.fi/#/polygon/pools](https://curve.fi/#/polygon/pools)
+
+### *xDai/Gnosis* {#xdai-gnosis}
+
+Сеть xDai — это блокчейн стабильных платежей на основе EVM (Ethereum Virtual Machine), разработанный для быстрых и недорогих транзакций.
+Curve на xDai/Gnosis: [https://curve.fi/#/xdai/pools](https://curve.fi/#/xdai/pools)
+

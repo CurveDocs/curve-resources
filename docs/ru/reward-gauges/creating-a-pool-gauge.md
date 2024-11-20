@@ -1,80 +1,79 @@
-You can deploy the gauge directly **through the UI if the gauge is for a pool**.  To do so go to the following page: [https://curve.fi/#/ethereum/deploy-gauge](https://curve.fi/#/ethereum/deploy-gauge).  If you would like **to deploy a gauge for a lending market**, then follow the guide on the [Create Lending Market](../lending/create-lending-market.md#deploying-a-gauge) page.
+Вы можете развернуть gauge непосредственно **через интерфейс, если гейдж предназначен для пула**. Для этого перейдите по следующей ссылке: [https://curve.fi/#/ethereum/deploy-gauge](https://curve.fi/#/ethereum/deploy-gauge). Если вы хотите **развернуть гейдж для кредитного рынка**, то следуйте руководству на странице [Создание кредитного рынка](../lending/create-lending-market.md#deploying-a-gauge).
 
 ---
 
-# **Deploying a Pool Gauge with the UI**
+# **Развертывание гейджа пула через UI** {#deploying-a-pool-gauge-with-the-ui}
 
-Go to the Curve page to deploy a gauge here: [https://curve.fi/#/ethereum/deploy-gauge](https://curve.fi/#/ethereum/deploy-gauge).  This page has a switch with 2 options:
+Перейдите на страницу Curve для развертывания гейджа здесь: [https://curve.fi/#/ethereum/deploy-gauge](https://curve.fi/#/ethereum/deploy-gauge). На этой странице есть переключатель с двумя опциями:
 
-- [**Deploy Mainnet Gauge**](#deploy-mainnet-pool-gauge) - Deploy a gauge for a pool on Ethereum Mainnet
-- [**Deploy Sidechain Gauge**](#deploy-sidechain-pool-gauge) - Deploy a gauge for a pool on any other chain Curve has deployed to.
+- [**Deploy Mainnet Gauge**](#deploy-mainnet-pool-gauge) — Развернуть гейдж для пула в основной сети Ethereum
+- [**Deploy Sidechain Gauge**](#deploy-sidechain-pool-gauge) — Развернуть гейдж для пула на любой другой сети, где развернут Curve
 
-These different options have slightly different processes for deploying the gauge, but both options require that you choose the correct pool type for the gauge that is being deployed.
+Эти опции имеют немного разные процессы для развертывания гейджа, но обе требуют выбора правильного типа пула для развертываемого gauge.
 
-### **Pool Types:**
+### **Типы пулов:** {#pool-types}
 
-- **Stableswap** - a pool with up to 8 pegged assets e.g., USDC and USDT
-- **Two Coin Cryptoswap** - a pool with 2 volatile assets e.g., USDC and ETH
-- **Three Coin Cryptoswap** - a pool with 3 volatile assets e.g., USDC, ETH and CRV
-- **Stableswap (old)** - an old pool with pegged assets e.g., USDC and USDT.
-- **Two Coin Cryptoswap (old)** - an old pool with 2 volatile assets e.g., USDC and ETH
+- **Stableswap** — пул включающий до 8 привязанных активов, например USDC и USDT
+- **Two Coin Cryptoswap** — пул с 2 волатильными активами, например, USDC и ETH
+- **Three Coin Cryptoswap** — пул с 3 волатильными активами, например, USDC, ETH и CRV
+- **Stableswap (old)** — старый пул с привязанными активами, например, USDC и USDT
+- **Two Coin Cryptoswap (old)** — старый пул с 2 волатильными активами, например, USDC и ETH
 
-A pool is classified as *old* if it is not a New Generation (NG) pool.  If the pool was deployed from 2024 onwards it should be a NG pool.  If you are not sure on the pool type then try all options when deploying the gauge, the UI will show an error if the wrong option is chosen or the pool already has a gauge deployed.
+Пул классифицируется как *старый*, если он не является пулом нового поколения (NG). Если пул был развернут с 2024 года и позже, он должен быть пулом NG. Если вы не уверены в типе пула, то попробуйте все опции при развертывании гейджа — интерфейс покажет ошибку, если выбран неправильный вариант или для пула гейдж уже развернут.
 
 ---
 
-## **Deploy Mainnet Pool Gauge**
+## **Развертывание гейджа пула в основной сети (Ethereum mainnet)** {#deploy-mainnet-pool-gauge}
 
-Go to the [Deploy Gauge](https://curve.fi/#/ethereum/deploy-gauge) page, and make sure the switch in the right hand corner is set to the left as shown below.  The  "Deploy Mainnet Gauge" screen should be visible as below.
+Перейдите на страницу [Deploy Gauge](https://curve.fi/#/ethereum/deploy-gauge) и убедитесь, что переключатель в правом верхнем углу установлен влево, как показано ниже. Должен быть виден экран «Deploy Mainnet Gauge», как показано ниже.
 
 ![Deploy Mainnet Gauge UI](../images/ui/deploy-mainnet-gauge.png){: .centered }
 
-Simply **input the  pool address** (0x...) and **select the [pool type](#pool-types) from the drop down menu**.  *Note the pool type may be pre-selected for you, if this is the case, this does not need to be changed*.  
+Просто **введите адрес пула** (0x...) и **выберите [тип пула](#pool-types) из выпадающего меню**. *Обратите внимание, что тип пула может быть выбран для вас автоматически, в этом случае его не нужно изменять*.
 
-After the options have been inputted, click on deploy gauge and submit the transaction using your preferred wallet.  The UI will show an error if the incorrect pool type is selected, or a gauge already exists for the pool, so there is no harm in trying all options if you are unsure of the pool type.
+После ввода параметров нажмите на «deploy gauge» и подтвердите транзакцию с помощью вашего кошелька. Интерфейс покажет ошибку, если выбран неверный тип пула или для пула уже существует гейдж, так что нет риска попробовать все варианты, если вы не уверены в типе пула.
 
-After clicking on deploy and the transaction is confirmed the gauge is deployed.  A [vote can then be created to add it to the gauge controller](#submit-a-dao-vote).  Adding the gauge to the gauge controller allows the gauge to receive CRV rewards for stakers when the gauge is allocated [gauge weight](./gauge-weights.md).
+После нажатия на «Deploy» и подтверждения транзакции гейдж будет развернут. Затем можно [создать голосование для добавления его в контроллер гейджей (gauge controller)](#submit-a-dao-vote). Добавление гейджа в контроллер гейджей позволяет ему получать награды CRV для стейкеров, после того как он получает [вес гейджа](./gauge-weights.md).
 
 ---
 
-## **Deploy Sidechain Pool Gauge**
+## **Развертывание гейджа пула на сайдчейне** {#deploy-sidechain-pool-gauge}
 
-Sidechain gauges (the same as L2 gauges) work differently to a mainnet gauge.  They have a gauge on the sidechain which distributes rewards, as well as a mirror gauge on Ethereum mainnet so that the gauge can receive [gauge weight](./gauge-weights.md) and CRV inflation rewards.  This parent-child relationship is required because all Curve governance currently happens on Ethereum Mainnet.
+Гейджи сайдчейна (то же самое, что гейджи L2) работают иначе, чем гейдж основной сети. У них есть гейдж на сайдчейне, который распределяет награды, а также зеркальный гейдж в основной сети Ethereum, чтобы гейдж мог получать [вес гейджа](./gauge-weights.md) и награды инфляции CRV. Это отношение родитель-дитя необходимо, потому что все управление Curve в настоящее время происходит в основной сети Ethereum.
 
-!!!warning "Warning"
-    The same address **must** deploy the gauge both on mainnet and the sidechain for this process to work.
+!!!warning "Предупреждение"
+    Для успешной работы процесса, gauge должен быть развернут одним и тем же адресом как  в основной сети Ethereum, так и на сайдчейне.
 
-To deploy a sidechain gauge go to the [Deploy Gauge](https://curve.fi/#/ethereum/deploy-gauge) page. The click the  switch so it's on the right as shown below.  The "Deploy Sidechain Gauge" screen will then be shown.
+Чтобы развернуть гейдж сайдчейна, перейдите на страницу [Deploy Gauge](https://curve.fi/#/ethereum/deploy-gauge). Затем нажмите переключатель так, чтобы он был справа, как показано ниже, после чего будет показан экран «Deploy Sidechain Gauge» (Развертывание гейджа пула на сайдчейне).
 
 ![Deploy Sidechain Gauge UI](../images/ui/deploy-sidechain-gauge.png){: .centered }
 
-Then connect to the chain you would like to deploy the sidechain gauge to, which is the chain the pool resides on.  In this example we are choosing Base as shown below, after choosing and connecting to the network, Step 1 of deploying the sidechain gauge will be shown.
+Затем подключитесь к сети, в которой вы хотите развернуть гейдж сайдчейна, это сеть, в которой находится пул. В этом примере мы выбираем Base, как показано ниже. После выбора и подключения к сети будет показан Шаг 1 развертывания гейджа сайдчейна.
 
 ![Deploy Sidechain Gauge UI - Step 1](../images/ui/deploy-sidechain-gauge-step1.png){: .centered }
 
-For step 1 simply **input the LP Token Address** (same as pool address for newer pools, but can be different for older pools) and **select the [pool type](#pool-types) from the drop down menu** and click **deploy gauge**. The UI will show an error if the incorrect pool type is selected, or a gauge already exists for the pool, so there is no harm in trying all options if you are unsure of the pool type.
+На Шаге 1 просто **введите адрес LP-токена** (тот же, что и адрес пула для новых пулов, но может отличаться для старых пулов) и **выберите [тип пула](#pool-types) из выпадающего меню** и нажмите **«Deploy Gauge»**. Интерфейс покажет ошибку, если выбран неправильный тип пула или гейдж уже существует для этого пула, поэтому нет риска попробовать все варианты, если вы не уверены в типе пула.
 
-After the gauge has been deployed on the sidechain (called the child gauge), the mirror gauge must be deployed on Ethereum Mainnet (the parent gauge), this connects the Sidechain to Ethereum and Curve governance.  To go to step 2 click on the little arrow shown in the red rectangle in the picture below:
+После того как гейдж был развернут на сайдчейне (называется дочерний гейдж), зеркальный гейдж должен быть развернут в основной сети Ethereum (родительский гейдж), это соединяет сайдчейн с Ethereum и управлением Curve. Чтобы перейти к Шагу 2, нажмите на маленькую стрелку, показанную в красном прямоугольнике на изображении ниже:
 
 ![Deploy Sidechain Gauge UI - Step 2](../images/ui/deploy-sidechain-gauge-step2.png){: .centered }
 
-Then choose the network the pool resides by clicking on the Network dropdown menu, in this example we have chosen base, as that's where the sidechain gauge was deployed.  The same pool type as in step 1 must be selected carefully in step 2, as the UI will not raise an error if the wrong option is selected.  Then we input the LP Token address (pool address) on the L2.  **The LP Token Address in step 2 is the same address as used for step 1**.  
+Затем выберите сеть, в которой находится пул, нажав на выпадающее меню Network. В этом примере мы выбрали Base, так как там был развернут гейдж сайдчейна. Тот же тип пула, что и на Шаге 1, должен быть тщательно выбран на Шаге 2, так как **интерфейс не выдаст ошибку**, если выбран неправильный вариант. Затем введите адрес LP-токена (адрес пула) на L2. **Адрес LP-токена на Шаге 2 тот же, что и использовался на Шаге 1**.
 
-After clicking on deploy and the transaction is confirmed, the gauge is deployed and a [vote can be created to add it to the gauge controller](#submit-a-dao-vote).  Adding the gauge to the gauge controller allows the gauge to receive CRV rewards for stakers when the gauge is allocated [gauge weight](./gauge-weights.md).
+После нажатия на «Deploy» и подтверждения транзакции гейдж будет развернут, и можно [создать голосование для добавления его в контроллер гейджей](#submit-a-dao-vote). Добавление гейджа в контроллер гейджей позволяет гейджу получать награды CRV для стейкеров, когда гейджу выделяется [вес гейджа](./gauge-weights.md).
 
 ---
 
-# **Deploy a Gauge for an Ethereum Mainnet Pool via Etherscan**
+# **Развертывание гейджа для пула в основной сети Ethereum через Etherscan** {#deploy-a-gauge-for-an-ethereum-mainnet-pool-via-etherscan}
 
-In addition to the UI, there is an option to deploy the gauge directly through Etherscan. If the pool was deployed recently, check the [Deployment Addresses](https://docs.curve.fi/references/deployed-contracts/) for the factory contracts, otherwise use the deployment transaction to find which contract deployed the pool/lending market, this will be the factory contract.
+Помимо интерфейса, есть возможность развернуть гейдж напрямую через Etherscan. Если пул был развернут недавно, проверьте [Deployment Addresses](https://docs.curve.fi/references/deployed-contracts/) для factory контрактов, в противном случае используйте транзакцию развертывания, чтобы найти, какой контракт развернул пул/кредитный рынок — это будет factory контракт.
 
-!!!warning
-    Calling **`deploy_gauge`** on Etherscan will only work if the function is called on the Factory contract that also deployed the pool.
+!!!warning "Предупреждение"
+    Вызов функции **`deploy_gauge`** на Etherscan будет работать только в том случае, если функция вызывается на Factory контракте, который также развернул пул.
 
-To navigate to this page, first search for the corresponding Factory contract on Etherscan. Then, go to **`Contract -> Write Contract -> deploy_gauge`**.  
-Then insert the pool address you want to add a gauge for, press on **`Write`** and sign the transaction.  
+Чтобы перейти на эту страницу, сначала найдите соответствующий Factory контракт на Etherscan. Затем перейдите в **`Contract -> Write Contract -> deploy_gauge`**. Затем введите адрес пула, для которого вы хотите добавить гейдж, нажмите на **`Write`** и подпишите транзакцию.
 
-Before deploying the gauge, ensure you connect your wallet by clicking the **`Connect to Web3`** button.
+Перед развертыванием гейджа убедитесь, что вы подключили свой кошелек, нажав кнопку **`Connect to Web3`**.
 
 <figure markdown>
   ![Connect to Web3](../images/etherscan_connect.png){ width="800" }
@@ -83,62 +82,63 @@ Before deploying the gauge, ensure you connect your wallet by clicking the **`Co
 
 ---
 
-# **Deploy a Gauge for a Sidechain Pool via Etherscan**
+# **Развертывание гейджа для пула сайдчейна через Etherscan** {#deploy-a-gauge-for-a-sidechain-pool-via-etherscan}
 
-To deploy a sidechain gauge we have to deploy 2 different gauges which link together:
+Чтобы развернуть гейдж сайдчейна, мы должны развернуть 2 разных гейджа, которые связываются вместе:
 
-- **Child Gauge** - This is the gauge on the sidechain, it is deployed first.
-- **Root (Parent) Gauge** - This is the gauge on Ethereum Mainnet, it is deployed after the child and links the child gauge to mainnet.  The root gauge can be added to the gauge controller, allowing CRV inflation rewards to flow to the sidechain gauge.
+- **Дочерний гейдж** — это гейдж на сайдчейне, он развертывается первым.
+- **Корневой (родительский) гейдж** — это гейдж в основной сети Ethereum, он развертывается после дочернего и связывает дочерний гейдж с основной сетью. Корневой гейдж может быть добавлен в контроллер гейджей, позволяя наградам инфляции CRV поступать в гейдж сайдчейна.
 
-!!!warning
-    When deploying the Child Gauge and Root Gauge for a sidechain pool, they must be deployed using the **same address** and the **same salt** for **both gauges**.  This creates the same address for the gauge on the sidechain and ethereum.  If the addresses are not the same, the gauges cannot be linked.
+!!!warning "Предупреждение"
+    При развертывании Дочернего гейджа и Корневого гейджа для пула сайдчейна их необходимо развернуть, используя **один и тот же адрес** и **одинаковое значение salt** для **обоих гейджей**. Это создает один и тот же адрес для гейджа на сайдчейне и Ethereum. Если адреса не совпадают, гейджи не могут быть связаны.
 
-## **Deploying the Sidechain (Child) Gauge**
+## **Развертывание дочернего гейджа сайдчейна** {#deploying-the-sidechain-child-gauge}
 
-To deploy the sidechain child gauge go to [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.fi/references/deployed-contracts/#evm-sidechain-gauges).
+Чтобы развернуть дочерний гейдж сайдчейна, перейдите на [Deployment Addresses для Sidechain Gauge Factories](https://docs.curve.fi/references/deployed-contracts/#evm-sidechain-gauges).
 
-Find the `ChildLiquidityGaugeFactory` address for your sidechain and click on it.  This will take you to the contract page on the sidechain's block explorer.  Then go to **`Contract -> Write Contract -> Connect to Web3`**.
+Найдите адрес `ChildLiquidityGaugeFactory` для вашего сайдчейна и нажмите на него. Это приведет вас на страницу контракта в обозревателе блоков сайдчейна. Затем перейдите в **`Contract -> Write Contract -> Connect to Web3`**.
 
 ![Connect to Web3](../images/etherscan_connect.png){: .centered }
 
-After your wallet is connected, find the `deploy_gauge` function.  There may be multiple `deploy_gauge` functions, this is because there is an optional parameter called `_manager`.  If the function doesn't have this option, the manager will be set to your address.  It is required that your address is the manager for this gauge, otherwise the root gauge will not be linked to this child gauge.
+После подключения вашего кошелька найдите функцию `deploy_gauge`. Может быть несколько функций `deploy_gauge`, это потому, что есть необязательный параметр `_manager`. Если функция не имеет этой опции, manager будет установлен на ваш адрес. Требуется, чтобы ваш адрес был менеджером для этого гейджа, иначе корневой гейдж не будет связан с этим дочерним гейджем.
 
 ![Deploy Gauge Functions Sidechain](../images/deploy_gauge_sidechain.png){: .centered }
 
-To call the function first input the `_lp_token` address for the pool, this is the same as the pool address for newer pools, but can be different for older pools.  Then input your `_salt`, salt is used to create the address for your gauge, this can be anything, but **salt must be the same when deploying this gauge and later when deploying the root gauge**, read more about [salt here](https://en.wikipedia.org/wiki/Salt_(cryptography)).  Input your address as the `_manager` address if it is required, then click on `write` and submit the transaction.
+Чтобы вызвать функцию, сначала введите адрес `_lp_token` для пула (тот же адрес, что и адрес пула для новых пулов, но может отличаться для старых пулов). Затем введите ваш `_salt`, salt используется для создания адреса для вашего гейджа, это может быть что угодно, но **salt должен быть одинаковым при развертывании этого гейджа и позже при развертывании корневого гейджа**, подробнее о [salt здесь](https://en.wikipedia.org/wiki/Salt_(cryptography)). Введите ваш адрес в качестве `_manager`, если это требуется, затем нажмите на `Write` и отправьте транзакцию.
 
-After the transaction is confirmed the sidechain gauge is deployed.
+После подтверждения транзакции гейдж сайдчейна будет развернут.
 
-## **Deploying the Ethereum Mainchain Root (Parent) Gauge**
+## **Развертывание корневого (родительского) гейджа в основной сети Ethereum** {#deploying-the-ethereum-mainchain-root-parent-gauge}
 
-After the sidechain child gauge has been successfully deployed, the Ethereum mainchain root gauge can be deployed.  To do so go back to the [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.fi/references/deployed-contracts/#evm-sidechain-gauges).  You should see the table below:
+После успешного развертывания дочернего гейджа сайдчейна можно развернуть корневой гейдж в основной сети Ethereum. Для этого вернитесь к [адресам развертывания фабрик гейджей сайдчейна](https://docs.curve.fi/references/deployed-contracts/#evm-sidechain-gauges). Вы должны увидеть таблицу ниже:
 
 ![Root Liquidity Gauge Factory Contracts](../images/rootliquidityguagefactories.png){: .centered }
 
-The correct `RootLiquidityGaugeFactory` contract on Ethereum must be chosen.  Most root gauges for sidechains are deployed using the top contract boxed in blue, but some sidechains use their own special contracts, e.g., see the contract for Fractal boxed in red, or the BSC contract boxed in yellow.  If there isn't a specific `RootLiquidityGaugeFactory` for your sidechain, then use the first one.  Once the correct contract is found click on the address and you will be taken to the contract page on etherscan.
+Необходимо выбрать правильный контракт `RootLiquidityGaugeFactory` на Ethereum. Большинство корневых гейджей для сайдчейнов развернуты с использованием верхнего контракта, обведенного синим, но некоторые сайдчейны используют свои собственные специальные контракты, например, контракт для Fraxtal, обведенный красным, или контракт BSC, обведенный желтым. Если нет специфического `RootLiquidityGaugeFactory` для вашего сайдчейна, то используйте первый. После того как правильный контракт найден, нажмите на адрес, и вы будете перенаправлены на страницу контракта в Etherscan.
 
-Once again go to **`Contract -> Write Contract -> Connect to Web3`** to connect your wallet as shown above.  **This must be the same wallet that deployed the sidechain child gauge**.  Then click on the `deploy_gauge` function.  
+Снова перейдите в **`Contract -> Write Contract -> Connect to Web3`**, чтобы подключить ваш кошелек, как показано выше. **Это должен быть тот же кошелек, который развернул дочерний гейдж сайдчейна**. Затем нажмите на функцию `deploy_gauge`.
 
 ![Deploy Gauge Function](../images/deploy_gauge.png){: .centered }
 
-In this function the `payableAmount` can be inputted as 0, the `_chain_id` must be the chain id of the sidechain your pool and gauge is on.  This can be easily found from [chainlist.org](https://chainlist.org/).  The `_salt` must be the same as the salt used to deploy the sidechain child gauge.
+В этой функции `payableAmount` можно ввести как 0, `_chain_id` должен быть идентификатором сети сайдчейна, на котором находится ваш пул и гейдж. Его можно легко найти на [chainlist.org](https://chainlist.org/). `_salt` должен быть таким же, как salt, использованный для развертывания дочернего гейджа сайдчейна.
 
-Click on `write`, and submit the transaction, after this is complete the gauge is root gauge is deployed and this process is complete.  You can now submit a gauge vote to get the root gauge added to the gauge controller, see the process below.
+Нажмите на `Write` и отправьте транзакцию. После этого корневой гейдж будет развернут, и процесс завершен. Теперь вы можете подать его на голосование гейджа, чтобы добавить корневой гейдж в контроллер гейджей, см. процесс ниже.
 
 ---
 
-# **Submit a DAO Vote**
+# **Создание голосования DAO** {#submit-a-dao-vote}
 
-In order for a gauge to become eligible to receive CRV emissions, it has to be added to the GaugeController. This needs to be approved by the DAO.
+Чтобы гейдж стал допустимым для получения эмиссий CRV, он должен быть добавлен в GaugeController. Это должно быть одобрено DAO.
 
-Once you've created your gauge, you can submit it to the DAO for a vote: [https://classic.curve.fi/factory/create\_vote](https://classic.curve.fi/factory/create_vote)​.
+После того как вы создали ваш гейдж, вы можете подать его в DAO на голосование: [https://classic.curve.fi/factory/create_vote](https://classic.curve.fi/factory/create_vote).
 
-If the gauge is for a pool on a sidechain, input the parent gauge address (Ethereum gauge address) here.
+Если гейдж предназначен для пула на сайдчейне, введите здесь адрес родительского гейджа (адрес гейджа Ethereum).
 
-The address that submits must have 2500 veCRV in order to create a vote.
+Адрес, который подает заявку, должен иметь 2500 veCRV, чтобы создать голосование.
 
 ![Create Gauge Vote UI](../images/ui/create-gauge-vote.png){: .centered }
 
-Once the gauge has been submitted, politics take over. You may want to visit the governance forum and explain why your pool should be made eligible for rewards.
+После отправки gauge начнется процесс голосования. Рекомендуется посетить форум управления, создать новую тему и объяснить, почему вашему пулу следует получить право на вознаграждения.
 
-[Governance Forum](https://gov.curve.fi/)
+[Форум управления](https://gov.curve.fi/)
+

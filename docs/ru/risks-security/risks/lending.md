@@ -1,105 +1,106 @@
-<h1>Curve Lending: Risk Disclaimer</h1>
+<h1>Раскрытие информации о рисках Curve Lending</h1>
 
-Curve Lending enables users to permissionlessly create and interact with isolated lending pairs composed of crvUSD, a decentralized stablecoin native to the Curve ecosystem, and various paired tokens. The notifications provided herein address risks associated with Curve Lending activities. The following list is not exhaustive.
+Curve Lending позволяет пользователям без разрешений создавать и взаимодействовать с изолированными парами займов, состоящими из crvUSD, децентрализованного стейблкоина, нативного для экосистемы Curve, и различных парных токенов. Представленные здесь уведомления охватывают риски, связанные с деятельностью Curve Lending. Следующий список не является исчерпывающим.
 
-Users wishing to acquaint themselves with a broader range of general risk disclosures are encouraged to read the [Curve Risk Disclosures for Liquidity Providers](./pool.md). Users are also advised to review the public [audit reports](https://docs.curve.fi/references/audits/) to assess the security and reliability of the platform before engaging in any lending or borrowing activities.
-
-
----
-
-
-## **Permissionless Markets Risks**
-
-Curve Lending markets are permissionless, allowing anyone to create and customize markets with unique token pairs, a price oracle, and parameters that influence the LLAMMA liquidation algorithm and interest rate model. Given the protocol's permissionless nature, users should verify that the market has been instantiated with sensible parameters. Curve provides a [LLAMMA-simulator](https://github.com/curvefi/llamma-simulator) that can be referenced for finding optimal parameters.
-
-There are several factors users should consider regarding attributes of the permissionless markets:
-
-### 1) Unvetted Tokens
-
-Curve Lending pairs consist of crvUSD and one other token, which may not undergo rigorous vetting due to the permissionless lending factory and lack of strict onboarding criteria. As a result, some tokens in Curve pools could be unvetted, introducing potential risks such as exchange rate volatility, smart contract vulnerabilities, and liquidity risks. Users should exercise caution and conduct their due diligence before interacting with any token on the platform.
-
-### 2) Oracle Designation
-
-Curve Lending markets by default use a Curve pool as the oracle, as long as the pool pair contains both tokens in the market and the pool is a Curve tricrypto-ng, twocrypto-ng or stableswap-ng pool, which has manipulation-resistant oracles. However, this creates a dependency on the selected pool oracle, which may become unreliable due to market circumstances (e.g., liquidity migration) or technical bugs.
-
-Alternatively, market deployers may designate a custom oracle, which can introduce additional trust assumptions or technical risks, and these custom oracles may need to be thoroughly vetted due to permissionless market deployment. Users should fully understand the oracle mechanism before interacting with a Curve Lending market.
-
-### 3) Parameter Configuration
-
-There are several parameters configurable by market deployers, including "A" (number of bands within the LLAMMA algorithm), fee on LLAMMA swaps, loan discount (Loan-To-Value), liquidation discount (Liquidation Threshold), and min/max borrow rate. Misconfigured AMM parameters may result in greater losses than necessary during liquidation and generally negatively impact user experience involving liquidation. Misconfigured borrow rates may prevent the market from adequately reflecting rates in the broader market, potentially leading to insufficient withdrawal liquidity for lenders. Users should be aware of market parameter configurations and ensure they are suitable for the underlying assets and anticipated market conditions.
-
-### 4) Governance
-
-The Curve Lending admin is the Curve DAO, a decentralized organization made up of veCRV tokenholders. Votes are required to make any change to the Curve Lending system, including individual markets. Votes undergo a 1-week vote period, requiring a 51% approval and a sufficient voter quorum to execute any on-chain actions. The DAO controls critical system functions in Curve Lending, including setting system contract implementations and configuring parameters such as min/max borrow rates, borrow discounts and AMM fees.
-
-## **Borrowing Risks**
-
-Borrowers can choose from various lending markets to borrow crvUSD against another asset or provide crvUSD as collateral. Markets are designated as one-way or two-way. In one-way markets, collateral cannot be lent out to other users. These assets serve solely as collateral to secure the loan and maintain the borrowing capacity within the protocol. Two-way markets allow collateral to be lent out, creating an opportunity for borrowers to earn interest.
-
-### Soft and Hard Liquidation
-
-Curve Lending uses a "soft" liquidation process powered by the LLAMMA algorithm. LLAMMA is a market-making contract that manages the liquidation and de-liquidation of collateral via arbitrageurs. This mechanism facilitates arbitrage between the collateral and borrowed asset in line with changes in market price, allowing a smoother liquidation process that strives to minimize user losses. Additional information can be found in the [LLAMMA Overview](https://docs.curve.fi/crvUSD/amm/) docs.
-
-Please consider the following risks when using the Curve Stablecoin infrastructure:
-
-* If your collateral enters soft-liquidation mode, you can't withdraw it or add more collateral to your position.
-* If the price of your collateral drops sharply over a short time interval, it can result in higher losses that may reduce your loan's health.
-* If you are in soft-liquidation mode and the price of the collateral appreciates sharply, this can also result in de-liquidation losses. If your loan's health is low, collateral price appreciation can further reduce the loan's health, potentially triggering a hard liquidation.
-* If the health of your loan drops to zero or below, your position will get hard-liquidated with no option of de-liquidation.
-
-Borrowers should be aware that, while in soft liquidation, they essentially pay a fee to arbitrageurs in the form of favorable pricing. This will gradually erode the health of the position, especially during times of high volatility and, importantly, even when the market price of their collateral is increasing. This activity can decrease the position's health and cause it to undergo "hard" liquidation, whereby the collateral is sold off and the Borrower's position is closed. Borrowers are advised to monitor market conditions and actively manage their collateral to mitigate the liquidation risk. Borrowers should also be aware that if the loan's health falls below a certain threshold, hard liquidation could occur, leading to collateral loss.
-
-### Interest Rates
-
-The borrowing rate is algorithmically determined based on the utilization rate of the lending markets. It is calculated using a function that accounts for the spectrum of borrowing activity, ranging from conditions where no assets are borrowed (where the rate is set to a minimum) to conditions where all available assets are borrowed (where the rate is set to a maximum). The rates within the described monetary policy are subject to changes only by Curve DAO. More information on the interest rate model can be found in the Semi-log Monetary Policy docs.
-
-## **Lending Risks**
-
-When participating in lending activities on Curve Lending, Users may deposit crvUSD (or other assets designated for borrowing) into non-custodial Vaults that accrue interest from borrowers. There may also be the opportunity for additional CRV incentives by staking Vault tokens in a Gauge contract, pending DAO approval.
-
-### Risk of Illiquidity
-
-While these Vaults enable Users to supply liquidity and potentially earn returns, Users maintain the right to withdraw their assets at any time, so long as liquidity is available. There may be temporary or permanent states of illiquidity that prevent Lenders from fully or partially withdrawing their funds. This may result from diverse circumstances, including excessive borrow demand, a poorly configured interest rate model, a failure associated with the collateral asset, or a drastic reduction in incentives to a market. Similarly, there may be high volatility in the behavior of either lenders, borrowers, or both, which causes sharp swings in interest rates.
-
-### Risk of Bad Debt
-
-In extreme scenarios, Lenders may experience a shortfall through the accumulation of bad debt. This may occur if collateral prices fall sharply, especially in combination with network congestion that inhibits timely liquidation of positions. In such cases, Borrowers may need a financial motive to repay their debt, and Lenders may race to withdraw any available liquidity, saddling the Lenders remaining in the Vault with the shortfall.
-
-Curve Lending is designed to minimize the risk of bad debt through over-collateralization and the LLAMMA liquidation algorithm. While over-collateralization and the LLAMMA algorithm act as risk mitigation tools, they do not fully insulate Lenders from the inherent risks associated with Curve Lending and assets in its markets, including smart contract vulnerabilities, market volatility, failures in economic models, and regulatory challenges that threaten product viability. Lenders are advised to understand their exposure to risks associated with the collateral asset in Vaults they choose to interact with and appreciate the possibility of experiencing partial or total loss.
+Пользователи, желающие ознакомиться с более широким перечнем общих раскрытий рисков, могут прочитать [Раскрытие рисков Curve для поставщиков ликвидности](./pool.md). Пользователям также рекомендуется ознакомиться с публичными [отчетами об аудите](https://docs.curve.fi/references/audits/) для оценки безопасности и надежности платформы перед началом любой деятельности по кредитованию или займам.
 
 
 ---
 
 
-## **crvUSD Risks**
+## **Риски рынков без разрешений** {#permissionless-markets-risks}
 
-Users should be mindful of risks associated with exposure to the crvUSD stablecoin:
+Рынки Curve Lending являются безразрешительными, что позволяет любому создавать и настраивать рынки с уникальными парами токенов, оракулом цен и параметрами, которые влияют на алгоритм ликвидации LLAMMA и модель процентной ставки. Учитывая безразрешительный характер протокола, пользователи должны убедиться, что рынок был создан с разумными параметрами. Curve предоставляет [симулятор LLAMMA](https://github.com/curvefi/llamma-simulator), который можно использовать для поиска оптимальных параметров.
 
-* Investing in crvUSD carries inherent risks that could lead to partial or complete loss of your investment due to its experimental nature. You are responsible for understanding the risks of buying, selling, and using crvUSD and its infrastructure.
-* The value of crvUSD can fluctuate due to stablecoin market volatility or rapid changes in the liquidity of the stablecoin.
-* crvUSD is exclusively issued by smart contracts, without an intermediary. However, the parameters that ensure the proper operation of the crvUSD infrastructure are subject to updates approved by Curve DAO. Users must stay informed about any parameter changes in the stablecoin infrastructure.
-* crvUSD is not recognized as legal tender by any authority and is not guaranteed to be accepted for payments, subject to changing regulatory landscapes which may affect its legality and utility.
-* Information provided by crvUSD front-end is solely for educational purposes and does not constitute any form of professional advice, leaving users solely responsible for ensuring actions meet their financial goals.
-* Despite efforts to maintain price stability, crvUSD faces the risk of depegging due to market volatility, regulatory changes, or technological issues, potentially affecting its value.
-* Users of crvUSD are exposed to various technological risks, including irreversible transactions, anonymity and security concerns, software dependency, cybersecurity threats, and operational and settlement risks, which can lead to potential asset loss.
-* The continued development and functionality of the crvUSD protocol rely on developer contributions, with no guarantee of sustained involvement, posing a risk to its maintenance and scalability.
+Есть несколько факторов, которые пользователи должны учитывать, касающихся атрибутов рынков без разрешений:
 
-## **General Financial Risks**
+### 1) Непроверенные токены {#unvetted-tokens}
 
-### Volatility
+Пары Curve Lending состоят из crvUSD и еще одного токена, который может не проходить тщательную проверку из-за фабрики безразрешительных займов и отсутствия строгих критериев допуска. В результате некоторые токены в пулах Curve могут быть непроверенными, что вводит потенциальные риски, такие как волатильность обменного курса, уязвимости смарт-контрактов и риски ликвидности. Пользователи должны проявлять осторожность и проводить свою должную проверку перед взаимодействием с любым токеном на платформе.
 
-Users should be aware that the prices of cryptocurrencies and tokens are highly volatile and subject to dramatic fluctuations due to their speculative nature and variable acceptance as a payment method. The market value of blockchain-based assets can significantly decline, potentially resulting in losses. Transactions within blockchain systems, including Ethereum Mainnet and others, may experience variable costs and speeds, affecting asset access and usability. Users are encouraged to develop their strategies for managing volatility.
+### 2) Назначение оракула {#oracle-designation}
 
-### Financial Loss
+Рынки Curve Lending по умолчанию используют пул Curve в качестве оракула, при условии, что пара пула содержит оба токена на рынке и является пулом Curve tricrypto-ng, twocrypto-ng или stableswap-ng, которые обладают оракулами, устойчивыми к манипуляциям. Однако это создает зависимость от выбранного пула оракула, который может стать ненадежным из-за рыночных условий (например, миграция ликвидности) или технических ошибок.
 
-Users should know that cryptocurrencies and tokens are highly experimental and carry significant risks. Engaging in lending and borrowing activities involves irreversible, final, and non-refundable transactions. Users must participate in these activities at their own risk, understanding that the potential for financial loss is substantial. Users are advised to carefully evaluate their lending and borrowing strategies, considering their personal circumstances and financial resources to determine the most suitable situation.
+Альтернативно, создатели рынка могут назначить кастомный оракул, что может вводить дополнительные доверительные предположения или технические риски, и такие кастомные оракулы могут нуждаться в тщательной проверке из-за безразрешительного создания рынка. Пользователи должны полностью понимать механизм оракула перед взаимодействием с рынком Curve Lending.
 
-### Use of Financial Terms
+### 3) Настройка параметров {#parameter-configuration}
 
-Financial terms used in the context of Curve Lending, such as "debt," "lend," "borrow," and similar, are meant for analogy purposes only. They draw comparisons between the operations of decentralized finance smart contracts and traditional finance activities, emphasizing the automated and deterministic nature of DeFi systems. These terms should not be interpreted in their traditional financial context, as DeFi transactions involve distinct mechanisms and risks. Users are encouraged to understand the specific meanings within the DeFi framework.
+Существует несколько параметров, которые могут быть настроены создателями рынка, включая «A» (число диапазонов в алгоритме LLAMMA), комиссию на свопы LLAMMA, скидку по займу (Loan-To-Value), скидку на ликвидацию (Liquidation Threshold) и минимальную/максимальную ставку займа. Неправильно настроенные параметры AMM могут привести к большим потерям при ликвидации и в целом негативно повлиять на пользовательский опыт при ликвидации. Неправильно настроенные ставки займа могут не позволить рынку адекватно отражать ставки на более широком рынке, что потенциально может привести к недостаточной ликвидности для вывода средств для кредиторов. Пользователи должны быть осведомлены о конфигурации параметров рынка и обеспечивать их соответствие базовым активам и ожидаемым рыночным условиям.
+
+### 4) Управление {#governance}
+
+Администратором Curve Lending является Curve DAO, децентрализованная организация, состоящая из держателей токенов veCRV. Для принятия любого изменения в системе Curve Lending, включая отдельные рынки, требуется голосование. Голосование проходит в течение недели, требует 51% одобрения и достаточного кворума для выполнения любых действий в сети. DAO контролирует критические функции системы в Curve Lending, включая настройку контрактов системы и конфигурацию параметров, таких как минимальные/максимальные ставки займа, скидки по займам и комиссии AMM.
+
+## **Риски заимствования** {#borrowing-risks}
+
+Заемщики могут выбирать из различных рынков для заимствования crvUSD под другой актив или предоставления crvUSD в качестве залога. Рынки бывают однонаправленными и двунаправленными. В однонаправленных рынках залог нельзя сдать в аренду другим пользователям. Эти активы служат исключительно в качестве залога для обеспечения займа и поддержания кредитоспособности в рамках протокола. Двунаправленные рынки позволяют сдавать залог в аренду, создавая возможность для заемщиков получать процент.
+
+### Мягкая и жесткая ликвидация {#soft-and-hard-liquidation}
+
+Curve Lending использует процесс «мягкой» ликвидации, управляемый алгоритмом LLAMMA. LLAMMA — это контракт для создания рынка, который управляет ликвидацией и де-ликвидацией залога через арбитражеров. Этот механизм упрощает арбитраж между залогом и заемным активом в соответствии с изменениями рыночной цены, обеспечивая более плавный процесс ликвидации, который стремится минимизировать потери пользователя. Дополнительную информацию можно найти в документации [Обзор LLAMMA](https://docs.curve.fi/crvUSD/amm/).
+
+Пожалуйста, примите во внимание следующие риски при использовании инфраструктуры Curve Stablecoin:
+
+* Если ваш залог входит в режим мягкой ликвидации, вы не сможете его вывести или добавить больше залога в свою позицию.
+* Если цена вашего залога резко упадет за короткий промежуток времени, это может привести к большим потерям, что может снизить состояние вашего займа.
+* Если вы находитесь в режиме мягкой ликвидации и цена залога значительно возрастет, это также может привести к потерям при де-ликвидации. Если состояние вашего займа низкое, рост стоимости залога может еще больше ухудшить состояние займа, потенциально запуская жесткую ликвидацию.
+* Если состояние вашего займа упадет до нуля или ниже, ваша позиция будет подвергнута жесткой ликвидации без возможности де-ликвидации.
+
+Заемщики должны учитывать, что, находясь в состоянии мягкой ликвидации, они фактически платят арбитражерам в форме выгодного ценообразования. Это постепенно ухудшает состояние позиции, особенно в периоды высокой волатильности и даже при росте рыночной цены их залога. Эта деятельность может уменьшить состояние позиции и вызвать «жесткую» ликвидацию, при которой залог продается, и позиция заемщика закрывается. Заемщикам рекомендуется отслеживать рыночные условия и активно управлять своим залогом для снижения риска ликвидации. Заемщикам также следует учитывать, что если состояние займа упадет ниже определенного порога, может произойти жесткая ликвидация, что приведет к потере залога.
+
+### Процентные ставки {#interest-rates}
+
+Процентная ставка по займу определяется алгоритмически на основе уровня использования рынков займов. Она рассчитывается с использованием функции, учитывающей спектр активности займов, от условий, при которых активы не заемлены (когда ставка установлена на минимальном уровне), до условий, при которых все доступные активы заемлены (когда ставка установлена на максимальном уровне). Ставки в рамках описанной денежной политики могут изменяться только Curve DAO. Дополнительную информацию о модели процентной ставки можно найти в документации по Semi-log Monetary Policy.
+
+## **Риски кредитования** {#lending-risks}
+
+Принимая участие в кредитной деятельности в рамках Curve Lending пользователи могут депонировать crvUSD (или другие активы, предназначенные для займа) в некостодиальные Vaults, которые накапливают процент от заемщиков. Также может быть возможность получения дополнительных CRV стимулов путем стейкинга токенов Vault в контракте Gauge, что ожидает одобрения DAO.
+
+### Риск отсутствия ликвидности {#risk-of-illiquidity}
+
+Хотя эти Vaults позволяют пользователям предоставлять ликвидность и потенциально получать доход, пользователи сохраняют право на вывод своих активов в любое время, если ликвидность доступна. Однако могут возникнуть временные или постоянные состояния отсутствия ликвидности, которые не позволят кредиторам полностью или частично вывести свои средства. Это может быть вызвано различными обстоятельствами, включая чрезмерный спрос на займы, неправильно настроенную модель процентной ставки, сбой, связанный с залоговым активом, или резкое сокращение стимулов для рынка. Также может наблюдаться высокая волатильность поведения как кредиторов, так и заемщиков, что вызывает резкие колебания процентных ставок.
+
+### Риск безнадежной задолженности {#risk-of-bad-debt}
+
+В экстремальных случаях кредиторы могут столкнуться с дефицитом из-за накопления безнадежной задолженности. Это может произойти, если цены на залоговые активы резко упадут, особенно в сочетании с перегрузкой сети, которая препятствует своевременной ликвидации позиций. В таких случаях заемщики могут не иметь финансовых стимулов для погашения своей задолженности, и кредиторы могут поспешить вывести доступную ликвидность, оставляя оставшихся в Vault кредиторов с дефицитом.
+
+Curve Lending разработан для минимизации риска безнадежной задолженности за счет избыточного обеспечения и алгоритма ликвидации LLAMMA. Хотя избыточное обеспечение и алгоритм LLAMMA действуют как инструменты снижения риска, они не полностью защищают кредиторов от присущих Curve Lending и активам на его рынках рисков, включая уязвимости смарт-контрактов, волатильность рынка, сбои в экономических моделях и регуляторные вызовы, угрожающие жизнеспособности продукта. Кредиторам рекомендуется понимать свою подверженность рискам, связанным с залоговым активом в Vaults, с которыми они взаимодействуют, и учитывать возможность частичной или полной потери.
 
 
 ---
 
 
-*For up-to-date risk disclaimer, click [here](https://hackmd.io/@LlamaRisk/curve_lending_risk).*
+## **Риски crvUSD** {#crvusd-risks}
+
+Пользователи должны учитывать риски, связанные с crvUSD стейблкоином:
+
+* Инвестирование в crvUSD несет в себе риски, которые могут привести к частичной или полной потере инвестиций из-за экспериментального характера актива. Пользователь несет ответственность за понимание рисков, связанных с покупкой, продажей и использованием crvUSD и его инфраструктуры.
+* Стоимость crvUSD может колебаться из-за волатильности рынка стейблкоинов или резких изменений ликвидности стейблкоина.
+* crvUSD выпускается исключительно смарт-контрактами без участия посредника. Однако параметры, обеспечивающие надлежащее функционирование инфраструктуры crvUSD, могут обновляться с одобрения Curve DAO. Пользователям необходимо быть в курсе любых изменений параметров в инфраструктуре стейблкоина.
+* crvUSD не признается в качестве законного платежного средства каким-либо органом и не гарантируется, что он будет принят к платежам, с учетом изменения нормативной базы, которая может повлиять на его законность и полезность. 
+* Информация, предоставленная фронтендом crvUSD, предназначена исключительно для образовательных целей и не является профессиональной консультацией. Пользователи несут полную ответственность за то, чтобы их действия соответствовали их финансовым целям.
+* Несмотря на усилия по поддержанию стабильности цены, crvUSD сталкивается с риском утраты привязки из-за рыночной волатильности, изменений в регулировании или технических проблем, что может повлиять на его стоимость.
+* Пользователи crvUSD подвержены различным технологическим рискам, включая необратимость транзакций, анонимность и проблемы безопасности, зависимость от программного обеспечения, угрозы кибербезопасности и операционные и расчетные риски, которые могут привести к потенциальной утрате активов.
+* Дальнейшее развитие и функциональность протокола crvUSD зависят от вклада разработчиков, при этом нет гарантии продолжительного участия, что представляет риск для его поддержки и масштабируемости.
+
+## **Общие финансовые риски** {#general-financial-risks}
+
+### Волатильность {#volatility}
+
+Пользователи должны понимать, что цены криптовалют и токенов крайне волатильны и подвержены резким колебаниям из-за их спекулятивного характера и переменной приемлемости в качестве платежного средства. Рыночная стоимость активов, основанных на блокчейне, может значительно снизиться, что потенциально приведет к потерям. Транзакции в блокчейн-системах, включая Ethereum Mainnet и другие, могут иметь переменные затраты и скорость, что влияет на доступ к активам и их пригодность для использования. Пользователям рекомендуется разрабатывать свои стратегии управления волатильностью.
+
+### Финансовые потери {#financial-loss}
+
+Пользователи должны понимать, что криптовалюты и токены являются высокоэкспериментальными и несут значительные риски. Участие в деятельности по кредитованию и заимствованию включает необратимые, окончательные и не подлежащие возврату транзакции. Пользователи должны участвовать в этих действиях на свой страх и риск, понимая, что возможность финансовых потерь значительна. Пользователям рекомендуется тщательно оценивать свои стратегии кредитования и заимствования, учитывая свои личные обстоятельства и финансовые ресурсы, чтобы определить наиболее подходящую ситуацию.
+
+### Использование финансовых терминов {#use-of-financial-terms}
+
+Финансовые термины, используемые в контексте Curve Lending, такие как «долг», «кредитование», «заимствование» и подобные, предназначены только для аналогии. Они проводят сравнения между операциями смарт-контрактов децентрализованного финансирования и деятельностью традиционного финансирования, подчеркивая автоматизированный и детерминированный характер DeFi систем. Эти термины не должны интерпретироваться в их традиционном финансовом контексте, так как DeFi транзакции включают в себя различные механизмы и риски. Пользователям рекомендуется понимать их конкретное значение в рамках DeFi.
+
+
+---
+
+
+*Для получения актуального отказа от ответственности по рискам нажмите [здесь](https://hackmd.io/@LlamaRisk/curve_lending_risk).*
+

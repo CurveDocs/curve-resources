@@ -12,17 +12,16 @@ plugins:
       fallback_to_default: false
       languages:
         - locale: en
-          default: true
           name: English
           build: true
+          default: true
         - locale: ru
           name: Русский
           build: true
           nav:
             - Главная: index.md
-            - Начало работы:
-              - Понимание Curve & Stableswap (v1): base-features/understanding-curve.md  
-              - Понимание Cryptoswap (v2): base-features/understanding-crypto-pools.md
+
+            - Начало работы с Curve: getting-started.md
 
             - Токен CRV:
               - Обзор & Токеномика: crv-token/overview.md
@@ -67,11 +66,10 @@ plugins:
                 - Депонирование в tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
 
             - Создание пулов:
-              - Обзор создания пулов: factory-pools/pool-creation-overview.md
-              - Создание Stableswap NG пула: factory-pools/creating-a-stableswap-ng-pool.md
-              - Создание Twocrypto NG пула: factory-pools/creating-a-twocrypto-ng-pool.md
-              - Создание Tricrypto NG пула: factory-pools/creating-a-tricrypto-ng-pool.md
-              - Понимание оракулов: factory-pools/understanding-oracles.md
+              - Обзор создания пулов: pool-creation/pool-creation-overview.md
+              - Создание Stableswap пула: pool-creation/creating-a-stableswap-pool.md
+              - Создание Cryptoswap пула: pool-creation/creating-a-cryptoswap-pool.md
+              - Понимание оракулов: pool-creation/understanding-oracles.md
 
             - Гейджи вознаграждений (Reward Gauges):
               - Обзор: reward-gauges/overview.md
@@ -88,11 +86,11 @@ plugins:
                 - Создание предложения DAO: governance/proposals/creating-a-dao-proposal.md
 
             - Мульти-чейн:
+              - Понимание мульти-чейн: multichain/understanding-multichain.md
               - CRV: multichain/crv.md
               - crvUSD: multichain/crvusd.md
-              - Понимание мульти-чейн: multichain/understanding-multichain.md
-              - Перемещение средств между сетями: multichain/bridging-funds.md
-              - Как перенести crvUSD на BSC: multichain/bridging-crvusd-to-bsc.md
+              - scrvUSD: multichain/scrvusd.md
+              - Как перенести CRV, crvUSD и scrvUSD на L1 сети: multichain/bridging-curve-eco-tokens.md
 
             - Поддержка и устранение неполадок:
               - Поддержка: troubleshooting/support.md

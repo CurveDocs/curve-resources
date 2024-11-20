@@ -1,22 +1,22 @@
-!!!info "This is a very old guide"
-    This feature was deprecated more than 12 months ago and this information is provided solely in the rare event someone still needs to recover a swap cross asset from from the synthetix era.
+!!!info "Это очень старое руководство"
+    Эта функция была прекращена более 12 месяцев назад, и эта информация предоставляется исключительно в редких случаях, когда кому-то все еще нужно восстановить кросс-активный своп из эпохи Synthetix.
 
-If Curve has lost transaction of your cross asset swap, do not panic, there is a simple way to recover it.
+Если Curve потерял транзакцию вашего кросс-активного свопа, не паникуйте, есть простой способ ее восстановить.
 
-## **Finding the token id**
+## **Поиск идентификатора токена**
 
-Visit your address on Etherscan and click on ERC721:
+Посетите свой адрес на Etherscan и нажмите на ERC721:
 
 ![Etherscan ERC721](../images/etherscan-erc721.webp)
 
-And then click on your latest cross-asset swap, you should find a long string of numbers like below:
+Затем нажмите на ваш последний кросс-активный своп, вы должны найти длинную строку чисел, как показано ниже:
 
 ![Etherscan ERC721 ID](../images/etherscan-erc721-id.webp)
 
-## **Initiate recovery**
+## **Инициация восстановления**
 
-Visit: [https://classic.curve.fi/recover](https://classic.curve.fi/recover)​
+Посетите: [https://classic.curve.fi/recover](https://classic.curve.fi/recover)
 
-Enter your token id found on Etherscan, enter your the token you would like to receive (if your token has sBTC then it must be a Bitcoin token that shares a pool with sBTC, if your token is sUSD, it should be a token that shares a pool with sUSD) and then click recover.
+Введите идентификатор вашего токена, найденный на Etherscan, введите токен, который вы хотите получить (если ваш токен имеет sBTC, то это должен быть биткоин-токен, который разделяет пул с sBTC; если ваш токен — sUSD, то это должен быть токен, который разделяет пул с sUSD), затем нажмите «Recover».
 
-Confirm your transaction and you're done.
+Подтвердите транзакцию и все готово. 

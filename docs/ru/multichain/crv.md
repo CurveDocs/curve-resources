@@ -1,17 +1,16 @@
-<h1>Multi-Chain: Curve DAO Token</h1>
+<h1>Мультичейн: Токен Curve DAO (CRV)</h1>
 
-The Curve token can be bridged across various chains, though it does not always retain full functionality. Locking CRV to obtain veCRV, as well as rewards voting for cross-chain gauges, must be conducted on the Ethereum blockchain.
+Токен Curve может быть перенесен с помощью мостов на различные сети, хотя он не всегда сохраняет полную функциональность. Блокировка CRV для получения veCRV, а также голосование за награды для кроссчейн гейджей должны проводиться в блокчейне Ethereum.
 
 ---
 
-!!!danger "MULTICHAIN WARNING"
-    Multichain statement: https://twitter.com/MultichainOrg/status/1677180114227056641  
-    The Multichain service is currently halted, and all bridge transactions are suspended on their source chains. 
-    There is no confirmed time for service resumption.  
-    **Please refrain from using the Multichain bridging service at this time.**
+!!!danger "ПРЕДУПРЕЖДЕНИЕ О MULTICHAIN"
+    Заявление Multichain: https://twitter.com/MultichainOrg/status/1677180114227056641  
+    Сервис Multichain в настоящее время остановлен, и все транзакции мостов приостановлены на их исходных цепочках. 
+    Нет подтвержденного времени возобновления сервиса.  
+    **Пожалуйста, воздержитесь от использования сервиса мостов Multichain в настоящее время.**
 
-
-| Network | Contract Address | Bridge |
+| Сеть | Адрес контракта | Мост |
 | ------- | :--------------: | :----: |
 | :logos-arbitrum: **Arbitrum** | [0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978](https://arbiscan.io/address/0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978) | [**Arbitrum Bridge**](https://bridge.arbitrum.io/)​ |
 | :logos-base: **Base** | [0x8Ee73c484A26e0A5df2Ee2a4960B789967dd0415](https://basescan.org/address/0x8Ee73c484A26e0A5df2Ee2a4960B789967dd0415) | [**Base Bridge**](https://bridge.base.org/deposit) |
@@ -22,6 +21,4 @@ The Curve token can be bridged across various chains, though it does not always 
 | :logos-avalanche: **Avalanche**​ | [0x47536F17F4fF30e64A96a7555826b8f9e66ec468](https://snowtrace.io/address/0x47536f17f4ff30e64a96a7555826b8f9e66ec468) | [**<mark style="background-color: #f31743; color: black">Multichain</mark>**](https://multichain.org/)​ |
 | :logos-fantom: **Fantom**​ | [0x1E4F97b9f9F913c46F1632781732927B9019C68b](https://ftmscan.com/address/0x1e4f97b9f9f913c46f1632781732927b9019c68b) | [**<mark style="background-color: #f31743; color: black">Multichain</mark>**](https://multichain.org/)​ |
 | :logos-celo: **Celo**​ | [0x173fd7434B8B50dF08e3298f173487ebDB35FD14](https://explorer.celo.org/mainnet/address/0x173fd7434B8B50dF08e3298f173487ebDB35FD14) | [**<mark style="background-color: #f31743; color: black">Multichain</mark>**](https://multichain.org/)​ |
-
-
 
