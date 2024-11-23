@@ -1,6 +1,6 @@
 <h1>User Guide: Bridging Curve Ecosystem Tokens</h1>
 
-Curve uses [LayerZero](https://layerzero.network/) to enable **cross-chain transfers of `CRV`, `crvUSD`, and `scrvUSD`** to other L1 blockchains such as `BinanceSmartChain`, `Avalanche`, and `Fantom`. This allows users to use any LayerZero-compatible bridge, such as Stargate, which many find simpler and more convenient. However, this guide focuses on bridging using only blockchain explorers, reducing reliance on third-party interfaces and avoiding any additional fees they may charge.
+Curve uses [LayerZero](https://layerzero.network/) to enable **cross-chain transfers of `CRV`, `crvUSD`, and `scrvUSD`** to other L1 blockchains such as `BinanceSmartChain`, `Avalanche`, and `Fantom`. This guide focuses on bridging using only blockchain explorers, reducing reliance on third-party interfaces and avoiding any additional fees they may charge.
 
 This guide explains how to **bridge any of the three tokens from the Ethereum Mainnet to other L1 blockchains or vice versa**. The only requirements include having a wallet with the token to be bridged and ETH or the gas token of the L1, depending on the bridging direction, to cover transaction fees.
 
