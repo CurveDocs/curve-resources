@@ -56,7 +56,7 @@ The yield paid to scrvUSD holders comes directly from the crvUSD interest rate f
 *The amount of rewards allocated to scrvUSD varies and depends on two factors:*
 
 1. The amount of crvUSD fees generated.
-2. The percentage of the total crvUSD fees allocated to scrvUSD, as determined by the Curve DAO.  Currently there is a **5% minimum**, and **10% maximum** revenue share for scrvUSD.
+2. The percentage of the total crvUSD fees allocated to scrvUSD, as determined by the Curve DAO.  Currently there is a **5% minimum**, and **20% maximum** revenue share for scrvUSD.
 
 ![Revenue Distributor](../images/scrvusd/scrvusd_fee_split_light.svg#only-light){: .centered style="width: 75%;" }
 ![Revenue Distributor](../images/scrvusd/scrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
@@ -65,11 +65,11 @@ The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on th
 
 !!!example "How much crvUSD revenue will be allocated to scrvUSD?"
 
-    Currently, the DAO has allocated a **5% minimum** and a **10% maximum** of crvUSD revenue to go to scrvUSD.  If the revenue from crvUSD is $100k in a week then: 
+    Currently, the DAO has allocated a **5% minimum** and a **20% maximum** of crvUSD revenue to go to scrvUSD.  If the revenue from crvUSD is $100k in a week then: 
 
     - If 2% of crvUSD is staked, 5% of the $100k will be allocated to scrvUSD.
     - If 8% of crvUSD is staked, 8% of the $100k will be allocated to scrvUSD.
-    - If 20% of crvUSD is staked, 10% of the $100k will be allocated to scrvUSD.
+    - If 25% of crvUSD is staked, 20% of the $100k will be allocated to scrvUSD.
 
 
 ---
