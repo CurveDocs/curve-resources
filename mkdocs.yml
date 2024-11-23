@@ -28,9 +28,9 @@ plugins:
               - Предложение & Распределение: crv-token/supply-distribution.md
               - CRV & veCRV FAQ: crv-token/faq.md
 
-            - Заблокированный CRV (veCRV):
+            - Блок CRV (veCRV):
               - Обзор: vecrv/overview.md
-              - Как заблокировать CRV: vecrv/locking-your-crv.md
+              - Как блокировать CRV: vecrv/locking-your-crv.md
               - Получение торговых комиссий: vecrv/claiming-trading-fees.md
               - Сбор и распределение комиссий: vecrv/fee-collection-distribution.md
 
@@ -85,8 +85,8 @@ plugins:
               - Предложения:
                 - Создание предложения DAO: governance/proposals/creating-a-dao-proposal.md
 
-            - Мульти-чейн:
-              - Понимание мульти-чейн: multichain/understanding-multichain.md
+            - Мультичейн:
+              - Понимание мультичейн: multichain/understanding-multichain.md
               - CRV: multichain/crv.md
               - crvUSD: multichain/crvusd.md
               - scrvUSD: multichain/scrvusd.md

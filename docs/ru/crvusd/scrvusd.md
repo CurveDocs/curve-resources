@@ -51,7 +51,7 @@ scrvUSD предоставляет дополнительную возможно
 *Сумма вознаграждений, выделяемых на scrvUSD, варьируется и зависит от двух факторов:*
 
 1. Объем сгенерированных комиссий crvUSD.
-2. Процент от общего объема комиссий crvUSD, выделяемый на scrvUSD, как определено Curve DAO. В настоящее время DAO голосует по предложению с **минимумом 5%** и **максимумом 20%** доли дохода для scrvUSD.
+2. Процент от общего объема комиссий crvUSD, выделяемый на scrvUSD, как определено Curve DAO.
 
 ![Распределитель доходов](../images/scrvusd/scrvusd_fee_split_light.svg#only-light){: .centered style="width: 75%;" }
 ![Распределитель доходов](../images/scrvusd/scrvusd_fee_split_dark.svg#only-dark){: .centered style="width: 75%;" }
