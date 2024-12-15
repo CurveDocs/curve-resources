@@ -13,6 +13,7 @@ The Curve token can be bridged across various chains, though it does not always 
 
 | Network | Contract Address | Bridge |
 | ------- | :--------------: | :----: |
+| :logos-ethereum: **Ethereum** | [0xD533a949740bb3306d119CC777fa900bA034cd52](https://etherscan.io/token/0xd533a949740bb3306d119cc777fa900ba034cd52) | --- |
 | :logos-arbitrum: **Arbitrum** | [0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978](https://arbiscan.io/address/0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978) | [**Arbitrum Bridge**](https://bridge.arbitrum.io/)​ |
 | :logos-base: **Base** | [0x8Ee73c484A26e0A5df2Ee2a4960B789967dd0415](https://basescan.org/address/0x8Ee73c484A26e0A5df2Ee2a4960B789967dd0415) | [**Base Bridge**](https://bridge.base.org/deposit) |
 | :logos-optimism: **Optimism** | [0x0994206dfE8De6Ec6920FF4D779B0d950605Fb53](https://optimistic.etherscan.io/address/0x0994206dfe8de6ec6920ff4d779b0d950605fb53) | [**Optimism Bridge**](https://app.optimism.io/bridge) |
