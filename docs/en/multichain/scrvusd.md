@@ -12,7 +12,7 @@ Savings crvUSD (scrvUSD) was first introduced in November 2024 on Ethereum.
     Because `scrvUSD` was only recently launched, it might be necessary to manually add the token address to the bridging UI.
 
 
-| Chain                         | crvUSD Token Address | Official Bridge |
+| Chain                         | scrvUSD Token Address | Official Bridge |
 | ----------------------------- | :------------------: | :-------------: |
 | :logos-ethereum: `Ethereum` | [0x0655977FEb2f289A4aB78af67BAB0d17aAb84367](https://etherscan.io/address/0x0655977FEb2f289A4aB78af67BAB0d17aAb84367) | - |
 | :logos-optimism: `Optimism` | [0x289f635106d5b822a505b39ac237a0ae9189335b](https://optimistic.etherscan.io/address/0x289f635106d5b822a505b39ac237a0ae9189335b) | [Superbridge](https://superbridge.app/base) |
