@@ -8,7 +8,7 @@ Some special gauges also exist to fund specific initiatives, like Vyper developm
 
 For a Gauge to receive CRV emissions it must be added to the `GaugeController`.  The DAO must vote and approve each new gauge added, [more details here](./creating-a-pool-gauge.md#submit-a-dao-vote).
 
-Each Gauge added to the `GaugeController` has a weight and a type. The weights represent how much of the daily [CRV inflation]](../crv-token/supply-distribution.md#community-emissions-crv-inflation) will be received by the rewards gauge.
+Each Gauge added to the `GaugeController` has a weight and a type. The weights represent how much of the daily [CRV inflation](../crv-token/supply-distribution.md#community-emissions-crv-inflation) will be received by the rewards gauge.
 
 # **Gauge Weight Voting**
 
