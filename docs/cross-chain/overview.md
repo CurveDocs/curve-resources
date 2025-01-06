@@ -6,11 +6,12 @@ While Ethereum remains Curve's primary network, Curve products and assets are av
 
 The Curve ecosystem consists of five key components with varying cross-chain availability:
 
-- [**Curve DEX** (Decentralized Exchange)](dex-lending.md) - Available on many chains, and will soon be deployable permissionlessly to any chain.
-- [**Curve Lending**](dex-lending.md) - Available on Ethereum and select L2s, with deployment to any chain coming soon.
+- [**Curve DEX** (Decentralized Exchange)](dex-llamalend.md) - Available on many chains, and now deployable permissionlessly to any chain.
+- [**Curve Lending (Llamalend)**](dex-llamalend.md) - Available on Ethereum and select L2s, with deployment to any chain coming soon.
 - [**Curve Assets** (CRV, crvUSD, scrvUSD)](curve-assets.md) - Available on many chains through native bridges and LayerZero.
 - **CrvUSD Minting** - Ethereum-only, with no plans for deployment to other networks.
 - **CurveDAO** -  Ethereum-only, with no plans for cross-chain deployment.
+- **CRV Rewards** - CRV inflation rewards are available to pools and llamalend markets on all chains that Curve supports, but the DAO must vote to add the market to the Gauge Controller (controls which markets can get rewards).
 
 See the linked pages above for more details on how this works.
 

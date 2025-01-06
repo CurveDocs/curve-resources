@@ -186,7 +186,7 @@ nav:
 
   - Cross-Chain:
     - Overview: cross-chain/overview.md
-    - Dex & Lending: cross-chain/dex-lending.md
+    - DEX & Llamalend: cross-chain/dex-llamalend.md
     - Curve Assets (CRV, crvUSD, scrvUSD): cross-chain/curve-assets.md
     - How to Bridge Curve Assets to L1s: cross-chain/bridging-curve-eco-tokens.md
 
