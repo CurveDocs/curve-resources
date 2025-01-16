@@ -6,10 +6,12 @@ docs_dir: 'docs'
 plugins:
   - autolinks
   - typeset
+  - search
   - i18n:
       docs_structure: folder
       fallback_to_default: false
       search_reconfigure: true
+      reconfigure_material: true
       languages:
         - locale: en
           name: English
