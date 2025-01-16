@@ -4,12 +4,12 @@ site_author: CurveFi
 docs_dir: 'docs'  
 
 plugins:
-  - search
   - autolinks
-#  - typeset
+  - typeset
   - i18n:
       docs_structure: folder
       fallback_to_default: false
+      search_reconfigure: true
       languages:
         - locale: en
           name: English
