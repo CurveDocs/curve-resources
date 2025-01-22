@@ -112,10 +112,10 @@ extra:
       name: YouTube
   alternate:
     - name: English
-      link: /
+      link: ""
       lang: en
     - name: Русский
-      link: /ru/
+      link: ru
       lang: ru
 
 extra_css:
