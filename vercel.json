@@ -1,0 +1,5 @@
+{
+    "rewrites": [
+      { "source": "/ru/:path*", "destination": "https://curve-resources-ru.vercel.app/:path*" }
+    ]
+  }
