@@ -56,6 +56,7 @@ markdown_extensions:
 
 theme:
   name: material
+  language: en
   custom_dir: overrides
   include_search_page: false
   search_index_only: true
@@ -109,6 +110,13 @@ extra:
     - icon: fontawesome/brands/youtube
       link: http://www.youtube.com/c/CurveFinance
       name: YouTube
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Русский
+      link: /ru/
+      lang: ru
 
 extra_css:
   - stylesheets/extra.css
