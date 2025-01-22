@@ -1,6 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/ru/:path*", "destination": "https://curve-resources-ru.vercel.app/:path*" },
-    { "source": "/ru/", "destination": "https://curve-resources-ru.vercel.app/" }
-  ]
-}
+    "rewrites": [
+      { "source": "/ru/:path*", "destination": "https://curve-resources-ru.vercel.app/:path*" },
+      { "source": "/ru/", "destination": "https://curve-resources-ru.vercel.app/" }
+    ]
+  }
