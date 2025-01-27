@@ -1,11 +1,130 @@
 site_name: Curve Resources
 site_url: https://resources.curve.fi/
 site_author: CurveFi
+docs_dir: 'docs'  
 
 plugins:
   - search
   - autolinks
-  - typeset
+#  - typeset
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: false
+      languages:
+        - locale: en
+          name: English
+          build: true
+          default: true
+        - locale: ru
+          name: Русский
+          build: true
+          nav:
+            - Главная: index.md
+
+            - Начало работы с Curve: getting-started.md
+
+            - Токен CRV:
+              - Обзор & Токеномика: crv-token/overview.md
+              - Предложение & Распределение: crv-token/supply-distribution.md
+              - CRV & veCRV FAQ: crv-token/faq.md
+
+            - Блок CRV (veCRV):
+              - Обзор: vecrv/overview.md
+              - Как блокировать CRV: vecrv/locking-your-crv.md
+              - Получение торговых комиссий: vecrv/claiming-trading-fees.md
+              - Сбор и распределение комиссий: vecrv/fee-collection-distribution.md
+
+            - Стейблкоин Curve (crvUSD):
+              - Понимание crvUSD: crvusd/understanding-crvusd.md
+              - Создание и управление займом: crvusd/loan-creation.md
+              - Ликвидации: crvusd/liquidations.md
+              - Стратегии займов: crvusd/loan-strategies.md
+              - Глубокое понимание концепций займа: crvusd/loan-concepts.md
+              - FAQ по crvUSD: crvusd/faq.md
+
+            - Доходный-crvUSD (scrvUSD): crvusd/scrvusd.md
+
+            - Кредитование Curve:
+              - Обзор: lending/overview.md
+              - Кредитное плечо: lending/leverage.md
+              - Ликвидации: crvusd/liquidations.md
+              - Как заимствовать и использовать кредитное плечо: lending/how-to-borrow.md
+              - Как поставлять ликвидность: lending/how-to-supply.md
+              - FAQ по кредитованию: lending/faq.md
+              - Как создать кредитный рынок: lending/create-lending-market.md
+
+            - Пулы:
+              - Обзор: lp/overview.md
+              - FAQ по депозиту: lp/deposit-faqs.md
+              - Расчет доходности: lp/calculating-yield.md
+              - Графики и активность пулов: lp/charts_poolactivity.md
+              - Депонирование:
+                - Обзор: lp/depositing/depositing.md
+                - Депонирование в tri-pool: lp/depositing/depositing-into-the-tri-pool.md
+                - Депонирование в metapool: lp/depositing/depositing-into-a-metapool.md
+                - Депонирование в cryptoswap-pool: lp/depositing/depositing-into-a-cryptoswap-pool.md
+                - Депонирование в tricrypto-pool: lp/depositing/depositing-into-a-tricrypto-pool.md
+
+            - Создание пулов:
+              - Обзор создания пулов: pool-creation/pool-creation-overview.md
+              - Создание Stableswap пула: pool-creation/creating-a-stableswap-pool.md
+              - Создание Cryptoswap пула: pool-creation/creating-a-cryptoswap-pool.md
+              - Понимание оракулов: pool-creation/understanding-oracles.md
+
+            - Гейджи вознаграждений (Reward Gauges):
+              - Обзор: reward-gauges/overview.md
+              - Создание гейджа пула: reward-gauges/creating-a-pool-gauge.md
+              - Увеличение ваших CRV наград: reward-gauges/boosting-your-crv-rewards.md
+              - Весы гейджей: reward-gauges/gauge-weights.md
+              - Безразрешительные вознаграждения: reward-gauges/permissionless-rewards.md
+
+            - Управление (Governance):
+              - Понимание управления: governance/understanding-governance.md
+              - Голосование: governance/voting.md
+              - Фонд сообщества: governance/community-fund.md
+              - Предложения:
+                - Создание предложения DAO: governance/proposals/creating-a-dao-proposal.md
+
+            - Мультичейн:
+              - Понимание мультичейн: multichain/understanding-multichain.md
+              - CRV: multichain/crv.md
+              - crvUSD: multichain/crvusd.md
+              - scrvUSD: multichain/scrvusd.md
+              - Как перенести CRV, crvUSD и scrvUSD на L1 сети: multichain/bridging-curve-eco-tokens.md
+
+            - Поддержка и устранение неполадок:
+              - Поддержка: troubleshooting/support.md
+              - Восстановление кросс-активных обменов: troubleshooting/recovering-a-cross-asset-swap.md
+              - Отмена и замена зависшей транзакции: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
+              - Отключение криптокошельков в Brave: troubleshooting/disabling-crypto-wallets-in-brave.md
+
+            - Риски, безопасность и аудиты:
+              - Риски:
+                - Ликвидные пулы: risks-security/risks/pool.md
+                - crvUSD: risks-security/risks/crvusd.md
+                - Кредитование: risks-security/risks/lending.md
+              - Безопасность и аудиты: risks-security/security.md
+
+            - Whitepapers (Белые книги):
+              - Curve Stableswap (2019): pdf/curve-stableswap.pdf
+              - Curve DAO (2020): pdf/curve-dao.pdf
+              - Curve Cryptopools (2021): pdf/curve-cryptopools.pdf
+              - Curve Stablecoin (2022): pdf/curve-stablecoin.pdf
+
+            - Ссылки:
+              - Curve.fi: https://curve.fi/#/ethereum/swap
+              - Curve DAO: https://dao.curve.fi/
+              - Curve News: https://news.curve.fi/
+              - Discord: https://discord.gg/twUngQYz85
+              - Github: https://github.com/curvefi/
+              - Форум управления: https://gov.curve.fi/
+              - Twitter: https://twitter.com/curvefinance
+              - Техническая документация: https://docs.curve.fi/
+              - Telegram: https://t.me/curvefi
+
+            - Глоссарий: glossary-branding/glossary.md
+            - Брендинг и иконки: glossary-branding/branding.md
+
   - minify:
       minify_html: true
 

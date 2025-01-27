@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="556px" height="271px" viewBox="-0.5 -0.5 556 271">
+  <defs/>
+  <g>
+    <rect x="0" y="0" width="550" height="270" rx="16.2" ry="16.2" fill-opacity="0.3" fill="#4d4d4d" stroke="#ffffff" stroke-opacity="0.3" pointer-events="all"/>
+    <rect x="215" y="40.7" width="120" height="60" rx="9" ry="9" fill="#d1bda7" stroke="#ffe6cc" pointer-events="all"/>
+    <rect x="215" y="190" width="120" height="60" rx="9" ry="9" fill="#d1bda7" stroke="#ffe6cc" pointer-events="all"/>
+    <rect x="345" y="120" width="120" height="60" rx="9" ry="9" fill="#d1bda7" stroke="#ffe6cc" pointer-events="all"/>
+    <rect x="86.6" y="120" width="120" height="60" rx="9" ry="9" fill="#d1bda7" stroke="#ffe6cc" pointer-events="all"/>
+    <path d="M 387.3 51.83 L 405.81 69.77 L 387.3 87.72 L 387.3 75.83 L 370.46 75.83 C 370.14 75.83 369.83 75.96 369.6 76.19 C 369.38 76.42 369.25 76.73 369.25 77.05 L 369.25 127.36 L 363.19 127.36 L 357.13 127.36 L 357.13 75.83 C 357.13 69.14 362.56 63.71 369.25 63.71 L 387.3 63.71 Z" fill="#999900" stroke="#ffffcc" stroke-miterlimit="10" transform="rotate(90,381.47,89.59)" pointer-events="all"/>
+    <path d="M 385 190 L 406.6 209 L 385 228 L 385 215 L 354.8 215 C 354.14 215 353.6 215.54 353.6 216.2 L 353.6 239 L 347.6 239 L 341.6 239 L 341.6 215 C 341.6 208.37 346.97 203 353.6 203 L 385 203 Z" fill="#999900" stroke="#ffffcc" stroke-miterlimit="10" transform="rotate(-180,374.1,214.5)" pointer-events="all"/>
+    <rect x="415" y="30.7" width="140" height="70" fill="none" stroke="none" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: flex-start; width: 138px; height: 1px; padding-top: 66px; margin-left: 417px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: left;">
+              <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <b>Предложение crvUSD увеличивается</b> когда заемщики выпускают и продают crvUSD за другие активы
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="417" y="69" fill="#FFFFFF" font-family="Helvetica" font-size="10px">Предложение crvUSD увеличивается...</text>
+      </switch>
+    </g>
+    <rect x="415" y="180" width="80" height="70" fill="none" stroke="none" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: flex-start; width: 78px; height: 1px; padding-top: 215px; margin-left: 417px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: left;">
+              <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                Ставки заимствования автоматически увеличиваются
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="417" y="219" fill="#FFFFFF" font-family="Helvetica" font-size="10px">Ставки заимствования...</text>
+      </switch>
+    </g>
+    <rect x="5" y="200" width="130" height="70" fill="none" stroke="none" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: right;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: flex-end; width: 128px; height: 1px; padding-top: 235px; margin-left: 5px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: right;">
+              <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <b>Предложение crvUSD сокращается </b>когда заемщики выкупают crvUSD и погашают займы
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="133" y="239" fill="#FFFFFF" font-family="Helvetica" font-size="10px" text-anchor="end">Предложение crvUSD сокращается...</text>
+      </switch>
+    </g>
+    <rect x="55" y="47.41" width="80" height="70" fill="none" stroke="none" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: right;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: flex-end; width: 78px; height: 1px; padding-top: 82px; margin-left: 55px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: right;">
+              <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                Ставки заимствования автоматически уменьшаются
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="133" y="86" fill="#FFFFFF" font-family="Helvetica" font-size="10px" text-anchor="end">Ставки заимствования...</text>
+      </switch>
+    </g>
+    <path d="M 170.54 171.37 L 189.05 189.31 L 170.54 207.26 L 170.54 195.37 L 160.08 195.37 C 159.76 195.37 159.45 195.5 159.22 195.73 C 159 195.96 158.87 196.27 158.87 196.59 L 158.87 240.75 L 152.81 240.75 L 146.75 240.75 L 146.75 195.37 C 146.75 188.68 152.18 183.25 158.87 183.25 L 170.54 183.25 Z" fill="#999900" stroke="#ffffcc" stroke-miterlimit="10" transform="rotate(-90,167.9,206.06)" pointer-events="all"/>
+    <path d="M 187.4 53.82 L 209 72.82 L 187.4 91.82 L 187.4 78.82 L 159.2 78.82 C 158.54 78.82 158 79.36 158 80.02 L 158 111 L 152 111 L 146 111 L 146 78.82 C 146 72.19 151.37 66.82 158 66.82 L 187.4 66.82 Z" fill="#999900" stroke="#ffffcc" stroke-miterlimit="10" pointer-events="all"/>
+    <rect x="15" y="0.7" width="273.4" height="30" fill="none" stroke="none" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: flex-start; width: 271px; height: 1px; padding-top: 16px; margin-left: 17px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: left;">
+              <div style="display: inline-block; font-size: 13px; font-family: Helvetica; color: #999999; line-height: 1.2; font-weight: bold; font-style: italic; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                Динамика crvUSD без scrvUSD
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="17" y="20" fill="#999999" font-family="Helvetica" font-size="13px" font-weight="bold" font-style="italic">Динамика crvUSD без scrvUSD</text>
+      </switch>
+    </g>
+    <rect x="220" y="46" width="110" height="50" rx="7.5" ry="7.5" fill-opacity="0.5" fill="#994c00" stroke="#ffe6cc" stroke-opacity="0.5" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: center;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; width: 108px; height: 1px; padding-top: 71px; margin-left: 221px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <b>Ставки заимствования<br />низкие</b>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="275" y="75" fill="#FFFFFF" font-family="Helvetica" font-size="10px" text-anchor="middle">Ставки заимствования...</text>
+      </switch>
+    </g>
+    <rect x="350" y="125" width="110" height="50" rx="7.5" ry="7.5" fill-opacity="0.5" fill="#994c00" stroke="#ffe6cc" stroke-opacity="0.5" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: center;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; width: 108px; height: 1px; padding-top: 150px; margin-left: 351px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <b>Цена crvUSD<br />падает ниже $1</b>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="405" y="154" fill="#FFFFFF" font-family="Helvetica" font-size="10px" text-anchor="middle">Цена crvUSD...</text>
+      </switch>
+    </g>
+    <rect x="220" y="195" width="110" height="50" rx="7.5" ry="7.5" fill-opacity="0.5" fill="#994c00" stroke="#ffe6cc" stroke-opacity="0.5" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: center;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; width: 108px; height: 1px; padding-top: 220px; margin-left: 221px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; font-weight: bold; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                Ставки заимствования<br />высокие
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="275" y="224" fill="#FFFFFF" font-family="Helvetica" font-size="10px" text-anchor="middle" font-weight="bold">Ставки заимствования...</text>
+      </switch>
+    </g>
+    <rect x="91.6" y="125" width="110" height="50" rx="7.5" ry="7.5" fill-opacity="0.5" fill="#994c00" stroke="#ffe6cc" stroke-opacity="0.5" pointer-events="all"/>
+    <g transform="translate(-0.5 -0.5)">
+      <switch>
+        <foreignObject pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: center;">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; width: 108px; height: 1px; padding-top: 150px; margin-left: 93px;">
+            <div style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <b>Цена crvUSD<br />на уровне $1</b>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x="147" y="154" fill="#FFFFFF" font-family="Helvetica" font-size="10px" text-anchor="middle">Цена crvUSD...</text>
+      </switch>
+    </g>
+  </g>
+</svg>
+
