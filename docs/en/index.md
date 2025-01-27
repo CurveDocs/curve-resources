@@ -78,13 +78,13 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     [:octicons-arrow-right-24: Learn More](./governance/understanding-governance.md)
 
--   :fontawesome-solid-globe:{ .lg .middle } **Multi-Chain**
+-   :fontawesome-solid-globe:{ .lg .middle } **Cross-chain**
 
     ---
 
-    Explore the multi-chain aspect of Curve, including bridging funds and understanding the cross-chain functionalities.
+    Explore the cross-chain aspect of Curve, including bridging funds and understanding the cross-chain functionalities.
 
-    [:octicons-arrow-right-24: Learn More](./multichain/understanding-multichain.md)
+    [:octicons-arrow-right-24: Learn More](./cross-chain/overview.md)
 
 -   :material-wrench:{ .lg .middle } **Troubleshooting**
 
