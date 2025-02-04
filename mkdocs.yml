@@ -234,6 +234,8 @@ extra_css:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://dashboard.letmeexplain.ai/embed/lme_chatbot_widget.js
+  - assets/enable_lme_chatbot.js
 
 repo_name: CurveDocs/curve-resources
 repo_url: https://github.com/CurveDocs/curve-resources
