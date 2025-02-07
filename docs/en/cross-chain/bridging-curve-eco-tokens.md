@@ -16,12 +16,14 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
         - :logos-bsc: Binance Smart Chain: [`0x9996D0276612d23b35f90C51EE935520B3d7355B`](https://bscscan.com/address/0x9996D0276612d23b35f90C51EE935520B3d7355B)
         - :logos-avalanche: Avalanche: [`0xEEbC562d445F4bC13aC75c8caABb438DFae42A1B`](https://snowscan.xyz/address/0xEEbC562d445F4bC13aC75c8caABb438DFae42A1B)
         - :logos-fantom: Fantom: [`0xE6c259bc0FCE25b71fE95A00361D3878E16232C3`](https://ftmscan.com/address/0xE6c259bc0FCE25b71fE95A00361D3878E16232C3)
+        - :logos-sonic: Sonic: [`0x5Af79133999f7908953E94b7A5CF367740Ebee35`](https://sonicscan.org/address/0x5Af79133999f7908953E94b7A5CF367740Ebee35)
 
         | Chain | Bridge Contract Address | Etherscan Link |
         | ------------------ | ---------------- | ---------------- |
         | :logos-bsc: BinanceSmartChain Bridge | `0xC91113B4Dd89dd20FDEECDAC82477Bc99A840355` | [Ethereum](https://etherscan.io/address/0xC91113B4Dd89dd20FDEECDAC82477Bc99A840355), [BSC](https://bscscan.com/address/0xC91113B4Dd89dd20FDEECDAC82477Bc99A840355) |
         | :logos-avalanche: Avalanche Bridge | `0x5cc0144A511807608eF644c9e99B486124D1cFd6` | [Ethereum](https://etherscan.io/address/0x5cc0144A511807608eF644c9e99B486124D1cFd6), [Avalanche](https://snowscan.xyz/address/0x5cc0144A511807608eF644c9e99B486124D1cFd6) |
         | :logos-fantom: Fantom Bridge | `0x7ce8aF75A9180B602445bE230860DDcb4cAc3E42` | [Ethereum](https://etherscan.io/address/0x7ce8aF75A9180B602445bE230860DDcb4cAc3E42), [Fantom](https://ftmscan.com/address/0x7ce8aF75A9180B602445bE230860DDcb4cAc3E42) |
+        | :logos-sonic: Sonic Bridge | `0x5A537a46D780B1C70138aB98eDce69e7a53177ba` | [Ethereum](https://etherscan.io/address/0x5A537a46D780B1C70138aB98eDce69e7a53177ba), [Sonic](https://sonicscan.org/address/0x5A537a46D780B1C70138aB98eDce69e7a53177ba) |
 
 
     === ":logos-crvusd: crvUSD"
@@ -32,14 +34,15 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
         - :logos-bsc: Binance Smart Chain: [`0xe2fb3F127f5450DeE44afe054385d74C392BdeF4`](https://bscscan.com/address/0xe2fb3F127f5450DeE44afe054385d74C392BdeF4)
         - :logos-avalanche: Avalanche: [`0xCb7c161602d04C4e8aF1832046EE08AAF96d855D`](https://snowscan.xyz/address/0xCb7c161602d04C4e8aF1832046EE08AAF96d855D)
         - :logos-fantom: Fantom: [`0xD823D2a2B5AF77835e972A0D5B77f5F5A9a003A6`](https://ftmscan.com/address/0xD823D2a2B5AF77835e972A0D5B77f5F5A9a003A6)
+        - :logos-sonic: Sonic: [`0x5191946500e75f0A74476F146dF7d386e52961d9`](https://sonicscan.org/address/0x5191946500e75f0A74476F146dF7d386e52961d9)
 
 
-        | Chain | crvUSD Token Address | Etherscan Link |
+        | Chain | Bridge Contract Address | Etherscan Link |
         | ------------------ | ---------------- | ---------------- |
         | :logos-bsc: BinanceSmartChain Bridge | `0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f` | [Ethereum](https://etherscan.io/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f), [BSC](https://bscscan.com/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f) |
         | :logos-avalanche: Avalanche Bridge | `0x26D01ce989037befd7Ff63837A86e2da32E7D7e2` | [Ethereum](https://etherscan.io/address/0x26D01ce989037befd7Ff63837A86e2da32E7D7e2), [Avalanche](https://snowscan.xyz/address/0x26D01ce989037befd7Ff63837A86e2da32E7D7e2) |
         | :logos-fantom: Fantom Bridge | `0x76EAfda658C54548B460B3f190386699DE3827d8` | [Ethereum](https://etherscan.io/address/0x76EAfda658C54548B460B3f190386699DE3827d8), [Fantom](https://ftmscan.com/address/0x76EAfda658C54548B460B3f190386699DE3827d8) |
-
+        | :logos-sonic: Sonic Bridge | `0xf6F07B393e4cEE82EFBcD502Db2903f28aA0472e` | [Ethereum](https://etherscan.io/address/0xf6F07B393e4cEE82EFBcD502Db2903f28aA0472e), [Sonic](https://sonicscan.org/address/0xf6F07B393e4cEE82EFBcD502Db2903f28aA0472e) |
 
     === ":logos-scrvusd: scrvUSD"
 
@@ -49,12 +52,14 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
         - :logos-bsc: Binance Smart Chain: [`0x0094Ad026643994c8fB2136ec912D508B15fe0E5`](https://bscscan.com/address/0x0094Ad026643994c8fB2136ec912D508B15fe0E5)
         - :logos-avalanche: Avalanche: [`0xA3ea433509F7941df3e33857D9c9f212Ad4A4e64`](https://snowscan.xyz/address/0xA3ea433509F7941df3e33857D9c9f212Ad4A4e64)
         - :logos-fantom: Fantom: [`0x5191946500e75f0A74476F146dF7d386e52961d9`](https://ftmscan.com/address/0x5191946500e75f0A74476F146dF7d386e52961d9)
+        - :logos-sonic: Sonic: [`0x8Fb3Ec8f2d1Dc089E70CD61f1E49496d443B2124`](https://sonicscan.org/address/0x8Fb3Ec8f2d1Dc089E70CD61f1E49496d443B2124)
 
         | Chain | Bridge Contract Address | Etherscan Link |
         | ------------------ | ---------------- | ---------------- |
         | :logos-bsc: BinanceSmartChain Bridge | `0xAE0666C978500f2C05784242B79B08C478Dd999c` | [Ethereum](https://etherscan.io/address/0xAE0666C978500f2C05784242B79B08C478Dd999c), [BSC](https://bscscan.com/address/0xAE0666C978500f2C05784242B79B08C478Dd999c) |
         | :logos-avalanche: Avalanche Bridge | `0x26E91B1f142b9bF0bB37e82959bA79D2Aa6b99b8` | [Ethereum](https://etherscan.io/address/0x26E91B1f142b9bF0bB37e82959bA79D2Aa6b99b8), [Avalanche](https://snowscan.xyz/address/0x26E91B1f142b9bF0bB37e82959bA79D2Aa6b99b8) |
         | :logos-fantom: Fantom Bridge | `0x08132eA9b02750E118cF5F5C640B7c46A8E638E8` | [Ethereum](https://etherscan.io/address/0x08132eA9b02750E118cF5F5C640B7c46A8E638E8), [Fantom](https://ftmscan.com/address/0x08132eA9b02750E118cF5F5C640B7c46A8E638E8) |
+        | :logos-sonic: Sonic Bridge | `0x6F8012b70ba1fb7F40873CD7f1b03c6fb5bf666C` | [Ethereum](https://etherscan.io/address/0x6F8012b70ba1fb7F40873CD7f1b03c6fb5bf666C), [Sonic](https://sonicscan.org/address/0x6F8012b70ba1fb7F40873CD7f1b03c6fb5bf666C) |
 
 
 ---
