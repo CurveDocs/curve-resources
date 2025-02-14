@@ -59,7 +59,7 @@ Additionally, the UI shows the future borrow APY when the user's loan is created
 
 - **`Fee`**: The current exchange fee for swapping tokens in the AMM.
 - **`Admin Fee`**: The percentage of the total fee, which is awarded to veCRV holders. Currently, all fees go to liquidity providers in the AMM (which are the borrowers).
-- **`A`**: The amplification parameter A defines the density of liquidity and band size.
+- **`Band Width Factor`**: The band width factor (sometimes denoted as A) defines the density of liquidity and band width.
 - **`Loan Discount`**: The percentage used to discount the collateral for calculating the maximum borrowable amount when creating a loan.
 - **`Liquidation Discount`**: The percentage used to discount the collateral for calculating the recoverable value upon liquidation at the current market price.
 - **`Base Price`**: The base price is the price of the band number 0.
