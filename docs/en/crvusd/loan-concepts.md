@@ -8,7 +8,7 @@ Each crvUSD market has the following parameters which affect all loans and chang
 
 Each market also has the following parameters which only change if the CurveDAO votes them to change:
 
-- **A:** The amplification parameter A is used to calculate the density of liquidity and [band](#bands-n) width, as well as the [maximum LTV](#loan-discount) of a market.
+- **Band Width Factor:** The Band Width Factor is used to calculate the density of liquidity and [band](#bands-n) width, as well as the [maximum LTV](#loan-discount) of a market.
 - **Loan Discount:** The loan discount defines how much the collateral is discounted when taking a loan, it is directly related to the maximum LTV of each crvUSD market.  See [here](#loan-discount) for more information.
 - **Liquidation Discount:** The liquidation discount is used to discount the collateral when calculating the health of the loan.  See the [health section](#loan-health) for more information.
 - **Sigma:** Sigma changes how quickly rates increase and decrease when crvUSD depegs.  With a higher sigma interest rates will increase slower when crvUSD depegs.  See [here](#borrow-rate) for more information.
@@ -99,11 +99,11 @@ In the illustration above, there are multiple bands with different price ranges.
 
 ### Band Formulae:
 
-`A` controls the density of the liquidity.  This is directly related to the width of the bands.  Band width at any price can be estimated to be:
+`Band Width Factor` (sometimes called `A`) controls the density of the liquidity.  This is directly related to the width of the bands.  Band width at any price can be estimated to be:
 
-$$\text{bandwidth} \approx \frac{\text{price}}{\text{A}}$$
+$$\text{bandwidth} \approx \frac{\text{price}}{\text{Band Width Factor}}$$
 
-To find the exact **upper price limit** and **lower price limits** of the bands the following formulae can be used:
+To find the exact **upper price limit** and **lower price limits** of the bands the following formulae can be used.  The Band Width Factor is shown as A below to shorten the formula:
 
 $$\begin{aligned} \text{upperLimit} &= \text{basePrice} * \left( \frac{A-1}{A} \right)^{n} \\
 \text{lowerLimit} &= \text{basePrice} * \left( \frac{A-1}{A} \right)^{n+1}\end{aligned}$$
@@ -111,7 +111,7 @@ $$\begin{aligned} \text{upperLimit} &= \text{basePrice} * \left( \frac{A-1}{A} \
 Where:
 
 * $\text{basePrice}$: The current base price of the desired market
-* $A$: The amplification factor of the desired market (default is 100)
+* $A$: The Band Width Factor of the desired market (default is 100)
 * $n$: The Band Number, e.g., $-$67.
 
 ### **Band Calculator**
@@ -124,7 +124,7 @@ Use the calculator below to simulate how bands are shaped and how liquidity dens
 <h4>Inputs:</h4>
 <div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
 <div class="input">
-    <label for="ampInput" style="margin-right: 2%;">A : </label>
+    <label for="ampInput" style="margin-right: 2%;">Band Width Factor (A): </label>
     <input type="number" id="ampInput" min="1" max="10000" step="1" value="30" style="font-size: 16px; width: 15%;">
     <label for="numBandsInput" style="margin-left: 3%; margin-right: 2%;">N : </label>
     <input type="number" id="numBandsInput" min="1" max="50" step="1" value="10" style="font-size: 16px; width: 15%;">
@@ -171,7 +171,7 @@ Where:
   <div style="display: flex; justify-content: center;">
     <div style="text-align: right; margin-right: 20px;">
       <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
-        <label for="ampInputLiq" style="margin-right: 10px;">A:</label>
+        <label for="ampInputLiq" style="margin-right: 10px;">Band Width Factor (A):</label>
         <input type="number" id="ampInputLiq" min="0" max="1000" step="1" value="10" style="font-size: 16px; width: 80px;">
       </div>
       <div style="display: flex; align-items: center; justify-content: flex-end; font-size: 16px; margin-bottom: 10px;">
@@ -239,7 +239,7 @@ Where:
 
 ## **Loan Discount**
 
-The `loan_discount` is used for finding the maximum LTV a user can have in a market.  At the time of writing in crvUSD markets this value is a constant 9%, in Curve Lending markets this value ranges from 7% for WETH to 33% for volatile assets like UwU.  Use the calculator below to see the maximum LTVs a user can have based on the `loan_discount`, and amplification factor `A` (with 4 bands, N=4).  The formula is:
+The `loan_discount` is used for finding the maximum LTV a user can have in a market.  At the time of writing in crvUSD markets this value is a constant 9%, in Curve Lending markets this value ranges from 7% for WETH to 33% for volatile assets like UwU.  Use the calculator below to see the maximum LTVs a user can have based on the `loan_discount`, and band width factor `A` (with 4 bands, N=4).  The formula is:
 
 $$\text{maxLTV} = \left(\frac{A - 1}{A}\right)^2 \times (1 - \text{loan_discount})$$
 
@@ -249,7 +249,7 @@ $$\text{maxLTV} = \left(\frac{A - 1}{A}\right)^2 \times (1 - \text{loan_discount
   <h4>Inputs:</h4>
   <div class="input">
     <div style="display: flex; align-items: center; justify-content: center; font-size: 16px;">
-        <label for="ampInput2" style="margin-right: 10px;">A:</label>
+        <label for="ampInput2" style="margin-right: 10px;">Band Width Factor (A):</label>
         <input type="number" id="ampInput2" min="1" max="10000" step="1" value="30" style="font-size: 16px; width: 80px;">
         <label for="loanDiscountInput" style="margin-left: 20px; margin-right: 10px;">Loan Discount % :</label>
         <input type="number" id="loanDiscountInput" min="0" max="100" step="1" value="10" style="font-size: 16px; width: 80px;">
@@ -265,7 +265,7 @@ $$\text{maxLTV} = \left(\frac{A - 1}{A}\right)^2 \times (1 - \text{loan_discount
 
 ## **Borrow Rate**
 
-In [crvUSD minting markets](The general idea is that **borrow rate increases when crvUSD goes down in value and decreases when crvUSD goes up in value**.  Also, contracts called [PegKeepers](#pegkeepers) can also affect the interest rate and crvUSD peg by minting and selling crvUSD or buying and burning crvUSD.
+In crvUSD minting markets the general idea is that **borrow rate increases when crvUSD goes down in value and decreases when crvUSD goes up in value**.  Also, contracts called [PegKeepers](#pegkeepers) can also affect the interest rate and crvUSD peg by minting and selling crvUSD or buying and burning crvUSD.
 
 *The formula for the borrow rate is as follows:*
 

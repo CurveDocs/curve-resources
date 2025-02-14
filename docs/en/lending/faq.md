@@ -15,7 +15,7 @@
 
 ### How much can you borrow against your collateral (LTV)?
 
-The maximum borrowable amount (LTV) is dependent on the parameter `A` and number of bands (`N`) chosen when creating a market. The more bands used, the higher the LTV.
+The maximum borrowable amount (LTV) is dependent on the band width factor `A` and number of bands (`N`) chosen when creating a market. The more bands used, the higher the LTV.
 
 
 ### How does the LLAMMA liquidation process differ from other debt-based stablecoins?
