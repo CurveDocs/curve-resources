@@ -10,7 +10,7 @@ The calculator can be found at this address: [https://dao-old.curve.fi/minter/ca
 
 ## **Locking CRV**
 
-After determining how much and for how long to lock, visit the following page: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)
+After determining how much and for how long to lock, visit the following page: [https://curve.fi/dao/#/ethereum/vecrv/create](https://curve.fi/dao/#/ethereum/vecrv/create)
 
 ![Locking UI](../images/ui/lock.webp)
 
