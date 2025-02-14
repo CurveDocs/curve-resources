@@ -34,7 +34,7 @@ Then for both methods the following additional parameters must be supplied:
 
  - `borrowed_token` : address of the token to be supplied and borrowed
  - `collateral_token` : address of the token to be used as collateral
- - [`band_width_factor`](#amplification-factor-a) : the band width factor (A), most markets use a value between 10-30.  Use lower values for riskier assets.  
+ - [`band_width_factor`](#band-width-factor-a) : the band width factor (A), most markets use a value between 10-30.  Use lower values for riskier assets.  
  Input as a normal number, e.g., 10 = 10
  - `fee` : the amm swap fee, most pools use between 0.3-1.5%.  
  Input as a $10^{18}$ number, e.g., 0.06% = 6000000000000000.
@@ -80,7 +80,7 @@ The deployer of the Curve Lending Market is given the role of `manager`.  The `m
 
 ### **Band Width Factor (A)**
 
-The band width factor `A` defines the width of bands, see formula below and more detailed information [here](../crvusd/loan-concepts.md#bands-n) and applet [here](../crvusd/loan-concepts.md#band-calculator).  `A` is also a part of the calculation for the maximum LTV of the market, see [`loan_discount` section](#loan-discount).
+The band width factor (sometimes denoted `A`) defines the width of bands, see formula below and more detailed information [here](../crvusd/loan-concepts.md#bands-n) and applet [here](../crvusd/loan-concepts.md#band-calculator).  Band width factor is also a part of the calculation for the maximum LTV of the market, see [`loan_discount` section](#loan-discount).
 
 $$\text{band_width} \approx \frac{\text{price}}{\text{A}}$$
 

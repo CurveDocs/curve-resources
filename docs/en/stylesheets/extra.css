@@ -432,8 +432,61 @@ h3 {
   display: none;
 }
 
-.input input {
-  padding: 1%;
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;  /* Increased to accommodate two columns */
+  margin: 0 auto;
+}
+
+/* For single column layout */
+.input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-row label {
+  width: 200px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.input-row input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+}
+
+/* For two column layout */
+.input-columns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;  /* Space between columns */
+}
+
+.input-column {
+  text-align: right;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.input-field label {
+  margin-right: 10px;
+}
+
+.input-field input {
+  font-size: 16px;
+  width: 80px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
