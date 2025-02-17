@@ -1,4 +1,4 @@
-Every time a trade occurs on Curve Finance, **50% of the trading fee is collected by users who have vote-locked their CRV**. Furthermore, since the introduction of Curve's stablecoin, crvUSD, all **accumulated interest rate fees** are awarded to veCRV holders.
+Every time a trade occurs on Curve Finance, **50% of the trading fee is collected by users who have vote-locked their CRV**. Furthermore, since the introduction of Curve's stablecoin, crvUSD, **veCRV holders earn a portion of the fees from crvUSD borrowing**.
 
 As of 20th June, 2024, fees are now **distributed in crvUSD** instead of 3CRV pool tokens.
 

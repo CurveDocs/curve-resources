@@ -34,12 +34,11 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
         - :logos-fantom: Fantom: [`0xD823D2a2B5AF77835e972A0D5B77f5F5A9a003A6`](https://ftmscan.com/address/0xD823D2a2B5AF77835e972A0D5B77f5F5A9a003A6)
 
 
-        | Chain | crvUSD Token Address | Etherscan Link |
+        | Chain | Bridge Contract Address | Etherscan Link |
         | ------------------ | ---------------- | ---------------- |
         | :logos-bsc: BinanceSmartChain Bridge | `0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f` | [Ethereum](https://etherscan.io/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f), [BSC](https://bscscan.com/address/0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f) |
         | :logos-avalanche: Avalanche Bridge | `0x26D01ce989037befd7Ff63837A86e2da32E7D7e2` | [Ethereum](https://etherscan.io/address/0x26D01ce989037befd7Ff63837A86e2da32E7D7e2), [Avalanche](https://snowscan.xyz/address/0x26D01ce989037befd7Ff63837A86e2da32E7D7e2) |
         | :logos-fantom: Fantom Bridge | `0x76EAfda658C54548B460B3f190386699DE3827d8` | [Ethereum](https://etherscan.io/address/0x76EAfda658C54548B460B3f190386699DE3827d8), [Fantom](https://ftmscan.com/address/0x76EAfda658C54548B460B3f190386699DE3827d8) |
-
 
     === ":logos-scrvusd: scrvUSD"
 
