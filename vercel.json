@@ -3,7 +3,10 @@
     {
       "source": "/ru/:match*",
       "destination": "https://curve-resources-ru.vercel.app/ru/:match*"
+    },
+    {
+      "source": "/ru/",
+      "destination": "https://curve-resources-ru.vercel.app/ru"
     }
   ]
 }
-
