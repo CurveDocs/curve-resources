@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/ru/:match*/",
+      "destination": "https://curve-resources-ru.vercel.app/ru/:match*"
+    },
+    {
       "source": "/ru/:match*",
       "destination": "https://curve-resources-ru.vercel.app/ru/:match*"
     },
