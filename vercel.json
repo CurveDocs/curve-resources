@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/ru/:match*",
-      "destination": "https://russian-site.vercel.app/:match*"
+      "destination": "https://curve-resources-ru.vercel.app/:match*"
     }
   ]
 }
