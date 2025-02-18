@@ -4,9 +4,10 @@ Curve Lending enables users to permissionlessly create and interact with isolate
 
 Users wishing to acquaint themselves with a broader range of general risk disclosures are encouraged to read the [Curve Risk Disclosures for Liquidity Providers](./pool.md). Users are also advised to review the public [audit reports](https://docs.curve.fi/references/audits/) to assess the security and reliability of the platform before engaging in any lending or borrowing activities.
 
+!!!info "Audits"
+    **Liquidity Pool Audits** are available here: [https://docs.curve.fi/references/audits/#crvusd-and-lending](https://docs.curve.fi/references/audits/#crvusd-and-lending)
 
 ---
-
 
 ## **Permissionless Markets Risks**
 
@@ -14,23 +15,25 @@ Curve Lending markets are permissionless, allowing anyone to create and customiz
 
 There are several factors users should consider regarding attributes of the permissionless markets:
 
-### 1) Unvetted Tokens
+### 1. Unvetted Tokens
 
 Curve Lending pairs consist of crvUSD and one other token, which may not undergo rigorous vetting due to the permissionless lending factory and lack of strict onboarding criteria. As a result, some tokens in Curve pools could be unvetted, introducing potential risks such as exchange rate volatility, smart contract vulnerabilities, and liquidity risks. Users should exercise caution and conduct their due diligence before interacting with any token on the platform.
 
-### 2) Oracle Designation
+### 2. Oracle Designation
 
 Curve Lending markets by default use a Curve pool as the oracle, as long as the pool pair contains both tokens in the market and the pool is a Curve tricrypto-ng, twocrypto-ng or stableswap-ng pool, which has manipulation-resistant oracles. However, this creates a dependency on the selected pool oracle, which may become unreliable due to market circumstances (e.g., liquidity migration) or technical bugs.
 
 Alternatively, market deployers may designate a custom oracle, which can introduce additional trust assumptions or technical risks, and these custom oracles may need to be thoroughly vetted due to permissionless market deployment. Users should fully understand the oracle mechanism before interacting with a Curve Lending market.
 
-### 3) Parameter Configuration
+### 3. Parameter Configuration
 
-There are several parameters configurable by market deployers, including "A" (number of bands within the LLAMMA algorithm), fee on LLAMMA swaps, loan discount (Loan-To-Value), liquidation discount (Liquidation Threshold), and min/max borrow rate. Misconfigured AMM parameters may result in greater losses than necessary during liquidation and generally negatively impact user experience involving liquidation. Misconfigured borrow rates may prevent the market from adequately reflecting rates in the broader market, potentially leading to insufficient withdrawal liquidity for lenders. Users should be aware of market parameter configurations and ensure they are suitable for the underlying assets and anticipated market conditions.
+There are several parameters configurable by market deployers, including “A” (number of bands within the LLAMMA algorithm), fee on LLAMMA swaps, loan discount (Loan-To-Value), liquidation discount (RiskListItemquidation Threshold), and min/max borrow rate. Misconfigured AMM parameters may result in greater losses than necessary during liquidation and generally negatively impact user experience involving liquidation. Misconfigured borrow rates may prevent the market from adequately reflecting rates in the broader market, potentially leading to insufficient withdrawal liquidity for lenders. Users should be aware of market parameter configurations and ensure they are suitable for the underlying assets and anticipated market conditions.
 
-### 4) Governance
+### 4. Governance
 
 The Curve Lending admin is the Curve DAO, a decentralized organization made up of veCRV tokenholders. Votes are required to make any change to the Curve Lending system, including individual markets. Votes undergo a 1-week vote period, requiring a 51% approval and a sufficient voter quorum to execute any on-chain actions. The DAO controls critical system functions in Curve Lending, including setting system contract implementations and configuring parameters such as min/max borrow rates, borrow discounts and AMM fees.
+
+---
 
 ## **Borrowing Risks**
 
@@ -47,7 +50,7 @@ Please consider the following risks when using the Curve Stablecoin infrastructu
 * If you are in soft-liquidation mode and the price of the collateral appreciates sharply, this can also result in de-liquidation losses. If your loan's health is low, collateral price appreciation can further reduce the loan's health, potentially triggering a hard liquidation.
 * If the health of your loan drops to zero or below, your position will get hard-liquidated with no option of de-liquidation.
 
-Borrowers should be aware that, while in soft liquidation, they essentially pay a fee to arbitrageurs in the form of favorable pricing. This will gradually erode the health of the position, especially during times of high volatility and, importantly, even when the market price of their collateral is increasing. This activity can decrease the position's health and cause it to undergo "hard" liquidation, whereby the collateral is sold off and the Borrower's position is closed. Borrowers are advised to monitor market conditions and actively manage their collateral to mitigate the liquidation risk. Borrowers should also be aware that if the loan's health falls below a certain threshold, hard liquidation could occur, leading to collateral loss.
+Borrowers should be aware that, while in soft liquidation, they essentially pay a fee to arbitrageurs in the form of favorable pricing. This will gradually erode the health of the position, especially during times of high volatility and, importantly, even when the market price of their collateral is increasing. This activity can decrease the position's health and cause it to undergo “hard” liquidation, whereby the collateral is sold off and the Borrower's position is closed. Borrowers are advised to monitor market conditions and actively manage their collateral to mitigate the liquidation risk. Borrowers should also be aware that if the loan's health falls below a certain threshold, hard liquidation could occur, leading to collateral loss.
 
 ### Interest Rates
 
@@ -67,15 +70,13 @@ In extreme scenarios, Lenders may experience a shortfall through the accumulatio
 
 Curve Lending is designed to minimize the risk of bad debt through over-collateralization and the LLAMMA liquidation algorithm. While over-collateralization and the LLAMMA algorithm act as risk mitigation tools, they do not fully insulate Lenders from the inherent risks associated with Curve Lending and assets in its markets, including smart contract vulnerabilities, market volatility, failures in economic models, and regulatory challenges that threaten product viability. Lenders are advised to understand their exposure to risks associated with the collateral asset in Vaults they choose to interact with and appreciate the possibility of experiencing partial or total loss.
 
-
 ---
-
 
 ## **crvUSD Risks**
 
 Users should be mindful of risks associated with exposure to the crvUSD stablecoin:
 
-* Investing in crvUSD carries inherent risks that could lead to partial or complete loss of your investment due to its experimental nature. You are responsible for understanding the risks of buying, selling, and using crvUSD and its infrastructure.
+* Investing in crvUSD carries inherent risks that could lead to partial or complete loss of your investment due to its experimental nature. You are responsible for understanding the risks of buying, selling, and using crvUSD and its infrastructure
 * The value of crvUSD can fluctuate due to stablecoin market volatility or rapid changes in the liquidity of the stablecoin.
 * crvUSD is exclusively issued by smart contracts, without an intermediary. However, the parameters that ensure the proper operation of the crvUSD infrastructure are subject to updates approved by Curve DAO. Users must stay informed about any parameter changes in the stablecoin infrastructure.
 * crvUSD is not recognized as legal tender by any authority and is not guaranteed to be accepted for payments, subject to changing regulatory landscapes which may affect its legality and utility.
@@ -96,10 +97,8 @@ Users should know that cryptocurrencies and tokens are highly experimental and c
 
 ### Use of Financial Terms
 
-Financial terms used in the context of Curve Lending, such as "debt," "lend," "borrow," and similar, are meant for analogy purposes only. They draw comparisons between the operations of decentralized finance smart contracts and traditional finance activities, emphasizing the automated and deterministic nature of DeFi systems. These terms should not be interpreted in their traditional financial context, as DeFi transactions involve distinct mechanisms and risks. Users are encouraged to understand the specific meanings within the DeFi framework.
-
+Financial terms used in the context of Curve Lending, such as “debt,” “lend,” “borrow,” and similar, are meant for analogy purposes only. They draw comparisons between the operations of decentralized finance smart contracts and traditional finance activities, emphasizing the automated and deterministic nature of DeFi systems. These terms should not be interpreted in their traditional financial context, as DeFi transactions involve distinct mechanisms and risks. Users are encouraged to understand the specific meanings within the DeFi framework.
 
 ---
 
-
-*For up-to-date risk disclaimer, click [here](https://hackmd.io/@LlamaRisk/curve_lending_risk).*
+*Disclaimer: The information provided within this context does not constitute financial, legal, or tax advice personalized to your specific circumstances. The content presented is for informational purposes only and should not be relied upon as a substitute for professional advice tailored to your individual needs. It is recommended that you seek the advice of qualified professionals regarding financial, legal, and tax matters before engaging in any activities on Curve.*
