@@ -1,4 +1,4 @@
-<h1>Savings-crvUSD Risk Disclaimer</h1>
+<h1>Savings-crvUSD: Risk Disclaimer</h1>
 
 Curve stablecoin infrastructure enables users to mint crvUSD using a selection of crypto-tokenized collaterals (adding new ones is subject to DAO approval). Interacting with crvUSD doesn't come without risks. Before minting or taking exposure of crvUSD, it is best to research and understand the risks involved.
 

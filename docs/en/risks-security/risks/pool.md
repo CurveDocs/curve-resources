@@ -1,4 +1,4 @@
-<h1>Curve Pool Risk Disclosures for Liquidity Providers</h1>
+<h1>Curve Liquidity Pools: Risk Disclaimer</h1>
 
 
 Providing liquidity on Curve doesn't come without risks. Before making a deposit, it is best to research and understand the risks involved.
