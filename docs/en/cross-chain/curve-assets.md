@@ -14,7 +14,7 @@ The Curve token can be bridged across various chains, though it does not always 
 | :logos-gnosis: **Gnosis** | [0x712b3d230F3C1c19db860d80619288b1F0BDd0Bd](https://gnosisscan.io/address/0x712b3d230f3c1c19db860d80619288b1f0bdd0bd) | [**Gnosis Bridge**](https://bridge.gnosischain.com/)​ |
 | :logos-xlayer: **X-Layer** | [0x3d5320821bfca19fb0b5428f2c79d63bd5246f89](https://www.okx.com/web3/explorer/xlayer/address/0x3d5320821bfca19fb0b5428f2c79d63bd5246f89) | [**X-Layer Bridge**](https://www.okx.com/xlayer/bridge)​ |
 | :logos-avalanche: **Avalanche**​ | [0x47536F17F4fF30e64A96a7555826b8f9e66ec468](https://snowtrace.io/address/0x47536f17f4ff30e64a96a7555826b8f9e66ec468) | [**<mark style="background-color: #f31743; color: black">Multichain</mark>**](https://multichain.org/)​ |
-| :logos-fantom: **Fantom**​ | [0x1E4F97b9f9F913c46F1632781732927B9019C68b](https://ftmscan.com/address/0x1e4f97b9f9f913c46f1632781732927b9019c68b) | [**<mark style="background-color: #f31743; color: black">Multichain</mark>**](https://multichain.org/)​ |
+| :logos-fantom: **Fantom**​ | [0x1E4F97b9f9F913c46F1632781732927B9019C68b](https://ftmscout.com/address/0x1e4f97b9f9f913c46f1632781732927b9019c68b) | [**<mark style="background-color: #f31743; color: black">Multichain</mark>**](https://multichain.org/)​ |
 | :logos-celo: **Celo**​ | [0x173fd7434B8B50dF08e3298f173487ebDB35FD14](https://explorer.celo.org/mainnet/address/0x173fd7434B8B50dF08e3298f173487ebDB35FD14) | [**<mark style="background-color: #f31743; color: black">Multichain</mark>**](https://multichain.org/)​ |
 
 
@@ -61,6 +61,6 @@ Savings crvUSD (scrvUSD) was first introduced in November 2024 on Ethereum.
 | :logos-optimism: `Optimism` | [0x289f635106d5b822a505b39ac237a0ae9189335b](https://optimistic.etherscan.io/address/0x289f635106d5b822a505b39ac237a0ae9189335b) | [Superbridge](https://superbridge.app/base) |
 | :logos-base: `Base` | [0x646a737b9b6024e49f5908762b3ff73e65b5160c](https://basescan.org/address/0x646a737b9b6024e49f5908762b3ff73e65b5160c) | [Superbridge](https://superbridge.app/base) |
 | :logos-fraxtal: `Fraxtal` | [0xaB94C721040b33aA8b0b4D159Da9878e2a836Ed0](https://fraxscan.com/address/0xaB94C721040b33aA8b0b4D159Da9878e2a836Ed0) | [Superbridge](https://superbridge.app/base) |
-| :logos-fantom: Fantom | [`0x5191946500e75f0A74476F146dF7d386e52961d9`](https://ftmscan.com/address/0x5191946500e75f0A74476F146dF7d386e52961d9) | [Guide here :octicons-link-external-16:](./bridging-curve-eco-tokens.md) |
+| :logos-fantom: Fantom | [`0x5191946500e75f0A74476F146dF7d386e52961d9`](https://ftmscout.com/address/0x5191946500e75f0A74476F146dF7d386e52961d9) | [Guide here :octicons-link-external-16:](./bridging-curve-eco-tokens.md) |
 | :logos-bsc: BinanceSmartChain | [`0x0094Ad026643994c8fB2136ec912D508B15fe0E5`](https://bscscan.com/address/0x0094Ad026643994c8fB2136ec912D508B15fe0E5) | [Guide here :octicons-link-external-16:](./bridging-curve-eco-tokens.md) |
 | :logos-avalanche: Avalanche | [`0xA3ea433509F7941df3e33857D9c9f212Ad4A4e64`](https://snowscan.xyz/address/0xA3ea433509F7941df3e33857D9c9f212Ad4A4e64) | [Guide here :octicons-link-external-16:](./bridging-curve-eco-tokens.md) |
