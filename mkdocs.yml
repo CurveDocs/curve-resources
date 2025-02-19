@@ -205,8 +205,10 @@ nav:
   - Risks, Security & Audits: 
     - Risks: 
       - Liquidity Pools: risks-security/risks/pool.md
-      - crvUSD: risks-security/risks/crvusd.md
       - Lending: risks-security/risks/lending.md
+      - crvUSD: risks-security/risks/crvusd.md
+      - scrvUSD: risks-security/risks/scrvusd.md
+
     - Security & Audits: risks-security/security.md
 
   - Whitepapers:
