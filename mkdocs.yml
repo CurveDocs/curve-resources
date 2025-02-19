@@ -1,7 +1,7 @@
 site_name: Curve Resources
-site_url: https://curve-resources-git-ru-separate-curvedocs.vercel.app/
+site_url: https://resources.curve.fi/
 site_author: CurveFi
-docs_dir: 'docs/en'  
+docs_dir: 'docs/en'
 
 plugins:
   - search
