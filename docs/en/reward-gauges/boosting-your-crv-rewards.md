@@ -20,9 +20,14 @@ A lock can be extended, and CRV can be added to it at any point, but having CRV 
 
 After creating a lock, the next step is to apply the boost.
 
-## **Applying the boost**
+## **Applying the Boost & Boost Info**
 
-Proceed to the minter page: [https://dao.curve.fi/minter/gauges](https://dao.curve.fi/minter/gauges)
+Proceed to the desired pool page, and click on the `Your Details` as shown below.  Under this tab you can see your current rewards boost.
+
+<figure markdown>
+  ![](../images/yourdetails.png){ width="400" }
+  <figcaption></figcaption>
+</figure>
 
 If the new boost is visible after 'Current boost:', then no further action is required.
 
@@ -30,22 +35,6 @@ If the current boost hasn't updated, it may be necessary to claim CRV from each 
 
 !!!info  "Locking your Boost"
     Boosts are only updated when a withdrawal, deposit, or claim is made from a liquidity gauge
-
-
-### **Boost Info**
-The list of pools and boost/reward information has been relocated from the minter page. This information can now be found on each pool page on the classic.curve.fi site.
-
-<figure markdown>
-  ![](../images/classicdetails.png){ width="400" }
-  <figcaption></figcaption>
-</figure>
-
-Alternatively, this information is also available in the new UI ([curve.fi](https://curve.fi/)) under the "Your Details" section on the pool page. Note: The new UI does not display future boost yet.
-
-<figure markdown>
-  ![](../images/yourdetails.png){ width="400" }
-  <figcaption></figcaption>
-</figure>
 
 Visit the [**old**](https://classic.curve.fi/pools/?see=0x0000000000000000000000000000000000000000) or [**new**](https://curve.fi/#/ethereum/dashboard) dashboard to see all your pools!
 
