@@ -54,15 +54,15 @@ veCRV stands for voting escrow CRV. They are your CRV locked for voting. The lon
 
 The number of veCRV you will receive depends on how long you lock your CRV for. The minimum locking time is one week and the maximum locking time is four years.
 
-Your veCRV weight gradually decreases as your escrowed tokens approach their lock expiry. A graph illustrating the decrease can be found at this address: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
+Your veCRV weight gradually decreases as your escrowed tokens approach their lock expiry. A graph illustrating the decrease can be found at this address: [https://dao-old.curve.fi/locker/](https://dao-old.curve.fi/locker/)​
 
 ## **How is your boost calculated?**
 
 To reach your maximum boost of 2.5x, there are several parameters to take into consideration.  You can see the formula for boosting [here](../reward-gauges/boosting-your-crv-rewards.md#formula)
 
-You can find the current DAO voting power at this address: [https://dao.curve.fi/locker](https://dao.curve.fi/locker)​
+You can find the current DAO voting power at this address: [https://dao-old.curve.fi/locker/](https://dao-old.curve.fi/locker/)​
 
-**You can also find a calculator at this address:** [https://dao.curve.fi/minter/calc](https://dao.curve.fi/minter/calc)​
+**You can also find a calculator at this address:** [https://dao-old.curve.fi/minter/calc](https://dao-old.curve.fi/minter/calc)
 
 ## **What if I provide liquidity in multiple pools?**
 
