@@ -12,7 +12,7 @@ Each Gauge added to the `GaugeController` has a weight and a type. The weights r
 
 # **Gauge Weight Voting**
 
-The weight system allow the Curve DAO to dictate where the CRV inflation should go. You can vote at this address: [https://dao.curve.fi/gaugeweight](https://dao.curve.fi/gaugeweight)​
+The weight system allow the Curve DAO to dictate where the CRV inflation should go. You can vote at this address: [https://curve.fi/dao/ethereum/gauges/](https://curve.fi/dao/ethereum/gauges/)​
 
 By doing so, users with veCRV can put direct their voting power towards the pool, lending market or other gauge they think should receive the most CRV.
 

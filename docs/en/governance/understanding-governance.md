@@ -81,7 +81,7 @@ Since Curve is deployed on various chains, there is a need for a permissionless 
 
 ## **The DAO Dashboard**
 
-Users can access the Curve DAO dashboard at [https://dao.curve.fi/dao](https://dao.curve.fi/dao). This dashboard provides an overview of all current and closed votes. Each proposal should have a corresponding topic on the Curve governance forum, accessible at [https://gov.curve.fi/](https://gov.curve.fi/).
+Users can access the Curve DAO dashboard at [https://curve.fi/dao](https://curve.fi/dao). This dashboard provides an overview of all current and closed votes. Each proposal should have a corresponding topic on the Curve governance forum, accessible at [https://gov.curve.fi/](https://gov.curve.fi/).
 
 
 ---

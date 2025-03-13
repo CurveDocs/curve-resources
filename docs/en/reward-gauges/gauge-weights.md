@@ -6,7 +6,7 @@ For example on the below chart, the Y pool is currently receiving around 72% of 
 
 ![Gauge Weights](../images/ui/gauge-weights-ypool.webp)
 
-You can find each liquidity gauge relative weight on this page: [https://dao.curve.fi/minter/gauges](https://dao.curve.fi/minter/gauges)​
+You can find each liquidity gauge relative weight on this page: [https://dao-old.curve.fi/minter/gauges/](https://dao-old.curve.fi/minter/gauges/)​
 
 ## **Why are gauge weights so important?**
 
@@ -20,7 +20,7 @@ Anybody who has vote [**locked CRV**](../crv-token/overview.md) can vote to dire
 
 ## **How can I vote?**
 
-Visit this link: [https://dao.curve.fi/gaugeweight](https://dao.curve.fi/gaugeweight)​
+Visit this link: [https://curve.fi/dao/ethereum/gauges/](https://curve.fi/dao/ethereum/gauges/)​
 
 Select the gauge you would like to put your voting weight towards, enter an amount in BPS (10,000 = 100% the maximum) and confirm your transaction.
 

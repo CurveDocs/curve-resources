@@ -89,7 +89,7 @@ These parameters are obtained from various data sources, mostly on-chain:
     
 ![Gauge Weights](../images/ui/gauge-weights.webp)
 
-​[https://dao.curve.fi/](https://dao.curve.fi/)​
+​[https://curve.fi/dao](https://curve.fi/dao)​
 
 *   **`working_supply:`** Accessed by calling the same function on the specific Curve gauge contract for the pool.
 *   **`asset_price:`** The price of the asset — that is, if the pool contains only bitcoin, you would use the current price of $BTC. For v2 pools, this must be calculated by averaging over the specific assets within the pool.
