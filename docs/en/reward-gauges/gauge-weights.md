@@ -6,7 +6,7 @@ For example on the below chart, the Y pool is currently receiving around 72% of 
 
 ![Gauge Weights](../images/ui/gauge-weights-ypool.webp)
 
-You can find each liquidity gauge relative weight on this page: [https://dao-old.curve.fi/minter/gauges/](https://dao-old.curve.fi/minter/gauges/)​
+You can find each liquidity gauge relative weight on this page: [https://curve.fi/dao/ethereum/gauges/](https://curve.fi/dao/ethereum/gauges/)​
 
 ## **Why are gauge weights so important?**
 
