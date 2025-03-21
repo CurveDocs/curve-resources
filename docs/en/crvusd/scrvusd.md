@@ -119,4 +119,4 @@ In general, **if the ratio of scrvUSD to the total crvUSD supply stays within th
 
     - 1M staked (1%): 5% of fees ($500k) → 50% yield
     - 32M staked (32%): 32% of fees ($3.2M) → 10% yield
-    - 60M staked (60%): 50% of fees ($5M) → 8% yield"
+    - 60M staked (60%): 50% of fees ($5M) → 8% yield (50% max rev/60% staked)
