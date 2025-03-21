@@ -113,10 +113,10 @@ In general, **if the ratio of scrvUSD to the total crvUSD supply stays within th
     - Circulating supply of crvUSD: 100M
     - crvUSD yearly fees: 10M crvUSD
     - Average borrow rate: 10%
-    - crvUSD revenue to scrvUSD: 5% min, 10% max
+    - crvUSD revenue to scrvUSD: 5% min, 50% max
 
     Example yield calculation changing the ratio of crvUSD staked in scrvUSD vs crvUSD circulating supply:
 
     - 1M staked (1%): 5% of fees ($500k) → 50% yield
-    - 8M staked (8%): 8% of fees ($800k) → 10% yield
-    - 20M staked (20%): 10% of fees ($1M) → 5% yield"
+    - 32M staked (32%): 32% of fees ($3.2M) → 10% yield
+    - 60M staked (60%): 50% of fees ($5M) → 8% yield"
