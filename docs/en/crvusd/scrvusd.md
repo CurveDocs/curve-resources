@@ -65,11 +65,11 @@ The actual percentage of crvUSD fees going to scrvUSD is dynamic and based on th
 
 !!!example "Example: How much crvUSD revenue will be allocated to scrvUSD?"
 
-    Let's assume the DAO has allocated a **5% minimum** and a **20% maximum** threshold of crvUSD revenue to go to scrvUSD.  If the revenue from crvUSD is $100k in a week then: 
+    Let's assume the DAO has allocated a **5% minimum** and a **50% maximum** threshold of crvUSD revenue to go to scrvUSD.  If the revenue from crvUSD is $100k in a week then: 
 
     - If 2% of crvUSD is staked, 5% of the $100k will be allocated to scrvUSD.
-    - If 8% of crvUSD is staked, 8% of the $100k will be allocated to scrvUSD.
-    - If 25% of crvUSD is staked, 20% of the $100k will be allocated to scrvUSD.
+    - If 32% of crvUSD is staked, 32% of the $100k will be allocated to scrvUSD.
+    - If 60% of crvUSD is staked, 50% of the $100k will be allocated to scrvUSD.
 
 
 ---
@@ -113,10 +113,10 @@ In general, **if the ratio of scrvUSD to the total crvUSD supply stays within th
     - Circulating supply of crvUSD: 100M
     - crvUSD yearly fees: 10M crvUSD
     - Average borrow rate: 10%
-    - crvUSD revenue to scrvUSD: 5% min, 10% max
+    - crvUSD revenue to scrvUSD: 5% min, 50% max
 
     Example yield calculation changing the ratio of crvUSD staked in scrvUSD vs crvUSD circulating supply:
 
     - 1M staked (1%): 5% of fees ($500k) → 50% yield
-    - 8M staked (8%): 8% of fees ($800k) → 10% yield
-    - 20M staked (20%): 10% of fees ($1M) → 5% yield"
+    - 32M staked (32%): 32% of fees ($3.2M) → 10% yield
+    - 60M staked (60%): 50% of fees ($5M) → 8% yield (50% max rev/60% staked)
