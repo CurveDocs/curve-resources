@@ -61,8 +61,8 @@ theme:
   include_search_page: false
   search_index_only: true
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Mona Sans
+    code: Mona Sans Mono
   logo: "images/lama.png"
   favicon: "images/lama.png"
   icon:
@@ -71,7 +71,7 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.footnote.tooltips
-    - navigation.indexes
+    - navigation.indexes      # might remove this 
     - navigation.path
     - navigation.top
     - navigation.tracking
@@ -127,8 +127,6 @@ repo_url: https://github.com/CurveDocs/curve-resources
 
 
 nav:
-  - Home: index.md
-
   - Getting Started with Curve: getting-started.md
 
   - CRV Token:
