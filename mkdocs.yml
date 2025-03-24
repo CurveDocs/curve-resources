@@ -209,12 +209,6 @@ nav:
 
     - Security & Audits: risks-security/security.md
 
-  - Whitepapers:
-    - Curve Stableswap (2019): pdf/curve-stableswap.pdf
-    - Curve DAO (2020): pdf/curve-dao.pdf
-    - Curve Cryptopools (2021): pdf/curve-cryptopools.pdf
-    - Curve Stablecoin (2022): pdf/curve-stablecoin.pdf
-
   - Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://curve.fi/dao
