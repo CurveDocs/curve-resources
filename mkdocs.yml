@@ -209,7 +209,10 @@ nav:
 
     - Security & Audits: risks-security/security.md
 
-  - Links:
+  - Glossary: glossary-branding/glossary.md
+  - Branding & Icons: glossary-branding/branding.md
+
+  - Useful Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://curve.fi/dao
     - Curve News: https://news.curve.fi/
@@ -221,6 +224,3 @@ nav:
     - Telegram: https://t.me/curvefi
     - Curve Monitor: https://curvemonitor.com/
     - crvhub: https://crvhub.com/
-
-  - Glossary: glossary-branding/glossary.md
-  - Branding & Icons: glossary-branding/branding.md
