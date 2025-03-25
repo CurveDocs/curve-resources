@@ -127,7 +127,6 @@ repo_url: https://github.com/CurveDocs/curve-resources
 
 
 nav:
-  - Home: index.md
   - Getting Started with Curve: getting-started.md
   - CRV Token:
     - Overview & Tokenomics: crv-token/overview.md
@@ -139,6 +138,10 @@ nav:
     - Claiming Trading Fees: vecrv/claiming-trading-fees.md
     - Fee Collection & Distribution: vecrv/fee-collection-distribution.md
   - Curve Stablecoin (crvUSD):
+    - Beginner Guides:
+      - Open & Close Loan: crvusd/guides/open-and-close.md
+      - Loan Management: crvusd/guides/loan-management.md
+      - Loan Management in Liquidation: crvusd/guides/liquidation.md
     - Understanding crvUSD: crvusd/understanding-crvusd.md
     - Loan Creation & Management: crvusd/loan-creation.md
     - Liquidations: crvusd/liquidations.md
