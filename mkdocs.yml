@@ -61,8 +61,8 @@ theme:
   include_search_page: false
   search_index_only: true
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Mona Sans
+    code: Mona Sans Mono
   logo: "images/lama.png"
   favicon: "images/lama.png"
   icon:
@@ -71,7 +71,7 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.footnote.tooltips
-    - navigation.indexes
+    - navigation.indexes      # might remove this 
     - navigation.path
     - navigation.top
     - navigation.tracking
@@ -196,12 +196,9 @@ nav:
       - crvUSD: risks-security/risks/crvusd.md
       - scrvUSD: risks-security/risks/scrvusd.md
     - Security & Audits: risks-security/security.md
-  - Whitepapers:
-    - Curve Stableswap (2019): pdf/curve-stableswap.pdf
-    - Curve DAO (2020): pdf/curve-dao.pdf
-    - Curve Cryptopools (2021): pdf/curve-cryptopools.pdf
-    - Curve Stablecoin (2022): pdf/curve-stablecoin.pdf
-  - Links:
+  - Glossary: glossary-branding/glossary.md
+  - Branding & Icons: glossary-branding/branding.md
+  - Useful Links:
     - Curve.fi: https://curve.fi/#/ethereum/swap
     - Curve DAO: https://curve.fi/dao
     - Curve News: https://news.curve.fi/
@@ -213,5 +210,4 @@ nav:
     - Telegram: https://t.me/curvefi
     - Curve Monitor: https://curvemonitor.com/
     - crvhub: https://crvhub.com/
-  - Glossary: glossary-branding/glossary.md
-  - Branding & Icons: glossary-branding/branding.md
+    - crvhub: https://crvhub.com/
