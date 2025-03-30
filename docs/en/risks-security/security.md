@@ -6,4 +6,4 @@ Therefore, individuals should always proceed with caution and understand that th
 
 ## **Audits**
 
-For a detailed look into the audits Curve Finance has undergone, please refer to [here](https://docs.curve.fi/references/audits/).
+For a detailed look into the audits Curve Finance has undergone, please refer to [here](https://docs.curve.fi/security/security/#security-audits).
