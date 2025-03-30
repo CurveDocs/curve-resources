@@ -3,9 +3,9 @@
 Curve stablecoin infrastructure enables users to mint crvUSD using a selection of crypto-tokenized collaterals (adding new ones is subject to DAO approval). Interacting with crvUSD doesn't come without risks. Before minting or taking exposure of crvUSD, it is best to research and understand the risks involved.
 
 !!!info "Audits & Whitepaper"
-    **crvUSD Audits** are available here: [https://docs.curve.fi/references/audits/#crvusd-and-lending](https://docs.curve.fi/references/audits/#crvusd-and-lending)
+    **crvUSD Audits** are available here:[https://docs.curve.fi/security/security/#security-audits](https://docs.curve.fi/security/security/#security-audits)
 
-    **crvUSD Whitepaper** available here: [https://docs.curve.fi/assets/pdf/curve-stablecoin.pdf](https://docs.curve.fi/assets/pdf/curve-stablecoin.pdf)
+    **crvUSD Whitepaper** available here: [https://docs.curve.fi/assets/pdf/whitepaper_curve_stablecoin.pdf](https://docs.curve.fi/assets/pdf/whitepaper_curve_stablecoin.pdf)
 
 ---
 
