@@ -4,7 +4,7 @@
 Providing liquidity on Curve doesn't come without risks. Before making a deposit, it is best to research and understand the risks involved.
 
 !!!info "Audits & Whitepapers"
-    **Liquidity Pool Audits** are available here:[https://docs.curve.fi/security/security/#security-audits](https://docs.curve.fi/security/security/#security-audits)
+    **Liquidity Pool Audits** are available here: [https://docs.curve.fi/security/security/#security-audits](https://docs.curve.fi/security/security/#security-audits)
 
     **Curve Stableswap Whitepaper** available here: [https://docs.curve.fi/assets/pdf/whitepaper_stableswap.pdf](https://docs.curve.fi/assets/pdf/whitepaper_stableswap.pdf)
 
