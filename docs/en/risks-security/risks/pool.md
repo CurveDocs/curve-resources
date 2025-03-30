@@ -4,13 +4,13 @@
 Providing liquidity on Curve doesn't come without risks. Before making a deposit, it is best to research and understand the risks involved.
 
 !!!info "Audits & Whitepapers"
-    **Liquidity Pool Audits** are available here: [https://docs.curve.fi/references/audits](https://docs.curve.fi/references/audits)
+    **Liquidity Pool Audits** are available here: [https://docs.curve.fi/security/security/#security-audits](https://docs.curve.fi/security/security/#security-audits)
 
-    **Curve Stableswap Whitepaper** available here: [https://resources.curve.fi/pdf/curve-stableswap.pdf](https://resources.curve.fi/pdf/curve-stableswap.pdf)
+    **Curve Stableswap Whitepaper** available here: [https://docs.curve.fi/assets/pdf/whitepaper_stableswap.pdf](https://docs.curve.fi/assets/pdf/whitepaper_stableswap.pdf)
 
-    **Curve Cryptoswap Whitepaper** available here: [https://resources.curve.fi/pdf/curve-cryptopools.pdf](https://resources.curve.fi/pdf/curve-cryptopools.pdf)
+    **Curve Cryptoswap Whitepaper** available here: [https://docs.curve.fi/assets/pdf/whitepaper_cryptoswap.pdf](https://docs.curve.fi/assets/pdf/whitepaper_cryptoswap.pdf)
 
-    **Curve DAO Whitepaper** available here: [https://resources.curve.fi/pdf/curve-dao.pdf](https://resources.curve.fi/pdf/curve-dao.pdf)
+    **Curve DAO Whitepaper** available here: [https://docs.curve.fi/assets/pdf/whitepaper_curvedao.pdf](https://docs.curve.fi/assets/pdf/whitepaper_curvedao.pdf)
 
 ---
 
