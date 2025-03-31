@@ -137,23 +137,38 @@ nav:
     - How to Lock CRV: vecrv/locking-your-crv.md
     - Claiming Trading Fees: vecrv/claiming-trading-fees.md
     - Fee Collection & Distribution: vecrv/fee-collection-distribution.md
+  # - LlamaLend:
+  #   - Overview: llamalend/overview.md
+  #   - Liquidation: llamalend/educational/liquidations.md
+  #   - Borrow Rate: llamalend/educational/borrow-rates.md
+  #   # - Beginner Guides:
+      # - Open & Close Loan: llamalend/guides/open-and-close.md
+      # - Loan Management: llamalend/guides/loan-management.md
+      # - Loan Management in Liquidation: llamalend/guides/liquidation.md
+    # - Intermediate Guides:
+      # - Leverage: llamalend/guides/leverage.md
+    # - Advanced Guides:
+      # - Strategies: llamalend/guides/strategies.md
+      # - Setting Extra Health: llamalend/guides/setting-extra-health.md
   - Curve Stablecoin (crvUSD):
-    - Beginner Guides:
-      - Open & Close Loan: crvusd/guides/open-and-close.md
-      - Loan Management: crvusd/guides/loan-management.md
-      - Loan Management in Liquidation: crvusd/guides/liquidation.md
-    - Understanding crvUSD: crvusd/understanding-crvusd.md
-    - Loan Creation & Management: crvusd/loan-creation.md
+    - Overview: crvusd/overview.md
+    # - Loan Creation & Management: crvusd/loan-creation.md
     - Liquidations: crvusd/liquidations.md
-    - Leverage: lending/leverage.md
-    - Loan Strategies: crvusd/loan-strategies.md
-    - Loan Concepts In Depth: crvusd/loan-concepts.md
-    - crvUSD FAQ: crvusd/faq.md
-    - Savings-crvUSD (scrvUSD): crvusd/scrvusd.md
+    - Borrow Rate: crvusd/borrow-rate.md
+    # - Leverage: lending/leverage.md
+    # - Loan Strategies: crvusd/loan-strategies.md
+    - FAQ: crvusd/faq.md
+    - Beginner Guides:
+      - Open & Close Loan: llamalend/guides/open-and-close.md
+      - Loan Management: llamalend/guides/loan-management.md
+      - Loan Management in Liquidation: llamalend/guides/liquidation.md
+    - Advanced:
+      - Loan Concepts: crvusd/loan-concepts.md
+      - Liquidation: crvusd/advanced-liquidation.md
   - Curve Lending:
     - Overview: lending/overview.md
     - Leverage: lending/leverage.md
-    - Liquidations: crvusd/liquidations.md
+    # - Liquidations: crvusd/liquidations.md
     - How to Borrow & Use Leverage: lending/how-to-borrow.md
     - How to Supply: lending/how-to-supply.md
     - Lending FAQ: lending/faq.md
