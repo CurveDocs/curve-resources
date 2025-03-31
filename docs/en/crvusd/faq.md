@@ -1,6 +1,11 @@
 <h1>Curve Stablecoin: FAQ</h1>
 
 
+### How does it compare to other lending protocols?
+
+
+
+
 ## **General**
 
 ### What is crvUSD and how does it work?
