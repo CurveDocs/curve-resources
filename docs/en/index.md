@@ -35,7 +35,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Learn about crvUSD, including its creation, management, and key concepts, along with a comprehensive FAQ section.
 
-    [:octicons-arrow-right-24: Learn More](./crvusd/understanding-crvusd.md)
+    [:octicons-arrow-right-24: Learn More](./crvusd/overview.md)
 
 -   :fontawesome-solid-briefcase:{ .lg .middle } **Lend**
 

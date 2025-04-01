@@ -25,7 +25,7 @@ The Curve token can be bridged across various chains, though it does not always 
 
 crvUSD was first introduced in May 2023 on the Ethereum blockchain. For now, this stablecoin can be minted exclusively on the Ethereum mainnet.
 
-[Understanding crvUSD](../crvusd/understanding-crvusd.md)
+[Understanding crvUSD](../crvusd/overview.md)
 
 *Despite being launched on Ethereum, crvUSD can be bridged to various chains:*
 

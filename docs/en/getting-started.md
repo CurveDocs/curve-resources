@@ -32,7 +32,7 @@ What sets crvUSD apart is its innovative approach to managing loan health:
 
 This combination of high-quality collateral and health-based risk management makes crvUSD one of the most sophisticated and secure stablecoins in DeFi, providing borrowers with more flexibility to weather market volatility.
 
-Find out more in the [crvUSD resources](crvusd/understanding-crvusd.md), or directly on the [crvUSD UI](https://crvusd.curve.fi/#/ethereum).
+Find out more in the [crvUSD resources](./crvusd/overview.md), or directly on the [crvUSD UI](https://crvusd.curve.fi/#/ethereum).
 
 ---
 
