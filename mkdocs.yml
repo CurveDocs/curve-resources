@@ -159,9 +159,9 @@ nav:
     # - Loan Strategies: crvusd/loan-strategies.md
     - FAQ: crvusd/faq.md
     - Beginner Guides:
-      - Open & Close Loan: llamalend/guides/open-and-close.md
-      - Loan Management: llamalend/guides/loan-management.md
-      - Loan Management in Liquidation: llamalend/guides/liquidation.md
+      - Open & Close Loan: crvusd/guides/open-and-close.md
+      - Loan Management: crvusd/guides/loan-management.md
+      - Loan Management in Liquidation: crvusd/guides/liquidation.md
     - Advanced:
       - Loan Concepts: crvusd/loan-concepts.md
       - Liquidation: crvusd/advanced-liquidation.md
