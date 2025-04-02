@@ -143,4 +143,6 @@ Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and s
 
     Repaying debt while being in liquidation will increase your health, but NOT move the liquidation range. No matter how much you repay, it will never move your liquidation range up or down but will only increase your health.
 
-    todo: image comparison
+    !!!warning "Liquidation Range will NOT move!"
+        Your liquidation range will not move if you repay debt while you're in it — not even if you repay 99% of your debt.
+
