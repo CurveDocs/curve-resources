@@ -10,8 +10,7 @@
 
 ### What is crvUSD and how does it work?
 
-crvUSD refers to a dollar-pegged stablecoin, which may be minted by a decentralized protocol developed by Curve Finance. Users can mint crvUSD by posting collateral and opening a loan within this protocol.
-
+crvUSD is a dollar-pegged stablecoin, which can be minted against various crypto collaterals approved by the DAO.
 
 ### How does the crvUSD liquidation process differ from other debt-based stablecoins?
 
