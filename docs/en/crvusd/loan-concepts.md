@@ -97,7 +97,7 @@ In the illustration above, there are multiple bands with different price ranges.
 </figure>
 
 
-### Band Formulae:
+### **Band Formulae**
 
 `Band Width Factor` (sometimes called `A`) controls the density of the liquidity.  This is directly related to the width of the bands.  Band width at any price can be estimated to be:
 
