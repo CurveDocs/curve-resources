@@ -154,6 +154,7 @@ nav:
     - Overview: crvusd/overview.md
     # - Loan Creation & Management: crvusd/loan-creation.md
     - Liquidations: crvusd/liquidations.md
+    - Loan Health: crvusd/loan-health.md
     - Borrow Rate: crvusd/borrow-rate.md
     # - Leverage: lending/leverage.md
     # - Loan Strategies: crvusd/loan-strategies.md
