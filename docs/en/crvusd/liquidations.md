@@ -2,7 +2,7 @@
 
 Liquidations on Curve work differently from most other DeFi platforms. While most protocols liquidate a position instantly once it crosses a fixed price threshold, Curve introduces a more flexible mechanism called the **liquidation range**, where liquidation happens gradually.
 
-Simply put: when a loan enters the liquidation range, losses start to occur. If a loan's health reaches 0%, the position is **fully liquidated**. Liquidation does not happen at a single price point — instead, it’s a process that unfolds over time as the collateral price moves within the liquidation range.
+Simply put: A loan generally enters liquidation once the price of the collateral falls within the liquidation range. When this happens, losses start to occur. If a loan’s health reaches 0%, the position is fully liquidated. Liquidation does not happen at a single price point—instead, it’s a process that unfolds over time as the collateral price moves within the liquidation range.
 
 This system gives borrowers more time and more control compared to traditional liquidation methods.  
 **Even if a loan briefly enters the liquidation range, it can potentially recover without being fully liquidated — avoiding the hard-liquidation penalties common on other platforms.**
@@ -29,6 +29,16 @@ The liquidation range is defined by two price points for the collateral asset: a
 
 ---
 
+## **Liquidation Process**
+
+When a loan enters the liquidation range, the system begins adjusting the collateral. As the price of the collateral drops, portions of it are gradually sold for crvUSD. This reduces risk by replacing part of the volatile asset with a stable one.
+
+At that point, the loan is backed by a mix of the original collateral and crvUSD. If the price of the collateral increases again, the system automatically buys back some of the previously sold collateral using crvUSD.
+
+This process can result in some losses (see above), but **it also allows the loan to potentially recover**. If the price rebounds and loan health remains above 0%, the borrower retains their position (minus some losses) — something that wouldn't be possible on other platforms where liquidation is instant and final.
+
+---
+
 ## **Losses In Liquidation**
 
 While a loan is within the liquidation range, the borrower will incur losses that reduce the total value of their collateral. These losses depend on several factors, including market volatility, liquidity conditions, and more. Because of this, it is not possible to precisely predict how much will be lost. This makes it especially important to monitor loan health closely when it approaches or enters the liquidation range.
@@ -40,23 +50,13 @@ Another key factor that influences the amount of potential losses is the number 
 
 ---
 
-## **Liquidation Process**
-
-When a loan enters the liquidation range, the system begins adjusting the collateral. As the price of the collateral drops, portions of it are gradually sold for crvUSD. This reduces risk by replacing part of the volatile asset with a stable one.
-
-At that point, the loan is backed by a mix of the original collateral and crvUSD. If the price of the collateral increases again, the system automatically buys back some of the previously sold collateral using crvUSD.
-
-This process can result in some losses (see above), but **it also allows the loan to potentially recover**. If the price rebounds and loan health remains above 0%, the borrower retains their position (minus some losses) — something that wouldn't be possible on other platforms where liquidation is instant and final.
-
----
-
-## **How Does It Compare to Other Protocols?**
+## **How Does The Liquidation Compare to Other Protocols?**
 
 Most DeFi lending protocols use a hard-liquidation model. In these systems, if the value of the collateral falls below a specific price threshold (the liquidation price), the entire position is liquidated instantly. This often results in:
 
 - Losing all collateral
 - Paying a liquidation penalty
-- Having no chance to recover the position if the market bounces back shortly after
+- Having no chance to recover the position if the market bounces back up again
 
 Curve’s crvUSD takes a different approach with its liquidation system. **Here's how Curve is different:**
 
