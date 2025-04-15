@@ -476,7 +476,7 @@ data: {
         {
             label: 'crvUSD',
             data: [0],  // Single value
-            backgroundColor: 'rgba(75, 192, 192, 0.8)',
+            backgroundColor: 'rgba(58, 124, 73, 255)',
             yAxisID: 'y1'
         }
     ]
