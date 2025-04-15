@@ -53,4 +53,3 @@ Where:
 - $\text{loan_discount}$ is a protocol-defined parameter, typically set to **7%**
 - $A$ is the **maximum allowed number of bands**, which varies by market and is visible in the UI
 - $N$ is the **number of bands** selected for the loan
-- 
