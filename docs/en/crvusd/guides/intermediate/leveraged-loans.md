@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 <h1>Leverage</h1>
 
 !!!warning "Differences in Leverage Support"
