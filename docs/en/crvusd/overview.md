@@ -30,19 +30,9 @@ Borrowers pay a variable [borrow rate](borrow-rate.md), which adjusts based on t
 
 ---
 
-## **Loan Health**
+## **Comparison to Other Protocols**
 
-**Loan health** is the key indicator that shows how close a position is to full liquidation. If a loan's health reaches 0%, the position will be fully liquidated and closed.
-
-Loan health decreases when:
-
-- The price of the collateral asset falls  
-- The loan enters the liquidation range and begins incurring losses  
-- Interest accumulates on the debt over time — these losses are generally small and occur gradually
-
-As long as the loan’s health stays above 0%, the position remains open—even if it enters the liquidation range. But if it drops to 0%, all remaining collateral will be sold off to repay and close the loan.
-
-To make health monitoring easier, Curve offers a Telegram bot that alerts users to changes in loan status: [https://news.curve.fi/llamalend-telegram-bot/](https://news.curve.fi/llamalend-telegram-bot/)
+*soon*
 
 ---
 
