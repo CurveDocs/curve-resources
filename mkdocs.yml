@@ -159,13 +159,19 @@ nav:
     # - Leverage: lending/leverage.md
     # - Loan Strategies: crvusd/loan-strategies.md
     - FAQ: crvusd/faq.md
-    - Beginner Guides:
-      - Open & Close Loan: crvusd/guides/open-and-close.md
-      - Loan Management: crvusd/guides/loan-management.md
-      - Loan Management in Liquidation: crvusd/guides/liquidation.md
-    - Advanced:
+    - Guides:
+      - Beginner Guides:
+        - Open & Close Loan: crvusd/guides/beginner/open-and-close.md
+        - Loan Management: crvusd/guides/beginner/loan-management.md
+        - Loan Management in Liquidation: crvusd/guides/beginner/liquidation.md
+      - Intermediate Guides:
+        - Loan Creation with Custom Bands: crvusd/guides/intermediate/custom-bands.md
+        # - Leveraged Loans: crvusd/guides/intermediate/leveraged-loans.md
+    - Advanced Concepts:
+      - Liquidation & Bands: crvusd/advanced-liquidation.md
+      # - Leverage: crvusd/advanced-leverage.md
       - Loan Concepts: crvusd/loan-concepts.md
-      - Liquidation: crvusd/advanced-liquidation.md
+
   - Curve Lending:
     - Overview: lending/overview.md
     - Leverage: lending/leverage.md
