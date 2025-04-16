@@ -8,38 +8,38 @@ What makes borrowing on Curve unique is that **there is no fixed collateralizati
 
 ---
 
-# **Step 1: Connect Wallet**
+# **Connect Wallet**
 
 To start borrowing, go to [Curve's crvUSD markets](https://curve.fi/crvusd/ethereum/markets/), then connect your wallet and select your wallet provider (e.g., Rabby or MetaMask).
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/open-close/connect_light.png#only-light){ width="500" }
-  ![Image title](../../images/crvusd/guides/open-close/connect_dark.png#only-dark){ width="500" }
+  ![Image title](../../../images/crvusd/guides/open-close/connect_light.png#only-light){ width="500" }
+  ![Image title](../../../images/crvusd/guides/open-close/connect_dark.png#only-dark){ width="500" }
   <figcaption></figcaption>
 </figure>
 
 
 ---
 
-# **Step 2: Select a Market**
+# **Select a Market**
 
 Once connected, explore the available crvUSD markets and choose your preferred collateral. Borrow rates are interconnected - only wstETH and sfrxETH have rates that are 2% higher - and they fluctuate together.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/open-close/markets_light.png#only-light){ width="800" }
-  ![Image title](../../images/crvusd/guides/open-close/markets_dark.png#only-dark){ width="800" }
+  ![Image title](../../../images/crvusd/guides/open-close/markets_light.png#only-light){ width="800" }
+  ![Image title](../../../images/crvusd/guides/open-close/markets_dark.png#only-dark){ width="800" }
   <figcaption></figcaption>
 </figure>
 
 ---
 
-# **Step 3: Specify Loan Parameters**
+# **Specify Loan Parameters**
 
 Simply **enter the amount of collateral** you want to use and choose **how much crvUSD to borrow**.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/open-close/open_light.png#only-light){ width="400" }
-  ![Image title](../../images/crvusd/guides/open-close/open_dark.png#only-dark){ width="400" }
+  ![Image title](../../../images/crvusd/guides/open-close/open_light.png#only-light){ width="400" }
+  ![Image title](../../../images/crvusd/guides/open-close/open_dark.png#only-dark){ width="400" }
   <figcaption></figcaption>
 </figure>
 
@@ -52,27 +52,27 @@ Each loan has a **liquidation range**, which is simply a **price range** for the
 Once the price enters the liquidation range, **losses begin to accumulate**, further reducing the loan’s health. If the loan’s **health reaches 0%**, it will be **fully liquidated**.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/open-close/liq_range_light.png#only-light){ width="700" }
-  ![Image title](../../images/crvusd/guides/open-close/liq_range_dark.png#only-dark){ width="700" }
+  ![Image title](../../../images/crvusd/guides/open-close/liq_range_light.png#only-light){ width="700" }
+  ![Image title](../../../images/crvusd/guides/open-close/liq_range_dark.png#only-dark){ width="700" }
   <figcaption></figcaption>
 </figure>
 
 
-!!!info "**Two Biggest Misconceptions**"
-    - **Liquidation does not occur at the bounds of the liquidation range.** A common misconception is that a loan is liquidated when it reaches the **upper or lower bound** of the liquidation range. This is **not true** - a loan is **only liquidated if its health reaches 0%**.
+!!!info "**Two Important Mentions**"
+    - **Full liquidation does not occur at the bounds of the liquidation range.** A common misconception is that a loan is liquidated when it reaches the **upper or lower bound** of the liquidation range. This is **not true** - a loan is **only liquidated if its health reaches 0%**.
     - **A loan can still be fully liquidated even if the collateral price is increasing (in liquidation range).** Past experiences have shown that users were surprised to be **fully liquidated** (loan health reaching 0%) **even as the collateral price was rising within the liquidation range**. This can happen if **losses within the liquidation range exceed the health restored by the increasing collateral value**. To avoid this, it’s crucial to **maintain sufficient loan health** while in the liquidation range.
 
 ---
 
-# **Step 4: Approving and Creating Loan**
+# **Approving and Creating Loan**
 
 To complete the borrowing process, you need to **sign two transactions**.
 
 First, you must approve the spending of your collateral. This allows the system to use your collateral as security for your loan.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/open-close/approve_light.png#only-light){ width="350" }
-  ![Image title](../../images/crvusd/guides/open-close/approve_dark.png#only-dark){ width="350" }
+  ![Image title](../../../images/crvusd/guides/open-close/approve_light.png#only-light){ width="350" }
+  ![Image title](../../../images/crvusd/guides/open-close/approve_dark.png#only-dark){ width="350" }
   <figcaption></figcaption>
 </figure>
 
@@ -80,14 +80,14 @@ First, you must approve the spending of your collateral. This allows the system 
 Once the approval is complete, you can create your loan. Your collateral assets will be transferred out of your wallet and locked as security. In return, the borrowed crvUSD tokens will be deposited into your wallet, giving you full flexibility to use them however you choose.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/open-close/create_light.png#only-light){ width="350" }
-  ![Image title](../../images/crvusd/guides/open-close/create_dark.png#only-dark){ width="350" }
+  ![Image title](../../../images/crvusd/guides/open-close/create_light.png#only-light){ width="350" }
+  ![Image title](../../../images/crvusd/guides/open-close/create_dark.png#only-dark){ width="350" }
   <figcaption></figcaption>
 </figure>
 
 ---
 
-# **Step 5: Monitoring Your Loan Status**
+# **Monitoring Your Loan Status**
 
 After creating a loan, the UI will display key information about your position.
 
@@ -99,8 +99,8 @@ The UI provides critical loan details, including:
 - **LLAMMA Balances** - More about this in the advanced guide.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/open-close/position_overview_light.png#only-light){ width="700" }
-  ![Image title](../../images/crvusd/guides/open-close/position_overview_dark.png#only-dark){ width="700" }
+  ![Image title](../../../images/crvusd/guides/open-close/position_overview_light.png#only-light){ width="700" }
+  ![Image title](../../../images/crvusd/guides/open-close/position_overview_dark.png#only-dark){ width="700" }
   <figcaption></figcaption>
 </figure>
 
@@ -112,20 +112,20 @@ To mitigate this, consider **repaying some debt** or **adding more collateral** 
 To track and monitor your position using a Telegram bot, check out this article: [Telegram Llamalend Bot](https://news.curve.fi/llamalend-telegram-bot/).
 
 <figure markdown="span">
-  ![https://news.curve.fi/llamalend-telegram-bot/](../../images/crvusd/new/monitor_bot.png){ width="400" }
+  ![https://news.curve.fi/llamalend-telegram-bot/](../../../images/crvusd/new/monitor_bot.png){ width="400" }
   <figcaption></figcaption>
 </figure>
 
 ---
 
-# **Step 6: Closing Your Loan**
+# **Closing Your Loan**
 
 You can close your loan at any time by repaying the full debt. However, full repayment isn't required — you also have the option to repay partially. Learn more about partial repayments [here](./loan-management.md#re).
 
 To fully close the loan, simply check the “Repay in full and close loan” option. This will repay your entire debt and automatically return your collateral to your wallet.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/open-close/close_light.png#only-light){ width="400" }
-  ![Image title](../../images/crvusd/guides/open-close/close_dark.png#only-dark){ width="400" }
+  ![Image title](../../../images/crvusd/guides/open-close/close_light.png#only-light){ width="400" }
+  ![Image title](../../../images/crvusd/guides/open-close/close_dark.png#only-dark){ width="400" }
   <figcaption></figcaption>
 </figure>

@@ -16,8 +16,8 @@ Users can manage their loans in the following ways:
 To manage your loan, navigate to the [Markets Overview](https://curve.fi/crvusd/ethereum/markets/), connect your wallet and select the according market. The UI displays your current loans health and debt in the overview.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/loan-management/active_markets_light.png#only-light){ width="800" }
-  ![Image title](../../images/crvusd/guides/loan-management/active_markets_dark.png#only-dark){ width="800" }
+  ![Image title](../../../images/crvusd/guides/loan-management/active_markets_light.png#only-light){ width="800" }
+  ![Image title](../../../images/crvusd/guides/loan-management/active_markets_dark.png#only-dark){ width="800" }
   <figcaption></figcaption>
 </figure>
 
@@ -35,8 +35,8 @@ Go to the [Markets Dashboard](https://curve.fi/crvusd/ethereum/markets/) and sel
 Switch from the `Loan` to the `Collateral` tab and specify the amount of collateral you want to add and confirm the transaction.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/loan-management/add_light.png#only-light){ width="400" }
-  ![Image title](../../images/crvusd/guides/loan-management/add_dark.png#only-dark){ width="400" }
+  ![Image title](../../../images/crvusd/guides/loan-management/add_light.png#only-light){ width="400" }
+  ![Image title](../../../images/crvusd/guides/loan-management/add_dark.png#only-dark){ width="400" }
   <figcaption></figcaption>
 </figure>
 
@@ -46,8 +46,8 @@ Switch from the `Loan` to the `Collateral` tab and specify the amount of collate
 Adding more collateral to your loan has a **positive effect on its health and liquidation range**. It increases your loan’s health and moves the liquidation range further down, keeping you further away from liquidation.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/loan-management/new_range_add_light.png#only-light){ width="700" }
-  ![Image title](../../images/crvusd/guides/loan-management/new_range_add_dark.png#only-dark){ width="700" }
+  ![Image title](../../../images/crvusd/guides/loan-management/new_range_add_light.png#only-light){ width="700" }
+  ![Image title](../../../images/crvusd/guides/loan-management/new_range_add_dark.png#only-dark){ width="700" }
   <figcaption>Adding additional collateral to the loan moves the liquidation range further down.</figcaption>
 </figure>
 
@@ -65,8 +65,8 @@ Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and s
 Switch from the `Loan` to the `Collateral` tab and select "Remove". Then specify the amount of collateral you want to remove and confirm the transaction.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/loan-management/remove_light.png#only-light){ width="400" }
-  ![Image title](../../images/crvusd/guides/loan-management/remove_dark.png#only-dark){ width="400" }
+  ![Image title](../../../images/crvusd/guides/loan-management/remove_light.png#only-light){ width="400" }
+  ![Image title](../../../images/crvusd/guides/loan-management/remove_dark.png#only-dark){ width="400" }
   <figcaption></figcaption>
 </figure>
 
@@ -75,8 +75,8 @@ Switch from the `Loan` to the `Collateral` tab and select "Remove". Then specify
 Removing collateral from your loan has a **negative effect on its health and liquidtion range**. It decreases your loan's health and moves the liquidation range further up, bringing your closer to liquidation.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/loan-management/new_range_remove_light.png#only-light){ width="700" }
-  ![Image title](../../images/crvusd/guides/loan-management/new_range_remove_dark.png#only-dark){ width="700" }
+  ![Image title](../../../images/crvusd/guides/loan-management/new_range_remove_light.png#only-light){ width="700" }
+  ![Image title](../../../images/crvusd/guides/loan-management/new_range_remove_dark.png#only-dark){ width="700" }
   <figcaption>Removing collateral from the loan reduces the health and moves the liquidation range of the loan further up.</figcaption>
 </figure>
 
@@ -94,8 +94,8 @@ Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and s
 Specify the amount of crvUSD you want to borrow. You also have the option to add more collateral at the same time — allowing you to increase both your loan amount and your collateral in a single step.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/loan-management/borrow_more_light.png#only-light){ width="400" }
-  ![Image title](../../images/crvusd/guides/loan-management/borrow_more_dark.png#only-dark){ width="400" }
+  ![Image title](../../../images/crvusd/guides/loan-management/borrow_more_light.png#only-light){ width="400" }
+  ![Image title](../../../images/crvusd/guides/loan-management/borrow_more_dark.png#only-dark){ width="400" }
   <figcaption></figcaption>
 </figure>
 
@@ -105,8 +105,8 @@ Specify the amount of crvUSD you want to borrow. You also have the option to add
 Borrowing more crvUSD is only possible if the loan is not in liquidation. Borrowing more crvUSD will decrease the loans health and and move up the liquidation range, bringing you closer to liquidation.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/loan-management/new_range_more_light.png#only-light){ width="700" }
-  ![Image title](../../images/crvusd/guides/loan-management/new_range_more_dark.png#only-dark){ width="700" }
+  ![Image title](../../../images/crvusd/guides/loan-management/new_range_more_light.png#only-light){ width="700" }
+  ![Image title](../../../images/crvusd/guides/loan-management/new_range_more_dark.png#only-dark){ width="700" }
   <figcaption>Borrowing more crvUSD reduces the health and moves the liquidation range of the loan further up. If also collatereal is added, these effects can be lowered.</figcaption>
 </figure>
 
@@ -121,8 +121,8 @@ Debt can be repaid fully or partially. Repayment is always possible, wether the 
 Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and select the market where you want to partially repay some debt.
 
 <figure markdown="span">
-  ![Image title](../../images/crvusd/guides/loan-management/partial_repay_light.png#only-light){ width="400" }
-  ![Image title](../../images/crvusd/guides/loan-management/partial_repay_dark.png#only-dark){ width="400" }
+  ![Image title](../../../images/crvusd/guides/loan-management/partial_repay_light.png#only-light){ width="400" }
+  ![Image title](../../../images/crvusd/guides/loan-management/partial_repay_dark.png#only-dark){ width="400" }
   <figcaption></figcaption>
 </figure>
 
@@ -133,8 +133,8 @@ Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and s
     Repaying debt when the loan is not in liquidation improves the health of the loan and moves the liquidation range down, brining the loan further away from liquidation.
 
     <figure markdown="span">
-        ![Image title](../../images/crvusd/guides/loan-management/new_range_partial_light.png#only-light){ width="600" }
-        ![Image title](../../images/crvusd/guides/loan-management/new_range_partial_dark.png#only-dark){ width="600" }
+        ![Image title](../../../images/crvusd/guides/loan-management/new_range_partial_light.png#only-light){ width="600" }
+        ![Image title](../../../images/crvusd/guides/loan-management/new_range_partial_dark.png#only-dark){ width="600" }
     <figcaption></figcaption>
     </figure>
 
@@ -145,4 +145,3 @@ Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and s
 
     !!!warning "Liquidation Range will NOT move!"
         Your liquidation range will not move if you repay debt while you're in it — not even if you repay 99% of your debt.
-

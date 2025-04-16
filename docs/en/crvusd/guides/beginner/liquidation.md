@@ -32,7 +32,7 @@ To help with monitoring, you can use the [Llamalend Telegram bot](https://news.c
 
 
 <figure markdown="span">
-  ![https://news.curve.fi/llamalend-telegram-bot/](../../images/crvusd/new/monitor_bot.png){ width="400" }
+  ![https://news.curve.fi/llamalend-telegram-bot/](../../../images/crvusd/new/monitor_bot.png){ width="400" }
   <figcaption></figcaption>
 </figure>
 
