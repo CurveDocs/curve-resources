@@ -198,12 +198,12 @@ nav:
     - Boosting your CRV rewards: reward-gauges/boosting-your-crv-rewards.md
     - Gauge weights: reward-gauges/gauge-weights.md
     - Permissionless rewards: reward-gauges/permissionless-rewards.md
-  - Governance:
-    - Understanding Governance: governance/understanding-governance.md
-    - Voting: governance/voting.md
+  - DAO:
+    - Overview: governance/overview.md
+    - Locking CRV: governance/locking-crv.md
+    - Proposals: governance/proposals.md
+    - Gauges: governance/gauges.md
     - Community Fund: governance/community-fund.md
-    - Proposals:
-      - Creating a DAO proposal: governance/proposals/creating-a-dao-proposal.md
   - Cross-Chain:
     - Overview: cross-chain/overview.md
     - DEX & Llamalend: cross-chain/dex-llamalend.md
