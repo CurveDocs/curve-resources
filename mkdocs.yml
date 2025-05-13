@@ -1,5 +1,5 @@
 site_name: Curve Resources
-site_url: https://resources.curve.fi/
+site_url: https://resources.curve.finance/
 site_author: CurveFi
 docs_dir: 'docs/en'
 
@@ -224,14 +224,14 @@ nav:
   - Glossary: glossary-branding/glossary.md
   - Branding & Icons: glossary-branding/branding.md
   - Useful Links:
-    - Curve.fi: https://curve.fi/#/ethereum/swap
-    - Curve DAO: https://curve.fi/dao
-    - Curve News: https://news.curve.fi/
+    - curve.finance: https://curve.finance/#/ethereum/swap
+    - Curve DAO: https://curve.finance/dao
+    - Curve News: https://news.curve.finance/
     - Discord: https://discord.gg/twUngQYz85
     - Github: https://github.com/curvefi/
-    - Governance Forum: https://gov.curve.fi/
+    - Governance Forum: https://gov.curve.finance/
     - Twitter: https://twitter.com/curvefinance
-    - Technical Docs: https://docs.curve.fi/
+    - Technical Docs: https://docs.curve.finance/
     - Telegram: https://t.me/curvefi
     - Curve Monitor: https://curvemonitor.com/
     - crvhub: https://crvhub.com/
