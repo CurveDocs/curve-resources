@@ -27,16 +27,19 @@ The future rate is the new rate to which it will udpate once someone interacts w
 <figcaption>Current Rate (blue) and Future Rate (green)</figcaption>
 </figure>
 
+
 ---
 
-## **PegKeepers**
+**Peg Stabilization Reserve (PSR)**
 
-PegKeepers are a new innovation that helps keep the price of crvUSD stable. They automatically take certain actions based on the price of crvUSD in Curve pools. All of these actions are permissionless and can be triggered by any user. See here.
+The Peg Stabilization Reserve (PSR), formerly known as PegKeepers, is a mechanism designed to help keep the price of crvUSD close to $1.00. While it doesn’t act on its own, the system allows anyone to trigger specific actions when the crvUSD price moves — thanks to fully permissionless smart contracts.
 
-When the price of crvUSD in a pool is above $1.00, PegKeepers are allowed to mint uncollateralized crvUSD (crvUSD without backing) and deposit it into specific Curve pools. This increases the crvUSD balance in the pool, which helps bring the price back down.
+The size of the Reserve influences the crvUSD borrow rate: in general, a larger Reserve results in a lower borrow rate.
 
-The borrow rate is also influenced by how much crvUSD PegKeepers hold. As a general rule: the more crvUSD PegKeepers have deposited into pools, the lower the borrow rate will be.
+Here’s how it works:
 
-If a PegKeeper has previously deposited crvUSD into a pool, it can also withdraw that crvUSD—but only when the price is below $1.00. By withdrawing crvUSD, the pool’s crvUSD balance decreases, which helps push the price back up.
+- **If crvUSD trades above $1.00:** The system allows new crvUSD to be minted and deposited into Curve pools. This increases the pool’s crvUSD balance, helping bring the price back down toward $1.00.
+- **If crvUSD trades below $1.00:** Previously deposited crvUSD can be withdrawn from the pools. This reduces the pool’s crvUSD balance, helping push the price back up.
 
-For more details, see the [PegKeepers documentation](https://docs.curve.fi/crvUSD/pegkeepers/overview/).
+These actions aren’t automatic — they require someone to call the appropriate functions. Users can interact with the system using the interface here: https://www.curve.finance/crvusd/ethereum/pegkeepers/.
+<!-- todo: need to fix the link after changing the name to stabilization reserve -->
