@@ -58,7 +58,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
 # **Markets**
 
-There are many Curve Lending markets listed on the [main UI](https://curve.finance/lend#/ethereum/markets).  Each market uses a single type of collateral, and make loans in a single asset (**all markets are one-way**, and **all markets are isolated**).  Some of the markets available are pictured below (we've used llamas in suits to illustrate different markets), but there are many more available, and **new markets can be permissionlessly deployed** by anyone, at anytime (as long as the asset has a suitable [price oracle](https://docs.curve.finance/stableswap-exchange/stableswap-ng/pools/oracles/)).  
+There are many Curve Lending markets listed on the [main UI](https://curve.finance/lend/ethereum/markets).  Each market uses a single type of collateral, and make loans in a single asset (**all markets are one-way**, and **all markets are isolated**).  Some of the markets available are pictured below (we've used llamas in suits to illustrate different markets), but there are many more available, and **new markets can be permissionlessly deployed** by anyone, at anytime (as long as the asset has a suitable [price oracle](https://docs.curve.finance/stableswap-exchange/stableswap-ng/pools/oracles/)).  
 
 ![Curve lending llamas](../images/lending/llamma_markets.svg)
 
@@ -219,7 +219,7 @@ Borrowing rates are calculated differently based on whether the collateral asset
 
 Assets with minting markets currently are: ETH (=WETH in lending markets), WBTC, wstETH, sfrxETH, tBTC.  For these assets, the borrowing rates on Curve Lend depend on two factors: the borrow rate for minting crvUSD and the utilization of the lending pool.  The technical documentation shows the [borrowing rate formula here](https://docs.curve.finance/lending/contracts/secondary-mp/#borrow-rate).  To decide whether to mint crvUSD or borrow from the lending market, consider the following:
 
-* Lending market **utilization below 85%** -> Borrowing rate will be lower on the [Lending Market](https://curve.finance/lend#/ethereum)
+* Lending market **utilization below 85%** -> Borrowing rate will be lower on the [Lending Market](https://curve.finance/lend/ethereum)
 * Lending market **utilization above 85%** -> Borrowing rate will be lower on the [crvUSD Minting Market](https://curve.finance/crvusd/#/ethereum)
 * Lending market **utilization equals 85%** -> Borrowing rates will be equal
 
@@ -249,7 +249,7 @@ $$\text{lendAPR} = \text{borrowAPR} \cdot \text{utilization}$$
 
     $$\text{APY} = \left(1 + \frac{APR}{86400 \cdot 365}\right)^{86400 \cdot 365} - 1$$
 
-*For the current [CRV Lending Market](https://curve.finance/lend#/ethereum/markets/one-way-market-3/create) the Borrow APR and Lend APR for different Utilization rates is the following:*
+*For the current [CRV Lending Market](https://curve.finance/lend/ethereum/markets/one-way-market-3/create) the Borrow APR and Lend APR for different Utilization rates is the following:*
 
 <canvas id="graphContainer"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

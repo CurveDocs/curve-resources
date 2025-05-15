@@ -19,7 +19,7 @@ CRV inflation rewards are possible on L2s and alt-L1s, but they are delayed by 1
 
 ## **Llamalend**
 
-Llamalend is currently available on 4 chains: [**Ethereum**](https://curve.finance/lend#/ethereum/), [**Arbitrum**](https://curve.finance/lend#/arbitrum/), [**Fraxtal**](https://curve.finance/lend#/fraxtal/), [**Optimism**](https://curve.finance/lend#/optimism/).
+Llamalend is currently available on 4 chains: [**Ethereum**](https://curve.finance/lend/ethereum/), [**Arbitrum**](https://curve.finance/lend/arbitrum/), [**Fraxtal**](https://curve.finance/lend/fraxtal/), [**Optimism**](https://curve.finance/lend/optimism/).
 
 CRV inflation rewards are possible on L2s and alt-L1s, but they are delayed by 1 week.  So if users vote to send CRV rewards to a Llamalend market on an L2 or alt-L1, they must fully accrue on Ethereum in a [Root Gauge](https://docs.curve.finance/liquidity-gauges-and-minting-crv/xchain-gauges/RootGauge/) for 1 week, before they are bridged to the [Child Gauge](https://docs.curve.finance/liquidity-gauges-and-minting-crv/xchain-gauges/ChildGauge/) and emitted over the following week.
 

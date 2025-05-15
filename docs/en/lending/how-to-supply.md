@@ -2,7 +2,7 @@
 
 ## **Supplying UI**
 
-By choosing the **`"SUPPLY"`** tab from the [main UI](https://curve.finance/lend#/ethereum/markets), all relevant market information and values for lenders are displayed:
+By choosing the **`"SUPPLY"`** tab from the [main UI](https://curve.finance/lend/ethereum/markets), all relevant market information and values for lenders are displayed:
 
 <figure markdown="span">
   ![](../images/lending/lend_supply.png){ width="800" }

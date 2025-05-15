@@ -2,7 +2,7 @@
 
 ## **Borrowing UI**
 
-When selecting the **`"BORROW"`** tab from the [main UI](https://curve.finance/lend#/ethereum/markets), all relevant market information and values for borrowers are displayed:
+When selecting the **`"BORROW"`** tab from the [main UI](https://curve.finance/lend/ethereum/markets), all relevant market information and values for borrowers are displayed:
 
 <figure markdown="span">
   ![](../images/lending/lend_borrow.png){ width="800" }
