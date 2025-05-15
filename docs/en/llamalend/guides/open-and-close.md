@@ -15,7 +15,7 @@ What makes borrowing on Curve unique is that **there is no fixed collateralizati
 
 # **Step 1: Connect Wallet**
 
-To start borrowing, go to [Curve's crvUSD markets](https://curve.fi/crvusd/ethereum/markets/), then connect your wallet and select your wallet provider (e.g., Rabby or MetaMask).
+To start borrowing, go to [Curve's crvUSD markets](https://curve.finance/crvusd/ethereum/markets/), then connect your wallet and select your wallet provider (e.g., Rabby or MetaMask).
 
 <figure markdown="span">
   ![Image title](../../images/crvusd/guides/open-close/connect_light.png#only-light){ width="500" }
@@ -114,10 +114,10 @@ Since loans on Curve are **liquidated when health reaches 0%**, it’s crucial t
 
 To mitigate this, consider **repaying some debt** or **adding more collateral** before your loan enters the liquidation range. This will **restore health** and simultaneously **push the liquidation range lower**, reducing your risk.
 
-To track and monitor your position using a Telegram bot, check out this article: [Telegram Llamalend Bot](https://news.curve.fi/llamalend-telegram-bot/).
+To track and monitor your position using a Telegram bot, check out this article: [Telegram Llamalend Bot](https://news.curve.finance/llamalend-telegram-bot/).
 
 <figure markdown="span">
-  ![https://news.curve.fi/llamalend-telegram-bot/](../../images/crvusd/new/monitor_bot.png){ width="400" }
+  ![https://news.curve.finance/llamalend-telegram-bot/](../../images/crvusd/new/monitor_bot.png){ width="400" }
   <figcaption></figcaption>
 </figure>
 

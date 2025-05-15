@@ -4,15 +4,15 @@
 
 Before attempting to create a lending market, a curve pool for the ASSET paired with crvUSD which implements an unmanipulatable price oracle must exist.   Pools with unmanipulatable oracles are the following:
 
- - [Cryptoswap Two Asset Pool](https://docs.curve.fi/references/deployed-contracts/#twocrypto-ng) - for two unpegged assets, e.g., crvUSD/CRV
- - [Cryptoswap Three Asset Pool](https://docs.curve.fi/references/deployed-contracts/#tricrypto-ng) - for three unpegged assets, e.g., crvUSD/WETH/CRV
- - [Stableswap Pool](https://docs.curve.fi/references/deployed-contracts/#stableswap-ng) - for two or more pegged assets, e.g., crvUSD/USDC
+ - [Cryptoswap Two Asset Pool](https://docs.curve.finance/references/deployed-contracts/#twocrypto-ng) - for two unpegged assets, e.g., crvUSD/CRV
+ - [Cryptoswap Three Asset Pool](https://docs.curve.finance/references/deployed-contracts/#tricrypto-ng) - for three unpegged assets, e.g., crvUSD/WETH/CRV
+ - [Stableswap Pool](https://docs.curve.finance/references/deployed-contracts/#stableswap-ng) - for two or more pegged assets, e.g., crvUSD/USDC
 
 
 !!!info "Custom Price Oracles" 
     If an ASSET/WETH pool is more desirable than an ASSET/crvUSD pool, it is possible to link the ASSET/WETH price to the WETH/crvUSD price using a custom price oracle.  This can then be used to create a lending market.  Please get in contact with the team in telegram if this is the case.
 
-The easiest way to create a pool is through the official [Create Pool UI](https://curve.fi/#/ethereum/create-pool).
+The easiest way to create a pool is through the official [Create Pool UI](https://curve.finance/#/ethereum/create-pool).
 
 Guides are available for creating a [Stableswap Pool](../pool-creation/creating-a-stableswap-pool.md), and creating a [Cryptoswap Pool](../pool-creation/creating-a-cryptoswap-pool.md)
 
@@ -20,7 +20,7 @@ Guides are available for creating a [Stableswap Pool](../pool-creation/creating-
 
 ## **Creating a Lending Market**
 
-To create a lending market use the `create`, or `create_from_pool` methods in the `OneWay Lending Factory` smart contract to deploy all relevant contracts and set all parameters.  Find the `OneWay Lending Factory` addresses for different chains [here](https://docs.curve.fi/references/deployed-contracts/#curve-lending).  There is no UI for this step, it has to be done through Etherscan, or manually.
+To create a lending market use the `create`, or `create_from_pool` methods in the `OneWay Lending Factory` smart contract to deploy all relevant contracts and set all parameters.  Find the `OneWay Lending Factory` addresses for different chains [here](https://docs.curve.finance/references/deployed-contracts/#curve-lending).  There is no UI for this step, it has to be done through Etherscan, or manually.
 
 To deploy a lending market using the `create_from_pool` method after deploying a pool the following unique parameter is used:
 

@@ -1,6 +1,6 @@
 <h1>Curve Lending Overview</h1>
 
-Curve Lending allows users to borrow crvUSD against any collateral token or to borrow any token against crvUSD, while benefiting from the **soft-liquidation mechanism** provided by [LLAMMA](https://docs.curve.fi/crvUSD/amm/).  This innovative approach to overcollateralized loans enhances risk management and user experience for borrowers.  Additionally, Curve Lending allows users to **generate interest through lending (supplying) their assets** to be borrowed by others.
+Curve Lending allows users to borrow crvUSD against any collateral token or to borrow any token against crvUSD, while benefiting from the **soft-liquidation mechanism** provided by [LLAMMA](https://docs.curve.finance/crvUSD/amm/).  This innovative approach to overcollateralized loans enhances risk management and user experience for borrowers.  Additionally, Curve Lending allows users to **generate interest through lending (supplying) their assets** to be borrowed by others.
 
 !!!warning "Collateral in Lending Markets *DO NOT* back crvUSD"
     The collateral used in Curve Lending markets does not back crvUSD. **All crvUSD within Curve Lending is supplied by users**.  Conversely, minting new crvUSD requires high-quality crypto collateral approved by the DAO.  The **crvUSD minting system is separate from the lending markets**. *[See here for more differences between Curve Lending and minting crvUSD](./faq.md#whats-the-difference-between-minting-crvusd-and-lending-markets)*.
@@ -58,7 +58,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
 # **Markets**
 
-There are many Curve Lending markets listed on the [main UI](https://lend.curve.fi/#/ethereum/markets).  Each market uses a single type of collateral, and make loans in a single asset (**all markets are one-way**, and **all markets are isolated**).  Some of the markets available are pictured below (we've used llamas in suits to illustrate different markets), but there are many more available, and **new markets can be permissionlessly deployed** by anyone, at anytime (as long as the asset has a suitable [price oracle](https://docs.curve.fi/stableswap-exchange/stableswap-ng/pools/oracles/)).  
+There are many Curve Lending markets listed on the [main UI](https://curve.finance/lend/ethereum/markets).  Each market uses a single type of collateral, and make loans in a single asset (**all markets are one-way**, and **all markets are isolated**).  Some of the markets available are pictured below (we've used llamas in suits to illustrate different markets), but there are many more available, and **new markets can be permissionlessly deployed** by anyone, at anytime (as long as the asset has a suitable [price oracle](https://docs.curve.finance/stableswap-exchange/stableswap-ng/pools/oracles/)).  
 
 ![Curve lending llamas](../images/lending/llamma_markets.svg)
 
@@ -101,7 +101,7 @@ If there are insufficient available assets for a full withdrawal, you can withdr
 
 ## **Supply Vault Share Tokens**
 
-By Supplying assets on Curve Lending, you are given **Supply Vault Shares** ([more info here](https://docs.curve.fi/lending/contracts/vault/)).  These are tokens representing your **share of the total supply**.  The **value of these shares increases by Lend APY**.
+By Supplying assets on Curve Lending, you are given **Supply Vault Shares** ([more info here](https://docs.curve.finance/lending/contracts/vault/)).  These are tokens representing your **share of the total supply**.  The **value of these shares increases by Lend APY**.
 
 When you withdraw your supplied assets, the Vault Shares you had previously deposited are returned to the Lending Market. At this point, you receive the current value of the Vault Shares you are returning. This is how your interest on the supplied assets accrues. **By withdrawing your assets, you effectively claim the interest that has been earned** on your initial deposit during the time it was being lent out in the market.
 
@@ -117,7 +117,7 @@ Rewards APR is a combination of CRV emission rewards and any other incentives pr
 
 *For a market to have CRV rewards the following conditions must be met:*
 
-1. The Curve DAO must vote to add a [Liquidity Gauge](https://resources.curve.fi/reward-gauges/understanding-gauges/) to the `GaugeController` for that specific lending market
+1. The Curve DAO must vote to add a [Liquidity Gauge](https://resources.curve.finance/reward-gauges/understanding-gauges/) to the `GaugeController` for that specific lending market
 2. The liquidity gauge must receive a positive [gauge weight](../reward-gauges/gauge-weights.md) through votes from veCRV holders. This will result in CRV being emitted to the liquidity gauge.
 
 Due to the boosting mechanism of liquidity gauges, the Reward APR will be displayed as a range based on the user's boost factor. Learn more about boosting [here](../reward-gauges/boosting-your-crv-rewards.md).
@@ -133,7 +133,7 @@ Other incentives can be added by anyone, i.e., if a project wants to incentivize
 When borrowing from Curve Lending Markets, you are taking an **overcollateralized loan** against deposited assets (e.g., borrowing crvUSD with CRV collateral). In exchange, you are **charged the Borrow APY on the borrowed assets**.
 
 
-Collateral is deposited into each lending market's [LLAMMA](https://docs.curve.fi/crvUSD/amm/) system and split evenly across the chosen number of bands (N).  **Each band represents a small liquidation price range, with an upper and lower limit.  If the oracle price enters one of your bands, [soft-liquidation begins](#soft-liquidation)**.  **Your loan is safe while the oracle price is higher than any of your bands**.  
+Collateral is deposited into each lending market's [LLAMMA](https://docs.curve.finance/crvUSD/amm/) system and split evenly across the chosen number of bands (N).  **Each band represents a small liquidation price range, with an upper and lower limit.  If the oracle price enters one of your bands, [soft-liquidation begins](#soft-liquidation)**.  **Your loan is safe while the oracle price is higher than any of your bands**.  
 
 *See the image below for a breakdown of how supplied assets are borrowed, and how collateral is deposited into bands.*
 
@@ -217,10 +217,10 @@ Borrowing rates are calculated differently based on whether the collateral asset
 
 #### Borrow Rate for assets with a crvUSD Minting Market
 
-Assets with minting markets currently are: ETH (=WETH in lending markets), WBTC, wstETH, sfrxETH, tBTC.  For these assets, the borrowing rates on Curve Lend depend on two factors: the borrow rate for minting crvUSD and the utilization of the lending pool.  The technical documentation shows the [borrowing rate formula here](https://docs.curve.fi/lending/contracts/secondary-mp/#borrow-rate).  To decide whether to mint crvUSD or borrow from the lending market, consider the following:
+Assets with minting markets currently are: ETH (=WETH in lending markets), WBTC, wstETH, sfrxETH, tBTC.  For these assets, the borrowing rates on Curve Lend depend on two factors: the borrow rate for minting crvUSD and the utilization of the lending pool.  The technical documentation shows the [borrowing rate formula here](https://docs.curve.finance/lending/contracts/secondary-mp/#borrow-rate).  To decide whether to mint crvUSD or borrow from the lending market, consider the following:
 
-* Lending market **utilization below 85%** -> Borrowing rate will be lower on the [Lending Market](https://lend.curve.fi/#/ethereum)
-* Lending market **utilization above 85%** -> Borrowing rate will be lower on the [crvUSD Minting Market](https://crvusd.curve.fi/#/ethereum)
+* Lending market **utilization below 85%** -> Borrowing rate will be lower on the [Lending Market](https://curve.finance/lend/ethereum)
+* Lending market **utilization above 85%** -> Borrowing rate will be lower on the [crvUSD Minting Market](https://curve.finance/crvusd/#/ethereum)
 * Lending market **utilization equals 85%** -> Borrowing rates will be equal
 
 #### Borrow Rate for all other Assets
@@ -249,7 +249,7 @@ $$\text{lendAPR} = \text{borrowAPR} \cdot \text{utilization}$$
 
     $$\text{APY} = \left(1 + \frac{APR}{86400 \cdot 365}\right)^{86400 \cdot 365} - 1$$
 
-*For the current [CRV Lending Market](https://lend.curve.fi/#/ethereum/markets/one-way-market-3/create) the Borrow APR and Lend APR for different Utilization rates is the following:*
+*For the current [CRV Lending Market](https://curve.finance/lend/ethereum/markets/one-way-market-3/create) the Borrow APR and Lend APR for different Utilization rates is the following:*
 
 <canvas id="graphContainer"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -384,4 +384,4 @@ For information relating to how to supply assets see [supplying assets page](./h
 
 For Frequently Asked Questions about Curve Lending see the [FAQ here](./faq.md)
 
-For more technical information especially relating to the underlying smart contracts please see the [Lending section within the Curve Docs](https://docs.curve.fi/lending/overview/)
+For more technical information especially relating to the underlying smart contracts please see the [Lending section within the Curve Docs](https://docs.curve.finance/lending/overview/)

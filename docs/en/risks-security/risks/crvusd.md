@@ -3,9 +3,9 @@
 Curve stablecoin infrastructure enables users to mint crvUSD using a selection of crypto-tokenized collaterals (adding new ones is subject to DAO approval). Interacting with crvUSD doesn't come without risks. Before minting or taking exposure of crvUSD, it is best to research and understand the risks involved.
 
 !!!info "Audits & Whitepaper"
-    **crvUSD Audits** are available here: [https://docs.curve.fi/security/security/#security-audits](https://docs.curve.fi/security/security/#security-audits)
+    **crvUSD Audits** are available here: [https://docs.curve.finance/security/security/#security-audits](https://docs.curve.finance/security/security/#security-audits)
 
-    **crvUSD Whitepaper** available here: [https://docs.curve.fi/assets/pdf/whitepaper_curve_stablecoin.pdf](https://docs.curve.fi/assets/pdf/whitepaper_curve_stablecoin.pdf)
+    **crvUSD Whitepaper** available here: [https://docs.curve.finance/assets/pdf/whitepaper_curve_stablecoin.pdf](https://docs.curve.finance/assets/pdf/whitepaper_curve_stablecoin.pdf)
 
 ---
 
@@ -13,7 +13,7 @@ Curve stablecoin infrastructure enables users to mint crvUSD using a selection o
 
 ### Soft-Liquidation and Hard-Liquidation
 
-Collateralized debt positions are managed passively through arbitrage opportunities: if the collateral's price decreases, the system automatically sells off collateral to arbitrageurs in a ‘soft-liquidation mode’. If the collateral's price increases, the system recovers the collateral. This algorithm is designed to dynamically adjust the collateral backing each crvUSD in real-time, responding to fluctuating market conditions. While this approach is intended to mitigate the severity of traditional liquidations—a process where collateral becomes insufficient, leading to irreversible sales at potentially undervalued prices—it does not eliminate the inherent risk of collateral volatility. Additional information can be found on [LLAMMA Overview](https://docs.curve.fi/crvUSD/amm/).
+Collateralized debt positions are managed passively through arbitrage opportunities: if the collateral's price decreases, the system automatically sells off collateral to arbitrageurs in a ‘soft-liquidation mode’. If the collateral's price increases, the system recovers the collateral. This algorithm is designed to dynamically adjust the collateral backing each crvUSD in real-time, responding to fluctuating market conditions. While this approach is intended to mitigate the severity of traditional liquidations—a process where collateral becomes insufficient, leading to irreversible sales at potentially undervalued prices—it does not eliminate the inherent risk of collateral volatility. Additional information can be found on [LLAMMA Overview](https://docs.curve.finance/crvUSD/amm/).
 
 Borrowers in the crvUSD ecosystem are subject to specific risks associated with the liquidation process. It is crucial to understand that if the User’s collateral is placed into soft-liquidation mode, they are prohibited from withdrawing the collateral or augmenting their position with additional collateral. Entering soft-liquidation mode locks the collateral, removing the option to withdraw or add to it. In case market conditions suggest a strategic adjustment to the User’s position, they may face exacerbated risk due to such restrictions.
 
@@ -23,7 +23,7 @@ If the health of the loan falls to zero, the position is subject to hard liquida
 
 ### Curve Pool EMA Oracles
 
-Curve incorporates specialized on-chain Exponential Moving Average (EMA) oracles built into stabelswap-ng, tricrypto-ng, and twocrypto-ng Curve pool implementations. crvUSD markets derive price information from a select number of high TVL Curve pools. By utilizing the EMA smoothing methodology, oracles mitigate the impact of transient price fluctuations, aiming to reduce unnecessary losses caused by short-term market volatility or attempts to manipulate the oracle. Despite the manipulation-resistant design specification, Curve pool oracles may exhibit price distortions in certain scenarios that have the potential to result in missed or excessive liquidations. This may be a result of liquidity and volume migration to alternate venues that increase the risk of oracle manipulation. A detailed explanation of the aforementioned terms can be found in the [crvUSD Oracle documentation](https://docs.curve.fi/crvUSD/oracle/)
+Curve incorporates specialized on-chain Exponential Moving Average (EMA) oracles built into stabelswap-ng, tricrypto-ng, and twocrypto-ng Curve pool implementations. crvUSD markets derive price information from a select number of high TVL Curve pools. By utilizing the EMA smoothing methodology, oracles mitigate the impact of transient price fluctuations, aiming to reduce unnecessary losses caused by short-term market volatility or attempts to manipulate the oracle. Despite the manipulation-resistant design specification, Curve pool oracles may exhibit price distortions in certain scenarios that have the potential to result in missed or excessive liquidations. This may be a result of liquidity and volume migration to alternate venues that increase the risk of oracle manipulation. A detailed explanation of the aforementioned terms can be found in the [crvUSD Oracle documentation](https://docs.curve.finance/crvUSD/oracle/)
 
 ### Pegkeepers
 

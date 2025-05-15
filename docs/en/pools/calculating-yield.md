@@ -1,7 +1,7 @@
 Explanation of how the Curve UI displays yield calculations
 
 !!!warning "Warning"
-    **This page is outdated and will be updated soon.**  Much of this information has changed.  If you need up to date information please check the [**new Technical Documentation**](https://docs.curve.fi/) or ask in the [**Curve Telegram**](https://t.me/curvefi).  There are some links here to the [**old Technical Documentation**](https://curve.readthedocs.io/), documentation there is also outdated.
+    **This page is outdated and will be updated soon.**  Much of this information has changed.  If you need up to date information please check the [**new Technical Documentation**](https://docs.curve.finance/) or ask in the [**Curve Telegram**](https://t.me/curvefi).  There are some links here to the [**old Technical Documentation**](https://curve.readthedocs.io/), documentation there is also outdated.
 
 Like all documentation within this guide, this article is intended to be detailed but non-technical, outside of a few light mathematical formulas. While we highlight specific smart contract function names that the Curve UI may reference for convenience, no knowledge of coding is otherwise necessary to understand this article.
 
@@ -19,8 +19,8 @@ It’s important to remember that these numbers are a projections of historical 
 
 These yield types are:
 
-*   **Base vAPY:** Shown on the first line, this number represents the fees that accrue to holders of the LP token based on trading volume. [More Info](https://resources.curve.fi/pools/understanding-curve-pools)​
-*   **$CRV Rewards tAPR:** Shown on the second line, the rewards tAPR represents the rate of $CRV token emissions one would have earned if the pool has a rewards gauge and the user stakes into this rewards gauge. The number is listed as a range of possible rewards, based on the user’s locked veCRV the size of this boost can vary. [More Info](https://resources.curve.fi/reward-gauges/understanding-gauges)​
+*   **Base vAPY:** Shown on the first line, this number represents the fees that accrue to holders of the LP token based on trading volume. [More Info](https://resources.curve.finance/pools/understanding-curve-pools)​
+*   **$CRV Rewards tAPR:** Shown on the second line, the rewards tAPR represents the rate of $CRV token emissions one would have earned if the pool has a rewards gauge and the user stakes into this rewards gauge. The number is listed as a range of possible rewards, based on the user’s locked veCRV the size of this boost can vary. [More Info](https://resources.curve.finance/reward-gauges/understanding-gauges)​
 *   **Incentives Rewards tAPR:** Some pools also choose to stream rewards in the form of a different token — this is represented on the third line if applicable.
 
 **`vAPY`** stands for _“variable annual percentage yield”_, this value calculates an annualized estimate of the trading fee yield based on the past day’s trading activity, inclusive of any effect of compounding.
@@ -74,7 +74,7 @@ For developers, here are more details about trade fees from the technical docume
 
 ## **CRV Rewards tAPR**
 
-The Curve DAO also authorizes some pools to receive bonus rewards from $CRV token emission, as described in the [**Understanding Gauges**](https://resources.curve.fi/reward-gauges/understanding-gauges) section of the documentation. If the pool has an eligible gauge, then the UI displays the range of possible tAPR values users are earning at present, subject to change in the future.
+The Curve DAO also authorizes some pools to receive bonus rewards from $CRV token emission, as described in the [**Understanding Gauges**](https://resources.curve.finance/reward-gauges/understanding-gauges) section of the documentation. If the pool has an eligible gauge, then the UI displays the range of possible tAPR values users are earning at present, subject to change in the future.
 
 The formula used here to calculate rewards tAPR:
 
@@ -89,7 +89,7 @@ These parameters are obtained from various data sources, mostly on-chain:
     
 ![Gauge Weights](../images/ui/gauge-weights.webp)
 
-​[https://curve.fi/dao](https://curve.fi/dao)​
+​[https://curve.finance/dao](https://curve.finance/dao)​
 
 *   **`working_supply:`** Accessed by calling the same function on the specific Curve gauge contract for the pool.
 *   **`asset_price:`** The price of the asset — that is, if the pool contains only bitcoin, you would use the current price of $BTC. For v2 pools, this must be calculated by averaging over the specific assets within the pool.
@@ -112,11 +112,11 @@ All pools may permissionlessly stream other token rewards without approval from 
 
 ![tAPR Rewards](../images/ui/tAPR.webp)
 
-​[**Pool Overview Page**](https://curve.fi/#/ethereum/pools)​
+​[**Pool Overview Page**](https://curve.finance/#/ethereum/pools)​
 
 ![stETH Pool Overview](../images/ui/steth-overview.webp)
 
-​[**stETH Pool Page**](https://curve.fi/#/ethereum/pools/steth/deposit)​
+​[**stETH Pool Page**](https://curve.finance/#/ethereum/pools/steth/deposit)​
 
 Further information on these extra incentives is available in the developer documentation.
 

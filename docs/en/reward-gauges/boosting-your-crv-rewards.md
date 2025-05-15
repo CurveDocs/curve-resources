@@ -6,11 +6,11 @@ One of the main incentives for CRV is the ability to boost rewards on provided l
 
 The first step to getting rewards boosted is to determine the amount of CRV needed for lock. Each gauge has different requirements, meaning some pools are easier to boost than others. This depends on the amount others have locked and the liquidity gauge's capacity.
 
-The calculator can be found at this address: [https://dao-old.curve.fi/minter/calc](https://dao-old.curve.fi/minter/calc)
+The calculator can be found at this address: [https://dao-old.curve.finance/minter/calc](https://dao-old.curve.finance/minter/calc)
 
 ## **Locking CRV**
 
-After determining how much and for how long to lock, visit the following page: [https://curve.fi/dao/#/ethereum/vecrv/create](https://curve.fi/dao/#/ethereum/vecrv/create)
+After determining how much and for how long to lock, visit the following page: [https://curve.finance/dao/#/ethereum/vecrv/create](https://curve.finance/dao/#/ethereum/vecrv/create)
 
 ![Locking UI](../images/ui/crv-locker-light.png#only-light){: .centered }
 ![Locking UI](../images/ui/crv-locker-dark.png#only-dark){: .centered }
@@ -37,7 +37,7 @@ If the current boost hasn't updated, it may be necessary to claim CRV from each 
 !!!info  "Locking your Boost"
     Boosts are only updated when a withdrawal, deposit, or claim is made from a liquidity gauge
 
-Visit the [**old**](https://classic.curve.fi/pools/?see=0x0000000000000000000000000000000000000000) or [**new**](https://curve.fi/#/ethereum/dashboard) dashboard to see all your pools!
+Visit the [**old**](https://classic.curve.finance/pools/?see=0x0000000000000000000000000000000000000000) or [**new**](https://curve.finance/#/ethereum/dashboard) dashboard to see all your pools!
 
 ## **Formula**
 
@@ -51,4 +51,4 @@ Where:
 * $d$ is the value you deposit, in USD.
 * $D$ is the total value deposited to the pool's reward gauge, in USD.
 * $v$ is the amount of veCRV you have (vote weight).
-* $V$ is the total veCRV in the system (total vote weight) click [here](https://classic.curve.fi/usecrv) to find the current amount.
+* $V$ is the total veCRV in the system (total vote weight) click [here](https://classic.curve.finance/usecrv) to find the current amount.

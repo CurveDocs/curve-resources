@@ -1,6 +1,6 @@
 <h1>Gauges</h1>
 
-[View the Gauges or Gauge Vote here](https://curve.fi/dao/ethereum/gauges/)
+[View the Gauges or Gauge Vote here](https://curve.finance/dao/ethereum/gauges/)
 
 CRV emissions and other incentives are distributed to liquidity providers through Gauges.
 

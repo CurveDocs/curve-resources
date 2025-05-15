@@ -15,7 +15,7 @@ CRV can be acquired in two ways:
 
 ## **Where can I find the release schedule?**
 
-You can find the release schedule for the next six years at this address on the main UI: [**https://dao-old.curve.fi/inflation/**](https://dao-old.curve.fi/inflation/)​.
+You can find the release schedule for the next six years at this address on the main UI: [**https://dao-old.curve.finance/inflation/**](https://dao-old.curve.finance/inflation/)​.
 
 There is also detailed documentation in the [Supply & Distribution](./supply-distribution.md#crv-emissions-for-the-next-10-years) about the CRV emissions for the next 10 years, and the [supply calculator](./supply-distribution.md#supply-calculator) can be used to see the emissions for any year.
 
@@ -23,7 +23,7 @@ There is also detailed documentation in the [Supply & Distribution](./supply-dis
 
 There are three ways to check the circulating supply:
 
-* On the main UI here: [**https://dao-old.curve.fi/inflation/**](https://dao-old.curve.fi/inflation/).
+* On the main UI here: [**https://dao-old.curve.finance/inflation/**](https://dao-old.curve.finance/inflation/).
 
 * In the [supply calculator](./supply-distribution.md#supply-calculator) in these resources by looking at the statistics for today.
 
@@ -54,15 +54,15 @@ veCRV stands for voting escrow CRV. They are your CRV locked for voting. The lon
 
 The number of veCRV you will receive depends on how long you lock your CRV for. The minimum locking time is one week and the maximum locking time is four years.
 
-Your veCRV weight gradually decreases as your escrowed tokens approach their lock expiry. A graph illustrating the decrease can be found at this address: [https://dao-old.curve.fi/locker/](https://dao-old.curve.fi/locker/)​
+Your veCRV weight gradually decreases as your escrowed tokens approach their lock expiry. A graph illustrating the decrease can be found at this address: [https://dao-old.curve.finance/locker/](https://dao-old.curve.finance/locker/)​
 
 ## **How is your boost calculated?**
 
 To reach your maximum boost of 2.5x, there are several parameters to take into consideration.  You can see the formula for boosting [here](../reward-gauges/boosting-your-crv-rewards.md#formula)
 
-You can find the current DAO voting power at this address: [https://dao-old.curve.fi/locker/](https://dao-old.curve.fi/locker/)​
+You can find the current DAO voting power at this address: [https://dao-old.curve.finance/locker/](https://dao-old.curve.finance/locker/)​
 
-**You can also find a calculator at this address:** [https://dao-old.curve.fi/minter/calc](https://dao-old.curve.fi/minter/calc)
+**You can also find a calculator at this address:** [https://dao-old.curve.finance/minter/calc](https://dao-old.curve.finance/minter/calc)
 
 ## **What if I provide liquidity in multiple pools?**
 

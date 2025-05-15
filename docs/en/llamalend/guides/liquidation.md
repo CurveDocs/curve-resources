@@ -33,11 +33,11 @@ Keeping your loan open while it’s within the liquidation range exposes you to 
 
 If you choose to keep your position open, it's critical to monitor your loan health closely to avoid reaching 0%.
 
-To help with monitoring, you can use the [Llamalend Telegram bot](https://news.curve.fi/llamalend-telegram-bot/) to track your loan health and receive alerts in real time.
+To help with monitoring, you can use the [Llamalend Telegram bot](https://news.curve.finance/llamalend-telegram-bot/) to track your loan health and receive alerts in real time.
 
 
 <figure markdown="span">
-  ![https://news.curve.fi/llamalend-telegram-bot/](../../images/crvusd/new/monitor_bot.png){ width="400" }
+  ![https://news.curve.finance/llamalend-telegram-bot/](../../images/crvusd/new/monitor_bot.png){ width="400" }
   <figcaption></figcaption>
 </figure>
 

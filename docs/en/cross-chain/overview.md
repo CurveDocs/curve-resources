@@ -19,7 +19,7 @@ See the linked pages above for more details on how this works.
 
 To verify product availability on a specific network:
 
-1. Visit the product page (e.g., [Curve Swap](https://curve.fi/#/ethereum/swap))
+1. Visit the product page (e.g., [Curve Swap](https://curve.finance/#/ethereum/swap))
 2. Connect your wallet
 3. Click the network dropdown menu to see all supported networks
 

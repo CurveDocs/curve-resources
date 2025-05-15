@@ -36,7 +36,7 @@ Because loan health cannot recover while in liquidation, proactive monitoring an
 
 While Curve’s unique liquidation mechanism offers greater flexibility and safety compared to other protocols, it is still crucial to monitor the health of a loan. **Positions can be fully liquidated once health reaches 0%.** To avoid this outcome, it is highly recommended to monitor loan status regularly and take action when needed.
 
-To simplify this process, a dedicated [Telegram Bot](https://news.curve.fi/llamalend-telegram-bot/) has been developed to continuously track and monitor loan positions. Its features include:
+To simplify this process, a dedicated [Telegram Bot](https://news.curve.finance/llamalend-telegram-bot/) has been developed to continuously track and monitor loan positions. Its features include:
 
 - **Multi-Address Monitoring:** Track multiple wallet addresses simultaneously.
 - **Cross-Chain Coverage:** Monitor positions across Ethereum, Arbitrum, Fraxtal, and Optimism.
@@ -46,5 +46,5 @@ To simplify this process, a dedicated [Telegram Bot](https://news.curve.fi/llama
 
 <figure markdown="span">
   ![](../images/crvusd/education/health/monitor-bot.png){ width="500" }
-  <figcaption>Check out this article for more information on how to set up the Telegram Bot: https://news.curve.fi/llamalend-telegram-bot/</figcaption>
+  <figcaption>Check out this article for more information on how to set up the Telegram Bot: https://news.curve.finance/llamalend-telegram-bot/</figcaption>
 </figure>

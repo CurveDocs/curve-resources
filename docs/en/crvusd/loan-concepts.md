@@ -137,7 +137,7 @@ $$\begin{aligned}r &= \text{rate0} * e^{\text{power}} \\
 
 # **PegKeepers**
 
-A PegKeeper is a contract that helps stabilize the crvUSD price. PegKeepers are deployed for special Curve pools, a list of which can be found [here](https://docs.curve.fi/references/deployed-contracts/#curve-stablecoin).
+A PegKeeper is a contract that helps stabilize the crvUSD price. PegKeepers are deployed for special Curve pools, a list of which can be found [here](https://docs.curve.finance/references/deployed-contracts/#curve-stablecoin).
 
 PegKeepers take certain actions based on the price of crvUSD within the pools. All these actions are fully permissionless and callable by any user.
 
@@ -145,7 +145,7 @@ When the price of crvUSD in a pool is above 1.00, they are allowed to take on de
 
 If a PegKeeper has taken on debt by depositing crvUSD into a pool, it is able to withdraw those deposited crvUSD from the pool again. This can be done when the price is below 1.00. By withdrawing crvUSD, its token balance will decrease and the price within the pool increases.
 
-[:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.fi/crvUSD/pegkeepers/overview/)
+[:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.finance/crvUSD/pegkeepers/overview/)
 
 
 <!-- Include the liquidations javascript file and necessary libraries-->

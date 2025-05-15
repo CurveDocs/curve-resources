@@ -1,10 +1,10 @@
-You can deploy the gauge directly **through the UI if the gauge is for a pool**.  To do so go to the following page: [https://curve.fi/#/ethereum/deploy-gauge](https://curve.fi/#/ethereum/deploy-gauge).  If you would like **to deploy a gauge for a lending market**, then follow the guide on the [Create Lending Market](../lending/create-lending-market.md#deploying-a-gauge) page.
+You can deploy the gauge directly **through the UI if the gauge is for a pool**.  To do so go to the following page: [https://curve.finance/#/ethereum/deploy-gauge](https://curve.finance/#/ethereum/deploy-gauge).  If you would like **to deploy a gauge for a lending market**, then follow the guide on the [Create Lending Market](../lending/create-lending-market.md#deploying-a-gauge) page.
 
 ---
 
 # **Deploying a Pool Gauge with the UI**
 
-Go to the Curve page to deploy a gauge here: [https://curve.fi/#/ethereum/deploy-gauge](https://curve.fi/#/ethereum/deploy-gauge).  This page has a switch with 2 options:
+Go to the Curve page to deploy a gauge here: [https://curve.finance/#/ethereum/deploy-gauge](https://curve.finance/#/ethereum/deploy-gauge).  This page has a switch with 2 options:
 
 - [**Deploy Mainnet Gauge**](#deploy-mainnet-pool-gauge) - Deploy a gauge for a pool on Ethereum Mainnet
 - [**Deploy Sidechain Gauge**](#deploy-sidechain-pool-gauge) - Deploy a gauge for a pool on any other chain Curve has deployed to.
@@ -25,7 +25,7 @@ A pool is classified as *old* if it is not a New Generation (NG) pool.  If the p
 
 ## **Deploy Mainnet Pool Gauge**
 
-Go to the [Deploy Gauge](https://curve.fi/#/ethereum/deploy-gauge) page, and make sure the switch in the right hand corner is set to the left as shown below.  The  "Deploy Mainnet Gauge" screen should be visible as below.
+Go to the [Deploy Gauge](https://curve.finance/#/ethereum/deploy-gauge) page, and make sure the switch in the right hand corner is set to the left as shown below.  The  "Deploy Mainnet Gauge" screen should be visible as below.
 
 ![Deploy Mainnet Gauge UI](../images/ui/deploy-mainnet-gauge.png){: .centered }
 
@@ -44,7 +44,7 @@ Sidechain gauges (the same as L2 gauges) work differently to a mainnet gauge.  T
 !!!warning "Warning"
     The same address **must** deploy the gauge both on mainnet and the sidechain for this process to work.
 
-To deploy a sidechain gauge go to the [Deploy Gauge](https://curve.fi/#/ethereum/deploy-gauge) page. The click the  switch so it's on the right as shown below.  The "Deploy Sidechain Gauge" screen will then be shown.
+To deploy a sidechain gauge go to the [Deploy Gauge](https://curve.finance/#/ethereum/deploy-gauge) page. The click the  switch so it's on the right as shown below.  The "Deploy Sidechain Gauge" screen will then be shown.
 
 ![Deploy Sidechain Gauge UI](../images/ui/deploy-sidechain-gauge.png){: .centered }
 
@@ -66,7 +66,7 @@ After clicking on deploy and the transaction is confirmed, the gauge is deployed
 
 # **Deploy a Gauge for an Ethereum Mainnet Pool via Etherscan**
 
-In addition to the UI, there is an option to deploy the gauge directly through Etherscan. If the pool was deployed recently, check the [Deployment Addresses](https://docs.curve.fi/references/deployed-contracts/) for the factory contracts, otherwise use the deployment transaction to find which contract deployed the pool/lending market, this will be the factory contract.
+In addition to the UI, there is an option to deploy the gauge directly through Etherscan. If the pool was deployed recently, check the [Deployment Addresses](https://docs.curve.finance/references/deployed-contracts/) for the factory contracts, otherwise use the deployment transaction to find which contract deployed the pool/lending market, this will be the factory contract.
 
 !!!warning
     Calling **`deploy_gauge`** on Etherscan will only work if the function is called on the Factory contract that also deployed the pool.
@@ -95,7 +95,7 @@ To deploy a sidechain gauge we have to deploy 2 different gauges which link toge
 
 ## **Deploying the Sidechain (Child) Gauge**
 
-To deploy the sidechain child gauge go to [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.fi/deployments/crosschain/).
+To deploy the sidechain child gauge go to [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.finance/deployments/crosschain/).
 
 Find the `ChildLiquidityGaugeFactory` address for your sidechain and click on it.  This will take you to the contract page on the sidechain's block explorer.  Then go to **`Contract -> Write Contract -> Connect to Web3`**.
 
@@ -111,7 +111,7 @@ After the transaction is confirmed the sidechain gauge is deployed.
 
 ## **Deploying the Ethereum Mainchain Root (Parent) Gauge**
 
-After the sidechain child gauge has been successfully deployed, the Ethereum mainchain root gauge can be deployed.  To do so go back to the [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.fi/references/deployed-contracts/#evm-sidechain-gauges).  You should see the table below:
+After the sidechain child gauge has been successfully deployed, the Ethereum mainchain root gauge can be deployed.  To do so go back to the [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.finance/references/deployed-contracts/#evm-sidechain-gauges).  You should see the table below:
 
 ![Root Liquidity Gauge Factory Contracts](../images/rootliquidityguagefactories.png){: .centered }
 
@@ -131,7 +131,7 @@ Click on `write`, and submit the transaction, after this is complete the gauge i
 
 In order for a gauge to become eligible to receive CRV emissions, it has to be added to the GaugeController. This needs to be approved by the DAO.
 
-Once you've created your gauge, you can submit it to the DAO for a vote: [https://classic.curve.fi/factory/create\_vote](https://classic.curve.fi/factory/create_vote)​.
+Once you've created your gauge, you can submit it to the DAO for a vote: [https://classic.curve.finance/factory/create\_vote](https://classic.curve.finance/factory/create_vote)​.
 
 If the gauge is for a pool on a sidechain, input the parent gauge address (Ethereum gauge address) here.
 
@@ -141,4 +141,4 @@ The address that submits must have 2500 veCRV in order to create a vote.
 
 Once the gauge has been submitted, politics take over. You may want to visit the governance forum and explain why your pool should be made eligible for rewards.
 
-[Governance Forum](https://gov.curve.fi/)
+[Governance Forum](https://gov.curve.finance/)
