@@ -138,15 +138,13 @@ $$\begin{aligned}r &= \text{rate0} * e^{\text{power}} \\
 
 The Peg Stabilization Reserve (PSR), formerly known as PegKeepers, is a mechanism designed to help keep the price of crvUSD close to $1.00.
 
-A PegKeeper is a contract that helps stabilize the crvUSD price. PegKeepers are deployed for special Curve pools, a list of which can be found [here](https://docs.curve.finance/references/deployed-contracts/#curve-stablecoin).
-
 - **If crvUSD trades above $1.00:** The system allows new crvUSD to be minted and deposited into Curve pools. This increases the pool’s crvUSD balance, helping bring the price back down toward $1.00.
 - **If crvUSD trades below $1.00:** Previously deposited crvUSD can be withdrawn from the pools. This reduces the pool’s crvUSD balance, helping push the price back up.
  
-The size of the Reserve influences the crvUSD borrow rate: in general, a larger Reserve results in a lower borrow rate.
+The size of the PSR (essentially how much crvUSD is deposited into pools) has a direct influence on the crvUSD borrow rate: in general, a larger reserve results in a lower borrow rate.
 
 The PSR does not deposit or withdraw assets on its own — someone must call the appropriate functions. These function calls are incentivized to ensure they are executed. Users can interact with the system via the interface here: [PegKeeper UI](https://www.curve.finance/crvusd/ethereum/pegkeepers/).  
-To learn more about the technical implementation of the Stabilization Reserve, check out the [technical docs](https://docs.curve.finance/crvUSD/pegkeepers/overview/). A list of all deployments is available [here](https://docs.curve.finance/references/deployed-contracts/#pegkeepers).
+To learn more about the technical implementation of the Peg Stabilization Reserve, check out the [technical docs](https://docs.curve.finance/crvUSD/pegkeepers/overview/). A list of all deployments is available [here](https://docs.curve.finance/references/deployed-contracts/#pegkeepers).
 
 
 <!-- Include the liquidations javascript file and necessary libraries-->
