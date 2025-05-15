@@ -14,7 +14,7 @@ Fees are collected weekly from the pools, converted to crvUSD, and then distribu
 
 ## **New UI**
 
-To claim trading fees, visit [https://curve.fi/#/ethereum/dashboard](https://curve.fi/#/ethereum/dashboard) and click the **`Claim LP Rewards`** button. 
+To claim trading fees, visit [https://curve.finance/#/ethereum/dashboard](https://curve.finance/#/ethereum/dashboard) and click the **`Claim LP Rewards`** button. 
 
 <figure markdown>
   ![](../images/claim-new.png){ width="300" }
@@ -31,7 +31,7 @@ To claim trading fees, visit [https://curve.fi/#/ethereum/dashboard](https://cur
 !!!warning
     The classic UI has not been updated to claim crvUSD fees.
 
-when using the **classic UI** please visit: [https://classic.curve.fi/](https://classic.curve.fi) and look for the green **`Claim`** button in the box labeled **`veCRV 3pool LP claim`** at the bottom of the page.
+when using the **classic UI** please visit: [https://classic.curve.finance/](https://classic.curve.fi) and look for the green **`Claim`** button in the box labeled **`veCRV 3pool LP claim`** at the bottom of the page.
 
 <figure markdown>
   ![](../images/claim-old.png){ width="700" }
@@ -47,7 +47,7 @@ when using the **classic UI** please visit: [https://classic.curve.fi/](https://
 
 3CRV is the liquidity provider (LP) token of the 3pool, which consists of USDC, USDT, and DAI. If the pool is perfectly balanced with 33% USDC, 33% USDT, and 33% DAI, then one 3CRV will represent 0.33 USDC, 0.33 USDT, and 0.33 DAI.
 
-If a user wishes to withdraw 3CRV back into a stablecoin, they can do so at: [**https://curve.fi/#/ethereum/pools/3pool/withdraw**](https://curve.fi/#/ethereum/pools/3pool/withdraw). The user needs to select the stablecoin they would like to receive (withdrawing in a balanced or custom proportion is also an option) and click **`Withdraw`**. After the transaction is confirmed, they will receive the withdrawn stablecoin.
+If a user wishes to withdraw 3CRV back into a stablecoin, they can do so at: [**https://curve.finance/#/ethereum/pools/3pool/withdraw**](https://curve.finance/#/ethereum/pools/3pool/withdraw). The user needs to select the stablecoin they would like to receive (withdrawing in a balanced or custom proportion is also an option) and click **`Withdraw`**. After the transaction is confirmed, they will receive the withdrawn stablecoin.
 
 <figure markdown>
   ![](../images/withdraw-3crv.png){ width="400" }

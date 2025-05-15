@@ -8,7 +8,7 @@ The Curve DAO is a true DAO, governed solely by it's members.  Members gain gove
 * **Analytics**: Shows analytics about veCRV metrics, holders, and DAO fee distribution.
 * **Discussion**: The DAO's governance discussion forum.  Users are free to post and discuss any current proposals or future proposals or ideas.
 
-Users can access the Curve DAO dashboard at [https://curve.fi/dao](https://curve.fi/dao). This dashboard provides an overview of all current and closed votes. Each proposal should have a corresponding topic on the Curve governance forum, accessible at [https://gov.curve.fi/](https://gov.curve.fi/).
+Users can access the Curve DAO dashboard at [https://curve.finance/dao](https://curve.finance/dao). This dashboard provides an overview of all current and closed votes. Each proposal should have a corresponding topic on the Curve governance forum, accessible at [https://gov.curve.finance/](https://gov.curve.finance/).
 
 ---
 
@@ -46,4 +46,4 @@ Curve operates across multiple blockchain networks. Governance is centralized on
 * Final vote outcomes are communicated cross-chain to execute governance decisions.
 
 !!!warning "DAO Control Across Chains"
-    DAO control is supported on most chains.  [Technical details here](https://docs.curve.fi/governance/x-gov/overview/).
+    DAO control is supported on most chains.  [Technical details here](https://docs.curve.finance/governance/x-gov/overview/).

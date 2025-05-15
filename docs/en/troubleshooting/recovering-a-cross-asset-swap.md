@@ -15,7 +15,7 @@ And then click on your latest cross-asset swap, you should find a long string of
 
 ## **Initiate recovery**
 
-Visit: [https://classic.curve.fi/recover](https://classic.curve.fi/recover)​
+Visit: [https://classic.curve.finance/recover](https://classic.curve.finance/recover)​
 
 Enter your token id found on Etherscan, enter your the token you would like to receive (if your token has sBTC then it must be a Bitcoin token that shares a pool with sBTC, if your token is sUSD, it should be a token that shares a pool with sUSD) and then click recover.
 

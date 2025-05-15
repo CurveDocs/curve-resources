@@ -1,6 +1,6 @@
 <h1>Locking CRV</h1>
 
-[Lock CRV into veCRV here](https://curve.fi/dao/ethereum/vecrv/create/)
+[Lock CRV into veCRV here](https://curve.finance/dao/ethereum/vecrv/create/)
 
 To participate in governance votes on Curve, users need to [lock their CRV tokens](../vecrv/locking-your-crv.md) to obtain **veCRV (vote-escrowed CRV)**. Locking CRV provides four key benefits:
 

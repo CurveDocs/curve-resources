@@ -8,4 +8,4 @@ The Curve DAO has full access to these funds and can decide to award part of thi
 
 The contract is deployed on Ethereum at [`0xe3997288987e6297ad550a69b31439504f513267`](https://etherscan.io/address/0xe3997288987e6297ad550a69b31439504f513267).
 
-If you have a project you believe deserves a grant, please create a proposal on the [Governance Forum](https://gov.curve.fi/) or discuss it with a team member on [:simple-discord: Discord](https://discord.gg/twUngQYz85) or [:simple-telegram: Telegram](https://t.me/curvefi).
+If you have a project you believe deserves a grant, please create a proposal on the [Governance Forum](https://gov.curve.finance/) or discuss it with a team member on [:simple-discord: Discord](https://discord.gg/twUngQYz85) or [:simple-telegram: Telegram](https://t.me/curvefi).

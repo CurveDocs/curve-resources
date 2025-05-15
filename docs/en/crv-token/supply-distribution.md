@@ -54,7 +54,7 @@ CRV officially launched on the **13th of August 2020**.  At the time of launch t
 The circulating supply was 0 at launch. Each day of the first year approx. 750k tokens were emitted to the community for providing liquidity and 1.65million tokens were vested (unlocked).  Use the [supply calculator below](#supply-calculator) to see how quickly tokens became liquid and circulating.
 
 !!!tip
-    6 year CRV release schedule is available here: [https://dao-old.curve.fi/releaseschedule/](https://dao-old.curve.fi/releaseschedule/), or the full release schedule is available as a google spreadsheet [here](https://docs.google.com/spreadsheets/d/1kFFdaLCX8ISM7yzvfUmuz151QiRzrFfaljCzEiO6sus/edit?usp=sharing).
+    6 year CRV release schedule is available here: [https://dao-old.curve.finance/releaseschedule/](https://dao-old.curve.finance/releaseschedule/), or the full release schedule is available as a google spreadsheet [here](https://docs.google.com/spreadsheets/d/1kFFdaLCX8ISM7yzvfUmuz151QiRzrFfaljCzEiO6sus/edit?usp=sharing).
 
 ---
 

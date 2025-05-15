@@ -2,10 +2,10 @@
 
 Curve Lending enables users to permissionlessly create and interact with isolated lending pairs composed of crvUSD, a decentralized stablecoin native to the Curve ecosystem, and various paired tokens. The notifications provided herein address risks associated with Curve Lending activities. The following list is not exhaustive.
 
-Users wishing to acquaint themselves with a broader range of general risk disclosures are encouraged to read the [Curve Risk Disclosures for Liquidity Providers](./pool.md). Users are also advised to review the public [audit reports](https://docs.curve.fi/references/audits/) to assess the security and reliability of the platform before engaging in any lending or borrowing activities.
+Users wishing to acquaint themselves with a broader range of general risk disclosures are encouraged to read the [Curve Risk Disclosures for Liquidity Providers](./pool.md). Users are also advised to review the public [audit reports](https://docs.curve.finance/references/audits/) to assess the security and reliability of the platform before engaging in any lending or borrowing activities.
 
 !!!info "Audits"
-    **Audits** are available here: [https://docs.curve.fi/security/security/#security-audits](https://docs.curve.fi/security/security/#security-audits).
+    **Audits** are available here: [https://docs.curve.finance/security/security/#security-audits](https://docs.curve.finance/security/security/#security-audits).
 
 ---
 
@@ -41,7 +41,7 @@ Borrowers can choose from various lending markets to borrow crvUSD against anoth
 
 ### Soft and Hard Liquidation
 
-Curve Lending uses a "soft" liquidation process powered by the LLAMMA algorithm. LLAMMA is a market-making contract that manages the liquidation and de-liquidation of collateral via arbitrageurs. This mechanism facilitates arbitrage between the collateral and borrowed asset in line with changes in market price, allowing a smoother liquidation process that strives to minimize user losses. Additional information can be found in the [LLAMMA Overview](https://docs.curve.fi/crvUSD/amm/) docs.
+Curve Lending uses a "soft" liquidation process powered by the LLAMMA algorithm. LLAMMA is a market-making contract that manages the liquidation and de-liquidation of collateral via arbitrageurs. This mechanism facilitates arbitrage between the collateral and borrowed asset in line with changes in market price, allowing a smoother liquidation process that strives to minimize user losses. Additional information can be found in the [LLAMMA Overview](https://docs.curve.finance/crvUSD/amm/) docs.
 
 Please consider the following risks when using the Curve Stablecoin infrastructure:
 

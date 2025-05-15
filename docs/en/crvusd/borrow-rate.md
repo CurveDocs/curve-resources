@@ -39,4 +39,4 @@ The borrow rate is also influenced by how much crvUSD PegKeepers hold. As a gene
 
 If a PegKeeper has previously deposited crvUSD into a pool, it can also withdraw that crvUSD—but only when the price is below $1.00. By withdrawing crvUSD, the pool’s crvUSD balance decreases, which helps push the price back up.
 
-For more details, see the [PegKeepers documentation](https://docs.curve.fi/crvUSD/pegkeepers/overview/).
+For more details, see the [PegKeepers documentation](https://docs.curve.finance/crvUSD/pegkeepers/overview/).

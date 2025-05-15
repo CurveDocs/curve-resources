@@ -25,7 +25,7 @@ Yes, other collateral markets can be proposed for crvUSD through governance. Con
 
 A 'loan discount' is a percentage applied to reduce the value of collateral for determining the maximum borrowable amount. A higher loan discount results in a lower borrowing limit, acting as a safety margin for lenders against collateral value declines. 
 
-The maximum amount that can be borrowed is also influenced by other factors, such as market conditions and asset volatility. For more details on these factors and their impact on borrowing, see the technical documentation at https://docs.curve.fi/crvUSD/amm/.
+The maximum amount that can be borrowed is also influenced by other factors, such as market conditions and asset volatility. For more details on these factors and their impact on borrowing, see the technical documentation at https://docs.curve.finance/crvUSD/amm/.
 
 
 ---
@@ -88,7 +88,7 @@ The Peg Keepers are contracts uniquely enabled to mint and absorb debt in crvUSD
 
 ### Under what circumstances can the Peg Keepers mint or burn crvUSD?
 
-Each Peg Keeper targets a specific [**Peg Keeper pool**](https://curve.fi/#/ethereum/pools?filter=crvusd). A Peg Keeper pool is a [**Curve v1 pool**](https://resources.curve.fi/base-features/understanding-curve) allowing trading between crvUSD and a blue chip stablecoin. The Peg Keepers are responsible for trying to balance these pools by trading at a profit. The Peg Keepers can only mint crvUSD to trade into their associated pools when its pool balance of crvUSD is too low, or it can repurchase and burn the crvUSD if its pool balance is too high.
+Each Peg Keeper targets a specific [**Peg Keeper pool**](https://curve.finance/#/ethereum/pools?filter=crvusd). A Peg Keeper pool is a [**Curve v1 pool**](https://resources.curve.finance/base-features/understanding-curve) allowing trading between crvUSD and a blue chip stablecoin. The Peg Keepers are responsible for trying to balance these pools by trading at a profit. The Peg Keepers can only mint crvUSD to trade into their associated pools when its pool balance of crvUSD is too low, or it can repurchase and burn the crvUSD if its pool balance is too high.
 
 
 ### What is the relationship between a Peg Keeper's debt and the total debt in crvUSD?
@@ -131,7 +131,7 @@ The Borrow Rate for each crvUSD collateral market is calculated based on a serie
 
 ### What are the risks of using crvUSD
 
-As with all cryptocurrencies, crvUSD carries several risks, including depeg risks and risk of user collateral liquidation. Make sure to [**read the disclaimer**](https://crvusd.curve.fi/#/ethereum/risk-disclaimer) and exercise caution when interacting with smart contracts.
+As with all cryptocurrencies, crvUSD carries several risks, including depeg risks and risk of user collateral liquidation. Make sure to [**read the disclaimer**](https://curve.finance/crvusd/#/ethereum/risk-disclaimer) and exercise caution when interacting with smart contracts.
 
 
 ### How can I best manage my risks when providing liquidity or borrowing in crvUSD?
@@ -141,7 +141,7 @@ Best risk management practices include maintaining a safe collateralization rati
 
 ### Has crvUSD been audited?
 
-Yes, please see the audits here [**Curve Stablecoin Audits**](https://docs.curve.fi/references/audits/#curve-stablecoin-and-lending).
+Yes, please see the audits here [**Curve Stablecoin Audits**](https://docs.curve.finance/references/audits/#curve-stablecoin-and-lending).
 
 
 ### Can I see the code?

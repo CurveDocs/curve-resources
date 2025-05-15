@@ -6,12 +6,12 @@ The Curve pool creation interface allows any user to permissionlessly deploy a C
     Each liquidity pool brings risks with it. Before using or creating any pools, please read the [**Risk Disclaimer**](../risks-security/risks/pool.md).
 
 
-[:logos-crv: `Pool Creation Interface`](https://curve.fi/#/ethereum/create-pool)
+[:logos-crv: `Pool Creation Interface`](https://curve.finance/#/ethereum/create-pool)
 
 
 ---
 
-To get started, visit the [**`Pool Creation`**](https://curve.fi/#/ethereum/create-pool) tab at the top of the Curve homepage, and select whether you would like to create a "Stableswap Pool" (a pool with pegged assets, e.g., crvUSD <> USDT) or a "Cryptoswap Pool" (containing assets whose prices may be volatile, e.g., CRV <> ETH).
+To get started, visit the [**`Pool Creation`**](https://curve.finance/#/ethereum/create-pool) tab at the top of the Curve homepage, and select whether you would like to create a "Stableswap Pool" (a pool with pegged assets, e.g., crvUSD <> USDT) or a "Cryptoswap Pool" (containing assets whose prices may be volatile, e.g., CRV <> ETH).
 
 
 !!!info

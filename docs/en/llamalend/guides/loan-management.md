@@ -18,7 +18,7 @@ Users can manage their loans in the following ways:
     When a loan is in liquidation, you cannot add or remove collateral. The only available actions are repaying debt (partially or fully) or self-liquidating your loan. For more information on managing a loan in liquidation, see here.
 
 
-To manage your loan, navigate to the [Markets Overview](https://curve.fi/crvusd/ethereum/markets/), connect your wallet and select the according market. The UI displays your current loans health and debt in the overview.
+To manage your loan, navigate to the [Markets Overview](https://curve.finance/crvusd/ethereum/markets/), connect your wallet and select the according market. The UI displays your current loans health and debt in the overview.
 
 <figure markdown="span">
   ![Image title](../../images/crvusd/guides/loan-management/active_markets_light.png#only-light){ width="800" }
@@ -32,7 +32,7 @@ To manage your loan, navigate to the [Markets Overview](https://curve.fi/crvusd/
 
 # **Adding Collateral**
 
-Go to the [Markets Dashboard](https://curve.fi/crvusd/ethereum/markets/) and select the market where you want to add more collateral.
+Go to the [Markets Dashboard](https://curve.finance/crvusd/ethereum/markets/) and select the market where you want to add more collateral.
 
 !!!warning "Adding Collateral while being in Liquidation is not possible"
     Adding collateral is not possible when your loan is in liquidation. To get out of liquidation, see [here].
@@ -62,7 +62,7 @@ Adding more collateral to your loan has a **positive effect on its health and li
 
 # **Removing Collateral**
 
-Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and select the market where you want to remove collateral from.
+Go to the [Markets Dashboard]((https://curve.finance/crvusd/ethereum/markets/)) and select the market where you want to remove collateral from.
 
 !!!warning "Removing Collateral while being in Liquidation is not possible"
     Removing collateral from your loan is not possible when you are in liquidation. To get out of liquidation, see [here].
@@ -91,7 +91,7 @@ Removing collateral from your loan has a **negative effect on its health and liq
 
 # **Borrow More**
 
-Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and select the market where you want to borrow more crvUSD.
+Go to the [Markets Dashboard]((https://curve.finance/crvusd/ethereum/markets/)) and select the market where you want to borrow more crvUSD.
 
 !!!warning "Borrowing more in Liquidation"
     Borrowing more crvUSD in liquidation is not possible. To get out of liquidation, see [here].
@@ -123,7 +123,7 @@ Borrowing more crvUSD is only possible if the loan is not in liquidation. Borrow
 
 Debt can be repaid fully or partially. Repayment is always possible, wether the loan is in liquidation or not, but it will have diferent effcts on the liquidation range.
 
-Go to the [Markets Dashboard]((https://curve.fi/crvusd/ethereum/markets/)) and select the market where you want to partially repay some debt.
+Go to the [Markets Dashboard]((https://curve.finance/crvusd/ethereum/markets/)) and select the market where you want to partially repay some debt.
 
 <figure markdown="span">
   ![Image title](../../images/crvusd/guides/loan-management/partial_repay_light.png#only-light){ width="400" }

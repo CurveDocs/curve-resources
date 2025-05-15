@@ -21,7 +21,7 @@ Each market also has the following parameters which only change if the CurveDAO 
 
 ## **LLAMMA and Liquidations**
 
-LLAMMA (**Lending-Liquidating AMM Algorithm**) is a fully functional two-token AMM containing the collateral token and crvUSD, which is **responsible for the liquidation mechanism**. For more detailed documentation, please refer to the [technical docs](https://docs.curve.fi/crvUSD/amm/).
+LLAMMA (**Lending-Liquidating AMM Algorithm**) is a fully functional two-token AMM containing the collateral token and crvUSD, which is **responsible for the liquidation mechanism**. For more detailed documentation, please refer to the [technical docs](https://docs.curve.finance/crvUSD/amm/).
 
 When creating a new loan, the put-up **collateral will be deposited into a specified number of bands across the AMM**. Unlike regular liquidation, which has a single liquidation price, LLAMMA has multiple liquidation ranges (represented by the bands) and **continuously liquidates the collateral if needed**.   All bands have lower and upper price limits, each representing a "small liquidation range." The user's total liquidation range is represented by the upper price of the highest band to the lower price of the lowest band.
 
@@ -305,7 +305,7 @@ $$\begin{aligned}r &= \text{rate0} * e^{\text{power}} \\
 
 ## **PegKeepers**
 
-A PegKeeper is a contract that helps stabilize the crvUSD price. PegKeepers are deployed for special Curve pools, a list of which can be found [here](https://docs.curve.fi/references/deployed-contracts/#curve-stablecoin).
+A PegKeeper is a contract that helps stabilize the crvUSD price. PegKeepers are deployed for special Curve pools, a list of which can be found [here](https://docs.curve.finance/references/deployed-contracts/#curve-stablecoin).
 
 PegKeepers take certain actions based on the price of crvUSD within the pools. All these actions are fully permissionless and callable by any user.
 
@@ -313,7 +313,7 @@ When the price of crvUSD in a pool is above 1.00, they are allowed to take on de
 
 If a PegKeeper has taken on debt by depositing crvUSD into a pool, it is able to withdraw those deposited crvUSD from the pool again. This can be done when the price is below 1.00. By withdrawing crvUSD, its token balance will decrease and the price within the pool increases.
 
-[:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.fi/crvUSD/pegkeepers/overview/)
+[:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.finance/crvUSD/pegkeepers/overview/)
 
 <!-- Include the loan-concepts javascript file and necessary libraries-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

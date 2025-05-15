@@ -71,7 +71,7 @@ The `forwarding` phase happens on Wednesday.  All the target coin (currently crv
 Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:00 UTC. These fees are split evenly among all veCRV holders, who can claim their share once each week after distribution. Users can first claim trading fees 8 days after the first Thursday following their lock. For example, if you lock on a Tuesday, you can claim trading fees 10 days later on Thursday. See [How to Claim veCRV Trading Fees](./claiming-trading-fees.md) for more information.
 
 !!!info "Info"
-    For more technical information regarding this new process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/fees/overview/](https://docs.curve.fi/fees/overview/)
+    For more technical information regarding this new process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.finance/fees/overview/](https://docs.curve.finance/fees/overview/)
 
 ---
 
@@ -99,7 +99,7 @@ This process worked well, but became cumbersome when an exchange route was neede
 After the exchanging process is completed distribution happens by forwarding the exchanged coins to the fee distributor on Ethereum Mainnet.  Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:00 UTC. These fees are split evenly among all veCRV holders, who can claim their share once each week after distribution. Users can first claim trading fees 8 days after the first Thursday following their lock. For example, if you lock on a Tuesday, you can claim trading fees 10 days later on Thursday. See [How to Claim veCRV Trading Fees](./claiming-trading-fees.md) for more information.
 
 !!!info "Info"
-    For more technical information regarding this old process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.fi/fees/overview/](https://docs.curve.fi/fees/overview/)
+    For more technical information regarding this old process please see the fee collection and distribution pages on the technical documentation: [https://docs.curve.finance/fees/overview/](https://docs.curve.finance/fees/overview/)
 
 ---
 
