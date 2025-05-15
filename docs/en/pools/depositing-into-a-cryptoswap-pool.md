@@ -4,7 +4,7 @@ Cryptoswap pools contain 2-3 volatile assets and provide deep liquidity for trad
 
 [Learn more about Cryptoswap pools](./overview.md)
 
-*This guide demonstrates the deposit and staking process using the [TriCRV pool](https://curve.fi/#/ethereum/pools/factory-tricrypto-4/deposit), to show you how to deposit and start earning rewards.*
+*This guide demonstrates the deposit and staking process using the [TriCRV pool](https://curve.finance/#/ethereum/pools/factory-tricrypto-4/deposit), to show you how to deposit and start earning rewards.*
 
 The process involves two steps:
 
@@ -17,7 +17,7 @@ Both steps can be combined into a single [**`Deposit and Stake`**](#depositing-a
 
 ## **Depositing**
 
-Visit the deposit page ([https://curve.fi/#/ethereum/pools/factory-tricrypto-4/deposit](https://curve.fi/#/ethereum/pools/factory-tricrypto-4/deposit)). You will need at least one of the three tokens in the pool to deposit. The TriCRV pool consists of CRV, crvUSD, and ETH.
+Visit the deposit page ([https://curve.finance/#/ethereum/pools/factory-tricrypto-4/deposit](https://curve.finance/#/ethereum/pools/factory-tricrypto-4/deposit)). You will need at least one of the three tokens in the pool to deposit. The TriCRV pool consists of CRV, crvUSD, and ETH.
 
 <figure markdown>
   ![](../images/tricrv_deposit.png){ width="300" }

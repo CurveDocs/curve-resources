@@ -9,7 +9,7 @@ AA Cryptoswap pool (Curve V2) is a liquidity pool for two or three volatile asse
 ---
 
 
-*The following documentation will present a rundown of the process of creating such a pool using the [Pool Creation Interface](https://curve.fi/#/ethereum/create-pool):*
+*The following documentation will present a rundown of the process of creating such a pool using the [Pool Creation Interface](https://curve.finance/#/ethereum/create-pool):*
 
 ## **Tokens in Pool**
 

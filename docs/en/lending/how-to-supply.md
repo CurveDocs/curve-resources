@@ -2,7 +2,7 @@
 
 ## **Supplying UI**
 
-By choosing the **`"SUPPLY"`** tab from the [main UI](https://lend.curve.fi/#/ethereum/markets), all relevant market information and values for lenders are displayed:
+By choosing the **`"SUPPLY"`** tab from the [main UI](https://curve.finance/lend/ethereum/markets), all relevant market information and values for lenders are displayed:
 
 <figure markdown="span">
   ![](../images/lending/lend_supply.png){ width="800" }
@@ -22,7 +22,7 @@ Additionally, vaults can have gauges, which are eligible to receive CRV emission
 
 ## **How do Supply Vaults work?**
 
-Liquidity for borrowers is provided in **ERC-4626 vaults**. For detailed documentation on how they work, please check out the official [Ethereum documentation](https://ethereum.org/de/developers/docs/standards/tokens/erc-4626/) or visit the [technical docs of Curve](https://docs.curve.fi/lending/contracts/vault/).
+Liquidity for borrowers is provided in **ERC-4626 vaults**. For detailed documentation on how they work, please check out the official [Ethereum documentation](https://ethereum.org/de/developers/docs/standards/tokens/erc-4626/) or visit the [technical docs of Curve](https://docs.curve.finance/lending/contracts/vault/).
 
 These vaults are **yield-bearing**, meaning there is **no need for the user to claim** awarded rewards for lending out their assets[^1]. The shares they receive for depositing assets into the vault **increase in value** because the balance of the underlying asset increases due to the dynamics of interest rates.
 

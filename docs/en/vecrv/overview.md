@@ -86,7 +86,7 @@ These incentives work in the following way:
 
 CRV liquid lockers are products outside of the Curve platform that allow users to deposit CRV in exchange for a new token. For example, tokenCRV (a hypothetical token) would be received when locking 1 CRV for 1 veCRV permanently. While these tokens aim to represent locked veCRV positions, they sometimes lack the benefits that come with holding veCRV directly. Since the underlying CRV is permanently locked, users cannot redeem their tokenCRV - they can only sell it on the open market. Because these tokens can always be minted by depositing 1 CRV but can only be exited through market sales, their price naturally settles below 1 CRV as users seek liquidity.
 
-These tokens are risky, the only way to guarantee being able to withdraw the same amount of CRV as is deposited is to lock through the [Official Curve Locker UI](https://curve.fi/dao/ethereum/vecrv/create/).
+These tokens are risky, the only way to guarantee being able to withdraw the same amount of CRV as is deposited is to lock through the [Official Curve Locker UI](https://curve.finance/dao/ethereum/vecrv/create/).
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

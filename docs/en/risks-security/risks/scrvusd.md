@@ -3,7 +3,7 @@
 Curve stablecoin infrastructure enables users to mint crvUSD using a selection of crypto-tokenized collaterals (adding new ones is subject to DAO approval). Interacting with crvUSD doesn't come without risks. Before minting or taking exposure of crvUSD, it is best to research and understand the risks involved.
 
 !!!info "Audits"
-    **scrvUSD smart contract audits** are available here: [https://docs.curve.fi/security/security/#security-audits](https://docs.curve.fi/security/security/#security-audits)
+    **scrvUSD smart contract audits** are available here: [https://docs.curve.finance/security/security/#security-audits](https://docs.curve.finance/security/security/#security-audits)
 
 ---
 
@@ -15,7 +15,7 @@ As scrvUSD is directly tied to crvUSD, it inherits all risks associated with the
 
 - **Collateral Dependency**: crvUSD is overcollateralized by an assortment of crypto assets whitelisted by the Curve DAO. Many collateral types are pegged assets that depend on an issuer or protocol to maintain their own stability. Problems associated with the underlying collateral may impact crvUSD's solvency.
 
-- [**PegKeeper Dependency**](https://docs.curve.fi/crvUSD/pegkeepers/overview/): crvUSD maintains a soft peg to USD that is reinforced by programmatic mint/burn actions into designated PegKeeper pools. This creates a dependency on the stability of third party stablecoins (e.g. USDT and USDC), which can impact crvUSD's stability by proxy.
+- [**PegKeeper Dependency**](https://docs.curve.finance/crvUSD/pegkeepers/overview/): crvUSD maintains a soft peg to USD that is reinforced by programmatic mint/burn actions into designated PegKeeper pools. This creates a dependency on the stability of third party stablecoins (e.g. USDT and USDC), which can impact crvUSD's stability by proxy.
 
 - **Governance Risk**: The Curve DAO can modify code and change parameters within the crvUSD protocol. It is possible that bugs or malicious modifications are introduced to the protocol through governance actions.
 

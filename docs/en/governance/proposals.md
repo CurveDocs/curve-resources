@@ -1,6 +1,6 @@
 <h1>Proposals</h1>
 
-[See proposals and vote here](https://curve.fi/dao/ethereum/proposals/)
+[See proposals and vote here](https://curve.finance/dao/ethereum/proposals/)
 
 Proposals are DAO votes.  Proposal voting lasts 7 days.  On the UI for each proposal you will see:
 
@@ -35,6 +35,6 @@ For each 7-day proposal, voting earlier gives your vote maximum influence:
 
 To propose changes for Curve:
 
-1. Draft and discuss the proposal in [Curve’s governance forum](https://gov.curve.fi/).
-2. Engage the community via [:simple-discord: Discord](https://discord.gg/twUngQYz85), [:simple-telegram: Telegram](https://t.me/curvefi), or [Governance Forum](https://gov.curve.fi/) for feedback and feasibility checks.
+1. Draft and discuss the proposal in [Curve’s governance forum](https://gov.curve.finance/).
+2. Engage the community via [:simple-discord: Discord](https://discord.gg/twUngQYz85), [:simple-telegram: Telegram](https://t.me/curvefi), or [Governance Forum](https://gov.curve.finance/) for feedback and feasibility checks.
 3. Officially submit your proposal on-chain (seek technical assistance from the Curve team if needed).

@@ -138,7 +138,7 @@ $$\begin{aligned}r &= \text{rate0} * e^{\text{power}} \\
 
 The Peg Stabilization Reserve (PSR), formerly known as PegKeepers, is a mechanism designed to help keep the price of crvUSD close to $1.00.
 
-Here’s how it works:
+A PegKeeper is a contract that helps stabilize the crvUSD price. PegKeepers are deployed for special Curve pools, a list of which can be found [here](https://docs.curve.finance/references/deployed-contracts/#curve-stablecoin).
 
 - **If crvUSD trades above $1.00:** The system allows new crvUSD to be minted and deposited into Curve pools. This increases the pool’s crvUSD balance, helping bring the price back down toward $1.00.
 - **If crvUSD trades below $1.00:** Previously deposited crvUSD can be withdrawn from the pools. This reduces the pool’s crvUSD balance, helping push the price back up.

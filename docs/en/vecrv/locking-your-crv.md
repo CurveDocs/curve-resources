@@ -20,7 +20,7 @@ hide:
 Users must specify the amount of CRV they wish to lock and their preferred lock duration. The minimum lock period is **one week**, while the maximum is **four years**. The amount of veCRV **linearly decays over time**, reaching 0 when the lock duration ends.
 
 
-*To lock CRV tokens, visit either the old UI: [https://dao-old.curve.fi/locker](https://dao-old.curve.fi/locker) or new UI: [https://curve.fi/dao/ethereum/vecrv/create/](https://curve.fi/dao/ethereum/vecrv/create/)*​
+*To lock CRV tokens, visit either the old UI: [https://dao-old.curve.finance/locker](https://dao-old.curve.finance/locker) or new UI: [https://curve.finance/dao/ethereum/vecrv/create/](https://curve.finance/dao/ethereum/vecrv/create/)*​
 
 <figure markdown>
   ![CRV Locker](../images/locker-old.png){ width="500" }
