@@ -108,45 +108,44 @@ $$\text{maxLTV} = \left(\frac{A - 1}{A}\right)^2 \times (1 - \text{loan_discount
 
 # **Borrow Rate**
 
-In crvUSD minting markets the general idea is that **borrow rate increases when crvUSD goes down in value and decreases when crvUSD goes up in value**.  Also, contracts called [PegKeepers](#pegkeepers) can also affect the interest rate and crvUSD peg by minting and selling crvUSD or buying and burning crvUSD.
+In crvUSD minting markets, the general idea is that **the borrow rate increases when crvUSD goes down in value and decreases when crvUSD goes up in value**. In addition, there is a [Peg Stabilization Reserve (PSR)](#peg-stabilization-reserve-psr) that helps stabilize the price of crvUSD. The larger the reserve, the lower the rates will be.
 
 *The formula for the borrow rate is as follows:*
 
 $$\begin{aligned}r &= \text{rate0} * e^{\text{power}} \\
 \text{power} &= \frac{\text{price}_\text{peg} - {\text{price}_\text{crvUSD}}}{\text{sigma}} - \frac{\text{DebtFraction}}{\text{TargetFraction}} \\
-\text{DebtFraction} &= \frac{\text{PegKeeperDebt}}{\text{TotalDebt}}\end{aligned}$$
+\text{DebtFraction} &= \frac{\text{PegStabilizationReserveSize}}{\text{TotalDebt}}\end{aligned}$$
 
 
 *with:*
 
 - $r$:	The interest rate.
-- $\text{rate0}$:	The rate when PegKeepers have no debt and the price of crvUSD is exactly 1.00.
-- $\text{price}_\text{peg}$:	Desired crvUSD price: 1.00
+- $\text{rate0}$: The rate when the Peg Stabilization Reserve is zero and the price of crvUSD is exactly 1.00.
+- $\text{price}_\text{peg}$: Desired crvUSD price: 1.00
 - $\text{price}_\text{crvUSD}$:	Current crvUSD price.
 - $\text{sigma}$: variable which can be configured by the DAO, lower value makes the interest rates increase and decrease faster as crvUSD loses and gains value respectively.
-- $\text{DebtFraction}$:	Ratio of the PegKeeper's debt to the total outstanding debt.
-- $\text{TargetFraction}$:	Target fraction.
-- $\text{PegKeeperDebt}$:	The sum of debt of all PegKeepers.
-- $\text{TotalDebt}$:	Total crvUSD debt across all markets.
+- $\text{DebtFraction}$: Ratio of the Peg Stabilization Reserves's size (size is measured in how much crvUSD was deposited into pools) to the total outstanding debt.
+- $\text{TargetFraction}$: Target fraction.
+- $\text{PegStabilizationReserveSize}$:	The total size of the Reserve (which corresponds to the amount of crvUSD deposited into liquidity pools).
+- $\text{TotalDebt}$: Total crvUSD debt across all markets.
 
 *A tool to experiment with the interest rate model is available [here](https://crvusd-rate.0xreviews.xyz/).*
 
 
 ---
 
+# **Peg Stabilization Reserve (PSR)**
 
-# **PegKeepers**
+The Peg Stabilization Reserve (PSR), formerly known as PegKeepers, is a mechanism designed to help keep the price of crvUSD close to $1.00.
 
-A PegKeeper is a contract that helps stabilize the crvUSD price. PegKeepers are deployed for special Curve pools, a list of which can be found [here](https://docs.curve.finance/references/deployed-contracts/#curve-stablecoin).
+- **If crvUSD trades above $1.00:** The system allows new crvUSD to be minted and deposited into Curve pools. This increases the pool’s crvUSD balance, helping bring the price back down toward $1.00.
+- **If crvUSD trades below $1.00:** Previously deposited crvUSD can be withdrawn from the pools. This reduces the pool’s crvUSD balance, helping push the price back up.
+ 
+The size of the PSR (essentially how much crvUSD is deposited into pools) has a direct influence on the crvUSD borrow rate: in general, a larger reserve results in a lower borrow rate.
 
-PegKeepers take certain actions based on the price of crvUSD within the pools. All these actions are fully permissionless and callable by any user.
-
-When the price of crvUSD in a pool is above 1.00, they are allowed to take on debt by minting un-collateralized crvUSD and depositing it into specific Curve pools. This increases the balance of crvUSD in the pool, which consequently decreases its price.
-
-If a PegKeeper has taken on debt by depositing crvUSD into a pool, it is able to withdraw those deposited crvUSD from the pool again. This can be done when the price is below 1.00. By withdrawing crvUSD, its token balance will decrease and the price within the pool increases.
-
-[:octicons-arrow-right-24: More on PegKeepers here](https://docs.curve.finance/crvUSD/pegkeepers/overview/)
-
+The PSR does not deposit or withdraw assets on its own — someone must call the appropriate functions. These function calls are incentivized to ensure they are executed. Users can interact with the system via the interface here: [Peg Stabilization Reserve UI](https://www.curve.finance/crvusd/ethereum/pegkeepers/).  
+To learn more about the technical implementation of the Peg Stabilization Reserve, check out the [technical docs](https://docs.curve.finance/crvUSD/pegkeepers/overview/). A list of all deployments is available [here](https://docs.curve.finance/references/deployed-contracts/#pegkeepers).
+<!-- need to change hyperlink after pegkeeper site was officially changed on the UI-->
 
 <!-- Include the liquidations javascript file and necessary libraries-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

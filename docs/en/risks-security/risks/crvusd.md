@@ -25,19 +25,19 @@ If the health of the loan falls to zero, the position is subject to hard liquida
 
 Curve incorporates specialized on-chain Exponential Moving Average (EMA) oracles built into stabelswap-ng, tricrypto-ng, and twocrypto-ng Curve pool implementations. crvUSD markets derive price information from a select number of high TVL Curve pools. By utilizing the EMA smoothing methodology, oracles mitigate the impact of transient price fluctuations, aiming to reduce unnecessary losses caused by short-term market volatility or attempts to manipulate the oracle. Despite the manipulation-resistant design specification, Curve pool oracles may exhibit price distortions in certain scenarios that have the potential to result in missed or excessive liquidations. This may be a result of liquidity and volume migration to alternate venues that increase the risk of oracle manipulation. A detailed explanation of the aforementioned terms can be found in the [crvUSD Oracle documentation](https://docs.curve.finance/crvUSD/oracle/)
 
-### Pegkeepers
+### Peg Stabilization Reserve (PSR)
 
-crvUSD makes use of Pegkeepers, contracts authorized to deposit and withdraw crvUSD from a whitelisted Curve crvUSD stableswap pool up to a predefined debt cap. These contracts reference a subset of whitelisted stablecoins as a proxy for the intended USD price. Instability affecting any counterparty Pegkeeper assets (e.g. USDT, USDC), which are also used to aggregate a USD price for crvUSD, may cause the Pegkeeper to deposit all of its crvUSD into the pool in an attempt to rebalance. This creates a dependency on the Pegkeeper counterparty assets that determines the stability of the crvUSD peg. An upgraded PegkeeperV2 design promises to alleviate this risk.
+crvUSD makes use of a Peg Stabilization Reserve (PSR) which consists of contracts authorized to deposit and withdraw crvUSD from a whitelisted Curve crvUSD stableswap pool up to a predefined debt cap. These contracts reference a subset of whitelisted stablecoins as a proxy for the intended USD price. Instability affecting any counterparty Reserve assets (e.g. USDT, USDC), which are also used to aggregate a USD price for crvUSD, may cause the Reserve to deposit all of its crvUSD into the pool in an attempt to rebalance. This creates a dependency on the Reserve counterparty assets that determines the stability of the crvUSD peg. An upgraded PegkeeperV2 design promises to alleviate this risk.
 
 ### Dynamic Interest Rates
 
 The borrowing rate is algorithmically determined based on several factors, including:
 
 - The crvUSD price as reported by an on-chain price aggregator contract
-- The ratio of Pegkeeper debt to total outstanding debt
+- The ratio of Reserve debt to total outstanding debt
 - Several variables set by the Monetary Policy admin
 
-Essentially, the borrow rate increases when the price of crvUSD goes lower and/or the proportion of Pegkeeper debt to total debt reduces. This process is intended to dynamically regulate market behavior such that it reinforces the crvUSD peg. Changes to the Monetary Policy are authorized only by the Curve DAO. A [crvUSD simulation tool](https://github.com/0xreviews/crvusdsim) by 0xReviews allows Users to visualize the influence of these factors on the borrowing rate.
+Essentially, the borrow rate increases when the price of crvUSD goes lower and/or the proportion of Reserve debt to total debt reduces. This process is intended to dynamically regulate market behavior such that it reinforces the crvUSD peg. Changes to the Monetary Policy are authorized only by the Curve DAO. A [crvUSD simulation tool](https://github.com/0xreviews/crvusdsim) by 0xReviews allows Users to visualize the influence of these factors on the borrowing rate.
 
 There may be assumptions in the Monetary Policy design that, in some circumstances, cause interest rates to produce undesired outcomes, and which may cause a sub-optimal experience for borrowers. In general, interest rates on borrowing may change dramatically in response to changing market circumstances, and may not reflect a borrower's expectations when they had opened their position.
 
@@ -49,7 +49,7 @@ There may be assumptions in the Monetary Policy design that, in some circumstanc
 
 Users should be aware that ample crvUSD liquidity on exchange is necessary for facilitating liquidations. Circumstances leading to a reduction in the available crvUSD liquidity for liquidators are plausible. Such scenarios can significantly impact the proper functioning of the stablecoin market, particularly concerning the process of liquidation.
 
-crvUSD relies on liquidity concentrated within particular Pegkeeper pools, which serve a dual purpose as both a source of liquidity and price feeds for crvUSD oracles. If the incentives for depositing crvUSD into these pools are insufficient, the liquidity shortfalls can result in missed liquidations or deflationary price spirals (cascading liquidations). This phenomenon occurs when initial liquidations fail to be executed effectively, leading to a domino effect of further liquidations and potentially rapid, significant decreases in asset prices.
+crvUSD relies on liquidity concentrated within particular pools used for the Peg Stabilization Reserve (PSR), which serve a dual purpose as both a source of liquidity and price feeds for crvUSD oracles. If the incentives for depositing crvUSD into these pools are insufficient, the liquidity shortfalls can result in missed liquidations or deflationary price spirals (cascading liquidations). This phenomenon occurs when initial liquidations fail to be executed effectively, leading to a domino effect of further liquidations and potentially rapid, significant decreases in asset prices.
 
 ### No Guarantee of Price Stability
 

@@ -8,7 +8,7 @@
 *Lending markets work very similarly to the markets for minting crvUSD. Here are the major differences:*
 
 - Lending markets are permissionless; **any assets in combination with crvUSD can be used**. This means users can borrow against tokens like CRV, LRT's, etc. You name it. The only requirement is a **proper oracle[^1]**. Although, before creating a lending market, proper parameters should be simulated.
-- The **interest rate of lending markets solely depends on the utilization of the supplied assets**, unlike for minting markets which depend on various factors such as crvUSD price, pegkeeper debt, and other parameters.
+- The **interest rate of lending markets solely depends on the utilization of the supplied assets**, unlike for minting markets which depend on various factors such as crvUSD price, site of the Peg Stabilization Reserve (PSR), and other parameters.
 
 [^1]: New Curve pools such as stableswap-ng, twocrypto-ng, or tricrypto-ng provide a suitable oracle.
 
