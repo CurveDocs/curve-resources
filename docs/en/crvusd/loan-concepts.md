@@ -145,7 +145,7 @@ The size of the PSR (essentially how much crvUSD is deposited into pools) has a 
 
 The PSR does not deposit or withdraw assets on its own — someone must call the appropriate functions. These function calls are incentivized to ensure they are executed. Users can interact with the system via the interface here: [Peg Stabilization Reserve UI](https://www.curve.finance/crvusd/ethereum/pegkeepers/).  
 To learn more about the technical implementation of the Peg Stabilization Reserve, check out the [technical docs](https://docs.curve.finance/crvUSD/pegkeepers/overview/). A list of all deployments is available [here](https://docs.curve.finance/references/deployed-contracts/#pegkeepers).
-
+<!-- need to change hyperlink after pegkeeper site was officially changed on the UI-->
 
 <!-- Include the liquidations javascript file and necessary libraries-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
