@@ -135,7 +135,7 @@ function generateBandData(basePrice, startN, finishN, A, collateral, oraclePrice
                 display: true
             }
         });
-    
+
     let priceAboveBands = 0;
     if (oraclePrice > xAxisMax) {
         priceAboveBands = oraclePrice - xAxisMax;
@@ -237,9 +237,9 @@ function updateLiqGraph() {
             text: 'Value in Bands'
         }
       },
-      
+
     };
-    
+
     if (liqChart) {
             liqChart.destroy();
     }
@@ -310,9 +310,9 @@ function updateHealthGraph(valueInBands, valueAboveBands, liqDiscount) {
             text: 'Value vs. Debt'
         }
       },
-      
+
     };
-    
+
     if (healthChart) {
             healthChart.destroy();
     }
@@ -463,7 +463,7 @@ function updateAmpGraph() {
         }
       }
     };
-    
+
     if (ampChart) {
             ampChart.destroy();
     }

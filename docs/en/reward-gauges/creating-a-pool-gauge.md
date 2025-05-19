@@ -29,7 +29,7 @@ Go to the [Deploy Gauge](https://curve.finance/#/ethereum/deploy-gauge) page, an
 
 ![Deploy Mainnet Gauge UI](../images/ui/deploy-mainnet-gauge.png){: .centered }
 
-Simply **input the  pool address** (0x...) and **select the [pool type](#pool-types) from the drop down menu**.  *Note the pool type may be pre-selected for you, if this is the case, this does not need to be changed*.  
+Simply **input the  pool address** (0x...) and **select the [pool type](#pool-types) from the drop down menu**.  *Note the pool type may be pre-selected for you, if this is the case, this does not need to be changed*.
 
 After the options have been inputted, click on deploy gauge and submit the transaction using your preferred wallet.  The UI will show an error if the incorrect pool type is selected, or a gauge already exists for the pool, so there is no harm in trying all options if you are unsure of the pool type.
 
@@ -58,7 +58,7 @@ After the gauge has been deployed on the sidechain (called the child gauge), the
 
 ![Deploy Sidechain Gauge UI - Step 2](../images/ui/deploy-sidechain-gauge-step2.png){: .centered }
 
-Then choose the network the pool resides by clicking on the Network dropdown menu, in this example we have chosen base, as that's where the sidechain gauge was deployed.  The same pool type as in step 1 must be selected carefully in step 2, as the UI will not raise an error if the wrong option is selected.  Then we input the LP Token address (pool address) on the L2.  **The LP Token Address in step 2 is the same address as used for step 1**.  
+Then choose the network the pool resides by clicking on the Network dropdown menu, in this example we have chosen base, as that's where the sidechain gauge was deployed.  The same pool type as in step 1 must be selected carefully in step 2, as the UI will not raise an error if the wrong option is selected.  Then we input the LP Token address (pool address) on the L2.  **The LP Token Address in step 2 is the same address as used for step 1**.
 
 After clicking on deploy and the transaction is confirmed, the gauge is deployed and a [vote can be created to add it to the gauge controller](#submit-a-dao-vote).  Adding the gauge to the gauge controller allows the gauge to receive CRV rewards for stakers when the gauge is allocated [gauge weight](./gauge-weights.md).
 
@@ -71,8 +71,8 @@ In addition to the UI, there is an option to deploy the gauge directly through E
 !!!warning
     Calling **`deploy_gauge`** on Etherscan will only work if the function is called on the Factory contract that also deployed the pool.
 
-To navigate to this page, first search for the corresponding Factory contract on Etherscan. Then, go to **`Contract -> Write Contract -> deploy_gauge`**.  
-Then insert the pool address you want to add a gauge for, press on **`Write`** and sign the transaction.  
+To navigate to this page, first search for the corresponding Factory contract on Etherscan. Then, go to **`Contract -> Write Contract -> deploy_gauge`**.
+Then insert the pool address you want to add a gauge for, press on **`Write`** and sign the transaction.
 
 Before deploying the gauge, ensure you connect your wallet by clicking the **`Connect to Web3`** button.
 
@@ -117,7 +117,7 @@ After the sidechain child gauge has been successfully deployed, the Ethereum mai
 
 The correct `RootLiquidityGaugeFactory` contract on Ethereum must be chosen.  Most root gauges for sidechains are deployed using the top contract boxed in blue, but some sidechains use their own special contracts, e.g., see the contract for Fractal boxed in red, or the BSC contract boxed in yellow.  If there isn't a specific `RootLiquidityGaugeFactory` for your sidechain, then use the first one.  Once the correct contract is found click on the address and you will be taken to the contract page on etherscan.
 
-Once again go to **`Contract -> Write Contract -> Connect to Web3`** to connect your wallet as shown above.  **This must be the same wallet that deployed the sidechain child gauge**.  Then click on the `deploy_gauge` function.  
+Once again go to **`Contract -> Write Contract -> Connect to Web3`** to connect your wallet as shown above.  **This must be the same wallet that deployed the sidechain child gauge**.  Then click on the `deploy_gauge` function.
 
 ![Deploy Gauge Function](../images/deploy_gauge.png){: .centered }
 

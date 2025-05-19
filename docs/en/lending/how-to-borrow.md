@@ -188,7 +188,7 @@ For example if \$10,000 crvUSD and \$10,000 of WBTC is deposited (\$20,000 value
 
 **`Estimated TX Cost`** shows the gas cost in USD.  **`Slippage tolerance`** is the maximum slippage allowed when swapping.
 
-Before taking out a loan, a screen will appear showing the details of the loan, for example: 
+Before taking out a loan, a screen will appear showing the details of the loan, for example:
 
 ![Example loan details](../images/ui/get_leverage_loan.png){: .centered }
 

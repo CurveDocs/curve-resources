@@ -6,5 +6,5 @@ However, a wide variety of resources are still available to help you avoid issue
 *   The [technical documentation](https://docs.curve.finance/) is a comprehensive resource for coders.
 *   The [Telegram channel](https://t.me/curvefi) is an active place to seek support.
 *   The [Discord also has an active support](https://discord.gg/rgrfS7W) channel.
-    
+
 Most users use Curve without issue, however we understand it can be complicated so make sure to ask first and save yourself any possible trouble later!

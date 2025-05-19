@@ -36,10 +36,10 @@ There are generally two ways to create (and repay) leveraged loans on Curve: by 
 
 ## **Built-in Leverage**
 
-!!!warning "Differences in Leverage Support"  
+!!!warning "Differences in Leverage Support"
     The Curve UI generally supports **one-click leverage** for loans. This means users can directly “loop” their positions with a single click, without manually repeating the borrowing and buying process.
 
-    - **Newer markets** support leverage through **aggregators**, which can route through external liquidity sources for more efficient execution.  
+    - **Newer markets** support leverage through **aggregators**, which can route through external liquidity sources for more efficient execution.
     - **Older markets** (especially the early-deployed mint markets) rely solely on Curve’s internal liquidity, which can result in higher price impact—particularly when leveraging large amounts.
 
 All crvUSD minting markets and some Curve lending markets offer this built-in leverage functionality, allowing users to achieve their desired leverage in a single transaction. Below is an image of the lending UI showing the WBTC lending market. This market allows built-in leverage of up to 11x.

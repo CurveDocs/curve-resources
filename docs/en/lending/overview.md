@@ -58,7 +58,7 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 
 # **Markets**
 
-There are many Curve Lending markets listed on the [main UI](https://curve.finance/lend/ethereum/markets).  Each market uses a single type of collateral, and make loans in a single asset (**all markets are one-way**, and **all markets are isolated**).  Some of the markets available are pictured below (we've used llamas in suits to illustrate different markets), but there are many more available, and **new markets can be permissionlessly deployed** by anyone, at anytime (as long as the asset has a suitable [price oracle](https://docs.curve.finance/stableswap-exchange/stableswap-ng/pools/oracles/)).  
+There are many Curve Lending markets listed on the [main UI](https://curve.finance/lend/ethereum/markets).  Each market uses a single type of collateral, and make loans in a single asset (**all markets are one-way**, and **all markets are isolated**).  Some of the markets available are pictured below (we've used llamas in suits to illustrate different markets), but there are many more available, and **new markets can be permissionlessly deployed** by anyone, at anytime (as long as the asset has a suitable [price oracle](https://docs.curve.finance/stableswap-exchange/stableswap-ng/pools/oracles/)).
 
 ![Curve lending llamas](../images/lending/llamma_markets.svg)
 
@@ -85,7 +85,7 @@ So after 1 year **Bob earned 20 crvUSD** and **$20 worth of CRV**, this equates 
 
 After depositing to a lending market your assets are added to the pool of **available supply**.
 
-You can withdraw a supplied asset provided there are sufficient available (un-borrowed) assets in the market. For example in the below image Bob could have withdrawn up to 1200 crvUSD from the market, but he only withdrew 300 crvUSD.  
+You can withdraw a supplied asset provided there are sufficient available (un-borrowed) assets in the market. For example in the below image Bob could have withdrawn up to 1200 crvUSD from the market, but he only withdrew 300 crvUSD.
 
 ![Withdrawing Supply](../images/lending/supply_withdrawal.svg#only-light){: .centered }
 ![Withdrawing Supply](../images/lending/supply_withdrawal_dark.svg#only-dark){: .centered }
@@ -93,8 +93,8 @@ You can withdraw a supplied asset provided there are sufficient available (un-bo
 If there are insufficient available assets for a full withdrawal, you can withdraw the maximum amount currently available. The high utilization rate will cause Borrow APY and Lend APYs to increase, incentivizing borrowers to repay their loans, and more lenders to supply. As available supply increases you can withdraw your remaining balance over time.
 
 !!!warning "Bad Debt"
-    [Bad debt](../crvusd/loan-concepts.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.  It is recommended not to supply assets to markets with large amounts of bad debt.  Use [this notebook](https://try.vyperlang.org/hub/user-redirect/lab/tree/shared/saint-rat/baddebt.ipynb) or see the code on [github here](https://github.com/saint-rat/curve-notebooks/blob/main/bad_debt.ipynb) to find which markets have bad debt.  
-    
+    [Bad debt](../crvusd/loan-concepts.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.  It is recommended not to supply assets to markets with large amounts of bad debt.  Use [this notebook](https://try.vyperlang.org/hub/user-redirect/lab/tree/shared/saint-rat/baddebt.ipynb) or see the code on [github here](https://github.com/saint-rat/curve-notebooks/blob/main/bad_debt.ipynb) to find which markets have bad debt.
+
     *At the time of writing (May, 2024) no bad debt exists on Ethereum markets. On Arbitrum, two markets have bad debt - CRV/crvUSD: 1700 crvUSD bad debt, FXN/crvUSD: 39,000 crvUSD bad debt.*
 
 ---
@@ -112,7 +112,7 @@ When you withdraw your supplied assets, the Vault Shares you had previously depo
 Rewards APR is a combination of CRV emission rewards and any other incentives provided to suppliers. **Rewards accrue altogether and can be claimed at any time.**
 
 !!!warning "Rewards APR is *ONLY* given to Suppliers *STAKED* in the Liquidity Gauge"
-    You ***MUST*** stake your Supply Vault Shares in the Lending Market's Liquidity Gauge to receive Reward APR.  
+    You ***MUST*** stake your Supply Vault Shares in the Lending Market's Liquidity Gauge to receive Reward APR.
     **You will not get any Rewards APR if you** ***DO NOT*** **stake**.  See [here](./how-to-supply.md#staking-assets)
 
 *For a market to have CRV rewards the following conditions must be met:*
@@ -133,7 +133,7 @@ Other incentives can be added by anyone, i.e., if a project wants to incentivize
 When borrowing from Curve Lending Markets, you are taking an **overcollateralized loan** against deposited assets (e.g., borrowing crvUSD with CRV collateral). In exchange, you are **charged the Borrow APY on the borrowed assets**.
 
 
-Collateral is deposited into each lending market's [LLAMMA](https://docs.curve.finance/crvUSD/amm/) system and split evenly across the chosen number of bands (N).  **Each band represents a small liquidation price range, with an upper and lower limit.  If the oracle price enters one of your bands, [soft-liquidation begins](#soft-liquidation)**.  **Your loan is safe while the oracle price is higher than any of your bands**.  
+Collateral is deposited into each lending market's [LLAMMA](https://docs.curve.finance/crvUSD/amm/) system and split evenly across the chosen number of bands (N).  **Each band represents a small liquidation price range, with an upper and lower limit.  If the oracle price enters one of your bands, [soft-liquidation begins](#soft-liquidation)**.  **Your loan is safe while the oracle price is higher than any of your bands**.
 
 *See the image below for a breakdown of how supplied assets are borrowed, and how collateral is deposited into bands.*
 

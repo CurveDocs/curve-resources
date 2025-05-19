@@ -46,7 +46,7 @@ The new Cowswap Architecture is based around a 4 phases occurring on different d
 
 The `collection` phase occurs on Monday, it makes sure any significant amounts of fees are collected and ready to be sold the following day.
 
-Newer pools automatically claim admin fees throughout the week when users withdraw their liquidity from the pools.  
+Newer pools automatically claim admin fees throughout the week when users withdraw their liquidity from the pools.
 
 Otherwise, on Monday anyone can call functions which claim the fees from pools and then create conditional orders on Cowswap to sell the coins/tokens on Tuesday.  Doing this work is incentivized by giving the caller a reward.
 
@@ -77,7 +77,7 @@ Fees are distributed to veCRV holders weekly, within 24 hours after Thursday 00:
 
 ## **Old Architecture**
 
-This is outdated and is currently being phased out.  
+This is outdated and is currently being phased out.
 
 ### **Collection**
 

@@ -12,11 +12,11 @@ Bands function as individual liquidation zones. If the market price of the colla
 ???info "Example: Soft- and De-Liquidation"
     Consider a loan with 5 bands, covering a liquidation range from $1000 to $800. Each band spans $40:
 
-    - Band 4: $1000 to $960  
-    - Band 3: $960 to $920  
-    - Band 2: $920 to $880  
-    - Band 1: $880 to $840  
-    - Band 0: $840 to $800  
+    - Band 4: $1000 to $960
+    - Band 3: $960 to $920
+    - Band 2: $920 to $880
+    - Band 1: $880 to $840
+    - Band 0: $840 to $800
 
     The collateral is evenly distributed across all five bands.
 
@@ -103,12 +103,12 @@ As the price of the collateral asset decreases and enters the liquidation range 
 
 ???info "Visualising Liquidation"
     LLAMMA soft-liquidation can also be explored through static visual guides:
-    
-    ![Soft-liquidation](../images/crvusd/soft-liq.svg#only-light){: .centered }  
+
+    ![Soft-liquidation](../images/crvusd/soft-liq.svg#only-light){: .centered }
     ![Soft-liquidation (Dark)](../images/crvusd/soft-liq-dark.svg#only-dark){: .centered }
 
 !!!warning "Soft-liquidation ≠ Safety"
-    A loan can still be hard-liquidated even *below* the soft-liquidation range if health drops to 0%.  
+    A loan can still be hard-liquidated even *below* the soft-liquidation range if health drops to 0%.
     Likewise, loans inside the range can remain safe if health stays above 0%.
 
 This continuous buying and selling between the collateral asset and crvUSD leads to **losses**, due to price movement, fees, and rebalancing inefficiencies. Losses can occur both when the price decreases *and* when it increases, but only while the loan is inside the liquidation range.
@@ -138,11 +138,11 @@ Self-liquidation allows users to voluntarily close their position while in soft-
 
 Here’s a simple example:
 
-> Alice borrowed 1,000 crvUSD using 1 WETH as collateral. Her position enters soft-liquidation, and 0.2 WETH is swapped for 250 crvUSD.  
-> Her position now consists of:  
-> – Debt: 1,000 crvUSD  
-> – Collateral: 0.8 WETH + 250 crvUSD  
->  
+> Alice borrowed 1,000 crvUSD using 1 WETH as collateral. Her position enters soft-liquidation, and 0.2 WETH is swapped for 250 crvUSD.
+> Her position now consists of:
+> – Debt: 1,000 crvUSD
+> – Collateral: 0.8 WETH + 250 crvUSD
+>
 > To self-liquidate, Alice only needs to repay **750 crvUSD**, and she recovers her **0.8 WETH**.
 
 This is usually better than letting the loan be hard-liquidated, because it avoids penalties like the [`liquidation_discount`](./loan-concepts.md#market-parameters).

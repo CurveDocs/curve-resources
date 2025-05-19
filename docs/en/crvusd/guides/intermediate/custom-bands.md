@@ -14,7 +14,7 @@ Make sure you understand the **consequences and benefits** of using more or fewe
 
 Simply **enter the amount of collateral** you want to use and choose **how much crvUSD to borrow**. Additionally, you can adjust the number of bands for the loan by moving the slider left or right.
 
-- **Minimum bands:** 4  
+- **Minimum bands:** 4
 - **Maximum bands:** 50
 
 <figure markdown="span">
@@ -31,12 +31,12 @@ The maximum LTV (Loan-To-Value ratio — the maximum amount you can borrow again
 
 In general:
 
-- The **fewer** bands you use, the **higher** your borrowing power (LTV)  
+- The **fewer** bands you use, the **higher** your borrowing power (LTV)
 - The **more** bands you use, the **lower** your potential losses during soft-liquidation
 
 This creates a trade-off between **maximum borrowing capacity** and **protection from liquidation losses**.
 
-If you're actively monitoring your loan and plan to repay or close it before entering soft-liquidation, using **fewer bands** may allow you to borrow more efficiently.  
+If you're actively monitoring your loan and plan to repay or close it before entering soft-liquidation, using **fewer bands** may allow you to borrow more efficiently.
 If you prefer a more conservative approach, using **more bands** will help reduce potential losses if liquidation occurs.
 
 Ultimately, it's a trade-off between **risk** and **borrowing power**, and you should choose the configuration that best fits your goals and risk tolerance.

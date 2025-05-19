@@ -97,7 +97,7 @@ In CryptoSwap pools, the liquidity is concentrated. These initial liquidity conc
 - **`Adjustment Step`**: As the pool rebalances, it must do so in units larger than the adjustment step size. Volatile assets are suggested to use larger values (0.000146), while less volatile assets do not move as frequently and may use smaller step sizes (default 0.0000055).
 - **`Moving Average Time`**: The price oracle uses an exponential moving average to dampen the effect of changes. This parameter adjusts the half-life used.
 
---- 
+---
 
 
 ## **Pool Info**

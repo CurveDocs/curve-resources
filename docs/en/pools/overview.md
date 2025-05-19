@@ -1,12 +1,12 @@
 <h1>Pools Overview</h1>>
 
-If you are new to Ethereum or DeFi, liquidity pools are a seemingly complicated concept to understand.  
+If you are new to Ethereum or DeFi, liquidity pools are a seemingly complicated concept to understand.
 
 Pools hold multiple assets, allowing users to swap between them. Liquidity providers who deposit assets earn fees from these swaps.
 
 In Curve, pools can be 2 different types, these are:
 
-* **Stableswap Pools** for coins that are pegged to each other, for example USDC and USDT, or stETH and ETH.  
+* **Stableswap Pools** for coins that are pegged to each other, for example USDC and USDT, or stETH and ETH.
 * **Cryptoswap Pools** which are for assets which fluctuate in value against each other, for example USDT and ETH, or CRV and ETH.
 
 It’s important to understand that when you provide liquidity to a pool, no matter what coin you deposit, you essentially **gain exposure to all the coins in the pool** which means you want to find a pool with coins you are comfortable holding.

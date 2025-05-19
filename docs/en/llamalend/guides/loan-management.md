@@ -57,7 +57,7 @@ Adding more collateral to your loan has a **positive effect on its health and li
 </figure>
 
 
---- 
+---
 
 
 # **Removing Collateral**

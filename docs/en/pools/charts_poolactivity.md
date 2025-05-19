@@ -20,7 +20,7 @@ Clicking on **`LP Token Price (USDT)`** reveals a drop-down menu with additional
 
 ## **Pool Activity**
 
-Besides a chart for prices, the UI also provides an overview of swaps and liquidity actions for the pool under the **`Pool Activity`** tab. 
+Besides a chart for prices, the UI also provides an overview of swaps and liquidity actions for the pool under the **`Pool Activity`** tab.
 
 On the **`Swaps`** tab, the interface shows the tokens swapped and the time of each transaction, indicating how many hours or minutes ago it occurred. Clicking on a specific swap will redirect the user to the transaction on Etherscan.
 
@@ -38,4 +38,3 @@ Navigating to the **`Liquidity`** tab to display deposits and withdrawals in the
   ![](../images/lp_liquidity.png){ width="600" }
   <figcaption></figcaption>
 </figure>
-

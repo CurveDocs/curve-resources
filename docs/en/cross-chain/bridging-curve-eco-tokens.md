@@ -6,7 +6,7 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
 
 
 !!!info "Contract Addresses"
-    This guide is applicable for bridging `CRV`, `crvUSD` and `scrvUSD` to other L1 blockchains. When following this guide, one needs to make sure to use the correct contract addresses depending on the token to be bridged. 
+    This guide is applicable for bridging `CRV`, `crvUSD` and `scrvUSD` to other L1 blockchains. When following this guide, one needs to make sure to use the correct contract addresses depending on the token to be bridged.
 
     === ":logos-crv: CRV"
 
@@ -66,12 +66,12 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
 1. Navigate to the contract of the token you want to bridge on [Etherscan](https://etherscan.io/).
 
 2. Connect your wallet by navigating to **`Contract` > `Write Contract`** and clicking the **`Connect to Web3`** option.
-   
+
     <figure markdown="span">
     ![](../images/guide/connect.png){ width="300" }
     <figcaption></figcaption>
     </figure>
-    
+
 3. Look for the **`approve`** method and approve the according bridge contract as a spender.
 
     <figure markdown="span">
@@ -81,7 +81,7 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
 
     - **`_spender`**: Enter `0x0A92Fd5271dB1C41564BD01ef6b1a75fC1db4d4f`, the bridge contract address. This address is the same for all tokens.
     - **`_value`**: Specify the amount in 1e18 format (for example, for 100 crvUSD, enter `100000000000000000000`).
-  
+
     Again, to avoid manually entering the amount in 1e18 format, you can input the amount of tokens you wish to bridge and then append 18 zeros by using the **`+`** button.
     <figure markdown="span">
         ![](../images/guide/zeroes.png){ width="350" }
@@ -99,7 +99,7 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
 1. Visit the bridge contract on Etherscan. This contract address is different depending on the token to be bridged and where it is being bridged to. This time, there is **no need to connect your wallet**.
 
 2. Use function **`1. quote`** to determine the bridging cost.
-   
+
     <figure markdown="span">
         ![](../images/guide/quote_eth.png){ width="350" }
         <figcaption></figcaption>
@@ -167,7 +167,7 @@ This guide explains how to **bridge any of the three tokens from the Ethereum Ma
     </figure>
 
 3. Look for the **`approve`** method and approve the according bridge contract as a spender.
-   
+
     <figure markdown="span">
         ![](../images/guide/approve.png){ width="350" }
         <figcaption></figcaption>

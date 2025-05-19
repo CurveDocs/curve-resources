@@ -8,7 +8,7 @@ Proposals are DAO votes.  Proposal voting lasts 7 days.  On the UI for each prop
 ![Proposal Example](../images/gov/voting-proposal-example-dark.png#only-dark){ .centered }
 
 - **State**: Active (voting ongoing), Passed, Executable, Executed, Denied.
-- **Number**: each proposal increments by one. 
+- **Number**: each proposal increments by one.
 - **Type**: ownership or parameter.
 - **Time Remaining**.
 - **Description**.

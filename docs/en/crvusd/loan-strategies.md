@@ -25,7 +25,7 @@ Example loans for each of the 4 quadrants are given in the [loan example section
 
 # **Soft Liquidation Losses**
 
-The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  The histogram and table below show **soft-liquidation losses are generally very low**, but keep in mind that high volatility periods can cause double digit losses.  
+The data from all crvUSD loans so far has shown that for each band range a user can expect the following losses in the table below.  Loss amount doesn't seem to be affected by the collateral asset used (i.e., losses from wBTC seem to be the very similar as wstETH).  The band range was the biggest factor in how a user performed.  The histogram and table below show **soft-liquidation losses are generally very low**, but keep in mind that high volatility periods can cause double digit losses.
 
 *Note: you can show and hide any band ranges by clicking on them in the legend*.
 
@@ -59,7 +59,7 @@ The data from all crvUSD loans so far has shown that for each band range a user 
 
 # **Managing Loan Health**
 
-**[Loan health](./loan-concepts.md#loan-health) is a direct measure of the risk of a loan**.  The lower the loan health, the riskier the loan.  To keep from being hard-liquidated, a loan must have a health above 0.  
+**[Loan health](./loan-concepts.md#loan-health) is a direct measure of the risk of a loan**.  The lower the loan health, the riskier the loan.  To keep from being hard-liquidated, a loan must have a health above 0.
 
 There are 2 factors which influence the health of a loan:
 
@@ -81,7 +81,7 @@ However if a loan is in soft-liquidation collateral cannot be added, debt must b
 
 Here's a list of the plots that can be shown/hidden and their meaning:
 
-**Value (Left Axis) plots**:  
+**Value (Left Axis) plots**:
 *These plots only relate to the left axis, the percentage axis has no meaning for them*.
 
 * `Oracle Price`: The oracle price for 1 unit of the chosen deposited collateral asset (e.g., 1 wBTC, 1 wstETH, etc)
@@ -92,7 +92,7 @@ Here's a list of the plots that can be shown/hidden and their meaning:
 * `Debt Value`: The total amount of debt owed (this includes interest)
 * `AAVE/Spark Liq Price`: The price at which this loan would be liquidated in AAVE/Spark.  When the `Oracle Price` is lower than this price, the loan would be liquidated/not possible.
 
-**Percentage (Right Axis) plots**: 
+**Percentage (Right Axis) plots**:
 *These plots only relate to the right axis, the value axis has no meaning for them*
 
 * `LTV`: The loan to value ratio, this is the `Debt Value` divided by the `Total CV`.
@@ -116,7 +116,7 @@ This user **deposited 188 wBTC** as collateral.  They **borrowed 1.05 million cr
   <canvas id="loanChart3"></canvas>
 </div>
 
-As you can see from above the user remained passive as they were far from soft-liquidation at all times.  They only fee they incurred was from the borrow interest rate increasing their debt, but luckily wBTC price went up fast enough to offset that.  
+As you can see from above the user remained passive as they were far from soft-liquidation at all times.  They only fee they incurred was from the borrow interest rate increasing their debt, but luckily wBTC price went up fast enough to offset that.
 
 Throughout the approx. 100 day duration of the loan they increased their loan to 1.27 million crvUSD but their LTV actually went down as wBTC price went up ~30%.
 
@@ -166,7 +166,7 @@ This loan was opened with **N=4**, **5.95 wstETH collateral**, **10500 crvUSD de
   <canvas id="loanChart2"></canvas>
 </div>
 
-The user almost max borrowed.  Putting their liquidation range very close to the current price.  They stayed above their soft-liquidation range for a long time before falling into soft liquidation on day 50.  They quickly fell through soft liquidation to the safety on the other side but lost 3.1% to soft liquidation fees.  
+The user almost max borrowed.  Putting their liquidation range very close to the current price.  They stayed above their soft-liquidation range for a long time before falling into soft liquidation on day 50.  They quickly fell through soft liquidation to the safety on the other side but lost 3.1% to soft liquidation fees.
 
 At any time from day 50 to day 62 they could have repaid debt to increase their health.  As they were passive and did nothing soft-liquidation fees reduced their health to 0 when going back up through their soft-liquidation range.  This is an unfortunate situation where the increasing collateral price caused hard-liquidation.
 

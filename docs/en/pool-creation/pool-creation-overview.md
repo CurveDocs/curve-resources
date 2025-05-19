@@ -36,5 +36,3 @@ To get started, visit the [**`Pool Creation`**](https://curve.finance/#/ethereum
     [:octicons-arrow-right-24: `Getting started`](./creating-a-cryptoswap-pool.md)
 
 </div>
-
-

@@ -8,7 +8,7 @@ search:
 !!!warning "Differences in Leverage Support"
     The Curve UI generally supports **one-click leverage** for loans. This means users can directly “loop” their positions with a single click, without manually repeating the borrowing and buying process.
 
-    While one-click leverage is available for most markets, there may still be some **discrepancies** depending on the market. As a rule of thumb:  
+    While one-click leverage is available for most markets, there may still be some **discrepancies** depending on the market. As a rule of thumb:
     If one-click leverage is supported, a second tab labeled **"Leverage"** will appear next to the standard **"Create Loan"** tab.
 
     <figure markdown="span">
@@ -17,7 +17,7 @@ search:
     <figcaption></figcaption>
     </figure>
 
-    - **Newer markets** support leverage through **aggregators**, which can route through external liquidity sources for more efficient execution.  
+    - **Newer markets** support leverage through **aggregators**, which can route through external liquidity sources for more efficient execution.
     - **Older markets** (especially the early deployed mint markets) rely solely on Curve’s internal liquidity, which can result in higher price impact — especially when leveraging large amounts.
 
 
@@ -25,8 +25,8 @@ search:
 
 # **Opening a Leveraged Loan**
 
-When creating a leveraged loan, users can choose to deposit either the **collateral token** or **crvUSD** *(depositing crvUSD is only possible on newer markets)*.  
-If **crvUSD** is selected, it will be automatically swapped into the collateral asset before leveraging up the position.  
+When creating a leveraged loan, users can choose to deposit either the **collateral token** or **crvUSD** *(depositing crvUSD is only possible on newer markets)*.
+If **crvUSD** is selected, it will be automatically swapped into the collateral asset before leveraging up the position.
 After that, simply select the amount of **crvUSD** to borrow.
 
 Of course, you can also adjust the number of **bands (N)** used for the position.
@@ -47,7 +47,7 @@ After setting these parameters, the UI will display an overview containing all r
 
 The overview includes:
 
-- **Total leverage** used in the position  
+- **Total leverage** used in the position
 - **Estimated** collateral amount after looping, including aggregator route, **average swap price**, and **price impact**
 - **Loan details** – Standard information such as **Health**, **Band range**, **Number of bands (N)**, **Post-loan borrow rate** and **Loan-to-Value ratio (LTV)**
 

@@ -14,7 +14,7 @@ Fees are collected weekly from the pools, converted to crvUSD, and then distribu
 
 ## **New UI**
 
-To claim trading fees, visit [https://curve.finance/#/ethereum/dashboard](https://curve.finance/#/ethereum/dashboard) and click the **`Claim LP Rewards`** button. 
+To claim trading fees, visit [https://curve.finance/#/ethereum/dashboard](https://curve.finance/#/ethereum/dashboard) and click the **`Claim LP Rewards`** button.
 
 <figure markdown>
   ![](../images/claim-new.png){ width="300" }

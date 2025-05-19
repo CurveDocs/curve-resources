@@ -71,7 +71,7 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.footnote.tooltips
-    - navigation.indexes      # might remove this 
+    - navigation.indexes      # might remove this
     - navigation.path
     - navigation.top
     - navigation.tracking
@@ -214,8 +214,8 @@ nav:
     - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
     - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
     - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
-  - Risks, Security & Audits: 
-    - Risks: 
+  - Risks, Security & Audits:
+    - Risks:
       - Liquidity Pools: risks-security/risks/pool.md
       - Lending: risks-security/risks/lending.md
       - crvUSD: risks-security/risks/crvusd.md
