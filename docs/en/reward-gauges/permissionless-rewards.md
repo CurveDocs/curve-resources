@@ -1,6 +1,6 @@
 <h1>Permissionless Token Rewards </h1>
 
-This section explains the process of setting any token reward using Etherscan. It's assumed that the user possesses some familiarity with Etherscan or are competent in executing the transaction through an alternative tool.  
+This section explains the process of setting any token reward using Etherscan. It's assumed that the user possesses some familiarity with Etherscan or are competent in executing the transaction through an alternative tool.
 
 These rewards are called **permissionless as the CurveDAO does not control them**.  They are not completely permissionless however, as **only the admin or manager of the gauge can approve and add these token rewards**.
 
@@ -48,7 +48,7 @@ Visit the reward token's contract address (not the gauge contract address) on Et
 !!! description "`approve(_spender : address, _value : uint256) -> bool:`"
 
     Function to approve `_spender` to transfer `_value` tokens.
-    
+
     ![](../images/approve.png){ align=left, width="150" }
 
     | Parameter | Type | Description |
@@ -66,15 +66,14 @@ Reward epochs are token specific.  Different reward tokens can have different ep
 
 If additional rewards for a currently streaming token are added mid epoch, both the newly added tokens and all the remaining tokens are combined (rewards = remaining + new), triggering a fresh epoch for the newly defined period of time.
 
-For consistent reward distributions, it's advisable to deposit near the end of an epoch. If replenishing mid-epoch, ensure you compute the appropriate amount for a steady distribution rate.  
+For consistent reward distributions, it's advisable to deposit near the end of an epoch. If replenishing mid-epoch, ensure you compute the appropriate amount for a steady distribution rate.
 
-More information [here](https://docs.curve.finance/curve_dao/liquidity-gauge-and-minting-crv/gauges/LiquidityGaugeV6/#deposit_reward_token).
-
+More information [here](https://docs.curve.finance/liquidity-gauges-and-minting-crv/gauges/LiquidityGaugeV6/#deposit_reward_token).
 
 !!! description "`deposit_reward_token(_reward_token: address, _amount: uint256, _epoch: uint256 = WEEK)`"
 
     Function to deposit `_amount` of `_reward_token` into the gauge over the period of `_epoch` seconds.
-    
+
     When depositing it is optional to use the `_epoch` parameter.  This is set to `WEEK` which means the rewards will be streamed to the gauge stakers over a 1 week period (604800 seconds).
 
     !!!info

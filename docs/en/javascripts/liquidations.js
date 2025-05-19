@@ -2,7 +2,7 @@
 
 function createChart(data, chartId, yOpenLabel, yCloseLabel, tokenCOL, tokenDEBT) {
   const ctx = document.getElementById(chartId).getContext('2d');
-  
+
   // Convert epoch times to Date objects
   const dates = data.time.map(epoch => new Date(parseInt(epoch) * 1000));
 
@@ -202,7 +202,7 @@ function createChart(data, chartId, yOpenLabel, yCloseLabel, tokenCOL, tokenDEBT
 
 function createChart2(data, chartId) {
   const ctx = document.getElementById(chartId).getContext('2d');
-  
+
   // Convert epoch times to Date objects
   const dates = data.time.map(epoch => new Date(parseInt(epoch) * 1000));
 
@@ -558,7 +558,7 @@ function updateEthCrvUsdChart() {
     const topValue = Number(topRangeInput.value);
     const sliderValue = Number(ethCrvUsdSlider.value);
     const collateral = Number(collateralInput.value);
-    
+
     const currentPrice = bottomValue + (topValue - bottomValue) * (sliderValue / 100);
     const avgSellPrice = (topValue + currentPrice) / 2;
     const eth = (ethPercentage/100) * collateral;
@@ -567,10 +567,10 @@ function updateEthCrvUsdChart() {
 
     ethCrvUsdChart.data.datasets[0].data = [eth];
     ethCrvUsdChart.data.datasets[1].data = [crvUSDValue];
-    
+
     ethCrvUsdChart.options.scales.y.max = Math.ceil(collateral);
     ethCrvUsdChart.options.scales.y1.max = Math.ceil(topValue * collateral);
-    
+
     ethCrvUsdChart.update();
 
     ethCrvUsdValuesDisplay.innerHTML = `Collateral: ${eth.toFixed(2)} ETH, ${crvUSDValue.toFixed(2)} crvUSD<br>Average Swap Price: ${avgSellPrice.toFixed(2)} crvUSD/ETH<br>ETH Swapped to crvUSD: ${crvUSDPercentage}%`;

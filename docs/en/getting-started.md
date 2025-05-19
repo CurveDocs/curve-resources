@@ -66,4 +66,4 @@ CRV is the governance and utility token for the Curve ecosystem. Its most distin
 
 This lock-up system was specifically designed to align the interests of token holders with the platform's long-term success – the longer users lock their tokens, the greater their influence and rewards in the ecosystem.
 
-Learn more about CRV here: [Understanding CRV](crv-token/overview.md), or Curve Governance here: [Understanding Governance](governance/understanding-governance.md)
+Learn more about CRV here: [Understanding CRV](crv-token/overview.md), or Curve Governance here: [Understanding Governance](governance/overview.md)

@@ -58,7 +58,7 @@ Some tokens might require an external rate oracle to ensure correct calculations
 
 ### **Rebasing Tokens**
 
-Rebasing tokens in crypto are cryptocurrencies that automatically adjust their supply periodically based on a predetermined algorithm, typically to maintain a stable value or peg to another asset. 
+Rebasing tokens in crypto are cryptocurrencies that automatically adjust their supply periodically based on a predetermined algorithm, typically to maintain a stable value or peg to another asset.
 
 <figure markdown="span">
   ![](../images/pool_creation/ss_rebasing_dark.png#only-dark){ width="400" }

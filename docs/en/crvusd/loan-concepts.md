@@ -68,7 +68,7 @@ Hard liquidation occurs only when the [health](#loan-health) of a loan falls bel
 
 When a loan is hard-liquidated, the associated collateral is removed, and the loan is closed. However, the borrower retains full control over the borrowed funds.
 
-To avoid hard liquidation, it's important to monitor loan health and take appropriate action when necessary. For more details, see [Loan Management in Liquidation](./guides/liquidation.md).
+To avoid hard liquidation, it's important to monitor loan health and take appropriate action when necessary. For more details, see [Loan Management in Liquidation](./guides/beginner/liquidation.md).
 
 ---
 
@@ -82,7 +82,7 @@ Losses are hard to quantify. There is no general rule on how big the losses are 
 
 The formula for health is below, this is visualized in the Health Calculator applet as well.
 
-$$\begin{aligned} \text{health} &= \frac{s \times (1-\text{liqDiscount}) + p}{\text{debt}} - 1 \\ 
+$$\begin{aligned} \text{health} &= \frac{s \times (1-\text{liqDiscount}) + p}{\text{debt}} - 1 \\
 p &= \text{collateral} \times \text{priceAboveBands} \end{aligned}$$
 
 Where:
@@ -140,10 +140,10 @@ The Peg Stabilization Reserve (PSR), formerly known as PegKeepers, is a mechanis
 
 - **If crvUSD trades above $1.00:** The system allows new crvUSD to be minted and deposited into Curve pools. This increases the pool’s crvUSD balance, helping bring the price back down toward $1.00.
 - **If crvUSD trades below $1.00:** Previously deposited crvUSD can be withdrawn from the pools. This reduces the pool’s crvUSD balance, helping push the price back up.
- 
+
 The size of the PSR (essentially how much crvUSD is deposited into pools) has a direct influence on the crvUSD borrow rate: in general, a larger reserve results in a lower borrow rate.
 
-The PSR does not deposit or withdraw assets on its own — someone must call the appropriate functions. These function calls are incentivized to ensure they are executed. Users can interact with the system via the interface here: [Peg Stabilization Reserve UI](https://www.curve.finance/crvusd/ethereum/pegkeepers/).  
+The PSR does not deposit or withdraw assets on its own — someone must call the appropriate functions. These function calls are incentivized to ensure they are executed. Users can interact with the system via the interface here: [Peg Stabilization Reserve UI](https://www.curve.finance/crvusd/ethereum/pegkeepers/).
 To learn more about the technical implementation of the Peg Stabilization Reserve, check out the [technical docs](https://docs.curve.finance/crvUSD/pegkeepers/overview/). A list of all deployments is available [here](https://docs.curve.finance/references/deployed-contracts/#pegkeepers).
 <!-- need to change hyperlink after pegkeeper site was officially changed on the UI-->
 

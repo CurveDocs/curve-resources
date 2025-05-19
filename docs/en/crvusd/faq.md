@@ -14,7 +14,7 @@ Simulations suggest most price drops would result in the loss of just a few perc
 
 ### How is crvUSD pegged to a price of $1?
 
-The crvUSD peg is broadly protected by the fact that the protocol is always overcollateralized.  The protocol employs a number of stabilization mechanisms to fine-tune this peg. One mechanism is to automatically adjust borrow rates based on supply and demand.  The protocol also relies on Peg Keepers (see below section), which are authorized to burn or mint crvUSD based on market conditions. 
+The crvUSD peg is broadly protected by the fact that the protocol is always overcollateralized.  The protocol employs a number of stabilization mechanisms to fine-tune this peg. One mechanism is to automatically adjust borrow rates based on supply and demand.  The protocol also relies on Peg Keepers (see below section), which are authorized to burn or mint crvUSD based on market conditions.
 
 
 ### Can other types of collateral be proposed for crvUSD? How does that process work?
@@ -23,7 +23,7 @@ Yes, other collateral markets can be proposed for crvUSD through governance. Con
 
 ### What is a 'loan discount' and what impact does it have?
 
-A 'loan discount' is a percentage applied to reduce the value of collateral for determining the maximum borrowable amount. A higher loan discount results in a lower borrowing limit, acting as a safety margin for lenders against collateral value declines. 
+A 'loan discount' is a percentage applied to reduce the value of collateral for determining the maximum borrowable amount. A higher loan discount results in a lower borrowing limit, acting as a safety margin for lenders against collateral value declines.
 
 The maximum amount that can be borrowed is also influenced by other factors, such as market conditions and asset volatility. For more details on these factors and their impact on borrowing, see the technical documentation at https://docs.curve.finance/crvUSD/amm/.
 
@@ -88,7 +88,7 @@ The Peg Keepers are contracts uniquely enabled to mint and absorb debt in crvUSD
 
 ### Under what circumstances can the Peg Keepers mint or burn crvUSD?
 
-Each Peg Keeper targets a specific [**Peg Keeper pool**](https://curve.finance/#/ethereum/pools?filter=crvusd). A Peg Keeper pool is a [**Curve v1 pool**](https://resources.curve.finance/base-features/understanding-curve) allowing trading between crvUSD and a blue chip stablecoin. The Peg Keepers are responsible for trying to balance these pools by trading at a profit. The Peg Keepers can only mint crvUSD to trade into their associated pools when its pool balance of crvUSD is too low, or it can repurchase and burn the crvUSD if its pool balance is too high.
+Each Peg Keeper targets a specific [**Peg Keeper pool**](https://curve.finance/#/ethereum/pools?filter=crvusd). A Peg Keeper pool is a [**Curve v1 pool**](../pools/overview.md#stableswap-curve-v1) allowing trading between crvUSD and a blue chip stablecoin. The Peg Keepers are responsible for trying to balance these pools by trading at a profit. The Peg Keepers can only mint crvUSD to trade into their associated pools when its pool balance of crvUSD is too low, or it can repurchase and burn the crvUSD if its pool balance is too high.
 
 
 ### What is the relationship between a Peg Keeper's debt and the total debt in crvUSD?
@@ -103,7 +103,7 @@ If a Peg Keeper's debt is zero, it means that the Peg Keeper has no outstanding 
 
 ### How does Peg Keeper trade and distribute profits?
 
-Every Peg Keeper has a public **`update`** function. If the Peg Keeper has accumulated profits, then a portion of these profits are distributed at the behest of the user who calls the **`update`** function, in order to incentivize distributed trading in the pools. 
+Every Peg Keeper has a public **`update`** function. If the Peg Keeper has accumulated profits, then a portion of these profits are distributed at the behest of the user who calls the **`update`** function, in order to incentivize distributed trading in the pools.
 
 !!!tip "Calling `update()` via Etherscan"
     To access this information on Etherscan, one can visit the **`LLAMMA details`** on the crvUSD UI within any market. By clicking the “Monetary Policy”, users are directed to the contract on Etherscan. There, under the **`Contract`** tab, they should select the **`Read Contract`** tab. Function 6 (`peg_keepers`) requires the index value of the market of interest, ranging from 0 to n-1, where n represents the number of crvUSD markets. After entering this index and navigating to the returned address, users need to navigate to **`Contract`** and **`Read Contract`** again. This time, they access function 6 (`estimate_caller_profit`) to estimate the caller profit. After evaluating if the execution of the following function makes sense, the **`Write Contract`** tab must be selected, a wallet connected, and function 1 (`update`) called.

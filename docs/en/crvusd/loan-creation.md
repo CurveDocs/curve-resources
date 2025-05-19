@@ -27,13 +27,13 @@ Everything needed to manage a loan is available in this interface. The features 
   <figcaption></figcaption>
 </figure>
 
-**`Loan`**   
+**`Loan`**
 This tab provides options to **`Borrow more`** crvUSD, **`Repay`** debt, or **`Self-liquidate`** a loan
 
-**`Collateral`**  
+**`Collateral`**
 Options to **`add`** or **`remove`** collateral from a loan are available here.
 
-**`Deleverage`**   
+**`Deleverage`**
 This tab facilitates loan deleveraging. Find more details [here](#deleveraging-loans).
 
 ---
@@ -109,7 +109,7 @@ More information on how to deleverage a loan [here](#deleveraging-loans).
 !!!info "Leverage"
     Collateral can be leveraged **up to 9x**, depending on the number of bands chosen. If a user wants to use the maximum leverage (9x), they loan will have the minimum number of bands (4). Using the highest number of bands (50) only allows for a leverage of up to 3x. **For the consequences of using different numbers of bands, see [here](./loan-concepts.md#loan-health).**
 
-The process of leveraging effectively involves **repeat trading of crvUSD for collateral and depositing it to maximize the collateral position**. Essentially, all borrowed crvUSD is utilized to acquire more collateral.  
+The process of leveraging effectively involves **repeat trading of crvUSD for collateral and depositing it to maximize the collateral position**. Essentially, all borrowed crvUSD is utilized to acquire more collateral.
 
 !!!warning
     **Caution is advised, as a dip in the collateral price would necessitate repaying the entire amount to reclaim the initial position.**

@@ -10,7 +10,7 @@ This is tracked by two similar but distinct parameters:
 
 *   **Price Oracle:** The pool’s expectation of the asset’s price
 *   **Price Scale:** The price based on the pool’s actual concentration of liquidity
-    
+
 Pools keep track of recent trades within the pool as a variable called **`last_prices`**. The **`price_oracle`** is calculated as an [**exponential moving average**](../pool-creation/understanding-oracles.md#exponential-moving-average) of recent trade prices. The **`price_oracle`** represents what the pool believes is the fair price of the asset .
 
 In contrast, **`price_scale`** is a snapshot of how the liquidity in the pool is _actually_ distributed. For this reason, **`price_scale`** lags **`price_oracle`**. As users make trades, the pool calculates how to [profitably readjust liquidity](../pool-creation/understanding-oracles.md#profits-and-liquidity-balances), and the **`price_scale`** moves in the direction of the **`price_oracle`**.
@@ -37,7 +37,7 @@ An internal function **`tweak_price`** is called every time prices might need to
 *   **`remove_liquidity_one_coin`**
 *   **`exchange`**
 *   **`exchange_underlying`**
-    
+
 The **`tweak_price`** function is a gas expensive function which can execute several state changing operations to state variables_._
 
 #### *Price Oracle*

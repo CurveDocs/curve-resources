@@ -75,7 +75,7 @@ To avoid hard liquidation, it's important to monitor loan health and take approp
 
 
 
-there is also this: 
+there is also this:
 
 Liquidations on Curve Lending and crvUSD work differently to other DeFi loans. There are three types of system operations called liquidations, designed to protect both borrowers and the protocol:
 

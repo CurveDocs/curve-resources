@@ -33,7 +33,7 @@
         const hash = window.location.hash;
         console.log(pathWithoutMd, hash);
         let cleanPath;
-        
+
         if (hash) {
             // Keep slash on path but remove it from end of hash if present
             cleanPath = pathWithoutMd + hash.replace(/\/$/, '');

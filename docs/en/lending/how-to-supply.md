@@ -32,7 +32,7 @@ These vaults are **yield-bearing**, meaning there is **no need for the user to c
 
 ## **Depositing Assets**
 
-In order to supply tokens to the vault, the user must **specify the amount of underlying tokens to add**. Underlying tokens are referred to as the asset in the vault, which is the asset that's borrowed.  
+In order to supply tokens to the vault, the user must **specify the amount of underlying tokens to add**. Underlying tokens are referred to as the asset in the vault, which is the asset that's borrowed.
 When depositing, the UI previews the amount of shares to receive and projects the lend APY after the deposit. For depositing, there is no cap. Users can deposit as much as they want.
 
 <figure markdown="span">
@@ -70,7 +70,7 @@ You must `Unstake` your Vault shares before being able to `Withdraw`.
 
 ## **Withdrawing Assets**
 
-If a user already has some shares, they can withdraw a desired amount of the underlying asset under the **`"Withdraw"`** tab. There is also a "Withdraw in full" option, which burns all the user's shares and converts them into the underlying asset[^2]. 
+If a user already has some shares, they can withdraw a desired amount of the underlying asset under the **`"Withdraw"`** tab. There is also a "Withdraw in full" option, which burns all the user's shares and converts them into the underlying asset[^2].
 
 <figure markdown="span">
   ![](../images/lending/supply_withdraw.png){ width="350" }
@@ -79,13 +79,13 @@ If a user already has some shares, they can withdraw a desired amount of the und
 
 The UI previews the amount of shares to be burned in order to receive the underlying tokens. If a user has staked the vault shares in a gauge, they are required to unstake them under the **`"Unstake"`** tab before being able to withdraw.
 
-[^2]: This method will only work if the vault has enough underlying assets to fully redeem all the shares. 
+[^2]: This method will only work if the vault has enough underlying assets to fully redeem all the shares.
 
 !!!tip "Lending Rates when Depositing or Withdrawing Assets"
     When depositing underlying assets into the vault, the lending rate may decrease depending on the amount of assets added. The reason for this is that when supplying additional assets, the market's Utilization Rate will decrease (as there are now more assets to borrow from), which simultaneously decreases the borrow rate. When the borrow rate decreases, the lending rate decreases as well.
 
-    Vice versa: Withdrawing assets from the vault reduces the total amount of assets. This drives the utilization rate up, which increases the borrow rate and therefore also the lending rate.  
-    
+    Vice versa: Withdrawing assets from the vault reduces the total amount of assets. This drives the utilization rate up, which increases the borrow rate and therefore also the lending rate.
+
     See [here](./overview.md#utilization-lend-apy-and-borrow-apy) for more information about Utilization and how it affects lending and borrow rates
 
 

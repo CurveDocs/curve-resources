@@ -30,7 +30,7 @@ For normal-sized deposits into liquid pools, you can comfortably deposit one, so
 
 ## **Understanding deposit bonuses**
 
-On the screenshot above, you can see GUSD is quite low as it should make up 50% of the total pool because it's a metapool paired against 3crv. So if your plan was to join the gusd-pool, you would ideally deposit GUSD into it.   
+On the screenshot above, you can see GUSD is quite low as it should make up 50% of the total pool because it's a metapool paired against 3crv. So if your plan was to join the gusd-pool, you would ideally deposit GUSD into it.
 As you can see on the screenshot, you would get an instant 0.0082% bonus for depositing GUSD into the pool.
 
 The main reason for this is that GUSD is currently slightly more expensive so if you went to a centralized exchange you might sell it for $1.007 instead of $1. The deposit bonus reflects that.
@@ -74,4 +74,3 @@ The steth pool in this screenshot earns another 2.69% of LDO per year and there 
 *   The LDO distributed is based on the number of people staking their LP tokens, which means your share of rewards gets lower if more people start staking
 *   The price of LDO (price of LDO going up would make the yearly bonus go up)
 *   The size of weekly rewards (48,000 SNX as of today) could also be lowered as Lido reevaluates its partnership with Curve
-

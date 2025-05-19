@@ -55,6 +55,6 @@ Borrowers pay a variable [borrow rate](borrow-rate.md), which adjusts based on t
 
 Want to learn how to use crvUSD step by step? Start with these guides:
 
-- [Creating and closing a loan](./guides/beginner/open-and-close.md)  
-- [Loan Management](./guides/beginner/loan-management.md)  
+- [Creating and closing a loan](./guides/beginner/open-and-close.md)
+- [Loan Management](./guides/beginner/loan-management.md)
 - [Loan Management in Liquidation](./guides/beginner/liquidation.md)

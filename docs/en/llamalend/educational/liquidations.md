@@ -40,7 +40,7 @@ The liquidation range is defined by two prices for the collateral asset. A loan 
 
 ## What happens in liquidation
 
-When a loan enters liquidation range, 
+When a loan enters liquidation range,
 
 ## What to do when in liquidation
 

@@ -4,7 +4,7 @@ Liquidations on Curve work differently from most other DeFi platforms. While mos
 
 Simply put: A loan generally enters liquidation once the price of the collateral falls within the liquidation range. When this happens, losses start to occur. If a loan’s health reaches 0%, the position is fully liquidated. Liquidation does not happen at a single price point—instead, it’s a process that unfolds over time as the collateral price moves within the liquidation range.
 
-This system gives borrowers more time and more control compared to traditional liquidation methods.  
+This system gives borrowers more time and more control compared to traditional liquidation methods.
 **Even if a loan briefly enters the liquidation range, it can potentially recover without being fully liquidated — avoiding the hard-liquidation penalties common on other platforms.**
 
 !!!warning "Important"
@@ -43,7 +43,7 @@ This process can result in some losses (see above), but **it also allows the loa
 
 While a loan is within the liquidation range, the borrower will incur losses that reduce the total value of their collateral. These losses depend on several factors, including market volatility, liquidity conditions, and more. Because of this, it is not possible to precisely predict how much will be lost. This makes it especially important to monitor loan health closely when it approaches or enters the liquidation range.
 
-Another key factor that influences the amount of potential losses is the number of **bands** selected when opening the loan. Learn more about bands and how to customize them when creating a loan [here](todo).
+Another key factor that influences the amount of potential losses is the number of **bands** selected when opening the loan. Learn more about bands and how to customize them when creating a loan [here](./guides/intermediate/custom-bands.md).
 
 !!!question "Do losses always occur?"
     No. Losses occur **only** when a loan is within the liquidation range. As long as the loan remains outside this range, no losses are incurred, regardless of market conditions.

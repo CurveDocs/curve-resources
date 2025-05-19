@@ -33,7 +33,7 @@ Visit the deposit page ([https://curve.finance/#/ethereum/pools/3pool/deposit](h
   <figcaption></figcaption>
 </figure>
 
-You can deposit any single asset or combination of assets in the pool. When depositing, your assets are exchanged for LP tokens that represent your share of all assets in the pool. 
+You can deposit any single asset or combination of assets in the pool. When depositing, your assets are exchanged for LP tokens that represent your share of all assets in the pool.
 
 Deposits can provide additional value through the pool's pricing mechanism:
 

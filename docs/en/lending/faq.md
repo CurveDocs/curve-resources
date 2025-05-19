@@ -33,7 +33,7 @@ Although creating a market is totally permissionless, some important parameters 
 
 ### What is a 'loan discount' and what impact does it have?
 
-A 'loan discount' is a percentage applied to reduce the value of collateral for determining the maximum borrowable amount. A higher loan discount results in a lower borrowing limit, acting as a safety margin for lenders against collateral value declines. 
+A 'loan discount' is a percentage applied to reduce the value of collateral for determining the maximum borrowable amount. A higher loan discount results in a lower borrowing limit, acting as a safety margin for lenders against collateral value declines.
 
 The maximum amount that can be borrowed is also influenced by other factors, such as market conditions and asset volatility. For more details on these factors and their impact on borrowing, see the technical documentation at https://docs.curve.finance/crvUSD/amm/.
 
@@ -60,7 +60,7 @@ When creating a loan, collateral is deposited and equally distributed over a ran
 
 ### When depositing collateral, how do I adjust and select my collateral deposit price range?
 
-The price range can be optionally adjusted and customized during the initial loan creation process. In the UI, the **`"Advanced Mode"`** toggle provides further insights into this range. 
+The price range can be optionally adjusted and customized during the initial loan creation process. In the UI, the **`"Advanced Mode"`** toggle provides further insights into this range.
 
 
 ### What happens when the collateral price drops into my selected range? (soft-liquidation)

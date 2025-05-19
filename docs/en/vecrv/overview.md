@@ -30,9 +30,9 @@ One of the primary incentives for vote-locking is the **boost mechanism**. Users
 
 ### **Governance**
 
-- The veCRV balance represents the voting power of a user in the Curve DAO, which allows them to **vote on on-chain proposals**. 
+- The veCRV balance represents the voting power of a user in the Curve DAO, which allows them to **vote on on-chain proposals**.
 
-- Additionally, a crucial part of Curve governance are **gauge weight votes**. Curve token emissions are created in a way that allows **veCRV holders to choose how future emissions are allocated**. Liquidity pools on Curve can be added to the GaugeController via a successfully passed DAO vote, making them eligible to receive CRV token emissions. The gauge weights determine how much CRV each pool receives. Every **Thursday at 00:00 UTC**, the updated gauge weights are applied.  More info on [Voting](../governance/voting.md) and [Gauge Weights](../reward-gauges/gauge-weights.md)
+- Additionally, a crucial part of Curve governance are **gauge weight votes**. Curve token emissions are created in a way that allows **veCRV holders to choose how future emissions are allocated**. Liquidity pools on Curve can be added to the GaugeController via a successfully passed DAO vote, making them eligible to receive CRV token emissions. The gauge weights determine how much CRV each pool receives. Every **Thursday at 00:00 UTC**, the updated gauge weights are applied.  More info on [Voting](../governance/proposals.md) and [Gauge Weights](../governance/gauges.md)
 
 ---
 
@@ -78,7 +78,7 @@ These incentives work in the following way:
 
 1. A project wants liquidity for their token in a swap pool on Curve
 2. The project puts up a incentive for users to vote for the swap pool in the weekly gauge vote.  This incentive can be of any amount in any token, e.g., $100k in ETH.
-3. If users vote for the pool, they receive a portion of the incentive based on how much veCRV they have, and how much voted for the pool total.  
+3. If users vote for the pool, they receive a portion of the incentive based on how much veCRV they have, and how much voted for the pool total.
 
     e.g., 2 users vote for the pool Alice and Bob.  Alice has 100k veCRV, Bob has 900k veCRV.  The total which voted for the pool was 1M.  The $100k ETH get split between Alice and Bob based on their veCRV, so Alice gets $10k in ETH, Bob gets $90k in ETH.
 

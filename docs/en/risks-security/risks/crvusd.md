@@ -83,6 +83,6 @@ Engaging with crypto assets involves exposure to a range of technological risks 
 4. **Cybersecurity Incidents**: The digital nature of crypto assets makes them a target for hackers, malicious actors, and other cybersecurity threats. Failures, hacks, exploits, protocol errors, and unforeseen vulnerabilities can compromise the security of assets, resulting in theft, loss, or unauthorized access.
 5. **Operational Challenges**: The process of recording and settling transactions on a blockchain depends on the network's stability and performance. Disruptions, high transaction volumes, or network congestion can delay settlement times, affecting the liquidity and availability of assets.
 
---- 
+---
 
 *Disclaimer: The information provided within this context does not constitute financial, legal, or tax advice personalized to your specific circumstances. The content presented is for informational purposes only and should not be relied upon as a substitute for professional advice tailored to your individual needs. It is recommended that you seek the advice of qualified professionals regarding financial, legal, and tax matters before engaging in any activities on Curve.*

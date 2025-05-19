@@ -44,7 +44,7 @@ function calcEmissionsAmount(chosenDate) {
     const yearlyEmissions = initialEmissions / Math.pow(emissionsReductionFactor, i);
     totalEmissions += yearlyEmissions;
   }
-  
+
   const currentYearEmissions = initialEmissions / Math.pow(emissionsReductionFactor, yearsDiff);
   const currentDailyEmissions = currentYearEmissions / 365;
   const partialYearEmissions = currentDailyEmissions * daysInCurrentYear;
@@ -322,9 +322,9 @@ function getCurrentDate() {
 function getNextReductionDate() {
   const startDate = new Date('2020-08-13');
   const currentDate = new Date();
-  
+
   let nextEventDate = new Date(startDate);
-  
+
   while (nextEventDate < currentDate) {
     nextEventDate.setDate(nextEventDate.getDate() + 365);
   }
@@ -368,7 +368,7 @@ function generateDatasets() {
     const amounts = calcAmounts(date);
 
     for (const key in amounts) {
-      
+
       let value;
       if (key === 'percentEmitted' || key === 'inflationRate') {
         value = parseFloat(amounts[key].toFixed(2));

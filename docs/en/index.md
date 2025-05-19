@@ -7,7 +7,7 @@ hide:
 
 Use the information within to explore the world of Curve, a leading **decentralized exchange, stablecoin provider, and lending platform** on Ethereum and EVM-compatible chains.  It's known for it's advanced automated market-makers for stablecoins and volatile assets, and it's unique soft-liquidation system for loans. This documentation provides a clear overview of Curve's diverse features and functionalities. Learn about **Curve pools**, including stablecoin pools and volatile pools, gain insights into the **CRV token**, and understand the innovative **crvUSD stablecoin** and new **lending** platform.
 
-This website offers an easy to understand guide to get to know the whole of Curve's dynamic ecosystem in an easy to read way.  Please see the [technical documentation](https://docs.curve.fi) for developer information.
+This website offers an easy to understand guide to get to know the whole of Curve's dynamic ecosystem in an easy to read way.  Please see the [technical documentation](https://docs.curve.finance) for developer information.
 
 <h2 style="font-weight: bold;">Resources and guides to get started with Curve and the Curve DAO</h2>
 
@@ -76,7 +76,7 @@ This website offers an easy to understand guide to get to know the whole of Curv
 
     Gain insights into Curve's governance structure: Vote Locking, Voting, and Proposals.
 
-    [:octicons-arrow-right-24: Learn More](./governance/understanding-governance.md)
+    [:octicons-arrow-right-24: Learn More](./governance/overview.md)
 
 -   :fontawesome-solid-globe:{ .lg .middle } **Cross-chain**
 

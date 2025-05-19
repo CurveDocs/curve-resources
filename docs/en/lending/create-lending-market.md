@@ -9,7 +9,7 @@ Before attempting to create a lending market, a curve pool for the ASSET paired 
  - [Stableswap Pool](https://docs.curve.finance/references/deployed-contracts/#stableswap-ng) - for two or more pegged assets, e.g., crvUSD/USDC
 
 
-!!!info "Custom Price Oracles" 
+!!!info "Custom Price Oracles"
     If an ASSET/WETH pool is more desirable than an ASSET/crvUSD pool, it is possible to link the ASSET/WETH price to the WETH/crvUSD price using a custom price oracle.  This can then be used to create a lending market.  Please get in contact with the team in telegram if this is the case.
 
 The easiest way to create a pool is through the official [Create Pool UI](https://curve.finance/#/ethereum/create-pool).
@@ -34,21 +34,21 @@ Then for both methods the following additional parameters must be supplied:
 
  - `borrowed_token` : address of the token to be supplied and borrowed
  - `collateral_token` : address of the token to be used as collateral
- - [`band_width_factor`](#band-width-factor-a) : the band width factor (A), most markets use a value between 10-30.  Use lower values for riskier assets.  
+ - [`band_width_factor`](#band-width-factor-a) : the band width factor (A), most markets use a value between 10-30.  Use lower values for riskier assets.
  Input as a normal number, e.g., 10 = 10
- - `fee` : the amm swap fee, most pools use between 0.3-1.5%.  
+ - `fee` : the amm swap fee, most pools use between 0.3-1.5%.
  Input as a $10^{18}$ number, e.g., 0.06% = 6000000000000000.
- - [`loan_discount`](#loan-discount) : the amount to discount collateral for calculating maximum LTV.  This is usually higher than `liquidation_discount` by 3-4%.  
+ - [`loan_discount`](#loan-discount) : the amount to discount collateral for calculating maximum LTV.  This is usually higher than `liquidation_discount` by 3-4%.
  Input as a $10^{18}$ number, e.g., 11% = 110000000000000000.
- - [`liquidation_discount`](#liquidation-discount) : the amount to discount collateral for health and hard-liquidation calculations.  This is usually less than `loan_discount` by 3-4%.  
+ - [`liquidation_discount`](#liquidation-discount) : the amount to discount collateral for health and hard-liquidation calculations.  This is usually less than `loan_discount` by 3-4%.
  Input as a $10^{18}$ number, e.g., 8% = 80000000000000000.
  - `name` : The name of the market
 
 Finally, the following parameters are **optional** for both methods, if they are not supplied they are set to the default values set by the CurveDAO:
 
- - [`min_borrow_rate`](#borrowing-interest-rates) : the minimum borrow rate, as rate/sec.  
+ - [`min_borrow_rate`](#borrowing-interest-rates) : the minimum borrow rate, as rate/sec.
  Input as a $10^{18}$ number, e.g., 1% APR = 317097919
- - [`max_borrow_rate`](#borrowing-interest-rates) : the maximum borrow rate, as rate/sec.  
+ - [`max_borrow_rate`](#borrowing-interest-rates) : the maximum borrow rate, as rate/sec.
  Input as a $10^{18}$ number, e.g., 80% APR = 25367833587
 
 !!!warning "Warning"
@@ -170,7 +170,7 @@ function updateRateGraph() {
         let lendRate = u * rateMin * Math.pow((rateMax / rateMin), u);
         borrowDataPoints.push({x: u * 100, y: borrowRate * 100});
         lendDataPoints.push({x: u * 100, y: lendRate * 100});
-        
+
         // Add data to table array (rounded to 2 decimal places)
         tableData.push({
             utilization: (u * 100).toFixed(2),
@@ -270,7 +270,7 @@ function updateRateGraph() {
             legend: {
                 position: 'bottom'
             }
-        }     
+        }
     };
 
     if (rateChart) {
@@ -278,7 +278,7 @@ function updateRateGraph() {
     }
         rateChart = new Chart(ctx, config);
     }
-  
+
    function updateTable() {
     // Create and populate the table
     const tableContainer = document.getElementById('dataTable');
@@ -296,7 +296,7 @@ function updateRateGraph() {
             <tbody>
     `;
 
-    
+
     for (let i = 0; i < tableData.length; i++) {
         if (i % 5 === 0) { // Only add rows for every 5% step
             const row = tableData[i];
@@ -320,7 +320,7 @@ function updateRateGraph() {
    tableContainer.innerHTML = tableHTML;
    console.log(csv);
    }
- 
+
 </script>
 
 <style>
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const heading = document.querySelector('.collapsible-heading');
   const table = document.querySelector('.collapsible-table');
   const expandText = heading.querySelector('.expand-text');
-  
+
   // Set initial state to collapsed and set initial text
   table.classList.add('collapsed');
   heading.classList.add('collapsed');
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
   heading.addEventListener('click', function() {
     table.classList.toggle('collapsed');
     heading.classList.toggle('collapsed');
-    
+
     // Update expand/collapse text
     expandText.textContent = table.classList.contains('collapsed') ? '(click to expand)' : '(click to collapse)';
   });
