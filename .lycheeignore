@@ -1,0 +1,15 @@
+# Ignore external rate-limited or false-positive URLs
+https://etherscan.io
+https://twitter.com
+https://polygonscan.com
+https://basescan.org
+https://arbiscan.io
+https://snowtrace.io
+https://snowscan.xyz
+https://gnosisscan.io
+https://bscscan.com
+https://bscscan.org
+https://optimistic.etherscan.io
+https://ethgasstation.info
+https://fraxscan.com
+https://www.coingecko.com

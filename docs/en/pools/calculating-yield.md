@@ -19,8 +19,8 @@ It’s important to remember that these numbers are a projections of historical 
 
 These yield types are:
 
-*   **Base vAPY:** Shown on the first line, this number represents the fees that accrue to holders of the LP token based on trading volume. [More Info](https://resources.curve.finance/pools/understanding-curve-pools)​
-*   **$CRV Rewards tAPR:** Shown on the second line, the rewards tAPR represents the rate of $CRV token emissions one would have earned if the pool has a rewards gauge and the user stakes into this rewards gauge. The number is listed as a range of possible rewards, based on the user’s locked veCRV the size of this boost can vary. [More Info](https://resources.curve.finance/reward-gauges/understanding-gauges)​
+*   **Base vAPY:** Shown on the first line, this number represents the fees that accrue to holders of the LP token based on trading volume.​
+*   **$CRV Rewards tAPR:** Shown on the second line, the rewards tAPR represents the rate of $CRV token emissions one would have earned if the pool has a rewards gauge and the user stakes into this rewards gauge. The number is listed as a range of possible rewards, based on the user’s locked veCRV the size of this boost can vary. [More Info](../reward-gauges/overview.md)​
 *   **Incentives Rewards tAPR:** Some pools also choose to stream rewards in the form of a different token — this is represented on the third line if applicable.
 
 **`vAPY`** stands for _“variable annual percentage yield”_, this value calculates an annualized estimate of the trading fee yield based on the past day’s trading activity, inclusive of any effect of compounding.
@@ -74,7 +74,7 @@ For developers, here are more details about trade fees from the technical docume
 
 ## **CRV Rewards tAPR**
 
-The Curve DAO also authorizes some pools to receive bonus rewards from $CRV token emission, as described in the [**Understanding Gauges**](https://resources.curve.finance/reward-gauges/understanding-gauges) section of the documentation. If the pool has an eligible gauge, then the UI displays the range of possible tAPR values users are earning at present, subject to change in the future.
+The Curve DAO also authorizes some pools to receive bonus rewards from $CRV token emission, as described in the [**Understanding Gauges**](../reward-gauges/overview.md) section of the documentation. If the pool has an eligible gauge, then the UI displays the range of possible tAPR values users are earning at present, subject to change in the future.
 
 The formula used here to calculate rewards tAPR:
 

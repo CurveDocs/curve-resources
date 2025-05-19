@@ -68,7 +68,7 @@ Hard liquidation occurs only when the [health](#loan-health) of a loan falls bel
 
 When a loan is hard-liquidated, the associated collateral is removed, and the loan is closed. However, the borrower retains full control over the borrowed funds.
 
-To avoid hard liquidation, it's important to monitor loan health and take appropriate action when necessary. For more details, see [Loan Management in Liquidation](./guides/liquidation.md).
+To avoid hard liquidation, it's important to monitor loan health and take appropriate action when necessary. For more details, see [Loan Management in Liquidation](./guides/beginner/liquidation.md).
 
 ---
 

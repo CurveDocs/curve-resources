@@ -201,7 +201,7 @@ Strategy:
 
 1. Supply collateral (e.g., ETH, wBTC, wstETH) to a crvUSD market
 2. Borrow crvUSD
-3. Supply crvUSD to a market with a higher supplying rate than crvUSD borrow rates, e.g., [Curve Lending Markets](https://lend.curve.fi), [Conic Omnipools](https://conic.finance/), [Silo Finance Markets](https://app.silo.finance/).
+3. Supply crvUSD to a market with a higher supplying rate than crvUSD borrow rates, e.g., [Curve Lending Markets](https://curve.finance/lend), [Curve Stablecoin Pools](https://curve.finance/), [Silo Finance Markets](https://app.silo.finance/).
 
 Risks:
 

@@ -93,9 +93,7 @@ You can withdraw a supplied asset provided there are sufficient available (un-bo
 If there are insufficient available assets for a full withdrawal, you can withdraw the maximum amount currently available. The high utilization rate will cause Borrow APY and Lend APYs to increase, incentivizing borrowers to repay their loans, and more lenders to supply. As available supply increases you can withdraw your remaining balance over time.
 
 !!!warning "Bad Debt"
-    [Bad debt](../crvusd/loan-concepts.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.  It is recommended not to supply assets to markets with large amounts of bad debt.  Use [this notebook](https://try.vyperlang.org/hub/user-redirect/lab/tree/shared/saint-rat/baddebt.ipynb) or see the code on [github here](https://github.com/saint-rat/curve-notebooks/blob/main/bad_debt.ipynb) to find which markets have bad debt.
-
-    *At the time of writing (May, 2024) no bad debt exists on Ethereum markets. On Arbitrum, two markets have bad debt - CRV/crvUSD: 1700 crvUSD bad debt, FXN/crvUSD: 39,000 crvUSD bad debt.*
+    [Bad debt](../crvusd/loan-concepts.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.
 
 ---
 
@@ -117,7 +115,7 @@ Rewards APR is a combination of CRV emission rewards and any other incentives pr
 
 *For a market to have CRV rewards the following conditions must be met:*
 
-1. The Curve DAO must vote to add a [Liquidity Gauge](https://resources.curve.finance/reward-gauges/understanding-gauges/) to the `GaugeController` for that specific lending market
+1. The Curve DAO must vote to add a [Liquidity Gauge](../reward-gauges/overview.md) to the `GaugeController` for that specific lending market
 2. The liquidity gauge must receive a positive [gauge weight](../reward-gauges/gauge-weights.md) through votes from veCRV holders. This will result in CRV being emitted to the liquidity gauge.
 
 Due to the boosting mechanism of liquidity gauges, the Reward APR will be displayed as a range based on the user's boost factor. Learn more about boosting [here](../reward-gauges/boosting-your-crv-rewards.md).

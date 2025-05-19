@@ -31,7 +31,7 @@ To claim trading fees, visit [https://curve.finance/#/ethereum/dashboard](https:
 !!!warning
     The classic UI has not been updated to claim crvUSD fees.
 
-when using the **classic UI** please visit: [https://classic.curve.finance/](https://classic.curve.fi) and look for the green **`Claim`** button in the box labeled **`veCRV 3pool LP claim`** at the bottom of the page.
+when using the **classic UI** please visit: [https://classic.curve.finance/](https://classic.curve.finance/) and look for the green **`Claim`** button in the box labeled **`veCRV 3pool LP claim`** at the bottom of the page.
 
 <figure markdown>
   ![](../images/claim-old.png){ width="700" }

@@ -68,8 +68,7 @@ If additional rewards for a currently streaming token are added mid epoch, both 
 
 For consistent reward distributions, it's advisable to deposit near the end of an epoch. If replenishing mid-epoch, ensure you compute the appropriate amount for a steady distribution rate.
 
-More information [here](https://docs.curve.finance/curve_dao/liquidity-gauge-and-minting-crv/gauges/LiquidityGaugeV6/#deposit_reward_token).
-
+More information [here](https://docs.curve.finance/liquidity-gauges-and-minting-crv/gauges/LiquidityGaugeV6/#deposit_reward_token).
 
 !!! description "`deposit_reward_token(_reward_token: address, _amount: uint256, _epoch: uint256 = WEEK)`"
 

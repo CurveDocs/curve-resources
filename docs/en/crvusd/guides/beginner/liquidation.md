@@ -18,7 +18,7 @@ When your loan enters liquidation (also known as the liquidation range), one way
 - **Repay your full debt:** This is the most straightforward option — you simply repay everything you owe. This can be done at any time, not just during liquidation, and will immediately close your loan. [See how to do that here.](./open-and-close.md#step-6-closing-your-loan)
 
 - **Self-liquidate:** This option is only available while your loan is in the liquidation range. It allows you to close your position before your health reaches 0%, avoiding further liquidation losses *and* skipping the usual liquidation penalty.
-Self-liquidation is only possible if there’s enough crvUSD backing your loan. If it's available, the UI will show the option. [More details here.](todo)
+Self-liquidation is only possible if there’s enough crvUSD backing your loan. If it's available, the UI will show the option.
 
 ---
 
