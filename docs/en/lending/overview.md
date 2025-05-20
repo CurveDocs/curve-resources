@@ -48,9 +48,9 @@ Curve Lending allows users to borrow crvUSD against any collateral token or to b
 | Entity | | Role |
 |:--:|:--|:--|
 | ![Business Llama](../images/lending/llama_head.svg){: style="height:50px"} | **Business Llama** | Business Llama represents the lending market and smart contracts in the system.  This llama uses CRV as collateral, and lends out crvUSD.  Business Llama **charges interest on crvUSD users borrow (Borrow APY)**, and **pays interest to lenders who supply crvUSD (Lend APY)**. |
-| ![bob](../images/lending/bob_head.svg){: style="height:50px"} | **Bob** | Bob always thinks the market will crash, so he **supplies his crvUSD** and Business Llama **lends it out and pays Bob interest (Lend APY)**. |
-| ![alice](../images/lending/alice_head.svg){: style="height:50px"} | **Alice** | Alice wants to go trade meme coins but doesn't want to sell her CRV, so she **deposits CRV and uses it as collateral to borrow crvUSD**.  She feels safe knowing she's better protected here with LLAMMA and soft-liquidations than other lending markets.  She is **charged the Borrow APY on her debt** while the loan is open.  |
-| ![charlie](../images/lending/charlie_head.svg){: style="height:50px"} ![daisy](../images/lending/daisy_head.svg){: style="height:50px"} | **Charlie** & **Daisy** | Charlie and Daisy are just talking to the wrong Business Llama (lending market).  All Curve Lending Markets are one-way, and isolated. They need to go and find the Business Llama that lends out CRV with crvUSD collateral. (Business llama with the red background [here](#markets)) |
+| ![Bob](../images/lending/bob_head.svg){: style="height:50px"} | **Bob** | Bob always thinks the market will crash, so he **supplies his crvUSD** and Business Llama **lends it out and pays Bob interest (Lend APY)**. |
+| ![Alice](../images/lending/alice_head.svg){: style="height:50px"} | **Alice** | Alice wants to go trade meme coins but doesn't want to sell her CRV, so she **deposits CRV and uses it as collateral to borrow crvUSD**.  She feels safe knowing she's better protected here with LLAMMA and soft-liquidations than other lending markets.  She is **charged the Borrow APY on her debt** while the loan is open.  |
+| ![Charlie](../images/lending/charlie_head.svg){: style="height:50px"} ![Daisy](../images/lending/daisy_head.svg){: style="height:50px"} | **Charlie** & **Daisy** | Charlie and Daisy are just talking to the wrong Business Llama (lending market).  All Curve Lending Markets are one-way, and isolated. They need to go and find the Business Llama that lends out CRV with crvUSD collateral. (Business llama with the red background [here](#markets)) |
 
 
 ---
@@ -155,13 +155,13 @@ Soft-liquidation begins if the oracle price of your collateral falls into one of
 
 Let's examine what soft-liquidation looks like in a simplified example with a **single band** in an **ETH/crvUSD LLAMMA market**. This example illustrates that if the price declines by 20% within the band, 20% of the ETH is converted to crvUSD. When the price is below the lower bound of the band (<\$990), all the collateral is converted to crvUSD (100% crvUSD, 0% ETH). Conversely, when the price exceeds the upper bound (>\$1000), all collateral remains as ETH (100% ETH, 0% crvUSD).
 
-![single llamma band](../images/lending/single_llamma_band.svg#only-light){: .centered style="height:250px" }
-![single llamma band](../images/lending/single_llamma_band_dark.svg#only-dark){: .centered style="height:250px" }
+![single LLAMMA band](../images/lending/single_llamma_band.svg#only-light){: .centered style="height:250px" }
+![single LLAMMA band](../images/lending/single_llamma_band_dark.svg#only-dark){: .centered style="height:250px" }
 
 The below image represents **multiple bands** through soft-liquidation.  Note the higher bands than the current price are fully converted to crvUSD and the lower bands are still ETH.
 
-![llamma bands](../images/lending/llamma_bands.svg#only-light){: .centered style="height:250px" }
-![llamma bands](../images/lending/llamma_bands_dark.svg#only-dark){: .centered style="height:250px" }
+![LLAMMA bands](../images/lending/llamma_bands.svg#only-light){: .centered style="height:250px" }
+![LLAMMA bands](../images/lending/llamma_bands_dark.svg#only-dark){: .centered style="height:250px" }
 
 The value of traded assets remains as loan collateral throughout soft-liquidation. For example, if ETH is swapped for crvUSD, the value of that crvUSD is added to the collateral backing the loan. Additionally, **LLAMMA works both ways; if prices increase through your bands, any swapped collateral will be traded back for your initial collateral** (e.g., ETH swapped to crvUSD as the price decreased will be swapped back to ETH as the price increases).
 

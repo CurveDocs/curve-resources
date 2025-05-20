@@ -16,5 +16,12 @@ repos:
         types: [markdown]
         pass_filenames: false
         always_run: true
-        args: ["--no-progress", "./docs/**/*.md"]
+        args: ["--no-progress", "./docs/**/*.md", "mkdocs.yml"]
         stages: [post-commit]
+
+  - repo: https://github.com/errata-ai/vale
+    rev: v3.3.0
+    hooks:
+      - id: vale
+        args: ["--config=.vale.ini"]
+        files: \.md$

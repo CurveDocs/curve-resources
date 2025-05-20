@@ -15,7 +15,7 @@ CRV can be acquired in two ways:
 
 ## **Where can I find the release schedule?**
 
-You can find the release schedule for the next six years at this address on the main UI: [**https://dao-old.curve.finance/inflation/**](https://dao-old.curve.finance/inflation/)​.
+You can find the release schedule for the next six years at this address on the old UI: [Old DAO UI: Inflation](https://dao-old.curve.finance/inflation/)​.
 
 There is also detailed documentation in the [Supply & Distribution](./supply-distribution.md#crv-emissions-for-the-next-10-years) about the CRV emissions for the next 10 years, and the [supply calculator](./supply-distribution.md#supply-calculator) can be used to see the emissions for any year.
 
@@ -23,7 +23,7 @@ There is also detailed documentation in the [Supply & Distribution](./supply-dis
 
 There are three ways to check the circulating supply:
 
-* On the main UI here: [**https://dao-old.curve.finance/inflation/**](https://dao-old.curve.finance/inflation/).
+* On the main UI here: [Old DAO UI: Inflation](https://dao-old.curve.finance/inflation/).
 
 * In the [supply calculator](./supply-distribution.md#supply-calculator) in these resources by looking at the statistics for today.
 

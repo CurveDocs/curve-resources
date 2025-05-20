@@ -1,10 +1,10 @@
-You can deploy the gauge directly **through the UI if the gauge is for a pool**.  To do so go to the following page: [https://curve.finance/#/ethereum/deploy-gauge](https://curve.finance/#/ethereum/deploy-gauge).  If you would like **to deploy a gauge for a lending market**, then follow the guide on the [Create Lending Market](../lending/create-lending-market.md#deploying-a-gauge) page.
+You can deploy the gauge directly **through the UI if the gauge is for a pool**.  To do so go to the following page: [Curve Finance: Deploy Gauge](https://curve.finance/dex/ethereum/deploy-gauge).  If you would like **to deploy a gauge for a lending market**, then follow the guide on the [Create Lending Market](../lending/create-lending-market.md#deploying-a-gauge) page.
 
 ---
 
 # **Deploying a Pool Gauge with the UI**
 
-Go to the Curve page to deploy a gauge here: [https://curve.finance/#/ethereum/deploy-gauge](https://curve.finance/#/ethereum/deploy-gauge).  This page has a switch with 2 options:
+Go to the Curve page to deploy a gauge here: [Curve Finance: Deploy Gauge](https://curve.finance/dex/ethereum/deploy-gauge).  This page has a switch with 2 options:
 
 - [**Deploy Mainnet Gauge**](#deploy-mainnet-pool-gauge) - Deploy a gauge for a pool on Ethereum Mainnet
 - [**Deploy Sidechain Gauge**](#deploy-sidechain-pool-gauge) - Deploy a gauge for a pool on any other chain Curve has deployed to.
@@ -25,7 +25,7 @@ A pool is classified as *old* if it is not a New Generation (NG) pool.  If the p
 
 ## **Deploy Mainnet Pool Gauge**
 
-Go to the [Deploy Gauge](https://curve.finance/#/ethereum/deploy-gauge) page, and make sure the switch in the right hand corner is set to the left as shown below.  The  "Deploy Mainnet Gauge" screen should be visible as below.
+Go to the [Curve Finance: Deploy Gauge](https://curve.finance/dex/ethereum/deploy-gauge) page, and make sure the switch in the right hand corner is set to the left as shown below.  The  "Deploy Mainnet Gauge" screen should be visible as below.
 
 ![Deploy Mainnet Gauge UI](../images/ui/deploy-mainnet-gauge.png){: .centered }
 
@@ -44,7 +44,7 @@ Sidechain gauges (the same as L2 gauges) work differently to a mainnet gauge.  T
 !!!warning "Warning"
     The same address **must** deploy the gauge both on mainnet and the sidechain for this process to work.
 
-To deploy a sidechain gauge go to the [Deploy Gauge](https://curve.finance/#/ethereum/deploy-gauge) page. The click the  switch so it's on the right as shown below.  The "Deploy Sidechain Gauge" screen will then be shown.
+To deploy a sidechain gauge go to the [Curve Finance: Deploy Gauge](https://curve.finance/dex/ethereum/deploy-gauge) page. The click the  switch so it's on the right as shown below.  The "Deploy Sidechain Gauge" screen will then be shown.
 
 ![Deploy Sidechain Gauge UI](../images/ui/deploy-sidechain-gauge.png){: .centered }
 
@@ -91,7 +91,7 @@ To deploy a sidechain gauge we have to deploy 2 different gauges which link toge
 - **Root (Parent) Gauge** - This is the gauge on Ethereum Mainnet, it is deployed after the child and links the child gauge to mainnet.  The root gauge can be added to the gauge controller, allowing CRV inflation rewards to flow to the sidechain gauge.
 
 !!!warning
-    When deploying the Child Gauge and Root Gauge for a sidechain pool, they must be deployed using the **same address** and the **same salt** for **both gauges**.  This creates the same address for the gauge on the sidechain and ethereum.  If the addresses are not the same, the gauges cannot be linked.
+    When deploying the Child Gauge and Root Gauge for a sidechain pool, they must be deployed using the **same address** and the **same salt** for **both gauges**.  This creates the same address for the gauge on the sidechain and Ethereum.  If the addresses are not the same, the gauges cannot be linked.
 
 ## **Deploying the Sidechain (Child) Gauge**
 
@@ -109,13 +109,13 @@ To call the function first input the `_lp_token` address for the pool, this is t
 
 After the transaction is confirmed the sidechain gauge is deployed.
 
-## **Deploying the Ethereum Mainchain Root (Parent) Gauge**
+## **Deploying the Ethereum Root (Parent) Gauge**
 
-After the sidechain child gauge has been successfully deployed, the Ethereum mainchain root gauge can be deployed.  To do so go back to the [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.finance/references/deployed-contracts/#evm-sidechain-gauges).  You should see the table below:
+After the sidechain child gauge has been successfully deployed, the Ethereum root gauge can be deployed.  To do so go back to the [Deployment Addresses for Sidechain Gauge Factories](https://docs.curve.finance/references/deployed-contracts/#evm-sidechain-gauges).  You should see the table below:
 
 ![Root Liquidity Gauge Factory Contracts](../images/rootliquidityguagefactories.png){: .centered }
 
-The correct `RootLiquidityGaugeFactory` contract on Ethereum must be chosen.  Most root gauges for sidechains are deployed using the top contract boxed in blue, but some sidechains use their own special contracts, e.g., see the contract for Fractal boxed in red, or the BSC contract boxed in yellow.  If there isn't a specific `RootLiquidityGaugeFactory` for your sidechain, then use the first one.  Once the correct contract is found click on the address and you will be taken to the contract page on etherscan.
+The correct `RootLiquidityGaugeFactory` contract on Ethereum must be chosen.  Most root gauges for sidechains are deployed using the top contract boxed in blue, but some sidechains use their own special contracts, e.g., see the contract for Fractal boxed in red, or the BSC contract boxed in yellow.  If there isn't a specific `RootLiquidityGaugeFactory` for your sidechain, then use the first one.  Once the correct contract is found click on the address and you will be taken to the contract page on Etherscan.
 
 Once again go to **`Contract -> Write Contract -> Connect to Web3`** to connect your wallet as shown above.  **This must be the same wallet that deployed the sidechain child gauge**.  Then click on the `deploy_gauge` function.
 

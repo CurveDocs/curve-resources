@@ -34,7 +34,7 @@ Admin fee is the share of trading fees that are received by governance participa
 
 Base pools are an old Curve concept, yet still working in some pools such as GUSD.  Base pool tokens can be paired with other tokens to create new pools, e.g. 3crv pool token (USDT, USDC, DAI) paired with GUSD.
 
-## **Boosting (also boosties)**
+## **Boosting**
 
 The act of locking your CRV to earn more CRV on your provided liquidity.
 
@@ -50,11 +50,11 @@ Decentralized finance (commonly referred to as DeFi) is an experimental form of 
 
 ## **Metamask**
 
-Metamask is an Ethereum wallet that allows you to interact with Curve and other dapps. You can also use it with Ledger and Trezor hardware wallets. It's the most popular Ethereum web wallet and is available as an add-on for most browsers.
+Metamask is an Ethereum wallet that allows you to interact with Curve and other DApps. You can also use it with Ledger and Trezor hardware wallets. It's the most popular Ethereum web wallet and is available as an add-on for most browsers.
 
 ## **Metapool**
 
-Metapools are a type of pool on Curve composed of one asset as well as as LP tokens from another pool.
+Metapools are a type of pool on Curve composed of one asset as well as LP tokens from another pool.
 
 ## **Llamas**
 

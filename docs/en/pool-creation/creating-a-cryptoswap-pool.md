@@ -1,6 +1,6 @@
 <h1>Creating a Cryptoswap Pool</h1>
 
-AA Cryptoswap pool (Curve V2) is a liquidity pool for two or three volatile assets that maintains equal value across all assets. For example, in an WETH/USDT pool with WETH at \$1,000, 10 WETH (\$10,000) would be balanced with 10,000 USDT.  See the [Pool overview](../pools/overview.md) for a simple explanation of CryptoSwap pools.
+AA Cryptoswap pool (Curve V2) is a liquidity pool for two or three volatile assets that maintains equal value across all assets. For example, in an WETH/USDT pool with WETH at \$1,000, 10 WETH (\$10,000) would be balanced with 10,000 USDT.  See the [Pool overview](../pools/overview.md) for a simple explanation of Cryptoswap pools.
 
 !!!warning "Warning"
     Due to safety reasons, plain ETH cannot be used in Cryptoswap pools. Instead, please use [wrapped ETH (WETH)](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
@@ -9,7 +9,7 @@ AA Cryptoswap pool (Curve V2) is a liquidity pool for two or three volatile asse
 ---
 
 
-*The following documentation will present a rundown of the process of creating such a pool using the [Pool Creation Interface](https://curve.finance/#/ethereum/create-pool):*
+*The following documentation will present a rundown of the process of creating such a pool using the [Pool Creation Interface](https://curve.finance/dex/ethereum/create-pool):*
 
 ## **Tokens in Pool**
 
@@ -74,7 +74,7 @@ The basic parameters include the fees charged to users who interact with the poo
 - **`Mid Fee`**: This is the minimum fee and is charged when the pool is perfectly balanced.
 - **`Out Fee`**: This is the maximum fee and is charged when the pool is completely out of balance.
 
-In CryptoSwap pools, the liquidity is concentrated. These initial liquidity concentration prices are fetched from [CoinGecko](https://www.coingecko.com/). If the tokens do not exist there or for some reason cannot be fetched, the user must set these values manually.
+In Cryptoswap pools, the liquidity is concentrated. These initial liquidity concentration prices are fetched from [CoinGecko](https://www.coingecko.com/). If the tokens do not exist there or for some reason cannot be fetched, the user must set these values manually.
 
 
 ### **Advanced Parameter Configuration**

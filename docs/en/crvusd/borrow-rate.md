@@ -19,7 +19,7 @@ The UI shows both the current and expected future borrow rate for each market:
 <figcaption></figcaption>
 </figure>
 
-The future rate is the new rate to which it will udpate once someone interacts with the market.
+The future rate is the new rate to which it will update once someone interacts with the market.
 
 <figure markdown="span">
     ![Image title](../images/crvusd/education/borrow-rate/new_rate_light.png#only-light){ width="350" }

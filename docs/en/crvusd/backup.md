@@ -141,7 +141,7 @@ Learn more:
 
 # **Self-liquidation**
 
-Self-liquidation allows users to voluntarily close their position before reaching hard-liquidation, typically when they're already in soft-liquidation. This feature helps users recover their remaining collateral while avoiding the [liquidation_discount](./loan-concepts.md#market-parameters) penalty.
+Self-liquidation allows users to voluntarily close their position before reaching hard-liquidation, typically when they're already in soft-liquidation. This feature helps users recover their remaining collateral while avoiding the [`liquidation_discount`](./loan-concepts.md#market-parameters) penalty.
 
 Here's a simple example:
 

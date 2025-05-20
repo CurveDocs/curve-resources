@@ -88,7 +88,7 @@ The Peg Keepers are contracts uniquely enabled to mint and absorb debt in crvUSD
 
 ### Under what circumstances can the Peg Keepers mint or burn crvUSD?
 
-Each Peg Keeper targets a specific [**Peg Keeper pool**](https://curve.finance/#/ethereum/pools?filter=crvusd). A Peg Keeper pool is a [**Curve v1 pool**](../pools/overview.md#stableswap-curve-v1) allowing trading between crvUSD and a blue chip stablecoin. The Peg Keepers are responsible for trying to balance these pools by trading at a profit. The Peg Keepers can only mint crvUSD to trade into their associated pools when its pool balance of crvUSD is too low, or it can repurchase and burn the crvUSD if its pool balance is too high.
+Each Peg Keeper targets a specific [**Peg Keeper pool**](https://curve.finance/dex/ethereum/pools?filter=crvusd). A Peg Keeper pool is a [**Curve v1 pool**](../pools/overview.md#stableswap-curve-v1) allowing trading between crvUSD and a blue chip stablecoin. The Peg Keepers are responsible for trying to balance these pools by trading at a profit. The Peg Keepers can only mint crvUSD to trade into their associated pools when its pool balance of crvUSD is too low, or it can repurchase and burn the crvUSD if its pool balance is too high.
 
 
 ### What is the relationship between a Peg Keeper's debt and the total debt in crvUSD?
@@ -146,4 +146,4 @@ Yes, please see the audits here [**Curve Stablecoin Audits**](https://docs.curve
 
 ### Can I see the code?
 
-The code is publicly available on the [**Curve Github**](https://github.com/curvefi/curve-stablecoin).
+The code is publicly available on the [**Curve GitHub**](https://github.com/curvefi/curve-stablecoin).

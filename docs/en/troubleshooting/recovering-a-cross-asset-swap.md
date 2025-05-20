@@ -1,5 +1,5 @@
 !!!info "This is a very old guide"
-    This feature was deprecated more than 12 months ago and this information is provided solely in the rare event someone still needs to recover a swap cross asset from from the synthetix era.
+    This feature was deprecated more than 12 months ago and this information is provided solely in the rare event someone still needs to recover a swap cross asset from the Synthetix era.
 
 If Curve has lost transaction of your cross asset swap, do not panic, there is a simple way to recover it.
 

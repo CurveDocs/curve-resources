@@ -39,7 +39,7 @@ These parameters may also be updated in the future by the Curve DAO by calling t
 
 The fees are specifically earned or charged every time a user interacts with a pool contract through a transaction which may affect the pool balances. For example, directly calling the **`exchange`** function would rebalance the pool, so a fee clearly applies. If you add or remove liquidity in an imbalanced fashion, this would also adjust the ratios of tokens within the pool and thus be subject to fees. No fees are charged if a user adds coin in a balanced proportion or on removal.
 
-When you call methods to preview how many tokens you might receive for interacting with a pool (ie **`get_dy`** or **`calc_token_amount`**) the values they return are usually but not always inclusive of any fees — the UI calculations are intended to make any corrections where appropriate, but be sure to ask the support team if you have questions.
+When you call methods to preview how many tokens you might receive for interacting with a pool (i.e. **`get_dy`** or **`calc_token_amount`**) the values they return are usually but not always inclusive of any fees — the UI calculations are intended to make any corrections where appropriate, but be sure to ask the support team if you have questions.
 
 Theoretically, one could calculate the base vAPY for any period by calculating the fees for every transaction and summing over the entire range. However, the Curve UI utilizes a simpler methodology to calculate the base vAPY, where **`t`** is the time in days:
 
@@ -112,10 +112,10 @@ All pools may permissionlessly stream other token rewards without approval from 
 
 ![tAPR Rewards](../images/ui/tAPR.webp)
 
-​[**Pool Overview Page**](https://curve.finance/#/ethereum/pools)​
+​[**Pool Overview Page**](https://curve.finance/dex/ethereum/pools)​
 
 ![stETH Pool Overview](../images/ui/steth-overview.webp)
 
-​[**stETH Pool Page**](https://curve.finance/#/ethereum/pools/steth/deposit)​
+​[**stETH Pool Page**](https://curve.finance/dex/ethereum/pools/steth/deposit)​
 
 Further information on these extra incentives is available in the developer documentation.

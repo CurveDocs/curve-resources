@@ -10,7 +10,7 @@ What makes borrowing on Curve unique is that **there is no fixed collateralizati
 
 # **Connect Wallet**
 
-To start borrowing, go to [Curve's crvUSD markets](https://curve.finance/crvusd/ethereum/markets/), then connect your wallet and select your wallet provider (e.g., Rabby or MetaMask).
+To start borrowing, go to [Curve's crvUSD markets](https://curve.finance/crvusd/ethereum/markets/), then connect your wallet and select your wallet provider (e.g., Rabby or Metamask).
 
 <figure markdown="span">
   ![Image title](../../../images/crvusd/guides/open-close/connect_light.png#only-light){ width="500" }

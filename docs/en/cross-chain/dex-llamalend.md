@@ -1,4 +1,4 @@
-<h1>Cross-chain: DEX & LlamaLend</h1>
+<h1>Cross-chain: DEX & Llamalend</h1>
 
 ## **DEX (Decentralized Exchange)**
 

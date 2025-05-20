@@ -5,7 +5,7 @@ Before taking a crvUSD loan a user should consider two factors that will influen
 * How much risk they would like to take?
 * What management style will they employ?  Will they be actively managing their loan i.e., adding, removing collateral and repaying debt.  Or will they be passively taking a loan and leaving it in [LLAMMA's](./loan-concepts.md#llamma-and-liquidations) hands?
 
-Risk and Management styles can be thought of as spectrums, and they can be visualized in the image below.
+Risk and Management styles can be thought of as a spectrum, and they can be visualized in the image below.
 
 ![loan strategies](../images/crvusd/loan_strategies.svg#only-light){: .centered }
 ![loan strategies](../images/crvusd/loan_strategies_dark.svg#only-dark){: .centered }
@@ -19,7 +19,7 @@ The above image shows 4 main quadrants:
 Example loans for each of the 4 quadrants are given in the [loan example section here](#loan-examples).  The section directly below shows soft-liquidation losses based on user data, so prospective users can estimate losses.
 
 !!!warning "Actively managing loans is gas intensive"
-    Actively managing loans is expensive when factoring in gas usage, loan size needs to be sufficient to offset this expense.  As a general rule allow $\text{USD} \approx \text{gasPrice} \times 4$ to add collateral or repay debt, e.g. if gasPrice is 10 gWei allow \$40 to add collateral or repay debt.
+    Actively managing loans is expensive when factoring in gas usage, loan size needs to be sufficient to offset this expense.  As a general rule allow $\text{USD} \approx \text{gasPrice} \times 4$ to add collateral or repay debt, e.g. if `gasPrice` is 10 `Gwei` allow \$40 to add collateral or repay debt.
 
 ---
 
@@ -90,7 +90,7 @@ Here's a list of the plots that can be shown/hidden and their meaning:
 * `CV in crvUSD`: The value of the crvUSD held as collateral.  `<asset>` is swapped to crvUSD through the soft-liquidation process to protect from further declines in price.
 * `Total CV`: Total Collateral Value.  `CV in <asset>` plus `CV in crvUSD`.
 * `Debt Value`: The total amount of debt owed (this includes interest)
-* `AAVE/Spark Liq Price`: The price at which this loan would be liquidated in AAVE/Spark.  When the `Oracle Price` is lower than this price, the loan would be liquidated/not possible.
+* `Aave/Spark Liq Price`: The price at which this loan would be liquidated in Aave/Spark.  When the `Oracle Price` is lower than this price, the loan would be liquidated/not possible.
 
 **Percentage (Right Axis) plots**:
 *These plots only relate to the right axis, the value axis has no meaning for them*
@@ -152,7 +152,7 @@ The user fell into soft-liquidation around the 15-day mark and experienced healt
 
 Throughout this period, the user seemed comfortable in soft-liquidation, only losing ~22% of their collateral from soft-liquidation and borrowing interest. Their collateral was fully swapped to crvUSD multiple times, protecting them from further price declines.
 
-LLAMMA saved the user from hard-liquidation that would have occurred in any other system, which can be seen by making the `AAVE/Spark Liquidation Price` plot visible.  Even after reducing the LTV on the 18th day, the user would have been liquidated on other platforms by the two wicks below $1767 on the 25th and 55th days, preventing them from recouping value during the subsequent price appreciation.
+LLAMMA saved the user from hard-liquidation that would have occurred in any other system, which can be seen by making the `Aave/Spark Liquidation Price` plot visible.  Even after reducing the LTV on the 18th day, the user would have been liquidated on other platforms by the two wicks below $1767 on the 25th and 55th days, preventing them from recouping value during the subsequent price appreciation.
 
 This loan shows that **actively managing high risk loans can result in outcomes not possible in any other system**.
 
@@ -185,7 +185,7 @@ This loan started with **57.07 wstETH collateral**, with **N=4** and **102k crvU
 
 This loan is a great example of the power of LLAMMA and soft-liquidations.  The user spent **more than 50% of the loan time under the soft-liquidation range**.  Yet the **loss from soft-liquidation fees was only 6.37%**.  While under the soft-liquidation range the user was shielded from any further losses in the wstETH price as all their collateral was converted to crvUSD.  Yet when the price rose the user benefited from price increases as their collateral was swapped back to wstETH.
 
-The AAVE/Spark Liq price plot for this loan shows that this loan would not be possible in competitor systems except from the 91st day when debt was lower and wstETH price rose.
+The Aave/Spark Liq price plot for this loan shows that this loan would not be possible in competitor systems except from the 91st day when debt was lower and wstETH price rose.
 
 ---
 
@@ -195,7 +195,7 @@ The AAVE/Spark Liq price plot for this loan shows that this loan would not be po
 
 As crvUSD is minted with high quality collateral in crvUSD markets, a user can usually make profit by minting crvUSD and supplying it elsewhere, especially to riskier markets.  This strategy is simple, you borrow crvUSD and supply it at higher rates, making the difference:
 
-$$\text{profitRate = supplyRate - borrowRate}$$
+`profitRate` = `supplyRate` - `borrowRate`
 
 Strategy:
 

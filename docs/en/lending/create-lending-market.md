@@ -12,7 +12,7 @@ Before attempting to create a lending market, a curve pool for the ASSET paired 
 !!!info "Custom Price Oracles"
     If an ASSET/WETH pool is more desirable than an ASSET/crvUSD pool, it is possible to link the ASSET/WETH price to the WETH/crvUSD price using a custom price oracle.  This can then be used to create a lending market.  Please get in contact with the team in telegram if this is the case.
 
-The easiest way to create a pool is through the official [Create Pool UI](https://curve.finance/#/ethereum/create-pool).
+The easiest way to create a pool is through the official [Create Pool UI](https://curve.finance/dex/ethereum/create-pool).
 
 Guides are available for creating a [Stableswap Pool](../pool-creation/creating-a-stableswap-pool.md), and creating a [Cryptoswap Pool](../pool-creation/creating-a-cryptoswap-pool.md)
 
@@ -36,7 +36,7 @@ Then for both methods the following additional parameters must be supplied:
  - `collateral_token` : address of the token to be used as collateral
  - [`band_width_factor`](#band-width-factor-a) : the band width factor (A), most markets use a value between 10-30.  Use lower values for riskier assets.
  Input as a normal number, e.g., 10 = 10
- - `fee` : the amm swap fee, most pools use between 0.3-1.5%.
+ - `fee` : the AMM swap fee, most pools use between 0.3-1.5%.
  Input as a $10^{18}$ number, e.g., 0.06% = 6000000000000000.
  - [`loan_discount`](#loan-discount) : the amount to discount collateral for calculating maximum LTV.  This is usually higher than `liquidation_discount` by 3-4%.
  Input as a $10^{18}$ number, e.g., 11% = 110000000000000000.
@@ -52,7 +52,7 @@ Finally, the following parameters are **optional** for both methods, if they are
  Input as a $10^{18}$ number, e.g., 80% APR = 25367833587
 
 !!!warning "Warning"
-    Parameters are given in different formats: `A` is just given as itself, e.g., 30 = 30, but others like `loan_discount` are given as a a $10^{18}$ number, e.g., 11% = 110000000000000000.
+    Parameters are given in different formats: `A` is just given as itself, e.g., 30 = 30, but others like `loan_discount` are given as a $10^{18}$ number, e.g., 11% = 110000000000000000.
 
 Using the `OneWay Lending Factory` will add the pool to the Curve UI and deploy all contracts needed for the market to function.
 
