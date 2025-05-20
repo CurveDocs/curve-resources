@@ -2,7 +2,7 @@ On Curve Finance, [CRV inflation](../crv-token/supply-distribution.md#community-
 
 Many Curve pools and lending markets have Reward Gauges. By staking liquidity provider tokens in these gauges, users earn rewards proportional to their share of the total staked value.
 
-Some special gauges also exist to fund specific initiatives, like Vyper development (veFunder-vyper).
+Some special gauges also exist to fund specific initiatives, like Vyper development (`veFunder-vyper`).
 
 # **Gauge Weights**
 

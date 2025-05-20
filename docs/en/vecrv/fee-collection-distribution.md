@@ -89,8 +89,8 @@ This happened manually by hardcoding in different exchange routes for each token
 
 1. `wstETH` to `stETH` via unwrapping (wstETH Burner)
 2. `stETH` to `ETH` via swap through stETH/ETH curve pool (SwapStableBurner)
-3. `ETH` to `USDT` via swap through tricrypto pool (CryptoSwapBurner)
-4. `USDT` to `3CRV` via depositing into 3pool (StableDepositBurner)
+3. `ETH` to `USDT` via swap through Tricrypto pool (CryptoswapBurner)
+4. `USDT` to `3CRV` via depositing into 3Pool (StableDepositBurner)
 
 This process worked well, but became cumbersome when an exchange route was needed for every coin in every pool.  The exchanges also needed to be called manually.
 
@@ -109,7 +109,7 @@ The Fee splitter is a contract to leverage a portion of generated admin fees to 
 
 The fee splitter currently manages admin fees from crvUSD minting markets. It distributes the majority to the Curve DAO (veCRV holders), while allocating a small fraction to scrvUSD to stimulate crvUSD supply growth, potentially increasing future DAO revenue.
 
-The Fee Splitter's flexible design allows for DAO-approved addition of new products. The DAO (veCRV holders) determines fee allocation weights for each product, with some products capable of requesting variable amounts within DAO-set limits. For instance, scrvUSD's allocation fluctuates based on the ratio of staked to circulating crvUSD, subject to the DAO-defined maximum and minimum allocation weights.
+The flexible design of the Fee Splitter allows for DAO-approved addition of new products. The DAO (veCRV holders) determines fee allocation weights for each product, with some products capable of requesting variable amounts within DAO-set limits. For instance, scrvUSD's allocation fluctuates based on the ratio of staked to circulating crvUSD, subject to the DAO-defined maximum and minimum allocation weights.
 
 ![Fee Splitter](../images/fee_collection/fee_splitter.svg#only-light){ : .centered}
 ![Fee Splitter](../images/fee_collection/fee_splitter_dark.svg#only-dark){ : .centered}

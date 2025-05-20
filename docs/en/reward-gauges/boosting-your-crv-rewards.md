@@ -37,7 +37,7 @@ If the current boost hasn't updated, it may be necessary to claim CRV from each 
 !!!info  "Locking your Boost"
     Boosts are only updated when a withdrawal, deposit, or claim is made from a liquidity gauge
 
-Visit the [**old**](https://classic.curve.finance/pools/?see=0x0000000000000000000000000000000000000000) or [**new**](https://curve.finance/#/ethereum/dashboard) dashboard to see all your pools!
+Visit the [**old**](https://classic.curve.finance/pools/?see=0x0000000000000000000000000000000000000000) or [**new**](https://curve.finance/dex/ethereum/dashboard) dashboard to see all your pools!
 
 ## **Formula**
 

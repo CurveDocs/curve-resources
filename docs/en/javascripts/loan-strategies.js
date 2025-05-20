@@ -202,7 +202,7 @@ new Chart(ctx, {
         pointHitRadius: 10
         },
         {
-        label: 'AAVE/Spark Liq Price',
+        label: 'Aave/Spark Liq Price',
         data: data.aaveLiqPrice,
         borderColor: 'rgba(169, 196, 235, 1)',
         hidden: true,

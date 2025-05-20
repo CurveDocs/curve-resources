@@ -11,7 +11,7 @@ Yet trading 1 crvUSD would still yield approximately 1.001 USDT due to the pool'
 
 [Learn more about Stableswap pools](./overview.md)
 
-*This guide demonstrates the deposit process using the [3Pool](https://curve.finance/#/ethereum/pools/3pool/deposit)  (USDC/USDT/DAI), - one of Curve's most popular stablecoin pools. You can follow along with the written guide or watch the video below:*
+*This guide demonstrates the deposit process using the [3Pool](https://curve.finance/dex/ethereum/pools/3pool/deposit)  (USDC/USDT/DAI), - one of Curve's most popular stablecoin pools. You can follow along with the written guide or watch the video below:*
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OsRrGij9Ou8?si=zglQ5gl1J9LkbLPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -26,7 +26,7 @@ Both steps can be combined into a single [**`Deposit and Stake`**](#depositing-a
 
 ## **Depositing**
 
-Visit the deposit page ([https://curve.finance/#/ethereum/pools/3pool/deposit](https://curve.finance/#/ethereum/pools/3pool/deposit)). You will need at least one of the three tokens in the pool to deposit. The 3Pool pool consists of USDT, USDC, and DAI.
+Visit the deposit page ([https://curve.finance/dex/ethereum/pools/3pool/deposit](https://curve.finance/dex/ethereum/pools/3pool/deposit)). You will need at least one of the three tokens in the pool to deposit. The 3Pool pool consists of USDT, USDC, and DAI.
 
 <figure markdown>
   ![](../images/3crv_deposit.png){ width="300" }

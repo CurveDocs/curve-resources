@@ -4,7 +4,7 @@ The [Curve UI](https://curve.finance/) offers a variety of charts related to **t
 
 LP tokens are tokens received upon depositing assets into a liquidity pool. These tokens represent the holder's share of the pool and can be redeemed for a portion of the funds, plus any fees accrued over time. Similar to other tokens, their value is contingent on the prices of the underlying assets in the liquidity pool.
 
-Navigating to the **`Chart`** tab reveals a graphical interface of the LP Token price in relation to, for example, USDT. In the top right corner, options are available to expand/minimize or refresh the chart, as well as to adjust its timeframe.
+Navigating to the **`Chart`** tab reveals a graphical interface of the LP Token price in relation to, for example, USDT. In the top right corner, options are available to expand/minimize or refresh the chart, as well as to adjust its time frame.
 
 <figure markdown>
   ![](../images/lp_chart.png){ width="600" }

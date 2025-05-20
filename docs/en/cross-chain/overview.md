@@ -11,7 +11,7 @@ The Curve ecosystem consists of five key components with varying cross-chain ava
 - [**Curve Assets** (CRV, crvUSD, scrvUSD)](curve-assets.md) - Available on many chains through native bridges and LayerZero.
 - **CrvUSD Minting** - Ethereum-only, with no plans for deployment to other networks.
 - **CurveDAO** -  Ethereum-only, with no plans for cross-chain deployment.
-- **CRV Rewards** - CRV inflation rewards are available to pools and llamalend markets on all chains that Curve supports, but the DAO must vote to add the market to the Gauge Controller (controls which markets can get rewards).
+- **CRV Rewards** - CRV inflation rewards are available to pools and Llamalend markets on all chains that Curve supports, but the DAO must vote to add the market to the Gauge Controller (controls which markets can get rewards).
 
 See the linked pages above for more details on how this works.
 
@@ -19,7 +19,7 @@ See the linked pages above for more details on how this works.
 
 To verify product availability on a specific network:
 
-1. Visit the product page (e.g., [Curve Swap](https://curve.finance/#/ethereum/swap))
+1. Visit the product page (e.g., [Curve Swap](https://curve.finance/dex/ethereum/swap))
 2. Connect your wallet
 3. Click the network dropdown menu to see all supported networks
 

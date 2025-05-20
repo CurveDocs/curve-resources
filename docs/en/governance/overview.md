@@ -4,7 +4,7 @@ The Curve DAO is a true DAO, governed solely by it's members.  Members gain gove
 
 * [**Locking CRV**](./locking-crv.md): Users must lock CRV to participate in DAO governance and duties.
 * [**Proposals**](./proposals.md): These are DAO votes.  Voting lasts 7 days, and votes pass if they meet the Quorum and Min support thresholds.  Anyone with veCRV can vote on proposals, and holders of at least 2500 veCRV can create votes.
-* [**Gauges**](./gauges.md): Each week veCRV holders vote on where the weekly CRV emissions will go.  Gauges are how CRV emisisons are distributed to LPs in DEX pools, suppliers to lending markets, etc.
+* [**Gauges**](./gauges.md): Each week veCRV holders vote on where the weekly CRV emissions will go.  Gauges are how CRV emissions are distributed to LPs in DEX pools, suppliers to lending markets, etc.
 * **Analytics**: Shows analytics about veCRV metrics, holders, and DAO fee distribution.
 * **Discussion**: The DAO's governance discussion forum.  Users are free to post and discuss any current proposals or future proposals or ideas.
 

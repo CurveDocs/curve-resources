@@ -1,4 +1,4 @@
-This article primarily covers the role of internal “price oracles” within Curve Finance CryptoSwap pools, with a brief note at the end of [**LLAMMA price oracles**](../pool-creation/understanding-oracles.md#llamma).
+This article primarily covers the role of internal “price oracles” within Curve Finance Cryptoswap pools, with a brief note at the end of [**LLAMMA price oracles**](../pool-creation/understanding-oracles.md#llamma).
 
 Please note that Curve Stableswap and Cryptoswap pools do not rely on external price oracles. **Misuse of external price oracles is a contributing factor to several major DeFi hacks.** If you are looking to use Curve’s “price oracle” functions, or any price oracle, to provide on-chain pricing data in a decentralized application you are building, we recommend extreme caution.
 
@@ -23,7 +23,7 @@ Price Oracle and Price Scale shown in the Curve UI
 
 As discussed above, the **`price_oracle`** variable is calculated as an “exponential moving average” of **`last_prices`**.
 
-For comparison, traders commonly rely on a “simple moving average” as a technical analysis indicator, which calculates the average of a certain number points (ie, a 200-day moving average computes the average of the trailing 200 days of data).
+For comparison, traders commonly rely on a “simple moving average” as a technical analysis indicator, which calculates the average of a certain number points (i.e., a 200-day moving average computes the average of the trailing 200 days of data).
 
 The “exponential moving average" is similar, except it applies a weighting to emphasize newer data over older data. This weighting falls off exponentially as it looks further back in time, so it can react quicker to recent trends.
 
@@ -78,7 +78,7 @@ These safeguards all help to prevent various forms of manipulation. However, for
 
 Newer Stableswap Pools also contain a price oracle function, which also displays a moving average of recent prices. If the moving average price was written to the contract in the same block it will return this value, otherwise it will calculate on the fly any changes to the moving average since it was last written.
 
-Stableswap pools do not have a concept of price scale, so no endpoint exists for retreiving this value. Older Stableswap pools will also not have a price oracle, so use caution if you are attempting to retrieve this value on-chain.
+Stableswap pools do not have a concept of price scale, so no endpoint exists for retrieving this value. Older Stableswap pools will also not have a price oracle, so use caution if you are attempting to retrieve this value on-chain.
 
 ## **LLAMMA**
 

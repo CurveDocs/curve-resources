@@ -124,7 +124,7 @@ $$\begin{aligned}r &= \text{rate0} * e^{\text{power}} \\
 - $\text{price}_\text{peg}$: Desired crvUSD price: 1.00
 - $\text{price}_\text{crvUSD}$:	Current crvUSD price.
 - $\text{sigma}$: variable which can be configured by the DAO, lower value makes the interest rates increase and decrease faster as crvUSD loses and gains value respectively.
-- $\text{DebtFraction}$: Ratio of the Peg Stabilization Reserves's size (size is measured in how much crvUSD was deposited into pools) to the total outstanding debt.
+- $\text{DebtFraction}$: Ratio of the Peg Stabilization Reserves size (size is measured in how much crvUSD was deposited into pools) to the total outstanding debt.
 - $\text{TargetFraction}$: Target fraction.
 - $\text{PegStabilizationReserveSize}$:	The total size of the Reserve (which corresponds to the amount of crvUSD deposited into liquidity pools).
 - $\text{TotalDebt}$: Total crvUSD debt across all markets.

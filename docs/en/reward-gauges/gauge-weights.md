@@ -29,9 +29,9 @@ Select the gauge you would like to put your voting weight towards, enter an amou
 You can change your voting weight once every 10 days.
 
 
-## **What happens when I add additional CRV to my existing lock or extend the locktime?**
+## **What happens when I add additional CRV to my existing lock or extend the lock time?**
 
-Adding more $CRV to your lock or extending the locktime increases your veCRV balance. This increase is not automatically accounted for in your current gauge weight votes. If you want to allocate all of your newly acquired voting power, make sure to re-vote.
+Adding more $CRV to your lock or extending the lock time increases your veCRV balance. This increase is not automatically accounted for in your current gauge weight votes. If you want to allocate all of your newly acquired voting power, make sure to re-vote.
 
 !!!warning
     Resetting your gauge weight before re-voting means you'll need to wait 10 days to vote for the gauges whose weight you've reset. So, please ensure you simply re-vote; there is no need to reset your gauge weight votes before voting again.

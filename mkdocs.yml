@@ -137,7 +137,7 @@ nav:
     - How to Lock CRV: vecrv/locking-your-crv.md
     - Claiming Trading Fees: vecrv/claiming-trading-fees.md
     - Fee Collection & Distribution: vecrv/fee-collection-distribution.md
-  # - LlamaLend:
+  # - Llamalend:
   #   - Overview: llamalend/overview.md
   #   - Liquidation: llamalend/educational/liquidations.md
   #   - Borrow Rate: llamalend/educational/borrow-rates.md
@@ -224,12 +224,12 @@ nav:
   - Glossary: glossary-branding/glossary.md
   - Branding & Icons: glossary-branding/branding.md
   - Useful Links:
-    - curve.finance: https://curve.finance/#/ethereum/swap
+    - curve.finance: https://curve.finance/dex/ethereum/swap
     - Curve DAO: https://curve.finance/dao
     - Curve News: https://news.curve.finance/
     - Discord: https://discord.gg/twUngQYz85
-    - Github: https://github.com/curvefi/
-    - Governance Forum: https://gov.curve.financenance/
+    - GitHub: https://github.com/curvefi/
+    - Governance Forum: https://gov.curve.finance/
     - Twitter: https://twitter.com/curvefinance
     - Technical Docs: https://docs.curve.finance/
     - Telegram: https://t.me/curvefi

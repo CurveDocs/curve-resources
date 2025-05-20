@@ -1,6 +1,6 @@
 ## **What is the “deposit wrapped” option?**
 
-(This applies to metapools or pools with c-tokens or a-tokens). If you deposit a stablecoin to one of the pools with lending, Curve will automatically wrap your token to a cToken (for Compound) or aToken (for AAVE). The option is simply there if you have already previously lent them on Compound or AAVE. If your stablecoin is in its original form, you can ignore this option.
+(This applies to metapools or pools with c-tokens or a-tokens). If you deposit a stablecoin to one of the pools with lending, Curve will automatically wrap your token to a cToken (for Compound) or aToken (for Aave). The option is simply there if you have already previously lent them on Compound or Aave. If your stablecoin is in its original form, you can ignore this option.
 If you deposit into metapools and you have the corresponding basepool token (for example, 3Crv), you can also use the "deposit wrapped" option to deposit this token.
 
 <figure markdown>
@@ -69,7 +69,7 @@ As a result, some pools on Curve are “incentivized”. That means that on top 
 
 ## **What makes the incentives APR move?**
 
-The steth pool in this screenshot earns another 2.69% of LDO per year and there are three variables that can make this change:
+The stETH pool in this screenshot earns another 2.69% of LDO per year and there are three variables that can make this change:
 
 *   The LDO distributed is based on the number of people staking their LP tokens, which means your share of rewards gets lower if more people start staking
 *   The price of LDO (price of LDO going up would make the yearly bonus go up)

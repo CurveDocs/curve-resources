@@ -77,7 +77,7 @@ Switch from the `Loan` to the `Collateral` tab and select "Remove". Then specify
 
 **Effect of Removing Collateral**
 
-Removing collateral from your loan has a **negative effect on its health and liquidtion range**. It decreases your loan's health and moves the liquidation range further up, bringing your closer to liquidation.
+Removing collateral from your loan has a **negative effect on its health and liquidation range**. It decreases your loan's health and moves the liquidation range further up, bringing your closer to liquidation.
 
 <figure markdown="span">
   ![Image title](../../images/crvusd/guides/loan-management/new_range_remove_light.png#only-light){ width="700" }
@@ -107,7 +107,7 @@ Specify the amount of crvUSD you want to borrow. You also have the option to add
 
 **Effect of Removing Collateral**
 
-Borrowing more crvUSD is only possible if the loan is not in liquidation. Borrowing more crvUSD will decrease the loans health and and move up the liquidation range, bringing you closer to liquidation.
+Borrowing more crvUSD is only possible if the loan is not in liquidation. Borrowing more crvUSD will decrease the loans health and move up the liquidation range, bringing you closer to liquidation.
 
 <figure markdown="span">
   ![Image title](../../images/crvusd/guides/loan-management/new_range_more_light.png#only-light){ width="700" }
@@ -121,7 +121,7 @@ Borrowing more crvUSD is only possible if the loan is not in liquidation. Borrow
 
 # **Partial Repayment**
 
-Debt can be repaid fully or partially. Repayment is always possible, wether the loan is in liquidation or not, but it will have diferent effcts on the liquidation range.
+Debt can be repaid fully or partially. Repayment is always possible, whether the loan is in liquidation or not, but it will have different effects on the liquidation range.
 
 Go to the [Markets Dashboard]((https://curve.finance/crvusd/ethereum/markets/)) and select the market where you want to partially repay some debt.
 
@@ -135,7 +135,7 @@ Go to the [Markets Dashboard]((https://curve.finance/crvusd/ethereum/markets/)) 
 
 - ## **Not in Liquidation**
 
-    Repaying debt when the loan is not in liquidation improves the health of the loan and moves the liquidation range down, brining the loan further away from liquidation.
+    Repaying debt when the loan is not in liquidation improves the health of the loan and moves the liquidation range down, bringing the loan further away from liquidation.
 
     <figure markdown="span">
         ![Image title](../../images/crvusd/guides/loan-management/new_range_partial_light.png#only-light){ width="600" }
