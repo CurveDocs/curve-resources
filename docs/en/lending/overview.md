@@ -93,7 +93,7 @@ You can withdraw a supplied asset provided there are sufficient available (un-bo
 If there are insufficient available assets for a full withdrawal, you can withdraw the maximum amount currently available. The high utilization rate will cause Borrow APY and Lend APYs to increase, incentivizing borrowers to repay their loans, and more lenders to supply. As available supply increases you can withdraw your remaining balance over time.
 
 !!!warning "Bad Debt"
-    [Bad debt](../crvusd/loan-concepts.md#bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.
+    [Bad debt](../risks-security/risks/lending.md#risk-of-bad-debt) is rare, but if it exists within a lending market, it **may be impossible to withdraw supplied assets**, as it locks supplied assets as "borrowed" indefinitely.
 
 ---
 

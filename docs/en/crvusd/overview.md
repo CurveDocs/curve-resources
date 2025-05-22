@@ -2,7 +2,7 @@
 
 crvUSD is Curve’s USD-pegged stablecoin that can be borrowed against a variety of battle-tested crypto collaterals. It operates as an overcollateralized CDP (Collateralized Debt Position) system.
 
-What sets crvUSD apart is its unique liquidation mechanism, designed to make borrowing more flexible and user-friendly. Loans do not have a fixed liquidation price, but rather a **liquidation range**, which allows for more gradual risk management. [Learn more about how it works.](liquidations.md)
+What sets crvUSD apart is its unique liquidation mechanism, designed to make borrowing more flexible and user-friendly. Loans do not have a fixed liquidation price, but rather a **liquidation range**, which allows for more gradual risk management. [Learn more about how it works.](./liquidations.md)
 
 ---
 

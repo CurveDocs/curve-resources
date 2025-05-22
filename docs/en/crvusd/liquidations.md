@@ -10,7 +10,7 @@ This system gives borrowers more time and more control compared to traditional l
 !!!warning "Important"
     Because liquidations happen over a range — not at a fixed price — it's important for users to take action (or at least closely monitor their positions) as soon as a loan enters the liquidation range. A user can either repay or close the loan to prevent further losses. If loan health reaches 0%, the position will be hard-liquidated.
 
-    Learn what actions users can take during liquidation: [**What to do in liquidation**](./guides/liquidation.md)
+    Learn what actions users can take during liquidation: [**What to do in liquidation**](./guides/beginner/liquidation.md)
 
 ---
 

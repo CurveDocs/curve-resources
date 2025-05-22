@@ -80,7 +80,7 @@ The deployer of the Curve Lending Market is given the role of `manager`.  The `m
 
 ### **Band Width Factor (A)**
 
-The band width factor (sometimes denoted `A`) defines the width of bands, see formula below and more detailed information [here](../crvusd/loan-concepts.md#bands-n) and applet [here](../crvusd/loan-concepts.md#band-calculator).  Band width factor is also a part of the calculation for the maximum LTV of the market, see [`loan_discount` section](#loan-discount).
+The band width factor (sometimes denoted `A`) defines the width of bands, see formula below and more detailed information [here](../crvusd/advanced-liquidation.md#bands-n).  Band width factor is also a part of the calculation for the maximum LTV of the market, see [`loan_discount` section](#loan-discount).
 
 $$\text{band_width} \approx \frac{\text{price}}{\text{A}}$$
 

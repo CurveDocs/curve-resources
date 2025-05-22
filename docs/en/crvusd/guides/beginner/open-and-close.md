@@ -120,7 +120,7 @@ To track and monitor your position using a Telegram bot, check out this article:
 
 # **Closing Your Loan**
 
-You can close your loan at any time by repaying the full debt. However, full repayment isn't required — you also have the option to repay partially. Learn more about partial repayments [here](./loan-management.md#re).
+You can close your loan at any time by repaying the full debt. However, full repayment isn't required — you also have the option to repay partially. Learn more about partial repayments [here](./loan-management.md#partial-repayment).
 
 To fully close the loan, simply check the “Repay in full and close loan” option. This will repay your entire debt and automatically return your collateral to your wallet.
 

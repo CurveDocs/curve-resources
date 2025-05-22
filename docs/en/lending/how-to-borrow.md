@@ -137,9 +137,9 @@ Repay has the following options, and all options allow the user to **partially**
 
 #### **Self-liquidate**
 
-Self-liquidation allows users to voluntarily close their position before reaching hard-liquidation, typically when they're already in soft-liquidation. This feature helps users recover their remaining collateral while avoiding the [`liquidation_discount`](../crvusd/loan-concepts.md#market-parameters) penalty.
+Self-liquidation allows users to voluntarily close their position before reaching hard-liquidation, typically when they're already in soft-liquidation. This feature helps users recover their remaining collateral while avoiding the [`liquidation_discount`](../crvusd/faq.md#what-is-a-liquidation-discount-and-how-is-the-liquidation-discount-calculated-during-a-liquidation) penalty.
 
-See the [self-liquidation section](../crvusd/liquidations.md#self-liquidation) of the liquidation page for an example.
+See the [self-liquidation section](../crvusd/advanced-liquidation.md#self-liquidation) of the liquidation page for an example.
 
 ---
 
@@ -180,7 +180,7 @@ For example if \$10,000 crvUSD and \$10,000 of WBTC is deposited (\$20,000 value
 
 **`Price impact`** is the difference between the oracle price and the average swap price.
 
-**`Band range`** is the starting and finishing bands of liquidity for the loan, e.g., "4 to 13" means the loan will begin soft-liquidation in band 4, and finish in band 13.  **`Price range`** shows the `Band range` but as a price range, e.g., band 4 to 13 could be a price range like 52,994 to 60,607. See [here](../crvusd/loan-concepts.md#bands-n) for more information about bands.
+**`Band range`** is the starting and finishing bands of liquidity for the loan, e.g., "4 to 13" means the loan will begin soft-liquidation in band 4, and finish in band 13.  **`Price range`** shows the `Band range` but as a price range, e.g., band 4 to 13 could be a price range like 52,994 to 60,607. See [here](../crvusd/advanced-liquidation.md#bands-n) for more information about bands.
 
 **`Health`** is how healthy the loan is, this value must be positive, if it is less than or equal to 0 then the loan can be hard liquidated.  See [here](../crvusd/loan-concepts.md#loan-health) for more information about health.
 
