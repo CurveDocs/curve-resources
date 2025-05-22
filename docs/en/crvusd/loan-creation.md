@@ -47,7 +47,7 @@ The `Your Loan Details` tab shows all the information about your personal loan:
   <figcaption></figcaption>
 </figure>
 
-When a user creates a loan, their **collateral is allocated across a number of [bands](./loan-concepts.md#bands-n) (liquidation range)**. Should the asset price fall within this range, the loan will enter [soft-liquidation](./liquidations.md#soft-liquidation) mode. In this state, the user is not allowed to add additional collateral. The only recourse is to either repay with crvUSD or to self-liquidate the loan.
+When a user creates a loan, their **collateral is allocated across a number of [bands](./advanced-liquidation.md#bands-n) (liquidation range)**. Should the asset price fall within this range, the loan will enter [soft-liquidation](./advanced-liquidation.md#soft-and-de-liquidation) mode. In this state, the user is not allowed to add additional collateral. The only recourse is to either repay with crvUSD or to self-liquidate the loan.
 
 When a position was or is in soft-liquidation mode, losses occur. The UI displays these losses in 3 ways:
 
@@ -59,9 +59,9 @@ The `LLAMMA BALANCES` section shows the breakdown of your current loan collatera
 
 
 !!!info "Soft-Liquidation Mode"
-    **During [soft-liquidation](./liquidations.md#soft-liquidation), users are unable to add or withdraw collateral.** They can choose to **either partially or fully repay** their crvUSD debt to improve their [**health**](./loan-concepts.md#loan-health) **or** decide to [**self-liquidate**](../lending/how-to-borrow.md#self-liquidate) their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
+    **During [soft-liquidation](./advanced-liquidation.md#soft-and-de-liquidation), users are unable to add or withdraw collateral.** They can choose to **either partially or fully repay** their crvUSD debt to improve their [**health**](./loan-concepts.md#loan-health) **or** decide to [**self-liquidate**](../lending/how-to-borrow.md#self-liquidate) their loan if their collateral composition contains sufficient crvUSD to cover the outstanding debt. If they opt for self-liquidation, the user's debt is fully repaid and the loan will be closed. Any residual amounts are then returned to the user.
 
-    If their health declines to 0, they are [**hard-liquidated**](./liquidations.md#hard-liquidation) and lose their collateral but keep their debt.
+    If their health declines to 0, they are [**hard-liquidated**](./advanced-liquidation.md#hard-liquidation) and lose their collateral but keep their debt.
 
 ---
 
@@ -74,14 +74,14 @@ In the upper right-hand side of the screen, there is a toggle button for advance
   <figcaption></figcaption>
 </figure>
 
-In advanced mode the UI shows more information about the [**Collateral Bands**](./loan-concepts.md#bands-n) for your personal loan:
+In advanced mode the UI shows more information about the [**Collateral Bands**](./advanced-liquidation.md#bands-n) for your personal loan:
 
 <figure markdown>
   ![](../images/loan_details_3.png){ width="600" }
   <figcaption></figcaption>
 </figure>
 
-Advanced mode also adds a tab with info about the [**LLAMMA Bands**](./loan-concepts.md#bands-n) for all loans together:
+Advanced mode also adds a tab with info about the [**LLAMMA Bands**](./advanced-liquidation.md#bands-n) for all loans together:
 
 <figure markdown>
   ![](../images/loan_details_4.png){ width="600" }

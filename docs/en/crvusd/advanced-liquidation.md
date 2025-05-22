@@ -101,7 +101,7 @@ As the price of the collateral asset decreases and enters the liquidation range 
     <div id="ethCrvUsdValues" style="text-align: center; margin-top: 5px;"></div>
 </div>
 
-???info "Visualising Liquidation"
+???info "Visualizing Liquidation"
     LLAMMA soft-liquidation can also be explored through static visual guides:
 
     ![Soft-liquidation](../images/crvusd/soft-liq.svg#only-light){: .centered }
@@ -145,7 +145,7 @@ Here’s a simple example:
 >
 > To self-liquidate, Alice only needs to repay **750 crvUSD**, and she recovers her **0.8 WETH**.
 
-This is usually better than letting the loan be hard-liquidated, because it avoids penalties like the [`liquidation_discount`](./loan-concepts.md#market-parameters).
+This is usually better than letting the loan be hard-liquidated, because it avoids penalties like the [`liquidation_discount`](./faq.md#what-is-a-liquidation-discount-and-how-is-the-liquidation-discount-calculated-during-a-liquidation).
 
 ---
 
