@@ -16,7 +16,7 @@ The below chart shows the total allocation of CRV to different groups within the
 | Group                                     | Allocated CRV | Percentage |
 |-------------------------------------------|---------------|------------|
 | Community (emissions)                     | 1,727,272,729 | 57%        |
-| Early Users (pre-CRV liquidity providers) | 151,515,152   | 5%         |
+| Early Users                               | 151,515,152   | 5%         |
 | Core Team                                 | 800,961,153   | 26.43%     |
 | Investors                                 | 108,129,756   | 3.57%      |
 | Employees                                 | 90,909,091    | 3%         |

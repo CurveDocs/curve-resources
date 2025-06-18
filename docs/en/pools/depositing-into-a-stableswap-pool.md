@@ -11,9 +11,7 @@ Yet trading 1 crvUSD would still yield approximately 1.001 USDT due to the pool'
 
 [Learn more about Stableswap pools](./overview.md)
 
-*This guide demonstrates the deposit process using the [3Pool](https://curve.finance/dex/ethereum/pools/3pool/deposit)  (USDC/USDT/DAI), - one of Curve's most popular stablecoin pools. You can follow along with the written guide or watch the video below:*
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OsRrGij9Ou8?si=zglQ5gl1J9LkbLPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+*This guide demonstrates the deposit process using the [3Pool](https://curve.finance/dex/ethereum/pools/3pool/deposit)  (USDC/USDT/DAI), - one of Curve's most popular stablecoin pools.*
 
 The process involves two steps:
 

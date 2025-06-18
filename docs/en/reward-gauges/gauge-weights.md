@@ -2,9 +2,10 @@
 
 Simply put, a gauge weight translates into how much of the daily CRV inflation it receives.
 
-For example on the below chart, the Y pool is currently receiving around 72% of the daily CRV inflation. This means that all liquidity providers in the Y pool share 72% of the daily CRV.
+For example on the below chart, the reUSD/scrvUSD pool is receiving around 15% of the weekly CRV rewards.
 
-![Gauge Weights](../images/ui/gauge-weights-ypool.webp)
+![Gauge Relative Weights](../images/gov/gauge-relative-weight-light.png#only-light){ .centered }
+![Gauge Relative Weights](../images/gov/gauge-relative-weight-dark.png#only-dark){ .centered }
 
 You can find each liquidity gauge relative weight on this page: [https://curve.finance/dao/ethereum/gauges/](https://curve.finance/dao/ethereum/gauges/)​
 

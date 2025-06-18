@@ -44,7 +44,7 @@ Standard ERC-20 tokens do not need any additional configuration.
 ### **Tokens with Oracles**
 
 !!!warning "Oracle Precision"
-    The precision of the rate oracle **must be $10^{18}$**. Otherwise, the liquidity pool will not function correctly, as the exchange rate will be broken.
+    The precision of the rate oracle **must be $10^{18}$**, also the **oracle must be up only**.  Otherwise, the liquidity pool will not function correctly, as the exchange rate will be broken.
 
 Some tokens might require an external rate oracle to ensure correct calculations within the AMM. This is especially useful for tokens with rates against their underlying tokens, such as rETH against ETH. In this case, when selecting a token with an oracle, the corresponding box needs to be ticked, and an extra section for the contract address and oracle price method will appear. Some tokens might source their price oracle from a contract other than the token contract.
 

@@ -3,14 +3,6 @@ hide:
   - toc
 ---
 
-
-:logos-youtube: **How to lock CRV**
-
-<div style="display: block; margin-left: auto; margin-right: auto; width: 560px;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/8GAI1lopEdU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-
 !!! warning
     When a user locks their CRV tokens for voting, they will receive veCRV based on the lock duration and the amount locked. Locking is **not reversible** and veCRV tokens are **non-transferable**. If a user decides to vote-lock their CRV tokens, they will only be able to **reclaim the CRV tokens after the lock duration has ended**.
 
