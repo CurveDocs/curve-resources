@@ -203,7 +203,7 @@ nav:
     - Locking CRV: governance/locking-crv.md
     - Proposals: governance/proposals.md
     - Gauges: governance/gauges.md
-    - Community Fund: governance/community-fund.md
+    - Community Fund & Treasury: governance/community-fund.md
   - Cross-Chain:
     - Overview: cross-chain/overview.md
     - DEX & Llamalend: cross-chain/dex-llamalend.md
