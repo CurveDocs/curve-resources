@@ -19,6 +19,8 @@ Bridge HYPE (native gas token on HyperEVM) from hyperCORE to hyperEVM. This can 
 After bridging, Big Blocks can be enabled in the following interface: https://hyperevm-block-toggle.vercel.app/
 Simply connect your wallet and sign the transaction to enable Big Blocks.
 
+Alternatively, a Python script for enabling big blocks can be found here: [:material-github: GitHub](https://github.com/curvefi/curve-core/blob/main/scripts/utils/hyperevm_enable_big_blocks.py).
+
 ## **Step 3: Deploy Pool or Gauge**
 
 After enabling Big Blocks, one can simply deploy pools and gauges on HyperEVM via the Curve [Pool Creation UI](https://www.curve.finance/dex/hyperliquid/create-pool/).
