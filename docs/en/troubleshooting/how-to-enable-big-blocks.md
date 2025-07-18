@@ -6,10 +6,13 @@ Because deploying Curve pools and gauges can only be done in large blocks, the d
 
 ## **Step 1: Bridging HYPE**
 
-Bridge HYPE (native gas token on HyperEVM) from hyperCORE to hyperEVM.
+Bridge HYPE (native gas token on HyperEVM) from hyperCORE to hyperEVM. This can be done directly from the [Portfolio Section](https://app.hyperliquid.xyz/portfolio) on the Hyperliquid App. 
 
-!!!warning "Important"
+!!! warning "Important"
     The deployer actually needs to bridge the HYPE from CORE to EVM. Simply transferring HYPE from one EVM address to another won't allow for enabling Big Blocks.
+
+![Core<>EVM](../images/support/core-evm.png#only-light){ .centered }
+![Core<>EVM](../images/support/core-evm.png#only-dark){ .centered }
 
 ## **Step 2: Enabling Big Blocks**
 
