@@ -211,6 +211,7 @@ nav:
     - How to Bridge Curve Assets to L1s: cross-chain/bridging-curve-eco-tokens.md
   - Support & Troubleshooting:
     - Support: troubleshooting/support.md
+    - How to enable Big Blocks on HyperEVM: troubleshooting/how-to-enable-big-blocks.md
     - Recovering cross-asset swaps: troubleshooting/recovering-a-cross-asset-swap.md
     - Dropping and replacing a stuck transaction: troubleshooting/dropping-and-replacing-a-stuck-transaction.md
     - Disabling crypto wallets in brave: troubleshooting/disabling-crypto-wallets-in-brave.md
