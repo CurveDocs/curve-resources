@@ -188,7 +188,7 @@ In contrast, most other lending platforms will hard-liquidate your collateral an
 
 ## **Leverage**
 
-All new lending markets allow leverage.  This allows users to multiply their gains (and losses) by the amount of leverage they desire.  In a WETH/crvUSD market for example, this would allow the user to borrow up to 9x the amount of collateral they deposit.  The caveat is that the user doesn't receive the borrowed crvUSD into their wallet, it is swapped for more WETH through 1inch and deposited into the lending market.  To see how leverage works please see the dedicated [leverage page](leverage.md).
+All new lending markets allow leverage.  This allows users to multiply their gains (and losses) by the amount of leverage they desire.  In a WETH/crvUSD market for example, this would allow the user to borrow up to 9x the amount of collateral they deposit.  The caveat is that the user doesn't receive the borrowed crvUSD into their wallet, it is swapped for more WETH through Odos and deposited into the lending market.  To see how leverage works please see the dedicated [leverage page](leverage.md).
 
 ---
 

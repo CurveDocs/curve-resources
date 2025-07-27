@@ -58,7 +58,7 @@ Users can deposit both crvUSD and collateral assets (e.g., WETH) together. In th
 
 1. WETH collateral is used to borrow crvUSD
 2. Borrowed crvUSD is added to the deposited crvUSD
-3. The total amount is converted to WETH through 1inch
+3. The total amount is converted to WETH through Odos
 4. All assets are deposited into the lending market
 
 ![Leverage with a combination of assets](../images/lending/add_both_leverage.svg){: .centered }

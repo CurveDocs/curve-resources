@@ -145,7 +145,7 @@ See the [self-liquidation section](../crvusd/advanced-liquidation.md#self-liquid
 
 ## **How to take out a leverage loan**
 
-All new lending markets allow users to use leverage.  E.g., the WBTC market below allows up to 11x leverage when borrowing from this lending market.  11x leverage means 10x the deposited amount of WBTC is borrowed as crvUSD and swapped to WBTC using 1inch.
+All new lending markets allow users to use leverage.  E.g., the WBTC market below allows up to 11x leverage when borrowing from this lending market.  11x leverage means 10x the deposited amount of WBTC is borrowed as crvUSD and swapped to WBTC using [Odos](https://app.odos.xyz/).
 
 ![WBTC Leverage](../images/ui/leverage.png){: .centered }
 
