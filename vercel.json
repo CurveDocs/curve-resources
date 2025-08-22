@@ -12,5 +12,16 @@
       "source": "/ru/",
       "destination": "https://curve-resources-ru.vercel.app/"
     }
+  ],
+  "headers": [
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
+    }
   ]
 }
