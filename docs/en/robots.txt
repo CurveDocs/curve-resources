@@ -1,5 +1,16 @@
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://curve-resources.vercel.app/sitemap.xml
