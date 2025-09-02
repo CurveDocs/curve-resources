@@ -39,6 +39,38 @@ This process can result in some losses (see above), but **it also allows the loa
 
 ---
 
+## **What's Possible in Liquidation Range**
+
+When a user's position falls within the liquidation range, their options become severely limited. Only the following actions are permitted:
+
+- **Partially repay debt** - Reduce the outstanding loan amount
+- **Fully repay debt** - Completely pay off the loan
+
+### **Important Limitations**
+
+- **Partial repayments do not exit liquidation range** - Even if you repay some debt, your position remains vulnerable to liquidation
+- **Position exit requires price recovery** - A position can only escape liquidation range if:
+  - Asset prices increase significantly, or
+  - Prices fall below the liquidation range while maintaining health > 0%
+- **No collateral modifications** - Adding or removing collateral is completely blocked
+- **No new borrowing** - Taking on additional debt is prohibited
+
+If you need to exit liquidation range immediately, you can:
+1. Fully repay your existing loan
+2. Close the position
+3. Open a new position
+
+This approach resets your position and removes liquidation risk, though it may incur additional gas costs.
+
+---
+
+## **How to Get Out of Liquidation Range**
+
+A loan can only exit liquidation range if the price of the collateral moves outside the liquidation range again. While repaying debt improves the health, it does not change the liquidation range boundaries - those only adjust when debt is repaid while NOT being in liquidation range.  
+Additionally, adding collateral is completely impossible while in liquidation range.
+
+---
+
 ## **Losses In Liquidation**
 
 While a loan is within the liquidation range, the borrower will incur losses that reduce the total value of their collateral. These losses depend on several factors, including market volatility, liquidity conditions, and more. Because of this, it is not possible to precisely predict how much will be lost. This makes it especially important to monitor loan health closely when it approaches or enters the liquidation range.
