@@ -223,7 +223,7 @@ nav:
       - scrvUSD: risks-security/risks/scrvusd.md
     - Security & Audits: risks-security/security.md
   - Glossary: glossary-branding/glossary.md
-  - Branding & Icons: glossary-branding/branding.md
+  - Branding & Icons: https://quiver-meadow-354.notion.site/Brand-Assets-1a6599aae064802fba11ce6a9e642d74
   - Useful Links:
     - curve.finance: https://curve.finance/dex/ethereum/swap
     - Curve DAO: https://curve.finance/dao
