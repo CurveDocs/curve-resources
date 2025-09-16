@@ -32,7 +32,7 @@ Admin fee is the share of trading fees that are received by governance participa
 
 ## **Base Pools**
 
-Base pools are an old Curve concept, yet still working in some pools such as GUSD.  Base pool tokens can be paired with other tokens to create new pools, e.g. 3crv pool token (USDT, USDC, DAI) paired with GUSD.
+Base pool tokens can be paired with other tokens to create new pools, e.g., FraxBasepool (FRAX, USDC) paired with alUSD to make the [alUSD/FRAX/USDC pool](https://www.curve.finance/dex/ethereum/pools/factory-v2-147/deposit).
 
 ## **Boosting**
 
