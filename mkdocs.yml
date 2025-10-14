@@ -166,6 +166,7 @@ nav:
         - Loan Management in Liquidation: crvusd/guides/beginner/liquidation.md
       - Intermediate Guides:
         - Loan Creation with Custom Bands: crvusd/guides/intermediate/custom-bands.md
+        - Manual Deleveraging: crvusd/guides/intermediate/manual-deleveraging.md
         # - Leveraged Loans: crvusd/guides/intermediate/leveraged-loans.md
     - Advanced Concepts:
       - Liquidation & Bands: crvusd/advanced-liquidation.md
