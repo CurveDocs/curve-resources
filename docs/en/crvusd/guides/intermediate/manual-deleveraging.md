@@ -2,7 +2,7 @@
 
 This guide applies to leveraged loans on Llamalend where you've created a leveraged position.
 
-While the UI typically allows deleveraging in a single transaction, you can manually deleverage your position if needed when the router or other mechanisms are not working properly. The process differs depending on whether your loan is in liquidation protection mode.
+While the UI typically allows deleveraging in a single transaction, you can manually deleverage your position. The process differs depending on whether your loan is in liquidation protection mode.
 
 ---
 
