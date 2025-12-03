@@ -40,6 +40,9 @@ One of the primary incentives for vote-locking is the **boost mechanism**. Users
 
 When a user locks their CRV tokens for voting, they will receive veCRV based on the lock duration and the amount locked. Locking is **not reversible** and veCRV tokens are **non-transferable**. If a user decides to vote-lock their CRV tokens, they will only be able to **reclaim the CRV tokens after the lock duration has ended**.
 
+!!! warning
+    **Approval Warning:** If you've approved the VotingEscrow contract to spend your CRV and you have an active lock, anyone can call `deposit_for` to force your unlocked CRV into your existing lock. They can't steal it or extend your lock duration, but they can reduce your liquid balance. To prevent this, revoke your CRV allowance to VotingEscrow after locking, and only approve the exact amount when you need to add more CRV.
+
 Additionally, a user **cannot have multiple locks with different expiry dates**. However, a lock **can be extended**, or **additional CRV can be added** to it **at any time**.
 
 ### **CRV to veCRV formula**
