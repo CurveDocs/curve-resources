@@ -19,6 +19,7 @@ The Curve token can be bridged across various chains, though it does not always 
 | :logos-sonic: **Sonic** | [`0x5af79133999f7908953e94b7a5cf367740ebee35`](https://sonicscan.org/address/0x5af79133999f7908953e94b7a5cf367740ebee35) | [crvhub bridge](https://crvhub.com/bridge) |
 | :logos-taiko: **Taiko** | [`0x09413312b263fd252c16e592a45f4689f26cb79d`](https://taikoscan.io/token/0x09413312b263fd252c16e592a45f4689f26cb79d) | [Taiko Bridge](https://bridge.taiko.xyz/)​ |
 | :logos-ink: **Ink** | [`0xAC73671a1762FE835208Fb93b7aE7490d1c2cCb3`](https://explorer.inkonchain.com/address/0xAC73671a1762FE835208Fb93b7aE7490d1c2cCb3) | *soon* |
+| :logos-etherlink: **Etherlink** | [`0x004A476B5B76738E34c86C7144554B9d34402F13`](https://explorer.etherlink.com/address/0x004A476B5B76738E34c86C7144554B9d34402F13) | [Guide here :octicons-link-external-16:](./bridging-curve-eco-tokens.md) |
 
 
 
@@ -45,6 +46,7 @@ crvUSD was first introduced in May 2023 on Ethereum. For now, this stablecoin ca
 | :logos-sonic: **Sonic** | [`0x7FFf4C4a827C84E32c5E175052834111B2ccd270`](https://sonicscan.org/address/0x7FFf4C4a827C84E32c5E175052834111B2ccd270) | [crvhub bridge](https://crvhub.com/bridge) |
 | :logos-taiko: **Taiko** | [`0xc8F4518ed4bAB9a972808a493107926cE8237068`](https://taikoscan.io/token/0xc8F4518ed4bAB9a972808a493107926cE8237068) | [Taiko Bridge](https://bridge.taiko.xyz/)​ |
 | :logos-ink: **Ink** | [`0x39fec550CC6DDCEd810eCCfA9B2931b4B5f2344D`](https://explorer.inkonchain.com/address/0x39fec550CC6DDCEd810eCCfA9B2931b4B5f2344D) | *soon* |
+| :logos-etherlink: **Etherlink** | [`0x0094Ad026643994c8fB2136ec912D508B15fe0E5`](https://explorer.etherlink.com/address/0x0094Ad026643994c8fB2136ec912D508B15fe0E5) | [Guide here :octicons-link-external-16:](./bridging-curve-eco-tokens.md) |
 
 ---
 
@@ -72,3 +74,4 @@ Savings crvUSD (scrvUSD) was first introduced in November 2024 on Ethereum.
 | :logos-avalanche: **Avalanche** | [`0xA3ea433509F7941df3e33857D9c9f212Ad4A4e64`](https://snowscan.xyz/address/0xA3ea433509F7941df3e33857D9c9f212Ad4A4e64) | [Guide here :octicons-link-external-16:](./bridging-curve-eco-tokens.md) |
 | :logos-sonic: **Sonic** | [`0xB5f0edecFF09081354DB252CeEc000b213186fac`](https://sonicscan.org/address/0xB5f0edecFF09081354DB252CeEc000b213186fac) | [crvhub bridge](https://crvhub.com/bridge) |
 | :logos-taiko: **Taiko** | [`0x8c74d11da5E6cE0498cd280F9209dFB0C5e048A7`](https://taikoscan.io/token/0x8c74d11da5E6cE0498cd280F9209dFB0C5e048A7) | [Taiko Bridge](https://bridge.taiko.xyz/)​ |
+| :logos-etherlink: **Etherlink** | [`0xe35A879E5EfB4F1Bb7F70dCF3250f2e19f096bd8`](https://explorer.etherlink.com/address/0xe35A879E5EfB4F1Bb7F70dCF3250f2e19f096bd8) | [Guide here :octicons-link-external-16:](./bridging-curve-eco-tokens.md) |
