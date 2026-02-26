@@ -1,27 +1,14 @@
 {
+  "redirects": [
+    { "source": "/", "destination": "https://docs.curve.finance/", "permanent": true },
+    { "source": "/:path*", "destination": "https://docs.curve.finance/:path*", "permanent": true }
+  ],
   "rewrites": [
-    {
-      "source": "/ru/:match*/",
-      "destination": "https://curve-resources-ru.vercel.app/:match*"
-    },
-    {
-      "source": "/ru/:match*",
-      "destination": "https://curve-resources-ru.vercel.app/:match*"
-    },
-    {
-      "source": "/ru/",
-      "destination": "https://curve-resources-ru.vercel.app/"
-    }
+    { "source": "/ru/:match*/", "destination": "https://curve-resources-ru.vercel.app/:match*" },
+    { "source": "/ru/:match*", "destination": "https://curve-resources-ru.vercel.app/:match*" },
+    { "source": "/ru/", "destination": "https://curve-resources-ru.vercel.app/" }
   ],
   "headers": [
-    {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain"
-        }
-      ]
-    }
+    { "source": "/robots.txt", "headers": [{ "key": "Content-Type", "value": "text/plain" }] }
   ]
 }
